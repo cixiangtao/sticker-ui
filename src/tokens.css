@@ -1,0 +1,65 @@
+@theme inline {
+  --font-sans: ui-sans-serif, system-ui, sans-serif;
+
+  --color-ink: #2e3038;
+  --color-paper: #fffdf7;
+  --color-canvas: #fff7df;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f1efe6;
+
+  --color-background: var(--color-canvas);
+  --color-foreground: var(--color-ink);
+  --color-primary: var(--color-fill-default);
+  --color-primary-foreground: var(--color-ink);
+  --color-border: var(--color-ink);
+  --color-ring: #4ea8de;
+
+  --color-accent-info: #4ea8de;
+  --color-accent-success: #00b894;
+  --color-accent-warning: #f6a609;
+  --color-accent-danger: #ef476f;
+
+  --color-fill-default: #ffe08a;
+  --color-fill-default-soft: #fff3bf;
+  --color-fill-secondary: #b7f7d3;
+  --color-fill-danger: #ff9bb2;
+  --color-fill-info: #eaf7ff;
+  --color-fill-info-strong: #cdeeff;
+  --color-fill-success: #eafbf5;
+  --color-fill-success-strong: #cff8e6;
+  --color-fill-warning: #fff6dc;
+  --color-fill-warning-strong: #ffe9a8;
+  --color-fill-danger-soft: #fff0f4;
+
+  --color-text-muted: #5b5e6a;
+  --color-text-subtle: #696b76;
+  --color-text-placeholder: #858894;
+  --color-text-info: #126b9a;
+  --color-text-success: #007b63;
+  --color-text-success-muted: #3d5f52;
+  --color-text-warning: #9a6500;
+  --color-text-warning-muted: #8b6f24;
+  --color-text-danger: #a61e42;
+
+  --radius-sticker-xs: 10px;
+  --radius-sticker-sm: 12px;
+  --radius-sticker-md: 14px;
+  --radius-sticker-lg: 16px;
+  --radius-sticker-xl: 18px;
+  --radius-sticker-2xl: 22px;
+  --radius-sticker-3xl: 24px;
+  --radius-sticker-panel: 28px;
+
+  --shadow-sticker-xs: 1px 1px 0 var(--color-ink);
+  --shadow-sticker-sm: 2px 2px 0 var(--color-ink);
+  --shadow-sticker-md: 3px 3px 0 var(--color-ink);
+  --shadow-sticker-lg: 4px 4px 0 var(--color-ink);
+  --shadow-sticker-xl: 5px 5px 0 var(--color-ink);
+  --shadow-sticker-2xl: 8px 8px 0 var(--color-ink);
+
+  --border-width-sticker: 2px;
+  --border-width-sticker-heavy: 3px;
+  --border-width-accent: 8px;
+  --ring-width-sticker: 3px;
+  --color-overlay: rgb(46 48 56 / 0.35);
+}
