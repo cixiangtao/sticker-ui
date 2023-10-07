@@ -1,0 +1,90 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "sticker-ui",
+  "homepage": "https://example.com",
+  "items": [
+    {
+      "name": "utils",
+      "type": "registry:lib",
+      "title": "Sticker Utils",
+      "description": "Shared className utilities for Sticker UI components.",
+      "dependencies": ["clsx", "tailwind-merge"],
+      "files": [
+        {
+          "path": "src/lib/utils.ts",
+          "target": "@lib/utils.ts",
+          "type": "registry:lib"
+        }
+      ]
+    },
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "title": "Sticker Button",
+      "description": "A tactile handbook sticker button with chunky ink borders.",
+      "dependencies": ["@radix-ui/react-slot", "class-variance-authority"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "registry/default/button/button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "card",
+      "type": "registry:ui",
+      "title": "Sticker Card",
+      "description": "A composable handbook sticker surface for cards, panels, and grouped content.",
+      "dependencies": ["@radix-ui/react-slot", "class-variance-authority"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "registry/default/card/card.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "table",
+      "type": "registry:ui",
+      "title": "Sticker Table",
+      "description": "A scrollable paper table frame for API references and structured data.",
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "registry/default/table/table.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tag",
+      "type": "registry:ui",
+      "title": "Sticker Tag",
+      "description": "A compact sticker tag for statuses, labels, and metadata chips.",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "registry/default/tag/tag.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "label",
+      "type": "registry:ui",
+      "title": "Sticker Label",
+      "description": "An accessible form caption with optional sticker markers.",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "registry/default/label/label.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    }
+  ]
+}
