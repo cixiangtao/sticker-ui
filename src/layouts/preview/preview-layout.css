@@ -1,0 +1,6 @@
+@utility bg-sticker-grid {
+  background-image:
+    linear-gradient(90deg, rgb(46 48 56 / 0.04) 1px, transparent 1px),
+    linear-gradient(0deg, rgb(46 48 56 / 0.04) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
