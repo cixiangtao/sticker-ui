@@ -1,0 +1,949 @@
+{
+  "button": {
+    "components": [
+      {
+        "name": "Button",
+        "props": {
+          "description": "Props for the sticker button root element.",
+          "descriptionKey": "api.button.components.Button.props.description",
+          "remarks": "Inherits native button attributes and adds sticker structure, color, size, and loading states.",
+          "remarksKey": "api.button.components.Button.props.remarks",
+          "inherits": [
+            "React.ButtonHTMLAttributes<HTMLButtonElement>",
+            "VariantProps<typeof buttonVariants>"
+          ],
+          "members": [
+            {
+              "defaultValue": "false",
+              "description": "Renders the button styles and state props on the only child element.",
+              "descriptionKey": "api.button.components.Button.props.members.asChild.description",
+              "name": "asChild",
+              "optional": true,
+              "type": "boolean"
+            },
+            {
+              "defaultValue": "\"default\"",
+              "description": "Controls the semantic button color.",
+              "descriptionKey": "api.button.components.Button.props.members.color.description",
+              "name": "color",
+              "optional": true,
+              "type": "\"danger\" | \"default\" | \"info\" | \"secondary\" | \"success\" | \"warning\""
+            },
+            {
+              "defaultValue": "false",
+              "description": "Shows a loading indicator and disables the button while pending.",
+              "descriptionKey": "api.button.components.Button.props.members.loading.description",
+              "name": "loading",
+              "optional": true,
+              "type": "boolean"
+            },
+            {
+              "defaultValue": "\"md\"",
+              "description": "Controls the button size and padding.",
+              "descriptionKey": "api.button.components.Button.props.members.size.description",
+              "name": "size",
+              "optional": true,
+              "type": "\"icon\" | \"lg\" | \"md\" | \"sm\""
+            },
+            {
+              "defaultValue": "\"solid\"",
+              "description": "Controls the button visual structure and emphasis.",
+              "descriptionKey": "api.button.components.Button.props.members.variant.description",
+              "name": "variant",
+              "optional": true,
+              "type": "\"dashed\" | \"filled\" | \"link\" | \"outlined\" | \"solid\" | \"text\""
+            }
+          ],
+          "type": "ButtonProps"
+        }
+      }
+    ],
+    "description": "A tactile handbook sticker button with chunky ink borders.",
+    "descriptionKey": "api.button.description",
+    "exports": [
+      { "kind": "component", "name": "Button" },
+      {
+        "description": "Builds the sticker button className from structure, color, and size variants.",
+        "descriptionKey": "api.button.exports.buttonVariants.description",
+        "kind": "variant",
+        "name": "buttonVariants"
+      }
+    ],
+    "name": "button",
+    "sourcePath": "registry/default/button/button.tsx",
+    "title": "Sticker Button",
+    "types": [
+      {
+        "description": "Props for the sticker button root element.",
+        "descriptionKey": "api.button.types.ButtonProps.description",
+        "remarks": "Inherits native button attributes and adds sticker structure, color, size, and loading states.",
+        "remarksKey": "api.button.types.ButtonProps.remarks",
+        "inherits": [
+          "React.ButtonHTMLAttributes<HTMLButtonElement>",
+          "VariantProps<typeof buttonVariants>"
+        ],
+        "kind": "interface",
+        "members": [
+          {
+            "defaultValue": "false",
+            "description": "Renders the button styles and state props on the only child element.",
+            "descriptionKey": "api.button.types.ButtonProps.members.asChild.description",
+            "name": "asChild",
+            "optional": true,
+            "type": "boolean"
+          },
+          {
+            "defaultValue": "\"default\"",
+            "description": "Controls the semantic button color.",
+            "descriptionKey": "api.button.types.ButtonProps.members.color.description",
+            "name": "color",
+            "optional": true,
+            "type": "\"danger\" | \"default\" | \"info\" | \"secondary\" | \"success\" | \"warning\""
+          },
+          {
+            "defaultValue": "false",
+            "description": "Shows a loading indicator and disables the button while pending.",
+            "descriptionKey": "api.button.types.ButtonProps.members.loading.description",
+            "name": "loading",
+            "optional": true,
+            "type": "boolean"
+          },
+          {
+            "defaultValue": "\"md\"",
+            "description": "Controls the button size and padding.",
+            "descriptionKey": "api.button.types.ButtonProps.members.size.description",
+            "name": "size",
+            "optional": true,
+            "type": "\"icon\" | \"lg\" | \"md\" | \"sm\""
+          },
+          {
+            "defaultValue": "\"solid\"",
+            "description": "Controls the button visual structure and emphasis.",
+            "descriptionKey": "api.button.types.ButtonProps.members.variant.description",
+            "name": "variant",
+            "optional": true,
+            "type": "\"dashed\" | \"filled\" | \"link\" | \"outlined\" | \"solid\" | \"text\""
+          }
+        ],
+        "name": "ButtonProps"
+      }
+    ],
+    "variants": [
+      {
+        "description": "Builds the sticker button className from structure, color, and size variants.",
+        "descriptionKey": "api.button.variants.buttonVariants.description",
+        "groups": [
+          {
+            "defaultValue": "default",
+            "name": "color",
+            "values": [
+              "danger",
+              "default",
+              "info",
+              "secondary",
+              "success",
+              "warning"
+            ]
+          },
+          {
+            "defaultValue": "md",
+            "name": "size",
+            "values": ["icon", "lg", "md", "sm"]
+          },
+          {
+            "defaultValue": "solid",
+            "name": "variant",
+            "values": ["dashed", "filled", "link", "outlined", "solid", "text"]
+          }
+        ],
+        "name": "buttonVariants"
+      }
+    ]
+  },
+  "card": {
+    "components": [
+      {
+        "name": "Card",
+        "props": {
+          "description": "Props for the sticker card root element.",
+          "descriptionKey": "api.card.components.Card.props.description",
+          "remarks": "Inherits native HTML attributes and adds semantic element and interactive states.",
+          "remarksKey": "api.card.components.Card.props.remarks",
+          "inherits": [
+            "React.HTMLAttributes<HTMLElement>",
+            "VariantProps<typeof cardVariants>"
+          ],
+          "members": [
+            {
+              "defaultValue": "\"article\"",
+              "description": "Controls the semantic root element rendered by the card.",
+              "descriptionKey": "api.card.components.Card.props.members.as.description",
+              "name": "as",
+              "optional": true,
+              "type": "CardElement"
+            },
+            {
+              "defaultValue": "false",
+              "description": "Renders the card styles and state props on the only child element.",
+              "descriptionKey": "api.card.components.Card.props.members.asChild.description",
+              "name": "asChild",
+              "optional": true,
+              "type": "boolean"
+            },
+            {
+              "defaultValue": "false",
+              "description": "Enables tactile hover and pressed states for clickable card compositions.",
+              "descriptionKey": "api.card.components.Card.props.members.interactive.description",
+              "name": "interactive",
+              "optional": true,
+              "type": "boolean"
+            },
+            {
+              "defaultValue": "\"md\"",
+              "description": "Controls root spacing and the spacing consumed by card slots.",
+              "descriptionKey": "api.card.components.Card.props.members.padding.description",
+              "name": "padding",
+              "optional": true,
+              "type": "CardPadding"
+            },
+            {
+              "defaultValue": "\"elevated\"",
+              "description": "Controls the card surface structure and emphasis.",
+              "descriptionKey": "api.card.components.Card.props.members.variant.description",
+              "name": "variant",
+              "optional": true,
+              "type": "\"elevated\" | \"minimal\" | \"panel\""
+            }
+          ],
+          "type": "CardProps"
+        }
+      },
+      {
+        "name": "CardContent",
+        "props": {
+          "inherits": [],
+          "members": [],
+          "type": "React.ComponentProps<\"div\">"
+        }
+      },
+      {
+        "name": "CardDescription",
+        "props": {
+          "inherits": [],
+          "members": [],
+          "type": "React.ComponentProps<\"p\">"
+        }
+      },
+      {
+        "name": "CardFooter",
+        "props": {
+          "inherits": [],
+          "members": [],
+          "type": "React.ComponentProps<\"footer\">"
+        }
+      },
+      {
+        "name": "CardHeader",
+        "props": {
+          "description": "Props for the sticker card header.",
+          "descriptionKey": "api.card.components.CardHeader.props.description",
+          "inherits": ["React.ComponentProps<\"header\">"],
+          "members": [
+            {
+              "defaultValue": "false",
+              "description": "Controls decorative content rendered at the end of the header.",
+              "descriptionKey": "api.card.components.CardHeader.props.members.decoration.description",
+              "remarks": "Pass `true` to render the default header dots, or pass custom content.",
+              "remarksKey": "api.card.components.CardHeader.props.members.decoration.remarks",
+              "name": "decoration",
+              "optional": true,
+              "type": "boolean | React.ReactNode"
+            },
+            {
+              "defaultValue": "\"solid\"",
+              "description": "Controls the divider between the header and the card body.",
+              "descriptionKey": "api.card.components.CardHeader.props.members.divider.description",
+              "name": "divider",
+              "optional": true,
+              "type": "CardHeaderDivider"
+            },
+            {
+              "defaultValue": "\"none\"",
+              "description": "Controls the horizontal inset of the header divider.",
+              "descriptionKey": "api.card.components.CardHeader.props.members.dividerInset.description",
+              "name": "dividerInset",
+              "optional": true,
+              "type": "CardHeaderDividerInset"
+            }
+          ],
+          "type": "CardHeaderProps"
+        }
+      },
+      {
+        "name": "CardTitle",
+        "props": {
+          "inherits": [],
+          "members": [],
+          "type": "React.ComponentProps<\"h3\">"
+        }
+      }
+    ],
+    "description": "A composable handbook sticker surface for cards, panels, and grouped content.",
+    "descriptionKey": "api.card.description",
+    "exports": [
+      { "kind": "component", "name": "Card" },
+      { "kind": "component", "name": "CardContent" },
+      { "kind": "component", "name": "CardDescription" },
+      { "kind": "component", "name": "CardFooter" },
+      { "kind": "component", "name": "CardHeader" },
+      { "kind": "component", "name": "CardTitle" },
+      {
+        "description": "Builds the sticker card className from structure variants.",
+        "descriptionKey": "api.card.exports.cardVariants.description",
+        "kind": "variant",
+        "name": "cardVariants"
+      }
+    ],
+    "name": "card",
+    "sourcePath": "registry/default/card/card.tsx",
+    "title": "Sticker Card",
+    "types": [
+      {
+        "description": "Props for the sticker card header.",
+        "descriptionKey": "api.card.types.CardHeaderProps.description",
+        "inherits": ["React.ComponentProps<\"header\">"],
+        "kind": "interface",
+        "members": [
+          {
+            "defaultValue": "false",
+            "description": "Controls decorative content rendered at the end of the header.",
+            "descriptionKey": "api.card.types.CardHeaderProps.members.decoration.description",
+            "remarks": "Pass `true` to render the default header dots, or pass custom content.",
+            "remarksKey": "api.card.types.CardHeaderProps.members.decoration.remarks",
+            "name": "decoration",
+            "optional": true,
+            "type": "boolean | React.ReactNode"
+          },
+          {
+            "defaultValue": "\"solid\"",
+            "description": "Controls the divider between the header and the card body.",
+            "descriptionKey": "api.card.types.CardHeaderProps.members.divider.description",
+            "name": "divider",
+            "optional": true,
+            "type": "CardHeaderDivider"
+          },
+          {
+            "defaultValue": "\"none\"",
+            "description": "Controls the horizontal inset of the header divider.",
+            "descriptionKey": "api.card.types.CardHeaderProps.members.dividerInset.description",
+            "name": "dividerInset",
+            "optional": true,
+            "type": "CardHeaderDividerInset"
+          }
+        ],
+        "name": "CardHeaderProps"
+      },
+      {
+        "description": "Props for the sticker card root element.",
+        "descriptionKey": "api.card.types.CardProps.description",
+        "remarks": "Inherits native HTML attributes and adds semantic element and interactive states.",
+        "remarksKey": "api.card.types.CardProps.remarks",
+        "inherits": [
+          "React.HTMLAttributes<HTMLElement>",
+          "VariantProps<typeof cardVariants>"
+        ],
+        "kind": "interface",
+        "members": [
+          {
+            "defaultValue": "\"article\"",
+            "description": "Controls the semantic root element rendered by the card.",
+            "descriptionKey": "api.card.types.CardProps.members.as.description",
+            "name": "as",
+            "optional": true,
+            "type": "CardElement"
+          },
+          {
+            "defaultValue": "false",
+            "description": "Renders the card styles and state props on the only child element.",
+            "descriptionKey": "api.card.types.CardProps.members.asChild.description",
+            "name": "asChild",
+            "optional": true,
+            "type": "boolean"
+          },
+          {
+            "defaultValue": "false",
+            "description": "Enables tactile hover and pressed states for clickable card compositions.",
+            "descriptionKey": "api.card.types.CardProps.members.interactive.description",
+            "name": "interactive",
+            "optional": true,
+            "type": "boolean"
+          },
+          {
+            "defaultValue": "\"md\"",
+            "description": "Controls root spacing and the spacing consumed by card slots.",
+            "descriptionKey": "api.card.types.CardProps.members.padding.description",
+            "name": "padding",
+            "optional": true,
+            "type": "CardPadding"
+          },
+          {
+            "defaultValue": "\"elevated\"",
+            "description": "Controls the card surface structure and emphasis.",
+            "descriptionKey": "api.card.types.CardProps.members.variant.description",
+            "name": "variant",
+            "optional": true,
+            "type": "\"elevated\" | \"minimal\" | \"panel\""
+          }
+        ],
+        "name": "CardProps"
+      }
+    ],
+    "variants": [
+      {
+        "description": "Builds the sticker card header className from structure variants.",
+        "descriptionKey": "api.card.variants.cardHeaderVariants.description",
+        "groups": [
+          {
+            "defaultValue": "solid",
+            "name": "divider",
+            "values": ["dashed", "none", "solid"]
+          },
+          {
+            "defaultValue": "none",
+            "name": "dividerInset",
+            "values": ["card", "lg", "md", "none", "sm"]
+          },
+          {
+            "defaultValue": "plain",
+            "name": "layout",
+            "values": ["decorated", "plain"]
+          }
+        ],
+        "name": "cardHeaderVariants"
+      },
+      {
+        "description": "Builds the sticker card className from structure variants.",
+        "descriptionKey": "api.card.variants.cardVariants.description",
+        "groups": [
+          {
+            "defaultValue": "md",
+            "name": "padding",
+            "values": ["lg", "md", "none", "sm"]
+          },
+          {
+            "defaultValue": "elevated",
+            "name": "variant",
+            "values": ["elevated", "minimal", "panel"]
+          }
+        ],
+        "name": "cardVariants"
+      }
+    ]
+  },
+  "table": {
+    "components": [
+      {
+        "description": "A scrollable handbook-style table frame for dense, structured data.",
+        "descriptionKey": "api.table.components.Table.description",
+        "name": "Table",
+        "props": {
+          "description": "Props for the sticker table root.",
+          "descriptionKey": "api.table.components.Table.props.description",
+          "remarks": "Inherits native table attributes and wraps the table in a scrollable sticker frame.",
+          "remarksKey": "api.table.components.Table.props.remarks",
+          "inherits": ["React.ComponentProps<\"table\">"],
+          "members": [
+            {
+              "description": "Class name applied to the scroll container around the table.",
+              "descriptionKey": "api.table.components.Table.props.members.containerClassName.description",
+              "name": "containerClassName",
+              "optional": true,
+              "type": "string"
+            }
+          ],
+          "type": "TableProps"
+        }
+      },
+      {
+        "name": "TableBody",
+        "props": {
+          "inherits": [],
+          "members": [],
+          "type": "React.ComponentProps<\"tbody\">"
+        }
+      },
+      {
+        "name": "TableCaption",
+        "props": {
+          "inherits": [],
+          "members": [],
+          "type": "React.ComponentProps<\"caption\">"
+        }
+      },
+      {
+        "name": "TableCell",
+        "props": {
+          "inherits": [],
+          "members": [],
+          "type": "React.ComponentProps<\"td\">"
+        }
+      },
+      {
+        "name": "TableFooter",
+        "props": {
+          "inherits": [],
+          "members": [],
+          "type": "React.ComponentProps<\"tfoot\">"
+        }
+      },
+      {
+        "name": "TableHead",
+        "props": {
+          "inherits": [],
+          "members": [],
+          "type": "React.ComponentProps<\"th\">"
+        }
+      },
+      {
+        "name": "TableHeader",
+        "props": {
+          "inherits": [],
+          "members": [],
+          "type": "React.ComponentProps<\"thead\">"
+        }
+      },
+      {
+        "name": "TableRow",
+        "props": {
+          "inherits": [],
+          "members": [],
+          "type": "React.ComponentProps<\"tr\">"
+        }
+      }
+    ],
+    "description": "A scrollable paper table frame for API references and structured data.",
+    "descriptionKey": "api.table.description",
+    "exports": [
+      {
+        "description": "A scrollable handbook-style table frame for dense, structured data.",
+        "descriptionKey": "api.table.exports.Table.description",
+        "kind": "component",
+        "name": "Table"
+      },
+      { "kind": "component", "name": "TableBody" },
+      { "kind": "component", "name": "TableCaption" },
+      { "kind": "component", "name": "TableCell" },
+      { "kind": "component", "name": "TableFooter" },
+      { "kind": "component", "name": "TableHead" },
+      { "kind": "component", "name": "TableHeader" },
+      { "kind": "component", "name": "TableRow" }
+    ],
+    "name": "table",
+    "sourcePath": "registry/default/table/table.tsx",
+    "title": "Sticker Table",
+    "types": [
+      {
+        "description": "Props for the sticker table root.",
+        "descriptionKey": "api.table.types.TableProps.description",
+        "remarks": "Inherits native table attributes and wraps the table in a scrollable sticker frame.",
+        "remarksKey": "api.table.types.TableProps.remarks",
+        "inherits": ["React.ComponentProps<\"table\">"],
+        "kind": "interface",
+        "members": [
+          {
+            "description": "Class name applied to the scroll container around the table.",
+            "descriptionKey": "api.table.types.TableProps.members.containerClassName.description",
+            "name": "containerClassName",
+            "optional": true,
+            "type": "string"
+          }
+        ],
+        "name": "TableProps"
+      }
+    ],
+    "variants": []
+  },
+  "tag": {
+    "components": [
+      {
+        "name": "Tag",
+        "props": {
+          "description": "Props for the sticker tag element.",
+          "descriptionKey": "api.tag.components.Tag.props.description",
+          "remarks": "Inherits native HTML attributes and adds semantic element and sticker variants.",
+          "remarksKey": "api.tag.components.Tag.props.remarks",
+          "inherits": [
+            "React.HTMLAttributes<HTMLElement>",
+            "VariantProps<typeof tagVariants>"
+          ],
+          "members": [
+            {
+              "defaultValue": "\"span\"",
+              "description": "Controls the semantic root element rendered by the tag.",
+              "descriptionKey": "api.tag.components.Tag.props.members.as.description",
+              "name": "as",
+              "optional": true,
+              "type": "TagElement"
+            },
+            {
+              "defaultValue": "\"default\"",
+              "description": "Controls the semantic tag color.",
+              "descriptionKey": "api.tag.components.Tag.props.members.color.description",
+              "name": "color",
+              "optional": true,
+              "type": "\"danger\" | \"default\" | \"info\" | \"secondary\" | \"success\" | \"warning\""
+            },
+            {
+              "defaultValue": "false",
+              "description": "Shows a small status dot before the tag content.",
+              "descriptionKey": "api.tag.components.Tag.props.members.dot.description",
+              "name": "dot",
+              "optional": true,
+              "type": "boolean"
+            },
+            {
+              "defaultValue": "\"rounded\"",
+              "description": "Controls whether the tag is pill-shaped or softly rounded by size.",
+              "descriptionKey": "api.tag.components.Tag.props.members.rounded.description",
+              "name": "rounded",
+              "optional": true,
+              "type": "\"pill\" | \"rounded\""
+            },
+            {
+              "defaultValue": "\"default\"",
+              "description": "Controls the tag height, padding, and text size.",
+              "descriptionKey": "api.tag.components.Tag.props.members.size.description",
+              "name": "size",
+              "optional": true,
+              "type": "\"default\" | \"lg\" | \"sm\" | \"xs\""
+            },
+            {
+              "defaultValue": "\"solid\"",
+              "description": "Controls the tag visual structure and emphasis.",
+              "descriptionKey": "api.tag.components.Tag.props.members.variant.description",
+              "name": "variant",
+              "optional": true,
+              "type": "\"filled\" | \"outlined\" | \"soft\" | \"solid\""
+            }
+          ],
+          "type": "TagProps"
+        }
+      }
+    ],
+    "description": "A compact sticker tag for statuses, labels, and metadata chips.",
+    "descriptionKey": "api.tag.description",
+    "exports": [
+      { "kind": "component", "name": "Tag" },
+      {
+        "description": "Builds the tag className from structure, color, and size variants.",
+        "descriptionKey": "api.tag.exports.tagVariants.description",
+        "kind": "variant",
+        "name": "tagVariants"
+      }
+    ],
+    "name": "tag",
+    "sourcePath": "registry/default/tag/tag.tsx",
+    "title": "Sticker Tag",
+    "types": [
+      {
+        "description": "Props for the sticker tag element.",
+        "descriptionKey": "api.tag.types.TagProps.description",
+        "remarks": "Inherits native HTML attributes and adds semantic element and sticker variants.",
+        "remarksKey": "api.tag.types.TagProps.remarks",
+        "inherits": [
+          "React.HTMLAttributes<HTMLElement>",
+          "VariantProps<typeof tagVariants>"
+        ],
+        "kind": "interface",
+        "members": [
+          {
+            "defaultValue": "\"span\"",
+            "description": "Controls the semantic root element rendered by the tag.",
+            "descriptionKey": "api.tag.types.TagProps.members.as.description",
+            "name": "as",
+            "optional": true,
+            "type": "TagElement"
+          },
+          {
+            "defaultValue": "\"default\"",
+            "description": "Controls the semantic tag color.",
+            "descriptionKey": "api.tag.types.TagProps.members.color.description",
+            "name": "color",
+            "optional": true,
+            "type": "\"danger\" | \"default\" | \"info\" | \"secondary\" | \"success\" | \"warning\""
+          },
+          {
+            "defaultValue": "false",
+            "description": "Shows a small status dot before the tag content.",
+            "descriptionKey": "api.tag.types.TagProps.members.dot.description",
+            "name": "dot",
+            "optional": true,
+            "type": "boolean"
+          },
+          {
+            "defaultValue": "\"rounded\"",
+            "description": "Controls whether the tag is pill-shaped or softly rounded by size.",
+            "descriptionKey": "api.tag.types.TagProps.members.rounded.description",
+            "name": "rounded",
+            "optional": true,
+            "type": "\"pill\" | \"rounded\""
+          },
+          {
+            "defaultValue": "\"default\"",
+            "description": "Controls the tag height, padding, and text size.",
+            "descriptionKey": "api.tag.types.TagProps.members.size.description",
+            "name": "size",
+            "optional": true,
+            "type": "\"default\" | \"lg\" | \"sm\" | \"xs\""
+          },
+          {
+            "defaultValue": "\"solid\"",
+            "description": "Controls the tag visual structure and emphasis.",
+            "descriptionKey": "api.tag.types.TagProps.members.variant.description",
+            "name": "variant",
+            "optional": true,
+            "type": "\"filled\" | \"outlined\" | \"soft\" | \"solid\""
+          }
+        ],
+        "name": "TagProps"
+      }
+    ],
+    "variants": [
+      {
+        "description": "Builds the tag className from structure, color, and size variants.",
+        "descriptionKey": "api.tag.variants.tagVariants.description",
+        "groups": [
+          {
+            "defaultValue": "default",
+            "name": "color",
+            "values": [
+              "danger",
+              "default",
+              "info",
+              "secondary",
+              "success",
+              "warning"
+            ]
+          },
+          {
+            "defaultValue": "rounded",
+            "name": "rounded",
+            "values": ["pill", "rounded"]
+          },
+          {
+            "defaultValue": "default",
+            "name": "size",
+            "values": ["default", "lg", "sm", "xs"]
+          },
+          {
+            "defaultValue": "solid",
+            "name": "variant",
+            "values": ["filled", "outlined", "soft", "solid"]
+          }
+        ],
+        "name": "tagVariants"
+      }
+    ]
+  },
+  "label": {
+    "components": [
+      {
+        "name": "Label",
+        "props": {
+          "description": "Props for the sticker label root element.",
+          "descriptionKey": "api.label.components.Label.props.description",
+          "remarks": "Inherits native label attributes and adds sticker variants.",
+          "remarksKey": "api.label.components.Label.props.remarks",
+          "inherits": [
+            "React.LabelHTMLAttributes<HTMLLabelElement>",
+            "VariantProps<typeof labelTones>"
+          ],
+          "members": [
+            {
+              "defaultValue": "false",
+              "description": "Shows the optional marker after the label content.",
+              "descriptionKey": "api.label.components.Label.props.members.optional.description",
+              "name": "optional",
+              "optional": true,
+              "type": "boolean"
+            },
+            {
+              "defaultValue": "false",
+              "description": "Shows the required marker after the label content.",
+              "descriptionKey": "api.label.components.Label.props.members.required.description",
+              "name": "required",
+              "optional": true,
+              "type": "boolean"
+            },
+            {
+              "defaultValue": "\"default\"",
+              "description": "Controls the label text size.",
+              "descriptionKey": "api.label.components.Label.props.members.size.description",
+              "name": "size",
+              "optional": true,
+              "type": "\"default\" | \"lg\" | \"sm\""
+            },
+            {
+              "defaultValue": "\"default\"",
+              "description": "Controls the label text tone and required marker color.",
+              "descriptionKey": "api.label.components.Label.props.members.tone.description",
+              "name": "tone",
+              "optional": true,
+              "type": "\"danger\" | \"default\" | \"muted\" | \"success\" | \"warning\""
+            }
+          ],
+          "type": "LabelProps"
+        }
+      },
+      {
+        "name": "LabelDescription",
+        "props": {
+          "inherits": [],
+          "members": [],
+          "type": "React.ComponentProps<\"p\">"
+        }
+      },
+      {
+        "name": "LabelMarker",
+        "props": {
+          "description": "Props for the inline label marker.",
+          "descriptionKey": "api.label.components.LabelMarker.props.description",
+          "remarks": "Inherits native span attributes and adds sticker tone variants.",
+          "remarksKey": "api.label.components.LabelMarker.props.remarks",
+          "inherits": [
+            "React.ComponentProps<\"span\">",
+            "VariantProps<typeof markerTones>"
+          ],
+          "members": [
+            {
+              "defaultValue": "\"default\"",
+              "description": "Controls the marker paper color.",
+              "descriptionKey": "api.label.components.LabelMarker.props.members.tone.description",
+              "name": "tone",
+              "optional": true,
+              "type": "\"danger\" | \"default\" | \"muted\" | \"success\" | \"warning\""
+            }
+          ],
+          "type": "LabelMarkerProps"
+        }
+      }
+    ],
+    "description": "An accessible form caption with optional sticker markers.",
+    "descriptionKey": "api.label.description",
+    "exports": [
+      { "kind": "component", "name": "Label" },
+      { "kind": "component", "name": "LabelDescription" },
+      { "kind": "component", "name": "LabelMarker" },
+      {
+        "description": "Builds the sticker label className from size and tone variants.",
+        "descriptionKey": "api.label.exports.labelTones.description",
+        "kind": "value",
+        "name": "labelTones"
+      }
+    ],
+    "name": "label",
+    "sourcePath": "registry/default/label/label.tsx",
+    "title": "Sticker Label",
+    "types": [
+      {
+        "description": "Props for the inline label marker.",
+        "descriptionKey": "api.label.types.LabelMarkerProps.description",
+        "remarks": "Inherits native span attributes and adds sticker tone variants.",
+        "remarksKey": "api.label.types.LabelMarkerProps.remarks",
+        "inherits": [
+          "React.ComponentProps<\"span\">",
+          "VariantProps<typeof markerTones>"
+        ],
+        "kind": "interface",
+        "members": [
+          {
+            "defaultValue": "\"default\"",
+            "description": "Controls the marker paper color.",
+            "descriptionKey": "api.label.types.LabelMarkerProps.members.tone.description",
+            "name": "tone",
+            "optional": true,
+            "type": "\"danger\" | \"default\" | \"muted\" | \"success\" | \"warning\""
+          }
+        ],
+        "name": "LabelMarkerProps"
+      },
+      {
+        "description": "Props for the sticker label root element.",
+        "descriptionKey": "api.label.types.LabelProps.description",
+        "remarks": "Inherits native label attributes and adds sticker variants.",
+        "remarksKey": "api.label.types.LabelProps.remarks",
+        "inherits": [
+          "React.LabelHTMLAttributes<HTMLLabelElement>",
+          "VariantProps<typeof labelTones>"
+        ],
+        "kind": "interface",
+        "members": [
+          {
+            "defaultValue": "false",
+            "description": "Shows the optional marker after the label content.",
+            "descriptionKey": "api.label.types.LabelProps.members.optional.description",
+            "name": "optional",
+            "optional": true,
+            "type": "boolean"
+          },
+          {
+            "defaultValue": "false",
+            "description": "Shows the required marker after the label content.",
+            "descriptionKey": "api.label.types.LabelProps.members.required.description",
+            "name": "required",
+            "optional": true,
+            "type": "boolean"
+          },
+          {
+            "defaultValue": "\"default\"",
+            "description": "Controls the label text size.",
+            "descriptionKey": "api.label.types.LabelProps.members.size.description",
+            "name": "size",
+            "optional": true,
+            "type": "\"default\" | \"lg\" | \"sm\""
+          },
+          {
+            "defaultValue": "\"default\"",
+            "description": "Controls the label text tone and required marker color.",
+            "descriptionKey": "api.label.types.LabelProps.members.tone.description",
+            "name": "tone",
+            "optional": true,
+            "type": "\"danger\" | \"default\" | \"muted\" | \"success\" | \"warning\""
+          }
+        ],
+        "name": "LabelProps"
+      }
+    ],
+    "variants": [
+      {
+        "description": "Builds the sticker label className from size and tone variants.",
+        "descriptionKey": "api.label.variants.labelTones.description",
+        "groups": [
+          {
+            "defaultValue": "default",
+            "name": "size",
+            "values": ["default", "lg", "sm"]
+          },
+          {
+            "defaultValue": "default",
+            "name": "tone",
+            "values": ["danger", "default", "muted", "success", "warning"]
+          }
+        ],
+        "name": "labelTones"
+      },
+      {
+        "description": "Builds the inline marker className from tone variants.",
+        "descriptionKey": "api.label.variants.markerTones.description",
+        "groups": [
+          {
+            "defaultValue": "default",
+            "name": "tone",
+            "values": ["danger", "default", "muted", "success", "warning"]
+          }
+        ],
+        "name": "markerTones"
+      }
+    ]
+  }
+}

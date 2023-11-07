@@ -1,0 +1,11 @@
+import { ZH_PREVIEW_API_DOC_TRANSLATIONS } from "./api-docs"
+import { ZH_PREVIEW_COMMON_TRANSLATIONS } from "./common"
+import { ZH_PREVIEW_COMPONENT_TRANSLATIONS } from "./components"
+
+const ZH_TRANSLATIONS: Record<string, string> = {
+  ...ZH_PREVIEW_COMMON_TRANSLATIONS,
+  ...ZH_PREVIEW_API_DOC_TRANSLATIONS,
+  ...ZH_PREVIEW_COMPONENT_TRANSLATIONS,
+}
+
+export { ZH_TRANSLATIONS }
