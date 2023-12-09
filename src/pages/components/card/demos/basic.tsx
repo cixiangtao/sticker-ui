@@ -1,0 +1,51 @@
+import {
+  Button,
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+  Tag,
+} from "sticker-ui"
+
+import type { PreviewDemoMeta } from "@/layouts/preview"
+
+const meta = {
+  className: "bg-[#FFF6DC]",
+  description:
+    "Use card slots to keep headings, body copy, metadata, and actions visually separated.",
+  title: "Basic Composition",
+} satisfies PreviewDemoMeta
+
+function Demo() {
+  return (
+    <Card className="max-w-md">
+      <CardHeader>
+        <Tag rounded="pill" size="sm">
+          Preview
+        </Tag>
+        <CardTitle>Component Kit</CardTitle>
+        <CardDescription>
+          A compact paper card for component summaries, docs links, and quick
+          actions.
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        <p className="m-0 text-sm leading-6 font-medium text-[#5B5E6A]">
+          The header owns the accent strip while the content keeps a quieter
+          paper surface for longer copy.
+        </p>
+      </CardContent>
+      <CardFooter>
+        <Button size="sm">Open docs</Button>
+        <Button size="sm" variant="text">
+          Copy import
+        </Button>
+      </CardFooter>
+    </Card>
+  )
+}
+
+export { Demo }
+export default meta
