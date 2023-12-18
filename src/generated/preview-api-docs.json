@@ -19,6 +19,7 @@
               "descriptionKey": "api.button.components.Button.props.members.asChild.description",
               "name": "asChild",
               "optional": true,
+              "required": false,
               "type": "boolean"
             },
             {
@@ -27,6 +28,7 @@
               "descriptionKey": "api.button.components.Button.props.members.color.description",
               "name": "color",
               "optional": true,
+              "required": false,
               "type": "\"danger\" | \"default\" | \"info\" | \"secondary\" | \"success\" | \"warning\""
             },
             {
@@ -35,6 +37,7 @@
               "descriptionKey": "api.button.components.Button.props.members.loading.description",
               "name": "loading",
               "optional": true,
+              "required": false,
               "type": "boolean"
             },
             {
@@ -43,6 +46,7 @@
               "descriptionKey": "api.button.components.Button.props.members.size.description",
               "name": "size",
               "optional": true,
+              "required": false,
               "type": "\"icon\" | \"lg\" | \"md\" | \"sm\""
             },
             {
@@ -51,6 +55,7 @@
               "descriptionKey": "api.button.components.Button.props.members.variant.description",
               "name": "variant",
               "optional": true,
+              "required": false,
               "type": "\"dashed\" | \"filled\" | \"link\" | \"outlined\" | \"solid\" | \"text\""
             }
           ],
@@ -70,7 +75,7 @@
       }
     ],
     "name": "button",
-    "sourcePath": "registry/default/button/button.tsx",
+    "sourcePath": "src/components/ui/button.tsx",
     "title": "Sticker Button",
     "types": [
       {
@@ -90,6 +95,7 @@
             "descriptionKey": "api.button.types.ButtonProps.members.asChild.description",
             "name": "asChild",
             "optional": true,
+            "required": false,
             "type": "boolean"
           },
           {
@@ -98,6 +104,7 @@
             "descriptionKey": "api.button.types.ButtonProps.members.color.description",
             "name": "color",
             "optional": true,
+            "required": false,
             "type": "\"danger\" | \"default\" | \"info\" | \"secondary\" | \"success\" | \"warning\""
           },
           {
@@ -106,6 +113,7 @@
             "descriptionKey": "api.button.types.ButtonProps.members.loading.description",
             "name": "loading",
             "optional": true,
+            "required": false,
             "type": "boolean"
           },
           {
@@ -114,6 +122,7 @@
             "descriptionKey": "api.button.types.ButtonProps.members.size.description",
             "name": "size",
             "optional": true,
+            "required": false,
             "type": "\"icon\" | \"lg\" | \"md\" | \"sm\""
           },
           {
@@ -122,6 +131,7 @@
             "descriptionKey": "api.button.types.ButtonProps.members.variant.description",
             "name": "variant",
             "optional": true,
+            "required": false,
             "type": "\"dashed\" | \"filled\" | \"link\" | \"outlined\" | \"solid\" | \"text\""
           }
         ],
@@ -180,6 +190,7 @@
               "descriptionKey": "api.card.components.Card.props.members.as.description",
               "name": "as",
               "optional": true,
+              "required": false,
               "type": "CardElement"
             },
             {
@@ -188,6 +199,7 @@
               "descriptionKey": "api.card.components.Card.props.members.asChild.description",
               "name": "asChild",
               "optional": true,
+              "required": false,
               "type": "boolean"
             },
             {
@@ -196,6 +208,7 @@
               "descriptionKey": "api.card.components.Card.props.members.interactive.description",
               "name": "interactive",
               "optional": true,
+              "required": false,
               "type": "boolean"
             },
             {
@@ -204,6 +217,7 @@
               "descriptionKey": "api.card.components.Card.props.members.padding.description",
               "name": "padding",
               "optional": true,
+              "required": false,
               "type": "CardPadding"
             },
             {
@@ -212,6 +226,7 @@
               "descriptionKey": "api.card.components.Card.props.members.variant.description",
               "name": "variant",
               "optional": true,
+              "required": false,
               "type": "\"elevated\" | \"minimal\" | \"panel\""
             }
           ],
@@ -257,6 +272,7 @@
               "remarksKey": "api.card.components.CardHeader.props.members.decoration.remarks",
               "name": "decoration",
               "optional": true,
+              "required": false,
               "type": "boolean | React.ReactNode"
             },
             {
@@ -265,6 +281,7 @@
               "descriptionKey": "api.card.components.CardHeader.props.members.divider.description",
               "name": "divider",
               "optional": true,
+              "required": false,
               "type": "CardHeaderDivider"
             },
             {
@@ -273,6 +290,7 @@
               "descriptionKey": "api.card.components.CardHeader.props.members.dividerInset.description",
               "name": "dividerInset",
               "optional": true,
+              "required": false,
               "type": "CardHeaderDividerInset"
             }
           ],
@@ -305,7 +323,7 @@
       }
     ],
     "name": "card",
-    "sourcePath": "registry/default/card/card.tsx",
+    "sourcePath": "src/components/ui/card.tsx",
     "title": "Sticker Card",
     "types": [
       {
@@ -322,6 +340,7 @@
             "remarksKey": "api.card.types.CardHeaderProps.members.decoration.remarks",
             "name": "decoration",
             "optional": true,
+            "required": false,
             "type": "boolean | React.ReactNode"
           },
           {
@@ -330,6 +349,7 @@
             "descriptionKey": "api.card.types.CardHeaderProps.members.divider.description",
             "name": "divider",
             "optional": true,
+            "required": false,
             "type": "CardHeaderDivider"
           },
           {
@@ -338,6 +358,7 @@
             "descriptionKey": "api.card.types.CardHeaderProps.members.dividerInset.description",
             "name": "dividerInset",
             "optional": true,
+            "required": false,
             "type": "CardHeaderDividerInset"
           }
         ],
@@ -360,6 +381,7 @@
             "descriptionKey": "api.card.types.CardProps.members.as.description",
             "name": "as",
             "optional": true,
+            "required": false,
             "type": "CardElement"
           },
           {
@@ -368,6 +390,7 @@
             "descriptionKey": "api.card.types.CardProps.members.asChild.description",
             "name": "asChild",
             "optional": true,
+            "required": false,
             "type": "boolean"
           },
           {
@@ -376,6 +399,7 @@
             "descriptionKey": "api.card.types.CardProps.members.interactive.description",
             "name": "interactive",
             "optional": true,
+            "required": false,
             "type": "boolean"
           },
           {
@@ -384,6 +408,7 @@
             "descriptionKey": "api.card.types.CardProps.members.padding.description",
             "name": "padding",
             "optional": true,
+            "required": false,
             "type": "CardPadding"
           },
           {
@@ -392,6 +417,7 @@
             "descriptionKey": "api.card.types.CardProps.members.variant.description",
             "name": "variant",
             "optional": true,
+            "required": false,
             "type": "\"elevated\" | \"minimal\" | \"panel\""
           }
         ],
@@ -412,11 +438,6 @@
             "defaultValue": "none",
             "name": "dividerInset",
             "values": ["card", "lg", "md", "none", "sm"]
-          },
-          {
-            "defaultValue": "plain",
-            "name": "layout",
-            "values": ["decorated", "plain"]
           }
         ],
         "name": "cardHeaderVariants"
@@ -458,6 +479,7 @@
               "descriptionKey": "api.table.components.Table.props.members.containerClassName.description",
               "name": "containerClassName",
               "optional": true,
+              "required": false,
               "type": "string"
             }
           ],
@@ -539,7 +561,7 @@
       { "kind": "component", "name": "TableRow" }
     ],
     "name": "table",
-    "sourcePath": "registry/default/table/table.tsx",
+    "sourcePath": "src/components/ui/table.tsx",
     "title": "Sticker Table",
     "types": [
       {
@@ -555,6 +577,7 @@
             "descriptionKey": "api.table.types.TableProps.members.containerClassName.description",
             "name": "containerClassName",
             "optional": true,
+            "required": false,
             "type": "string"
           }
         ],
@@ -583,6 +606,7 @@
               "descriptionKey": "api.tag.components.Tag.props.members.as.description",
               "name": "as",
               "optional": true,
+              "required": false,
               "type": "TagElement"
             },
             {
@@ -591,6 +615,7 @@
               "descriptionKey": "api.tag.components.Tag.props.members.color.description",
               "name": "color",
               "optional": true,
+              "required": false,
               "type": "\"danger\" | \"default\" | \"info\" | \"secondary\" | \"success\" | \"warning\""
             },
             {
@@ -599,6 +624,7 @@
               "descriptionKey": "api.tag.components.Tag.props.members.dot.description",
               "name": "dot",
               "optional": true,
+              "required": false,
               "type": "boolean"
             },
             {
@@ -607,6 +633,7 @@
               "descriptionKey": "api.tag.components.Tag.props.members.rounded.description",
               "name": "rounded",
               "optional": true,
+              "required": false,
               "type": "\"pill\" | \"rounded\""
             },
             {
@@ -615,6 +642,7 @@
               "descriptionKey": "api.tag.components.Tag.props.members.size.description",
               "name": "size",
               "optional": true,
+              "required": false,
               "type": "\"default\" | \"lg\" | \"sm\" | \"xs\""
             },
             {
@@ -623,7 +651,8 @@
               "descriptionKey": "api.tag.components.Tag.props.members.variant.description",
               "name": "variant",
               "optional": true,
-              "type": "\"filled\" | \"outlined\" | \"soft\" | \"solid\""
+              "required": false,
+              "type": "\"filled\" | \"outlined\" | \"solid\""
             }
           ],
           "type": "TagProps"
@@ -642,7 +671,7 @@
       }
     ],
     "name": "tag",
-    "sourcePath": "registry/default/tag/tag.tsx",
+    "sourcePath": "src/components/ui/tag.tsx",
     "title": "Sticker Tag",
     "types": [
       {
@@ -662,6 +691,7 @@
             "descriptionKey": "api.tag.types.TagProps.members.as.description",
             "name": "as",
             "optional": true,
+            "required": false,
             "type": "TagElement"
           },
           {
@@ -670,6 +700,7 @@
             "descriptionKey": "api.tag.types.TagProps.members.color.description",
             "name": "color",
             "optional": true,
+            "required": false,
             "type": "\"danger\" | \"default\" | \"info\" | \"secondary\" | \"success\" | \"warning\""
           },
           {
@@ -678,6 +709,7 @@
             "descriptionKey": "api.tag.types.TagProps.members.dot.description",
             "name": "dot",
             "optional": true,
+            "required": false,
             "type": "boolean"
           },
           {
@@ -686,6 +718,7 @@
             "descriptionKey": "api.tag.types.TagProps.members.rounded.description",
             "name": "rounded",
             "optional": true,
+            "required": false,
             "type": "\"pill\" | \"rounded\""
           },
           {
@@ -694,6 +727,7 @@
             "descriptionKey": "api.tag.types.TagProps.members.size.description",
             "name": "size",
             "optional": true,
+            "required": false,
             "type": "\"default\" | \"lg\" | \"sm\" | \"xs\""
           },
           {
@@ -702,7 +736,8 @@
             "descriptionKey": "api.tag.types.TagProps.members.variant.description",
             "name": "variant",
             "optional": true,
-            "type": "\"filled\" | \"outlined\" | \"soft\" | \"solid\""
+            "required": false,
+            "type": "\"filled\" | \"outlined\" | \"solid\""
           }
         ],
         "name": "TagProps"
@@ -738,7 +773,7 @@
           {
             "defaultValue": "solid",
             "name": "variant",
-            "values": ["filled", "outlined", "soft", "solid"]
+            "values": ["filled", "outlined", "solid"]
           }
         ],
         "name": "tagVariants"
@@ -765,6 +800,7 @@
               "descriptionKey": "api.label.components.Label.props.members.optional.description",
               "name": "optional",
               "optional": true,
+              "required": false,
               "type": "boolean"
             },
             {
@@ -773,6 +809,7 @@
               "descriptionKey": "api.label.components.Label.props.members.required.description",
               "name": "required",
               "optional": true,
+              "required": false,
               "type": "boolean"
             },
             {
@@ -781,6 +818,7 @@
               "descriptionKey": "api.label.components.Label.props.members.size.description",
               "name": "size",
               "optional": true,
+              "required": false,
               "type": "\"default\" | \"lg\" | \"sm\""
             },
             {
@@ -789,6 +827,7 @@
               "descriptionKey": "api.label.components.Label.props.members.tone.description",
               "name": "tone",
               "optional": true,
+              "required": false,
               "type": "\"danger\" | \"default\" | \"muted\" | \"success\" | \"warning\""
             }
           ],
@@ -821,6 +860,7 @@
               "descriptionKey": "api.label.components.LabelMarker.props.members.tone.description",
               "name": "tone",
               "optional": true,
+              "required": false,
               "type": "\"danger\" | \"default\" | \"muted\" | \"success\" | \"warning\""
             }
           ],
@@ -842,7 +882,7 @@
       }
     ],
     "name": "label",
-    "sourcePath": "registry/default/label/label.tsx",
+    "sourcePath": "src/components/ui/label.tsx",
     "title": "Sticker Label",
     "types": [
       {
@@ -862,6 +902,7 @@
             "descriptionKey": "api.label.types.LabelMarkerProps.members.tone.description",
             "name": "tone",
             "optional": true,
+            "required": false,
             "type": "\"danger\" | \"default\" | \"muted\" | \"success\" | \"warning\""
           }
         ],
@@ -884,6 +925,7 @@
             "descriptionKey": "api.label.types.LabelProps.members.optional.description",
             "name": "optional",
             "optional": true,
+            "required": false,
             "type": "boolean"
           },
           {
@@ -892,6 +934,7 @@
             "descriptionKey": "api.label.types.LabelProps.members.required.description",
             "name": "required",
             "optional": true,
+            "required": false,
             "type": "boolean"
           },
           {
@@ -900,6 +943,7 @@
             "descriptionKey": "api.label.types.LabelProps.members.size.description",
             "name": "size",
             "optional": true,
+            "required": false,
             "type": "\"default\" | \"lg\" | \"sm\""
           },
           {
@@ -908,6 +952,7 @@
             "descriptionKey": "api.label.types.LabelProps.members.tone.description",
             "name": "tone",
             "optional": true,
+            "required": false,
             "type": "\"danger\" | \"default\" | \"muted\" | \"success\" | \"warning\""
           }
         ],
@@ -945,5 +990,717 @@
         "name": "markerTones"
       }
     ]
+  },
+  "input": {
+    "components": [
+      {
+        "name": "Input",
+        "props": {
+          "description": "Props for the sticker input element.",
+          "descriptionKey": "api.input.components.Input.props.description",
+          "remarks": "Inherits native input attributes, except the numeric HTML `size` attribute is replaced by sticker control sizes.",
+          "remarksKey": "api.input.components.Input.props.remarks",
+          "inherits": [
+            "Omit<React.InputHTMLAttributes<HTMLInputElement>, \"size\">",
+            "Omit<VariantProps<typeof inputVariants>, \"size\" | \"tone\" | \"variant\">"
+          ],
+          "members": [
+            {
+              "defaultValue": "\"md\"",
+              "description": "Controls the input height, radius, and text size.",
+              "descriptionKey": "api.input.components.Input.props.members.size.description",
+              "name": "size",
+              "optional": true,
+              "required": false,
+              "type": "\"lg\" | \"md\" | \"sm\""
+            },
+            {
+              "defaultValue": "\"default\"",
+              "description": "Controls the input semantic paper tone.",
+              "descriptionKey": "api.input.components.Input.props.members.tone.description",
+              "name": "tone",
+              "optional": true,
+              "required": false,
+              "type": "\"danger\" | \"default\" | \"info\" | \"secondary\" | \"success\" | \"warning\""
+            },
+            {
+              "defaultValue": "\"outlined\"",
+              "description": "Controls the input border and fill emphasis.",
+              "descriptionKey": "api.input.components.Input.props.members.variant.description",
+              "name": "variant",
+              "optional": true,
+              "required": false,
+              "type": "\"filled\" | \"outlined\" | \"quiet\""
+            }
+          ],
+          "type": "InputProps"
+        }
+      }
+    ],
+    "description": "A native form input with chunky sticker frames and semantic field states.",
+    "descriptionKey": "api.input.description",
+    "exports": [
+      { "kind": "component", "name": "Input" },
+      {
+        "description": "Builds the sticker input className from structure, tone, and size variants.",
+        "descriptionKey": "api.input.exports.inputVariants.description",
+        "kind": "variant",
+        "name": "inputVariants"
+      }
+    ],
+    "name": "input",
+    "sourcePath": "src/components/ui/input.tsx",
+    "title": "Sticker Input",
+    "types": [
+      {
+        "description": "Props for the sticker input element.",
+        "descriptionKey": "api.input.types.InputProps.description",
+        "remarks": "Inherits native input attributes, except the numeric HTML `size` attribute is replaced by sticker control sizes.",
+        "remarksKey": "api.input.types.InputProps.remarks",
+        "inherits": [
+          "Omit<React.InputHTMLAttributes<HTMLInputElement>, \"size\">",
+          "Omit<VariantProps<typeof inputVariants>, \"size\" | \"tone\" | \"variant\">"
+        ],
+        "kind": "interface",
+        "members": [
+          {
+            "defaultValue": "\"md\"",
+            "description": "Controls the input height, radius, and text size.",
+            "descriptionKey": "api.input.types.InputProps.members.size.description",
+            "name": "size",
+            "optional": true,
+            "required": false,
+            "type": "\"lg\" | \"md\" | \"sm\""
+          },
+          {
+            "defaultValue": "\"default\"",
+            "description": "Controls the input semantic paper tone.",
+            "descriptionKey": "api.input.types.InputProps.members.tone.description",
+            "name": "tone",
+            "optional": true,
+            "required": false,
+            "type": "\"danger\" | \"default\" | \"info\" | \"secondary\" | \"success\" | \"warning\""
+          },
+          {
+            "defaultValue": "\"outlined\"",
+            "description": "Controls the input border and fill emphasis.",
+            "descriptionKey": "api.input.types.InputProps.members.variant.description",
+            "name": "variant",
+            "optional": true,
+            "required": false,
+            "type": "\"filled\" | \"outlined\" | \"quiet\""
+          }
+        ],
+        "name": "InputProps"
+      }
+    ],
+    "variants": [
+      {
+        "description": "Builds the sticker input className from structure, tone, and size variants.",
+        "descriptionKey": "api.input.variants.inputVariants.description",
+        "groups": [
+          {
+            "defaultValue": "md",
+            "name": "size",
+            "values": ["lg", "md", "sm"]
+          },
+          {
+            "defaultValue": "default",
+            "name": "tone",
+            "values": [
+              "danger",
+              "default",
+              "info",
+              "secondary",
+              "success",
+              "warning"
+            ]
+          },
+          {
+            "defaultValue": "outlined",
+            "name": "variant",
+            "values": ["filled", "outlined", "quiet"]
+          }
+        ],
+        "name": "inputVariants"
+      }
+    ]
+  },
+  "form": {
+    "components": [
+      {
+        "name": "Form",
+        "props": {
+          "description": "Props for the sticker form root.",
+          "descriptionKey": "api.form.components.Form.props.description",
+          "remarks": "Inherits native form attributes and adds antd-style form state callbacks.",
+          "remarksKey": "api.form.components.Form.props.remarks",
+          "inherits": ["Omit< React.ComponentProps<\"form\">, \"onSubmit\" >"],
+          "members": [
+            {
+              "defaultValue": "false",
+              "description": "Disables all registered fields by default.",
+              "descriptionKey": "api.form.components.Form.props.members.disabled.description",
+              "name": "disabled",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Controlled form instance created by `Form.useForm`.",
+              "descriptionKey": "api.form.components.Form.props.members.form.description",
+              "name": "form",
+              "optional": true,
+              "required": false,
+              "type": "FormInstance<Values>"
+            },
+            {
+              "description": "Initial values copied into the form store on first mount.",
+              "descriptionKey": "api.form.components.Form.props.members.initialValues.description",
+              "name": "initialValues",
+              "optional": true,
+              "required": false,
+              "type": "Partial<Values>"
+            },
+            {
+              "defaultValue": "\"vertical\"",
+              "description": "Controls label and field layout.",
+              "descriptionKey": "api.form.components.Form.props.members.layout.description",
+              "name": "layout",
+              "optional": true,
+              "required": false,
+              "type": "\"horizontal\" | \"inline\" | \"vertical\""
+            },
+            {
+              "description": "Called after validation succeeds during submit.",
+              "descriptionKey": "api.form.components.Form.props.members.onFinish.description",
+              "name": "onFinish",
+              "optional": true,
+              "required": false,
+              "type": "(values: Values) => void"
+            },
+            {
+              "description": "Called after validation fails during submit.",
+              "descriptionKey": "api.form.components.Form.props.members.onFinishFailed.description",
+              "name": "onFinishFailed",
+              "optional": true,
+              "required": false,
+              "type": "(errorInfo: ValidateErrorInfo<Values>) => void"
+            },
+            {
+              "defaultValue": "\"onChange\"",
+              "description": "Default field validation trigger.",
+              "descriptionKey": "api.form.components.Form.props.members.validateTrigger.description",
+              "name": "validateTrigger",
+              "optional": true,
+              "required": false,
+              "type": "ValidateTrigger"
+            }
+          ],
+          "type": "FormProps"
+        }
+      }
+    ],
+    "description": "An antd-style form controller with handbook sticker field states.",
+    "descriptionKey": "api.form.description",
+    "exports": [
+      {
+        "description": "Field data used by `setFields`.",
+        "descriptionKey": "api.form.exports.FieldData.description",
+        "kind": "interface",
+        "name": "FieldData"
+      },
+      { "kind": "component", "name": "Form" },
+      {
+        "description": "Imperative form instance returned by `Form.useForm`.",
+        "descriptionKey": "api.form.exports.FormInstance.description",
+        "kind": "interface",
+        "name": "FormInstance"
+      },
+      {
+        "description": "Props for a sticker form field.",
+        "descriptionKey": "api.form.exports.FormItemProps.description",
+        "kind": "interface",
+        "name": "FormItemProps"
+      },
+      {
+        "description": "Props for the sticker form root.",
+        "descriptionKey": "api.form.exports.FormProps.description",
+        "remarks": "Inherits native form attributes and adds antd-style form state callbacks.",
+        "remarksKey": "api.form.exports.FormProps.remarks",
+        "kind": "interface",
+        "name": "FormProps"
+      },
+      {
+        "description": "Validation rule for a form field.",
+        "descriptionKey": "api.form.exports.FormRule.description",
+        "kind": "interface",
+        "name": "FormRule"
+      },
+      {
+        "description": "Field name path used to read and write values in a form store.",
+        "descriptionKey": "api.form.exports.NamePath.description",
+        "kind": "type",
+        "name": "NamePath"
+      },
+      {
+        "description": "Creates or reuses a sticker form instance.",
+        "descriptionKey": "api.form.exports.useForm.description",
+        "kind": "value",
+        "name": "useForm"
+      },
+      {
+        "description": "Error info passed to `onFinishFailed`.",
+        "descriptionKey": "api.form.exports.ValidateErrorInfo.description",
+        "kind": "interface",
+        "name": "ValidateErrorInfo"
+      },
+      { "kind": "type", "name": "ValidateStatus" },
+      { "kind": "type", "name": "ValidateTrigger" }
+    ],
+    "name": "form",
+    "sourcePath": "src/components/ui/form.tsx",
+    "title": "Sticker Form",
+    "types": [
+      {
+        "description": "Field data used by `setFields`.",
+        "descriptionKey": "api.form.types.FieldData.description",
+        "inherits": [],
+        "kind": "interface",
+        "members": [
+          {
+            "description": "Field validation errors.",
+            "descriptionKey": "api.form.types.FieldData.members.errors.description",
+            "name": "errors",
+            "optional": true,
+            "required": false,
+            "type": "React.ReactNode[]"
+          },
+          {
+            "description": "Field name path.",
+            "descriptionKey": "api.form.types.FieldData.members.name.description",
+            "name": "name",
+            "optional": false,
+            "required": true,
+            "type": "NamePath"
+          },
+          {
+            "description": "Whether the field has been touched.",
+            "descriptionKey": "api.form.types.FieldData.members.touched.description",
+            "name": "touched",
+            "optional": true,
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "description": "Whether the field is currently validating.",
+            "descriptionKey": "api.form.types.FieldData.members.validating.description",
+            "name": "validating",
+            "optional": true,
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "description": "Field value.",
+            "descriptionKey": "api.form.types.FieldData.members.value.description",
+            "name": "value",
+            "optional": true,
+            "required": false,
+            "type": "StoreValue"
+          }
+        ],
+        "name": "FieldData"
+      },
+      {
+        "description": "Imperative form instance returned by `Form.useForm`.",
+        "descriptionKey": "api.form.types.FormInstance.description",
+        "inherits": [],
+        "kind": "interface",
+        "members": [
+          {
+            "description": "Gets all registered field values or the selected name paths.",
+            "descriptionKey": "api.form.types.FormInstance.members.getFieldsValue.description",
+            "name": "getFieldsValue",
+            "optional": false,
+            "required": true,
+            "type": "(nameList?: readonly NamePath[] | true) => Values"
+          },
+          {
+            "description": "Gets a single field value.",
+            "descriptionKey": "api.form.types.FormInstance.members.getFieldValue.description",
+            "name": "getFieldValue",
+            "optional": false,
+            "required": true,
+            "type": "(name: NamePath) => StoreValue"
+          },
+          {
+            "description": "Resets fields back to `initialValues`.",
+            "descriptionKey": "api.form.types.FormInstance.members.resetFields.description",
+            "name": "resetFields",
+            "optional": false,
+            "required": true,
+            "type": "(nameList?: readonly NamePath[]) => void"
+          },
+          {
+            "description": "Sets field metadata and values.",
+            "descriptionKey": "api.form.types.FormInstance.members.setFields.description",
+            "name": "setFields",
+            "optional": false,
+            "required": true,
+            "type": "(fields: FieldData[]) => void"
+          },
+          {
+            "description": "Merges multiple values into the form store.",
+            "descriptionKey": "api.form.types.FormInstance.members.setFieldsValue.description",
+            "name": "setFieldsValue",
+            "optional": false,
+            "required": true,
+            "type": "(values: Partial<Values>) => void"
+          },
+          {
+            "description": "Sets a single field value.",
+            "descriptionKey": "api.form.types.FormInstance.members.setFieldValue.description",
+            "name": "setFieldValue",
+            "optional": false,
+            "required": true,
+            "type": "(name: NamePath, value: StoreValue) => void"
+          },
+          {
+            "description": "Submits the form and runs validation.",
+            "descriptionKey": "api.form.types.FormInstance.members.submit.description",
+            "name": "submit",
+            "optional": false,
+            "required": true,
+            "type": "() => void"
+          },
+          {
+            "description": "Validates registered fields or the selected name paths.",
+            "descriptionKey": "api.form.types.FormInstance.members.validateFields.description",
+            "name": "validateFields",
+            "optional": false,
+            "required": true,
+            "type": "(nameList?: readonly NamePath[]) => Promise<Values>"
+          }
+        ],
+        "name": "FormInstance"
+      },
+      {
+        "description": "Props for a sticker form field.",
+        "descriptionKey": "api.form.types.FormItemProps.description",
+        "inherits": ["React.ComponentProps<\"div\">"],
+        "kind": "interface",
+        "members": [
+          {
+            "description": "Controlled field child.",
+            "descriptionKey": "api.form.types.FormItemProps.members.children.description",
+            "name": "children",
+            "optional": true,
+            "required": false,
+            "type": "React.ReactNode"
+          },
+          {
+            "description": "Extra helper copy rendered below the field.",
+            "descriptionKey": "api.form.types.FormItemProps.members.extra.description",
+            "name": "extra",
+            "optional": true,
+            "required": false,
+            "type": "React.ReactNode"
+          },
+          {
+            "description": "Custom help content. When omitted, validation errors are shown.",
+            "descriptionKey": "api.form.types.FormItemProps.members.help.description",
+            "name": "help",
+            "optional": true,
+            "required": false,
+            "type": "React.ReactNode"
+          },
+          {
+            "description": "Field label.",
+            "descriptionKey": "api.form.types.FormItemProps.members.label.description",
+            "name": "label",
+            "optional": true,
+            "required": false,
+            "type": "React.ReactNode"
+          },
+          {
+            "description": "Field name path.",
+            "descriptionKey": "api.form.types.FormItemProps.members.name.description",
+            "name": "name",
+            "optional": true,
+            "required": false,
+            "type": "NamePath"
+          },
+          {
+            "defaultValue": "false",
+            "description": "Marks the label as required without adding a validation rule.",
+            "descriptionKey": "api.form.types.FormItemProps.members.required.description",
+            "name": "required",
+            "optional": true,
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "description": "Validation rules for this field.",
+            "descriptionKey": "api.form.types.FormItemProps.members.rules.description",
+            "name": "rules",
+            "optional": true,
+            "required": false,
+            "type": "FormRule[]"
+          },
+          {
+            "defaultValue": "\"onChange\"",
+            "description": "Event prop used to collect field changes.",
+            "descriptionKey": "api.form.types.FormItemProps.members.trigger.description",
+            "name": "trigger",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "Explicit validation status for display-only items.",
+            "descriptionKey": "api.form.types.FormItemProps.members.validateStatus.description",
+            "name": "validateStatus",
+            "optional": true,
+            "required": false,
+            "type": "ValidateStatus"
+          },
+          {
+            "description": "Field-level validation trigger.",
+            "descriptionKey": "api.form.types.FormItemProps.members.validateTrigger.description",
+            "name": "validateTrigger",
+            "optional": true,
+            "required": false,
+            "type": "ValidateTrigger"
+          },
+          {
+            "defaultValue": "\"value\"",
+            "description": "Prop name used to pass the controlled value to the child.",
+            "descriptionKey": "api.form.types.FormItemProps.members.valuePropName.description",
+            "name": "valuePropName",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "name": "FormItemProps"
+      },
+      {
+        "description": "Props for the sticker form root.",
+        "descriptionKey": "api.form.types.FormProps.description",
+        "remarks": "Inherits native form attributes and adds antd-style form state callbacks.",
+        "remarksKey": "api.form.types.FormProps.remarks",
+        "inherits": ["Omit< React.ComponentProps<\"form\">, \"onSubmit\" >"],
+        "kind": "interface",
+        "members": [
+          {
+            "defaultValue": "false",
+            "description": "Disables all registered fields by default.",
+            "descriptionKey": "api.form.types.FormProps.members.disabled.description",
+            "name": "disabled",
+            "optional": true,
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "description": "Controlled form instance created by `Form.useForm`.",
+            "descriptionKey": "api.form.types.FormProps.members.form.description",
+            "name": "form",
+            "optional": true,
+            "required": false,
+            "type": "FormInstance<Values>"
+          },
+          {
+            "description": "Initial values copied into the form store on first mount.",
+            "descriptionKey": "api.form.types.FormProps.members.initialValues.description",
+            "name": "initialValues",
+            "optional": true,
+            "required": false,
+            "type": "Partial<Values>"
+          },
+          {
+            "defaultValue": "\"vertical\"",
+            "description": "Controls label and field layout.",
+            "descriptionKey": "api.form.types.FormProps.members.layout.description",
+            "name": "layout",
+            "optional": true,
+            "required": false,
+            "type": "\"horizontal\" | \"inline\" | \"vertical\""
+          },
+          {
+            "description": "Called after validation succeeds during submit.",
+            "descriptionKey": "api.form.types.FormProps.members.onFinish.description",
+            "name": "onFinish",
+            "optional": true,
+            "required": false,
+            "type": "(values: Values) => void"
+          },
+          {
+            "description": "Called after validation fails during submit.",
+            "descriptionKey": "api.form.types.FormProps.members.onFinishFailed.description",
+            "name": "onFinishFailed",
+            "optional": true,
+            "required": false,
+            "type": "(errorInfo: ValidateErrorInfo<Values>) => void"
+          },
+          {
+            "defaultValue": "\"onChange\"",
+            "description": "Default field validation trigger.",
+            "descriptionKey": "api.form.types.FormProps.members.validateTrigger.description",
+            "name": "validateTrigger",
+            "optional": true,
+            "required": false,
+            "type": "ValidateTrigger"
+          }
+        ],
+        "name": "FormProps"
+      },
+      {
+        "description": "Validation rule for a form field.",
+        "descriptionKey": "api.form.types.FormRule.description",
+        "inherits": [],
+        "kind": "interface",
+        "members": [
+          {
+            "description": "Fails validation when a string or array length does not equal this value, or a number is not equal to it.",
+            "descriptionKey": "api.form.types.FormRule.members.len.description",
+            "name": "len",
+            "optional": true,
+            "required": false,
+            "type": "number"
+          },
+          {
+            "description": "Fails validation when a string or array is longer than this value, or a number is greater than it.",
+            "descriptionKey": "api.form.types.FormRule.members.max.description",
+            "name": "max",
+            "optional": true,
+            "required": false,
+            "type": "number"
+          },
+          {
+            "description": "Custom validation message shown when this rule fails.",
+            "descriptionKey": "api.form.types.FormRule.members.message.description",
+            "name": "message",
+            "optional": true,
+            "required": false,
+            "type": "React.ReactNode"
+          },
+          {
+            "description": "Fails validation when a string or array is shorter than this value, or a number is less than it.",
+            "descriptionKey": "api.form.types.FormRule.members.min.description",
+            "name": "min",
+            "optional": true,
+            "required": false,
+            "type": "number"
+          },
+          {
+            "description": "Fails validation when a string does not match this pattern.",
+            "descriptionKey": "api.form.types.FormRule.members.pattern.description",
+            "name": "pattern",
+            "optional": true,
+            "required": false,
+            "type": "RegExp"
+          },
+          {
+            "defaultValue": "false",
+            "description": "Fails validation when the field value is empty.",
+            "descriptionKey": "api.form.types.FormRule.members.required.description",
+            "name": "required",
+            "optional": true,
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "description": "Checks a basic runtime value type.",
+            "descriptionKey": "api.form.types.FormRule.members.type.description",
+            "name": "type",
+            "optional": true,
+            "required": false,
+            "type": "\"array\" | \"boolean\" | \"email\" | \"number\" | \"string\""
+          },
+          {
+            "description": "Trigger names that should run this rule.",
+            "descriptionKey": "api.form.types.FormRule.members.validateTrigger.description",
+            "name": "validateTrigger",
+            "optional": true,
+            "required": false,
+            "type": "ValidateTrigger"
+          },
+          {
+            "description": "Custom async or sync validator.",
+            "descriptionKey": "api.form.types.FormRule.members.validator.description",
+            "name": "validator",
+            "optional": true,
+            "required": false,
+            "type": "( rule: FormRule, value: StoreValue, form: FormInstance, ) => Promise<void> | void"
+          },
+          {
+            "defaultValue": "false",
+            "description": "Treats whitespace-only strings as empty when `required` is enabled.",
+            "descriptionKey": "api.form.types.FormRule.members.whitespace.description",
+            "name": "whitespace",
+            "optional": true,
+            "required": false,
+            "type": "boolean"
+          }
+        ],
+        "name": "FormRule"
+      },
+      {
+        "description": "Field name path used to read and write values in a form store.",
+        "descriptionKey": "api.form.types.NamePath.description",
+        "inherits": [],
+        "kind": "type",
+        "members": [],
+        "name": "NamePath",
+        "type": "NamePathPart | readonly NamePathPart[]"
+      },
+      {
+        "inherits": [],
+        "kind": "type",
+        "members": [],
+        "name": "StoreValue",
+        "type": "unknown"
+      },
+      {
+        "description": "Error info passed to `onFinishFailed`.",
+        "descriptionKey": "api.form.types.ValidateErrorInfo.description",
+        "inherits": [],
+        "kind": "interface",
+        "members": [
+          {
+            "description": "Field errors collected during validation.",
+            "descriptionKey": "api.form.types.ValidateErrorInfo.members.errorFields.description",
+            "name": "errorFields",
+            "optional": false,
+            "required": true,
+            "type": "FieldData[]"
+          },
+          {
+            "description": "Current form values.",
+            "descriptionKey": "api.form.types.ValidateErrorInfo.members.values.description",
+            "name": "values",
+            "optional": false,
+            "required": true,
+            "type": "Values"
+          }
+        ],
+        "name": "ValidateErrorInfo"
+      },
+      {
+        "inherits": [],
+        "kind": "type",
+        "members": [],
+        "name": "ValidateStatus",
+        "type": "\"error\" | \"success\" | \"validating\" | \"warning\""
+      },
+      {
+        "inherits": [],
+        "kind": "type",
+        "members": [],
+        "name": "ValidateTrigger",
+        "type": "false | string | string[]"
+      }
+    ],
+    "variants": []
   }
 }

@@ -12,7 +12,7 @@ const meta = {
 function Demo() {
   return (
     <div className="rounded-sticker-xl border border-[#2E3038] bg-white p-4">
-      <div className="mb-3 font-extrabold">registry/default/tag/tag.tsx</div>
+      <div className="mb-3 font-extrabold">src/components/ui/tag.tsx</div>
       <div className="flex flex-wrap gap-2">
         <Tag size="sm" variant="outlined">
           registry:ui
@@ -20,7 +20,7 @@ function Demo() {
         <Tag color="success" dot size="sm">
           ready
         </Tag>
-        <Tag color="info" size="sm" variant="soft">
+        <Tag color="info" size="sm" variant="filled">
           source-first
         </Tag>
       </div>

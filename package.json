@@ -18,7 +18,8 @@
   },
   "files": [
     "dist",
-    "registry",
+    "src/components",
+    "src/lib",
     "registry.json"
   ],
   "sideEffects": [

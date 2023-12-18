@@ -68,6 +68,7 @@ interface PreviewApiMember {
   optional?: boolean
   remarks?: string
   remarksKey?: string
+  required?: boolean
   type: string
 }
 
@@ -307,9 +308,9 @@ function TypeList({
             <div className="grid gap-1">
               <div className="flex flex-wrap items-center gap-2">
                 <code className="text-sm font-black">{type.name}</code>
-                <span className="border-ink bg-fill-secondary rounded-full border px-2 py-0.5 text-[10px] font-extrabold uppercase">
+                <Tag color="secondary" size="xs" variant="solid">
                   {t(type.kind)}
-                </span>
+                </Tag>
               </div>
               {type.description ? (
                 <p className="text-text-muted text-sm leading-6 font-medium">
@@ -356,15 +357,15 @@ function MemberTable({ members }: { members: PreviewApiMember[] }) {
             <TableCell>
               <div className="flex items-center gap-1">
                 <code className="font-black">{member.name}</code>
-                {member.optional ? (
+                {member.required ? (
                   <Tag
                     as="span"
-                    color="info"
+                    color="danger"
                     rounded="pill"
                     size="xs"
-                    variant="filled"
+                    variant="solid"
                   >
-                    {t("optional")}
+                    {t("required")}
                   </Tag>
                 ) : null}
               </div>

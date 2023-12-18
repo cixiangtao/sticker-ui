@@ -14,7 +14,7 @@ const OUTPUT_PATH = path.join(
   "generated",
   "preview-api-docs.json",
 )
-const SOURCE_ROOT = path.join(ROOT_DIR, "registry", "default")
+const SOURCE_ROOT = path.join(ROOT_DIR, "src", "components", "ui")
 
 const API_TYPE_NAME_PATTERN =
   /(Props|Rule|Instance|Values|Value|Layout|Status|ErrorInfo|NamePath|Error)$/
@@ -161,6 +161,15 @@ function getPropsApiFromLocalType(declaration, keyBase) {
   }
 }
 
+function getPropertyRequirement(property) {
+  const optional = property.hasQuestionToken()
+
+  return {
+    optional,
+    required: !optional,
+  }
+}
+
 function getPropsTypeFromCallable(declaration) {
   const parameter = declaration.getParameters().at(0)
   const typeNode = parameter?.getTypeNode()
@@ -256,7 +265,7 @@ function getMembersFromInterface(interfaceDeclaration, keyBase) {
           `${keyBase}.members.${toI18nKeySegment(name)}`,
         ),
         name,
-        optional: property.hasQuestionToken(),
+        ...getPropertyRequirement(property),
         type: getTypeText(property),
       }
     })
@@ -288,7 +297,7 @@ function getMembersFromTypeAlias(typeAlias, keyBase) {
           `${keyBase}.members.${toI18nKeySegment(name)}`,
         ),
         name,
-        optional: property.hasQuestionToken(),
+        ...getPropertyRequirement(property),
         type: getTypeText(property),
       }
     })

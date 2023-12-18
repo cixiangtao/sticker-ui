@@ -51,7 +51,7 @@ function RegistryPage() {
                 className="rounded-[18px] border-[2px] border-[#2E3038] bg-white p-4 shadow-[2px_2px_0_#2E3038]"
                 key={step}
               >
-                <div className="mb-4 flex size-10 items-center justify-center rounded-[12px] border-[2px] border-[#2E3038] bg-[#B7F7D3] font-black">
+                <div className="bg-fill-secondary mb-4 flex size-10 items-center justify-center rounded-[12px] border-[2px] border-[#2E3038] font-black">
                   {index + 1}
                 </div>
                 <div className="font-extrabold">{step}</div>

@@ -72,17 +72,18 @@ const buttonVariants = cva(
         variant: "solid",
       },
       {
-        class: "text-text-success hover:bg-fill-success",
+        class: "text-text-secondary hover:bg-fill-secondary",
         color: "secondary",
         variant: ["dashed", "outlined", "text"],
       },
       {
-        class: "bg-fill-success text-text-success hover:bg-fill-secondary",
+        class:
+          "bg-fill-secondary text-text-secondary hover:bg-fill-secondary-strong",
         color: "secondary",
         variant: "filled",
       },
       {
-        class: "text-text-success hover:text-ink",
+        class: "text-text-secondary hover:text-ink",
         color: "secondary",
         variant: "link",
       },

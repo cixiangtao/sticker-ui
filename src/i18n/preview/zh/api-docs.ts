@@ -119,6 +119,149 @@ const ZH_PREVIEW_API_DOC_TRANSLATIONS: Record<string, string> = {
     "根据尺寸和色调变体生成贴纸标签的 className。",
   "api.label.variants.markerTones.description":
     "根据色调变体生成内联标记的 className。",
+  "api.input.description": "带有厚实贴纸边框和语义字段状态的原生表单输入框。",
+  "api.input.components.Input.props.description": "贴纸输入框元素的 props。",
+  "api.input.components.Input.props.members.size.description":
+    "控制输入框高度、圆角和文字尺寸。",
+  "api.input.components.Input.props.members.tone.description":
+    "控制输入框的语义纸张色调。",
+  "api.input.components.Input.props.members.variant.description":
+    "控制输入框边框和填充的强调程度。",
+  "api.input.components.Input.props.remarks":
+    "继承原生 input 属性，但用贴纸控件尺寸替代数字形式的 HTML `size` 属性。",
+  "api.input.exports.inputVariants.description":
+    "根据结构、色调和尺寸变体生成贴纸输入框的 className。",
+  "api.input.types.InputProps.description": "贴纸输入框元素的 props。",
+  "api.input.types.InputProps.members.size.description":
+    "控制输入框高度、圆角和文字尺寸。",
+  "api.input.types.InputProps.members.tone.description":
+    "控制输入框的语义纸张色调。",
+  "api.input.types.InputProps.members.variant.description":
+    "控制输入框边框和填充的强调程度。",
+  "api.input.types.InputProps.remarks":
+    "继承原生 input 属性，但用贴纸控件尺寸替代数字形式的 HTML `size` 属性。",
+  "api.input.variants.inputVariants.description":
+    "根据结构、色调和尺寸变体生成贴纸输入框的 className。",
+  "api.form.description":
+    "带 handbook 贴纸字段状态的 Ant Design 风格表单控制器。",
+  "api.form.components.Form.props.description": "贴纸表单根元素的 props。",
+  "api.form.components.Form.props.members.disabled.description":
+    "默认禁用所有已注册字段。",
+  "api.form.components.Form.props.members.form.description":
+    "由 `Form.useForm` 创建的受控表单实例。",
+  "api.form.components.Form.props.members.initialValues.description":
+    "首次挂载时复制到表单 store 的初始值。",
+  "api.form.components.Form.props.members.layout.description":
+    "控制标签和字段布局。",
+  "api.form.components.Form.props.members.onFinish.description":
+    "提交校验成功后调用。",
+  "api.form.components.Form.props.members.onFinishFailed.description":
+    "提交校验失败后调用。",
+  "api.form.components.Form.props.members.validateTrigger.description":
+    "默认字段校验触发器。",
+  "api.form.components.Form.props.remarks":
+    "继承原生 form 属性，并加入 Ant Design 风格的表单状态回调。",
+  "api.form.exports.FieldData.description": "`setFields` 使用的字段数据。",
+  "api.form.exports.FormInstance.description":
+    "`Form.useForm` 返回的命令式表单实例。",
+  "api.form.exports.FormItemProps.description": "贴纸表单字段的 props。",
+  "api.form.exports.FormProps.description": "贴纸表单根元素的 props。",
+  "api.form.exports.FormProps.remarks":
+    "继承原生 form 属性，并加入 Ant Design 风格的表单状态回调。",
+  "api.form.exports.FormRule.description": "表单字段的校验规则。",
+  "api.form.exports.NamePath.description":
+    "用于在表单 store 中读写值的字段名称路径。",
+  "api.form.exports.useForm.description": "创建或复用贴纸表单实例。",
+  "api.form.exports.ValidateErrorInfo.description":
+    "传递给 `onFinishFailed` 的错误信息。",
+  "api.form.types.FieldData.description": "`setFields` 使用的字段数据。",
+  "api.form.types.FieldData.members.errors.description": "字段校验错误。",
+  "api.form.types.FieldData.members.name.description": "字段名称路径。",
+  "api.form.types.FieldData.members.touched.description": "字段是否已被触碰。",
+  "api.form.types.FieldData.members.validating.description":
+    "字段当前是否正在校验。",
+  "api.form.types.FieldData.members.value.description": "字段值。",
+  "api.form.types.FormInstance.description":
+    "`Form.useForm` 返回的命令式表单实例。",
+  "api.form.types.FormInstance.members.getFieldsValue.description":
+    "获取所有已注册字段值，或指定名称路径的字段值。",
+  "api.form.types.FormInstance.members.getFieldValue.description":
+    "获取单个字段值。",
+  "api.form.types.FormInstance.members.resetFields.description":
+    "将字段重置回 `initialValues`。",
+  "api.form.types.FormInstance.members.setFields.description":
+    "设置字段元数据和值。",
+  "api.form.types.FormInstance.members.setFieldsValue.description":
+    "将多个值合并到表单 store。",
+  "api.form.types.FormInstance.members.setFieldValue.description":
+    "设置单个字段值。",
+  "api.form.types.FormInstance.members.submit.description":
+    "提交表单并运行校验。",
+  "api.form.types.FormInstance.members.validateFields.description":
+    "校验已注册字段，或指定名称路径的字段。",
+  "api.form.types.FormItemProps.description": "贴纸表单字段的 props。",
+  "api.form.types.FormItemProps.members.children.description":
+    "受控字段子元素。",
+  "api.form.types.FormItemProps.members.extra.description":
+    "渲染在字段下方的额外辅助文案。",
+  "api.form.types.FormItemProps.members.help.description":
+    "自定义帮助内容。省略时显示校验错误。",
+  "api.form.types.FormItemProps.members.label.description": "字段标签。",
+  "api.form.types.FormItemProps.members.name.description": "字段名称路径。",
+  "api.form.types.FormItemProps.members.required.description":
+    "将标签标记为必填，但不额外添加校验规则。",
+  "api.form.types.FormItemProps.members.rules.description": "字段校验规则。",
+  "api.form.types.FormItemProps.members.trigger.description":
+    "用于收集字段变更的事件 prop。",
+  "api.form.types.FormItemProps.members.validateStatus.description":
+    "展示型字段的显式校验状态。",
+  "api.form.types.FormItemProps.members.validateTrigger.description":
+    "字段级校验触发器。",
+  "api.form.types.FormItemProps.members.valuePropName.description":
+    "传给子元素的受控值 prop 名称。",
+  "api.form.types.FormProps.description": "贴纸表单根元素的 props。",
+  "api.form.types.FormProps.members.disabled.description":
+    "默认禁用所有已注册字段。",
+  "api.form.types.FormProps.members.form.description":
+    "由 `Form.useForm` 创建的受控表单实例。",
+  "api.form.types.FormProps.members.initialValues.description":
+    "首次挂载时复制到表单 store 的初始值。",
+  "api.form.types.FormProps.members.layout.description": "控制标签和字段布局。",
+  "api.form.types.FormProps.members.onFinish.description":
+    "提交校验成功后调用。",
+  "api.form.types.FormProps.members.onFinishFailed.description":
+    "提交校验失败后调用。",
+  "api.form.types.FormProps.members.validateTrigger.description":
+    "默认字段校验触发器。",
+  "api.form.types.FormProps.remarks":
+    "继承原生 form 属性，并加入 Ant Design 风格的表单状态回调。",
+  "api.form.types.FormRule.description": "表单字段的校验规则。",
+  "api.form.types.FormRule.members.len.description":
+    "当字符串或数组长度不等于该值，或数字不等于该值时校验失败。",
+  "api.form.types.FormRule.members.max.description":
+    "当字符串或数组长于该值，或数字大于该值时校验失败。",
+  "api.form.types.FormRule.members.message.description":
+    "规则校验失败时显示的自定义消息。",
+  "api.form.types.FormRule.members.min.description":
+    "当字符串或数组短于该值，或数字小于该值时校验失败。",
+  "api.form.types.FormRule.members.pattern.description":
+    "当字符串不匹配该正则时校验失败。",
+  "api.form.types.FormRule.members.required.description":
+    "当字段值为空时校验失败。",
+  "api.form.types.FormRule.members.type.description": "检查基础运行时值类型。",
+  "api.form.types.FormRule.members.validateTrigger.description":
+    "应运行此规则的触发器名称。",
+  "api.form.types.FormRule.members.validator.description":
+    "自定义同步或异步校验器。",
+  "api.form.types.FormRule.members.whitespace.description":
+    "启用 `required` 时，将仅包含空白的字符串视为空值。",
+  "api.form.types.NamePath.description":
+    "用于在表单 store 中读写值的字段名称路径。",
+  "api.form.types.ValidateErrorInfo.description":
+    "传递给 `onFinishFailed` 的错误信息。",
+  "api.form.types.ValidateErrorInfo.members.errorFields.description":
+    "校验过程中收集到的字段错误。",
+  "api.form.types.ValidateErrorInfo.members.values.description": "当前表单值。",
   "api.table.description": "用于 API 参考和结构化数据的可滚动纸张表格框架。",
   "api.table.components.Table.description":
     "用于密集结构化数据的可滚动 handbook 风格表格框架。",

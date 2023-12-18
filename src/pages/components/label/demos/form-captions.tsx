@@ -1,4 +1,4 @@
-import { Label, LabelDescription } from "sticker-ui"
+import { Input, Label, LabelDescription } from "sticker-ui"
 
 import type { PreviewDemoMeta } from "@/layouts/preview"
 
@@ -16,8 +16,7 @@ function Demo() {
         <Label htmlFor="label-component-name" required>
           Component name
         </Label>
-        <input
-          className="min-h-11 rounded-[16px] border-2 border-[#2E3038] bg-white px-3 text-sm font-bold shadow-[2px_2px_0_#2E3038] outline-none focus-visible:ring-2 focus-visible:ring-[#FF9BB2]"
+        <Input
           defaultValue="Sticker Label"
           id="label-component-name"
           required

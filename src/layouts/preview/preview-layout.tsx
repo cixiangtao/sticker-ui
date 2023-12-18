@@ -1,4 +1,5 @@
 import { Link, Outlet, useLocation } from "@tanstack/react-router"
+import { useLayoutEffect } from "react"
 import { Button, Card, CardContent, CardHeader, Tag } from "sticker-ui"
 
 import { type PreviewLanguage, usePreviewI18n } from "../../i18n/preview"
@@ -10,10 +11,20 @@ import {
 } from "../../preview-data"
 import "./preview-layout.css"
 
+const PREVIEW_CONTENT_SCROLL_SELECTOR = "[data-preview-content-scroll]"
+
 function PreviewLayout() {
   const location = useLocation()
   const { t } = usePreviewI18n()
   const activeItem = findNavItemByPath(location.pathname)
+
+  useLayoutEffect(() => {
+    const scrollContainer = document.querySelector<HTMLElement>(
+      PREVIEW_CONTENT_SCROLL_SELECTOR,
+    )
+
+    scrollContainer?.scrollTo({ top: 0 })
+  }, [location.pathname])
 
   return (
     <main className="bg-canvas bg-sticker-grid text-ink min-h-screen px-4 py-4 sm:px-6 lg:h-screen lg:overflow-hidden lg:px-8">
@@ -21,7 +32,12 @@ function PreviewLayout() {
         <TopBar activeItem={activeItem} />
         <div className="grid gap-4 lg:min-h-0 lg:flex-1 lg:grid-cols-[280px_minmax(0,1fr)]">
           <Sidebar activeRoute={activeItem.id} />
-          <Card as="section" className="overflow-auto" variant="panel">
+          <Card
+            as="section"
+            className="min-h-0 overflow-auto"
+            data-preview-content-scroll
+            variant="panel"
+          >
             <CardHeader decoration divider="dashed" dividerInset="card">
               <div>
                 <div className="text-text-subtle text-xs font-extrabold uppercase">
@@ -78,14 +94,16 @@ function Sidebar({ activeRoute }: { activeRoute: RouteId }) {
                   ].join(" ")}
                   interactive
                   key={item.id}
+                  padding="sm"
                 >
                   <Link
                     aria-current={activeRoute === item.id ? "page" : undefined}
+                    resetScroll={false}
                     to={item.path}
                   >
                     <span className="flex items-center justify-between gap-3">
                       <span className="font-extrabold">{item.label}</span>
-                      <Tag color="secondary" size="sm" variant="soft">
+                      <Tag color="success" size="xs" variant="solid">
                         {t(item.status)}
                       </Tag>
                     </span>
@@ -164,7 +182,7 @@ function LanguageButton({
   return (
     <Button
       aria-pressed={isSelected}
-      color={isSelected ? "secondary" : "default"}
+      color={isSelected ? "success" : "default"}
       onClick={() => setLanguage(language)}
       size="sm"
       variant={isSelected ? "solid" : "outlined"}

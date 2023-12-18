@@ -15,7 +15,7 @@ function Demo() {
       <Tag color="info" rounded="rounded" size="sm">
         Small Rounded
       </Tag>
-      <Tag color="success" rounded="rounded" variant="soft">
+      <Tag color="success" rounded="rounded" variant="filled">
         Medium Rounded
       </Tag>
       <Tag color="warning" rounded="rounded" size="lg">

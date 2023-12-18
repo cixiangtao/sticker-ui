@@ -15,13 +15,15 @@
   --color-ring: #4ea8de;
 
   --color-accent-info: #4ea8de;
+  --color-accent-secondary: #9b5de5;
   --color-accent-success: #00b894;
   --color-accent-warning: #f6a609;
   --color-accent-danger: #ef476f;
 
   --color-fill-default: #ffe08a;
   --color-fill-default-soft: #fff3bf;
-  --color-fill-secondary: #b7f7d3;
+  --color-fill-secondary: #f6efff;
+  --color-fill-secondary-strong: #eadbff;
   --color-fill-danger: #ff9bb2;
   --color-fill-info: #eaf7ff;
   --color-fill-info-strong: #cdeeff;
@@ -35,6 +37,7 @@
   --color-text-subtle: #696b76;
   --color-text-placeholder: #858894;
   --color-text-info: #126b9a;
+  --color-text-secondary: #6930a8;
   --color-text-success: #007b63;
   --color-text-success-muted: #3d5f52;
   --color-text-warning: #9a6500;

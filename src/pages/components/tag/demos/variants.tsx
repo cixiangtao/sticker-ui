@@ -13,14 +13,11 @@ function Demo() {
   return (
     <div className="flex flex-wrap gap-3">
       <Tag>Solid</Tag>
-      <Tag color="info" variant="soft">
-        Soft
+      <Tag color="info" variant="filled">
+        Filled
       </Tag>
       <Tag color="success" variant="outlined">
         Outlined
-      </Tag>
-      <Tag color="warning" variant="filled">
-        Filled
       </Tag>
       <Tag color="warning">Warning</Tag>
       <Tag color="danger">Danger</Tag>

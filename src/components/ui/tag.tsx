@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils"
  * Builds the tag className from structure, color, and size variants.
  */
 const tagVariants = cva(
-  "inline-flex w-fit shrink-0 items-center justify-center gap-1.5 border font-semibold leading-none outline-none transition-colors duration-150 focus-visible:ring-sticker focus-visible:ring-ring/45",
+  "inline-flex w-fit shrink-0 items-center justify-center gap-1.5 border-ink font-extrabold leading-none outline-none transition duration-150 focus-visible:ring-sticker focus-visible:ring-ring/45",
   {
     defaultVariants: {
       color: "default",
@@ -42,14 +42,9 @@ const tagVariants = cva(
         variant: "filled",
       },
       {
-        class: "border-current bg-fill-danger text-text-danger",
+        class: "border-current bg-surface text-text-danger",
         color: "danger",
         variant: "outlined",
-      },
-      {
-        class: "bg-fill-danger-soft text-text-danger",
-        color: "danger",
-        variant: "soft",
       },
       {
         class: "border-ink bg-fill-danger text-ink",
@@ -57,7 +52,7 @@ const tagVariants = cva(
         variant: "solid",
       },
       {
-        class: "bg-surface text-ink",
+        class: "bg-ink text-paper",
         color: "default",
         variant: "filled",
       },
@@ -67,12 +62,7 @@ const tagVariants = cva(
         variant: "outlined",
       },
       {
-        class: "bg-paper text-ink",
-        color: "default",
-        variant: "soft",
-      },
-      {
-        class: "border-ink bg-surface text-ink",
+        class: "bg-fill-default text-ink",
         color: "default",
         variant: "solid",
       },
@@ -82,12 +72,7 @@ const tagVariants = cva(
         variant: "filled",
       },
       {
-        class: "bg-fill-info text-text-info",
-        color: "info",
-        variant: "soft",
-      },
-      {
-        class: "border-current bg-fill-info text-text-info",
+        class: "border-current bg-surface text-text-info",
         color: "info",
         variant: "outlined",
       },
@@ -97,19 +82,14 @@ const tagVariants = cva(
         variant: "solid",
       },
       {
-        class: "bg-fill-secondary text-text-success",
+        class: "bg-fill-secondary-strong text-text-secondary",
         color: "secondary",
         variant: "filled",
       },
       {
-        class: "border-current bg-fill-secondary text-text-success",
+        class: "border-current bg-surface text-text-secondary",
         color: "secondary",
         variant: "outlined",
-      },
-      {
-        class: "bg-fill-success text-text-success",
-        color: "secondary",
-        variant: "soft",
       },
       {
         class: "border-ink bg-fill-secondary text-ink",
@@ -122,12 +102,7 @@ const tagVariants = cva(
         variant: "filled",
       },
       {
-        class: "bg-fill-success text-text-success",
-        color: "success",
-        variant: "soft",
-      },
-      {
-        class: "border-current bg-fill-success text-text-success",
+        class: "border-current bg-surface text-text-success",
         color: "success",
         variant: "outlined",
       },
@@ -142,12 +117,7 @@ const tagVariants = cva(
         variant: "filled",
       },
       {
-        class: "bg-fill-warning text-text-warning",
-        color: "warning",
-        variant: "soft",
-      },
-      {
-        class: "border-current bg-fill-warning text-text-warning",
+        class: "border-current bg-surface text-text-warning",
         color: "warning",
         variant: "outlined",
       },
@@ -171,16 +141,15 @@ const tagVariants = cva(
         rounded: "",
       },
       size: {
-        default: "h-8 px-3 text-xs",
-        lg: "h-10 px-4 text-sm",
-        sm: "h-6 px-2 text-[11px]",
-        xs: "h-5 gap-1 px-1.5 text-[10px]",
+        default: "h-8 border-2 px-3 text-xs",
+        lg: "h-10 border-2 px-4 text-sm",
+        sm: "h-6 border px-2 text-[11px]",
+        xs: "h-5 gap-1 border px-1.5 text-[10px]",
       },
       variant: {
-        filled: "border-transparent",
+        filled: "border-transparent shadow-sticker-sm",
         outlined: "",
-        soft: "border-transparent",
-        solid: "",
+        solid: "shadow-sticker-sm",
       },
     },
   },
@@ -223,7 +192,7 @@ interface TagProps
    * Controls the tag visual structure and emphasis.
    * @default "solid"
    */
-  variant?: "filled" | "outlined" | "soft" | "solid"
+  variant?: "filled" | "outlined" | "solid"
 }
 
 function Tag({
@@ -237,9 +206,16 @@ function Tag({
   variant = "solid",
   ...props
 }: TagProps) {
+  const isInteractive = Component === "a" || Component === "button"
+
   return (
     <Component
-      className={cn(tagVariants({ color, rounded, size, variant }), className)}
+      className={cn(
+        tagVariants({ color, rounded, size, variant }),
+        isInteractive &&
+          "hover:shadow-sticker-sm active:shadow-sticker-xs cursor-pointer hover:-translate-y-0.5 active:translate-x-0.5 active:translate-y-0.5",
+        className,
+      )}
       data-slot="tag"
       {...props}
     >

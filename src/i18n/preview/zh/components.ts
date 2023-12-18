@@ -1,7 +1,57 @@
 const ZH_PREVIEW_COMPONENT_TRANSLATIONS: Record<string, string> = {
   "Accessible form captions with small sticker markers.":
     "可访问的表单标题，并带有小巧的贴纸标记。",
+  "A native form input with chunky sticker frames and semantic field states.":
+    "带有厚实贴纸边框和语义字段状态的原生表单输入框。",
+  Accent: "强调色",
   "Add component": "添加组件",
+  "All fields passed": "所有字段已通过",
+  Aliases: "别名",
+  "Antd-style field state and validation for sticker forms.":
+    "用于贴纸表单的 Ant Design 风格字段状态与校验。",
+  Background: "背景",
+  "Basic Field": "基础字段",
+  "Basic Login": "基础登录",
+  "Between 3 and 18 characters.": "长度为 3 到 18 个字符。",
+  Base: "基础色",
+  Border: "边框",
+  Canvas: "画布",
+  "Complete color token inventory from tokens.css, grouped by purpose.":
+    "完整展示 tokens.css 中的颜色令牌，并按用途分组。",
+  "Core canvas, surface, and ink colors for sticker layouts.":
+    "用于贴纸布局的核心画布、表面和墨色。",
+  "Danger Soft": "危险柔和",
+  "Default Soft": "默认柔和",
+  Fill: "填充色",
+  Foreground: "前景",
+  "Info Strong": "信息强化",
+  Muted: "弱化",
+  Overlay: "遮罩",
+  "Paper fills for cards, tags, buttons, and demo backgrounds.":
+    "用于卡片、标签、按钮和 demo 背景的纸张填充色。",
+  Placeholder: "占位符",
+  Primary: "主要色",
+  "Primary Foreground": "主要前景",
+  "Readable text colors for statuses, helper copy, and labels.":
+    "用于状态、辅助文案和标签的可读文本颜色。",
+  Ring: "焦点环",
+  "Saturated pins used for dots, accents, and small badges.":
+    "用于圆点、强调和小徽章的高饱和图钉色。",
+  "Secondary Strong": "辅助强化",
+  "Success Muted": "成功弱化",
+  "Success Strong": "成功强化",
+  Subtle: "微弱",
+  Surface: "表面",
+  "Surface Muted": "表面弱化",
+  Text: "文本色",
+  "Theme aliases consumed by Tailwind and app-level surfaces.":
+    "供 Tailwind 和应用级表面使用的主题别名。",
+  tokens: "个 token",
+  Utility: "工具色",
+  "Utility color for scrims and layered preview overlays.":
+    "用于遮罩和分层预览覆盖层的工具色。",
+  "Warning Muted": "警告弱化",
+  "Warning Strong": "警告强化",
   "Borders & Shadows": "边框与阴影",
   Button: "按钮",
   "Button variants keep the same shape while changing paper color and emphasis.":
@@ -32,8 +82,8 @@ const ZH_PREVIEW_COMPONENT_TRANSLATIONS: Record<string, string> = {
     "用于卡片、面板和内容分组的可组合贴纸表面。",
   "Combine tags with calmer borders for route cards, filters, and registry detail panels.":
     "将标签与更克制的边框组合，用于路由卡片、筛选器和 registry 详情面板。",
-  "Compare each semantic color across solid, filled, soft, and outlined tags.":
-    "对比每个语义色在 solid、filled、soft 和 outlined 标签中的效果。",
+  "Compare each semantic color across solid, filled, and outlined tags.":
+    "对比每个语义色在 solid、filled 和 outlined 标签中的效果。",
   Compact: "紧凑",
   "Compact sticker labels for status and metadata.":
     "用于状态和元数据的紧凑贴纸标签。",
@@ -57,7 +107,13 @@ const ZH_PREVIEW_COMPONENT_TRANSLATIONS: Record<string, string> = {
   Elevated: "阴影",
   "Dashed divider": "虚线分隔",
   "Example code": "示例代码",
+  "Fill preset": "填入预设值",
+  "Fields reset": "字段已重置",
+  Form: "表单",
   "Form Captions": "表单标题",
+  "Form Instance": "表单实例",
+  "Form keeps an antd-like API while the field shell carries the sticker label, helper, and error states.":
+    "Form 保持类似 antd 的 API，同时字段外壳承载贴纸标签、辅助说明和错误状态。",
   Foundation: "基础",
   "Generated registry JSON and install commands.":
     "生成的 registry JSON 和安装命令。",
@@ -67,14 +123,21 @@ const ZH_PREVIEW_COMPONENT_TRANSLATIONS: Record<string, string> = {
   Filled: "填充",
   "Hard offsets, thick outlines, and pressed states.":
     "硬质偏移、粗边框和按压状态。",
+  Handle: "账号名",
   Header: "页眉",
   "Header Composition": "Header 组合",
   "Hide code": "收起代码",
   Info: "信息",
   Ink: "墨色",
+  Input: "输入框",
+  "Inputs keep native form behavior while adding a chunky sticker frame, hard shadow, and readable helper copy.":
+    "Input 保留原生表单行为，同时加入厚实贴纸边框、硬质阴影和清晰的辅助文案。",
+  "Invalid, disabled, and semantic tone states stay visible through native attributes such as aria-invalid and disabled.":
+    "无效、禁用和语义色调状态会通过 aria-invalid 与 disabled 等原生属性保持可见。",
   "Interactive cards keep tactile movement on the root while nested text and badges stay stable.":
     "交互卡片把触感位移动作保留在根元素上，内部文本和徽章保持稳定。",
   "Interactive List": "交互列表",
+  Invite: "邀请码",
   "Keep secondary notes compact and readable.": "让辅助备注保持紧凑且易读。",
   Label: "标签",
   Large: "大",
@@ -87,6 +150,7 @@ const ZH_PREVIEW_COMPONENT_TRANSLATIONS: Record<string, string> = {
   Lilac: "丁香紫",
   Link: "链接",
   Loading: "加载中",
+  "Lowercase letters and hyphens only.": "只能使用小写字母和连字符。",
   Medium: "中等",
   "Medium padding is the default for everyday layout surfaces.":
     "中等内边距是日常布局表面的默认选择。",
@@ -98,11 +162,15 @@ const ZH_PREVIEW_COMPONENT_TRANSLATIONS: Record<string, string> = {
   "Minimal cards remove the shadow and use a thin border.":
     "简约卡片移除阴影，并使用细边框。",
   "Mint Note": "薄荷便签",
+  "Native input controls with chunky sticker frames.":
+    "带有厚实贴纸边框的原生输入控件。",
   "Neutral paper for docs and general content.": "中性纸张适合文档和通用内容。",
   None: "无",
   "No dots": "无圆点",
   "No padding for custom composed shells and flush media.":
     "无内边距适合自定义组合外壳和贴边媒体。",
+  "Not submitted yet": "尚未提交",
+  "Only https URLs are accepted in this example.": "此示例仅接受 https URL。",
   "Offset Level": "偏移层级",
   Open: "打开",
   "Open docs": "打开文档",
@@ -115,6 +183,8 @@ const ZH_PREVIEW_COMPONENT_TRANSLATIONS: Record<string, string> = {
   "Paper Tones": "纸张色调",
   "Paper, ink, accent, and semantic color usage.":
     "纸张、墨色、强调色和语义色用法。",
+  "Pair Input with Label when the field needs accessible captions and helper text.":
+    "当字段需要可访问标题和辅助文本时，可将 Input 与 Label 组合使用。",
   "Panel Surfaces": "面板表面",
   "Padding changes inner spacing while the sticker radius stays consistent.":
     "Padding 会改变内部间距，同时贴纸圆角保持一致。",
@@ -127,11 +197,18 @@ const ZH_PREVIEW_COMPONENT_TRANSLATIONS: Record<string, string> = {
   "Preview Shell": "预览外壳",
   "Preview Window": "预览窗口",
   Previewing: "正在预览",
+  "Preset values applied": "已应用预设值",
+  Project: "项目",
+  "Project name": "项目名称",
+  "Project name is required.": "项目名称为必填项。",
   "public/r/*.json": "public/r/*.json",
   "Quiet Settings": "安静设置",
   "Quiet Surface": "安静界面",
   ready: "就绪",
   "Ready Card": "就绪卡片",
+  "Ready state": "就绪状态",
+  "ready-to-ship": "ready-to-ship",
+  "Ready to validate": "准备校验",
   Registry: "Registry",
   registry: "registry",
   "registry source": "registry 源码",
@@ -141,7 +218,11 @@ const ZH_PREVIEW_COMPONENT_TRANSLATIONS: Record<string, string> = {
   "Rounded tags follow the selected size, while pill tags keep a fully rounded capsule shape.":
     "圆角标签会跟随所选 size 调整半径，胶囊标签则始终保持完整胶囊形态。",
   Roomy: "宽松",
+  "Roomy file": "宽松文件",
+  "Rules run on change by default and can mix required, length, pattern, type, and custom validators.":
+    "规则默认在 change 时运行，并可组合 required、长度、pattern、type 和自定义 validator。",
   Saving: "保存中",
+  "Saved ": "已保存 ",
   Section: "区块",
   Secondary: "辅助",
   "Semantic Elements": "语义元素",
@@ -152,20 +233,27 @@ const ZH_PREVIEW_COMPONENT_TRANSLATIONS: Record<string, string> = {
     "用于 API 和结构化数据的可滚动纸张表格。",
   "Show code": "展开代码",
   Small: "小",
+  "Small search": "小号搜索",
   "Small padding keeps nested controls tight.": "小内边距让嵌套控件保持紧凑。",
   "Size choices are constrained so icon, short text, and long commands still read as one family.":
     "尺寸选择受到约束，让图标、短文本和长命令仍像同一套组件。",
   "Sizes & Custom Markers": "尺寸与自定义标记",
   "Sizes & Dots": "尺寸与圆点",
+  "Sizes & Types": "尺寸与类型",
   "Sizes align with compact, standard, and roomy controls. Markers can be composed directly when a form needs custom wording.":
     "尺寸与紧凑、标准和宽松控件对齐。表单需要自定义措辞时，可直接组合标记。",
-  Soft: "柔和",
+  "Sizes align inputs with compact filters, standard forms, and roomy settings panels while file controls keep the same ink outline.":
+    "尺寸可让输入框适配紧凑筛选、标准表单和宽松设置面板；文件控件也保持同一套墨色边框。",
   Span: "Span",
   Standard: "标准",
+  "Standard URL": "标准 URL",
   Start: "开始",
   "Start review": "开始复习",
   States: "状态",
   "Status Board": "状态看板",
+  "Search docs": "搜索文档",
+  "Sticker Handbook": "贴纸手册",
+  "Sticker Input": "贴纸输入框",
   "Sticker Label": "贴纸标签",
   "Sticker Surface": "贴纸界面",
   "Study Dashboard": "学习仪表盘",
@@ -186,8 +274,37 @@ const ZH_PREVIEW_COMPONENT_TRANSLATIONS: Record<string, string> = {
     "Header 承载强调色条，Content 则为较长文案保留更安静的纸张表面。",
   "The default card keeps a chunky outline and hard offset shadow.":
     "默认卡片保留粗轮廓和硬质偏移阴影。",
+  "The form instance exposes submit, resetFields, validateFields, and value setters for controlled workflows.":
+    "表单实例暴露 submit、resetFields、validateFields 和值设置方法，用于受控工作流。",
+  "The field shell passes aria-invalid to Input when validation fails.":
+    "校验失败时，字段外壳会把 aria-invalid 传给 Input。",
   Tiny: "极小",
+  "Submit form": "提交表单",
+  Submit: "提交",
+  "Check rules": "检查规则",
+  "Email is required.": "邮箱为必填项。",
+  Email: "邮箱",
+  "Enter password": "输入密码",
+  "Instance status": "实例状态",
+  "Invite code must be STICKER.": "邀请码必须是 STICKER。",
+  "Invite code": "邀请码",
+  "Latest submit": "最近提交",
+  Nickname: "昵称",
+  "Nickname is required.": "昵称为必填项。",
+  "Nickname is too long.": "昵称过长。",
+  "Nickname is too short.": "昵称过短。",
+  Password: "密码",
+  "Password is required.": "密码为必填项。",
+  Reset: "重置",
+  Slug: "Slug",
+  "Slug is required.": "Slug 为必填项。",
   Type: "类型",
+  "Use a valid email address.": "请输入有效的邮箱地址。",
+  "Use at least 6 characters.": "至少使用 6 个字符。",
+  "Use disabled for locked settings.": "对锁定设置使用 disabled。",
+  "Use lowercase letters and hyphens only.": "请仅使用小写字母和连字符。",
+  "Use the same name and rules shape you would expect from Ant Design.":
+    "使用你熟悉的 Ant Design 风格 name 与 rules 结构。",
   "Use className to customize card paper, header accents, and badge colors.":
     "使用 className 自定义卡片纸张、header 强调色和徽章颜色。",
   "Use as to switch the semantic element while keeping the same compact tag styling.":
@@ -210,12 +327,18 @@ const ZH_PREVIEW_COMPONENT_TRANSLATIONS: Record<string, string> = {
     "使用根节点和插槽的 className 调整视觉上下文。",
   "Use optional markers for helper fields and short notes.":
     "对辅助字段和短备注使用可选标记。",
+  "Quiet inputs sit inside dense cards.": "quiet 输入框适合放在密集卡片内。",
   "Use this pattern when the surface frames navigation, filters, or a large preview area.":
     "当这个表面用于包裹导航、筛选器或大型预览区域时，可以使用这个模式。",
   "Use tables for API props, registry metadata, and compact technical reference blocks.":
     "将表格用于 API props、registry 元数据和紧凑技术参考区块。",
   "Variant controls the tag structure while color carries semantic meaning.":
     "variant 控制标签结构，color 承载语义颜色。",
+  "Validate now": "立即校验",
+  "Validation found issues": "校验发现问题",
+  "Validation Rules": "校验规则",
+  "Website must start with https://.": "Website 必须以 https:// 开头。",
+  Website: "Website",
   Variants: "变体",
   "Variants define structure while color sets the sticker paper tone.":
     "variant 定义结构，color 设置贴纸纸张色调。",

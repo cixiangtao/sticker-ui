@@ -47,7 +47,7 @@ function PreviewExample({
       <CardContent>
         <Demo />
         <Card>
-          <CardHeader className="bg-[#B7F7D3]">
+          <CardHeader className="bg-fill-secondary">
             <div className="flex items-center justify-between">
               <div className="flex flex-col gap-1">
                 <div className="text-xs font-extrabold text-[#3D5F52] uppercase">
@@ -69,9 +69,11 @@ function PreviewExample({
               </Button>
             </div>
           </CardHeader>
-          <CardContent className="max-h-[360px] overflow-auto">
-            {isSourceOpen ? <SourceCodeBlock source={source} /> : null}
-          </CardContent>
+          {isSourceOpen ? (
+            <CardContent className="max-h-[360px] overflow-auto">
+              <SourceCodeBlock source={source} />
+            </CardContent>
+          ) : null}
         </Card>
       </CardContent>
     </Card>

@@ -44,7 +44,7 @@ const markerTones = cva(
         danger: "bg-fill-danger",
         default: "bg-fill-default",
         muted: "bg-surface-muted",
-        success: "bg-fill-secondary",
+        success: "bg-fill-success-strong",
         warning: "bg-fill-warning",
       },
     },

@@ -39,10 +39,6 @@ const TAG_VARIANTS = [
     variant: "filled",
   },
   {
-    label: "Soft",
-    variant: "soft",
-  },
-  {
     label: "Outlined",
     variant: "outlined",
   },
@@ -51,7 +47,7 @@ const TAG_VARIANTS = [
 const meta = {
   className: "bg-[#FFF6DC]",
   description:
-    "Compare each semantic color across solid, filled, soft, and outlined tags.",
+    "Compare each semantic color across solid, filled, and outlined tags.",
   title: "Colors",
 } satisfies PreviewDemoMeta
 

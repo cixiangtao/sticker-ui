@@ -26,7 +26,8 @@
       "registryDependencies": ["utils"],
       "files": [
         {
-          "path": "registry/default/button/button.tsx",
+          "path": "src/components/ui/button.tsx",
+          "target": "@ui/button.tsx",
           "type": "registry:ui"
         }
       ]
@@ -40,7 +41,8 @@
       "registryDependencies": ["utils"],
       "files": [
         {
-          "path": "registry/default/card/card.tsx",
+          "path": "src/components/ui/card.tsx",
+          "target": "@ui/card.tsx",
           "type": "registry:ui"
         }
       ]
@@ -53,7 +55,8 @@
       "registryDependencies": ["utils"],
       "files": [
         {
-          "path": "registry/default/table/table.tsx",
+          "path": "src/components/ui/table.tsx",
+          "target": "@ui/table.tsx",
           "type": "registry:ui"
         }
       ]
@@ -67,7 +70,8 @@
       "registryDependencies": ["utils"],
       "files": [
         {
-          "path": "registry/default/tag/tag.tsx",
+          "path": "src/components/ui/tag.tsx",
+          "target": "@ui/tag.tsx",
           "type": "registry:ui"
         }
       ]
@@ -81,7 +85,37 @@
       "registryDependencies": ["utils"],
       "files": [
         {
-          "path": "registry/default/label/label.tsx",
+          "path": "src/components/ui/label.tsx",
+          "target": "@ui/label.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input",
+      "type": "registry:ui",
+      "title": "Sticker Input",
+      "description": "A native form input with chunky sticker frames and semantic field states.",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "src/components/ui/input.tsx",
+          "target": "@ui/input.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "form",
+      "type": "registry:ui",
+      "title": "Sticker Form",
+      "description": "An antd-style form controller with handbook sticker field states.",
+      "registryDependencies": ["utils", "label"],
+      "files": [
+        {
+          "path": "src/components/ui/form.tsx",
+          "target": "@ui/form.tsx",
           "type": "registry:ui"
         }
       ]
