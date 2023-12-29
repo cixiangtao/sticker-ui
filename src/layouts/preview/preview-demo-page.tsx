@@ -1,7 +1,10 @@
 import type { ReactNode } from "react"
 
+import apiDocs from "@/generated/preview-api-docs.json"
+
 import type { PreviewDemoModule } from "./preview-example"
 
+import { PreviewApiTable } from "./preview-api-table"
 import { PreviewExample } from "./preview-example"
 
 interface PreviewDemoExample {
@@ -12,7 +15,6 @@ interface PreviewDemoExample {
 
 interface GetPreviewDemoExamplesOptions {
   demoModules: Record<string, PreviewDemoModule | undefined>
-  demoPaths: readonly string[]
   demoSources: Record<string, string | undefined>
   missingLabel: string
 }
@@ -24,26 +26,60 @@ interface PreviewDemoPageProps {
   trailing?: ReactNode
 }
 
+type ComponentPreviewName = keyof typeof apiDocs
+
+interface CreateComponentPreviewPageOptions {
+  demoModules: Record<string, PreviewDemoModule | undefined>
+  demoSources: Record<string, string | undefined>
+  name: ComponentPreviewName
+}
+
 function getPreviewDemoExamples({
   demoModules,
-  demoPaths,
   demoSources,
   missingLabel,
 }: GetPreviewDemoExamplesOptions) {
-  return demoPaths.map((path) => {
-    const demoModule = demoModules[path]
-    const code = demoSources[path]
+  return Object.keys(demoModules)
+    .map((path) => {
+      const demoModule = demoModules[path]
+      const code = demoSources[path]
 
-    if (!demoModule || !code) {
-      throw new Error(`Missing ${missingLabel} demo: ${path}`)
-    }
+      if (!demoModule || !code) {
+        throw new Error(`Missing ${missingLabel} demo: ${path}`)
+      }
 
-    return {
-      code,
-      module: demoModule,
-      path,
-    }
-  })
+      return {
+        code,
+        module: demoModule,
+        path,
+      }
+    })
+    .sort(comparePreviewDemoExamples)
+}
+
+function comparePreviewDemoExamples(
+  firstExample: PreviewDemoExample,
+  secondExample: PreviewDemoExample,
+) {
+  const firstOrder = firstExample.module.default.order
+  const secondOrder = secondExample.module.default.order
+
+  if (firstOrder !== undefined && secondOrder !== undefined) {
+    return (
+      firstOrder - secondOrder ||
+      firstExample.path.localeCompare(secondExample.path)
+    )
+  }
+
+  if (firstOrder !== undefined) {
+    return -1
+  }
+
+  if (secondOrder !== undefined) {
+    return 1
+  }
+
+  return firstExample.path.localeCompare(secondExample.path)
 }
 
 function PreviewDemoPage({
@@ -71,4 +107,28 @@ function PreviewDemoPage({
   )
 }
 
-export { getPreviewDemoExamples, PreviewDemoPage }
+function createComponentPreviewPage({
+  demoModules,
+  demoSources,
+  name,
+}: CreateComponentPreviewPageOptions) {
+  const demoExamples = getPreviewDemoExamples({
+    demoModules,
+    demoSources,
+    missingLabel: name,
+  })
+
+  function ComponentPreviewPage() {
+    return (
+      <PreviewDemoPage
+        examples={demoExamples}
+        sourceRoot={`src/pages/components/${name}`}
+        trailing={<PreviewApiTable api={apiDocs[name]} />}
+      />
+    )
+  }
+
+  return ComponentPreviewPage
+}
+
+export { createComponentPreviewPage, getPreviewDemoExamples, PreviewDemoPage }

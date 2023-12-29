@@ -1,13 +1,14 @@
 import { Button } from "sticker-ui"
 
-import type { PreviewDemoMeta } from "@/layouts/preview"
+import { defineMeta } from "@/layouts/preview"
 
-const meta = {
+const meta = defineMeta({
   className: "bg-[#FFF0F4]",
   description:
     "Disabled and loading states keep the sticker shape while preventing duplicate actions.",
+  order: 30,
   title: "States",
-} satisfies PreviewDemoMeta
+})
 
 function Demo() {
   return (

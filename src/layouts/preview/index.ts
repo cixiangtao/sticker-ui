@@ -8,8 +8,12 @@ export {
   CardHeader,
   CardTitle,
 } from "./preview-card"
-export { getPreviewDemoExamples, PreviewDemoPage } from "./preview-demo-page"
-export { PreviewExample } from "./preview-example"
+export {
+  createComponentPreviewPage,
+  getPreviewDemoExamples,
+  PreviewDemoPage,
+} from "./preview-demo-page"
+export { defineMeta, PreviewExample } from "./preview-example"
 export type { PreviewDemoMeta, PreviewDemoModule } from "./preview-example"
 export { Label, LabelDescription, LabelMarker } from "./preview-label"
 export { PreviewLayout } from "./preview-layout"

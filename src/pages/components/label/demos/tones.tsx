@@ -1,13 +1,14 @@
 import { Label } from "sticker-ui"
 
-import type { PreviewDemoMeta } from "@/layouts/preview"
+import { defineMeta } from "@/layouts/preview"
 
-const meta = {
+const meta = defineMeta({
   className: "bg-[#FFF6DC]",
   description:
     "Tone changes help validation-heavy forms call out the caption while leaving the control style independent.",
+  order: 20,
   title: "Tones",
-} satisfies PreviewDemoMeta
+})
 
 function Demo() {
   return (

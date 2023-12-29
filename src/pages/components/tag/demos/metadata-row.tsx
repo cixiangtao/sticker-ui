@@ -1,13 +1,14 @@
 import { Tag } from "sticker-ui"
 
-import type { PreviewDemoMeta } from "@/layouts/preview"
+import { defineMeta } from "@/layouts/preview"
 
-const meta = {
+const meta = defineMeta({
   className: "bg-[#F6EFFF]",
   description:
     "Combine tags with calmer borders for route cards, filters, and registry detail panels.",
+  order: 60,
   title: "Metadata Row",
-} satisfies PreviewDemoMeta
+})
 
 function Demo() {
   return (

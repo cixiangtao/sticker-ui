@@ -21,12 +21,17 @@ interface PreviewExampleProps {
 interface PreviewDemoMeta {
   className?: string
   description: string
+  order?: number
   title: string
 }
 
 interface PreviewDemoModule {
   default: PreviewDemoMeta
   Demo: ComponentType
+}
+
+function defineMeta(meta: PreviewDemoMeta) {
+  return meta
 }
 
 function PreviewExample({
@@ -80,5 +85,5 @@ function PreviewExample({
   )
 }
 
-export { PreviewExample }
+export { defineMeta, PreviewExample }
 export type { PreviewDemoMeta, PreviewDemoModule }

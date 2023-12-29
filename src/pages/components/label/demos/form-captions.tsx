@@ -1,13 +1,14 @@
 import { Input, Label, LabelDescription } from "sticker-ui"
 
-import type { PreviewDemoMeta } from "@/layouts/preview"
+import { defineMeta } from "@/layouts/preview"
 
-const meta = {
+const meta = defineMeta({
   className: "bg-[#EAF7FF]",
   description:
     "Labels stay compact, readable, and connected to native controls with the normal htmlFor relationship.",
+  order: 10,
   title: "Form Captions",
-} satisfies PreviewDemoMeta
+})
 
 function Demo() {
   return (

@@ -1,13 +1,14 @@
 import { Tag } from "sticker-ui"
 
-import type { PreviewDemoMeta } from "@/layouts/preview"
+import { defineMeta } from "@/layouts/preview"
 
-const meta = {
+const meta = defineMeta({
   className: "bg-[#FFF6DC]",
   description:
     "Dot markers add a quick status signal while keeping text readable in dense rows.",
+  order: 50,
   title: "Sizes & Dots",
-} satisfies PreviewDemoMeta
+})
 
 function Demo() {
   return (

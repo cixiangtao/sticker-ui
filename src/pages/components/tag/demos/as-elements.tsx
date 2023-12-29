@@ -1,13 +1,14 @@
 import { Tag } from "sticker-ui"
 
-import type { PreviewDemoMeta } from "@/layouts/preview"
+import { defineMeta } from "@/layouts/preview"
 
-const meta = {
+const meta = defineMeta({
   className: "bg-[#EAF7FF]",
   description:
     "Use as to switch the semantic element while keeping the same compact tag styling.",
+  order: 40,
   title: "As Elements",
-} satisfies PreviewDemoMeta
+})
 
 function Demo() {
   return (

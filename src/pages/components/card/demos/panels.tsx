@@ -7,14 +7,15 @@ import {
   Tag,
 } from "sticker-ui"
 
-import type { PreviewDemoMeta } from "@/layouts/preview"
+import { defineMeta } from "@/layouts/preview"
 
-const meta = {
+const meta = defineMeta({
   className: "bg-[#FFE8F0]",
   description:
     "Use panel cards for layout shells, preview windows, and grouped page regions.",
+  order: 20,
   title: "Panel Surfaces",
-} satisfies PreviewDemoMeta
+})
 
 function HeaderDots() {
   return (

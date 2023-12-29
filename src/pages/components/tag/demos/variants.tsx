@@ -1,13 +1,14 @@
 import { Tag } from "sticker-ui"
 
-import type { PreviewDemoMeta } from "@/layouts/preview"
+import { defineMeta } from "@/layouts/preview"
 
-const meta = {
+const meta = defineMeta({
   className: "bg-[#EAF7FF]",
   description:
     "Variant controls the tag structure while color carries semantic meaning.",
+  order: 10,
   title: "Variants",
-} satisfies PreviewDemoMeta
+})
 
 function Demo() {
   return (

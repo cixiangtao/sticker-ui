@@ -10,14 +10,15 @@ import {
   Tag,
 } from "sticker-ui"
 
-import type { PreviewDemoMeta } from "@/layouts/preview"
+import { defineMeta } from "@/layouts/preview"
 
-const meta = {
+const meta = defineMeta({
   className: "rotate-[-1deg] bg-[#EAF7FF]",
   description:
     "Compose table cells with tags and code chips while the frame handles scrolling and ink borders.",
+  order: 20,
   title: "Status Board",
-} satisfies PreviewDemoMeta
+})
 
 function Demo() {
   return (

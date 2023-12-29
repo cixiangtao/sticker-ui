@@ -1,14 +1,15 @@
 import { useState } from "react"
 import { Button, Form, Input, Tag } from "sticker-ui"
 
-import type { PreviewDemoMeta } from "@/layouts/preview"
+import { defineMeta } from "@/layouts/preview"
 
-const meta = {
+const meta = defineMeta({
   className: "bg-[#F6EFFF]",
   description:
     "The form instance exposes submit, resetFields, validateFields, and value setters for controlled workflows.",
+  order: 30,
   title: "Form Instance",
-} satisfies PreviewDemoMeta
+})
 
 function Demo() {
   const [form] = Form.useForm()

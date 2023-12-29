@@ -7,14 +7,15 @@ import {
   Tag,
 } from "sticker-ui"
 
-import type { PreviewDemoMeta } from "@/layouts/preview"
+import { defineMeta } from "@/layouts/preview"
 
-const meta = {
+const meta = defineMeta({
   className: "bg-[#EAF7FF]",
   description:
     "Use className to customize card paper, header accents, and badge colors.",
+  order: 40,
   title: "Custom Colors",
-} satisfies PreviewDemoMeta
+})
 
 const cards = [
   {

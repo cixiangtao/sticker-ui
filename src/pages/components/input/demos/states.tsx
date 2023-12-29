@@ -1,13 +1,14 @@
 import { Form, Input } from "sticker-ui"
 
-import type { PreviewDemoMeta } from "@/layouts/preview"
+import { defineMeta } from "@/layouts/preview"
 
-const meta = {
+const meta = defineMeta({
   className: "bg-[#FFF0F4]",
   description:
     "Invalid, disabled, and semantic tone states stay visible through native attributes such as aria-invalid and disabled.",
+  order: 30,
   title: "States",
-} satisfies PreviewDemoMeta
+})
 
 function Demo() {
   return (

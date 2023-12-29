@@ -1,9 +1,6 @@
-import apiDocs from "@/generated/preview-api-docs.json"
 import {
-  getPreviewDemoExamples,
-  PreviewApiTable,
+  createComponentPreviewPage,
   type PreviewDemoModule,
-  PreviewDemoPage,
 } from "@/layouts/preview"
 
 const demoModules = import.meta.glob<PreviewDemoModule>("./demos/*.tsx", {
@@ -15,30 +12,10 @@ const demoSources = import.meta.glob<string>("./demos/*.tsx", {
   query: "?raw",
 })
 
-const DEMO_PATHS = [
-  "./demos/variants.tsx",
-  "./demos/colors.tsx",
-  "./demos/rounded.tsx",
-  "./demos/as-elements.tsx",
-  "./demos/sizes-and-dots.tsx",
-  "./demos/metadata-row.tsx",
-] as const
-
-const demoExamples = getPreviewDemoExamples({
+const TagPage = createComponentPreviewPage({
   demoModules,
-  demoPaths: DEMO_PATHS,
   demoSources,
-  missingLabel: "tag",
+  name: "tag",
 })
-
-function TagPage() {
-  return (
-    <PreviewDemoPage
-      examples={demoExamples}
-      sourceRoot="src/pages/components/tag"
-      trailing={<PreviewApiTable api={apiDocs.tag} />}
-    />
-  )
-}
 
 export default TagPage

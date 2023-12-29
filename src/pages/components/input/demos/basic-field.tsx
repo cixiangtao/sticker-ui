@@ -1,13 +1,14 @@
 import { Input, Label, LabelDescription } from "sticker-ui"
 
-import type { PreviewDemoMeta } from "@/layouts/preview"
+import { defineMeta } from "@/layouts/preview"
 
-const meta = {
+const meta = defineMeta({
   className: "bg-[#EAF7FF]",
   description:
     "Inputs keep native form behavior while adding a chunky sticker frame, hard shadow, and readable helper copy.",
+  order: 10,
   title: "Basic Field",
-} satisfies PreviewDemoMeta
+})
 
 function Demo() {
   return (

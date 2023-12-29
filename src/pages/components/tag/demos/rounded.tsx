@@ -1,13 +1,14 @@
 import { Tag } from "sticker-ui"
 
-import type { PreviewDemoMeta } from "@/layouts/preview"
+import { defineMeta } from "@/layouts/preview"
 
-const meta = {
+const meta = defineMeta({
   className: "bg-[#FFF6DC]",
   description:
     "Rounded tags follow the selected size, while pill tags keep a fully rounded capsule shape.",
+  order: 30,
   title: "Rounded",
-} satisfies PreviewDemoMeta
+})
 
 function Demo() {
   return (

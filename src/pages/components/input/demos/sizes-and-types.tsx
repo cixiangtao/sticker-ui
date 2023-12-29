@@ -1,13 +1,14 @@
 import { Input, Label } from "sticker-ui"
 
-import type { PreviewDemoMeta } from "@/layouts/preview"
+import { defineMeta } from "@/layouts/preview"
 
-const meta = {
+const meta = defineMeta({
   className: "bg-[#FFF6DC]",
   description:
     "Sizes align inputs with compact filters, standard forms, and roomy settings panels while file controls keep the same ink outline.",
+  order: 20,
   title: "Sizes & Types",
-} satisfies PreviewDemoMeta
+})
 
 function Demo() {
   return (

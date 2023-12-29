@@ -1,14 +1,15 @@
 import { useState } from "react"
 import { Button, Form, Input, Tag } from "sticker-ui"
 
-import type { PreviewDemoMeta } from "@/layouts/preview"
+import { defineMeta } from "@/layouts/preview"
 
-const meta = {
+const meta = defineMeta({
   className: "bg-[#FFF6DC]",
   description:
     "Form keeps an antd-like API while the field shell carries the sticker label, helper, and error states.",
+  order: 10,
   title: "Basic Login",
-} satisfies PreviewDemoMeta
+})
 
 function Demo() {
   const [submittedEmail, setSubmittedEmail] = useState("Not submitted yet")

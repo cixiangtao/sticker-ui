@@ -1,13 +1,14 @@
 import { Button } from "sticker-ui"
 
-import type { PreviewDemoMeta } from "@/layouts/preview"
+import { defineMeta } from "@/layouts/preview"
 
-const meta = {
+const meta = defineMeta({
   className: "bg-[#FFF6DC]",
   description:
     "Size choices are constrained so icon, short text, and long commands still read as one family.",
+  order: 20,
   title: "Sizes",
-} satisfies PreviewDemoMeta
+})
 
 function Demo() {
   return (

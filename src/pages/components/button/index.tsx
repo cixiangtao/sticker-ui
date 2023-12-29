@@ -1,9 +1,6 @@
-import apiDocs from "@/generated/preview-api-docs.json"
 import {
-  getPreviewDemoExamples,
-  PreviewApiTable,
+  createComponentPreviewPage,
   type PreviewDemoModule,
-  PreviewDemoPage,
 } from "@/layouts/preview"
 
 const demoModules = import.meta.glob<PreviewDemoModule>("./demos/*.tsx", {
@@ -15,27 +12,10 @@ const demoSources = import.meta.glob<string>("./demos/*.tsx", {
   query: "?raw",
 })
 
-const DEMO_PATHS = [
-  "./demos/variants.tsx",
-  "./demos/sizes.tsx",
-  "./demos/states.tsx",
-] as const
-
-const demoExamples = getPreviewDemoExamples({
+const ButtonPage = createComponentPreviewPage({
   demoModules,
-  demoPaths: DEMO_PATHS,
   demoSources,
-  missingLabel: "button",
+  name: "button",
 })
-
-function ButtonPage() {
-  return (
-    <PreviewDemoPage
-      examples={demoExamples}
-      sourceRoot="src/pages/components/button"
-      trailing={<PreviewApiTable api={apiDocs.button} />}
-    />
-  )
-}
 
 export default ButtonPage

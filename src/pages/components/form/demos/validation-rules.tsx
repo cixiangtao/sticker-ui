@@ -1,13 +1,14 @@
 import { Button, Form, Input } from "sticker-ui"
 
-import type { PreviewDemoMeta } from "@/layouts/preview"
+import { defineMeta } from "@/layouts/preview"
 
-const meta = {
+const meta = defineMeta({
   className: "bg-[#EAF7FF]",
   description:
     "Rules run on change by default and can mix required, length, pattern, type, and custom validators.",
+  order: 20,
   title: "Validation Rules",
-} satisfies PreviewDemoMeta
+})
 
 function Demo() {
   return (

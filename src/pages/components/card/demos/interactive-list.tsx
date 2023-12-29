@@ -7,16 +7,16 @@ import {
   Tag,
 } from "sticker-ui"
 
-import type { PreviewDemoMeta } from "@/layouts/preview"
-
+import { defineMeta } from "@/layouts/preview"
 import { cn } from "@/lib/utils"
 
-const meta = {
+const meta = defineMeta({
   className: "bg-[#FFF0F4]",
   description:
     "Interactive cards keep tactile movement on the root while nested text and badges stay stable.",
+  order: 50,
   title: "Interactive List",
-} satisfies PreviewDemoMeta
+})
 
 const tasks = [
   {

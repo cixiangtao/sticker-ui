@@ -1,6 +1,6 @@
 import { Tag } from "sticker-ui"
 
-import type { PreviewDemoMeta } from "@/layouts/preview"
+import { defineMeta } from "@/layouts/preview"
 
 const TAG_COLORS = [
   {
@@ -44,12 +44,13 @@ const TAG_VARIANTS = [
   },
 ] as const
 
-const meta = {
+const meta = defineMeta({
   className: "bg-[#FFF6DC]",
   description:
     "Compare each semantic color across solid, filled, and outlined tags.",
+  order: 20,
   title: "Colors",
-} satisfies PreviewDemoMeta
+})
 
 function Demo() {
   return (

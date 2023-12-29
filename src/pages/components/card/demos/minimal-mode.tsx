@@ -7,14 +7,15 @@ import {
   Tag,
 } from "sticker-ui"
 
-import type { PreviewDemoMeta } from "@/layouts/preview"
+import { defineMeta } from "@/layouts/preview"
 
-const meta = {
+const meta = defineMeta({
   className: "bg-[#FFFDF7]",
   description:
     "Minimal cards remove the shadow and keep only a thin border for quieter grouping.",
+  order: 30,
   title: "Minimal Mode",
-} satisfies PreviewDemoMeta
+})
 
 function Demo() {
   return (

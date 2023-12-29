@@ -7,14 +7,15 @@ import {
   TableRow,
 } from "sticker-ui"
 
-import type { PreviewDemoMeta } from "@/layouts/preview"
+import { defineMeta } from "@/layouts/preview"
 
-const meta = {
+const meta = defineMeta({
   className: "bg-[#FFF6DC]",
   description:
     "Use tables for API props, registry metadata, and compact technical reference blocks.",
+  order: 10,
   title: "API Reference",
-} satisfies PreviewDemoMeta
+})
 
 function Demo() {
   return (
