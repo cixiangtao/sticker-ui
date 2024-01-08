@@ -1,0 +1,33 @@
+image: node:22-alpine
+
+stages:
+  - verify
+  - build
+
+variables:
+  PNPM_HOME: "$CI_PROJECT_DIR/.pnpm"
+  STORE_PATH: "$CI_PROJECT_DIR/.pnpm-store"
+
+cache:
+  key:
+    files:
+      - pnpm-lock.yaml
+  paths:
+    - .pnpm-store/
+    - .pnpm/
+
+before_script:
+  - corepack enable
+  - corepack prepare pnpm@10.17.1 --activate
+  - pnpm config set store-dir "$STORE_PATH"
+  - pnpm install --frozen-lockfile
+
+lint:
+  stage: verify
+  script:
+    - pnpm lint
+
+build_preview:
+  stage: build
+  script:
+    - pnpm build:preview
