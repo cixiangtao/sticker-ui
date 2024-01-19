@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils"
  * Builds the sticker card className from structure variants.
  */
 const cardVariants = cva(
-  "relative flex flex-col overflow-hidden text-ink outline-none transition duration-150 focus-visible:ring-sticker focus-visible:ring-ring/45",
+  "relative flex flex-col overflow-hidden text-ink transition duration-150",
   {
     defaultVariants: {
       padding: "md",

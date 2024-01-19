@@ -113,7 +113,7 @@ const COLOR_TOKEN_GROUPS = [
         value: "var(--color-ink)",
       },
       { label: "Border", name: "--color-border", value: "var(--color-ink)" },
-      { label: "Ring", name: "--color-ring", value: "#4ea8de" },
+      { label: "Ring", name: "--color-ring", value: "#9b5de5" },
     ],
   },
   {

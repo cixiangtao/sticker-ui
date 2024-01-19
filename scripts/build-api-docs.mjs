@@ -18,6 +18,85 @@ const SOURCE_ROOT = path.join(ROOT_DIR, "src", "components", "ui")
 
 const API_TYPE_NAME_PATTERN =
   /(Props|Rule|Instance|Values|Value|Layout|Status|ErrorInfo|NamePath|Error)$/
+const COMMON_INHERITED_PROP_NAMES = [
+  "aria-describedby",
+  "aria-invalid",
+  "aria-label",
+  "aria-labelledby",
+  "autoComplete",
+  "autoFocus",
+  "checked",
+  "children",
+  "className",
+  "defaultChecked",
+  "defaultValue",
+  "disabled",
+  "form",
+  "htmlFor",
+  "id",
+  "max",
+  "maxLength",
+  "min",
+  "minLength",
+  "name",
+  "onBlur",
+  "onChange",
+  "onClick",
+  "onFocus",
+  "onKeyDown",
+  "onKeyUp",
+  "onMouseEnter",
+  "onMouseLeave",
+  "pattern",
+  "placeholder",
+  "readOnly",
+  "required",
+  "role",
+  "style",
+  "title",
+  "type",
+  "value",
+]
+const COMMON_INHERITED_PROP_NAME_SET = new Set(COMMON_INHERITED_PROP_NAMES)
+const COMMON_INHERITED_PROP_DESCRIPTIONS = {
+  "aria-describedby": "Identifies elements that describe the control.",
+  "aria-invalid": "Indicates whether the current value is invalid.",
+  "aria-label": "Provides an accessible label when visible text is not enough.",
+  "aria-labelledby": "Identifies elements that label the control.",
+  autoComplete: "Controls browser autocomplete behavior.",
+  autoFocus: "Focuses the element when it mounts.",
+  checked: "Controls the checked state.",
+  children: "Content rendered inside the element.",
+  className: "Adds custom class names to the root element.",
+  defaultChecked: "Sets the initial unchecked or checked state.",
+  defaultValue: "Sets the initial uncontrolled value.",
+  disabled: "Disables user interaction with the element.",
+  form: "Associates the control with a form by id.",
+  htmlFor: "Associates the label with a form control id.",
+  id: "Sets the element id.",
+  max: "Sets the maximum accepted value.",
+  maxLength: "Sets the maximum text length.",
+  min: "Sets the minimum accepted value.",
+  minLength: "Sets the minimum text length.",
+  name: "Sets the form field name.",
+  onBlur: "Runs when the element loses focus.",
+  onChange: "Runs when the value changes.",
+  onClick: "Runs when the element is clicked.",
+  onFocus: "Runs when the element receives focus.",
+  onKeyDown: "Runs when a key is pressed.",
+  onKeyUp: "Runs when a key is released.",
+  onMouseEnter: "Runs when the pointer enters the element.",
+  onMouseLeave: "Runs when the pointer leaves the element.",
+  pattern: "Sets a validation pattern for the value.",
+  placeholder: "Shows placeholder text when the field is empty.",
+  readOnly: "Prevents user edits while keeping the value readable.",
+  required: "Marks the field as required for native validation.",
+  role: "Sets the ARIA role.",
+  style: "Adds inline styles to the root element.",
+  title: "Sets advisory text for the element.",
+  type: "Sets the native control type.",
+  value: "Controls the current value.",
+}
 
 function cleanText(value) {
   return value.replaceAll(/\r?\n/g, " ").replaceAll(/\s+/g, " ").trim()
@@ -104,6 +183,12 @@ function getTypeText(member) {
   return cleanText(member.getType().getText(member))
 }
 
+function getResolvedTypeText(symbol, location) {
+  return cleanText(symbol.getTypeAtLocation(location).getText(location))
+    .replaceAll(/\s*\|\s*undefined/g, "")
+    .replaceAll(/undefined\s*\|\s*/g, "")
+}
+
 function getHeritage(interfaceDeclaration) {
   return interfaceDeclaration
     .getExtends()
@@ -143,12 +228,20 @@ function getPropsApiFromTypeText(sourceFile, typeText, keyBase) {
 
 function getPropsApiFromLocalType(declaration, keyBase) {
   const doc = readJsDoc(declaration)
+  const ownMembers = Node.isInterfaceDeclaration(declaration)
+    ? getMembersFromInterface(declaration, keyBase)
+    : getMembersFromTypeAlias(declaration, keyBase)
+  const inheritedMembers = getInheritedMembersFromResolvedType(
+    declaration,
+    ownMembers,
+  )
 
   if (Node.isInterfaceDeclaration(declaration)) {
     return {
       ...withI18nTextFields(doc, keyBase),
       inherits: getHeritage(declaration),
-      members: getMembersFromInterface(declaration, keyBase),
+      inheritedMembers,
+      members: ownMembers,
       type: declaration.getName(),
     }
   }
@@ -156,7 +249,8 @@ function getPropsApiFromLocalType(declaration, keyBase) {
   return {
     ...withI18nTextFields(doc, keyBase),
     inherits: getTypeAliasHeritage(declaration),
-    members: getMembersFromTypeAlias(declaration, keyBase),
+    inheritedMembers,
+    members: ownMembers,
     type: declaration.getName(),
   }
 }
@@ -299,6 +393,37 @@ function getMembersFromTypeAlias(typeAlias, keyBase) {
         name,
         ...getPropertyRequirement(property),
         type: getTypeText(property),
+      }
+    })
+    .sort((a, b) => a.name.localeCompare(b.name))
+}
+
+function getInheritedMembersFromResolvedType(declaration, ownMembers) {
+  const ownNames = new Set(ownMembers.map((member) => member.name))
+
+  return declaration
+    .getType()
+    .getProperties()
+    .filter((symbol) => {
+      const name = symbol.getName()
+
+      return (
+        !ownNames.has(name) &&
+        COMMON_INHERITED_PROP_NAME_SET.has(name) &&
+        symbol.getDeclarations().length > 0
+      )
+    })
+    .map((symbol) => {
+      const name = symbol.getName()
+      const optional =
+        typeof symbol.isOptional === "function" ? symbol.isOptional() : true
+
+      return {
+        description: COMMON_INHERITED_PROP_DESCRIPTIONS[name],
+        name,
+        optional,
+        required: !optional,
+        type: getResolvedTypeText(symbol, declaration),
       }
     })
     .sort((a, b) => a.name.localeCompare(b.name))

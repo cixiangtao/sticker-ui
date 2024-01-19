@@ -87,6 +87,8 @@ const ZH_PREVIEW_API_DOC_TRANSLATIONS: Record<string, string> = {
     "在标签内容后显示可选标记。",
   "api.label.components.Label.props.members.required.description":
     "在标签内容后显示必填标记。",
+  "api.label.components.Label.props.members.requiredMark.description":
+    "控制必填标记的渲染样式。",
   "api.label.components.Label.props.members.size.description":
     "控制标签文字尺寸。",
   "api.label.components.Label.props.members.tone.description":
@@ -111,6 +113,8 @@ const ZH_PREVIEW_API_DOC_TRANSLATIONS: Record<string, string> = {
     "在标签内容后显示可选标记。",
   "api.label.types.LabelProps.members.required.description":
     "在标签内容后显示必填标记。",
+  "api.label.types.LabelProps.members.requiredMark.description":
+    "控制必填标记的渲染样式。",
   "api.label.types.LabelProps.members.size.description": "控制标签文字尺寸。",
   "api.label.types.LabelProps.members.tone.description":
     "控制标签文字色调和必填标记颜色。",
@@ -125,10 +129,12 @@ const ZH_PREVIEW_API_DOC_TRANSLATIONS: Record<string, string> = {
     "控制输入框高度、圆角和文字尺寸。",
   "api.input.components.Input.props.members.tone.description":
     "控制输入框的语义纸张色调。",
+  "api.input.components.Input.props.members.type.description":
+    "控制原生文本输入类型。",
   "api.input.components.Input.props.members.variant.description":
     "控制输入框边框和填充的强调程度。",
   "api.input.components.Input.props.remarks":
-    "继承原生 input 属性，但用贴纸控件尺寸替代数字形式的 HTML `size` 属性。",
+    "继承原生 input 属性，但非文本输入类型和数字形式的 HTML `size` 属性由贴纸组件 API 替代。",
   "api.input.exports.inputVariants.description":
     "根据结构、色调和尺寸变体生成贴纸输入框的 className。",
   "api.input.types.InputProps.description": "贴纸输入框元素的 props。",
@@ -136,12 +142,39 @@ const ZH_PREVIEW_API_DOC_TRANSLATIONS: Record<string, string> = {
     "控制输入框高度、圆角和文字尺寸。",
   "api.input.types.InputProps.members.tone.description":
     "控制输入框的语义纸张色调。",
+  "api.input.types.InputProps.members.type.description":
+    "控制原生文本输入类型。",
   "api.input.types.InputProps.members.variant.description":
     "控制输入框边框和填充的强调程度。",
   "api.input.types.InputProps.remarks":
-    "继承原生 input 属性，但用贴纸控件尺寸替代数字形式的 HTML `size` 属性。",
+    "继承原生 input 属性，但非文本输入类型和数字形式的 HTML `size` 属性由贴纸组件 API 替代。",
   "api.input.variants.inputVariants.description":
     "根据结构、色调和尺寸变体生成贴纸输入框的 className。",
+  "api.textarea.description": "带有厚实贴纸边框和语义字段状态的原生多行字段。",
+  "api.textarea.components.Textarea.props.description":
+    "贴纸多行输入框元素的 props。",
+  "api.textarea.components.Textarea.props.members.size.description":
+    "控制多行输入框最小高度、圆角、内边距和文字尺寸。",
+  "api.textarea.components.Textarea.props.members.tone.description":
+    "控制多行输入框的语义纸张色调。",
+  "api.textarea.components.Textarea.props.members.variant.description":
+    "控制多行输入框边框和填充的强调程度。",
+  "api.textarea.components.Textarea.props.remarks":
+    "继承原生 textarea 属性，但数字形式的 HTML `size` 属性由贴纸组件 API 替代。",
+  "api.textarea.exports.textareaVariants.description":
+    "复用输入框变体，并叠加多行输入尺寸，生成贴纸多行输入框的 className。",
+  "api.textarea.types.TextareaProps.description":
+    "贴纸多行输入框元素的 props。",
+  "api.textarea.types.TextareaProps.members.size.description":
+    "控制多行输入框最小高度、圆角、内边距和文字尺寸。",
+  "api.textarea.types.TextareaProps.members.tone.description":
+    "控制多行输入框的语义纸张色调。",
+  "api.textarea.types.TextareaProps.members.variant.description":
+    "控制多行输入框边框和填充的强调程度。",
+  "api.textarea.types.TextareaProps.remarks":
+    "继承原生 textarea 属性，但数字形式的 HTML `size` 属性由贴纸组件 API 替代。",
+  "api.textarea.variants.textareaVariants.description":
+    "复用输入框变体，并叠加多行输入尺寸，生成贴纸多行输入框的 className。",
   "api.form.description":
     "带 handbook 贴纸字段状态的 Ant Design 风格表单控制器。",
   "api.form.components.Form.props.description": "贴纸表单根元素的 props。",

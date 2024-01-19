@@ -37,7 +37,7 @@ const tasks = [
   },
   {
     cardClassName: "bg-fill-success",
-    description: "Verify hover, active, and focus-visible states.",
+    description: "Verify hover and active tactile states.",
     headerClassName: "bg-accent-success",
     status: "ready",
     tagColor: "success",
@@ -54,7 +54,6 @@ function Demo() {
           className={cn("cursor-pointer", task.cardClassName)}
           interactive
           key={task.title}
-          tabIndex={0}
         >
           <CardHeader
             className={cn(

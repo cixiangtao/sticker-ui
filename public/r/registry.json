@@ -107,6 +107,20 @@
       ]
     },
     {
+      "name": "textarea",
+      "type": "registry:ui",
+      "title": "Sticker Textarea",
+      "description": "A native multiline field with chunky sticker frames and semantic field states.",
+      "registryDependencies": ["utils", "input"],
+      "files": [
+        {
+          "path": "src/components/ui/textarea.tsx",
+          "target": "@ui/textarea.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "form",
       "type": "registry:ui",
       "title": "Sticker Form",

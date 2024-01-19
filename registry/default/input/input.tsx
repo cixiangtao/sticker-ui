@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils"
  * Builds the sticker input className from structure, tone, and size variants.
  */
 const inputVariants = cva(
-  "border-ink text-ink placeholder:text-text-placeholder flex w-full min-w-0 border-2 bg-surface font-bold shadow-sticker-sm outline-none transition duration-150 selection:bg-fill-default selection:text-ink file:mr-3 file:border-0 file:bg-transparent file:text-sm file:font-black file:text-ink focus-visible:border-primary focus-visible:shadow-sticker-md focus-visible:ring-sticker focus-visible:ring-ring/45 disabled:cursor-not-allowed disabled:opacity-55 aria-invalid:border-text-danger aria-invalid:bg-fill-danger-soft aria-invalid:text-text-danger",
+  "border-ink text-ink placeholder:text-text-placeholder flex w-full min-w-0 border-2 bg-surface font-bold shadow-sticker-sm outline-none transition duration-150 selection:bg-fill-default selection:text-ink focus-visible:shadow-sticker-md focus-visible:ring-[2px] focus-visible:ring-ring/65 disabled:cursor-not-allowed disabled:opacity-55 aria-invalid:border-text-danger aria-invalid:bg-fill-danger-soft aria-invalid:text-text-danger",
   {
     compoundVariants: [
       {
@@ -132,19 +132,26 @@ const inputVariants = cva(
   },
 )
 
+type InputType = "email" | "password" | "search" | "tel" | "text" | "url"
+
 /**
  * Props for the sticker input element.
- * @remarks Inherits native input attributes, except the numeric HTML `size` attribute is replaced by sticker control sizes.
+ * @remarks Inherits native input attributes, except non-text input types and the numeric HTML `size` attribute are replaced by sticker component APIs.
  */
 interface InputProps
   extends
-    Omit<React.InputHTMLAttributes<HTMLInputElement>, "size">,
+    Omit<React.InputHTMLAttributes<HTMLInputElement>, "size" | "type">,
     Omit<VariantProps<typeof inputVariants>, "size" | "tone" | "variant"> {
   /**
    * Controls the input height, radius, and text size.
    * @default "md"
    */
   size?: "lg" | "md" | "sm"
+  /**
+   * Controls the native text input type.
+   * @default "text"
+   */
+  type?: InputType
   /**
    * Controls the input semantic paper tone.
    * @default "default"

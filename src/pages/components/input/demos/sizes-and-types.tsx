@@ -5,7 +5,7 @@ import { defineMeta } from "@/layouts/preview"
 const meta = defineMeta({
   className: "bg-[#FFF6DC]",
   description:
-    "Sizes align inputs with compact filters, standard forms, and roomy settings panels while file controls keep the same ink outline.",
+    "Sizes align text inputs with compact filters, standard forms, and roomy settings panels while type stays focused on text entry.",
   order: 20,
   title: "Sizes & Types",
 })
@@ -17,7 +17,12 @@ function Demo() {
         <Label htmlFor="input-size-small" size="sm">
           Small search
         </Label>
-        <Input id="input-size-small" placeholder="Search docs" size="sm" />
+        <Input
+          id="input-size-small"
+          placeholder="Search docs"
+          size="sm"
+          type="search"
+        />
       </div>
       <div className="rounded-sticker-xl border-ink grid gap-2 border bg-white/80 p-4">
         <Label htmlFor="input-size-medium">Standard URL</Label>
@@ -29,9 +34,14 @@ function Demo() {
       </div>
       <div className="rounded-sticker-xl border-ink grid gap-2 border bg-white/80 p-4">
         <Label htmlFor="input-size-large" size="lg">
-          Roomy file
+          Roomy password
         </Label>
-        <Input id="input-size-large" size="lg" type="file" />
+        <Input
+          id="input-size-large"
+          placeholder="Secret sticker code"
+          size="lg"
+          type="password"
+        />
       </div>
     </div>
   )

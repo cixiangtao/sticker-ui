@@ -12,6 +12,190 @@
             "React.ButtonHTMLAttributes<HTMLButtonElement>",
             "VariantProps<typeof buttonVariants>"
           ],
+          "inheritedMembers": [
+            {
+              "description": "Identifies elements that describe the control.",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Indicates whether the current value is invalid.",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "description": "Provides an accessible label when visible text is not enough.",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Identifies elements that label the control.",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Focuses the element when it mounts.",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Content rendered inside the element.",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "description": "Adds custom class names to the root element.",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Sets the initial unchecked or checked state.",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Sets the initial uncontrolled value.",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            },
+            {
+              "description": "Disables user interaction with the element.",
+              "name": "disabled",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Associates the control with a form by id.",
+              "name": "form",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Sets the element id.",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Sets the form field name.",
+              "name": "name",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Runs when the element loses focus.",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLButtonElement>"
+            },
+            {
+              "description": "Runs when the value changes.",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "React.ChangeEventHandler<HTMLButtonElement, Element>"
+            },
+            {
+              "description": "Runs when the element is clicked.",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLButtonElement>"
+            },
+            {
+              "description": "Runs when the element receives focus.",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLButtonElement>"
+            },
+            {
+              "description": "Runs when a key is pressed.",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLButtonElement>"
+            },
+            {
+              "description": "Runs when a key is released.",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLButtonElement>"
+            },
+            {
+              "description": "Runs when the pointer enters the element.",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLButtonElement>"
+            },
+            {
+              "description": "Runs when the pointer leaves the element.",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLButtonElement>"
+            },
+            {
+              "description": "Sets the ARIA role.",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "description": "Adds inline styles to the root element.",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "description": "Sets advisory text for the element.",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Sets the native control type.",
+              "name": "type",
+              "optional": true,
+              "required": false,
+              "type": "\"submit\" | \"reset\" | \"button\""
+            },
+            {
+              "description": "Controls the current value.",
+              "name": "value",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            }
+          ],
           "members": [
             {
               "defaultValue": "false",
@@ -183,6 +367,155 @@
             "React.HTMLAttributes<HTMLElement>",
             "VariantProps<typeof cardVariants>"
           ],
+          "inheritedMembers": [
+            {
+              "description": "Identifies elements that describe the control.",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Indicates whether the current value is invalid.",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "description": "Provides an accessible label when visible text is not enough.",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Identifies elements that label the control.",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Focuses the element when it mounts.",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Content rendered inside the element.",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "description": "Adds custom class names to the root element.",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Sets the initial unchecked or checked state.",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Sets the initial uncontrolled value.",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            },
+            {
+              "description": "Sets the element id.",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Runs when the element loses focus.",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLElement>"
+            },
+            {
+              "description": "Runs when the value changes.",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "React.ChangeEventHandler<HTMLElement, Element>"
+            },
+            {
+              "description": "Runs when the element is clicked.",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLElement>"
+            },
+            {
+              "description": "Runs when the element receives focus.",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLElement>"
+            },
+            {
+              "description": "Runs when a key is pressed.",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLElement>"
+            },
+            {
+              "description": "Runs when a key is released.",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLElement>"
+            },
+            {
+              "description": "Runs when the pointer enters the element.",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLElement>"
+            },
+            {
+              "description": "Runs when the pointer leaves the element.",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLElement>"
+            },
+            {
+              "description": "Sets the ARIA role.",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "description": "Adds inline styles to the root element.",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "description": "Sets advisory text for the element.",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            }
+          ],
           "members": [
             {
               "defaultValue": "\"article\"",
@@ -263,6 +596,155 @@
           "description": "Props for the sticker card header.",
           "descriptionKey": "api.card.components.CardHeader.props.description",
           "inherits": ["React.ComponentProps<\"header\">"],
+          "inheritedMembers": [
+            {
+              "description": "Identifies elements that describe the control.",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Indicates whether the current value is invalid.",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "description": "Provides an accessible label when visible text is not enough.",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Identifies elements that label the control.",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Focuses the element when it mounts.",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Content rendered inside the element.",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "description": "Adds custom class names to the root element.",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Sets the initial unchecked or checked state.",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Sets the initial uncontrolled value.",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            },
+            {
+              "description": "Sets the element id.",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Runs when the element loses focus.",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLElement>"
+            },
+            {
+              "description": "Runs when the value changes.",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "React.ChangeEventHandler<HTMLElement, Element>"
+            },
+            {
+              "description": "Runs when the element is clicked.",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLElement>"
+            },
+            {
+              "description": "Runs when the element receives focus.",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLElement>"
+            },
+            {
+              "description": "Runs when a key is pressed.",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLElement>"
+            },
+            {
+              "description": "Runs when a key is released.",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLElement>"
+            },
+            {
+              "description": "Runs when the pointer enters the element.",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLElement>"
+            },
+            {
+              "description": "Runs when the pointer leaves the element.",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLElement>"
+            },
+            {
+              "description": "Sets the ARIA role.",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "description": "Adds inline styles to the root element.",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "description": "Sets advisory text for the element.",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            }
+          ],
           "members": [
             {
               "defaultValue": "false",
@@ -473,6 +955,155 @@
           "remarks": "Inherits native table attributes and wraps the table in a scrollable sticker frame.",
           "remarksKey": "api.table.components.Table.props.remarks",
           "inherits": ["React.ComponentProps<\"table\">"],
+          "inheritedMembers": [
+            {
+              "description": "Identifies elements that describe the control.",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Indicates whether the current value is invalid.",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"false\" | \"true\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "description": "Provides an accessible label when visible text is not enough.",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Identifies elements that label the control.",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Focuses the element when it mounts.",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Content rendered inside the element.",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "description": "Adds custom class names to the root element.",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Sets the initial unchecked or checked state.",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Sets the initial uncontrolled value.",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            },
+            {
+              "description": "Sets the element id.",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Runs when the element loses focus.",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLTableElement>"
+            },
+            {
+              "description": "Runs when the value changes.",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "React.ChangeEventHandler<HTMLTableElement, Element>"
+            },
+            {
+              "description": "Runs when the element is clicked.",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLTableElement>"
+            },
+            {
+              "description": "Runs when the element receives focus.",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLTableElement>"
+            },
+            {
+              "description": "Runs when a key is pressed.",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLTableElement>"
+            },
+            {
+              "description": "Runs when a key is released.",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLTableElement>"
+            },
+            {
+              "description": "Runs when the pointer enters the element.",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLTableElement>"
+            },
+            {
+              "description": "Runs when the pointer leaves the element.",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLTableElement>"
+            },
+            {
+              "description": "Sets the ARIA role.",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "description": "Adds inline styles to the root element.",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "description": "Sets advisory text for the element.",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            }
+          ],
           "members": [
             {
               "description": "Class name applied to the scroll container around the table.",
@@ -598,6 +1229,155 @@
           "inherits": [
             "React.HTMLAttributes<HTMLElement>",
             "VariantProps<typeof tagVariants>"
+          ],
+          "inheritedMembers": [
+            {
+              "description": "Identifies elements that describe the control.",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Indicates whether the current value is invalid.",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "description": "Provides an accessible label when visible text is not enough.",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Identifies elements that label the control.",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Focuses the element when it mounts.",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Content rendered inside the element.",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "description": "Adds custom class names to the root element.",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Sets the initial unchecked or checked state.",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Sets the initial uncontrolled value.",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            },
+            {
+              "description": "Sets the element id.",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Runs when the element loses focus.",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLElement>"
+            },
+            {
+              "description": "Runs when the value changes.",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "React.ChangeEventHandler<HTMLElement, Element>"
+            },
+            {
+              "description": "Runs when the element is clicked.",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLElement>"
+            },
+            {
+              "description": "Runs when the element receives focus.",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLElement>"
+            },
+            {
+              "description": "Runs when a key is pressed.",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLElement>"
+            },
+            {
+              "description": "Runs when a key is released.",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLElement>"
+            },
+            {
+              "description": "Runs when the pointer enters the element.",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLElement>"
+            },
+            {
+              "description": "Runs when the pointer leaves the element.",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLElement>"
+            },
+            {
+              "description": "Sets the ARIA role.",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "description": "Adds inline styles to the root element.",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "description": "Sets advisory text for the element.",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            }
           ],
           "members": [
             {
@@ -793,6 +1573,169 @@
             "React.LabelHTMLAttributes<HTMLLabelElement>",
             "VariantProps<typeof labelTones>"
           ],
+          "inheritedMembers": [
+            {
+              "description": "Identifies elements that describe the control.",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Indicates whether the current value is invalid.",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "description": "Provides an accessible label when visible text is not enough.",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Identifies elements that label the control.",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Focuses the element when it mounts.",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Content rendered inside the element.",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "description": "Adds custom class names to the root element.",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Sets the initial unchecked or checked state.",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Sets the initial uncontrolled value.",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            },
+            {
+              "description": "Associates the control with a form by id.",
+              "name": "form",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Associates the label with a form control id.",
+              "name": "htmlFor",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Sets the element id.",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Runs when the element loses focus.",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLLabelElement>"
+            },
+            {
+              "description": "Runs when the value changes.",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "React.ChangeEventHandler<HTMLLabelElement, Element>"
+            },
+            {
+              "description": "Runs when the element is clicked.",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLLabelElement>"
+            },
+            {
+              "description": "Runs when the element receives focus.",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLLabelElement>"
+            },
+            {
+              "description": "Runs when a key is pressed.",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLLabelElement>"
+            },
+            {
+              "description": "Runs when a key is released.",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLLabelElement>"
+            },
+            {
+              "description": "Runs when the pointer enters the element.",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLLabelElement>"
+            },
+            {
+              "description": "Runs when the pointer leaves the element.",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLLabelElement>"
+            },
+            {
+              "description": "Sets the ARIA role.",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "description": "Adds inline styles to the root element.",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "description": "Sets advisory text for the element.",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            }
+          ],
           "members": [
             {
               "defaultValue": "false",
@@ -813,6 +1756,15 @@
               "type": "boolean"
             },
             {
+              "defaultValue": "\"badge\"",
+              "description": "Controls how the required marker is rendered.",
+              "descriptionKey": "api.label.components.Label.props.members.requiredMark.description",
+              "name": "requiredMark",
+              "optional": true,
+              "required": false,
+              "type": "\"asterisk\" | \"badge\""
+            },
+            {
               "defaultValue": "\"default\"",
               "description": "Controls the label text size.",
               "descriptionKey": "api.label.components.Label.props.members.size.description",
@@ -828,7 +1780,7 @@
               "name": "tone",
               "optional": true,
               "required": false,
-              "type": "\"danger\" | \"default\" | \"muted\" | \"success\" | \"warning\""
+              "type": "LabelTone"
             }
           ],
           "type": "LabelProps"
@@ -847,11 +1799,159 @@
         "props": {
           "description": "Props for the inline label marker.",
           "descriptionKey": "api.label.components.LabelMarker.props.description",
-          "remarks": "Inherits native span attributes and adds sticker tone variants.",
+          "remarks": "Inherits sticker tag attributes and adds label tone variants.",
           "remarksKey": "api.label.components.LabelMarker.props.remarks",
           "inherits": [
-            "React.ComponentProps<\"span\">",
-            "VariantProps<typeof markerTones>"
+            "Omit< React.ComponentProps<typeof Tag>, \"as\" | \"color\" | \"dot\" | \"rounded\" | \"size\" | \"variant\" >"
+          ],
+          "inheritedMembers": [
+            {
+              "description": "Identifies elements that describe the control.",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Indicates whether the current value is invalid.",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "description": "Provides an accessible label when visible text is not enough.",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Identifies elements that label the control.",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Focuses the element when it mounts.",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Content rendered inside the element.",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "description": "Adds custom class names to the root element.",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Sets the initial unchecked or checked state.",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Sets the initial uncontrolled value.",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            },
+            {
+              "description": "Sets the element id.",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Runs when the element loses focus.",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLElement>"
+            },
+            {
+              "description": "Runs when the value changes.",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "React.ChangeEventHandler<HTMLElement, Element>"
+            },
+            {
+              "description": "Runs when the element is clicked.",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLElement>"
+            },
+            {
+              "description": "Runs when the element receives focus.",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLElement>"
+            },
+            {
+              "description": "Runs when a key is pressed.",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLElement>"
+            },
+            {
+              "description": "Runs when a key is released.",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLElement>"
+            },
+            {
+              "description": "Runs when the pointer enters the element.",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLElement>"
+            },
+            {
+              "description": "Runs when the pointer leaves the element.",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLElement>"
+            },
+            {
+              "description": "Sets the ARIA role.",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "description": "Adds inline styles to the root element.",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "description": "Sets advisory text for the element.",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            }
           ],
           "members": [
             {
@@ -861,7 +1961,7 @@
               "name": "tone",
               "optional": true,
               "required": false,
-              "type": "\"danger\" | \"default\" | \"muted\" | \"success\" | \"warning\""
+              "type": "LabelTone"
             }
           ],
           "type": "LabelMarkerProps"
@@ -888,11 +1988,10 @@
       {
         "description": "Props for the inline label marker.",
         "descriptionKey": "api.label.types.LabelMarkerProps.description",
-        "remarks": "Inherits native span attributes and adds sticker tone variants.",
+        "remarks": "Inherits sticker tag attributes and adds label tone variants.",
         "remarksKey": "api.label.types.LabelMarkerProps.remarks",
         "inherits": [
-          "React.ComponentProps<\"span\">",
-          "VariantProps<typeof markerTones>"
+          "Omit< React.ComponentProps<typeof Tag>, \"as\" | \"color\" | \"dot\" | \"rounded\" | \"size\" | \"variant\" >"
         ],
         "kind": "interface",
         "members": [
@@ -903,7 +2002,7 @@
             "name": "tone",
             "optional": true,
             "required": false,
-            "type": "\"danger\" | \"default\" | \"muted\" | \"success\" | \"warning\""
+            "type": "LabelTone"
           }
         ],
         "name": "LabelMarkerProps"
@@ -938,6 +2037,15 @@
             "type": "boolean"
           },
           {
+            "defaultValue": "\"badge\"",
+            "description": "Controls how the required marker is rendered.",
+            "descriptionKey": "api.label.types.LabelProps.members.requiredMark.description",
+            "name": "requiredMark",
+            "optional": true,
+            "required": false,
+            "type": "\"asterisk\" | \"badge\""
+          },
+          {
             "defaultValue": "\"default\"",
             "description": "Controls the label text size.",
             "descriptionKey": "api.label.types.LabelProps.members.size.description",
@@ -953,7 +2061,7 @@
             "name": "tone",
             "optional": true,
             "required": false,
-            "type": "\"danger\" | \"default\" | \"muted\" | \"success\" | \"warning\""
+            "type": "LabelTone"
           }
         ],
         "name": "LabelProps"
@@ -976,18 +2084,6 @@
           }
         ],
         "name": "labelTones"
-      },
-      {
-        "description": "Builds the inline marker className from tone variants.",
-        "descriptionKey": "api.label.variants.markerTones.description",
-        "groups": [
-          {
-            "defaultValue": "default",
-            "name": "tone",
-            "values": ["danger", "default", "muted", "success", "warning"]
-          }
-        ],
-        "name": "markerTones"
       }
     ]
   },
@@ -998,11 +2094,258 @@
         "props": {
           "description": "Props for the sticker input element.",
           "descriptionKey": "api.input.components.Input.props.description",
-          "remarks": "Inherits native input attributes, except the numeric HTML `size` attribute is replaced by sticker control sizes.",
+          "remarks": "Inherits native input attributes, except non-text input types and the numeric HTML `size` attribute are replaced by sticker component APIs.",
           "remarksKey": "api.input.components.Input.props.remarks",
           "inherits": [
-            "Omit<React.InputHTMLAttributes<HTMLInputElement>, \"size\">",
+            "Omit<React.InputHTMLAttributes<HTMLInputElement>, \"size\" | \"type\">",
             "Omit<VariantProps<typeof inputVariants>, \"size\" | \"tone\" | \"variant\">"
+          ],
+          "inheritedMembers": [
+            {
+              "description": "Identifies elements that describe the control.",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Indicates whether the current value is invalid.",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "description": "Provides an accessible label when visible text is not enough.",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Identifies elements that label the control.",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Controls browser autocomplete behavior.",
+              "name": "autoComplete",
+              "optional": true,
+              "required": false,
+              "type": "React.HTMLInputAutoCompleteAttribute"
+            },
+            {
+              "description": "Focuses the element when it mounts.",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Controls the checked state.",
+              "name": "checked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Content rendered inside the element.",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "description": "Adds custom class names to the root element.",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Sets the initial unchecked or checked state.",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Sets the initial uncontrolled value.",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            },
+            {
+              "description": "Disables user interaction with the element.",
+              "name": "disabled",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Associates the control with a form by id.",
+              "name": "form",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Sets the element id.",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Sets the maximum accepted value.",
+              "name": "max",
+              "optional": true,
+              "required": false,
+              "type": "string | number"
+            },
+            {
+              "description": "Sets the maximum text length.",
+              "name": "maxLength",
+              "optional": true,
+              "required": false,
+              "type": "number"
+            },
+            {
+              "description": "Sets the minimum accepted value.",
+              "name": "min",
+              "optional": true,
+              "required": false,
+              "type": "string | number"
+            },
+            {
+              "description": "Sets the minimum text length.",
+              "name": "minLength",
+              "optional": true,
+              "required": false,
+              "type": "number"
+            },
+            {
+              "description": "Sets the form field name.",
+              "name": "name",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Runs when the element loses focus.",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLInputElement>"
+            },
+            {
+              "description": "Runs when the value changes.",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "React.ChangeEventHandler<HTMLInputElement, HTMLInputElement>"
+            },
+            {
+              "description": "Runs when the element is clicked.",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLInputElement>"
+            },
+            {
+              "description": "Runs when the element receives focus.",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLInputElement>"
+            },
+            {
+              "description": "Runs when a key is pressed.",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLInputElement>"
+            },
+            {
+              "description": "Runs when a key is released.",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLInputElement>"
+            },
+            {
+              "description": "Runs when the pointer enters the element.",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLInputElement>"
+            },
+            {
+              "description": "Runs when the pointer leaves the element.",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLInputElement>"
+            },
+            {
+              "description": "Sets a validation pattern for the value.",
+              "name": "pattern",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Shows placeholder text when the field is empty.",
+              "name": "placeholder",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Prevents user edits while keeping the value readable.",
+              "name": "readOnly",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Marks the field as required for native validation.",
+              "name": "required",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Sets the ARIA role.",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "description": "Adds inline styles to the root element.",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "description": "Sets advisory text for the element.",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Controls the current value.",
+              "name": "value",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            }
           ],
           "members": [
             {
@@ -1022,6 +2365,15 @@
               "optional": true,
               "required": false,
               "type": "\"danger\" | \"default\" | \"info\" | \"secondary\" | \"success\" | \"warning\""
+            },
+            {
+              "defaultValue": "\"text\"",
+              "description": "Controls the native text input type.",
+              "descriptionKey": "api.input.components.Input.props.members.type.description",
+              "name": "type",
+              "optional": true,
+              "required": false,
+              "type": "InputType"
             },
             {
               "defaultValue": "\"outlined\"",
@@ -1055,10 +2407,10 @@
       {
         "description": "Props for the sticker input element.",
         "descriptionKey": "api.input.types.InputProps.description",
-        "remarks": "Inherits native input attributes, except the numeric HTML `size` attribute is replaced by sticker control sizes.",
+        "remarks": "Inherits native input attributes, except non-text input types and the numeric HTML `size` attribute are replaced by sticker component APIs.",
         "remarksKey": "api.input.types.InputProps.remarks",
         "inherits": [
-          "Omit<React.InputHTMLAttributes<HTMLInputElement>, \"size\">",
+          "Omit<React.InputHTMLAttributes<HTMLInputElement>, \"size\" | \"type\">",
           "Omit<VariantProps<typeof inputVariants>, \"size\" | \"tone\" | \"variant\">"
         ],
         "kind": "interface",
@@ -1080,6 +2432,15 @@
             "optional": true,
             "required": false,
             "type": "\"danger\" | \"default\" | \"info\" | \"secondary\" | \"success\" | \"warning\""
+          },
+          {
+            "defaultValue": "\"text\"",
+            "description": "Controls the native text input type.",
+            "descriptionKey": "api.input.types.InputProps.members.type.description",
+            "name": "type",
+            "optional": true,
+            "required": false,
+            "type": "InputType"
           },
           {
             "defaultValue": "\"outlined\"",
@@ -1126,6 +2487,328 @@
       }
     ]
   },
+  "textarea": {
+    "components": [
+      {
+        "name": "Textarea",
+        "props": {
+          "description": "Props for the sticker textarea element.",
+          "descriptionKey": "api.textarea.components.Textarea.props.description",
+          "remarks": "Inherits native textarea attributes, except the numeric HTML `size` attribute is replaced by the sticker component API.",
+          "remarksKey": "api.textarea.components.Textarea.props.remarks",
+          "inherits": [
+            "Omit< React.TextareaHTMLAttributes<HTMLTextAreaElement>, \"size\" >"
+          ],
+          "inheritedMembers": [
+            {
+              "description": "Identifies elements that describe the control.",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Indicates whether the current value is invalid.",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"false\" | \"true\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "description": "Provides an accessible label when visible text is not enough.",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Identifies elements that label the control.",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Controls browser autocomplete behavior.",
+              "name": "autoComplete",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Focuses the element when it mounts.",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Content rendered inside the element.",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "description": "Adds custom class names to the root element.",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Sets the initial unchecked or checked state.",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Sets the initial uncontrolled value.",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            },
+            {
+              "description": "Disables user interaction with the element.",
+              "name": "disabled",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Associates the control with a form by id.",
+              "name": "form",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Sets the element id.",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Sets the maximum text length.",
+              "name": "maxLength",
+              "optional": true,
+              "required": false,
+              "type": "number"
+            },
+            {
+              "description": "Sets the minimum text length.",
+              "name": "minLength",
+              "optional": true,
+              "required": false,
+              "type": "number"
+            },
+            {
+              "description": "Sets the form field name.",
+              "name": "name",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Runs when the element loses focus.",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLTextAreaElement>"
+            },
+            {
+              "description": "Runs when the value changes.",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "React.ChangeEventHandler<HTMLTextAreaElement, HTMLTextAreaElement>"
+            },
+            {
+              "description": "Runs when the element is clicked.",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLTextAreaElement>"
+            },
+            {
+              "description": "Runs when the element receives focus.",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLTextAreaElement>"
+            },
+            {
+              "description": "Runs when a key is pressed.",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLTextAreaElement>"
+            },
+            {
+              "description": "Runs when a key is released.",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLTextAreaElement>"
+            },
+            {
+              "description": "Runs when the pointer enters the element.",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLTextAreaElement>"
+            },
+            {
+              "description": "Runs when the pointer leaves the element.",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLTextAreaElement>"
+            },
+            {
+              "description": "Shows placeholder text when the field is empty.",
+              "name": "placeholder",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Prevents user edits while keeping the value readable.",
+              "name": "readOnly",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Marks the field as required for native validation.",
+              "name": "required",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Sets the ARIA role.",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "description": "Adds inline styles to the root element.",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "description": "Sets advisory text for the element.",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Controls the current value.",
+              "name": "value",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            }
+          ],
+          "members": [
+            {
+              "defaultValue": "\"md\"",
+              "description": "Controls the textarea minimum height, radius, padding, and text size.",
+              "descriptionKey": "api.textarea.components.Textarea.props.members.size.description",
+              "name": "size",
+              "optional": true,
+              "required": false,
+              "type": "TextareaSize"
+            },
+            {
+              "defaultValue": "\"default\"",
+              "description": "Controls the textarea semantic paper tone.",
+              "descriptionKey": "api.textarea.components.Textarea.props.members.tone.description",
+              "name": "tone",
+              "optional": true,
+              "required": false,
+              "type": "TextareaTone"
+            },
+            {
+              "defaultValue": "\"outlined\"",
+              "description": "Controls the textarea border and fill emphasis.",
+              "descriptionKey": "api.textarea.components.Textarea.props.members.variant.description",
+              "name": "variant",
+              "optional": true,
+              "required": false,
+              "type": "TextareaVariant"
+            }
+          ],
+          "type": "TextareaProps"
+        }
+      }
+    ],
+    "description": "A native multiline field with chunky sticker frames and semantic field states.",
+    "descriptionKey": "api.textarea.description",
+    "exports": [
+      { "kind": "component", "name": "Textarea" },
+      {
+        "description": "Builds the sticker textarea className by reusing the input variants and adding multiline sizing.",
+        "descriptionKey": "api.textarea.exports.textareaVariants.description",
+        "kind": "variant",
+        "name": "textareaVariants"
+      }
+    ],
+    "name": "textarea",
+    "sourcePath": "src/components/ui/textarea.tsx",
+    "title": "Sticker Textarea",
+    "types": [
+      {
+        "description": "Props for the sticker textarea element.",
+        "descriptionKey": "api.textarea.types.TextareaProps.description",
+        "remarks": "Inherits native textarea attributes, except the numeric HTML `size` attribute is replaced by the sticker component API.",
+        "remarksKey": "api.textarea.types.TextareaProps.remarks",
+        "inherits": [
+          "Omit< React.TextareaHTMLAttributes<HTMLTextAreaElement>, \"size\" >"
+        ],
+        "kind": "interface",
+        "members": [
+          {
+            "defaultValue": "\"md\"",
+            "description": "Controls the textarea minimum height, radius, padding, and text size.",
+            "descriptionKey": "api.textarea.types.TextareaProps.members.size.description",
+            "name": "size",
+            "optional": true,
+            "required": false,
+            "type": "TextareaSize"
+          },
+          {
+            "defaultValue": "\"default\"",
+            "description": "Controls the textarea semantic paper tone.",
+            "descriptionKey": "api.textarea.types.TextareaProps.members.tone.description",
+            "name": "tone",
+            "optional": true,
+            "required": false,
+            "type": "TextareaTone"
+          },
+          {
+            "defaultValue": "\"outlined\"",
+            "description": "Controls the textarea border and fill emphasis.",
+            "descriptionKey": "api.textarea.types.TextareaProps.members.variant.description",
+            "name": "variant",
+            "optional": true,
+            "required": false,
+            "type": "TextareaVariant"
+          }
+        ],
+        "name": "TextareaProps"
+      }
+    ],
+    "variants": []
+  },
   "form": {
     "components": [
       {
@@ -1136,6 +2819,169 @@
           "remarks": "Inherits native form attributes and adds antd-style form state callbacks.",
           "remarksKey": "api.form.components.Form.props.remarks",
           "inherits": ["Omit< React.ComponentProps<\"form\">, \"onSubmit\" >"],
+          "inheritedMembers": [
+            {
+              "description": "Identifies elements that describe the control.",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Indicates whether the current value is invalid.",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"false\" | \"true\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "description": "Provides an accessible label when visible text is not enough.",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Identifies elements that label the control.",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Controls browser autocomplete behavior.",
+              "name": "autoComplete",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Focuses the element when it mounts.",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Content rendered inside the element.",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "description": "Adds custom class names to the root element.",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Sets the initial unchecked or checked state.",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Sets the initial uncontrolled value.",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            },
+            {
+              "description": "Sets the element id.",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Sets the form field name.",
+              "name": "name",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Runs when the element loses focus.",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLFormElement>"
+            },
+            {
+              "description": "Runs when the value changes.",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "React.ChangeEventHandler<HTMLFormElement, Element>"
+            },
+            {
+              "description": "Runs when the element is clicked.",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLFormElement>"
+            },
+            {
+              "description": "Runs when the element receives focus.",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLFormElement>"
+            },
+            {
+              "description": "Runs when a key is pressed.",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLFormElement>"
+            },
+            {
+              "description": "Runs when a key is released.",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLFormElement>"
+            },
+            {
+              "description": "Runs when the pointer enters the element.",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLFormElement>"
+            },
+            {
+              "description": "Runs when the pointer leaves the element.",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLFormElement>"
+            },
+            {
+              "description": "Sets the ARIA role.",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "description": "Adds inline styles to the root element.",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "description": "Sets advisory text for the element.",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            }
+          ],
           "members": [
             {
               "defaultValue": "false",

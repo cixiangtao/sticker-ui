@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import { Label, LabelMarker } from "@/components/ui/label"
+import { Label } from "@/components/ui/label"
 import { cn } from "@/lib/utils"
 
 type NamePathPart = number | string
@@ -702,14 +702,11 @@ function FormItem({
           )}
           data-slot="form-item-label"
           htmlFor={fieldId}
+          required={isRequired}
+          requiredMark={layout === "horizontal" ? "asterisk" : "badge"}
           tone={status === "error" ? "danger" : "default"}
         >
           {label}
-          {isRequired ? (
-            <LabelMarker data-slot="form-item-required" tone="danger">
-              required
-            </LabelMarker>
-          ) : null}
         </Label>
       ) : null}
       <div

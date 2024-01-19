@@ -3,12 +3,54 @@ const ZH_PREVIEW_COMPONENT_TRANSLATIONS: Record<string, string> = {
     "可访问的表单标题，并带有小巧的贴纸标记。",
   "A native form input with chunky sticker frames and semantic field states.":
     "带有厚实贴纸边框和语义字段状态的原生表单输入框。",
+  "A native multiline field with chunky sticker frames and semantic field states.":
+    "带有厚实贴纸边框和语义字段状态的原生多行输入框。",
+  "Add a compact note": "添加一条紧凑备注",
+  "Archive note": "归档备注",
+  "Capture a rough draft": "记录草稿",
+  "Draft the launch checklist, capture edge cases, and mark anything the team should revisit before shipping.":
+    "起草发布清单、记录边界情况，并标记团队在发布前需要复查的事项。",
+  Feedback: "反馈",
+  "Invalid, disabled, and semantic tone states stay visible on multiline fields through native attributes and Form.Item validation.":
+    "无效、禁用和语义色调状态会通过原生属性与 Form.Item 校验在多行字段上保持可见。",
+  "Launch plan": "发布计划",
+  "Locked after review.": "评审后已锁定。",
+  "Native multiline controls with chunky sticker frames.":
+    "带有厚实贴纸边框的原生多行控件。",
+  "Outline the launch plan": "梳理发布计划",
+  "Pair Textarea with Label when longer copy needs accessible captions and helper text.":
+    "当较长文本需要可访问标题和辅助文本时，可将 Textarea 与 Label 组合使用。",
+  "Project notes": "项目备注",
+  "Quick note": "快速备注",
+  "Quiet textareas sit inside dense cards.":
+    "quiet 多行输入框适合放在密集卡片内。",
+  "Ready note": "就绪备注",
+  "Share feedback": "分享反馈",
+  "Sizes & Tones": "尺寸与色调",
+  "Sizes scale the writing area for compact notes, standard forms, and roomy planning panels while tone keeps semantic feedback visible.":
+    "尺寸会缩放书写区域，以适配紧凑备注、标准表单和宽松计划面板，同时 tone 保持语义反馈可见。",
+  "Sticker Textarea": "贴纸多行输入框",
+  Summary: "摘要",
+  "Summary is required.": "摘要为必填项。",
+  Textarea: "多行输入框",
+  "Textarea keeps native multiline behavior while adding a chunky sticker frame, hard shadow, and comfortable writing space.":
+    "Textarea 保留原生多行输入行为，同时加入厚实贴纸边框、硬质阴影和舒适的书写空间。",
+  "The field shell passes aria-invalid to Textarea when validation fails.":
+    "校验失败时，字段外壳会把 aria-invalid 传给 Textarea。",
+  "The sticker frame keeps comments readable without losing the playful paper tone.":
+    "贴纸边框让评论保持可读，同时不丢失轻快的纸张色调。",
+  "This copy is approved and ready to ship.": "这段文案已通过审批，可以发布。",
+  "Use at least 12 characters.": "至少使用 12 个字符。",
+  "Use disabled for archived notes.": "对已归档备注使用 disabled。",
+  "Write a short project note": "写一段简短项目备注",
+  "Write a useful summary": "写一段有用的摘要",
   Accent: "强调色",
   "Add component": "添加组件",
   "All fields passed": "所有字段已通过",
   Aliases: "别名",
   "Antd-style field state and validation for sticker forms.":
     "用于贴纸表单的 Ant Design 风格字段状态与校验。",
+  "Anything the team should remember": "团队需要记住的事项",
   Background: "背景",
   "Basic Field": "基础字段",
   "Basic Login": "基础登录",
@@ -58,12 +100,15 @@ const ZH_PREVIEW_COMPONENT_TRANSLATIONS: Record<string, string> = {
     "按钮变体保持同一轮廓，只改变纸张颜色和强调程度。",
   "A compact paper card for component summaries, docs links, and quick actions.":
     "用于组件摘要、文档链接和快捷操作的紧凑纸张卡片。",
+  "Asterisk required": "星号必填",
   "Add handlers at the card root when the whole surface behaves like one action.":
     "当整张卡片都是一个操作面时，可把处理函数放在卡片根元素上。",
   "As Elements": "作为元素",
   Aside: "侧栏",
   "Audit API table": "检查 API 表格",
   "Basic Composition": "基础组合",
+  "Badge keeps the sticker feel": "胶囊保留贴纸感",
+  "Badge required": "胶囊必填",
   "Build package entry": "构建包入口",
   Card: "卡片",
   Dashed: "虚线",
@@ -91,9 +136,11 @@ const ZH_PREVIEW_COMPONENT_TRANSLATIONS: Record<string, string> = {
   "Compose table cells with tags and code chips while the frame handles scrolling and ink borders.":
     "将表格单元格与标签、代码块组合，由外层框架负责滚动和墨色边框。",
   "Component Kit": "组件套件",
+  "Compact for narrow label columns": "适合较窄的标签列",
   "Confirm generated registry JSON includes source files.":
     "确认生成的 registry JSON 包含源码文件。",
   "Custom Colors": "自定义颜色",
+  "Custom marker": "自定义标记",
   "Copy import": "复制导入",
   Cream: "奶油色",
   Danger: "危险",
@@ -127,6 +174,7 @@ const ZH_PREVIEW_COMPONENT_TRANSLATIONS: Record<string, string> = {
   Header: "页眉",
   "Header Composition": "Header 组合",
   "Hide code": "收起代码",
+  "Horizontal layout": "水平布局",
   Info: "信息",
   Ink: "墨色",
   Input: "输入框",
@@ -140,6 +188,8 @@ const ZH_PREVIEW_COMPONENT_TRANSLATIONS: Record<string, string> = {
   Invite: "邀请码",
   "Keep secondary notes compact and readable.": "让辅助备注保持紧凑且易读。",
   Label: "标签",
+  "LabelMarker is for extra status text, not required semantics.":
+    "LabelMarker 用于额外状态文案，不承担必填语义。",
   Large: "大",
   "Large padding gives roomy page panels more breathing space.":
     "大内边距为宽松页面面板提供更多呼吸感。",
@@ -167,14 +217,18 @@ const ZH_PREVIEW_COMPONENT_TRANSLATIONS: Record<string, string> = {
   "Neutral paper for docs and general content.": "中性纸张适合文档和通用内容。",
   None: "无",
   "No dots": "无圆点",
+  "No required rule means no marker.": "没有 required 规则就不会显示标记。",
   "No padding for custom composed shells and flush media.":
     "无内边距适合自定义组合外壳和贴边媒体。",
+  Notes: "备注",
   "Not submitted yet": "尚未提交",
   "Only https URLs are accepted in this example.": "此示例仅接受 https URL。",
   "Offset Level": "偏移层级",
   Open: "打开",
   "Open docs": "打开文档",
   "Open guide": "打开指南",
+  "Optional helper fields do not receive a required mark.":
+    "可选辅助字段不会显示必填标记。",
   optional: "可选",
   Outlined: "描边",
   Overview: "概览",
@@ -201,6 +255,8 @@ const ZH_PREVIEW_COMPONENT_TRANSLATIONS: Record<string, string> = {
   Project: "项目",
   "Project name": "项目名称",
   "Project name is required.": "项目名称为必填项。",
+  "Profile handle": "资料账号",
+  "Profile handle is required.": "资料账号为必填项。",
   "public/r/*.json": "public/r/*.json",
   "Quiet Settings": "安静设置",
   "Quiet Surface": "安静界面",
@@ -214,11 +270,19 @@ const ZH_PREVIEW_COMPONENT_TRANSLATIONS: Record<string, string> = {
   "registry source": "registry 源码",
   "Reminder Card": "提醒卡片",
   required: "必填",
+  "Required Layouts": "必填布局",
+  "Required Mark": "必填标记",
+  "Required fields use sticker badges in roomy layouts and compact asterisks in horizontal label columns.":
+    "必填字段在宽松布局中使用贴纸胶囊，在水平标签列中使用紧凑星号。",
+  "Required marks handle field semantics, while LabelMarker stays available for custom status chips.":
+    "requiredMark 处理字段必填语义，LabelMarker 则用于自定义状态胶囊。",
   Rounded: "圆角",
   "Rounded tags follow the selected size, while pill tags keep a fully rounded capsule shape.":
     "圆角标签会跟随所选 size 调整半径，胶囊标签则始终保持完整胶囊形态。",
   Roomy: "宽松",
-  "Roomy file": "宽松文件",
+  "Roomy password": "宽松密码",
+  "Roomy fields keep the full required badge.":
+    "宽松字段保留完整 required 胶囊。",
   "Rules run on change by default and can mix required, length, pattern, type, and custom validators.":
     "规则默认在 change 时运行，并可组合 required、长度、pattern、type 和自定义 validator。",
   Saving: "保存中",
@@ -242,8 +306,9 @@ const ZH_PREVIEW_COMPONENT_TRANSLATIONS: Record<string, string> = {
   "Sizes & Types": "尺寸与类型",
   "Sizes align with compact, standard, and roomy controls. Markers can be composed directly when a form needs custom wording.":
     "尺寸与紧凑、标准和宽松控件对齐。表单需要自定义措辞时，可直接组合标记。",
-  "Sizes align inputs with compact filters, standard forms, and roomy settings panels while file controls keep the same ink outline.":
-    "尺寸可让输入框适配紧凑筛选、标准表单和宽松设置面板；文件控件也保持同一套墨色边框。",
+  "Secret sticker code": "贴纸密令",
+  "Sizes align text inputs with compact filters, standard forms, and roomy settings panels while type stays focused on text entry.":
+    "尺寸可让文本输入框适配紧凑筛选、标准表单和宽松设置面板，同时 type 保持聚焦于文字输入。",
   Span: "Span",
   Standard: "标准",
   "Standard URL": "标准 URL",
@@ -278,10 +343,16 @@ const ZH_PREVIEW_COMPONENT_TRANSLATIONS: Record<string, string> = {
     "表单实例暴露 submit、resetFields、validateFields 和值设置方法，用于受控工作流。",
   "The field shell passes aria-invalid to Input when validation fails.":
     "校验失败时，字段外壳会把 aria-invalid 传给 Input。",
+  "The badge reads clearly when the label sits above the field.":
+    "当标签位于字段上方时，胶囊标记清晰可读。",
+  "The compact mark leaves more room for label text.":
+    "紧凑标记会给标签文字留出更多空间。",
   Tiny: "极小",
+  "Status copy stays manual": "状态文案保持手动组合",
   "Submit form": "提交表单",
   Submit: "提交",
   "Check rules": "检查规则",
+  "Display note": "展示备注",
   "Email is required.": "邮箱为必填项。",
   Email: "邮箱",
   "Enter password": "输入密码",
@@ -289,6 +360,8 @@ const ZH_PREVIEW_COMPONENT_TRANSLATIONS: Record<string, string> = {
   "Invite code must be STICKER.": "邀请码必须是 STICKER。",
   "Invite code": "邀请码",
   "Latest submit": "最近提交",
+  "Narrow label columns switch required fields to an asterisk.":
+    "较窄的标签列会把必填字段切换为星号。",
   Nickname: "昵称",
   "Nickname is required.": "昵称为必填项。",
   "Nickname is too long.": "昵称过长。",
@@ -296,11 +369,19 @@ const ZH_PREVIEW_COMPONENT_TRANSLATIONS: Record<string, string> = {
   Password: "密码",
   "Password is required.": "密码为必填项。",
   Reset: "重置",
+  "Shown beside the profile": "展示在资料旁边",
   Slug: "Slug",
   "Slug is required.": "Slug 为必填项。",
+  "Sticker Rangers": "Sticker Rangers",
+  "Team name": "团队名称",
+  "Team name is required.": "团队名称为必填项。",
   Type: "类型",
   "Use a valid email address.": "请输入有效的邮箱地址。",
   "Use at least 6 characters.": "至少使用 6 个字符。",
+  "Use the asterisk when horizontal forms need tighter labels.":
+    "当水平表单需要更紧凑的标签时使用星号。",
+  "Use the default badge when the label has room.":
+    "标签空间充足时使用默认胶囊。",
   "Use disabled for locked settings.": "对锁定设置使用 disabled。",
   "Use lowercase letters and hyphens only.": "请仅使用小写字母和连字符。",
   "Use the same name and rules shape you would expect from Ant Design.":
@@ -337,13 +418,13 @@ const ZH_PREVIEW_COMPONENT_TRANSLATIONS: Record<string, string> = {
   "Validate now": "立即校验",
   "Validation found issues": "校验发现问题",
   "Validation Rules": "校验规则",
+  "Vertical layout": "垂直布局",
   "Website must start with https://.": "Website 必须以 https:// 开头。",
   Website: "Website",
   Variants: "变体",
   "Variants define structure while color sets the sticker paper tone.":
     "variant 定义结构，color 设置贴纸纸张色调。",
-  "Verify hover, active, and focus-visible states.":
-    "验证 hover、active 和 focus-visible 状态。",
+  "Verify hover and active tactile states.": "验证 hover 和 active 触感状态。",
   Warning: "警告",
   "Warm paper for setup notes and migration reminders.":
     "暖色纸张适合设置备注和迁移提醒。",

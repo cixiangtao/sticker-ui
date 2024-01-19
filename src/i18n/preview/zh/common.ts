@@ -4,6 +4,7 @@ const ZH_PREVIEW_COMMON_TRANSLATIONS: Record<string, string> = {
   default: "默认",
   Deprecated: "已废弃",
   Exports: "导出",
+  "Inherited native props": "继承的原生属性",
   interface: "接口",
   "No custom props detected.": "未检测到自定义 props。",
   "No JSDoc description yet.": "暂未提供 JSDoc 描述。",
@@ -15,6 +16,49 @@ const ZH_PREVIEW_COMMON_TRANSLATIONS: Record<string, string> = {
   type: "类型",
   value: "值",
   variant: "变体",
+  "Adds custom class names to the root element.":
+    "为根元素添加自定义 className。",
+  "Adds inline styles to the root element.": "为根元素添加内联样式。",
+  "Associates the control with a form by id.": "通过 id 将控件关联到表单。",
+  "Associates the label with a form control id.":
+    "将标签关联到指定 id 的表单控件。",
+  "Content rendered inside the element.": "渲染在元素内部的内容。",
+  "Controls browser autocomplete behavior.": "控制浏览器自动填充行为。",
+  "Controls the checked state.": "控制选中状态。",
+  "Controls the current value.": "控制当前值。",
+  "Disables user interaction with the element.": "禁用元素的用户交互。",
+  "Focuses the element when it mounts.": "元素挂载时自动获得焦点。",
+  "Identifies elements that describe the control.":
+    "标识用于描述该控件的元素。",
+  "Identifies elements that label the control.": "标识用于标记该控件的元素。",
+  "Indicates whether the current value is invalid.": "表示当前值是否无效。",
+  "Marks the field as required for native validation.":
+    "将字段标记为原生校验必填。",
+  "Prevents user edits while keeping the value readable.":
+    "禁止用户编辑，同时保持值可读。",
+  "Provides an accessible label when visible text is not enough.":
+    "在可见文本不足时提供可访问标签。",
+  "Runs when a key is pressed.": "按键按下时触发。",
+  "Runs when a key is released.": "按键释放时触发。",
+  "Runs when the element is clicked.": "元素被点击时触发。",
+  "Runs when the element loses focus.": "元素失去焦点时触发。",
+  "Runs when the element receives focus.": "元素获得焦点时触发。",
+  "Runs when the pointer enters the element.": "指针进入元素时触发。",
+  "Runs when the pointer leaves the element.": "指针离开元素时触发。",
+  "Runs when the value changes.": "值变化时触发。",
+  "Sets a validation pattern for the value.": "设置值的校验模式。",
+  "Sets advisory text for the element.": "设置元素的提示文本。",
+  "Sets the ARIA role.": "设置 ARIA role。",
+  "Sets the element id.": "设置元素 id。",
+  "Sets the form field name.": "设置表单字段名。",
+  "Sets the initial uncontrolled value.": "设置非受控初始值。",
+  "Sets the initial unchecked or checked state.": "设置非受控初始选中状态。",
+  "Sets the maximum accepted value.": "设置可接受的最大值。",
+  "Sets the maximum text length.": "设置文本最大长度。",
+  "Sets the minimum accepted value.": "设置可接受的最小值。",
+  "Sets the minimum text length.": "设置文本最小长度。",
+  "Sets the native control type.": "设置原生控件类型。",
+  "Shows placeholder text when the field is empty.": "字段为空时显示占位文本。",
 }
 
 export { ZH_PREVIEW_COMMON_TRANSLATIONS }

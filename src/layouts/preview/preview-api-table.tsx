@@ -45,6 +45,7 @@ interface PreviewApiComponentProps {
   description?: string
   descriptionKey?: string
   inherits?: string[]
+  inheritedMembers?: PreviewApiMember[]
   members: PreviewApiMember[]
   remarks?: string
   remarksKey?: string
@@ -79,6 +80,7 @@ interface PreviewApiType {
   description?: string
   descriptionKey?: string
   inherits?: string[]
+  inheritedMembers?: PreviewApiMember[]
   kind: string
   members: PreviewApiMember[]
   name: string
@@ -194,6 +196,7 @@ function ComponentList({ components }: { components: PreviewApiComponent[] }) {
 
 function ComponentPropsCard({ props }: { props: PreviewApiComponentProps }) {
   const { t } = usePreviewI18n()
+  const inheritedMembers = props.inheritedMembers ?? []
 
   return (
     <div className="rounded-sticker-lg border-ink bg-paper grid gap-3 border p-3">
@@ -223,6 +226,14 @@ function ComponentPropsCard({ props }: { props: PreviewApiComponentProps }) {
           {t("No custom props detected.")}
         </span>
       )}
+      {inheritedMembers.length > 0 ? (
+        <div className="grid gap-2">
+          <div className="text-text-subtle text-xs font-black uppercase">
+            {t("Inherited native props")}
+          </div>
+          <MemberTable members={inheritedMembers} />
+        </div>
+      ) : null}
     </div>
   )
 }

@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils"
  * Builds the tag className from structure, color, and size variants.
  */
 const tagVariants = cva(
-  "inline-flex w-fit shrink-0 items-center justify-center gap-1.5 border-ink font-extrabold leading-none outline-none transition duration-150 focus-visible:ring-sticker focus-visible:ring-ring/45",
+  "inline-flex w-fit shrink-0 items-center justify-center gap-1.5 border-ink font-extrabold leading-none transition duration-150",
   {
     defaultVariants: {
       color: "default",

@@ -38,3 +38,4 @@ export {
   TableRow,
 } from "./components/ui/table"
 export { Tag, tagVariants } from "./components/ui/tag"
+export { Textarea, textareaVariants } from "./components/ui/textarea"

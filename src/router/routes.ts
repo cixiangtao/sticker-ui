@@ -77,7 +77,7 @@ const routes = [
     meta: {
       description: "Antd-style field state and validation for sticker forms.",
       emoji: "F",
-      order: 80,
+      order: 90,
       title: "Form",
     },
     path: "/components/form",
@@ -93,11 +93,21 @@ const routes = [
     path: "/components/input",
   },
   {
+    component: () => import("@/pages/components/textarea"),
+    meta: {
+      description: "Native multiline controls with chunky sticker frames.",
+      emoji: "T",
+      order: 80,
+      title: "Textarea",
+    },
+    path: "/components/textarea",
+  },
+  {
     component: () => import("@/pages/components/label"),
     meta: {
       description: "Accessible form captions with small sticker markers.",
       emoji: "L",
-      order: 90,
+      order: 100,
       title: "Label",
     },
     path: "/components/label",
@@ -107,7 +117,7 @@ const routes = [
     meta: {
       description: "Generated registry JSON and install commands.",
       emoji: "R",
-      order: 100,
+      order: 110,
       title: "shadcn Install",
     },
     path: "/registry/usage",

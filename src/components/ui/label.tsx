@@ -1,7 +1,10 @@
 import { cva, type VariantProps } from "class-variance-authority"
 import * as React from "react"
 
+import { Tag } from "@/components/ui/tag"
 import { cn } from "@/lib/utils"
+
+type LabelTone = "danger" | "default" | "muted" | "success" | "warning"
 
 /**
  * Builds the sticker label className from size and tone variants.
@@ -31,38 +34,38 @@ const labelTones = cva(
 )
 
 /**
- * Builds the inline marker className from tone variants.
- */
-const markerTones = cva(
-  "inline-flex h-5 shrink-0 items-center rounded-full border border-ink px-2 text-[10px] leading-none font-black text-ink uppercase shadow-sticker-xs",
-  {
-    defaultVariants: {
-      tone: "default",
-    },
-    variants: {
-      tone: {
-        danger: "bg-fill-danger",
-        default: "bg-fill-default",
-        muted: "bg-surface-muted",
-        success: "bg-fill-success-strong",
-        warning: "bg-fill-warning",
-      },
-    },
-  },
-)
-
-/**
  * Props for the inline label marker.
- * @remarks Inherits native span attributes and adds sticker tone variants.
+ * @remarks Inherits sticker tag attributes and adds label tone variants.
  */
-interface LabelMarkerProps
-  extends React.ComponentProps<"span">, VariantProps<typeof markerTones> {
+interface LabelMarkerProps extends Omit<
+  React.ComponentProps<typeof Tag>,
+  "as" | "color" | "dot" | "rounded" | "size" | "variant"
+> {
   /**
    * Controls the marker paper color.
    * @default "default"
    */
-  tone?: "danger" | "default" | "muted" | "success" | "warning"
+  tone?: LabelTone
 }
+
+const labelMarkerColors = {
+  danger: "danger",
+  default: "default",
+  muted: "secondary",
+  success: "success",
+  warning: "warning",
+} as const satisfies Record<
+  LabelTone,
+  NonNullable<React.ComponentProps<typeof Tag>["color"]>
+>
+
+const labelMarkerToneClasses = {
+  danger: "",
+  default: "",
+  muted: "bg-surface-muted",
+  success: "bg-fill-success-strong",
+  warning: "",
+} as const satisfies Record<LabelTone, string>
 
 /**
  * Props for the sticker label root element.
@@ -83,6 +86,11 @@ interface LabelProps
    */
   required?: boolean
   /**
+   * Controls how the required marker is rendered.
+   * @default "badge"
+   */
+  requiredMark?: "asterisk" | "badge"
+  /**
    * Controls the label text size.
    * @default "default"
    */
@@ -91,7 +99,7 @@ interface LabelProps
    * Controls the label text tone and required marker color.
    * @default "default"
    */
-  tone?: "danger" | "default" | "muted" | "success" | "warning"
+  tone?: LabelTone
 }
 
 function Label({
@@ -99,6 +107,7 @@ function Label({
   className,
   optional = false,
   required = false,
+  requiredMark = "badge",
   size = "default",
   tone = "default",
   ...props
@@ -110,7 +119,21 @@ function Label({
       {...props}
     >
       {children}
-      {required ? <LabelMarker tone={tone}>required</LabelMarker> : null}
+      {required ? (
+        requiredMark === "asterisk" ? (
+          <span
+            aria-hidden="true"
+            className="text-text-danger -ml-1 inline-flex h-5 shrink-0 items-center text-base leading-none font-black"
+            data-slot="label-required-mark"
+          >
+            *
+          </span>
+        ) : (
+          <LabelMarker data-slot="label-required-marker" tone={tone}>
+            required
+          </LabelMarker>
+        )
+      ) : null}
       {optional ? <LabelMarker tone="muted">optional</LabelMarker> : null}
     </label>
   )
@@ -135,10 +158,19 @@ function LabelMarker({
   ...props
 }: LabelMarkerProps) {
   return (
-    <span
+    <Tag
       aria-hidden="true"
-      className={cn(markerTones({ tone }), className)}
+      as="span"
+      className={cn(
+        "shadow-sticker-xs px-2 font-black uppercase",
+        labelMarkerToneClasses[tone],
+        className,
+      )}
+      color={labelMarkerColors[tone]}
       data-slot="label-marker"
+      rounded="pill"
+      size="xs"
+      variant="solid"
       {...props}
     />
   )
