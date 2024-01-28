@@ -13,12 +13,12 @@ const meta = defineMeta({
 function Demo() {
   return (
     <div className="grid gap-4 lg:grid-cols-2">
-      <section className="border-ink bg-surface rounded-sticker-2xl shadow-sticker-md grid gap-4 border-2 p-4">
+      <section className="grid gap-4 rounded-sticker-2xl border-2 border-ink bg-surface p-4 shadow-sticker-md">
         <div className="grid gap-1">
           <h3 className="m-0 text-base leading-6 font-black">
             Vertical layout
           </h3>
-          <p className="text-text-muted m-0 text-sm leading-6 font-medium">
+          <p className="m-0 text-sm leading-6 font-medium text-text-muted">
             Roomy fields keep the full required badge.
           </p>
         </div>
@@ -49,12 +49,12 @@ function Demo() {
           </Form.Item>
         </Form>
       </section>
-      <section className="border-ink bg-surface rounded-sticker-2xl shadow-sticker-md grid gap-4 border-2 p-4">
+      <section className="grid gap-4 rounded-sticker-2xl border-2 border-ink bg-surface p-4 shadow-sticker-md">
         <div className="grid gap-1">
           <h3 className="m-0 text-base leading-6 font-black">
             Horizontal layout
           </h3>
-          <p className="text-text-muted m-0 text-sm leading-6 font-medium">
+          <p className="m-0 text-sm leading-6 font-medium text-text-muted">
             Narrow label columns switch required fields to an asterisk.
           </p>
         </div>

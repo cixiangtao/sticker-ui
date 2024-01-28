@@ -1,5 +1,4 @@
 import type { ComponentProps } from "react"
-
 import {
   Card as StickerCard,
   CardContent as StickerCardContent,

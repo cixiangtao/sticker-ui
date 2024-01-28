@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils"
  * Builds the tag className from structure, color, and size variants.
  */
 const tagVariants = cva(
-  "inline-flex w-fit shrink-0 items-center justify-center gap-1.5 border-ink font-extrabold leading-none transition duration-150",
+  "inline-flex w-fit shrink-0 items-center justify-center gap-1.5 border-ink leading-none font-extrabold transition duration-150",
   {
     defaultVariants: {
       color: "default",
@@ -213,7 +213,7 @@ function Tag({
       className={cn(
         tagVariants({ color, rounded, size, variant }),
         isInteractive &&
-          "hover:shadow-sticker-sm active:shadow-sticker-xs cursor-pointer hover:-translate-y-0.5 active:translate-x-0.5 active:translate-y-0.5",
+          "cursor-pointer hover:-translate-y-0.5 hover:shadow-sticker-sm active:translate-x-0.5 active:translate-y-0.5 active:shadow-sticker-xs",
         className,
       )}
       data-slot="tag"

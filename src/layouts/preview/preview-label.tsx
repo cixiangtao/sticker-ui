@@ -1,5 +1,4 @@
 import type { ComponentProps } from "react"
-
 import {
   Label as BaseLabel,
   LabelMarker as BaseLabelMarker,

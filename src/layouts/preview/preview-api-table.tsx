@@ -115,7 +115,7 @@ function PreviewApiTable({ api }: PreviewApiTableProps) {
       <CardHeader>
         <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
           <div>
-            <div className="text-text-warning-muted text-xs font-extrabold uppercase">
+            <div className="text-xs font-extrabold text-text-warning-muted uppercase">
               {t("API Reference")}
             </div>
             <CardTitle className="mt-1">{api.title}</CardTitle>
@@ -123,7 +123,7 @@ function PreviewApiTable({ api }: PreviewApiTableProps) {
               {translateApiText(t, api.descriptionKey, api.description)}
             </CardDescription>
           </div>
-          <code className="rounded-sticker-md border-ink bg-surface w-fit border px-3 py-2 text-xs font-extrabold">
+          <code className="w-fit rounded-sticker-md border border-ink bg-surface px-3 py-2 text-xs font-extrabold">
             {api.sourcePath}
           </code>
         </div>
@@ -155,18 +155,18 @@ function ComponentList({ components }: { components: PreviewApiComponent[] }) {
       <div className="grid gap-3">
         {components.map((component) => (
           <div
-            className="rounded-sticker-xl border-ink bg-surface shadow-sticker-md grid gap-3 border-2 p-4"
+            className="grid gap-3 rounded-sticker-xl border-2 border-ink bg-surface p-4 shadow-sticker-md"
             key={component.name}
           >
             <div className="grid gap-1">
               <div className="flex flex-wrap items-center gap-2">
                 <code className="text-sm font-black">{component.name}</code>
-                <span className="border-ink bg-fill-default rounded-full border px-2 py-0.5 text-[10px] font-extrabold uppercase">
+                <span className="rounded-full border border-ink bg-fill-default px-2 py-0.5 text-[10px] font-extrabold uppercase">
                   {t("component")}
                 </span>
               </div>
               {component.description ? (
-                <p className="text-text-muted text-sm leading-6 font-medium">
+                <p className="text-sm leading-6 font-medium text-text-muted">
                   {translateApiText(
                     t,
                     component.descriptionKey,
@@ -175,7 +175,7 @@ function ComponentList({ components }: { components: PreviewApiComponent[] }) {
                 </p>
               ) : null}
               {component.remarks ? (
-                <p className="text-text-subtle text-xs leading-5 font-bold">
+                <p className="text-xs leading-5 font-bold text-text-subtle">
                   {translateApiText(t, component.remarksKey, component.remarks)}
                 </p>
               ) : null}
@@ -183,7 +183,7 @@ function ComponentList({ components }: { components: PreviewApiComponent[] }) {
             {component.props ? (
               <ComponentPropsCard props={component.props} />
             ) : (
-              <span className="text-text-placeholder text-xs font-bold">
+              <span className="text-xs font-bold text-text-placeholder">
                 {t("No props detected.")}
               </span>
             )}
@@ -199,21 +199,21 @@ function ComponentPropsCard({ props }: { props: PreviewApiComponentProps }) {
   const inheritedMembers = props.inheritedMembers ?? []
 
   return (
-    <div className="rounded-sticker-lg border-ink bg-paper grid gap-3 border p-3">
+    <div className="grid gap-3 rounded-sticker-lg border border-ink bg-paper p-3">
       <div className="grid gap-2">
-        <div className="text-text-subtle text-xs font-black uppercase">
+        <div className="text-xs font-black text-text-subtle uppercase">
           {t("Props source")}
         </div>
         <Tag as="code" color="default" rounded="pill" size="sm" variant="solid">
           {props.type}
         </Tag>
         {props.description ? (
-          <p className="text-text-muted text-sm leading-6 font-medium">
+          <p className="text-sm leading-6 font-medium text-text-muted">
             {translateApiText(t, props.descriptionKey, props.description)}
           </p>
         ) : null}
         {props.remarks ? (
-          <p className="text-text-subtle text-xs leading-5 font-bold">
+          <p className="text-xs leading-5 font-bold text-text-subtle">
             {translateApiText(t, props.remarksKey, props.remarks)}
           </p>
         ) : null}
@@ -222,13 +222,13 @@ function ComponentPropsCard({ props }: { props: PreviewApiComponentProps }) {
       {props.members.length > 0 ? (
         <MemberTable members={props.members} />
       ) : (
-        <span className="text-text-placeholder text-xs font-bold">
+        <span className="text-xs font-bold text-text-placeholder">
           {t("No custom props detected.")}
         </span>
       )}
       {inheritedMembers.length > 0 ? (
         <div className="grid gap-2">
-          <div className="text-text-subtle text-xs font-black uppercase">
+          <div className="text-xs font-black text-text-subtle uppercase">
             {t("Inherited native props")}
           </div>
           <MemberTable members={inheritedMembers} />
@@ -251,11 +251,11 @@ function ExportList({ exports }: { exports: PreviewApiExport[] }) {
       <div className="flex flex-wrap gap-2">
         {exports.map((entry) => (
           <span
-            className="rounded-sticker-md border-ink bg-surface shadow-sticker-sm inline-flex items-center gap-2 border-2 px-3 py-2 text-xs font-extrabold"
+            className="inline-flex items-center gap-2 rounded-sticker-md border-2 border-ink bg-surface px-3 py-2 text-xs font-extrabold shadow-sticker-sm"
             key={entry.name}
           >
             <code>{entry.name}</code>
-            <span className="bg-fill-info rounded-full px-2 py-0.5 text-[10px] uppercase">
+            <span className="rounded-full bg-fill-info px-2 py-0.5 text-[10px] uppercase">
               {t(entry.kind)}
             </span>
           </span>
@@ -292,7 +292,7 @@ function SectionTitle({ children }: { children: string }) {
   const { t } = usePreviewI18n()
 
   return (
-    <h2 className="text-ink text-sm font-black tracking-wide uppercase">
+    <h2 className="text-sm font-black tracking-wide text-ink uppercase">
       {t(children)}
     </h2>
   )
@@ -312,7 +312,7 @@ function TypeList({
       <SectionTitle>{title}</SectionTitle>
       {types.map((type) => (
         <div
-          className="rounded-sticker-xl border-ink bg-surface shadow-sticker-md grid gap-3 border-2 p-4"
+          className="grid gap-3 rounded-sticker-xl border-2 border-ink bg-surface p-4 shadow-sticker-md"
           key={type.name}
         >
           <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
@@ -324,12 +324,12 @@ function TypeList({
                 </Tag>
               </div>
               {type.description ? (
-                <p className="text-text-muted text-sm leading-6 font-medium">
+                <p className="text-sm leading-6 font-medium text-text-muted">
                   {translateApiText(t, type.descriptionKey, type.description)}
                 </p>
               ) : null}
               {type.remarks ? (
-                <p className="text-text-subtle text-xs leading-5 font-bold">
+                <p className="text-xs leading-5 font-bold text-text-subtle">
                   {translateApiText(t, type.remarksKey, type.remarks)}
                 </p>
               ) : null}
@@ -339,7 +339,7 @@ function TypeList({
           {type.members.length > 0 ? (
             <MemberTable members={type.members} />
           ) : type.type ? (
-            <code className="rounded-sticker-md border-ink bg-surface-muted overflow-x-auto border px-3 py-2 text-xs font-bold">
+            <code className="overflow-x-auto rounded-sticker-md border border-ink bg-surface-muted px-3 py-2 text-xs font-bold">
               {type.type}
             </code>
           ) : null}
@@ -396,7 +396,7 @@ function MemberTable({ members }: { members: PreviewApiMember[] }) {
                   {member.defaultValue}
                 </Tag>
               ) : (
-                <span className="text-text-placeholder text-xs font-bold">
+                <span className="text-xs font-bold text-text-placeholder">
                   -
                 </span>
               )}
@@ -404,7 +404,7 @@ function MemberTable({ members }: { members: PreviewApiMember[] }) {
             <TableCell>
               <div className="grid gap-1">
                 {member.description ? (
-                  <span className="text-text-muted leading-6 font-medium">
+                  <span className="leading-6 font-medium text-text-muted">
                     {translateApiText(
                       t,
                       member.descriptionKey,
@@ -412,12 +412,12 @@ function MemberTable({ members }: { members: PreviewApiMember[] }) {
                     )}
                   </span>
                 ) : (
-                  <span className="text-text-placeholder text-xs font-bold">
+                  <span className="text-xs font-bold text-text-placeholder">
                     {t("No JSDoc description yet.")}
                   </span>
                 )}
                 {member.deprecated ? (
-                  <span className="rounded-sticker-xs bg-fill-danger-soft text-text-danger px-2 py-1 text-xs font-extrabold">
+                  <span className="rounded-sticker-xs bg-fill-danger-soft px-2 py-1 text-xs font-extrabold text-text-danger">
                     {t("Deprecated")}:{" "}
                     {translateApiText(
                       t,
@@ -427,7 +427,7 @@ function MemberTable({ members }: { members: PreviewApiMember[] }) {
                   </span>
                 ) : null}
                 {member.remarks ? (
-                  <span className="text-text-subtle text-xs leading-5 font-bold">
+                  <span className="text-xs leading-5 font-bold text-text-subtle">
                     {translateApiText(t, member.remarksKey, member.remarks)}
                   </span>
                 ) : null}
@@ -448,13 +448,13 @@ function VariantList({ variants }: { variants: PreviewApiVariant[] }) {
       <SectionTitle>Variants</SectionTitle>
       {variants.map((variant) => (
         <div
-          className="rounded-sticker-xl border-ink bg-surface shadow-sticker-md grid gap-3 border-2 p-4"
+          className="grid gap-3 rounded-sticker-xl border-2 border-ink bg-surface p-4 shadow-sticker-md"
           key={variant.name}
         >
           <div>
             <code className="text-sm font-black">{variant.name}</code>
             {variant.description ? (
-              <p className="text-text-muted mt-1 text-sm leading-6 font-medium">
+              <p className="mt-1 text-sm leading-6 font-medium text-text-muted">
                 {translateApiText(
                   t,
                   variant.descriptionKey,
@@ -466,13 +466,13 @@ function VariantList({ variants }: { variants: PreviewApiVariant[] }) {
           <div className="grid gap-2 sm:grid-cols-2">
             {variant.groups.map((group) => (
               <div
-                className="rounded-sticker-lg border-ink bg-paper border p-3"
+                className="rounded-sticker-lg border border-ink bg-paper p-3"
                 key={group.name}
               >
                 <div className="flex items-center justify-between gap-2">
                   <code className="font-black">{group.name}</code>
                   {group.defaultValue ? (
-                    <span className="bg-fill-secondary rounded-full px-2 py-0.5 text-[10px] font-extrabold uppercase">
+                    <span className="rounded-full bg-fill-secondary px-2 py-0.5 text-[10px] font-extrabold uppercase">
                       {t("default")}: {group.defaultValue}
                     </span>
                   ) : null}
@@ -480,7 +480,7 @@ function VariantList({ variants }: { variants: PreviewApiVariant[] }) {
                 <div className="mt-2 flex flex-wrap gap-2">
                   {group.values.map((value) => (
                     <code
-                      className="rounded-sticker-xs border-ink bg-surface border px-2 py-1 text-xs font-bold"
+                      className="rounded-sticker-xs border border-ink bg-surface px-2 py-1 text-xs font-bold"
                       key={value}
                     >
                       {value}

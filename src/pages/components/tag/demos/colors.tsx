@@ -57,10 +57,10 @@ function Demo() {
     <div className="grid gap-3">
       {TAG_COLORS.map((item) => (
         <div
-          className="rounded-sticker-xl border-ink grid gap-2 border bg-white/80 p-3 sm:grid-cols-[7rem_1fr] sm:items-center"
+          className="grid gap-2 rounded-sticker-xl border border-ink bg-white/80 p-3 sm:grid-cols-[7rem_1fr] sm:items-center"
           key={item.color}
         >
-          <div className="text-ink text-sm font-extrabold">{item.label}</div>
+          <div className="text-sm font-extrabold text-ink">{item.label}</div>
           <div className="flex flex-wrap gap-2">
             {TAG_VARIANTS.map((variantItem) => (
               <Tag

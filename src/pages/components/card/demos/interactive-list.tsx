@@ -73,7 +73,7 @@ function Demo() {
             </Tag>
           </CardHeader>
           <CardContent>
-            <p className="text-text-muted m-0 text-sm leading-6 font-medium">
+            <p className="m-0 text-sm leading-6 font-medium text-text-muted">
               Add handlers at the card root when the whole surface behaves like
               one action.
             </p>

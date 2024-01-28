@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils"
  * Builds the sticker input className from structure, tone, and size variants.
  */
 const inputVariants = cva(
-  "border-ink text-ink placeholder:text-text-placeholder flex w-full min-w-0 border-2 bg-surface font-bold shadow-sticker-sm outline-none transition duration-150 selection:bg-fill-default selection:text-ink focus-visible:shadow-sticker-md focus-visible:ring-[2px] focus-visible:ring-ring/65 disabled:cursor-not-allowed disabled:opacity-55 aria-invalid:border-text-danger aria-invalid:bg-fill-danger-soft aria-invalid:text-text-danger",
+  "flex w-full min-w-0 border-2 border-ink bg-surface font-bold text-ink shadow-sticker-sm transition duration-150 outline-none selection:bg-fill-default selection:text-ink placeholder:text-text-placeholder focus-visible:shadow-sticker-md focus-visible:ring-[2px] focus-visible:ring-ring/65 disabled:cursor-not-allowed disabled:opacity-55 aria-invalid:border-text-danger aria-invalid:bg-fill-danger-soft aria-invalid:text-text-danger",
   {
     compoundVariants: [
       {

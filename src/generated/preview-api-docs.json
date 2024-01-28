@@ -2497,7 +2497,7 @@
           "remarks": "Inherits native textarea attributes, except the numeric HTML `size` attribute is replaced by the sticker component API.",
           "remarksKey": "api.textarea.components.Textarea.props.remarks",
           "inherits": [
-            "Omit< React.TextareaHTMLAttributes<HTMLTextAreaElement>, \"size\" >"
+            "Omit<React.TextareaHTMLAttributes<HTMLTextAreaElement>, \"size\">"
           ],
           "inheritedMembers": [
             {
@@ -2772,7 +2772,7 @@
         "remarks": "Inherits native textarea attributes, except the numeric HTML `size` attribute is replaced by the sticker component API.",
         "remarksKey": "api.textarea.types.TextareaProps.remarks",
         "inherits": [
-          "Omit< React.TextareaHTMLAttributes<HTMLTextAreaElement>, \"size\" >"
+          "Omit<React.TextareaHTMLAttributes<HTMLTextAreaElement>, \"size\">"
         ],
         "kind": "interface",
         "members": [
@@ -3477,7 +3477,7 @@
             "name": "validator",
             "optional": true,
             "required": false,
-            "type": "( rule: FormRule, value: StoreValue, form: FormInstance, ) => Promise<void> | void"
+            "type": "(rule: FormRule, value: StoreValue, form: FormInstance) => Promise<void> | void"
           },
           {
             "defaultValue": "false",

@@ -20,14 +20,14 @@ function Table({ className, containerClassName, ...props }: TableProps) {
   return (
     <div
       className={cn(
-        "rounded-sticker-xl border-ink bg-paper shadow-sticker-md w-full overflow-x-auto border-2",
+        "w-full overflow-x-auto rounded-sticker-xl border-2 border-ink bg-paper shadow-sticker-md",
         containerClassName,
       )}
       data-slot="table-container"
     >
       <table
         className={cn(
-          "text-ink w-full caption-bottom border-collapse text-left text-sm",
+          "w-full caption-bottom border-collapse text-left text-sm text-ink",
           className,
         )}
         data-slot="table"
@@ -53,7 +53,7 @@ function TableCaption({
 }: React.ComponentProps<"caption">) {
   return (
     <caption
-      className={cn("text-text-subtle mt-3 text-xs font-bold", className)}
+      className={cn("mt-3 text-xs font-bold text-text-subtle", className)}
       data-slot="table-caption"
       {...props}
     />
@@ -74,7 +74,7 @@ function TableFooter({ className, ...props }: React.ComponentProps<"tfoot">) {
   return (
     <tfoot
       className={cn(
-        "border-ink bg-fill-warning border-t-2 font-extrabold",
+        "border-t-2 border-ink bg-fill-warning font-extrabold",
         className,
       )}
       data-slot="table-footer"
@@ -99,7 +99,7 @@ function TableHead({ className, ...props }: React.ComponentProps<"th">) {
 function TableHeader({ className, ...props }: React.ComponentProps<"thead">) {
   return (
     <thead
-      className={cn("border-ink bg-fill-info border-b-2", className)}
+      className={cn("border-b-2 border-ink bg-fill-info", className)}
       data-slot="table-header"
       {...props}
     />
@@ -110,7 +110,7 @@ function TableRow({ className, ...props }: React.ComponentProps<"tr">) {
   return (
     <tr
       className={cn(
-        "border-ink/25 hover:bg-fill-warning/55 border-b transition-colors",
+        "border-b border-ink/25 transition-colors hover:bg-fill-warning/55",
         className,
       )}
       data-slot="table-row"

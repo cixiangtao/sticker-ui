@@ -13,7 +13,7 @@ const meta = defineMeta({
 function Demo() {
   return (
     <div className="grid gap-4 md:grid-cols-3">
-      <div className="rounded-sticker-xl border-ink grid gap-2 border bg-white/80 p-4">
+      <div className="grid gap-2 rounded-sticker-xl border border-ink bg-white/80 p-4">
         <Label htmlFor="input-size-small" size="sm">
           Small search
         </Label>
@@ -24,7 +24,7 @@ function Demo() {
           type="search"
         />
       </div>
-      <div className="rounded-sticker-xl border-ink grid gap-2 border bg-white/80 p-4">
+      <div className="grid gap-2 rounded-sticker-xl border border-ink bg-white/80 p-4">
         <Label htmlFor="input-size-medium">Standard URL</Label>
         <Input
           id="input-size-medium"
@@ -32,7 +32,7 @@ function Demo() {
           type="url"
         />
       </div>
-      <div className="rounded-sticker-xl border-ink grid gap-2 border bg-white/80 p-4">
+      <div className="grid gap-2 rounded-sticker-xl border border-ink bg-white/80 p-4">
         <Label htmlFor="input-size-large" size="lg">
           Roomy password
         </Label>

@@ -13,7 +13,7 @@ const meta = defineMeta({
 function Demo() {
   return (
     <div className="grid gap-4 md:grid-cols-3">
-      <div className="rounded-sticker-xl border-ink grid gap-2 border bg-white/80 p-4">
+      <div className="grid gap-2 rounded-sticker-xl border border-ink bg-white/80 p-4">
         <Label htmlFor="textarea-size-small" size="sm">
           Quick note
         </Label>
@@ -25,7 +25,7 @@ function Demo() {
           variant="quiet"
         />
       </div>
-      <div className="rounded-sticker-xl border-ink grid gap-2 border bg-white/80 p-4">
+      <div className="grid gap-2 rounded-sticker-xl border border-ink bg-white/80 p-4">
         <Label htmlFor="textarea-size-medium">Feedback</Label>
         <Textarea
           defaultValue="The sticker frame keeps comments readable without losing the playful paper tone."
@@ -35,7 +35,7 @@ function Demo() {
           variant="filled"
         />
       </div>
-      <div className="rounded-sticker-xl border-ink grid gap-2 border bg-white/80 p-4">
+      <div className="grid gap-2 rounded-sticker-xl border border-ink bg-white/80 p-4">
         <Label htmlFor="textarea-size-large" size="lg">
           Launch plan
         </Label>

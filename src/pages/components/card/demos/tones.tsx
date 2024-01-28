@@ -65,7 +65,7 @@ function Demo() {
             <CardDescription>{card.description}</CardDescription>
           </CardHeader>
           <CardContent>
-            <p className="text-text-muted m-0 text-sm leading-6 font-medium">
+            <p className="m-0 text-sm leading-6 font-medium text-text-muted">
               Use root and slot className values to tune the visual context.
             </p>
           </CardContent>

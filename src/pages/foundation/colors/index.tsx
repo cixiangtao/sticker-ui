@@ -27,7 +27,7 @@ function ColorsPage() {
                 purpose.
               </CardDescription>
             </div>
-            <div className="border-ink bg-surface rounded-sticker-xl shadow-sticker-sm border-2 px-4 py-2 text-sm font-black">
+            <div className="rounded-sticker-xl border-2 border-ink bg-surface px-4 py-2 text-sm font-black shadow-sticker-sm">
               {COLOR_TOKEN_COUNT} tokens
             </div>
           </div>
@@ -59,7 +59,7 @@ function ColorsPage() {
                 >
                   <div
                     aria-hidden="true"
-                    className="border-ink rounded-sticker-lg shadow-sticker-sm h-20 border-2"
+                    className="h-20 rounded-sticker-lg border-2 border-ink shadow-sticker-sm"
                     style={{
                       background:
                         "preview" in token
@@ -68,13 +68,13 @@ function ColorsPage() {
                     }}
                   />
                   <div className="grid gap-1">
-                    <div className="text-ink text-sm font-black">
+                    <div className="text-sm font-black text-ink">
                       {token.label}
                     </div>
-                    <code className="text-text-muted rounded-sticker-sm bg-surface-muted w-fit px-2 py-1 text-xs font-extrabold">
+                    <code className="w-fit rounded-sticker-sm bg-surface-muted px-2 py-1 text-xs font-extrabold text-text-muted">
                       {token.name}
                     </code>
-                    <div className="text-text-subtle text-xs font-bold">
+                    <div className="text-xs font-bold text-text-subtle">
                       {token.value}
                     </div>
                   </div>

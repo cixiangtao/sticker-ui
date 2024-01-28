@@ -10,9 +10,9 @@
 - `pnpm build:registry` generates the shadcn-compatible registry output.
 - `pnpm build:preview` runs TypeScript checks and builds the Vite preview.
 - `pnpm check` runs TypeScript without emitting files.
-- `pnpm format` writes Prettier formatting, including Tailwind class sorting.
-- `pnpm lint` runs TypeScript, Prettier, and ESLint checks.
-- `pnpm lint:fix` formats and auto-fixes lintable style issues.
+- `pnpm format` writes oxfmt formatting, including import and Tailwind class sorting.
+- `pnpm lint` runs TypeScript, oxfmt, and oxlint checks.
+- `pnpm lint:fix` formats with oxfmt and auto-fixes lintable style issues with oxlint.
 
 ## Conventions
 
@@ -21,7 +21,7 @@
 - Avoid adding runtime helpers such as Radix Slot, CVA, clsx, or tailwind-merge to registry components.
 - Preserve the handbook sticker style: warm paper surfaces, chunky outlines, hard offset shadows, and tactile interaction states.
 - Use shared Tailwind CSS variables from `src/globals.css` for common sticker colors, radius, border widths, shadows, focus rings, and preview grid details before reaching for raw hex values or arbitrary shadows.
-- Keep Perfectionist scoped to high-frequency ordering rules instead of enabling the full recommended set.
+- Keep oxfmt sorting focused on project-wide consistency before tuning individual ordering preferences.
 - Prefer focused changes that match the existing file structure.
 - When adding a registry UI component, update the full preview delivery chain together: `registry/default/<name>/<name>.tsx`, `registry.json`, `src/pages/components/<name>`, `src/router/routes.ts`, generated API docs, and preview i18n dictionaries.
 - Document registry component APIs with TSDoc-style `/** ... */` comments that TypeScript can expose through JSDoc AST APIs.
@@ -32,10 +32,10 @@
 
 ## Verification
 
-Every feature change must lint the code before handoff.
+Every feature change must format and lint the code before handoff.
 
-Before handing off code changes, run the narrowest relevant check. For general edits, prefer:
+Before handing off code changes, run the narrowest relevant fix or check. For general edits that may need formatting, prefer `pnpm lint:fix`; otherwise use `pnpm lint` for a read-only verification.
 
 ```bash
-pnpm lint
+pnpm lint:fix
 ```

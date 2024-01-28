@@ -2,9 +2,8 @@ import type { ReactNode } from "react"
 
 import apiDocs from "@/generated/preview-api-docs.json"
 
-import type { PreviewDemoModule } from "./preview-example"
-
 import { PreviewApiTable } from "./preview-api-table"
+import type { PreviewDemoModule } from "./preview-example"
 import { PreviewExample } from "./preview-example"
 
 interface PreviewDemoExample {

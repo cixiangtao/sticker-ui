@@ -7,7 +7,6 @@ build/
 
 # Tool caches
 .vite/
-.eslintcache
 .turbo/
 .cache/
 *.tsbuildinfo

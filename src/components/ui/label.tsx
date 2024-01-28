@@ -10,7 +10,7 @@ type LabelTone = "danger" | "default" | "muted" | "success" | "warning"
  * Builds the sticker label className from size and tone variants.
  */
 const labelTones = cva(
-  "inline-flex w-fit min-w-0 items-center gap-2 font-black leading-none text-ink",
+  "inline-flex w-fit min-w-0 items-center gap-2 leading-none font-black text-ink",
   {
     defaultVariants: {
       size: "default",
@@ -123,7 +123,7 @@ function Label({
         requiredMark === "asterisk" ? (
           <span
             aria-hidden="true"
-            className="text-text-danger -ml-1 inline-flex h-5 shrink-0 items-center text-base leading-none font-black"
+            className="-ml-1 inline-flex h-5 shrink-0 items-center text-base leading-none font-black text-text-danger"
             data-slot="label-required-mark"
           >
             *
@@ -143,7 +143,7 @@ function LabelDescription({ className, ...props }: React.ComponentProps<"p">) {
   return (
     <p
       className={cn(
-        "text-text-muted m-0 text-xs leading-5 font-medium",
+        "m-0 text-xs leading-5 font-medium text-text-muted",
         className,
       )}
       data-slot="label-description"
@@ -162,7 +162,7 @@ function LabelMarker({
       aria-hidden="true"
       as="span"
       className={cn(
-        "shadow-sticker-xs px-2 font-black uppercase",
+        "px-2 font-black uppercase shadow-sticker-xs",
         labelMarkerToneClasses[tone],
         className,
       )}

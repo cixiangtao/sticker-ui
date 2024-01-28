@@ -732,7 +732,7 @@ function FormItem({
         ) : null}
         {extra ? (
           <div
-            className="text-text-subtle m-0 min-w-0 text-xs leading-5 font-medium wrap-break-word"
+            className="m-0 min-w-0 text-xs leading-5 font-medium wrap-break-word text-text-subtle"
             data-slot="form-item-extra"
             id={fieldId ? `${fieldId}-extra` : undefined}
           >

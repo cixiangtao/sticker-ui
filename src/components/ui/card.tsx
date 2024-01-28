@@ -57,7 +57,7 @@ type CardHeaderDividerInset = "card" | CardPadding
 const cardHeaderVariants = cva(
   cn(
     cardSlotSpacingClassName,
-    "border-ink after:border-ink relative first:-mt-(--card-padding-y) after:pointer-events-none after:absolute after:bottom-0 after:content-['']",
+    "relative border-ink after:pointer-events-none after:absolute after:bottom-0 after:border-ink after:content-[''] first:-mt-(--card-padding-y)",
   ),
   {
     defaultVariants: {
@@ -73,11 +73,11 @@ const cardHeaderVariants = cva(
           "after:border-b-2 in-data-[variant=minimal]:after:border-b in-data-[variant=minimal]:after:border-surface-muted",
       },
       dividerInset: {
-        card: "after:left-(--card-padding-x) after:right-(--card-padding-x)",
-        lg: "after:left-5 after:right-5 sm:after:left-6 sm:after:right-6",
-        md: "after:left-4 after:right-4 sm:after:left-5 sm:after:right-5",
-        none: "after:left-0 after:right-0",
-        sm: "after:left-3 after:right-3",
+        card: "after:right-(--card-padding-x) after:left-(--card-padding-x)",
+        lg: "after:right-5 after:left-5 sm:after:right-6 sm:after:left-6",
+        md: "after:right-4 after:left-4 sm:after:right-5 sm:after:left-5",
+        none: "after:right-0 after:left-0",
+        sm: "after:right-3 after:left-3",
       },
     },
   },
@@ -169,15 +169,15 @@ function HeaderDots() {
       data-slot="panel-header-dots"
     >
       <span
-        className="border-ink size-3.5 rounded-full border-2 bg-[#EF476F]"
+        className="size-3.5 rounded-full border-2 border-ink bg-[#EF476F]"
         data-slot="panel-header-dot"
       />
       <span
-        className="border-ink size-3.5 rounded-full border-2 bg-[#FFCF56]"
+        className="size-3.5 rounded-full border-2 border-ink bg-[#FFCF56]"
         data-slot="panel-header-dot"
       />
       <span
-        className="border-ink size-3.5 rounded-full border-2 bg-[#00B894]"
+        className="size-3.5 rounded-full border-2 border-ink bg-[#00B894]"
         data-slot="panel-header-dot"
       />
     </div>
@@ -228,7 +228,7 @@ function CardHeader({
 function CardTitle({ className, ...props }: React.ComponentProps<"h3">) {
   return (
     <h3
-      className={cn("text-ink m-0 text-lg leading-6 font-black", className)}
+      className={cn("m-0 text-lg leading-6 font-black text-ink", className)}
       data-slot="card-title"
       {...props}
     />
@@ -239,7 +239,7 @@ function CardDescription({ className, ...props }: React.ComponentProps<"p">) {
   return (
     <p
       className={cn(
-        "text-text-muted m-0 text-sm leading-6 font-medium",
+        "m-0 text-sm leading-6 font-medium text-text-muted",
         className,
       )}
       data-slot="card-description"
@@ -263,7 +263,7 @@ function CardFooter({ className, ...props }: React.ComponentProps<"footer">) {
     <footer
       className={cn(
         cardSlotSpacingClassName,
-        "border-ink in-data-[variant=minimal]:border-surface-muted mt-auto flex flex-wrap items-center gap-2 border-t-2 in-data-[variant=minimal]:border-t",
+        "mt-auto flex flex-wrap items-center gap-2 border-t-2 border-ink in-data-[variant=minimal]:border-t in-data-[variant=minimal]:border-surface-muted",
         className,
       )}
       data-slot="card-footer"

@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils"
  * Builds the sticker button className from structure, color, and size variants.
  */
 const buttonVariants = cva(
-  "inline-flex shrink-0 items-center justify-center gap-2 rounded-sticker-md border-2 font-extrabold leading-none outline-none transition duration-150 focus-visible:ring-[2px] focus-visible:ring-ring/65 disabled:pointer-events-none disabled:opacity-55 data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-55 data-[loading=true]:cursor-wait data-[loading=true]:opacity-75",
+  "inline-flex shrink-0 items-center justify-center gap-2 rounded-sticker-md border-2 leading-none font-extrabold transition duration-150 outline-none focus-visible:ring-[2px] focus-visible:ring-ring/65 disabled:pointer-events-none disabled:opacity-55 data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-55 data-[loading=true]:cursor-wait data-[loading=true]:opacity-75",
   {
     compoundVariants: [
       {
@@ -158,7 +158,7 @@ const buttonVariants = cva(
           "border-dashed border-ink bg-surface shadow-sticker-sm hover:-translate-y-0.5 hover:shadow-sticker-md active:translate-x-0.5 active:translate-y-0.5 active:shadow-sticker-xs",
         filled:
           "border-0 shadow-none hover:-translate-y-0.5 hover:shadow-none active:translate-x-0.5 active:translate-y-0.5 active:shadow-none",
-        link: "border-transparent bg-transparent shadow-none underline decoration-[3px] underline-offset-4 hover:-translate-y-0.5 hover:bg-transparent hover:shadow-none active:translate-y-0 active:shadow-none",
+        link: "border-transparent bg-transparent underline decoration-[3px] underline-offset-4 shadow-none hover:-translate-y-0.5 hover:bg-transparent hover:shadow-none active:translate-y-0 active:shadow-none",
         outlined:
           "border-ink bg-surface shadow-sticker-md hover:-translate-y-0.5 hover:shadow-sticker-lg active:translate-x-1 active:translate-y-1 active:shadow-sticker-xs",
         solid:

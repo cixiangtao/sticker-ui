@@ -3,7 +3,7 @@ import { mkdir, readFile, writeFile } from "node:fs/promises"
 import path from "node:path"
 import { fileURLToPath } from "node:url"
 
-import { format } from "prettier"
+import { format } from "oxfmt"
 import { Node, Project, VariableDeclarationKind } from "ts-morph"
 
 const ROOT_DIR = path.resolve(fileURLToPath(new URL("..", import.meta.url)))
@@ -100,6 +100,16 @@ const COMMON_INHERITED_PROP_DESCRIPTIONS = {
 
 function cleanText(value) {
   return value.replaceAll(/\r?\n/g, " ").replaceAll(/\s+/g, " ").trim()
+}
+
+async function formatJson(fileName, value) {
+  const result = await format(fileName, JSON.stringify(value))
+
+  if (result.errors.length > 0) {
+    throw new Error(result.errors.map((error) => error.message).join("\n"))
+  }
+
+  return result.code
 }
 
 function getApiI18nKey(...segments) {
@@ -732,10 +742,7 @@ async function main() {
   }
 
   await mkdir(path.dirname(OUTPUT_PATH), { recursive: true })
-  await writeFile(
-    OUTPUT_PATH,
-    await format(JSON.stringify(docs), { parser: "json" }),
-  )
+  await writeFile(OUTPUT_PATH, await formatJson(OUTPUT_PATH, docs))
 
   console.log(
     `Generated API docs for ${Object.keys(docs).length} components at ${path.relative(

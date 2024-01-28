@@ -25,15 +25,15 @@ function HeaderDots() {
       data-slot="panel-header-dots"
     >
       <span
-        className="border-ink size-3.5 rounded-full border-2 bg-[#EF476F]"
+        className="size-3.5 rounded-full border-2 border-ink bg-[#EF476F]"
         data-slot="panel-header-dot"
       />
       <span
-        className="border-ink size-3.5 rounded-full border-2 bg-[#FFCF56]"
+        className="size-3.5 rounded-full border-2 border-ink bg-[#FFCF56]"
         data-slot="panel-header-dot"
       />
       <span
-        className="border-ink size-3.5 rounded-full border-2 bg-[#00B894]"
+        className="size-3.5 rounded-full border-2 border-ink bg-[#00B894]"
         data-slot="panel-header-dot"
       />
     </div>
@@ -53,7 +53,7 @@ function Demo() {
           <CardTitle className="mt-3">Preview Window</CardTitle>
         </CardHeader>
         <div className="grid gap-3 py-5">
-          <p className="text-text-muted m-0 text-sm leading-6 font-medium">
+          <p className="m-0 text-sm leading-6 font-medium text-text-muted">
             Use this pattern when the surface frames navigation, filters, or a
             large preview area.
           </p>
@@ -66,7 +66,7 @@ function Demo() {
           <CardTitle>Toolbar Shell</CardTitle>
         </CardHeader>
         <CardContent className="grid gap-3">
-          <p className="text-text-muted m-0 text-sm leading-6 font-medium">
+          <p className="m-0 text-sm leading-6 font-medium text-text-muted">
             Use minimal panel cards for quiet shells that should sit below
             content cards in the visual hierarchy.
           </p>

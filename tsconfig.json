@@ -22,6 +22,8 @@
     "src",
     "registry",
     "vite.config.ts",
+    "oxfmt.config.ts",
+    "oxlint.config.ts",
     "tsup.config.ts",
     "components.json",
     "registry.json"

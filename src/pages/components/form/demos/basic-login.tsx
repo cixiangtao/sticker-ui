@@ -48,7 +48,7 @@ function Demo() {
         </Form.Item>
         <Button type="submit">Submit form</Button>
       </Form>
-      <div className="border-ink bg-surface rounded-sticker-2xl shadow-sticker-md grid content-start gap-3 border-2 p-4">
+      <div className="grid content-start gap-3 rounded-sticker-2xl border-2 border-ink bg-surface p-4 shadow-sticker-md">
         <Tag color="success" dot>
           Latest submit
         </Tag>

@@ -13,7 +13,7 @@ const meta = defineMeta({
 function Demo() {
   return (
     <div className="grid gap-4 md:grid-cols-3">
-      <div className="rounded-sticker-lg grid gap-2 border border-[#2E3038] bg-white p-4">
+      <div className="grid gap-2 rounded-sticker-lg border border-[#2E3038] bg-white p-4">
         <Label htmlFor="label-required-badge" required>
           Badge required
         </Label>
@@ -26,7 +26,7 @@ function Demo() {
           Use the default badge when the label has room.
         </LabelDescription>
       </div>
-      <div className="rounded-sticker-lg grid gap-2 border border-[#2E3038] bg-white p-4">
+      <div className="grid gap-2 rounded-sticker-lg border border-[#2E3038] bg-white p-4">
         <Label
           htmlFor="label-required-asterisk"
           required
@@ -43,7 +43,7 @@ function Demo() {
           Use the asterisk when horizontal forms need tighter labels.
         </LabelDescription>
       </div>
-      <div className="rounded-sticker-lg grid gap-2 border border-[#2E3038] bg-white p-4">
+      <div className="grid gap-2 rounded-sticker-lg border border-[#2E3038] bg-white p-4">
         <Label htmlFor="label-marker-custom">
           Custom marker
           <LabelMarker tone="success">new</LabelMarker>

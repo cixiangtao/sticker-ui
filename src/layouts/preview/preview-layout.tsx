@@ -9,6 +9,7 @@ import {
   type NavItem,
   type RouteId,
 } from "../../preview-data"
+
 import "./preview-layout.css"
 
 const PREVIEW_CONTENT_SCROLL_SELECTOR = "[data-preview-content-scroll]"
@@ -27,7 +28,7 @@ function PreviewLayout() {
   }, [location.pathname])
 
   return (
-    <main className="bg-canvas bg-sticker-grid text-ink min-h-screen px-4 py-4 sm:px-6 lg:h-screen lg:overflow-hidden lg:px-8">
+    <main className="bg-sticker-grid min-h-screen bg-canvas px-4 py-4 text-ink sm:px-6 lg:h-screen lg:overflow-hidden lg:px-8">
       <div className="mx-auto flex max-w-7xl flex-col gap-4 lg:h-full lg:min-h-0">
         <TopBar activeItem={activeItem} />
         <div className="grid gap-4 lg:min-h-0 lg:flex-1 lg:grid-cols-[280px_minmax(0,1fr)]">
@@ -40,13 +41,13 @@ function PreviewLayout() {
           >
             <CardHeader decoration divider="dashed" dividerInset="card">
               <div>
-                <div className="text-text-subtle text-xs font-extrabold uppercase">
+                <div className="text-xs font-extrabold text-text-subtle uppercase">
                   {t("Preview Route")}
                 </div>
                 <h1 className="mt-1 text-5xl leading-none font-black">
                   {activeItem.label}
                 </h1>
-                <p className="text-text-muted mt-3 max-w-2xl text-sm leading-6 font-medium">
+                <p className="mt-3 max-w-2xl text-sm leading-6 font-medium text-text-muted">
                   {t(activeItem.description)}
                 </p>
               </div>
@@ -107,7 +108,7 @@ function Sidebar({ activeRoute }: { activeRoute: RouteId }) {
                         {t(item.status)}
                       </Tag>
                     </span>
-                    <span className="text-text-subtle mt-1 block text-xs leading-5 font-medium">
+                    <span className="mt-1 block text-xs leading-5 font-medium text-text-subtle">
                       {t(item.description)}
                     </span>
                   </Link>
@@ -127,16 +128,16 @@ function TopBar({ activeItem }: { activeItem: NavItem }) {
   return (
     <Card
       as="header"
-      className="bg-fill-default flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between"
+      className="flex flex-col gap-4 bg-fill-default lg:flex-row lg:items-center lg:justify-between"
       variant="panel"
     >
       <Link className="group flex items-center gap-3" to="/">
-        <span className="rounded-sticker-lg border-sticker-heavy border-ink bg-surface shadow-sticker-lg flex size-12 -rotate-3 items-center justify-center text-xl font-black transition group-hover:rotate-3">
+        <span className="flex size-12 -rotate-3 items-center justify-center rounded-sticker-lg border-sticker-heavy border-ink bg-surface text-xl font-black shadow-sticker-lg transition group-hover:rotate-3">
           S
         </span>
         <div>
           <div className="text-2xl leading-none font-black">sticker-ui</div>
-          <div className="text-text-muted mt-1 text-sm font-bold">
+          <div className="mt-1 text-sm font-bold text-text-muted">
             {t("Previewing")} {activeItem.label}
           </div>
         </div>
