@@ -25,10 +25,12 @@
 - Prefer focused changes that match the existing file structure.
 - When adding a registry UI component, update the full preview delivery chain together: `registry/default/<name>/<name>.tsx`, `registry.json`, `src/pages/components/<name>`, `src/router/routes.ts`, generated API docs, and preview i18n dictionaries.
 - Document registry component APIs with TSDoc-style `/** ... */` comments that TypeScript can expose through JSDoc AST APIs.
-- Let TypeScript carry prop types; do not duplicate types with JSDoc `{type}` annotations.
-- For public props, prefer a short description plus `@default`, `@remarks`, `@deprecated`, or `@example` only when they add useful generated API content.
-- When adding or changing preview demos, update the preview i18n dictionaries for all user-visible demo and generated API doc text.
-- Keep demo pages on the standard `PreviewDemoPage` template with `import.meta.glob`, explicit `DEMO_PATHS`, `PreviewApiTable`, `sourceRoot`, and demo modules that export `meta satisfies PreviewDemoMeta` plus a named `Demo`.
+
+## Skills
+
+- Use `.agents/skills/handbook-sticker-ui/SKILL.md` for detailed handbook sticker visual, accessibility, semantic slot, and Tailwind component guidance.
+- Use `.agents/skills/registry-preview-workflow/SKILL.md` when adding, changing, renaming, or removing registry UI components, component demos, preview pages, generated API docs, or preview i18n dictionaries.
+- Use `.agents/skills/route-configuration/SKILL.md` when registering pages, changing route metadata, or touching route/menu behavior.
 
 ## Verification
 
