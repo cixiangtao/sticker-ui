@@ -107,6 +107,20 @@
       ]
     },
     {
+      "name": "input-password",
+      "type": "registry:ui",
+      "title": "Sticker Password Input",
+      "description": "A password field with a sticker frame and show-hide visibility toggle.",
+      "registryDependencies": ["utils", "button", "input"],
+      "files": [
+        {
+          "path": "src/components/ui/input-password.tsx",
+          "target": "@ui/input-password.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "textarea",
       "type": "registry:ui",
       "title": "Sticker Textarea",

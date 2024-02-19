@@ -44,7 +44,11 @@ function Demo() {
             { message: "Use at least 6 characters.", min: 6 },
           ]}
         >
-          <Input placeholder="Enter password" type="password" />
+          <Input.Password
+            hideLabel="Hide"
+            placeholder="Enter password"
+            showLabel="Show"
+          />
         </Form.Item>
         <Button type="submit">Submit form</Button>
       </Form>

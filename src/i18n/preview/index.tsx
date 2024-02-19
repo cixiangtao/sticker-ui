@@ -20,9 +20,11 @@ const TRANSLATABLE_PROP_NAMES = new Set([
   "aria-label",
   "defaultValue",
   "extra",
+  "hideLabel",
   "label",
   "message",
   "placeholder",
+  "showLabel",
   "title",
 ])
 

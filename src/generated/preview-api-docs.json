@@ -2487,6 +2487,394 @@
       }
     ]
   },
+  "input-password": {
+    "components": [
+      {
+        "name": "InputPassword",
+        "props": {
+          "description": "Props for the sticker password input element.",
+          "descriptionKey": "api.input-password.components.InputPassword.props.description",
+          "remarks": "Inherits native input attributes, except the native `type` and numeric HTML `size` attributes are replaced by password-specific sticker APIs.",
+          "remarksKey": "api.input-password.components.InputPassword.props.remarks",
+          "inherits": ["Omit<InputPasswordBase, \"type\">"],
+          "inheritedMembers": [
+            {
+              "description": "Identifies elements that describe the control.",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Indicates whether the current value is invalid.",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "description": "Provides an accessible label when visible text is not enough.",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Identifies elements that label the control.",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Controls browser autocomplete behavior.",
+              "name": "autoComplete",
+              "optional": true,
+              "required": false,
+              "type": "React.HTMLInputAutoCompleteAttribute"
+            },
+            {
+              "description": "Focuses the element when it mounts.",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Controls the checked state.",
+              "name": "checked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Content rendered inside the element.",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "description": "Adds custom class names to the root element.",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Sets the initial unchecked or checked state.",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Sets the initial uncontrolled value.",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            },
+            {
+              "description": "Disables user interaction with the element.",
+              "name": "disabled",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Associates the control with a form by id.",
+              "name": "form",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Sets the element id.",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Sets the maximum accepted value.",
+              "name": "max",
+              "optional": true,
+              "required": false,
+              "type": "string | number"
+            },
+            {
+              "description": "Sets the maximum text length.",
+              "name": "maxLength",
+              "optional": true,
+              "required": false,
+              "type": "number"
+            },
+            {
+              "description": "Sets the minimum accepted value.",
+              "name": "min",
+              "optional": true,
+              "required": false,
+              "type": "string | number"
+            },
+            {
+              "description": "Sets the minimum text length.",
+              "name": "minLength",
+              "optional": true,
+              "required": false,
+              "type": "number"
+            },
+            {
+              "description": "Sets the form field name.",
+              "name": "name",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Runs when the element loses focus.",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLInputElement>"
+            },
+            {
+              "description": "Runs when the value changes.",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "React.ChangeEventHandler<HTMLInputElement, HTMLInputElement>"
+            },
+            {
+              "description": "Runs when the element is clicked.",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLInputElement>"
+            },
+            {
+              "description": "Runs when the element receives focus.",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLInputElement>"
+            },
+            {
+              "description": "Runs when a key is pressed.",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLInputElement>"
+            },
+            {
+              "description": "Runs when a key is released.",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLInputElement>"
+            },
+            {
+              "description": "Runs when the pointer enters the element.",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLInputElement>"
+            },
+            {
+              "description": "Runs when the pointer leaves the element.",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLInputElement>"
+            },
+            {
+              "description": "Sets a validation pattern for the value.",
+              "name": "pattern",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Shows placeholder text when the field is empty.",
+              "name": "placeholder",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Prevents user edits while keeping the value readable.",
+              "name": "readOnly",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Marks the field as required for native validation.",
+              "name": "required",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Sets the ARIA role.",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "description": "Adds inline styles to the root element.",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "description": "Sets advisory text for the element.",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Controls the current value.",
+              "name": "value",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            }
+          ],
+          "members": [
+            {
+              "defaultValue": "false",
+              "description": "Sets the initial uncontrolled password visibility state.",
+              "descriptionKey": "api.input-password.components.InputPassword.props.members.defaultVisible.description",
+              "name": "defaultVisible",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "defaultValue": "\"Hide\"",
+              "description": "Accessible label and visible text for the hide-password button state.",
+              "descriptionKey": "api.input-password.components.InputPassword.props.members.hideLabel.description",
+              "name": "hideLabel",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Runs when password visibility changes.",
+              "descriptionKey": "api.input-password.components.InputPassword.props.members.onVisibleChange.description",
+              "name": "onVisibleChange",
+              "optional": true,
+              "required": false,
+              "type": "(visible: boolean) => void"
+            },
+            {
+              "defaultValue": "\"Show\"",
+              "description": "Accessible label and visible text for the show-password button state.",
+              "descriptionKey": "api.input-password.components.InputPassword.props.members.showLabel.description",
+              "name": "showLabel",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "defaultValue": "\"md\"",
+              "description": "Controls the input height, radius, and text size.",
+              "descriptionKey": "api.input-password.components.InputPassword.props.members.size.description",
+              "name": "size",
+              "optional": true,
+              "required": false,
+              "type": "InputPasswordSize"
+            },
+            {
+              "description": "Controlled password visibility state.",
+              "descriptionKey": "api.input-password.components.InputPassword.props.members.visible.description",
+              "name": "visible",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            }
+          ],
+          "type": "InputPasswordProps"
+        }
+      }
+    ],
+    "description": "A password field with a sticker frame and show-hide visibility toggle.",
+    "descriptionKey": "api.input-password.description",
+    "exports": [{ "kind": "component", "name": "InputPassword" }],
+    "name": "input-password",
+    "sourcePath": "src/components/ui/input-password.tsx",
+    "title": "Sticker Password Input",
+    "types": [
+      {
+        "description": "Props for the sticker password input element.",
+        "descriptionKey": "api.input-password.types.InputPasswordProps.description",
+        "remarks": "Inherits native input attributes, except the native `type` and numeric HTML `size` attributes are replaced by password-specific sticker APIs.",
+        "remarksKey": "api.input-password.types.InputPasswordProps.remarks",
+        "inherits": ["Omit<InputPasswordBase, \"type\">"],
+        "kind": "interface",
+        "members": [
+          {
+            "defaultValue": "false",
+            "description": "Sets the initial uncontrolled password visibility state.",
+            "descriptionKey": "api.input-password.types.InputPasswordProps.members.defaultVisible.description",
+            "name": "defaultVisible",
+            "optional": true,
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "defaultValue": "\"Hide\"",
+            "description": "Accessible label and visible text for the hide-password button state.",
+            "descriptionKey": "api.input-password.types.InputPasswordProps.members.hideLabel.description",
+            "name": "hideLabel",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "Runs when password visibility changes.",
+            "descriptionKey": "api.input-password.types.InputPasswordProps.members.onVisibleChange.description",
+            "name": "onVisibleChange",
+            "optional": true,
+            "required": false,
+            "type": "(visible: boolean) => void"
+          },
+          {
+            "defaultValue": "\"Show\"",
+            "description": "Accessible label and visible text for the show-password button state.",
+            "descriptionKey": "api.input-password.types.InputPasswordProps.members.showLabel.description",
+            "name": "showLabel",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "defaultValue": "\"md\"",
+            "description": "Controls the input height, radius, and text size.",
+            "descriptionKey": "api.input-password.types.InputPasswordProps.members.size.description",
+            "name": "size",
+            "optional": true,
+            "required": false,
+            "type": "InputPasswordSize"
+          },
+          {
+            "description": "Controlled password visibility state.",
+            "descriptionKey": "api.input-password.types.InputPasswordProps.members.visible.description",
+            "name": "visible",
+            "optional": true,
+            "required": false,
+            "type": "boolean"
+          }
+        ],
+        "name": "InputPasswordProps"
+      }
+    ],
+    "variants": []
+  },
   "textarea": {
     "components": [
       {
@@ -2497,7 +2885,7 @@
           "remarks": "Inherits native textarea attributes, except the numeric HTML `size` attribute is replaced by the sticker component API.",
           "remarksKey": "api.textarea.components.Textarea.props.remarks",
           "inherits": [
-            "Omit<React.TextareaHTMLAttributes<HTMLTextAreaElement>, \"size\">"
+            "Omit< React.TextareaHTMLAttributes<HTMLTextAreaElement>, \"size\" >"
           ],
           "inheritedMembers": [
             {
@@ -2772,7 +3160,7 @@
         "remarks": "Inherits native textarea attributes, except the numeric HTML `size` attribute is replaced by the sticker component API.",
         "remarksKey": "api.textarea.types.TextareaProps.remarks",
         "inherits": [
-          "Omit<React.TextareaHTMLAttributes<HTMLTextAreaElement>, \"size\">"
+          "Omit< React.TextareaHTMLAttributes<HTMLTextAreaElement>, \"size\" >"
         ],
         "kind": "interface",
         "members": [
@@ -3477,7 +3865,7 @@
             "name": "validator",
             "optional": true,
             "required": false,
-            "type": "(rule: FormRule, value: StoreValue, form: FormInstance) => Promise<void> | void"
+            "type": "( rule: FormRule, value: StoreValue, form: FormInstance, ) => Promise<void> | void"
           },
           {
             "defaultValue": "false",

@@ -9,7 +9,7 @@ description: Maintain sticker-ui registry components, preview demo pages, genera
 
 Use this skill for any work that changes registry components or how they appear in the preview site:
 
-- Add, change, rename, or remove a component under `registry/default/<name>`.
+- Add, change, rename, or remove a component under `src/components/ui/<name>.tsx`.
 - Add or edit component demos under `src/pages/components/<name>`.
 - Register component pages, demo routes, API docs, or registry output.
 - Update preview strings, Chinese translations, or generated API docs.
@@ -18,13 +18,15 @@ Use this skill for any work that changes registry components or how they appear 
 
 New registry UI components must land as a synchronized set:
 
-1. Component source at `registry/default/<name>/<name>.tsx`.
+1. Component source at `src/components/ui/<name>.tsx`.
 2. A `registry:ui` item in `registry.json`.
 3. Preview page at `src/pages/components/<name>/index.tsx`.
 4. Demo files under `src/pages/components/<name>/demos`.
 5. Route registration in `src/router/routes.ts`.
 6. Generated API docs in `src/generated/preview-api-docs.json`.
 7. Preview i18n entries in `src/i18n/preview/index.tsx` and, when needed, `src/i18n/preview/api-docs.zh.ts`.
+
+Do not add new component source files under `registry/default`. Registry items in `registry.json` must point at `src/components/ui/*`, and `public/r/*.json` is generated from that canonical source.
 
 For route details, also use the `route-configuration` skill.
 
@@ -63,7 +65,7 @@ Any component development work must update preview i18n in the same change.
 
 ## Registry Output
 
-- After changing `registry.json` or registry source, run `pnpm run build:registry` so `public/r/*.json` stays aligned with the preview.
+- After changing `registry.json` or component source, run `pnpm run build:registry` so `public/r/*.json` stays aligned with the preview.
 - Keep registry components source-only and easy to copy through shadcn.
 - React and Tailwind should remain the only runtime peers for registry components.
 - Avoid adding runtime helpers such as Radix Slot, CVA, clsx, or tailwind-merge to registry components unless the project-wide constraint has explicitly changed.

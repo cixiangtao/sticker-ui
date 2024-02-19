@@ -34,13 +34,13 @@ function Demo() {
       </div>
       <div className="grid gap-2 rounded-sticker-xl border border-ink bg-white/80 p-4">
         <Label htmlFor="input-size-large" size="lg">
-          Roomy password
+          Roomy email
         </Label>
         <Input
           id="input-size-large"
-          placeholder="Secret sticker code"
+          placeholder="hello@sticker.dev"
           size="lg"
-          type="password"
+          type="email"
         />
       </div>
     </div>

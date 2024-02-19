@@ -93,6 +93,16 @@ const routes = [
     path: "/components/input",
   },
   {
+    component: () => import("@/pages/components/input-password"),
+    meta: {
+      description: "Password fields with show-hide sticker toggles.",
+      emoji: "P",
+      order: 75,
+      title: "Input Password",
+    },
+    path: "/components/input-password",
+  },
+  {
     component: () => import("@/pages/components/textarea"),
     meta: {
       description: "Native multiline controls with chunky sticker frames.",

@@ -55,9 +55,10 @@ Use Radix when the component needs robust accessibility behavior, keyboard inter
 
 ## Registry Rules
 
-- Each component lives in `registry/default/<component>/<component>.tsx`.
+- Each component lives in `src/components/ui/<component>.tsx`.
 - Each component is listed in `registry.json`.
 - Each generated install file lives in `public/r/<component>.json`.
+- Do not add component source under `registry/default`; registry output is generated from the `src/components/ui` source referenced by `registry.json`.
 - Components with Radix dependencies declare those dependencies in their own registry item.
 - Simple components should not import Radix.
 - Keep source files self-contained and avoid registry-wide runtime helpers unless the project intentionally introduces a shared utility package.

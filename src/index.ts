@@ -1,3 +1,10 @@
+import { Input as InputRoot, inputVariants } from "./components/ui/input"
+import { InputPassword } from "./components/ui/input-password"
+
+const Input = Object.assign(InputRoot, {
+  Password: InputPassword,
+})
+
 export { Button, buttonVariants } from "./components/ui/button"
 export {
   Card,
@@ -20,7 +27,7 @@ export type {
   ValidateStatus,
   ValidateTrigger,
 } from "./components/ui/form"
-export { Input, inputVariants } from "./components/ui/input"
+export { Input, InputPassword, inputVariants }
 export {
   Label,
   LabelDescription,

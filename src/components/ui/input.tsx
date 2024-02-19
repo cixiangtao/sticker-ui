@@ -132,7 +132,7 @@ const inputVariants = cva(
   },
 )
 
-type InputType = "email" | "password" | "search" | "tel" | "text" | "url"
+type InputType = "email" | "search" | "tel" | "text" | "url"
 
 /**
  * Props for the sticker input element.

@@ -150,6 +150,39 @@ const ZH_PREVIEW_API_DOC_TRANSLATIONS: Record<string, string> = {
     "继承原生 input 属性，但非文本输入类型和数字形式的 HTML `size` 属性由贴纸组件 API 替代。",
   "api.input.variants.inputVariants.description":
     "根据结构、色调和尺寸变体生成贴纸输入框的 className。",
+  "api.input-password.description": "带贴纸外框和显示隐藏切换的密码字段。",
+  "api.input-password.components.InputPassword.props.description":
+    "贴纸密码输入框元素的 props。",
+  "api.input-password.components.InputPassword.props.members.defaultVisible.description":
+    "设置非受控密码可见状态的初始值。",
+  "api.input-password.components.InputPassword.props.members.hideLabel.description":
+    "密码隐藏按钮状态的可访问标签和可见文本。",
+  "api.input-password.components.InputPassword.props.members.onVisibleChange.description":
+    "密码可见状态变化时调用。",
+  "api.input-password.components.InputPassword.props.members.showLabel.description":
+    "密码显示按钮状态的可访问标签和可见文本。",
+  "api.input-password.components.InputPassword.props.members.size.description":
+    "控制输入框高度、圆角和文字尺寸。",
+  "api.input-password.components.InputPassword.props.members.visible.description":
+    "受控密码可见状态。",
+  "api.input-password.components.InputPassword.props.remarks":
+    "继承原生 input 属性，但原生 `type` 和数字形式的 HTML `size` 属性由密码输入框专用贴纸 API 替代。",
+  "api.input-password.types.InputPasswordProps.description":
+    "贴纸密码输入框元素的 props。",
+  "api.input-password.types.InputPasswordProps.members.defaultVisible.description":
+    "设置非受控密码可见状态的初始值。",
+  "api.input-password.types.InputPasswordProps.members.hideLabel.description":
+    "密码隐藏按钮状态的可访问标签和可见文本。",
+  "api.input-password.types.InputPasswordProps.members.onVisibleChange.description":
+    "密码可见状态变化时调用。",
+  "api.input-password.types.InputPasswordProps.members.showLabel.description":
+    "密码显示按钮状态的可访问标签和可见文本。",
+  "api.input-password.types.InputPasswordProps.members.size.description":
+    "控制输入框高度、圆角和文字尺寸。",
+  "api.input-password.types.InputPasswordProps.members.visible.description":
+    "受控密码可见状态。",
+  "api.input-password.types.InputPasswordProps.remarks":
+    "继承原生 input 属性，但原生 `type` 和数字形式的 HTML `size` 属性由密码输入框专用贴纸 API 替代。",
   "api.textarea.description": "带有厚实贴纸边框和语义字段状态的原生多行字段。",
   "api.textarea.components.Textarea.props.description":
     "贴纸多行输入框元素的 props。",

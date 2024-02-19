@@ -214,6 +214,8 @@ const ZH_PREVIEW_COMPONENT_TRANSLATIONS: Record<string, string> = {
   "Mint Note": "薄荷便签",
   "Native input controls with chunky sticker frames.":
     "带有厚实贴纸边框的原生输入控件。",
+  "Password fields with show-hide sticker toggles.":
+    "带显示隐藏贴纸切换按钮的密码字段。",
   "Neutral paper for docs and general content.": "中性纸张适合文档和通用内容。",
   None: "无",
   "No dots": "无圆点",
@@ -280,7 +282,7 @@ const ZH_PREVIEW_COMPONENT_TRANSLATIONS: Record<string, string> = {
   "Rounded tags follow the selected size, while pill tags keep a fully rounded capsule shape.":
     "圆角标签会跟随所选 size 调整半径，胶囊标签则始终保持完整胶囊形态。",
   Roomy: "宽松",
-  "Roomy password": "宽松密码",
+  "Roomy email": "宽松邮箱",
   "Roomy fields keep the full required badge.":
     "宽松字段保留完整 required 胶囊。",
   "Rules run on change by default and can mix required, length, pattern, type, and custom validators.":
@@ -296,6 +298,7 @@ const ZH_PREVIEW_COMPONENT_TRANSLATIONS: Record<string, string> = {
   "Scrollable paper tables for API and structured data.":
     "用于 API 和结构化数据的可滚动纸张表格。",
   "Show code": "展开代码",
+  Show: "显示",
   Small: "小",
   "Small search": "小号搜索",
   "Small padding keeps nested controls tight.": "小内边距让嵌套控件保持紧凑。",
@@ -306,7 +309,6 @@ const ZH_PREVIEW_COMPONENT_TRANSLATIONS: Record<string, string> = {
   "Sizes & Types": "尺寸与类型",
   "Sizes align with compact, standard, and roomy controls. Markers can be composed directly when a form needs custom wording.":
     "尺寸与紧凑、标准和宽松控件对齐。表单需要自定义措辞时，可直接组合标记。",
-  "Secret sticker code": "贴纸密令",
   "Sizes align text inputs with compact filters, standard forms, and roomy settings panels while type stays focused on text entry.":
     "尺寸可让文本输入框适配紧凑筛选、标准表单和宽松设置面板，同时 type 保持聚焦于文字输入。",
   Span: "Span",
@@ -320,6 +322,7 @@ const ZH_PREVIEW_COMPONENT_TRANSLATIONS: Record<string, string> = {
   "Sticker Handbook": "贴纸手册",
   "Sticker Input": "贴纸输入框",
   "Sticker Label": "贴纸标签",
+  "Sticker Password Input": "贴纸密码输入框",
   "Sticker Surface": "贴纸界面",
   "Study Dashboard": "学习仪表盘",
   Solid: "实心",
@@ -352,11 +355,20 @@ const ZH_PREVIEW_COMPONENT_TRANSLATIONS: Record<string, string> = {
   "Submit form": "提交表单",
   Submit: "提交",
   "Check rules": "检查规则",
+  "Account password": "账号密码",
+  "Archived secret": "已归档密钥",
+  "Basic Toggle": "基础切换",
   "Display note": "展示备注",
   "Email is required.": "邮箱为必填项。",
   Email: "邮箱",
   "Enter password": "输入密码",
+  "Form Namespace": "Form 命名空间",
+  "Form.Item passes value, onChange, and aria-invalid through to the inner password control.":
+    "Form.Item 会把 value、onChange 和 aria-invalid 传递给内部密码控件。",
+  Hide: "隐藏",
   "Instance status": "实例状态",
+  "InputPassword wraps a native password field with the same sticker frame and an accessible show-hide toggle.":
+    "InputPassword 用同一套贴纸外框包裹原生密码字段，并提供可访问的显示隐藏切换。",
   "Invite code must be STICKER.": "邀请码必须是 STICKER。",
   "Invite code": "邀请码",
   "Latest submit": "最近提交",
@@ -368,6 +380,11 @@ const ZH_PREVIEW_COMPONENT_TRANSLATIONS: Record<string, string> = {
   "Nickname is too short.": "昵称过短。",
   Password: "密码",
   "Password is required.": "密码为必填项。",
+  "Disabled password inputs keep the frame and toggle in one locked state.":
+    "禁用的密码输入框会让外框和切换按钮保持同一个锁定状态。",
+  "locked-sticker": "locked-sticker",
+  "The namespaced Input.Password entry stays available from the package root while preserving Form.Item value and validation wiring.":
+    "命名空间形式的 Input.Password 可从包入口使用，同时保留 Form.Item 的值和校验绑定。",
   Reset: "重置",
   "Shown beside the profile": "展示在资料旁边",
   Slug: "Slug",
@@ -378,6 +395,9 @@ const ZH_PREVIEW_COMPONENT_TRANSLATIONS: Record<string, string> = {
   Type: "类型",
   "Use a valid email address.": "请输入有效的邮箱地址。",
   "Use at least 6 characters.": "至少使用 6 个字符。",
+  "Use at least 8 characters.": "至少使用 8 个字符。",
+  "Use InputPassword when a password field needs a built-in visibility toggle.":
+    "当密码字段需要内置可见性切换时，使用 InputPassword。",
   "Use the asterisk when horizontal forms need tighter labels.":
     "当水平表单需要更紧凑的标签时使用星号。",
   "Use the default badge when the label has room.":
