@@ -134,14 +134,27 @@ const inputVariants = cva(
 
 type InputType = "email" | "search" | "tel" | "text" | "url"
 
+type InputChangeHandler = (
+  value: string,
+  event: React.ChangeEvent<HTMLInputElement>,
+) => void
+
 /**
  * Props for the sticker input element.
- * @remarks Inherits native input attributes, except non-text input types and the numeric HTML `size` attribute are replaced by sticker component APIs.
+ * @remarks Inherits native input attributes, except `onChange`, non-text input types, and the numeric HTML `size` attribute are replaced by sticker component APIs.
  */
 interface InputProps
   extends
-    Omit<React.InputHTMLAttributes<HTMLInputElement>, "size" | "type">,
+    Omit<
+      React.InputHTMLAttributes<HTMLInputElement>,
+      "onChange" | "size" | "type"
+    >,
     Omit<VariantProps<typeof inputVariants>, "size" | "tone" | "variant"> {
+  /**
+   * Runs when the input value changes.
+   * @remarks Receives the next string value first and the native change event second.
+   */
+  onChange?: InputChangeHandler
   /**
    * Controls the input height, radius, and text size.
    * @default "md"
@@ -166,6 +179,7 @@ interface InputProps
 
 function Input({
   className,
+  onChange,
   size = "md",
   tone = "default",
   type = "text",
@@ -176,6 +190,9 @@ function Input({
     <input
       className={cn(inputVariants({ size, tone, variant }), className)}
       data-slot="input"
+      onChange={(event) => {
+        onChange?.(event.currentTarget.value, event)
+      }}
       type={type}
       {...props}
     />

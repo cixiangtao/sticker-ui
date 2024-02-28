@@ -6,6 +6,10 @@ import { cn } from "@/lib/utils"
 
 type InputPasswordBase = React.ComponentProps<typeof Input>
 type InputPasswordSize = NonNullable<InputPasswordBase["size"]>
+type InputPasswordChangeHandler = (
+  value: string,
+  event: React.ChangeEvent<HTMLInputElement>,
+) => void
 
 const inputPasswordSizeClassNames = {
   lg: {
@@ -30,9 +34,12 @@ const inputPasswordSizeClassNames = {
 
 /**
  * Props for the sticker password input element.
- * @remarks Inherits native input attributes, except the native `type` and numeric HTML `size` attributes are replaced by password-specific sticker APIs.
+ * @remarks Inherits sticker input attributes, except `onChange`, the native `type`, and numeric HTML `size` attributes are replaced by password-specific sticker APIs.
  */
-interface InputPasswordProps extends Omit<InputPasswordBase, "type"> {
+interface InputPasswordProps extends Omit<
+  InputPasswordBase,
+  "onChange" | "type"
+> {
   /**
    * Sets the initial uncontrolled password visibility state.
    * @default false
@@ -47,6 +54,11 @@ interface InputPasswordProps extends Omit<InputPasswordBase, "type"> {
    * Runs when password visibility changes.
    */
   onVisibleChange?: (visible: boolean) => void
+  /**
+   * Runs when the password value changes.
+   * @remarks Receives the next string value first and the native change event second.
+   */
+  onChange?: InputPasswordChangeHandler
   /**
    * Accessible label and visible text for the show-password button state.
    * @default "Show"
@@ -69,6 +81,7 @@ function InputPassword({
   defaultVisible = false,
   disabled,
   hideLabel = "Hide",
+  onChange,
   onVisibleChange,
   showLabel = "Show",
   size = "md",
@@ -112,6 +125,9 @@ function InputPassword({
         )}
         data-slot="input-password-control"
         disabled={disabled}
+        onChange={(event) => {
+          onChange?.(event.currentTarget.value, event)
+        }}
         type={visible ? "text" : "password"}
         {...props}
       />

@@ -2094,10 +2094,10 @@
         "props": {
           "description": "Props for the sticker input element.",
           "descriptionKey": "api.input.components.Input.props.description",
-          "remarks": "Inherits native input attributes, except non-text input types and the numeric HTML `size` attribute are replaced by sticker component APIs.",
+          "remarks": "Inherits native input attributes, except `onChange`, non-text input types, and the numeric HTML `size` attribute are replaced by sticker component APIs.",
           "remarksKey": "api.input.components.Input.props.remarks",
           "inherits": [
-            "Omit<React.InputHTMLAttributes<HTMLInputElement>, \"size\" | \"type\">",
+            "Omit< React.InputHTMLAttributes<HTMLInputElement>, \"onChange\" | \"size\" | \"type\" >",
             "Omit<VariantProps<typeof inputVariants>, \"size\" | \"tone\" | \"variant\">"
           ],
           "inheritedMembers": [
@@ -2242,13 +2242,6 @@
               "type": "React.FocusEventHandler<HTMLInputElement>"
             },
             {
-              "description": "Runs when the value changes.",
-              "name": "onChange",
-              "optional": true,
-              "required": false,
-              "type": "React.ChangeEventHandler<HTMLInputElement, HTMLInputElement>"
-            },
-            {
               "description": "Runs when the element is clicked.",
               "name": "onClick",
               "optional": true,
@@ -2349,6 +2342,16 @@
           ],
           "members": [
             {
+              "description": "Runs when the input value changes.",
+              "descriptionKey": "api.input.components.Input.props.members.onChange.description",
+              "remarks": "Receives the next string value first and the native change event second.",
+              "remarksKey": "api.input.components.Input.props.members.onChange.remarks",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "InputChangeHandler"
+            },
+            {
               "defaultValue": "\"md\"",
               "description": "Controls the input height, radius, and text size.",
               "descriptionKey": "api.input.components.Input.props.members.size.description",
@@ -2407,14 +2410,24 @@
       {
         "description": "Props for the sticker input element.",
         "descriptionKey": "api.input.types.InputProps.description",
-        "remarks": "Inherits native input attributes, except non-text input types and the numeric HTML `size` attribute are replaced by sticker component APIs.",
+        "remarks": "Inherits native input attributes, except `onChange`, non-text input types, and the numeric HTML `size` attribute are replaced by sticker component APIs.",
         "remarksKey": "api.input.types.InputProps.remarks",
         "inherits": [
-          "Omit<React.InputHTMLAttributes<HTMLInputElement>, \"size\" | \"type\">",
+          "Omit< React.InputHTMLAttributes<HTMLInputElement>, \"onChange\" | \"size\" | \"type\" >",
           "Omit<VariantProps<typeof inputVariants>, \"size\" | \"tone\" | \"variant\">"
         ],
         "kind": "interface",
         "members": [
+          {
+            "description": "Runs when the input value changes.",
+            "descriptionKey": "api.input.types.InputProps.members.onChange.description",
+            "remarks": "Receives the next string value first and the native change event second.",
+            "remarksKey": "api.input.types.InputProps.members.onChange.remarks",
+            "name": "onChange",
+            "optional": true,
+            "required": false,
+            "type": "InputChangeHandler"
+          },
           {
             "defaultValue": "\"md\"",
             "description": "Controls the input height, radius, and text size.",
@@ -2494,9 +2507,9 @@
         "props": {
           "description": "Props for the sticker password input element.",
           "descriptionKey": "api.input-password.components.InputPassword.props.description",
-          "remarks": "Inherits native input attributes, except the native `type` and numeric HTML `size` attributes are replaced by password-specific sticker APIs.",
+          "remarks": "Inherits sticker input attributes, except `onChange`, the native `type`, and numeric HTML `size` attributes are replaced by password-specific sticker APIs.",
           "remarksKey": "api.input-password.components.InputPassword.props.remarks",
-          "inherits": ["Omit<InputPasswordBase, \"type\">"],
+          "inherits": ["Omit<InputPasswordBase, \"onChange\" | \"type\">"],
           "inheritedMembers": [
             {
               "description": "Identifies elements that describe the control.",
@@ -2639,13 +2652,6 @@
               "type": "React.FocusEventHandler<HTMLInputElement>"
             },
             {
-              "description": "Runs when the value changes.",
-              "name": "onChange",
-              "optional": true,
-              "required": false,
-              "type": "React.ChangeEventHandler<HTMLInputElement, HTMLInputElement>"
-            },
-            {
               "description": "Runs when the element is clicked.",
               "name": "onClick",
               "optional": true,
@@ -2764,6 +2770,16 @@
               "type": "string"
             },
             {
+              "description": "Runs when the password value changes.",
+              "descriptionKey": "api.input-password.components.InputPassword.props.members.onChange.description",
+              "remarks": "Receives the next string value first and the native change event second.",
+              "remarksKey": "api.input-password.components.InputPassword.props.members.onChange.remarks",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "InputPasswordChangeHandler"
+            },
+            {
               "description": "Runs when password visibility changes.",
               "descriptionKey": "api.input-password.components.InputPassword.props.members.onVisibleChange.description",
               "name": "onVisibleChange",
@@ -2812,9 +2828,9 @@
       {
         "description": "Props for the sticker password input element.",
         "descriptionKey": "api.input-password.types.InputPasswordProps.description",
-        "remarks": "Inherits native input attributes, except the native `type` and numeric HTML `size` attributes are replaced by password-specific sticker APIs.",
+        "remarks": "Inherits sticker input attributes, except `onChange`, the native `type`, and numeric HTML `size` attributes are replaced by password-specific sticker APIs.",
         "remarksKey": "api.input-password.types.InputPasswordProps.remarks",
-        "inherits": ["Omit<InputPasswordBase, \"type\">"],
+        "inherits": ["Omit<InputPasswordBase, \"onChange\" | \"type\">"],
         "kind": "interface",
         "members": [
           {
@@ -2834,6 +2850,16 @@
             "optional": true,
             "required": false,
             "type": "string"
+          },
+          {
+            "description": "Runs when the password value changes.",
+            "descriptionKey": "api.input-password.types.InputPasswordProps.members.onChange.description",
+            "remarks": "Receives the next string value first and the native change event second.",
+            "remarksKey": "api.input-password.types.InputPasswordProps.members.onChange.remarks",
+            "name": "onChange",
+            "optional": true,
+            "required": false,
+            "type": "InputPasswordChangeHandler"
           },
           {
             "description": "Runs when password visibility changes.",
@@ -2882,10 +2908,10 @@
         "props": {
           "description": "Props for the sticker textarea element.",
           "descriptionKey": "api.textarea.components.Textarea.props.description",
-          "remarks": "Inherits native textarea attributes, except the numeric HTML `size` attribute is replaced by the sticker component API.",
+          "remarks": "Inherits native textarea attributes, except `onChange` and the numeric HTML `size` attribute are replaced by sticker component APIs.",
           "remarksKey": "api.textarea.components.Textarea.props.remarks",
           "inherits": [
-            "Omit< React.TextareaHTMLAttributes<HTMLTextAreaElement>, \"size\" >"
+            "Omit< React.TextareaHTMLAttributes<HTMLTextAreaElement>, \"onChange\" | \"size\" >"
           ],
           "inheritedMembers": [
             {
@@ -3008,13 +3034,6 @@
               "type": "React.FocusEventHandler<HTMLTextAreaElement>"
             },
             {
-              "description": "Runs when the value changes.",
-              "name": "onChange",
-              "optional": true,
-              "required": false,
-              "type": "React.ChangeEventHandler<HTMLTextAreaElement, HTMLTextAreaElement>"
-            },
-            {
               "description": "Runs when the element is clicked.",
               "name": "onClick",
               "optional": true,
@@ -3108,6 +3127,16 @@
           ],
           "members": [
             {
+              "description": "Runs when the textarea value changes.",
+              "descriptionKey": "api.textarea.components.Textarea.props.members.onChange.description",
+              "remarks": "Receives the next string value first and the native change event second.",
+              "remarksKey": "api.textarea.components.Textarea.props.members.onChange.remarks",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "TextareaChangeHandler"
+            },
+            {
               "defaultValue": "\"md\"",
               "description": "Controls the textarea minimum height, radius, padding, and text size.",
               "descriptionKey": "api.textarea.components.Textarea.props.members.size.description",
@@ -3157,13 +3186,23 @@
       {
         "description": "Props for the sticker textarea element.",
         "descriptionKey": "api.textarea.types.TextareaProps.description",
-        "remarks": "Inherits native textarea attributes, except the numeric HTML `size` attribute is replaced by the sticker component API.",
+        "remarks": "Inherits native textarea attributes, except `onChange` and the numeric HTML `size` attribute are replaced by sticker component APIs.",
         "remarksKey": "api.textarea.types.TextareaProps.remarks",
         "inherits": [
-          "Omit< React.TextareaHTMLAttributes<HTMLTextAreaElement>, \"size\" >"
+          "Omit< React.TextareaHTMLAttributes<HTMLTextAreaElement>, \"onChange\" | \"size\" >"
         ],
         "kind": "interface",
         "members": [
+          {
+            "description": "Runs when the textarea value changes.",
+            "descriptionKey": "api.textarea.types.TextareaProps.members.onChange.description",
+            "remarks": "Receives the next string value first and the native change event second.",
+            "remarksKey": "api.textarea.types.TextareaProps.members.onChange.remarks",
+            "name": "onChange",
+            "optional": true,
+            "required": false,
+            "type": "TextareaChangeHandler"
+          },
           {
             "defaultValue": "\"md\"",
             "description": "Controls the textarea minimum height, radius, padding, and text size.",

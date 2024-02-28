@@ -12,6 +12,10 @@ type TextareaTone =
   | "success"
   | "warning"
 type TextareaVariant = "filled" | "outlined" | "quiet"
+type TextareaChangeHandler = (
+  value: string,
+  event: React.ChangeEvent<HTMLTextAreaElement>,
+) => void
 
 interface TextareaVariantOptions {
   className?: string
@@ -44,12 +48,17 @@ const textareaVariants = ({
 
 /**
  * Props for the sticker textarea element.
- * @remarks Inherits native textarea attributes, except the numeric HTML `size` attribute is replaced by the sticker component API.
+ * @remarks Inherits native textarea attributes, except `onChange` and the numeric HTML `size` attribute are replaced by sticker component APIs.
  */
 interface TextareaProps extends Omit<
   React.TextareaHTMLAttributes<HTMLTextAreaElement>,
-  "size"
+  "onChange" | "size"
 > {
+  /**
+   * Runs when the textarea value changes.
+   * @remarks Receives the next string value first and the native change event second.
+   */
+  onChange?: TextareaChangeHandler
   /**
    * Controls the textarea minimum height, radius, padding, and text size.
    * @default "md"
@@ -69,6 +78,7 @@ interface TextareaProps extends Omit<
 
 function Textarea({
   className,
+  onChange,
   size = "md",
   tone = "default",
   variant = "outlined",
@@ -78,6 +88,9 @@ function Textarea({
     <textarea
       className={cn(textareaVariants({ size, tone, variant }), className)}
       data-slot="textarea"
+      onChange={(event) => {
+        onChange?.(event.currentTarget.value, event)
+      }}
       {...props}
     />
   )
