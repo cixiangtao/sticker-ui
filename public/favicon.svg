@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="sticker-ui">
+  <rect x="14" y="13" width="40" height="40" rx="12" fill="#2e3038" />
+  <path d="M10 8h40v32L36 54H10z" fill="#ffe08a" stroke="#2e3038" stroke-width="4" stroke-linejoin="round" />
+  <path d="M50 40 36 54V40z" fill="#fffdf7" stroke="#2e3038" stroke-width="4" stroke-linejoin="round" />
+  <path d="M21 19h18M20 31h22M20 43h12" fill="none" stroke="#2e3038" stroke-width="4" stroke-linecap="round" />
+  <circle cx="45" cy="18" r="5" fill="#ef476f" stroke="#2e3038" stroke-width="3" />
+</svg>
