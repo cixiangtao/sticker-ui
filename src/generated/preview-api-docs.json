@@ -2509,7 +2509,7 @@
           "descriptionKey": "api.input-password.components.InputPassword.props.description",
           "remarks": "Inherits sticker input attributes, except `onChange`, the native `type`, and numeric HTML `size` attributes are replaced by password-specific sticker APIs.",
           "remarksKey": "api.input-password.components.InputPassword.props.remarks",
-          "inherits": ["Omit<InputPasswordBase, \"onChange\" | \"type\">"],
+          "inherits": ["Omit< InputPasswordBase, \"onChange\" | \"type\" >"],
           "inheritedMembers": [
             {
               "description": "Identifies elements that describe the control.",
@@ -2762,7 +2762,7 @@
             },
             {
               "defaultValue": "\"Hide\"",
-              "description": "Accessible label and visible text for the hide-password button state.",
+              "description": "Accessible label for the hide-password icon button state.",
               "descriptionKey": "api.input-password.components.InputPassword.props.members.hideLabel.description",
               "name": "hideLabel",
               "optional": true,
@@ -2789,7 +2789,7 @@
             },
             {
               "defaultValue": "\"Show\"",
-              "description": "Accessible label and visible text for the show-password button state.",
+              "description": "Accessible label for the show-password icon button state.",
               "descriptionKey": "api.input-password.components.InputPassword.props.members.showLabel.description",
               "name": "showLabel",
               "optional": true,
@@ -2830,7 +2830,7 @@
         "descriptionKey": "api.input-password.types.InputPasswordProps.description",
         "remarks": "Inherits sticker input attributes, except `onChange`, the native `type`, and numeric HTML `size` attributes are replaced by password-specific sticker APIs.",
         "remarksKey": "api.input-password.types.InputPasswordProps.remarks",
-        "inherits": ["Omit<InputPasswordBase, \"onChange\" | \"type\">"],
+        "inherits": ["Omit< InputPasswordBase, \"onChange\" | \"type\" >"],
         "kind": "interface",
         "members": [
           {
@@ -2844,7 +2844,7 @@
           },
           {
             "defaultValue": "\"Hide\"",
-            "description": "Accessible label and visible text for the hide-password button state.",
+            "description": "Accessible label for the hide-password icon button state.",
             "descriptionKey": "api.input-password.types.InputPasswordProps.members.hideLabel.description",
             "name": "hideLabel",
             "optional": true,
@@ -2871,7 +2871,7 @@
           },
           {
             "defaultValue": "\"Show\"",
-            "description": "Accessible label and visible text for the show-password button state.",
+            "description": "Accessible label for the show-password icon button state.",
             "descriptionKey": "api.input-password.types.InputPasswordProps.members.showLabel.description",
             "name": "showLabel",
             "optional": true,

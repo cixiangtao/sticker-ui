@@ -164,7 +164,7 @@ const ZH_PREVIEW_API_DOC_TRANSLATIONS: Record<string, string> = {
   "api.input-password.components.InputPassword.props.members.defaultVisible.description":
     "设置非受控密码可见状态的初始值。",
   "api.input-password.components.InputPassword.props.members.hideLabel.description":
-    "密码隐藏按钮状态的可访问标签和可见文本。",
+    "密码隐藏图标按钮状态的可访问标签。",
   "api.input-password.components.InputPassword.props.members.onChange.description":
     "密码值变化时调用。",
   "api.input-password.components.InputPassword.props.members.onChange.remarks":
@@ -172,7 +172,7 @@ const ZH_PREVIEW_API_DOC_TRANSLATIONS: Record<string, string> = {
   "api.input-password.components.InputPassword.props.members.onVisibleChange.description":
     "密码可见状态变化时调用。",
   "api.input-password.components.InputPassword.props.members.showLabel.description":
-    "密码显示按钮状态的可访问标签和可见文本。",
+    "密码显示图标按钮状态的可访问标签。",
   "api.input-password.components.InputPassword.props.members.size.description":
     "控制输入框高度、圆角和文字尺寸。",
   "api.input-password.components.InputPassword.props.members.visible.description":
@@ -184,7 +184,7 @@ const ZH_PREVIEW_API_DOC_TRANSLATIONS: Record<string, string> = {
   "api.input-password.types.InputPasswordProps.members.defaultVisible.description":
     "设置非受控密码可见状态的初始值。",
   "api.input-password.types.InputPasswordProps.members.hideLabel.description":
-    "密码隐藏按钮状态的可访问标签和可见文本。",
+    "密码隐藏图标按钮状态的可访问标签。",
   "api.input-password.types.InputPasswordProps.members.onChange.description":
     "密码值变化时调用。",
   "api.input-password.types.InputPasswordProps.members.onChange.remarks":
@@ -192,7 +192,7 @@ const ZH_PREVIEW_API_DOC_TRANSLATIONS: Record<string, string> = {
   "api.input-password.types.InputPasswordProps.members.onVisibleChange.description":
     "密码可见状态变化时调用。",
   "api.input-password.types.InputPasswordProps.members.showLabel.description":
-    "密码显示按钮状态的可访问标签和可见文本。",
+    "密码显示图标按钮状态的可访问标签。",
   "api.input-password.types.InputPasswordProps.members.size.description":
     "控制输入框高度、圆角和文字尺寸。",
   "api.input-password.types.InputPasswordProps.members.visible.description":

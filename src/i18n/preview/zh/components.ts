@@ -121,6 +121,7 @@ const ZH_PREVIEW_COMPONENT_TRANSLATIONS: Record<string, string> = {
     "检查 props、变体和翻译覆盖。",
   "Color Tokens": "颜色令牌",
   Colors: "颜色",
+  Clear: "清空",
   "Composable paper panels for content and action groups.":
     "用于内容和操作组的可组合纸张面板。",
   "Composable sticker surfaces for cards, panels, and grouped content.":
@@ -137,6 +138,7 @@ const ZH_PREVIEW_COMPONENT_TRANSLATIONS: Record<string, string> = {
     "将表格单元格与标签、代码块组合，由外层框架负责滚动和墨色边框。",
   "Component Kit": "组件套件",
   "Compact for narrow label columns": "适合较窄的标签列",
+  "Controlled Max Length": "受控最大长度",
   "Confirm generated registry JSON includes source files.":
     "确认生成的 registry JSON 包含源码文件。",
   "Custom Colors": "自定义颜色",
@@ -365,10 +367,12 @@ const ZH_PREVIEW_COMPONENT_TRANSLATIONS: Record<string, string> = {
   "Form Namespace": "Form 命名空间",
   "Form.Item passes value, onChange, and aria-invalid through to the inner password control.":
     "Form.Item 会把 value、onChange 和 aria-invalid 传递给内部密码控件。",
+  "Fill long value": "填入长值",
   Hide: "隐藏",
   "Instance status": "实例状态",
   "InputPassword wraps a native password field with the same sticker frame and an accessible show-hide toggle.":
     "InputPassword 用同一套贴纸外框包裹原生密码字段，并提供可访问的显示隐藏切换。",
+  "Invite secret": "邀请密钥",
   "Invite code must be STICKER.": "邀请码必须是 STICKER。",
   "Invite code": "邀请码",
   "Latest submit": "最近提交",
@@ -380,11 +384,15 @@ const ZH_PREVIEW_COMPONENT_TRANSLATIONS: Record<string, string> = {
   "Nickname is too short.": "昵称过短。",
   Password: "密码",
   "Password is required.": "密码为必填项。",
+  "Keeps a controlled password value capped while still using the native maxLength input constraint.":
+    "在使用原生 maxLength 输入约束的同时，让受控密码值保持截断上限。",
   "Disabled password inputs keep the frame and toggle in one locked state.":
     "禁用的密码输入框会让外框和切换按钮保持同一个锁定状态。",
   "locked-sticker": "locked-sticker",
   "The namespaced Input.Password entry stays available from the package root while preserving Form.Item value and validation wiring.":
     "命名空间形式的 Input.Password 可从包入口使用，同时保留 Form.Item 的值和校验绑定。",
+  "The controlled value is capped at 8 characters.":
+    "受控值会被限制在 8 个字符以内。",
   Reset: "重置",
   "Shown beside the profile": "展示在资料旁边",
   Slug: "Slug",
@@ -398,6 +406,9 @@ const ZH_PREVIEW_COMPONENT_TRANSLATIONS: Record<string, string> = {
   "Use at least 8 characters.": "至少使用 8 个字符。",
   "Use InputPassword when a password field needs a built-in visibility toggle.":
     "当密码字段需要内置可见性切换时，使用 InputPassword。",
+  "Try typing or pasting a long password": "试着输入或粘贴一个很长的密码",
+  "Typing and paste stay inside the same 8 character limit.":
+    "输入和粘贴都会保持在同一个 8 字符限制内。",
   "Use the asterisk when horizontal forms need tighter labels.":
     "当水平表单需要更紧凑的标签时使用星号。",
   "Use the default badge when the label has room.":

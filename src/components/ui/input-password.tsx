@@ -1,6 +1,6 @@
+import { Eye, EyeOff } from "lucide-react"
 import * as React from "react"
 
-import { Button } from "@/components/ui/button"
 import { Input, inputVariants } from "@/components/ui/input"
 import { cn } from "@/lib/utils"
 
@@ -14,19 +14,23 @@ type InputPasswordChangeHandler = (
 const inputPasswordSizeClassNames = {
   lg: {
     root: "pr-1",
-    toggle: "h-9 px-3 text-xs",
+    icon: "size-[18px]",
+    toggle: "size-9",
   },
   md: {
     root: "pr-1",
-    toggle: "h-8 px-2.5 text-[11px]",
+    icon: "size-4",
+    toggle: "size-8",
   },
   sm: {
     root: "pr-1",
-    toggle: "h-7 px-2 text-[10px]",
+    icon: "size-3.5",
+    toggle: "size-7",
   },
 } satisfies Record<
   InputPasswordSize,
   {
+    icon: string
     root: string
     toggle: string
   }
@@ -46,7 +50,7 @@ interface InputPasswordProps extends Omit<
    */
   defaultVisible?: boolean
   /**
-   * Accessible label and visible text for the hide-password button state.
+   * Accessible label for the hide-password icon button state.
    * @default "Hide"
    */
   hideLabel?: string
@@ -60,7 +64,7 @@ interface InputPasswordProps extends Omit<
    */
   onChange?: InputPasswordChangeHandler
   /**
-   * Accessible label and visible text for the show-password button state.
+   * Accessible label for the show-password icon button state.
    * @default "Show"
    */
   showLabel?: string
@@ -131,21 +135,31 @@ function InputPassword({
         type={visible ? "text" : "password"}
         {...props}
       />
-      <Button
+      <button
         aria-label={visibilityLabel}
+        aria-pressed={visible}
         className={cn(
-          "shrink-0 rounded-sticker-md border border-ink bg-surface-muted font-black tracking-[0.08em] text-ink uppercase shadow-none hover:-translate-y-0.5 hover:bg-fill-default-soft hover:shadow-none active:translate-y-0 active:shadow-none",
+          "inline-flex shrink-0 items-center justify-center rounded-sticker-md bg-transparent text-ink/70 transition duration-150 outline-none hover:text-ink focus-visible:ring-2 focus-visible:ring-ring/65 active:text-ink disabled:pointer-events-none disabled:opacity-55",
           inputPasswordSizeClassNames[size].toggle,
         )}
-        color="default"
         data-slot="input-password-toggle"
+        data-visible={visible ? "" : undefined}
         disabled={disabled}
         onClick={toggleVisibility}
-        size="sm"
-        variant="filled"
+        type="button"
       >
-        {visibilityLabel}
-      </Button>
+        {visible ? (
+          <EyeOff
+            aria-hidden="true"
+            className={inputPasswordSizeClassNames[size].icon}
+          />
+        ) : (
+          <Eye
+            aria-hidden="true"
+            className={inputPasswordSizeClassNames[size].icon}
+          />
+        )}
+      </button>
     </div>
   )
 }
