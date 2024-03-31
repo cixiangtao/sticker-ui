@@ -67,8 +67,8 @@ Any component development work must update preview i18n in the same change.
 
 - After changing `registry.json` or component source, run `pnpm run build:registry` so `public/r/*.json` stays aligned with the preview.
 - Keep registry components source-only and easy to copy through shadcn.
-- React and Tailwind should remain the only runtime peers for registry components.
-- Avoid adding runtime helpers such as Radix Slot, CVA, clsx, or tailwind-merge to registry components unless the project-wide constraint has explicitly changed.
+- React, Tailwind, and Radix primitives are the baseline UI stack for registry components.
+- Keep extra runtime dependencies minimal. Add non-baseline dependencies only when they provide clear component-level value, and declare them on the specific registry item that needs them.
 
 ## Final Check
 

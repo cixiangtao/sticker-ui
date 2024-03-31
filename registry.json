@@ -136,6 +136,21 @@
       ]
     },
     {
+      "name": "select",
+      "type": "registry:ui",
+      "title": "Sticker Select",
+      "description": "A Radix-powered select with sticker trigger, menu, and item states.",
+      "dependencies": ["@radix-ui/react-select", "lucide-react"],
+      "registryDependencies": ["utils", "input"],
+      "files": [
+        {
+          "path": "src/components/ui/select.tsx",
+          "target": "@ui/select.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "form",
       "type": "registry:ui",
       "title": "Sticker Form",

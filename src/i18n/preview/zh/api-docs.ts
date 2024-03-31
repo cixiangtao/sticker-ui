@@ -232,6 +232,83 @@ const ZH_PREVIEW_API_DOC_TRANSLATIONS: Record<string, string> = {
     "继承原生 textarea 属性，但 `onChange` 和数字形式的 HTML `size` 属性由贴纸组件 API 替代。",
   "api.textarea.variants.textareaVariants.description":
     "复用输入框变体，并叠加多行输入尺寸，生成贴纸多行输入框的 className。",
+  "api.select.description":
+    "由 Radix 驱动的选择框，包含贴纸风格触发器、菜单和选项状态。",
+  "api.select.components.Select.description":
+    "由 Radix Select 驱动的贴纸选择框根组件。",
+  "api.select.components.Select.props.description":
+    "贴纸选择框根组件的 props。",
+  "api.select.components.Select.props.members.aria-describedby.description":
+    "在 Form.Item 中使用时描述触发器。",
+  "api.select.components.Select.props.members.aria-invalid.description":
+    "在 Form.Item 中使用时标记触发器为无效状态。",
+  "api.select.components.Select.props.members.id.description":
+    "与 Label 搭配使用时，为触发器提供稳定 id。",
+  "api.select.components.Select.props.members.onChange.description":
+    "选择值变化时调用。",
+  "api.select.components.Select.props.members.onChange.remarks":
+    "接收新的字符串值。该回调会镜像项目表单触发约定。",
+  "api.select.components.Select.props.members.onValueChange.description":
+    "选择值变化时调用。",
+  "api.select.components.Select.props.members.size.description":
+    "控制选择框触发器高度、圆角、选项间距和文字尺寸。",
+  "api.select.components.Select.props.members.tone.description":
+    "控制选择框的语义纸张色调。",
+  "api.select.components.Select.props.members.variant.description":
+    "控制选择框触发器边框和填充的强调程度。",
+  "api.select.components.Select.props.remarks":
+    "封装 Radix Select.Root，并保留 `onChange(value)` 作为适配 Form.Item 的 `onValueChange` 别名。",
+  "api.select.components.SelectContent.description":
+    "通过 Portal 渲染的贴纸选择框下拉内容。",
+  "api.select.components.SelectGroup.description": "组合相关选择项。",
+  "api.select.components.SelectItem.description": "可选择的贴纸菜单项。",
+  "api.select.components.SelectLabel.description": "标记一组选项。",
+  "api.select.components.SelectScrollDownButton.description":
+    "当选项溢出时向下滚动下拉内容。",
+  "api.select.components.SelectScrollUpButton.description":
+    "当选项溢出时向上滚动下拉内容。",
+  "api.select.components.SelectSeparator.description": "分隔选择项分组。",
+  "api.select.components.SelectTrigger.description": "打开贴纸选择框内容。",
+  "api.select.components.SelectValue.description":
+    "显示当前已选选项文本或占位内容。",
+  "api.select.exports.Select.description":
+    "由 Radix Select 驱动的贴纸选择框根组件。",
+  "api.select.exports.SelectContent.description":
+    "通过 Portal 渲染的贴纸选择框下拉内容。",
+  "api.select.exports.SelectGroup.description": "组合相关选择项。",
+  "api.select.exports.SelectItem.description": "可选择的贴纸菜单项。",
+  "api.select.exports.SelectLabel.description": "标记一组选项。",
+  "api.select.exports.SelectScrollDownButton.description":
+    "当选项溢出时向下滚动下拉内容。",
+  "api.select.exports.SelectScrollUpButton.description":
+    "当选项溢出时向上滚动下拉内容。",
+  "api.select.exports.SelectSeparator.description": "分隔选择项分组。",
+  "api.select.exports.SelectTrigger.description": "打开贴纸选择框内容。",
+  "api.select.exports.SelectValue.description":
+    "显示当前已选选项文本或占位内容。",
+  "api.select.exports.selectVariants.description":
+    "基于输入框变体与 Radix 选择框状态，生成贴纸选择框触发器的 className。",
+  "api.select.types.SelectProps.description": "贴纸选择框根组件的 props。",
+  "api.select.types.SelectProps.members.aria-describedby.description":
+    "在 Form.Item 中使用时描述触发器。",
+  "api.select.types.SelectProps.members.aria-invalid.description":
+    "在 Form.Item 中使用时标记触发器为无效状态。",
+  "api.select.types.SelectProps.members.id.description":
+    "与 Label 搭配使用时，为触发器提供稳定 id。",
+  "api.select.types.SelectProps.members.onChange.description":
+    "选择值变化时调用。",
+  "api.select.types.SelectProps.members.onChange.remarks":
+    "接收新的字符串值。该回调会镜像项目表单触发约定。",
+  "api.select.types.SelectProps.members.onValueChange.description":
+    "选择值变化时调用。",
+  "api.select.types.SelectProps.members.size.description":
+    "控制选择框触发器高度、圆角、选项间距和文字尺寸。",
+  "api.select.types.SelectProps.members.tone.description":
+    "控制选择框的语义纸张色调。",
+  "api.select.types.SelectProps.members.variant.description":
+    "控制选择框触发器边框和填充的强调程度。",
+  "api.select.types.SelectProps.remarks":
+    "封装 Radix Select.Root，并保留 `onChange(value)` 作为适配 Form.Item 的 `onValueChange` 别名。",
   "api.form.description":
     "带 handbook 贴纸字段状态的 Ant Design 风格表单控制器。",
   "api.form.components.Form.props.description": "贴纸表单根元素的 props。",

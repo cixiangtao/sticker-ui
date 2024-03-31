@@ -3236,6 +3236,402 @@
     ],
     "variants": []
   },
+  "select": {
+    "components": [
+      {
+        "description": "Sticker select root powered by Radix Select.",
+        "descriptionKey": "api.select.components.Select.description",
+        "name": "Select",
+        "props": {
+          "description": "Props for the sticker select root.",
+          "descriptionKey": "api.select.components.Select.props.description",
+          "remarks": "Wraps Radix Select.Root and keeps `onChange(value)` as a Form.Item-friendly alias for `onValueChange`.",
+          "remarksKey": "api.select.components.Select.props.remarks",
+          "inherits": [
+            "Omit< React.ComponentPropsWithoutRef<typeof SelectPrimitive.Root>, \"onValueChange\" >"
+          ],
+          "inheritedMembers": [
+            {
+              "description": "Controls browser autocomplete behavior.",
+              "name": "autoComplete",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Content rendered inside the element.",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "description": "Sets the initial uncontrolled value.",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Disables user interaction with the element.",
+              "name": "disabled",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Associates the control with a form by id.",
+              "name": "form",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Sets the form field name.",
+              "name": "name",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Marks the field as required for native validation.",
+              "name": "required",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Controls the current value.",
+              "name": "value",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "members": [
+            {
+              "description": "Describes the trigger when used inside Form.Item.",
+              "descriptionKey": "api.select.components.Select.props.members.aria-describedby.description",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Marks the trigger invalid when used inside Form.Item.",
+              "descriptionKey": "api.select.components.Select.props.members.aria-invalid.description",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaAttributes[\"aria-invalid\"]"
+            },
+            {
+              "description": "Gives the trigger a stable id when used with Label.",
+              "descriptionKey": "api.select.components.Select.props.members.id.description",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Runs when the selected value changes.",
+              "descriptionKey": "api.select.components.Select.props.members.onChange.description",
+              "remarks": "Receives the next string value. This mirrors the project form trigger convention.",
+              "remarksKey": "api.select.components.Select.props.members.onChange.remarks",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "SelectChangeHandler"
+            },
+            {
+              "description": "Runs when the selected value changes.",
+              "descriptionKey": "api.select.components.Select.props.members.onValueChange.description",
+              "name": "onValueChange",
+              "optional": true,
+              "required": false,
+              "type": "SelectChangeHandler"
+            },
+            {
+              "defaultValue": "\"md\"",
+              "description": "Controls the select trigger height, radius, item spacing, and text size.",
+              "descriptionKey": "api.select.components.Select.props.members.size.description",
+              "name": "size",
+              "optional": true,
+              "required": false,
+              "type": "SelectSize"
+            },
+            {
+              "defaultValue": "\"default\"",
+              "description": "Controls the select semantic paper tone.",
+              "descriptionKey": "api.select.components.Select.props.members.tone.description",
+              "name": "tone",
+              "optional": true,
+              "required": false,
+              "type": "SelectTone"
+            },
+            {
+              "defaultValue": "\"outlined\"",
+              "description": "Controls the select trigger border and fill emphasis.",
+              "descriptionKey": "api.select.components.Select.props.members.variant.description",
+              "name": "variant",
+              "optional": true,
+              "required": false,
+              "type": "SelectVariant"
+            }
+          ],
+          "type": "SelectProps"
+        }
+      },
+      {
+        "description": "Portaled sticker select dropdown content.",
+        "descriptionKey": "api.select.components.SelectContent.description",
+        "name": "SelectContent",
+        "props": {
+          "inherits": [],
+          "members": [],
+          "type": "React.ComponentPropsWithoutRef<typeof SelectPrimitive.Content>"
+        }
+      },
+      {
+        "description": "Groups related select items.",
+        "descriptionKey": "api.select.components.SelectGroup.description",
+        "name": "SelectGroup",
+        "props": {
+          "inherits": [],
+          "members": [],
+          "type": "React.ComponentPropsWithoutRef<typeof SelectPrimitive.Group>"
+        }
+      },
+      {
+        "description": "Selectable sticker menu item.",
+        "descriptionKey": "api.select.components.SelectItem.description",
+        "name": "SelectItem",
+        "props": {
+          "inherits": [],
+          "members": [],
+          "type": "React.ComponentPropsWithoutRef<typeof SelectPrimitive.Item>"
+        }
+      },
+      {
+        "description": "Labels a group of select items.",
+        "descriptionKey": "api.select.components.SelectLabel.description",
+        "name": "SelectLabel",
+        "props": {
+          "inherits": [],
+          "members": [],
+          "type": "React.ComponentPropsWithoutRef<typeof SelectPrimitive.Label>"
+        }
+      },
+      {
+        "description": "Scrolls the select content downward when items overflow.",
+        "descriptionKey": "api.select.components.SelectScrollDownButton.description",
+        "name": "SelectScrollDownButton",
+        "props": {
+          "inherits": [],
+          "members": [],
+          "type": "React.ComponentPropsWithoutRef<typeof SelectPrimitive.ScrollDownButton>"
+        }
+      },
+      {
+        "description": "Scrolls the select content upward when items overflow.",
+        "descriptionKey": "api.select.components.SelectScrollUpButton.description",
+        "name": "SelectScrollUpButton",
+        "props": {
+          "inherits": [],
+          "members": [],
+          "type": "React.ComponentPropsWithoutRef<typeof SelectPrimitive.ScrollUpButton>"
+        }
+      },
+      {
+        "description": "Separates select item groups.",
+        "descriptionKey": "api.select.components.SelectSeparator.description",
+        "name": "SelectSeparator",
+        "props": {
+          "inherits": [],
+          "members": [],
+          "type": "React.ComponentPropsWithoutRef<typeof SelectPrimitive.Separator>"
+        }
+      },
+      {
+        "description": "Opens the sticker select content.",
+        "descriptionKey": "api.select.components.SelectTrigger.description",
+        "name": "SelectTrigger",
+        "props": {
+          "inherits": [],
+          "members": [],
+          "type": "React.ComponentPropsWithoutRef<typeof SelectPrimitive.Trigger>"
+        }
+      },
+      {
+        "description": "Displays the currently selected item text or placeholder.",
+        "descriptionKey": "api.select.components.SelectValue.description",
+        "name": "SelectValue",
+        "props": {
+          "inherits": [],
+          "members": [],
+          "type": "React.ComponentPropsWithoutRef<typeof SelectPrimitive.Value>"
+        }
+      }
+    ],
+    "description": "A Radix-powered select with sticker trigger, menu, and item states.",
+    "descriptionKey": "api.select.description",
+    "exports": [
+      {
+        "description": "Sticker select root powered by Radix Select.",
+        "descriptionKey": "api.select.exports.Select.description",
+        "kind": "component",
+        "name": "Select"
+      },
+      {
+        "description": "Portaled sticker select dropdown content.",
+        "descriptionKey": "api.select.exports.SelectContent.description",
+        "kind": "component",
+        "name": "SelectContent"
+      },
+      {
+        "description": "Groups related select items.",
+        "descriptionKey": "api.select.exports.SelectGroup.description",
+        "kind": "component",
+        "name": "SelectGroup"
+      },
+      {
+        "description": "Selectable sticker menu item.",
+        "descriptionKey": "api.select.exports.SelectItem.description",
+        "kind": "component",
+        "name": "SelectItem"
+      },
+      {
+        "description": "Labels a group of select items.",
+        "descriptionKey": "api.select.exports.SelectLabel.description",
+        "kind": "component",
+        "name": "SelectLabel"
+      },
+      {
+        "description": "Scrolls the select content downward when items overflow.",
+        "descriptionKey": "api.select.exports.SelectScrollDownButton.description",
+        "kind": "component",
+        "name": "SelectScrollDownButton"
+      },
+      {
+        "description": "Scrolls the select content upward when items overflow.",
+        "descriptionKey": "api.select.exports.SelectScrollUpButton.description",
+        "kind": "component",
+        "name": "SelectScrollUpButton"
+      },
+      {
+        "description": "Separates select item groups.",
+        "descriptionKey": "api.select.exports.SelectSeparator.description",
+        "kind": "component",
+        "name": "SelectSeparator"
+      },
+      {
+        "description": "Opens the sticker select content.",
+        "descriptionKey": "api.select.exports.SelectTrigger.description",
+        "kind": "component",
+        "name": "SelectTrigger"
+      },
+      {
+        "description": "Displays the currently selected item text or placeholder.",
+        "descriptionKey": "api.select.exports.SelectValue.description",
+        "kind": "component",
+        "name": "SelectValue"
+      },
+      {
+        "description": "Builds the sticker select trigger className from input variants and Radix select states.",
+        "descriptionKey": "api.select.exports.selectVariants.description",
+        "kind": "variant",
+        "name": "selectVariants"
+      }
+    ],
+    "name": "select",
+    "sourcePath": "src/components/ui/select.tsx",
+    "title": "Sticker Select",
+    "types": [
+      {
+        "description": "Props for the sticker select root.",
+        "descriptionKey": "api.select.types.SelectProps.description",
+        "remarks": "Wraps Radix Select.Root and keeps `onChange(value)` as a Form.Item-friendly alias for `onValueChange`.",
+        "remarksKey": "api.select.types.SelectProps.remarks",
+        "inherits": [
+          "Omit< React.ComponentPropsWithoutRef<typeof SelectPrimitive.Root>, \"onValueChange\" >"
+        ],
+        "kind": "interface",
+        "members": [
+          {
+            "description": "Describes the trigger when used inside Form.Item.",
+            "descriptionKey": "api.select.types.SelectProps.members.aria-describedby.description",
+            "name": "aria-describedby",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "Marks the trigger invalid when used inside Form.Item.",
+            "descriptionKey": "api.select.types.SelectProps.members.aria-invalid.description",
+            "name": "aria-invalid",
+            "optional": true,
+            "required": false,
+            "type": "React.AriaAttributes[\"aria-invalid\"]"
+          },
+          {
+            "description": "Gives the trigger a stable id when used with Label.",
+            "descriptionKey": "api.select.types.SelectProps.members.id.description",
+            "name": "id",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "Runs when the selected value changes.",
+            "descriptionKey": "api.select.types.SelectProps.members.onChange.description",
+            "remarks": "Receives the next string value. This mirrors the project form trigger convention.",
+            "remarksKey": "api.select.types.SelectProps.members.onChange.remarks",
+            "name": "onChange",
+            "optional": true,
+            "required": false,
+            "type": "SelectChangeHandler"
+          },
+          {
+            "description": "Runs when the selected value changes.",
+            "descriptionKey": "api.select.types.SelectProps.members.onValueChange.description",
+            "name": "onValueChange",
+            "optional": true,
+            "required": false,
+            "type": "SelectChangeHandler"
+          },
+          {
+            "defaultValue": "\"md\"",
+            "description": "Controls the select trigger height, radius, item spacing, and text size.",
+            "descriptionKey": "api.select.types.SelectProps.members.size.description",
+            "name": "size",
+            "optional": true,
+            "required": false,
+            "type": "SelectSize"
+          },
+          {
+            "defaultValue": "\"default\"",
+            "description": "Controls the select semantic paper tone.",
+            "descriptionKey": "api.select.types.SelectProps.members.tone.description",
+            "name": "tone",
+            "optional": true,
+            "required": false,
+            "type": "SelectTone"
+          },
+          {
+            "defaultValue": "\"outlined\"",
+            "description": "Controls the select trigger border and fill emphasis.",
+            "descriptionKey": "api.select.types.SelectProps.members.variant.description",
+            "name": "variant",
+            "optional": true,
+            "required": false,
+            "type": "SelectVariant"
+          }
+        ],
+        "name": "SelectProps"
+      }
+    ],
+    "variants": []
+  },
   "form": {
     "components": [
       {

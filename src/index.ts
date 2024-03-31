@@ -35,6 +35,19 @@ export {
   labelTones,
 } from "./components/ui/label"
 export {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectScrollDownButton,
+  SelectScrollUpButton,
+  SelectSeparator,
+  SelectTrigger,
+  SelectValue,
+  selectVariants,
+} from "./components/ui/select"
+export {
   Table,
   TableBody,
   TableCaption,

@@ -17,8 +17,9 @@
 ## Conventions
 
 - Keep registry components source-only and easy to copy through shadcn.
-- React and Tailwind should remain the only runtime peers.
-- Avoid adding runtime helpers such as Radix Slot, CVA, clsx, or tailwind-merge to registry components.
+- React, Tailwind, and Radix primitives are the baseline UI stack.
+- Prefer `lucide-react` for component icons before drawing custom CSS/SVG icons.
+- Keep extra runtime dependencies minimal. Add non-baseline dependencies only when they provide clear component-level value, and declare them on the specific registry item that needs them.
 - Preserve the handbook sticker style: warm paper surfaces, chunky outlines, hard offset shadows, and tactile interaction states.
 - Use shared Tailwind CSS variables from `src/globals.css` for common sticker colors, radius, border widths, shadows, focus rings, and preview grid details before reaching for raw hex values or arbitrary shadows.
 - Keep oxfmt sorting focused on project-wide consistency before tuning individual ordering preferences.

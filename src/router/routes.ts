@@ -113,6 +113,16 @@ const routes = [
     path: "/components/textarea",
   },
   {
+    component: () => import("@/pages/components/select"),
+    meta: {
+      description: "Radix option controls with chunky sticker frames.",
+      emoji: "S",
+      order: 85,
+      title: "Select",
+    },
+    path: "/components/select",
+  },
+  {
     component: () => import("@/pages/components/label"),
     meta: {
       description: "Accessible form captions with small sticker markers.",

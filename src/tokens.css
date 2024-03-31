@@ -12,7 +12,7 @@
   --color-primary: var(--color-fill-default);
   --color-primary-foreground: var(--color-ink);
   --color-border: var(--color-ink);
-  --color-ring: #9b5de5;
+  --color-ring: var(--color-primary);
 
   --color-accent-info: #4ea8de;
   --color-accent-secondary: #9b5de5;

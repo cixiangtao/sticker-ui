@@ -460,6 +460,53 @@ const ZH_PREVIEW_COMPONENT_TRANSLATIONS: Record<string, string> = {
   "Warm paper for setup notes and migration reminders.":
     "暖色纸张适合设置备注和迁移提醒。",
   "Window Header": "窗口标题栏",
+  "A Radix-powered select with sticker trigger, menu, and item states.":
+    "由 Radix 驱动的选择框，包含贴纸风格触发器、菜单和选项状态。",
+  Archive: "归档",
+  Archived: "已归档",
+  "Build lead": "构建负责人",
+  "Choose a destination": "选择目标位置",
+  "Choose a role": "选择角色",
+  "Compact cards": "紧凑卡片",
+  "Daily check": "每日检查",
+  Destination: "目标位置",
+  "Destination is required.": "目标位置为必填项。",
+  "Design captain": "设计队长",
+  "Docs page": "文档页面",
+  "Editable draft": "可编辑草稿",
+  "High focus": "高度聚焦",
+  "Invalid, disabled, and quiet select states stay visible through Radix props and Form.Item validation.":
+    "无效、禁用和 quiet 选择框状态会通过 Radix props 与 Form.Item 校验保持可见。",
+  "Locked after review": "评审后已锁定",
+  "Low touch": "低接触",
+  "Monthly map": "月度地图",
+  "Radix option controls with chunky sticker frames.":
+    "带有厚实贴纸边框的 Radix 选项控件。",
+  "Normal pass": "正常通过",
+  "Pair Select with Label when a finite option list needs accessible captions and helper text.":
+    "当有限选项列表需要可访问标题和辅助文本时，可将 Select 与 Label 组合使用。",
+  "Preview shell": "预览外壳",
+  Priority: "优先级",
+  "Quiet selects sit inside dense cards.": "quiet 选择框适合放在密集卡片内。",
+  "Registry card": "Registry 卡片",
+  "Research scout": "研究侦察员",
+  "Roomy panels": "宽松面板",
+  "Roomy priority": "宽松优先级",
+  Select: "选择框",
+  "Select keeps accessible keyboard behavior while adding a chunky sticker menu and a clear paper indicator.":
+    "Select 保留可访问键盘行为，同时加入厚实贴纸菜单和清晰的纸张指示器。",
+  "Sizes align selects with compact filters, standard forms, and roomy settings panels while tone keeps semantic context visible.":
+    "尺寸让选择框适配紧凑筛选、标准表单和宽松设置面板，同时 tone 保持语义上下文可见。",
+  "Small filter": "小号筛选",
+  "Standard plan": "标准计划",
+  "Sticker Select": "贴纸选择框",
+  "Team role": "团队角色",
+  "The field shell passes aria-invalid to Select when validation fails.":
+    "校验失败时，字段外壳会把 aria-invalid 传给 Select。",
+  "Tone can reinforce selection status.": "Tone 可强化选中状态。",
+  "Use disabled for archived settings.": "对已归档设置使用 disabled。",
+  View: "视图",
+  "Weekly review": "每周复盘",
 }
 
 export { ZH_PREVIEW_COMPONENT_TRANSLATIONS }

@@ -5,9 +5,10 @@ A source-first React + Tailwind component library with a handbook sticker visual
 ## Direction
 
 - Components are distributed as source code through a shadcn-compatible registry.
-- React and Tailwind are the only required runtime peers.
+- React, Tailwind, and Radix primitives form the baseline UI stack.
+- Component icons should prefer `lucide-react` before custom CSS/SVG shapes.
 - Visual style is intentionally independent from shadcn/ui.
-- Registry components avoid runtime helpers such as Radix Slot, CVA, clsx, or tailwind-merge.
+- Registry components keep extra runtime dependencies minimal and declare non-baseline dependencies only when they provide clear component-level value.
 
 ## Install Shape
 
