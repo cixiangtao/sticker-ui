@@ -9,6 +9,7 @@ interface MenuItem {
   description?: string
   emoji?: string
   icon?: string
+  navSection?: string
   order: number
   path: string
   title: string
@@ -27,6 +28,7 @@ interface RouteMeta {
   emoji?: string
   hideInMenu?: boolean
   icon?: string
+  navSection?: string
   order?: number
   permission?: string
   title: string
@@ -41,6 +43,10 @@ function buildRouteTree(
       createRouteFromConfig(rootRoute, routeConfig),
     ),
   )
+}
+
+function defineRoutes<const T extends readonly RouteConfig[]>(routes: T): T {
+  return routes
 }
 
 function createRouteFromConfig(
@@ -73,6 +79,7 @@ function generateMenuItems(routeConfigs: readonly RouteConfig[]): MenuItem[] {
       description: routeConfig.meta.description,
       emoji: routeConfig.meta.emoji,
       icon: routeConfig.meta.icon,
+      navSection: routeConfig.meta.navSection,
       order: routeConfig.meta.order ?? 0,
       path: routeConfig.path,
       title: routeConfig.meta.title,
@@ -88,5 +95,5 @@ function normalizePathForRoute(path: string) {
   return path.replace(/^\/+/, "")
 }
 
-export { buildRouteTree, generateMenuItems }
+export { buildRouteTree, defineRoutes, generateMenuItems }
 export type { MenuItem, RouteConfig, RouteMeta }

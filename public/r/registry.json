@@ -77,6 +77,21 @@
       ]
     },
     {
+      "name": "alert",
+      "type": "registry:ui",
+      "title": "Sticker Alert",
+      "description": "A readable sticker note for status messages and feedback.",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "src/components/ui/alert.tsx",
+          "target": "@ui/alert.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "label",
       "type": "registry:ui",
       "title": "Sticker Label",
@@ -146,6 +161,51 @@
         {
           "path": "src/components/ui/select.tsx",
           "target": "@ui/select.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "checkbox",
+      "type": "registry:ui",
+      "title": "Sticker Checkbox",
+      "description": "A Radix-powered checkbox with sticker checked and indeterminate states.",
+      "dependencies": ["@radix-ui/react-checkbox", "lucide-react"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "src/components/ui/checkbox.tsx",
+          "target": "@ui/checkbox.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "radio",
+      "type": "registry:ui",
+      "title": "Sticker Radio",
+      "description": "A Radix-powered radio group with tactile sticker items and selected states.",
+      "dependencies": ["@radix-ui/react-radio-group"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "src/components/ui/radio.tsx",
+          "target": "@ui/radio.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "switch",
+      "type": "registry:ui",
+      "title": "Sticker Switch",
+      "description": "A Radix-powered switch with a tactile sticker track and paper thumb.",
+      "dependencies": ["@radix-ui/react-switch"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "src/components/ui/switch.tsx",
+          "target": "@ui/switch.tsx",
           "type": "registry:ui"
         }
       ]

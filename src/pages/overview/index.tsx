@@ -28,15 +28,29 @@ function OverviewPage() {
                 <div className="text-xs font-extrabold text-[#696B76] uppercase">
                   {group.label}
                 </div>
-                <div className="mt-3 flex flex-col gap-2">
-                  {group.items.map((item) => (
-                    <a
-                      className="rounded-[12px] border border-[#2E3038] bg-[#FFFDF7] px-3 py-2 text-sm font-extrabold transition hover:-translate-y-0.5"
-                      href={`#${item.path}`}
-                      key={item.id}
-                    >
-                      {item.label}
-                    </a>
+                <div className="mt-3 flex flex-col gap-3">
+                  {group.sections.map((section) => (
+                    <div className="flex flex-col gap-2" key={section.label}>
+                      {group.sections.length > 1 ? (
+                        <div className="flex items-center justify-between rounded-[10px] border border-[#2E3038] bg-[#FFF6DC] px-3 py-1.5">
+                          <span className="text-xs font-black uppercase">
+                            {section.label}
+                          </span>
+                          <span className="text-xs font-extrabold text-[#696B76]">
+                            {section.items.length}
+                          </span>
+                        </div>
+                      ) : null}
+                      {section.items.map((item) => (
+                        <a
+                          className="rounded-[12px] border border-[#2E3038] bg-[#FFFDF7] px-3 py-2 text-sm font-extrabold transition hover:-translate-y-0.5"
+                          href={`#${item.path}`}
+                          key={item.id}
+                        >
+                          {item.label}
+                        </a>
+                      ))}
+                    </div>
                   ))}
                 </div>
               </div>

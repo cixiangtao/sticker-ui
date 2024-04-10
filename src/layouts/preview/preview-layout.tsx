@@ -79,40 +79,68 @@ function Sidebar({ activeRoute }: { activeRoute: RouteId }) {
         className="flex w-full min-w-0 gap-3 overflow-x-auto lg:flex-col lg:overflow-visible"
       >
         {NAV_GROUPS.map((group) => (
-          <div className="min-w-[220px] lg:min-w-0" key={group.label}>
-            <h3 className="text-text mb-2 text-xl font-extrabold uppercase">
-              {t(group.label)}
-            </h3>
-            <div className="flex flex-col gap-2">
-              {group.items.map((item) => (
-                <Card
-                  asChild
-                  className={[
-                    "rounded-sticker-lg border-ink border-2 px-3 py-3 transition hover:-translate-y-0.5",
-                    activeRoute === item.id
-                      ? "bg-fill-default shadow-sticker-md"
-                      : "bg-surface shadow-sticker-xs",
-                  ].join(" ")}
-                  interactive
-                  key={item.id}
-                  padding="sm"
-                >
-                  <Link
-                    aria-current={activeRoute === item.id ? "page" : undefined}
-                    resetScroll={false}
-                    to={item.path}
-                  >
-                    <span className="flex items-center justify-between gap-3">
-                      <span className="font-extrabold">{item.label}</span>
-                      <Tag color="success" size="xs" variant="solid">
-                        {t(item.status)}
-                      </Tag>
-                    </span>
-                    <span className="mt-1 block text-xs leading-5 font-medium text-text-subtle">
-                      {t(item.description)}
-                    </span>
-                  </Link>
-                </Card>
+          <div className="min-w-[240px] lg:min-w-0" key={group.label}>
+            <div className="mb-2 flex items-center justify-between gap-3">
+              <h3 className="text-text text-xl font-extrabold uppercase">
+                {t(group.label)}
+              </h3>
+              <Tag color="default" size="xs" variant="outlined">
+                {group.items.length}
+              </Tag>
+            </div>
+            <div className="flex flex-col gap-4">
+              {group.sections.map((section) => (
+                <div className="flex flex-col gap-2" key={section.label}>
+                  {group.sections.length > 1 ? (
+                    <div className="rounded-sticker-lg border border-ink bg-fill-warning px-3 py-2">
+                      <div className="flex items-center justify-between gap-2">
+                        <h4 className="text-sm font-black">
+                          {t(section.label)}
+                        </h4>
+                        <span className="text-xs font-extrabold text-text-subtle">
+                          {section.items.length}
+                        </span>
+                      </div>
+                      {section.description ? (
+                        <p className="mt-1 text-xs leading-4 font-medium text-text-muted">
+                          {t(section.description)}
+                        </p>
+                      ) : null}
+                    </div>
+                  ) : null}
+                  {section.items.map((item) => (
+                    <Card
+                      asChild
+                      className={[
+                        "rounded-sticker-lg border-ink border-2 px-3 py-3 transition hover:-translate-y-0.5",
+                        activeRoute === item.id
+                          ? "bg-fill-default shadow-sticker-md"
+                          : "bg-surface shadow-sticker-xs",
+                      ].join(" ")}
+                      interactive
+                      key={item.id}
+                      padding="sm"
+                    >
+                      <Link
+                        aria-current={
+                          activeRoute === item.id ? "page" : undefined
+                        }
+                        resetScroll={false}
+                        to={item.path}
+                      >
+                        <span className="flex items-center justify-between gap-3">
+                          <span className="font-extrabold">{item.label}</span>
+                          <Tag color="success" size="xs" variant="solid">
+                            {t(item.status)}
+                          </Tag>
+                        </span>
+                        <span className="mt-1 block text-xs leading-5 font-medium text-text-subtle">
+                          {t(item.description)}
+                        </span>
+                      </Link>
+                    </Card>
+                  ))}
+                </div>
               ))}
             </div>
           </div>

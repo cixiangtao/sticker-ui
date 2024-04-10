@@ -1560,6 +1560,651 @@
       }
     ]
   },
+  "alert": {
+    "components": [
+      {
+        "description": "Sticker alert surface for status messages, validation summaries, and helpful notes.",
+        "descriptionKey": "api.alert.components.Alert.description",
+        "name": "Alert",
+        "props": {
+          "description": "Props for the sticker alert root.",
+          "descriptionKey": "api.alert.components.Alert.props.description",
+          "remarks": "Inherits native div attributes and adds semantic tone, size, and structure variants.",
+          "remarksKey": "api.alert.components.Alert.props.remarks",
+          "inherits": [
+            "React.HTMLAttributes<HTMLDivElement>",
+            "VariantProps<typeof alertVariants>"
+          ],
+          "inheritedMembers": [
+            {
+              "description": "Identifies elements that describe the control.",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Indicates whether the current value is invalid.",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "description": "Provides an accessible label when visible text is not enough.",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Identifies elements that label the control.",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Focuses the element when it mounts.",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Content rendered inside the element.",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "description": "Adds custom class names to the root element.",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Sets the initial unchecked or checked state.",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Sets the initial uncontrolled value.",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            },
+            {
+              "description": "Sets the element id.",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Runs when the element loses focus.",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLDivElement>"
+            },
+            {
+              "description": "Runs when the value changes.",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "React.ChangeEventHandler<HTMLDivElement, Element>"
+            },
+            {
+              "description": "Runs when the element is clicked.",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "description": "Runs when the element receives focus.",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLDivElement>"
+            },
+            {
+              "description": "Runs when a key is pressed.",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLDivElement>"
+            },
+            {
+              "description": "Runs when a key is released.",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLDivElement>"
+            },
+            {
+              "description": "Runs when the pointer enters the element.",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "description": "Runs when the pointer leaves the element.",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "description": "Sets the ARIA role.",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "description": "Adds inline styles to the root element.",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "description": "Sets advisory text for the element.",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "members": [
+            {
+              "defaultValue": "\"md\"",
+              "description": "Controls the alert padding and radius.",
+              "descriptionKey": "api.alert.components.Alert.props.members.size.description",
+              "name": "size",
+              "optional": true,
+              "required": false,
+              "type": "\"lg\" | \"md\" | \"sm\""
+            },
+            {
+              "defaultValue": "\"default\"",
+              "description": "Controls the semantic paper tone.",
+              "descriptionKey": "api.alert.components.Alert.props.members.tone.description",
+              "name": "tone",
+              "optional": true,
+              "required": false,
+              "type": "\"danger\" | \"default\" | \"info\" | \"secondary\" | \"success\" | \"warning\""
+            },
+            {
+              "defaultValue": "\"stripe\"",
+              "description": "Controls the alert surface structure and emphasis.",
+              "descriptionKey": "api.alert.components.Alert.props.members.variant.description",
+              "name": "variant",
+              "optional": true,
+              "required": false,
+              "type": "\"filled\" | \"outlined\" | \"stripe\""
+            }
+          ],
+          "type": "AlertProps"
+        }
+      },
+      {
+        "description": "Sticker alert body copy.",
+        "descriptionKey": "api.alert.components.AlertDescription.description",
+        "name": "AlertDescription",
+        "props": {
+          "inherits": [],
+          "inheritedMembers": [
+            {
+              "description": "Identifies elements that describe the control.",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Indicates whether the current value is invalid.",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "description": "Provides an accessible label when visible text is not enough.",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Identifies elements that label the control.",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Focuses the element when it mounts.",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Content rendered inside the element.",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "string | number | bigint | boolean | React.ReactElement<unknown, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<string | number | bigint | boolean | React.ReactPortal | React.ReactElement<unknown, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | null> | null"
+            },
+            {
+              "description": "Adds custom class names to the root element.",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Sets the initial unchecked or checked state.",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Sets the initial uncontrolled value.",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            },
+            {
+              "description": "Sets the element id.",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Runs when the element loses focus.",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLParagraphElement>"
+            },
+            {
+              "description": "Runs when the value changes.",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "React.ChangeEventHandler<HTMLParagraphElement, Element>"
+            },
+            {
+              "description": "Runs when the element is clicked.",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLParagraphElement>"
+            },
+            {
+              "description": "Runs when the element receives focus.",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLParagraphElement>"
+            },
+            {
+              "description": "Runs when a key is pressed.",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLParagraphElement>"
+            },
+            {
+              "description": "Runs when a key is released.",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLParagraphElement>"
+            },
+            {
+              "description": "Runs when the pointer enters the element.",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLParagraphElement>"
+            },
+            {
+              "description": "Runs when the pointer leaves the element.",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLParagraphElement>"
+            },
+            {
+              "description": "Sets the ARIA role.",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "description": "Adds inline styles to the root element.",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "description": "Sets advisory text for the element.",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "members": [],
+          "type": "AlertDescriptionProps"
+        }
+      },
+      {
+        "description": "Sticker alert heading.",
+        "descriptionKey": "api.alert.components.AlertTitle.description",
+        "name": "AlertTitle",
+        "props": {
+          "inherits": [],
+          "inheritedMembers": [
+            {
+              "description": "Identifies elements that describe the control.",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Indicates whether the current value is invalid.",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "description": "Provides an accessible label when visible text is not enough.",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Identifies elements that label the control.",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Focuses the element when it mounts.",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Content rendered inside the element.",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "string | number | bigint | boolean | React.ReactElement<unknown, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<string | number | bigint | boolean | React.ReactPortal | React.ReactElement<unknown, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | null> | null"
+            },
+            {
+              "description": "Adds custom class names to the root element.",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Sets the initial unchecked or checked state.",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Sets the initial uncontrolled value.",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            },
+            {
+              "description": "Sets the element id.",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Runs when the element loses focus.",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLHeadingElement>"
+            },
+            {
+              "description": "Runs when the value changes.",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "React.ChangeEventHandler<HTMLHeadingElement, Element>"
+            },
+            {
+              "description": "Runs when the element is clicked.",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLHeadingElement>"
+            },
+            {
+              "description": "Runs when the element receives focus.",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLHeadingElement>"
+            },
+            {
+              "description": "Runs when a key is pressed.",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLHeadingElement>"
+            },
+            {
+              "description": "Runs when a key is released.",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLHeadingElement>"
+            },
+            {
+              "description": "Runs when the pointer enters the element.",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLHeadingElement>"
+            },
+            {
+              "description": "Runs when the pointer leaves the element.",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLHeadingElement>"
+            },
+            {
+              "description": "Sets the ARIA role.",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "description": "Adds inline styles to the root element.",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "description": "Sets advisory text for the element.",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "members": [],
+          "type": "AlertTitleProps"
+        }
+      }
+    ],
+    "description": "A readable sticker note for status messages and feedback.",
+    "descriptionKey": "api.alert.description",
+    "exports": [
+      {
+        "description": "Sticker alert surface for status messages, validation summaries, and helpful notes.",
+        "descriptionKey": "api.alert.exports.Alert.description",
+        "kind": "component",
+        "name": "Alert"
+      },
+      {
+        "description": "Sticker alert body copy.",
+        "descriptionKey": "api.alert.exports.AlertDescription.description",
+        "kind": "component",
+        "name": "AlertDescription"
+      },
+      { "kind": "type", "name": "AlertDescriptionProps" },
+      {
+        "description": "Props for the sticker alert root.",
+        "descriptionKey": "api.alert.exports.AlertProps.description",
+        "remarks": "Inherits native div attributes and adds semantic tone, size, and structure variants.",
+        "remarksKey": "api.alert.exports.AlertProps.remarks",
+        "kind": "interface",
+        "name": "AlertProps"
+      },
+      {
+        "description": "Sticker alert heading.",
+        "descriptionKey": "api.alert.exports.AlertTitle.description",
+        "kind": "component",
+        "name": "AlertTitle"
+      },
+      { "kind": "type", "name": "AlertTitleProps" },
+      {
+        "description": "Builds the sticker alert className from tone and variant options.",
+        "descriptionKey": "api.alert.exports.alertVariants.description",
+        "kind": "variant",
+        "name": "alertVariants"
+      }
+    ],
+    "name": "alert",
+    "sourcePath": "src/components/ui/alert.tsx",
+    "title": "Sticker Alert",
+    "types": [
+      {
+        "inherits": [],
+        "kind": "type",
+        "members": [],
+        "name": "AlertDescriptionProps",
+        "type": "React.HTMLAttributes<HTMLParagraphElement>"
+      },
+      {
+        "description": "Props for the sticker alert root.",
+        "descriptionKey": "api.alert.types.AlertProps.description",
+        "remarks": "Inherits native div attributes and adds semantic tone, size, and structure variants.",
+        "remarksKey": "api.alert.types.AlertProps.remarks",
+        "inherits": [
+          "React.HTMLAttributes<HTMLDivElement>",
+          "VariantProps<typeof alertVariants>"
+        ],
+        "kind": "interface",
+        "members": [
+          {
+            "defaultValue": "\"md\"",
+            "description": "Controls the alert padding and radius.",
+            "descriptionKey": "api.alert.types.AlertProps.members.size.description",
+            "name": "size",
+            "optional": true,
+            "required": false,
+            "type": "\"lg\" | \"md\" | \"sm\""
+          },
+          {
+            "defaultValue": "\"default\"",
+            "description": "Controls the semantic paper tone.",
+            "descriptionKey": "api.alert.types.AlertProps.members.tone.description",
+            "name": "tone",
+            "optional": true,
+            "required": false,
+            "type": "\"danger\" | \"default\" | \"info\" | \"secondary\" | \"success\" | \"warning\""
+          },
+          {
+            "defaultValue": "\"stripe\"",
+            "description": "Controls the alert surface structure and emphasis.",
+            "descriptionKey": "api.alert.types.AlertProps.members.variant.description",
+            "name": "variant",
+            "optional": true,
+            "required": false,
+            "type": "\"filled\" | \"outlined\" | \"stripe\""
+          }
+        ],
+        "name": "AlertProps"
+      },
+      {
+        "inherits": [],
+        "kind": "type",
+        "members": [],
+        "name": "AlertTitleProps",
+        "type": "React.HTMLAttributes<HTMLHeadingElement>"
+      }
+    ],
+    "variants": [
+      {
+        "description": "Builds the sticker alert className from tone and variant options.",
+        "descriptionKey": "api.alert.variants.alertVariants.description",
+        "groups": [
+          {
+            "defaultValue": "md",
+            "name": "size",
+            "values": ["lg", "md", "sm"]
+          },
+          {
+            "defaultValue": "default",
+            "name": "tone",
+            "values": [
+              "danger",
+              "default",
+              "info",
+              "secondary",
+              "success",
+              "warning"
+            ]
+          },
+          {
+            "defaultValue": "stripe",
+            "name": "variant",
+            "values": ["filled", "outlined", "stripe"]
+          }
+        ],
+        "name": "alertVariants"
+      }
+    ]
+  },
   "label": {
     "components": [
       {
@@ -3628,6 +4273,1281 @@
           }
         ],
         "name": "SelectProps"
+      }
+    ],
+    "variants": []
+  },
+  "checkbox": {
+    "components": [
+      {
+        "description": "Sticker checkbox powered by Radix Checkbox.",
+        "descriptionKey": "api.checkbox.components.Checkbox.description",
+        "name": "Checkbox",
+        "props": {
+          "description": "Props for the sticker checkbox root.",
+          "descriptionKey": "api.checkbox.components.Checkbox.props.description",
+          "remarks": "Wraps Radix Checkbox.Root and adds sticker size, tone, and variant props.",
+          "remarksKey": "api.checkbox.components.Checkbox.props.remarks",
+          "inherits": [
+            "Omit< React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>, \"className\" >"
+          ],
+          "inheritedMembers": [
+            {
+              "description": "Identifies elements that describe the control.",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Indicates whether the current value is invalid.",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "description": "Provides an accessible label when visible text is not enough.",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Identifies elements that label the control.",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Focuses the element when it mounts.",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Controls the checked state.",
+              "name": "checked",
+              "optional": true,
+              "required": false,
+              "type": "CheckboxPrimitive.CheckedState"
+            },
+            {
+              "description": "Content rendered inside the element.",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "description": "Sets the initial unchecked or checked state.",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "CheckboxPrimitive.CheckedState"
+            },
+            {
+              "description": "Sets the initial uncontrolled value.",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            },
+            {
+              "description": "Disables user interaction with the element.",
+              "name": "disabled",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Associates the control with a form by id.",
+              "name": "form",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Sets the element id.",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Sets the form field name.",
+              "name": "name",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Runs when the element loses focus.",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLButtonElement>"
+            },
+            {
+              "description": "Runs when the value changes.",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "React.ChangeEventHandler<HTMLButtonElement, Element>"
+            },
+            {
+              "description": "Runs when the element is clicked.",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLButtonElement>"
+            },
+            {
+              "description": "Runs when the element receives focus.",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLButtonElement>"
+            },
+            {
+              "description": "Runs when a key is pressed.",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLButtonElement>"
+            },
+            {
+              "description": "Runs when a key is released.",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLButtonElement>"
+            },
+            {
+              "description": "Runs when the pointer enters the element.",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLButtonElement>"
+            },
+            {
+              "description": "Runs when the pointer leaves the element.",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLButtonElement>"
+            },
+            {
+              "description": "Marks the field as required for native validation.",
+              "name": "required",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Sets the ARIA role.",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "description": "Adds inline styles to the root element.",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "description": "Sets advisory text for the element.",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Sets the native control type.",
+              "name": "type",
+              "optional": true,
+              "required": false,
+              "type": "\"button\" | \"submit\" | \"reset\""
+            },
+            {
+              "description": "Controls the current value.",
+              "name": "value",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            }
+          ],
+          "members": [
+            {
+              "description": "Custom className for the checkbox root.",
+              "descriptionKey": "api.checkbox.components.Checkbox.props.members.className.description",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "defaultValue": "\"md\"",
+              "description": "Controls the checkbox square, icon, and radius size.",
+              "descriptionKey": "api.checkbox.components.Checkbox.props.members.size.description",
+              "name": "size",
+              "optional": true,
+              "required": false,
+              "type": "CheckboxSize"
+            },
+            {
+              "defaultValue": "\"default\"",
+              "description": "Controls the semantic paper tone.",
+              "descriptionKey": "api.checkbox.components.Checkbox.props.members.tone.description",
+              "name": "tone",
+              "optional": true,
+              "required": false,
+              "type": "CheckboxTone"
+            },
+            {
+              "defaultValue": "\"outlined\"",
+              "description": "Controls the checkbox border and fill emphasis.",
+              "descriptionKey": "api.checkbox.components.Checkbox.props.members.variant.description",
+              "name": "variant",
+              "optional": true,
+              "required": false,
+              "type": "CheckboxVariant"
+            }
+          ],
+          "type": "CheckboxProps"
+        }
+      }
+    ],
+    "description": "A Radix-powered checkbox with sticker checked and indeterminate states.",
+    "descriptionKey": "api.checkbox.description",
+    "exports": [
+      {
+        "description": "Sticker checkbox powered by Radix Checkbox.",
+        "descriptionKey": "api.checkbox.exports.Checkbox.description",
+        "kind": "component",
+        "name": "Checkbox"
+      },
+      {
+        "description": "Props for the sticker checkbox root.",
+        "descriptionKey": "api.checkbox.exports.CheckboxProps.description",
+        "remarks": "Wraps Radix Checkbox.Root and adds sticker size, tone, and variant props.",
+        "remarksKey": "api.checkbox.exports.CheckboxProps.remarks",
+        "kind": "interface",
+        "name": "CheckboxProps"
+      },
+      {
+        "description": "Builds the sticker checkbox className from structure, tone, and size variants.",
+        "descriptionKey": "api.checkbox.exports.checkboxVariants.description",
+        "kind": "variant",
+        "name": "checkboxVariants"
+      }
+    ],
+    "name": "checkbox",
+    "sourcePath": "src/components/ui/checkbox.tsx",
+    "title": "Sticker Checkbox",
+    "types": [
+      {
+        "description": "Props for the sticker checkbox root.",
+        "descriptionKey": "api.checkbox.types.CheckboxProps.description",
+        "remarks": "Wraps Radix Checkbox.Root and adds sticker size, tone, and variant props.",
+        "remarksKey": "api.checkbox.types.CheckboxProps.remarks",
+        "inherits": [
+          "Omit< React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>, \"className\" >"
+        ],
+        "kind": "interface",
+        "members": [
+          {
+            "description": "Custom className for the checkbox root.",
+            "descriptionKey": "api.checkbox.types.CheckboxProps.members.className.description",
+            "name": "className",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "defaultValue": "\"md\"",
+            "description": "Controls the checkbox square, icon, and radius size.",
+            "descriptionKey": "api.checkbox.types.CheckboxProps.members.size.description",
+            "name": "size",
+            "optional": true,
+            "required": false,
+            "type": "CheckboxSize"
+          },
+          {
+            "defaultValue": "\"default\"",
+            "description": "Controls the semantic paper tone.",
+            "descriptionKey": "api.checkbox.types.CheckboxProps.members.tone.description",
+            "name": "tone",
+            "optional": true,
+            "required": false,
+            "type": "CheckboxTone"
+          },
+          {
+            "defaultValue": "\"outlined\"",
+            "description": "Controls the checkbox border and fill emphasis.",
+            "descriptionKey": "api.checkbox.types.CheckboxProps.members.variant.description",
+            "name": "variant",
+            "optional": true,
+            "required": false,
+            "type": "CheckboxVariant"
+          }
+        ],
+        "name": "CheckboxProps"
+      }
+    ],
+    "variants": []
+  },
+  "radio": {
+    "components": [
+      {
+        "description": "Sticker radio group powered by Radix Radio Group.",
+        "descriptionKey": "api.radio.components.RadioGroup.description",
+        "name": "RadioGroup",
+        "props": {
+          "description": "Props for the sticker radio group root.",
+          "descriptionKey": "api.radio.components.RadioGroup.props.description",
+          "remarks": "Wraps Radix RadioGroup.Root and keeps `onChange(value)` as a Form.Item-friendly alias for `onValueChange`.",
+          "remarksKey": "api.radio.components.RadioGroup.props.remarks",
+          "inherits": [
+            "Omit< React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Root>, \"className\" | \"onChange\" | \"onValueChange\" >"
+          ],
+          "inheritedMembers": [
+            {
+              "description": "Identifies elements that describe the control.",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Indicates whether the current value is invalid.",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "description": "Provides an accessible label when visible text is not enough.",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Identifies elements that label the control.",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Focuses the element when it mounts.",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Content rendered inside the element.",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "description": "Sets the initial unchecked or checked state.",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Sets the initial uncontrolled value.",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Disables user interaction with the element.",
+              "name": "disabled",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Sets the element id.",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Sets the form field name.",
+              "name": "name",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Runs when the element loses focus.",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLDivElement>"
+            },
+            {
+              "description": "Runs when the element is clicked.",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "description": "Runs when the element receives focus.",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLDivElement>"
+            },
+            {
+              "description": "Runs when a key is pressed.",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLDivElement>"
+            },
+            {
+              "description": "Runs when a key is released.",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLDivElement>"
+            },
+            {
+              "description": "Runs when the pointer enters the element.",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "description": "Runs when the pointer leaves the element.",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "description": "Marks the field as required for native validation.",
+              "name": "required",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Sets the ARIA role.",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "description": "Adds inline styles to the root element.",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "description": "Sets advisory text for the element.",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Controls the current value.",
+              "name": "value",
+              "optional": true,
+              "required": false,
+              "type": "string | null"
+            }
+          ],
+          "members": [
+            {
+              "description": "Custom className for the radio group root.",
+              "descriptionKey": "api.radio.components.RadioGroup.props.members.className.description",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Runs when the selected value changes.",
+              "descriptionKey": "api.radio.components.RadioGroup.props.members.onChange.description",
+              "remarks": "Receives the next string value. This mirrors the project form trigger convention.",
+              "remarksKey": "api.radio.components.RadioGroup.props.members.onChange.remarks",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "RadioChangeHandler"
+            },
+            {
+              "description": "Runs when the selected value changes.",
+              "descriptionKey": "api.radio.components.RadioGroup.props.members.onValueChange.description",
+              "name": "onValueChange",
+              "optional": true,
+              "required": false,
+              "type": "RadioChangeHandler"
+            },
+            {
+              "defaultValue": "\"md\"",
+              "description": "Controls item and indicator size for children.",
+              "descriptionKey": "api.radio.components.RadioGroup.props.members.size.description",
+              "name": "size",
+              "optional": true,
+              "required": false,
+              "type": "RadioSize"
+            },
+            {
+              "defaultValue": "\"default\"",
+              "description": "Controls the semantic paper tone for children.",
+              "descriptionKey": "api.radio.components.RadioGroup.props.members.tone.description",
+              "name": "tone",
+              "optional": true,
+              "required": false,
+              "type": "RadioTone"
+            },
+            {
+              "defaultValue": "\"outlined\"",
+              "description": "Controls child item border and fill emphasis.",
+              "descriptionKey": "api.radio.components.RadioGroup.props.members.variant.description",
+              "name": "variant",
+              "optional": true,
+              "required": false,
+              "type": "RadioVariant"
+            }
+          ],
+          "type": "RadioGroupProps"
+        }
+      },
+      {
+        "description": "Selectable sticker radio item.",
+        "descriptionKey": "api.radio.components.RadioGroupItem.description",
+        "name": "RadioGroupItem",
+        "props": {
+          "description": "Props for a sticker radio group item.",
+          "descriptionKey": "api.radio.components.RadioGroupItem.props.description",
+          "remarks": "Wraps Radix RadioGroup.Item and can inherit visual variants from RadioGroup.",
+          "remarksKey": "api.radio.components.RadioGroupItem.props.remarks",
+          "inherits": [
+            "Omit< React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Item>, \"className\" >"
+          ],
+          "inheritedMembers": [
+            {
+              "description": "Identifies elements that describe the control.",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Indicates whether the current value is invalid.",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "description": "Provides an accessible label when visible text is not enough.",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Identifies elements that label the control.",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Focuses the element when it mounts.",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Controls the checked state.",
+              "name": "checked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Content rendered inside the element.",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "description": "Sets the initial unchecked or checked state.",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Sets the initial uncontrolled value.",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            },
+            {
+              "description": "Disables user interaction with the element.",
+              "name": "disabled",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Associates the control with a form by id.",
+              "name": "form",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Sets the element id.",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Runs when the element loses focus.",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLButtonElement>"
+            },
+            {
+              "description": "Runs when the value changes.",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "React.ChangeEventHandler<HTMLButtonElement, Element>"
+            },
+            {
+              "description": "Runs when the element is clicked.",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLButtonElement>"
+            },
+            {
+              "description": "Runs when the element receives focus.",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLButtonElement>"
+            },
+            {
+              "description": "Runs when a key is pressed.",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLButtonElement>"
+            },
+            {
+              "description": "Runs when a key is released.",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLButtonElement>"
+            },
+            {
+              "description": "Runs when the pointer enters the element.",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLButtonElement>"
+            },
+            {
+              "description": "Runs when the pointer leaves the element.",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLButtonElement>"
+            },
+            {
+              "description": "Marks the field as required for native validation.",
+              "name": "required",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Sets the ARIA role.",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "description": "Adds inline styles to the root element.",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "description": "Sets advisory text for the element.",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Sets the native control type.",
+              "name": "type",
+              "optional": true,
+              "required": false,
+              "type": "\"button\" | \"submit\" | \"reset\""
+            },
+            {
+              "description": "Controls the current value.",
+              "name": "value",
+              "optional": false,
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "members": [
+            {
+              "description": "Custom className for the radio item root.",
+              "descriptionKey": "api.radio.components.RadioGroupItem.props.members.className.description",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Controls the radio item and dot size.",
+              "descriptionKey": "api.radio.components.RadioGroupItem.props.members.size.description",
+              "name": "size",
+              "optional": true,
+              "required": false,
+              "type": "RadioSize"
+            },
+            {
+              "description": "Controls the semantic paper tone.",
+              "descriptionKey": "api.radio.components.RadioGroupItem.props.members.tone.description",
+              "name": "tone",
+              "optional": true,
+              "required": false,
+              "type": "RadioTone"
+            },
+            {
+              "description": "Controls the item border and fill emphasis.",
+              "descriptionKey": "api.radio.components.RadioGroupItem.props.members.variant.description",
+              "name": "variant",
+              "optional": true,
+              "required": false,
+              "type": "RadioVariant"
+            }
+          ],
+          "type": "RadioGroupItemProps"
+        }
+      }
+    ],
+    "description": "A Radix-powered radio group with tactile sticker items and selected states.",
+    "descriptionKey": "api.radio.description",
+    "exports": [
+      {
+        "description": "Sticker radio group powered by Radix Radio Group.",
+        "descriptionKey": "api.radio.exports.RadioGroup.description",
+        "kind": "component",
+        "name": "RadioGroup"
+      },
+      {
+        "description": "Selectable sticker radio item.",
+        "descriptionKey": "api.radio.exports.RadioGroupItem.description",
+        "kind": "component",
+        "name": "RadioGroupItem"
+      },
+      {
+        "description": "Props for a sticker radio group item.",
+        "descriptionKey": "api.radio.exports.RadioGroupItemProps.description",
+        "remarks": "Wraps Radix RadioGroup.Item and can inherit visual variants from RadioGroup.",
+        "remarksKey": "api.radio.exports.RadioGroupItemProps.remarks",
+        "kind": "interface",
+        "name": "RadioGroupItemProps"
+      },
+      {
+        "description": "Props for the sticker radio group root.",
+        "descriptionKey": "api.radio.exports.RadioGroupProps.description",
+        "remarks": "Wraps Radix RadioGroup.Root and keeps `onChange(value)` as a Form.Item-friendly alias for `onValueChange`.",
+        "remarksKey": "api.radio.exports.RadioGroupProps.remarks",
+        "kind": "interface",
+        "name": "RadioGroupProps"
+      },
+      {
+        "description": "Builds the sticker radio item className from structure, tone, and size variants.",
+        "descriptionKey": "api.radio.exports.radioVariants.description",
+        "kind": "variant",
+        "name": "radioVariants"
+      }
+    ],
+    "name": "radio",
+    "sourcePath": "src/components/ui/radio.tsx",
+    "title": "Sticker Radio",
+    "types": [
+      {
+        "description": "Props for a sticker radio group item.",
+        "descriptionKey": "api.radio.types.RadioGroupItemProps.description",
+        "remarks": "Wraps Radix RadioGroup.Item and can inherit visual variants from RadioGroup.",
+        "remarksKey": "api.radio.types.RadioGroupItemProps.remarks",
+        "inherits": [
+          "Omit< React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Item>, \"className\" >"
+        ],
+        "kind": "interface",
+        "members": [
+          {
+            "description": "Custom className for the radio item root.",
+            "descriptionKey": "api.radio.types.RadioGroupItemProps.members.className.description",
+            "name": "className",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "Controls the radio item and dot size.",
+            "descriptionKey": "api.radio.types.RadioGroupItemProps.members.size.description",
+            "name": "size",
+            "optional": true,
+            "required": false,
+            "type": "RadioSize"
+          },
+          {
+            "description": "Controls the semantic paper tone.",
+            "descriptionKey": "api.radio.types.RadioGroupItemProps.members.tone.description",
+            "name": "tone",
+            "optional": true,
+            "required": false,
+            "type": "RadioTone"
+          },
+          {
+            "description": "Controls the item border and fill emphasis.",
+            "descriptionKey": "api.radio.types.RadioGroupItemProps.members.variant.description",
+            "name": "variant",
+            "optional": true,
+            "required": false,
+            "type": "RadioVariant"
+          }
+        ],
+        "name": "RadioGroupItemProps"
+      },
+      {
+        "description": "Props for the sticker radio group root.",
+        "descriptionKey": "api.radio.types.RadioGroupProps.description",
+        "remarks": "Wraps Radix RadioGroup.Root and keeps `onChange(value)` as a Form.Item-friendly alias for `onValueChange`.",
+        "remarksKey": "api.radio.types.RadioGroupProps.remarks",
+        "inherits": [
+          "Omit< React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Root>, \"className\" | \"onChange\" | \"onValueChange\" >"
+        ],
+        "kind": "interface",
+        "members": [
+          {
+            "description": "Custom className for the radio group root.",
+            "descriptionKey": "api.radio.types.RadioGroupProps.members.className.description",
+            "name": "className",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "Runs when the selected value changes.",
+            "descriptionKey": "api.radio.types.RadioGroupProps.members.onChange.description",
+            "remarks": "Receives the next string value. This mirrors the project form trigger convention.",
+            "remarksKey": "api.radio.types.RadioGroupProps.members.onChange.remarks",
+            "name": "onChange",
+            "optional": true,
+            "required": false,
+            "type": "RadioChangeHandler"
+          },
+          {
+            "description": "Runs when the selected value changes.",
+            "descriptionKey": "api.radio.types.RadioGroupProps.members.onValueChange.description",
+            "name": "onValueChange",
+            "optional": true,
+            "required": false,
+            "type": "RadioChangeHandler"
+          },
+          {
+            "defaultValue": "\"md\"",
+            "description": "Controls item and indicator size for children.",
+            "descriptionKey": "api.radio.types.RadioGroupProps.members.size.description",
+            "name": "size",
+            "optional": true,
+            "required": false,
+            "type": "RadioSize"
+          },
+          {
+            "defaultValue": "\"default\"",
+            "description": "Controls the semantic paper tone for children.",
+            "descriptionKey": "api.radio.types.RadioGroupProps.members.tone.description",
+            "name": "tone",
+            "optional": true,
+            "required": false,
+            "type": "RadioTone"
+          },
+          {
+            "defaultValue": "\"outlined\"",
+            "description": "Controls child item border and fill emphasis.",
+            "descriptionKey": "api.radio.types.RadioGroupProps.members.variant.description",
+            "name": "variant",
+            "optional": true,
+            "required": false,
+            "type": "RadioVariant"
+          }
+        ],
+        "name": "RadioGroupProps"
+      }
+    ],
+    "variants": []
+  },
+  "switch": {
+    "components": [
+      {
+        "description": "Sticker switch powered by Radix Switch.",
+        "descriptionKey": "api.switch.components.Switch.description",
+        "name": "Switch",
+        "props": {
+          "description": "Props for the sticker switch root.",
+          "descriptionKey": "api.switch.components.Switch.props.description",
+          "remarks": "Wraps Radix Switch.Root and adds sticker size, tone, and variant props.",
+          "remarksKey": "api.switch.components.Switch.props.remarks",
+          "inherits": [
+            "Omit< React.ComponentPropsWithoutRef<typeof SwitchPrimitive.Root>, \"className\" >"
+          ],
+          "inheritedMembers": [
+            {
+              "description": "Identifies elements that describe the control.",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Indicates whether the current value is invalid.",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "description": "Provides an accessible label when visible text is not enough.",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Identifies elements that label the control.",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Focuses the element when it mounts.",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Controls the checked state.",
+              "name": "checked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Content rendered inside the element.",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "description": "Sets the initial unchecked or checked state.",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Sets the initial uncontrolled value.",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            },
+            {
+              "description": "Disables user interaction with the element.",
+              "name": "disabled",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Associates the control with a form by id.",
+              "name": "form",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Sets the element id.",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Sets the form field name.",
+              "name": "name",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Runs when the element loses focus.",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLButtonElement>"
+            },
+            {
+              "description": "Runs when the value changes.",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "React.ChangeEventHandler<HTMLButtonElement, Element>"
+            },
+            {
+              "description": "Runs when the element is clicked.",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLButtonElement>"
+            },
+            {
+              "description": "Runs when the element receives focus.",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLButtonElement>"
+            },
+            {
+              "description": "Runs when a key is pressed.",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLButtonElement>"
+            },
+            {
+              "description": "Runs when a key is released.",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLButtonElement>"
+            },
+            {
+              "description": "Runs when the pointer enters the element.",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLButtonElement>"
+            },
+            {
+              "description": "Runs when the pointer leaves the element.",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLButtonElement>"
+            },
+            {
+              "description": "Marks the field as required for native validation.",
+              "name": "required",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Sets the ARIA role.",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "description": "Adds inline styles to the root element.",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "description": "Sets advisory text for the element.",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Sets the native control type.",
+              "name": "type",
+              "optional": true,
+              "required": false,
+              "type": "\"button\" | \"submit\" | \"reset\""
+            },
+            {
+              "description": "Controls the current value.",
+              "name": "value",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            }
+          ],
+          "members": [
+            {
+              "description": "Custom className for the switch root.",
+              "descriptionKey": "api.switch.components.Switch.props.members.className.description",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "defaultValue": "\"md\"",
+              "description": "Controls the switch track and thumb size.",
+              "descriptionKey": "api.switch.components.Switch.props.members.size.description",
+              "name": "size",
+              "optional": true,
+              "required": false,
+              "type": "SwitchSize"
+            },
+            {
+              "defaultValue": "\"default\"",
+              "description": "Controls the semantic paper tone.",
+              "descriptionKey": "api.switch.components.Switch.props.members.tone.description",
+              "name": "tone",
+              "optional": true,
+              "required": false,
+              "type": "SwitchTone"
+            },
+            {
+              "defaultValue": "\"outlined\"",
+              "description": "Controls the switch border and fill emphasis.",
+              "descriptionKey": "api.switch.components.Switch.props.members.variant.description",
+              "name": "variant",
+              "optional": true,
+              "required": false,
+              "type": "SwitchVariant"
+            }
+          ],
+          "type": "SwitchProps"
+        }
+      }
+    ],
+    "description": "A Radix-powered switch with a tactile sticker track and paper thumb.",
+    "descriptionKey": "api.switch.description",
+    "exports": [
+      {
+        "description": "Sticker switch powered by Radix Switch.",
+        "descriptionKey": "api.switch.exports.Switch.description",
+        "kind": "component",
+        "name": "Switch"
+      },
+      {
+        "description": "Props for the sticker switch root.",
+        "descriptionKey": "api.switch.exports.SwitchProps.description",
+        "remarks": "Wraps Radix Switch.Root and adds sticker size, tone, and variant props.",
+        "remarksKey": "api.switch.exports.SwitchProps.remarks",
+        "kind": "interface",
+        "name": "SwitchProps"
+      },
+      {
+        "description": "Builds the sticker switch className from structure, tone, and size variants.",
+        "descriptionKey": "api.switch.exports.switchVariants.description",
+        "kind": "variant",
+        "name": "switchVariants"
+      }
+    ],
+    "name": "switch",
+    "sourcePath": "src/components/ui/switch.tsx",
+    "title": "Sticker Switch",
+    "types": [
+      {
+        "description": "Props for the sticker switch root.",
+        "descriptionKey": "api.switch.types.SwitchProps.description",
+        "remarks": "Wraps Radix Switch.Root and adds sticker size, tone, and variant props.",
+        "remarksKey": "api.switch.types.SwitchProps.remarks",
+        "inherits": [
+          "Omit< React.ComponentPropsWithoutRef<typeof SwitchPrimitive.Root>, \"className\" >"
+        ],
+        "kind": "interface",
+        "members": [
+          {
+            "description": "Custom className for the switch root.",
+            "descriptionKey": "api.switch.types.SwitchProps.members.className.description",
+            "name": "className",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "defaultValue": "\"md\"",
+            "description": "Controls the switch track and thumb size.",
+            "descriptionKey": "api.switch.types.SwitchProps.members.size.description",
+            "name": "size",
+            "optional": true,
+            "required": false,
+            "type": "SwitchSize"
+          },
+          {
+            "defaultValue": "\"default\"",
+            "description": "Controls the semantic paper tone.",
+            "descriptionKey": "api.switch.types.SwitchProps.members.tone.description",
+            "name": "tone",
+            "optional": true,
+            "required": false,
+            "type": "SwitchTone"
+          },
+          {
+            "defaultValue": "\"outlined\"",
+            "description": "Controls the switch border and fill emphasis.",
+            "descriptionKey": "api.switch.types.SwitchProps.members.variant.description",
+            "name": "variant",
+            "optional": true,
+            "required": false,
+            "type": "SwitchVariant"
+          }
+        ],
+        "name": "SwitchProps"
       }
     ],
     "variants": []

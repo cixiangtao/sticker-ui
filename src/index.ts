@@ -7,6 +7,17 @@ const Input = Object.assign(InputRoot, {
 
 export { Button, buttonVariants } from "./components/ui/button"
 export {
+  Alert,
+  AlertDescription,
+  AlertTitle,
+  alertVariants,
+} from "./components/ui/alert"
+export type {
+  AlertDescriptionProps,
+  AlertProps,
+  AlertTitleProps,
+} from "./components/ui/alert"
+export {
   Card,
   CardContent,
   CardDescription,
@@ -15,6 +26,8 @@ export {
   CardTitle,
   cardVariants,
 } from "./components/ui/card"
+export { Checkbox, checkboxVariants } from "./components/ui/checkbox"
+export type { CheckboxProps } from "./components/ui/checkbox"
 export { Form, useForm } from "./components/ui/form"
 export type {
   FieldData,
@@ -47,6 +60,17 @@ export {
   SelectValue,
   selectVariants,
 } from "./components/ui/select"
+export {
+  RadioGroup,
+  RadioGroupItem,
+  radioVariants,
+} from "./components/ui/radio"
+export type {
+  RadioGroupItemProps,
+  RadioGroupProps,
+} from "./components/ui/radio"
+export { Switch, switchVariants } from "./components/ui/switch"
+export type { SwitchProps } from "./components/ui/switch"
 export {
   Table,
   TableBody,

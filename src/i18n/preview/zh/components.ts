@@ -48,6 +48,7 @@ const ZH_PREVIEW_COMPONENT_TRANSLATIONS: Record<string, string> = {
   "Add component": "添加组件",
   "All fields passed": "所有字段已通过",
   Aliases: "别名",
+  Actions: "操作",
   "Antd-style field state and validation for sticker forms.":
     "用于贴纸表单的 Ant Design 风格字段状态与校验。",
   "Anything the team should remember": "团队需要记住的事项",
@@ -57,6 +58,7 @@ const ZH_PREVIEW_COMPONENT_TRANSLATIONS: Record<string, string> = {
   "Between 3 and 18 characters.": "长度为 3 到 18 个字符。",
   Base: "基础色",
   Border: "边框",
+  "Buttons and direct command surfaces.": "按钮和直接命令界面。",
   Canvas: "画布",
   "Complete color token inventory from tokens.css, grouped by purpose.":
     "完整展示 tokens.css 中的颜色令牌，并按用途分组。",
@@ -65,8 +67,14 @@ const ZH_PREVIEW_COMPONENT_TRANSLATIONS: Record<string, string> = {
   "Danger Soft": "危险柔和",
   "Default Soft": "默认柔和",
   Fill: "填充色",
+  "Feedback & Status": "反馈与状态",
   Foreground: "前景",
+  "Form Controls": "表单控件",
   "Info Strong": "信息强化",
+  "Inputs, choices, toggles, and field scaffolding.":
+    "输入、选项、切换和字段脚手架。",
+  "Layout, structured data, and compact metadata.":
+    "布局、结构化数据和紧凑元数据。",
   Muted: "弱化",
   Overlay: "遮罩",
   "Paper fills for cards, tags, buttons, and demo backgrounds.":
@@ -76,6 +84,7 @@ const ZH_PREVIEW_COMPONENT_TRANSLATIONS: Record<string, string> = {
   "Primary Foreground": "主要前景",
   "Readable text colors for statuses, helper copy, and labels.":
     "用于状态、辅助文案和标签的可读文本颜色。",
+  "Readable notes, labels, and status signals.": "易读备注、标签和状态信号。",
   Ring: "焦点环",
   "Saturated pins used for dots, accents, and small badges.":
     "用于圆点、强调和小徽章的高饱和图钉色。",
@@ -332,6 +341,7 @@ const ZH_PREVIEW_COMPONENT_TRANSLATIONS: Record<string, string> = {
     "当面板需要更安静的标题区时，可将 decoration 设为 null。",
   Success: "成功",
   "Surface Variants": "表面变体",
+  "Surfaces & Data": "界面与数据",
   "Sun Tab": "阳光标签",
   Table: "表格",
   Tag: "标签",
@@ -507,6 +517,114 @@ const ZH_PREVIEW_COMPONENT_TRANSLATIONS: Record<string, string> = {
   "Use disabled for archived settings.": "对已归档设置使用 disabled。",
   View: "视图",
   "Weekly review": "每周复盘",
+  Alert: "提示",
+  "Alert creates a readable sticker note for status messages, validation summaries, and helpful next steps.":
+    "Alert 会创建易读的贴纸提示，用于状态消息、校验摘要和有用的下一步。",
+  "All checks passed for this component.": "该组件的所有检查均已通过。",
+  Beta: "Beta",
+  "Build failed": "构建失败",
+  Checkbox: "复选框",
+  "Checkbox keeps Radix keyboard behavior while adding a chunky sticker square, hard shadow, and clear checked mark.":
+    "Checkbox 保留 Radix 键盘行为，同时加入厚实贴纸方块、硬质阴影和清晰的选中标记。",
+  "Design note": "设计备注",
+  Digest: "摘要订阅",
+  "Filled, outlined, and stripe variants tune alert emphasis across dense forms and documentation panels.":
+    "filled、outlined 和 stripe 变体可调整提示在密集表单和文档面板中的强调程度。",
+  Flag: "标记",
+  "Invalid, disabled, and semantic checkbox states stay visible through Radix props and Form.Item validation.":
+    "无效、禁用和语义复选框状态会通过 Radix props 与 Form.Item 校验保持可见。",
+  "Invalid, disabled, and semantic switch states stay visible through Radix props and Form.Item validation.":
+    "无效、禁用和语义开关状态会通过 Radix props 与 Form.Item 校验保持可见。",
+  Managed: "托管",
+  "Needs review": "需要评审",
+  "Pair Checkbox with Label when a single option needs accessible copy and helper text.":
+    "当单个选项需要可访问文案和辅助文本时，可将 Checkbox 与 Label 组合使用。",
+  "Pair Switch with Label for immediate on/off preferences and settings.":
+    "将 Switch 与 Label 组合，用于即时开关偏好和设置。",
+  "Please accept the sticker terms.": "请接受贴纸条款。",
+  "Preview updated": "预览已更新",
+  "Publish launch notes": "发布上线说明",
+  "Quiet checkboxes sit inside dense cards.":
+    "quiet 复选框适合放在密集卡片内。",
+  "Quiet switches sit inside dense cards.": "quiet 开关适合放在密集卡片内。",
+  "A Radix-powered radio group with tactile sticker items and selected states.":
+    "带触感贴纸选项和选中状态的 Radix 单选组。",
+  Channel: "渠道",
+  "Choose one launch channel.": "请选择一个发布渠道。",
+  Confidence: "信心",
+  "Invalid, disabled, and semantic radio states stay visible through Radix props and Form.Item validation.":
+    "无效、禁用和语义单选状态会通过 Radix props 与 Form.Item 校验保持可见。",
+  "Launch rhythm": "发布节奏",
+  Locked: "已锁定",
+  "Pair RadioGroup with Label when one option must be selected from a short list.":
+    "当短列表中必须选择一个选项时，可将 RadioGroup 与 Label 组合使用。",
+  "Quiet radio items sit inside dense cards.":
+    "quiet 单选项适合放在密集卡片内。",
+  "Radix radio groups with tactile sticker items.":
+    "带触感贴纸选项的 Radix 单选组。",
+  Radio: "单选",
+  "Radio keeps Radix keyboard behavior while adding chunky sticker circles, hard shadows, and a clear selected dot.":
+    "Radio 保留 Radix 键盘行为，同时加入厚实贴纸圆圈、硬质阴影和清晰的选中圆点。",
+  "RadioGroup exposes onChange(value), so Form.Item can collect the selected string value.":
+    "RadioGroup 暴露 onChange(value)，因此 Form.Item 可以收集选中的字符串值。",
+  Ready: "就绪",
+  Review: "评审",
+  "Roomy route": "宽松路径",
+  "Save route": "保存路径",
+  "Sizes align radio controls with compact lists, standard forms, and roomy settings while tone keeps semantic context visible.":
+    "尺寸让单选控件适配紧凑列表、标准表单和宽松设置，同时 tone 保持语义上下文可见。",
+  "Small option": "小号选项",
+  "Standard choice": "标准选择",
+  "Sticker Radio": "贴纸单选",
+  "Tone can reinforce confident routing choices.":
+    "Tone 可强化有把握的路由选择。",
+  "Use disabled for locked choice groups.": "对已锁定的选择组使用 disabled。",
+  "Radix checkbox controls with sticker checked states.":
+    "带贴纸选中状态的 Radix 复选框控件。",
+  "Radix switch controls with tactile sticker tracks.":
+    "带触感贴纸轨道的 Radix 开关控件。",
+  "Readable sticker notes for feedback and status messages.":
+    "用于反馈和状态消息的易读贴纸提示。",
+  Reminders: "提醒",
+  "Roomy alerts": "宽松提醒",
+  "Roomy mixed state": "宽松混合状态",
+  "Run lint before handing off the registry.":
+    "交付 registry 前请先运行 lint。",
+  "Save choices": "保存选择",
+  "Save settings": "保存设置",
+  "Semantic tones keep feedback readable while the sticker frame gives every message a clear paper surface.":
+    "语义色调让反馈保持可读，贴纸边框为每条消息提供清晰纸张表面。",
+  "Sizes align checkbox controls with compact lists, standard forms, and roomy settings while tone keeps semantic context visible.":
+    "尺寸让复选框控件适配紧凑列表、标准表单和宽松设置，同时 tone 保持语义上下文可见。",
+  "Sizes align switches with compact toolbars, standard settings, and roomy preference panels while tone keeps state context visible.":
+    "尺寸让开关适配紧凑工具栏、标准设置和宽松偏好面板，同时 tone 保持状态上下文可见。",
+  "Small checklist": "小号清单",
+  "Small toggle": "小号开关",
+  "Standard review": "标准评审",
+  "Standard sync": "标准同步",
+  Stripe: "条纹",
+  Switch: "开关",
+  "Switch keeps Radix pressed state behavior while adding a tactile sticker track and paper thumb.":
+    "Switch 保留 Radix 按下状态行为，同时加入触感贴纸轨道和纸张滑块。",
+  Sync: "同步",
+  Terms: "条款",
+  "The registry output is ready to inspect before publishing the component page.":
+    "发布组件页面前，registry 输出已准备好检查。",
+  "Tone can reinforce a healthy sync setting.": "Tone 可强化健康的同步设置。",
+  "Tone can reinforce successful subscription choices.":
+    "Tone 可强化成功的订阅选择。",
+  "Translation copy changed in this demo.": "此 demo 中的翻译文案发生了变化。",
+  "Turn on reminders before publishing.": "发布前请开启提醒。",
+  "Use disabled for locked checklist items.": "对锁定的清单项使用 disabled。",
+  "Use disabled for managed settings.": "对托管设置使用 disabled。",
+  "Use for calmer status notes.": "用于更克制的状态备注。",
+  "Use for compact documentation hints.": "用于紧凑的文档提示。",
+  "Use for prominent inline feedback.": "用于突出的行内反馈。",
+  "Use valuePropName and onCheckedChange when Checkbox is controlled by Form.Item.":
+    "当 Checkbox 由 Form.Item 控制时，使用 valuePropName 和 onCheckedChange。",
+  "Use valuePropName and onCheckedChange when Switch is controlled by Form.Item.":
+    "当 Switch 由 Form.Item 控制时，使用 valuePropName 和 onCheckedChange。",
+  "Weekly digest": "每周摘要",
 }
 
 export { ZH_PREVIEW_COMPONENT_TRANSLATIONS }

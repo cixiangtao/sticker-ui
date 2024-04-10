@@ -1,4 +1,38 @@
 const ZH_PREVIEW_API_DOC_TRANSLATIONS: Record<string, string> = {
+  "api.alert.description": "用于状态消息和反馈的易读贴纸提示。",
+  "api.alert.components.Alert.description":
+    "用于状态消息、校验摘要和提示备注的贴纸提示表面。",
+  "api.alert.components.Alert.props.description": "贴纸提示根元素的 props。",
+  "api.alert.components.Alert.props.members.size.description":
+    "控制提示内边距和圆角。",
+  "api.alert.components.Alert.props.members.tone.description":
+    "控制提示的语义纸张色调。",
+  "api.alert.components.Alert.props.members.variant.description":
+    "控制提示表面结构和强调程度。",
+  "api.alert.components.Alert.props.remarks":
+    "继承原生 div 属性，并加入语义色调、尺寸和结构变体。",
+  "api.alert.components.AlertDescription.description": "贴纸提示正文。",
+  "api.alert.components.AlertTitle.description": "贴纸提示标题。",
+  "api.alert.exports.Alert.description":
+    "用于状态消息、校验摘要和提示备注的贴纸提示表面。",
+  "api.alert.exports.AlertDescription.description": "贴纸提示正文。",
+  "api.alert.exports.AlertProps.description": "贴纸提示根元素的 props。",
+  "api.alert.exports.AlertProps.remarks":
+    "继承原生 div 属性，并加入语义色调、尺寸和结构变体。",
+  "api.alert.exports.AlertTitle.description": "贴纸提示标题。",
+  "api.alert.exports.alertVariants.description":
+    "根据色调和结构变体生成贴纸提示的 className。",
+  "api.alert.types.AlertProps.description": "贴纸提示根元素的 props。",
+  "api.alert.types.AlertProps.members.size.description":
+    "控制提示内边距和圆角。",
+  "api.alert.types.AlertProps.members.tone.description":
+    "控制提示的语义纸张色调。",
+  "api.alert.types.AlertProps.members.variant.description":
+    "控制提示表面结构和强调程度。",
+  "api.alert.types.AlertProps.remarks":
+    "继承原生 div 属性，并加入语义色调、尺寸和结构变体。",
+  "api.alert.variants.alertVariants.description":
+    "根据色调和结构变体生成贴纸提示的 className。",
   "api.button.description": "带厚实墨色边框的触感 handbook 贴纸按钮。",
   "api.button.components.Button.props.description": "贴纸按钮根元素的 props。",
   "api.button.components.Button.props.members.asChild.description":
@@ -81,6 +115,40 @@ const ZH_PREVIEW_API_DOC_TRANSLATIONS: Record<string, string> = {
     "继承原生 HTML 属性，并加入语义元素和交互状态。",
   "api.card.variants.cardVariants.description":
     "根据结构变体生成贴纸卡片的 className。",
+  "api.checkbox.description": "带贴纸选中和不确定状态的 Radix 复选框。",
+  "api.checkbox.components.Checkbox.description":
+    "由 Radix Checkbox 驱动的贴纸复选框。",
+  "api.checkbox.components.Checkbox.props.description":
+    "贴纸复选框根元素的 props。",
+  "api.checkbox.components.Checkbox.props.members.className.description":
+    "复选框根元素的自定义 className。",
+  "api.checkbox.components.Checkbox.props.members.size.description":
+    "控制复选框方块、图标和圆角尺寸。",
+  "api.checkbox.components.Checkbox.props.members.tone.description":
+    "控制语义纸张色调。",
+  "api.checkbox.components.Checkbox.props.members.variant.description":
+    "控制复选框边框和填充强调程度。",
+  "api.checkbox.components.Checkbox.props.remarks":
+    "包裹 Radix Checkbox.Root，并加入贴纸尺寸、色调和变体 props。",
+  "api.checkbox.exports.Checkbox.description":
+    "由 Radix Checkbox 驱动的贴纸复选框。",
+  "api.checkbox.exports.CheckboxProps.description":
+    "贴纸复选框根元素的 props。",
+  "api.checkbox.exports.CheckboxProps.remarks":
+    "包裹 Radix Checkbox.Root，并加入贴纸尺寸、色调和变体 props。",
+  "api.checkbox.exports.checkboxVariants.description":
+    "根据结构、色调和尺寸变体生成贴纸复选框的 className。",
+  "api.checkbox.types.CheckboxProps.description": "贴纸复选框根元素的 props。",
+  "api.checkbox.types.CheckboxProps.members.className.description":
+    "复选框根元素的自定义 className。",
+  "api.checkbox.types.CheckboxProps.members.size.description":
+    "控制复选框方块、图标和圆角尺寸。",
+  "api.checkbox.types.CheckboxProps.members.tone.description":
+    "控制语义纸张色调。",
+  "api.checkbox.types.CheckboxProps.members.variant.description":
+    "控制复选框边框和填充强调程度。",
+  "api.checkbox.types.CheckboxProps.remarks":
+    "包裹 Radix Checkbox.Root，并加入贴纸尺寸、色调和变体 props。",
   "api.label.description": "带可选贴纸标记的可访问表单标题。",
   "api.label.components.Label.props.description": "贴纸标签根元素的 props。",
   "api.label.components.Label.props.members.optional.description":
@@ -309,6 +377,109 @@ const ZH_PREVIEW_API_DOC_TRANSLATIONS: Record<string, string> = {
     "控制选择框触发器边框和填充的强调程度。",
   "api.select.types.SelectProps.remarks":
     "封装 Radix Select.Root，并保留 `onChange(value)` 作为适配 Form.Item 的 `onValueChange` 别名。",
+  "api.radio.description": "带触感贴纸选项和选中状态的 Radix 单选组。",
+  "api.radio.components.RadioGroup.description":
+    "由 Radix Radio Group 驱动的贴纸单选组。",
+  "api.radio.components.RadioGroup.props.description":
+    "贴纸单选组根元素的 props。",
+  "api.radio.components.RadioGroup.props.members.className.description":
+    "单选组根元素的自定义 className。",
+  "api.radio.components.RadioGroup.props.members.onChange.description":
+    "选中值变化时调用。",
+  "api.radio.components.RadioGroup.props.members.onChange.remarks":
+    "接收下一个字符串值，保持与项目表单触发器约定一致。",
+  "api.radio.components.RadioGroup.props.members.onValueChange.description":
+    "选中值变化时调用。",
+  "api.radio.components.RadioGroup.props.members.size.description":
+    "控制子项和指示点尺寸。",
+  "api.radio.components.RadioGroup.props.members.tone.description":
+    "控制子项的语义纸张色调。",
+  "api.radio.components.RadioGroup.props.members.variant.description":
+    "控制子项边框和填充强调程度。",
+  "api.radio.components.RadioGroup.props.remarks":
+    "封装 Radix RadioGroup.Root，并保留 `onChange(value)` 作为适配 Form.Item 的 `onValueChange` 别名。",
+  "api.radio.components.RadioGroupItem.description": "可选择的贴纸单选项。",
+  "api.radio.components.RadioGroupItem.props.description":
+    "贴纸单选项的 props。",
+  "api.radio.components.RadioGroupItem.props.members.className.description":
+    "单选项根元素的自定义 className。",
+  "api.radio.components.RadioGroupItem.props.members.size.description":
+    "控制单选项和圆点尺寸。",
+  "api.radio.components.RadioGroupItem.props.members.tone.description":
+    "控制语义纸张色调。",
+  "api.radio.components.RadioGroupItem.props.members.variant.description":
+    "控制单选项边框和填充强调程度。",
+  "api.radio.components.RadioGroupItem.props.remarks":
+    "包裹 Radix RadioGroup.Item，并可继承 RadioGroup 的视觉变体。",
+  "api.radio.exports.RadioGroup.description":
+    "由 Radix Radio Group 驱动的贴纸单选组。",
+  "api.radio.exports.RadioGroupItem.description": "可选择的贴纸单选项。",
+  "api.radio.exports.RadioGroupItemProps.description": "贴纸单选项的 props。",
+  "api.radio.exports.RadioGroupItemProps.remarks":
+    "包裹 Radix RadioGroup.Item，并可继承 RadioGroup 的视觉变体。",
+  "api.radio.exports.RadioGroupProps.description": "贴纸单选组根元素的 props。",
+  "api.radio.exports.RadioGroupProps.remarks":
+    "封装 Radix RadioGroup.Root，并保留 `onChange(value)` 作为适配 Form.Item 的 `onValueChange` 别名。",
+  "api.radio.exports.radioVariants.description":
+    "根据结构、色调和尺寸变体生成贴纸单选项的 className。",
+  "api.radio.types.RadioGroupItemProps.description": "贴纸单选项的 props。",
+  "api.radio.types.RadioGroupItemProps.members.className.description":
+    "单选项根元素的自定义 className。",
+  "api.radio.types.RadioGroupItemProps.members.size.description":
+    "控制单选项和圆点尺寸。",
+  "api.radio.types.RadioGroupItemProps.members.tone.description":
+    "控制语义纸张色调。",
+  "api.radio.types.RadioGroupItemProps.members.variant.description":
+    "控制单选项边框和填充强调程度。",
+  "api.radio.types.RadioGroupItemProps.remarks":
+    "包裹 Radix RadioGroup.Item，并可继承 RadioGroup 的视觉变体。",
+  "api.radio.types.RadioGroupProps.description": "贴纸单选组根元素的 props。",
+  "api.radio.types.RadioGroupProps.members.className.description":
+    "单选组根元素的自定义 className。",
+  "api.radio.types.RadioGroupProps.members.onChange.description":
+    "选中值变化时调用。",
+  "api.radio.types.RadioGroupProps.members.onChange.remarks":
+    "接收下一个字符串值，保持与项目表单触发器约定一致。",
+  "api.radio.types.RadioGroupProps.members.onValueChange.description":
+    "选中值变化时调用。",
+  "api.radio.types.RadioGroupProps.members.size.description":
+    "控制子项和指示点尺寸。",
+  "api.radio.types.RadioGroupProps.members.tone.description":
+    "控制子项的语义纸张色调。",
+  "api.radio.types.RadioGroupProps.members.variant.description":
+    "控制子项边框和填充强调程度。",
+  "api.radio.types.RadioGroupProps.remarks":
+    "封装 Radix RadioGroup.Root，并保留 `onChange(value)` 作为适配 Form.Item 的 `onValueChange` 别名。",
+  "api.switch.description": "带触感贴纸轨道和纸张滑块的 Radix 开关。",
+  "api.switch.components.Switch.description":
+    "由 Radix Switch 驱动的贴纸开关。",
+  "api.switch.components.Switch.props.description": "贴纸开关根元素的 props。",
+  "api.switch.components.Switch.props.members.className.description":
+    "开关根元素的自定义 className。",
+  "api.switch.components.Switch.props.members.size.description":
+    "控制开关轨道和滑块尺寸。",
+  "api.switch.components.Switch.props.members.tone.description":
+    "控制语义纸张色调。",
+  "api.switch.components.Switch.props.members.variant.description":
+    "控制开关边框和填充强调程度。",
+  "api.switch.components.Switch.props.remarks":
+    "包裹 Radix Switch.Root，并加入贴纸尺寸、色调和变体 props。",
+  "api.switch.exports.Switch.description": "由 Radix Switch 驱动的贴纸开关。",
+  "api.switch.exports.SwitchProps.description": "贴纸开关根元素的 props。",
+  "api.switch.exports.SwitchProps.remarks":
+    "包裹 Radix Switch.Root，并加入贴纸尺寸、色调和变体 props。",
+  "api.switch.exports.switchVariants.description":
+    "根据结构、色调和尺寸变体生成贴纸开关的 className。",
+  "api.switch.types.SwitchProps.description": "贴纸开关根元素的 props。",
+  "api.switch.types.SwitchProps.members.className.description":
+    "开关根元素的自定义 className。",
+  "api.switch.types.SwitchProps.members.size.description":
+    "控制开关轨道和滑块尺寸。",
+  "api.switch.types.SwitchProps.members.tone.description": "控制语义纸张色调。",
+  "api.switch.types.SwitchProps.members.variant.description":
+    "控制开关边框和填充强调程度。",
+  "api.switch.types.SwitchProps.remarks":
+    "包裹 Radix Switch.Root，并加入贴纸尺寸、色调和变体 props。",
   "api.form.description":
     "带 handbook 贴纸字段状态的 Ant Design 风格表单控制器。",
   "api.form.components.Form.props.description": "贴纸表单根元素的 props。",

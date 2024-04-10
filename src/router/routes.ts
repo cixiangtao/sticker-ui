@@ -1,6 +1,6 @@
-import type { RouteConfig } from "@/router/helper"
+import { defineRoutes } from "@/router/helper"
 
-const routes = [
+const routes = defineRoutes([
   {
     component: () => import("@/pages/overview"),
     meta: {
@@ -36,6 +36,7 @@ const routes = [
     meta: {
       description: "Tactile command surface for primary actions.",
       emoji: "B",
+      navSection: "actions",
       order: 30,
       title: "Button",
     },
@@ -47,6 +48,7 @@ const routes = [
       description:
         "Composable sticker surfaces for cards, panels, and grouped content.",
       emoji: "C",
+      navSection: "surfaces-data",
       order: 40,
       title: "Card",
     },
@@ -57,6 +59,7 @@ const routes = [
     meta: {
       description: "Scrollable paper tables for API and structured data.",
       emoji: "T",
+      navSection: "surfaces-data",
       order: 50,
       title: "Table",
     },
@@ -67,16 +70,29 @@ const routes = [
     meta: {
       description: "Compact sticker labels for status and metadata.",
       emoji: "T",
+      navSection: "feedback-status",
       order: 60,
       title: "Tag",
     },
     path: "/components/tag",
   },
   {
+    component: () => import("@/pages/components/alert"),
+    meta: {
+      description: "Readable sticker notes for feedback and status messages.",
+      emoji: "A",
+      navSection: "feedback-status",
+      order: 65,
+      title: "Alert",
+    },
+    path: "/components/alert",
+  },
+  {
     component: () => import("@/pages/components/form"),
     meta: {
       description: "Antd-style field state and validation for sticker forms.",
       emoji: "F",
+      navSection: "form-controls",
       order: 90,
       title: "Form",
     },
@@ -87,6 +103,7 @@ const routes = [
     meta: {
       description: "Native input controls with chunky sticker frames.",
       emoji: "I",
+      navSection: "form-controls",
       order: 70,
       title: "Input",
     },
@@ -97,6 +114,7 @@ const routes = [
     meta: {
       description: "Password fields with show-hide sticker toggles.",
       emoji: "P",
+      navSection: "form-controls",
       order: 75,
       title: "Input Password",
     },
@@ -107,6 +125,7 @@ const routes = [
     meta: {
       description: "Native multiline controls with chunky sticker frames.",
       emoji: "T",
+      navSection: "form-controls",
       order: 80,
       title: "Textarea",
     },
@@ -117,16 +136,51 @@ const routes = [
     meta: {
       description: "Radix option controls with chunky sticker frames.",
       emoji: "S",
+      navSection: "form-controls",
       order: 85,
       title: "Select",
     },
     path: "/components/select",
   },
   {
+    component: () => import("@/pages/components/checkbox"),
+    meta: {
+      description: "Radix checkbox controls with sticker checked states.",
+      emoji: "C",
+      navSection: "form-controls",
+      order: 86,
+      title: "Checkbox",
+    },
+    path: "/components/checkbox",
+  },
+  {
+    component: () => import("@/pages/components/radio"),
+    meta: {
+      description: "Radix radio groups with tactile sticker items.",
+      emoji: "R",
+      navSection: "form-controls",
+      order: 87,
+      title: "Radio",
+    },
+    path: "/components/radio",
+  },
+  {
+    component: () => import("@/pages/components/switch"),
+    meta: {
+      description: "Radix switch controls with tactile sticker tracks.",
+      emoji: "S",
+      navSection: "form-controls",
+      order: 88,
+      title: "Switch",
+    },
+    path: "/components/switch",
+  },
+  {
     component: () => import("@/pages/components/label"),
     meta: {
       description: "Accessible form captions with small sticker markers.",
       emoji: "L",
+      navSection: "form-controls",
       order: 100,
       title: "Label",
     },
@@ -142,6 +196,6 @@ const routes = [
     },
     path: "/registry/usage",
   },
-] as const satisfies readonly RouteConfig[]
+])
 
 export { routes }

@@ -3,6 +3,7 @@ import { routes } from "@/router/routes"
 interface NavGroup {
   items: NavItem[]
   label: string
+  sections: NavSection[]
 }
 
 interface NavItem {
@@ -13,9 +14,22 @@ interface NavItem {
   status: "draft" | "ready"
 }
 
+interface NavSection {
+  description?: string
+  items: NavItem[]
+  label: string
+}
+
 interface NavGroupConfig {
   label: string
   matches: (path: string) => boolean
+  sections?: NavSectionConfig[]
+}
+
+interface NavSectionConfig {
+  description?: string
+  id: string
+  label: string
 }
 
 interface ColorToken {
@@ -32,6 +46,30 @@ interface ColorTokenGroup {
 }
 
 type RouteId = NavItem["id"]
+type PreviewRoute = (typeof routes)[number]
+
+const COMPONENT_NAV_SECTIONS: NavSectionConfig[] = [
+  {
+    description: "Buttons and direct command surfaces.",
+    id: "actions",
+    label: "Actions",
+  },
+  {
+    description: "Layout, structured data, and compact metadata.",
+    id: "surfaces-data",
+    label: "Surfaces & Data",
+  },
+  {
+    description: "Readable notes, labels, and status signals.",
+    id: "feedback-status",
+    label: "Feedback & Status",
+  },
+  {
+    description: "Inputs, choices, toggles, and field scaffolding.",
+    id: "form-controls",
+    label: "Form Controls",
+  },
+]
 
 const NAV_GROUP_CONFIGS: NavGroupConfig[] = [
   {
@@ -45,6 +83,7 @@ const NAV_GROUP_CONFIGS: NavGroupConfig[] = [
   {
     label: "Components",
     matches: (path) => path.startsWith("/components/"),
+    sections: COMPONENT_NAV_SECTIONS,
   },
   {
     label: "Registry",
@@ -52,25 +91,24 @@ const NAV_GROUP_CONFIGS: NavGroupConfig[] = [
   },
 ]
 
-const NAV_GROUPS: NavGroup[] = NAV_GROUP_CONFIGS.map((group) => ({
-  items: routes
+const NAV_GROUPS: NavGroup[] = NAV_GROUP_CONFIGS.map((group) => {
+  const groupRoutes = routes
     .filter(
       (route) =>
         !("hideInMenu" in route.meta && route.meta.hideInMenu) &&
         group.matches(route.path),
     )
-    .map((route) => ({
-      description: route.meta.description ?? "",
-      id: getRouteId(route.path),
-      label: route.meta.title,
-      path: route.path,
-      status: "ready" as const,
-    }))
     .sort(
       (first, second) => getRouteOrder(first.path) - getRouteOrder(second.path),
-    ),
-  label: group.label,
-}))
+    )
+  const items = groupRoutes.map((route) => createNavItem(route))
+
+  return {
+    items,
+    label: group.label,
+    sections: createNavSections(groupRoutes, group.sections),
+  }
+})
 
 const COLOR_TOKEN_GROUPS = [
   {
@@ -263,6 +301,60 @@ function getRouteOrder(path: string) {
   return routes.find((route) => route.path === path)?.meta.order ?? 0
 }
 
+function createNavItem(route: PreviewRoute): NavItem {
+  return {
+    description: route.meta.description ?? "",
+    id: getRouteId(route.path),
+    label: route.meta.title,
+    path: route.path,
+    status: "ready",
+  }
+}
+
+function createNavSections(
+  groupRoutes: PreviewRoute[],
+  sectionConfigs?: NavSectionConfig[],
+): NavSection[] {
+  if (!sectionConfigs?.length) {
+    return [
+      {
+        items: groupRoutes.map((route) => createNavItem(route)),
+        label: "",
+      },
+    ]
+  }
+
+  const configuredSections = sectionConfigs
+    .map((section) => ({
+      description: section.description,
+      items: groupRoutes
+        .filter((route) => getRouteNavSection(route) === section.id)
+        .map((route) => createNavItem(route)),
+      label: section.label,
+    }))
+    .filter((section) => section.items.length > 0)
+
+  const uncategorizedItems = groupRoutes
+    .filter((route) => !getRouteNavSection(route))
+    .map((route) => createNavItem(route))
+
+  if (!uncategorizedItems.length) {
+    return configuredSections
+  }
+
+  return [
+    ...configuredSections,
+    {
+      items: uncategorizedItems,
+      label: "More",
+    },
+  ]
+}
+
+function getRouteNavSection(route: PreviewRoute) {
+  return "navSection" in route.meta ? route.meta.navSection : undefined
+}
+
 function getRegistrySourcePath(componentName: string) {
   return `src/components/ui/${componentName}.tsx`
 }
@@ -273,4 +365,4 @@ function getRouteComponentName(path: string) {
 }
 
 export { COLOR_TOKEN_GROUPS, COMPONENT_FILES, findNavItemByPath, NAV_GROUPS }
-export type { NavGroup, NavItem, RouteId }
+export type { NavGroup, NavItem, NavSection, RouteId }
