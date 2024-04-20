@@ -943,6 +943,1454 @@
       }
     ]
   },
+  "layout": {
+    "components": [
+      {
+        "description": "Flex layout primitive for toolbars, rows, stacks, and wrapped action groups.",
+        "descriptionKey": "api.layout.components.Flex.description",
+        "name": "Flex",
+        "props": {
+          "description": "Props for the sticker flex layout primitive.",
+          "descriptionKey": "api.layout.components.Flex.props.description",
+          "remarks": "Inherits native HTML attributes and adds static Tailwind-safe layout variants.",
+          "remarksKey": "api.layout.components.Flex.props.remarks",
+          "inherits": [
+            "React.HTMLAttributes<HTMLElement>",
+            "VariantProps<typeof flexVariants>"
+          ],
+          "inheritedMembers": [
+            {
+              "description": "Identifies elements that describe the control.",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Indicates whether the current value is invalid.",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "description": "Provides an accessible label when visible text is not enough.",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Identifies elements that label the control.",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Focuses the element when it mounts.",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Content rendered inside the element.",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "description": "Adds custom class names to the root element.",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Sets the initial unchecked or checked state.",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Sets the initial uncontrolled value.",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            },
+            {
+              "description": "Sets the element id.",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Runs when the element loses focus.",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLElement>"
+            },
+            {
+              "description": "Runs when the value changes.",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "React.ChangeEventHandler<HTMLElement, Element>"
+            },
+            {
+              "description": "Runs when the element is clicked.",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLElement>"
+            },
+            {
+              "description": "Runs when the element receives focus.",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLElement>"
+            },
+            {
+              "description": "Runs when a key is pressed.",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLElement>"
+            },
+            {
+              "description": "Runs when a key is released.",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLElement>"
+            },
+            {
+              "description": "Runs when the pointer enters the element.",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLElement>"
+            },
+            {
+              "description": "Runs when the pointer leaves the element.",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLElement>"
+            },
+            {
+              "description": "Sets the ARIA role.",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "description": "Adds inline styles to the root element.",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "description": "Sets advisory text for the element.",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "members": [
+            {
+              "defaultValue": "\"stretch\"",
+              "description": "Controls cross-axis item alignment.",
+              "descriptionKey": "api.layout.components.Flex.props.members.align.description",
+              "name": "align",
+              "optional": true,
+              "required": false,
+              "type": "\"baseline\" | \"center\" | \"end\" | \"start\" | \"stretch\""
+            },
+            {
+              "defaultValue": "\"div\"",
+              "description": "Controls the semantic root element rendered by the layout.",
+              "descriptionKey": "api.layout.components.Flex.props.members.as.description",
+              "name": "as",
+              "optional": true,
+              "required": false,
+              "type": "LayoutElement"
+            },
+            {
+              "defaultValue": "false",
+              "description": "Renders the layout classes and state props on the only child element.",
+              "descriptionKey": "api.layout.components.Flex.props.members.asChild.description",
+              "name": "asChild",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "defaultValue": "\"row\"",
+              "description": "Controls flex axis and visual order.",
+              "descriptionKey": "api.layout.components.Flex.props.members.direction.description",
+              "name": "direction",
+              "optional": true,
+              "required": false,
+              "type": "\"column\" | \"column-reverse\" | \"row\" | \"row-reverse\""
+            },
+            {
+              "defaultValue": "\"md\"",
+              "description": "Controls spacing between children.",
+              "descriptionKey": "api.layout.components.Flex.props.members.gap.description",
+              "name": "gap",
+              "optional": true,
+              "required": false,
+              "type": "\"lg\" | \"md\" | \"none\" | \"sm\" | \"xl\" | \"xs\""
+            },
+            {
+              "defaultValue": "false",
+              "description": "Uses `inline-flex` instead of `flex`.",
+              "descriptionKey": "api.layout.components.Flex.props.members.inline.description",
+              "name": "inline",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "defaultValue": "\"start\"",
+              "description": "Controls main-axis distribution.",
+              "descriptionKey": "api.layout.components.Flex.props.members.justify.description",
+              "name": "justify",
+              "optional": true,
+              "required": false,
+              "type": "\"around\" | \"between\" | \"center\" | \"end\" | \"evenly\" | \"start\""
+            },
+            {
+              "defaultValue": "\"nowrap\"",
+              "description": "Controls line wrapping behavior.",
+              "descriptionKey": "api.layout.components.Flex.props.members.wrap.description",
+              "name": "wrap",
+              "optional": true,
+              "required": false,
+              "type": "\"nowrap\" | \"reverse\" | \"wrap\""
+            }
+          ],
+          "type": "FlexProps"
+        }
+      },
+      {
+        "description": "Grid layout primitive for responsive card rows and repeated content groups.",
+        "descriptionKey": "api.layout.components.Grid.description",
+        "name": "Grid",
+        "props": {
+          "description": "Props for the sticker grid layout primitive.",
+          "descriptionKey": "api.layout.components.Grid.props.description",
+          "remarks": "Inherits native HTML attributes and adds static Tailwind-safe layout variants.",
+          "remarksKey": "api.layout.components.Grid.props.remarks",
+          "inherits": [
+            "React.HTMLAttributes<HTMLElement>",
+            "VariantProps<typeof gridVariants>"
+          ],
+          "inheritedMembers": [
+            {
+              "description": "Identifies elements that describe the control.",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Indicates whether the current value is invalid.",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "description": "Provides an accessible label when visible text is not enough.",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Identifies elements that label the control.",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Focuses the element when it mounts.",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Content rendered inside the element.",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "description": "Adds custom class names to the root element.",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Sets the initial unchecked or checked state.",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Sets the initial uncontrolled value.",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            },
+            {
+              "description": "Sets the element id.",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Runs when the element loses focus.",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLElement>"
+            },
+            {
+              "description": "Runs when the value changes.",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "React.ChangeEventHandler<HTMLElement, Element>"
+            },
+            {
+              "description": "Runs when the element is clicked.",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLElement>"
+            },
+            {
+              "description": "Runs when the element receives focus.",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLElement>"
+            },
+            {
+              "description": "Runs when a key is pressed.",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLElement>"
+            },
+            {
+              "description": "Runs when a key is released.",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLElement>"
+            },
+            {
+              "description": "Runs when the pointer enters the element.",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLElement>"
+            },
+            {
+              "description": "Runs when the pointer leaves the element.",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLElement>"
+            },
+            {
+              "description": "Sets the ARIA role.",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "description": "Adds inline styles to the root element.",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "description": "Sets advisory text for the element.",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "members": [
+            {
+              "defaultValue": "\"stretch\"",
+              "description": "Controls block-axis item alignment.",
+              "descriptionKey": "api.layout.components.Grid.props.members.align.description",
+              "name": "align",
+              "optional": true,
+              "required": false,
+              "type": "\"center\" | \"end\" | \"start\" | \"stretch\""
+            },
+            {
+              "defaultValue": "\"div\"",
+              "description": "Controls the semantic root element rendered by the layout.",
+              "descriptionKey": "api.layout.components.Grid.props.members.as.description",
+              "name": "as",
+              "optional": true,
+              "required": false,
+              "type": "LayoutElement"
+            },
+            {
+              "defaultValue": "false",
+              "description": "Renders the layout classes and state props on the only child element.",
+              "descriptionKey": "api.layout.components.Grid.props.members.asChild.description",
+              "name": "asChild",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "defaultValue": "\"1\"",
+              "description": "Controls the grid column template.",
+              "descriptionKey": "api.layout.components.Grid.props.members.columns.description",
+              "name": "columns",
+              "optional": true,
+              "required": false,
+              "type": "| \"1\" | \"2\" | \"3\" | \"4\" | \"5\" | \"6\" | \"auto-fill\" | \"auto-fit\" | \"responsive-2\" | \"responsive-3\" | \"responsive-4\""
+            },
+            {
+              "defaultValue": "\"md\"",
+              "description": "Controls spacing between children.",
+              "descriptionKey": "api.layout.components.Grid.props.members.gap.description",
+              "name": "gap",
+              "optional": true,
+              "required": false,
+              "type": "\"lg\" | \"md\" | \"none\" | \"sm\" | \"xl\" | \"xs\""
+            },
+            {
+              "defaultValue": "false",
+              "description": "Uses `inline-grid` instead of `grid`.",
+              "descriptionKey": "api.layout.components.Grid.props.members.inline.description",
+              "name": "inline",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "defaultValue": "\"stretch\"",
+              "description": "Controls inline-axis item alignment.",
+              "descriptionKey": "api.layout.components.Grid.props.members.justify.description",
+              "name": "justify",
+              "optional": true,
+              "required": false,
+              "type": "\"center\" | \"end\" | \"start\" | \"stretch\""
+            }
+          ],
+          "type": "GridProps"
+        }
+      }
+    ],
+    "description": "Tailwind-safe Flex and Grid primitives for sticker component composition.",
+    "descriptionKey": "api.layout.description",
+    "exports": [
+      {
+        "description": "Flex layout primitive for toolbars, rows, stacks, and wrapped action groups.",
+        "descriptionKey": "api.layout.exports.Flex.description",
+        "kind": "component",
+        "name": "Flex"
+      },
+      {
+        "description": "Props for the sticker flex layout primitive.",
+        "descriptionKey": "api.layout.exports.FlexProps.description",
+        "remarks": "Inherits native HTML attributes and adds static Tailwind-safe layout variants.",
+        "remarksKey": "api.layout.exports.FlexProps.remarks",
+        "kind": "interface",
+        "name": "FlexProps"
+      },
+      {
+        "description": "Builds the flex layout className from direction, alignment, gap, and wrapping variants.",
+        "descriptionKey": "api.layout.exports.flexVariants.description",
+        "kind": "variant",
+        "name": "flexVariants"
+      },
+      {
+        "description": "Grid layout primitive for responsive card rows and repeated content groups.",
+        "descriptionKey": "api.layout.exports.Grid.description",
+        "kind": "component",
+        "name": "Grid"
+      },
+      {
+        "description": "Props for the sticker grid layout primitive.",
+        "descriptionKey": "api.layout.exports.GridProps.description",
+        "remarks": "Inherits native HTML attributes and adds static Tailwind-safe layout variants.",
+        "remarksKey": "api.layout.exports.GridProps.remarks",
+        "kind": "interface",
+        "name": "GridProps"
+      },
+      {
+        "description": "Builds the grid layout className from column, alignment, and gap variants.",
+        "descriptionKey": "api.layout.exports.gridVariants.description",
+        "kind": "variant",
+        "name": "gridVariants"
+      }
+    ],
+    "name": "layout",
+    "sourcePath": "src/components/ui/layout.tsx",
+    "title": "Sticker Layout",
+    "types": [
+      {
+        "description": "Props for the sticker flex layout primitive.",
+        "descriptionKey": "api.layout.types.FlexProps.description",
+        "remarks": "Inherits native HTML attributes and adds static Tailwind-safe layout variants.",
+        "remarksKey": "api.layout.types.FlexProps.remarks",
+        "inherits": [
+          "React.HTMLAttributes<HTMLElement>",
+          "VariantProps<typeof flexVariants>"
+        ],
+        "kind": "interface",
+        "members": [
+          {
+            "defaultValue": "\"stretch\"",
+            "description": "Controls cross-axis item alignment.",
+            "descriptionKey": "api.layout.types.FlexProps.members.align.description",
+            "name": "align",
+            "optional": true,
+            "required": false,
+            "type": "\"baseline\" | \"center\" | \"end\" | \"start\" | \"stretch\""
+          },
+          {
+            "defaultValue": "\"div\"",
+            "description": "Controls the semantic root element rendered by the layout.",
+            "descriptionKey": "api.layout.types.FlexProps.members.as.description",
+            "name": "as",
+            "optional": true,
+            "required": false,
+            "type": "LayoutElement"
+          },
+          {
+            "defaultValue": "false",
+            "description": "Renders the layout classes and state props on the only child element.",
+            "descriptionKey": "api.layout.types.FlexProps.members.asChild.description",
+            "name": "asChild",
+            "optional": true,
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "defaultValue": "\"row\"",
+            "description": "Controls flex axis and visual order.",
+            "descriptionKey": "api.layout.types.FlexProps.members.direction.description",
+            "name": "direction",
+            "optional": true,
+            "required": false,
+            "type": "\"column\" | \"column-reverse\" | \"row\" | \"row-reverse\""
+          },
+          {
+            "defaultValue": "\"md\"",
+            "description": "Controls spacing between children.",
+            "descriptionKey": "api.layout.types.FlexProps.members.gap.description",
+            "name": "gap",
+            "optional": true,
+            "required": false,
+            "type": "\"lg\" | \"md\" | \"none\" | \"sm\" | \"xl\" | \"xs\""
+          },
+          {
+            "defaultValue": "false",
+            "description": "Uses `inline-flex` instead of `flex`.",
+            "descriptionKey": "api.layout.types.FlexProps.members.inline.description",
+            "name": "inline",
+            "optional": true,
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "defaultValue": "\"start\"",
+            "description": "Controls main-axis distribution.",
+            "descriptionKey": "api.layout.types.FlexProps.members.justify.description",
+            "name": "justify",
+            "optional": true,
+            "required": false,
+            "type": "\"around\" | \"between\" | \"center\" | \"end\" | \"evenly\" | \"start\""
+          },
+          {
+            "defaultValue": "\"nowrap\"",
+            "description": "Controls line wrapping behavior.",
+            "descriptionKey": "api.layout.types.FlexProps.members.wrap.description",
+            "name": "wrap",
+            "optional": true,
+            "required": false,
+            "type": "\"nowrap\" | \"reverse\" | \"wrap\""
+          }
+        ],
+        "name": "FlexProps"
+      },
+      {
+        "description": "Props for the sticker grid layout primitive.",
+        "descriptionKey": "api.layout.types.GridProps.description",
+        "remarks": "Inherits native HTML attributes and adds static Tailwind-safe layout variants.",
+        "remarksKey": "api.layout.types.GridProps.remarks",
+        "inherits": [
+          "React.HTMLAttributes<HTMLElement>",
+          "VariantProps<typeof gridVariants>"
+        ],
+        "kind": "interface",
+        "members": [
+          {
+            "defaultValue": "\"stretch\"",
+            "description": "Controls block-axis item alignment.",
+            "descriptionKey": "api.layout.types.GridProps.members.align.description",
+            "name": "align",
+            "optional": true,
+            "required": false,
+            "type": "\"center\" | \"end\" | \"start\" | \"stretch\""
+          },
+          {
+            "defaultValue": "\"div\"",
+            "description": "Controls the semantic root element rendered by the layout.",
+            "descriptionKey": "api.layout.types.GridProps.members.as.description",
+            "name": "as",
+            "optional": true,
+            "required": false,
+            "type": "LayoutElement"
+          },
+          {
+            "defaultValue": "false",
+            "description": "Renders the layout classes and state props on the only child element.",
+            "descriptionKey": "api.layout.types.GridProps.members.asChild.description",
+            "name": "asChild",
+            "optional": true,
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "defaultValue": "\"1\"",
+            "description": "Controls the grid column template.",
+            "descriptionKey": "api.layout.types.GridProps.members.columns.description",
+            "name": "columns",
+            "optional": true,
+            "required": false,
+            "type": "| \"1\" | \"2\" | \"3\" | \"4\" | \"5\" | \"6\" | \"auto-fill\" | \"auto-fit\" | \"responsive-2\" | \"responsive-3\" | \"responsive-4\""
+          },
+          {
+            "defaultValue": "\"md\"",
+            "description": "Controls spacing between children.",
+            "descriptionKey": "api.layout.types.GridProps.members.gap.description",
+            "name": "gap",
+            "optional": true,
+            "required": false,
+            "type": "\"lg\" | \"md\" | \"none\" | \"sm\" | \"xl\" | \"xs\""
+          },
+          {
+            "defaultValue": "false",
+            "description": "Uses `inline-grid` instead of `grid`.",
+            "descriptionKey": "api.layout.types.GridProps.members.inline.description",
+            "name": "inline",
+            "optional": true,
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "defaultValue": "\"stretch\"",
+            "description": "Controls inline-axis item alignment.",
+            "descriptionKey": "api.layout.types.GridProps.members.justify.description",
+            "name": "justify",
+            "optional": true,
+            "required": false,
+            "type": "\"center\" | \"end\" | \"start\" | \"stretch\""
+          }
+        ],
+        "name": "GridProps"
+      }
+    ],
+    "variants": [
+      {
+        "description": "Builds the flex layout className from direction, alignment, gap, and wrapping variants.",
+        "descriptionKey": "api.layout.variants.flexVariants.description",
+        "groups": [
+          {
+            "defaultValue": "stretch",
+            "name": "align",
+            "values": ["baseline", "center", "end", "start", "stretch"]
+          },
+          {
+            "defaultValue": "row",
+            "name": "direction",
+            "values": ["column", "column-reverse", "row", "row-reverse"]
+          },
+          {
+            "defaultValue": "md",
+            "name": "gap",
+            "values": ["lg", "md", "none", "sm", "xl", "xs"]
+          },
+          {
+            "defaultValue": "false",
+            "name": "inline",
+            "values": ["false", "true"]
+          },
+          {
+            "defaultValue": "start",
+            "name": "justify",
+            "values": ["around", "between", "center", "end", "evenly", "start"]
+          },
+          {
+            "defaultValue": "nowrap",
+            "name": "wrap",
+            "values": ["nowrap", "reverse", "wrap"]
+          }
+        ],
+        "name": "flexVariants"
+      },
+      {
+        "description": "Builds the grid layout className from column, alignment, and gap variants.",
+        "descriptionKey": "api.layout.variants.gridVariants.description",
+        "groups": [
+          {
+            "defaultValue": "stretch",
+            "name": "align",
+            "values": ["center", "end", "start", "stretch"]
+          },
+          {
+            "defaultValue": "1",
+            "name": "columns",
+            "values": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "auto-fill",
+              "auto-fit",
+              "responsive-2",
+              "responsive-3",
+              "responsive-4"
+            ]
+          },
+          {
+            "defaultValue": "md",
+            "name": "gap",
+            "values": ["lg", "md", "none", "sm", "xl", "xs"]
+          },
+          {
+            "defaultValue": "false",
+            "name": "inline",
+            "values": ["false", "true"]
+          },
+          {
+            "defaultValue": "stretch",
+            "name": "justify",
+            "values": ["center", "end", "start", "stretch"]
+          }
+        ],
+        "name": "gridVariants"
+      }
+    ]
+  },
+  "divider": {
+    "components": [
+      {
+        "description": "Sticker separator for sections, metadata rows, and split panes.",
+        "descriptionKey": "api.divider.components.Divider.description",
+        "name": "Divider",
+        "props": {
+          "description": "Props for the sticker divider.",
+          "descriptionKey": "api.divider.components.Divider.props.description",
+          "remarks": "Inherits native div attributes and adds line orientation, tone, weight, and optional label content.",
+          "remarksKey": "api.divider.components.Divider.props.remarks",
+          "inherits": [
+            "React.HTMLAttributes<HTMLDivElement>",
+            "VariantProps<typeof dividerVariants>",
+            "VariantProps<typeof dividerLineVariants>"
+          ],
+          "inheritedMembers": [
+            {
+              "description": "Identifies elements that describe the control.",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Indicates whether the current value is invalid.",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "description": "Provides an accessible label when visible text is not enough.",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Identifies elements that label the control.",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Focuses the element when it mounts.",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Content rendered inside the element.",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "description": "Adds custom class names to the root element.",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Sets the initial unchecked or checked state.",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Sets the initial uncontrolled value.",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            },
+            {
+              "description": "Sets the element id.",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Runs when the element loses focus.",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLDivElement>"
+            },
+            {
+              "description": "Runs when the value changes.",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "React.ChangeEventHandler<HTMLDivElement, Element>"
+            },
+            {
+              "description": "Runs when the element is clicked.",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "description": "Runs when the element receives focus.",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLDivElement>"
+            },
+            {
+              "description": "Runs when a key is pressed.",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLDivElement>"
+            },
+            {
+              "description": "Runs when a key is released.",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLDivElement>"
+            },
+            {
+              "description": "Runs when the pointer enters the element.",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "description": "Runs when the pointer leaves the element.",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "description": "Sets the ARIA role.",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "description": "Adds inline styles to the root element.",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "description": "Sets advisory text for the element.",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "members": [
+            {
+              "defaultValue": "\"center\"",
+              "description": "Aligns label content along a horizontal divider.",
+              "descriptionKey": "api.divider.components.Divider.props.members.align.description",
+              "name": "align",
+              "optional": true,
+              "required": false,
+              "type": "\"center\" | \"end\" | \"start\""
+            },
+            {
+              "defaultValue": "true",
+              "description": "Hides the divider from assistive technology when it is purely decorative.",
+              "descriptionKey": "api.divider.components.Divider.props.members.decorative.description",
+              "name": "decorative",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "defaultValue": "\"horizontal\"",
+              "description": "Controls divider direction.",
+              "descriptionKey": "api.divider.components.Divider.props.members.orientation.description",
+              "name": "orientation",
+              "optional": true,
+              "required": false,
+              "type": "DividerOrientation"
+            },
+            {
+              "defaultValue": "\"default\"",
+              "description": "Controls semantic line color.",
+              "descriptionKey": "api.divider.components.Divider.props.members.tone.description",
+              "name": "tone",
+              "optional": true,
+              "required": false,
+              "type": "DividerTone"
+            },
+            {
+              "defaultValue": "\"solid\"",
+              "description": "Controls line style.",
+              "descriptionKey": "api.divider.components.Divider.props.members.variant.description",
+              "name": "variant",
+              "optional": true,
+              "required": false,
+              "type": "\"dashed\" | \"dotted\" | \"solid\""
+            },
+            {
+              "defaultValue": "\"md\"",
+              "description": "Controls line thickness.",
+              "descriptionKey": "api.divider.components.Divider.props.members.weight.description",
+              "name": "weight",
+              "optional": true,
+              "required": false,
+              "type": "\"lg\" | \"md\" | \"sm\""
+            }
+          ],
+          "type": "DividerProps"
+        }
+      }
+    ],
+    "description": "A semantic sticker separator for sections, metadata rows, and split panes.",
+    "descriptionKey": "api.divider.description",
+    "exports": [
+      {
+        "description": "Sticker separator for sections, metadata rows, and split panes.",
+        "descriptionKey": "api.divider.exports.Divider.description",
+        "kind": "component",
+        "name": "Divider"
+      },
+      {
+        "description": "Props for the sticker divider.",
+        "descriptionKey": "api.divider.exports.DividerProps.description",
+        "remarks": "Inherits native div attributes and adds line orientation, tone, weight, and optional label content.",
+        "remarksKey": "api.divider.exports.DividerProps.remarks",
+        "kind": "interface",
+        "name": "DividerProps"
+      },
+      {
+        "description": "Builds the divider root className from orientation and label alignment.",
+        "descriptionKey": "api.divider.exports.dividerVariants.description",
+        "kind": "variant",
+        "name": "dividerVariants"
+      }
+    ],
+    "name": "divider",
+    "sourcePath": "src/components/ui/divider.tsx",
+    "title": "Sticker Divider",
+    "types": [
+      {
+        "description": "Props for the sticker divider.",
+        "descriptionKey": "api.divider.types.DividerProps.description",
+        "remarks": "Inherits native div attributes and adds line orientation, tone, weight, and optional label content.",
+        "remarksKey": "api.divider.types.DividerProps.remarks",
+        "inherits": [
+          "React.HTMLAttributes<HTMLDivElement>",
+          "VariantProps<typeof dividerVariants>",
+          "VariantProps<typeof dividerLineVariants>"
+        ],
+        "kind": "interface",
+        "members": [
+          {
+            "defaultValue": "\"center\"",
+            "description": "Aligns label content along a horizontal divider.",
+            "descriptionKey": "api.divider.types.DividerProps.members.align.description",
+            "name": "align",
+            "optional": true,
+            "required": false,
+            "type": "\"center\" | \"end\" | \"start\""
+          },
+          {
+            "defaultValue": "true",
+            "description": "Hides the divider from assistive technology when it is purely decorative.",
+            "descriptionKey": "api.divider.types.DividerProps.members.decorative.description",
+            "name": "decorative",
+            "optional": true,
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "defaultValue": "\"horizontal\"",
+            "description": "Controls divider direction.",
+            "descriptionKey": "api.divider.types.DividerProps.members.orientation.description",
+            "name": "orientation",
+            "optional": true,
+            "required": false,
+            "type": "DividerOrientation"
+          },
+          {
+            "defaultValue": "\"default\"",
+            "description": "Controls semantic line color.",
+            "descriptionKey": "api.divider.types.DividerProps.members.tone.description",
+            "name": "tone",
+            "optional": true,
+            "required": false,
+            "type": "DividerTone"
+          },
+          {
+            "defaultValue": "\"solid\"",
+            "description": "Controls line style.",
+            "descriptionKey": "api.divider.types.DividerProps.members.variant.description",
+            "name": "variant",
+            "optional": true,
+            "required": false,
+            "type": "\"dashed\" | \"dotted\" | \"solid\""
+          },
+          {
+            "defaultValue": "\"md\"",
+            "description": "Controls line thickness.",
+            "descriptionKey": "api.divider.types.DividerProps.members.weight.description",
+            "name": "weight",
+            "optional": true,
+            "required": false,
+            "type": "\"lg\" | \"md\" | \"sm\""
+          }
+        ],
+        "name": "DividerProps"
+      }
+    ],
+    "variants": [
+      {
+        "groups": [
+          {
+            "defaultValue": "horizontal",
+            "name": "orientation",
+            "values": ["horizontal", "vertical"]
+          },
+          {
+            "defaultValue": "default",
+            "name": "tone",
+            "values": [
+              "danger",
+              "default",
+              "info",
+              "secondary",
+              "success",
+              "warning"
+            ]
+          },
+          {
+            "defaultValue": "solid",
+            "name": "variant",
+            "values": ["dashed", "dotted", "solid"]
+          },
+          {
+            "defaultValue": "md",
+            "name": "weight",
+            "values": ["lg", "md", "sm"]
+          }
+        ],
+        "name": "dividerLineVariants"
+      },
+      {
+        "description": "Builds the divider root className from orientation and label alignment.",
+        "descriptionKey": "api.divider.variants.dividerVariants.description",
+        "groups": [
+          {
+            "defaultValue": "center",
+            "name": "align",
+            "values": ["center", "end", "start"]
+          },
+          {
+            "defaultValue": "horizontal",
+            "name": "orientation",
+            "values": ["horizontal", "vertical"]
+          }
+        ],
+        "name": "dividerVariants"
+      }
+    ]
+  },
+  "jsx-join": {
+    "components": [
+      {
+        "description": "Joins JSX children with a separator while preserving each child node.",
+        "descriptionKey": "api.jsx-join.components.JsxJoin.description",
+        "name": "JsxJoin",
+        "props": {
+          "description": "Props for joining JSX children with a reusable separator.",
+          "descriptionKey": "api.jsx-join.components.JsxJoin.props.description",
+          "remarks": "Defaults to rendering a Fragment so it can be used inside text rows, lists, and component slots without extra DOM.",
+          "remarksKey": "api.jsx-join.components.JsxJoin.props.remarks",
+          "inherits": ["React.HTMLAttributes<HTMLElement>"],
+          "inheritedMembers": [
+            {
+              "description": "Identifies elements that describe the control.",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Indicates whether the current value is invalid.",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"false\" | \"true\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "description": "Provides an accessible label when visible text is not enough.",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Identifies elements that label the control.",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Focuses the element when it mounts.",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Adds custom class names to the root element.",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Sets the initial unchecked or checked state.",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Sets the initial uncontrolled value.",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            },
+            {
+              "description": "Sets the element id.",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Runs when the element loses focus.",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLElement>"
+            },
+            {
+              "description": "Runs when the value changes.",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "React.ChangeEventHandler<HTMLElement, Element>"
+            },
+            {
+              "description": "Runs when the element is clicked.",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLElement>"
+            },
+            {
+              "description": "Runs when the element receives focus.",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLElement>"
+            },
+            {
+              "description": "Runs when a key is pressed.",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLElement>"
+            },
+            {
+              "description": "Runs when a key is released.",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLElement>"
+            },
+            {
+              "description": "Runs when the pointer enters the element.",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLElement>"
+            },
+            {
+              "description": "Runs when the pointer leaves the element.",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLElement>"
+            },
+            {
+              "description": "Sets the ARIA role.",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "description": "Adds inline styles to the root element.",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "description": "Sets advisory text for the element.",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "members": [
+            {
+              "defaultValue": "React.Fragment",
+              "description": "Root element used to wrap the joined nodes.",
+              "descriptionKey": "api.jsx-join.components.JsxJoin.props.members.as.description",
+              "name": "as",
+              "optional": true,
+              "required": false,
+              "type": "React.ElementType"
+            },
+            {
+              "description": "Child nodes to join.",
+              "descriptionKey": "api.jsx-join.components.JsxJoin.props.members.children.description",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "defaultValue": "true",
+              "description": "Removes null, undefined, boolean, and empty-string children before joining.",
+              "descriptionKey": "api.jsx-join.components.JsxJoin.props.members.filterEmpty.description",
+              "name": "filterEmpty",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Separator node or render function inserted between each child.",
+              "descriptionKey": "api.jsx-join.components.JsxJoin.props.members.separator.description",
+              "name": "separator",
+              "optional": true,
+              "required": false,
+              "type": "JsxJoinSeparator"
+            }
+          ],
+          "type": "JsxJoinProps"
+        }
+      }
+    ],
+    "description": "A tiny React utility that inserts separators between JSX children.",
+    "descriptionKey": "api.jsx-join.description",
+    "exports": [
+      {
+        "description": "Joins JSX children with a separator while preserving each child node.",
+        "descriptionKey": "api.jsx-join.exports.JsxJoin.description",
+        "kind": "component",
+        "name": "JsxJoin"
+      },
+      {
+        "description": "Props for joining JSX children with a reusable separator.",
+        "descriptionKey": "api.jsx-join.exports.JsxJoinProps.description",
+        "remarks": "Defaults to rendering a Fragment so it can be used inside text rows, lists, and component slots without extra DOM.",
+        "remarksKey": "api.jsx-join.exports.JsxJoinProps.remarks",
+        "kind": "interface",
+        "name": "JsxJoinProps"
+      },
+      { "kind": "type", "name": "JsxJoinSeparator" },
+      { "kind": "type", "name": "JsxJoinSeparatorContext" }
+    ],
+    "name": "jsx-join",
+    "sourcePath": "src/components/ui/jsx-join.tsx",
+    "title": "JsxJoin",
+    "types": [
+      {
+        "description": "Props for joining JSX children with a reusable separator.",
+        "descriptionKey": "api.jsx-join.types.JsxJoinProps.description",
+        "remarks": "Defaults to rendering a Fragment so it can be used inside text rows, lists, and component slots without extra DOM.",
+        "remarksKey": "api.jsx-join.types.JsxJoinProps.remarks",
+        "inherits": ["React.HTMLAttributes<HTMLElement>"],
+        "kind": "interface",
+        "members": [
+          {
+            "defaultValue": "React.Fragment",
+            "description": "Root element used to wrap the joined nodes.",
+            "descriptionKey": "api.jsx-join.types.JsxJoinProps.members.as.description",
+            "name": "as",
+            "optional": true,
+            "required": false,
+            "type": "React.ElementType"
+          },
+          {
+            "description": "Child nodes to join.",
+            "descriptionKey": "api.jsx-join.types.JsxJoinProps.members.children.description",
+            "name": "children",
+            "optional": true,
+            "required": false,
+            "type": "React.ReactNode"
+          },
+          {
+            "defaultValue": "true",
+            "description": "Removes null, undefined, boolean, and empty-string children before joining.",
+            "descriptionKey": "api.jsx-join.types.JsxJoinProps.members.filterEmpty.description",
+            "name": "filterEmpty",
+            "optional": true,
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "description": "Separator node or render function inserted between each child.",
+            "descriptionKey": "api.jsx-join.types.JsxJoinProps.members.separator.description",
+            "name": "separator",
+            "optional": true,
+            "required": false,
+            "type": "JsxJoinSeparator"
+          }
+        ],
+        "name": "JsxJoinProps"
+      },
+      {
+        "inherits": [],
+        "kind": "type",
+        "members": [],
+        "name": "JsxJoinSeparator",
+        "type": "| React.ReactNode | ((context: JsxJoinSeparatorContext) => React.ReactNode)"
+      },
+      {
+        "inherits": [],
+        "kind": "type",
+        "members": [
+          {
+            "description": "The node after the separator.",
+            "descriptionKey": "api.jsx-join.types.JsxJoinSeparatorContext.members.after.description",
+            "name": "after",
+            "optional": false,
+            "required": true,
+            "type": "React.ReactNode"
+          },
+          {
+            "description": "The node before the separator.",
+            "descriptionKey": "api.jsx-join.types.JsxJoinSeparatorContext.members.before.description",
+            "name": "before",
+            "optional": false,
+            "required": true,
+            "type": "React.ReactNode"
+          },
+          {
+            "description": "Zero-based separator index.",
+            "descriptionKey": "api.jsx-join.types.JsxJoinSeparatorContext.members.index.description",
+            "name": "index",
+            "optional": false,
+            "required": true,
+            "type": "number"
+          }
+        ],
+        "name": "JsxJoinSeparatorContext",
+        "type": "{ /** * The node before the separator. */ before: React.ReactNode /** * Zero-based separator index. */ index: number /** * The node after the separator. */ after: React.ReactNode }"
+      }
+    ],
+    "variants": []
+  },
   "table": {
     "components": [
       {

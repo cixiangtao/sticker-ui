@@ -28,6 +28,8 @@ export {
 } from "./components/ui/card"
 export { Checkbox, checkboxVariants } from "./components/ui/checkbox"
 export type { CheckboxProps } from "./components/ui/checkbox"
+export { Divider, dividerVariants } from "./components/ui/divider"
+export type { DividerProps } from "./components/ui/divider"
 export { Form, useForm } from "./components/ui/form"
 export type {
   FieldData,
@@ -41,6 +43,14 @@ export type {
   ValidateTrigger,
 } from "./components/ui/form"
 export { Input, InputPassword, inputVariants }
+export { JsxJoin } from "./components/ui/jsx-join"
+export type {
+  JsxJoinProps,
+  JsxJoinSeparator,
+  JsxJoinSeparatorContext,
+} from "./components/ui/jsx-join"
+export { Flex, Grid, flexVariants, gridVariants } from "./components/ui/layout"
+export type { FlexProps, GridProps } from "./components/ui/layout"
 export {
   Label,
   LabelDescription,

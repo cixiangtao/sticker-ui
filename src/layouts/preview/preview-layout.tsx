@@ -1,6 +1,6 @@
 import { Link, Outlet, useLocation } from "@tanstack/react-router"
 import { useLayoutEffect } from "react"
-import { Button, Card, CardContent, CardHeader, Tag } from "sticker-ui"
+import { Button, Card, CardContent, CardHeader, Divider, Tag } from "sticker-ui"
 
 import { type PreviewLanguage, usePreviewI18n } from "../../i18n/preview"
 import {
@@ -92,20 +92,15 @@ function Sidebar({ activeRoute }: { activeRoute: RouteId }) {
               {group.sections.map((section) => (
                 <div className="flex flex-col gap-2" key={section.label}>
                   {group.sections.length > 1 ? (
-                    <div className="rounded-sticker-lg border border-ink bg-fill-warning px-3 py-2">
-                      <div className="flex items-center justify-between gap-2">
-                        <h4 className="text-sm font-black">
-                          {t(section.label)}
-                        </h4>
-                        <span className="text-xs font-extrabold text-text-subtle">
-                          {section.items.length}
+                    <div className="grid gap-1">
+                      <Divider align="start" tone="warning" variant="dashed">
+                        <span className="inline-flex items-center gap-2">
+                          <span>{t(section.label)}</span>
+                          <span className="text-text-subtle">
+                            {section.items.length}
+                          </span>
                         </span>
-                      </div>
-                      {section.description ? (
-                        <p className="mt-1 text-xs leading-4 font-medium text-text-muted">
-                          {t(section.description)}
-                        </p>
-                      ) : null}
+                      </Divider>
                     </div>
                   ) : null}
                   {section.items.map((item) => (

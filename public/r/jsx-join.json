@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "jsx-join",
+  "title": "JsxJoin",
+  "description": "A tiny React utility that inserts separators between JSX children.",
+  "registryDependencies": ["utils"],
+  "files": [
+    {
+      "path": "src/components/ui/jsx-join.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\ntype JsxJoinSeparatorContext = {\n  /**\n   * The node before the separator.\n   */\n  before: React.ReactNode\n  /**\n   * Zero-based separator index.\n   */\n  index: number\n  /**\n   * The node after the separator.\n   */\n  after: React.ReactNode\n}\n\ntype JsxJoinSeparator =\n  | React.ReactNode\n  | ((context: JsxJoinSeparatorContext) => React.ReactNode)\n\n/**\n * Props for joining JSX children with a reusable separator.\n * @remarks Defaults to rendering a Fragment so it can be used inside text rows, lists, and component slots without extra DOM.\n */\ninterface JsxJoinProps extends React.HTMLAttributes<HTMLElement> {\n  /**\n   * Root element used to wrap the joined nodes.\n   * @default React.Fragment\n   */\n  as?: React.ElementType\n  /**\n   * Child nodes to join.\n   */\n  children?: React.ReactNode\n  /**\n   * Removes null, undefined, boolean, and empty-string children before joining.\n   * @default true\n   */\n  filterEmpty?: boolean\n  /**\n   * Separator node or render function inserted between each child.\n   */\n  separator?: JsxJoinSeparator\n}\n\n/**\n * Joins JSX children with a separator while preserving each child node.\n */\nfunction JsxJoin({\n  as: Component = React.Fragment,\n  children,\n  className,\n  filterEmpty = true,\n  separator = null,\n  ...props\n}: JsxJoinProps) {\n  const items = React.Children.toArray(children).filter((child) =>\n    filterEmpty ? isPresentChild(child) : true,\n  )\n  const joined = joinNodes(items, separator)\n\n  if (Component === React.Fragment) {\n    return <>{joined}</>\n  }\n\n  return (\n    <Component className={cn(className)} data-slot=\"jsx-join\" {...props}>\n      {joined}\n    </Component>\n  )\n}\n\nfunction joinNodes(items: React.ReactNode[], separator: JsxJoinSeparator) {\n  return items.flatMap((item, index) => {\n    if (index === 0) {\n      return [item]\n    }\n\n    const before = items[index - 1]\n    const separatorNode =\n      typeof separator === \"function\"\n        ? separator({ after: item, before, index: index - 1 })\n        : separator\n\n    return [\n      <React.Fragment key={`separator-${index}`}>\n        {separatorNode}\n      </React.Fragment>,\n      item,\n    ]\n  })\n}\n\nfunction isPresentChild(child: React.ReactNode) {\n  if (child === null || child === undefined || typeof child === \"boolean\") {\n    return false\n  }\n\n  return !(typeof child === \"string\" && child.length === 0)\n}\n\nexport {\n  JsxJoin,\n  type JsxJoinProps,\n  type JsxJoinSeparator,\n  type JsxJoinSeparatorContext,\n}\n",
+      "type": "registry:ui",
+      "target": "@ui/jsx-join.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

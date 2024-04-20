@@ -1,0 +1,41 @@
+import { Divider, Tag } from "sticker-ui"
+
+import { defineMeta } from "@/layouts/preview"
+
+const meta = defineMeta({
+  className: "bg-[#F6EFFF]",
+  description:
+    "Vertical dividers separate split panes and toolbar clusters without changing the surrounding layout.",
+  order: 30,
+  title: "Vertical Stack",
+})
+
+function Demo() {
+  return (
+    <div className="flex min-h-36 flex-wrap items-stretch gap-4 rounded-sticker-2xl border-2 border-ink bg-surface p-5 shadow-sticker-lg">
+      <div className="grid min-w-36 content-center gap-2">
+        <Tag color="info" size="sm">
+          Queue
+        </Tag>
+        <strong className="text-lg leading-6 text-ink">12 ready</strong>
+      </div>
+      <Divider decorative={false} orientation="vertical" tone="secondary" />
+      <div className="grid min-w-36 content-center gap-2">
+        <Tag color="warning" size="sm">
+          Review
+        </Tag>
+        <strong className="text-lg leading-6 text-ink">4 pending</strong>
+      </div>
+      <Divider orientation="vertical" tone="success" variant="dashed" />
+      <div className="grid min-w-36 content-center gap-2">
+        <Tag color="success" size="sm">
+          Shipped
+        </Tag>
+        <strong className="text-lg leading-6 text-ink">28 done</strong>
+      </div>
+    </div>
+  )
+}
+
+export { Demo }
+export default meta

@@ -48,6 +48,50 @@
       ]
     },
     {
+      "name": "layout",
+      "type": "registry:ui",
+      "title": "Sticker Layout",
+      "description": "Tailwind-safe Flex and Grid primitives for sticker component composition.",
+      "dependencies": ["@radix-ui/react-slot", "class-variance-authority"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "src/components/ui/layout.tsx",
+          "target": "@ui/layout.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "divider",
+      "type": "registry:ui",
+      "title": "Sticker Divider",
+      "description": "A semantic sticker separator for sections, metadata rows, and split panes.",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "src/components/ui/divider.tsx",
+          "target": "@ui/divider.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "jsx-join",
+      "type": "registry:ui",
+      "title": "JsxJoin",
+      "description": "A tiny React utility that inserts separators between JSX children.",
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "src/components/ui/jsx-join.tsx",
+          "target": "@ui/jsx-join.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "table",
       "type": "registry:ui",
       "title": "Sticker Table",

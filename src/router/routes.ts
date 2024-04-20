@@ -55,6 +55,40 @@ const routes = defineRoutes([
     path: "/components/card",
   },
   {
+    component: () => import("@/pages/components/layout"),
+    meta: {
+      description: "Tailwind-safe Flex and Grid primitives for composition.",
+      emoji: "L",
+      navSection: "surfaces-data",
+      order: 45,
+      title: "Layout",
+    },
+    path: "/components/layout",
+  },
+  {
+    component: () => import("@/pages/components/divider"),
+    meta: {
+      description: "Semantic separators for sections and split surfaces.",
+      emoji: "D",
+      navSection: "surfaces-data",
+      order: 47,
+      title: "Divider",
+    },
+    path: "/components/divider",
+  },
+  {
+    component: () => import("@/pages/components/jsx-join"),
+    meta: {
+      description:
+        "Insert separators between JSX children without noisy markup.",
+      emoji: "J",
+      navSection: "surfaces-data",
+      order: 48,
+      title: "JsxJoin",
+    },
+    path: "/components/jsx-join",
+  },
+  {
     component: () => import("@/pages/components/table"),
     meta: {
       description: "Scrollable paper tables for API and structured data.",

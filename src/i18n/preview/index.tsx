@@ -109,7 +109,7 @@ function translateNode(
   }
 
   if (Array.isArray(node)) {
-    return node.map((child) => translateNode(child, t))
+    return React.Children.map(node, (child) => translateNode(child, t))
   }
 
   if (!React.isValidElement(node)) {

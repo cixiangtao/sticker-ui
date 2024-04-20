@@ -648,6 +648,183 @@ const ZH_PREVIEW_API_DOC_TRANSLATIONS: Record<string, string> = {
     "继承原生 HTML 属性，并加入语义元素和贴纸变体。",
   "api.tag.variants.tagVariants.description":
     "根据结构、颜色和尺寸变体生成标签 className。",
+  "api.layout.description":
+    "用于贴纸组件组合的 Tailwind 安全 Flex 与 Grid 原语。",
+  "api.layout.components.Flex.description":
+    "用于工具栏、行、堆叠和换行操作组的 Flex 布局原语。",
+  "api.layout.components.Flex.props.description":
+    "贴纸 Flex 布局原语的 props。",
+  "api.layout.components.Flex.props.members.align.description":
+    "控制交叉轴上的子项对齐。",
+  "api.layout.components.Flex.props.members.as.description":
+    "控制布局渲染的语义根元素。",
+  "api.layout.components.Flex.props.members.asChild.description":
+    "将布局 class 和状态 props 渲染到唯一的子元素上。",
+  "api.layout.components.Flex.props.members.direction.description":
+    "控制 flex 轴向和视觉顺序。",
+  "api.layout.components.Flex.props.members.gap.description":
+    "控制子元素之间的间距。",
+  "api.layout.components.Flex.props.members.inline.description":
+    "使用 `inline-flex` 而不是 `flex`。",
+  "api.layout.components.Flex.props.members.justify.description":
+    "控制主轴分布。",
+  "api.layout.components.Flex.props.members.wrap.description": "控制换行行为。",
+  "api.layout.components.Flex.props.remarks":
+    "继承原生 HTML 属性，并加入静态、Tailwind 安全的布局变体。",
+  "api.layout.components.Grid.description":
+    "用于响应式卡片行和重复内容组的 Grid 布局原语。",
+  "api.layout.components.Grid.props.description":
+    "贴纸 Grid 布局原语的 props。",
+  "api.layout.components.Grid.props.members.align.description":
+    "控制块轴上的子项对齐。",
+  "api.layout.components.Grid.props.members.as.description":
+    "控制布局渲染的语义根元素。",
+  "api.layout.components.Grid.props.members.asChild.description":
+    "将布局 class 和状态 props 渲染到唯一的子元素上。",
+  "api.layout.components.Grid.props.members.columns.description":
+    "控制 grid 列模板。",
+  "api.layout.components.Grid.props.members.gap.description":
+    "控制子元素之间的间距。",
+  "api.layout.components.Grid.props.members.inline.description":
+    "使用 `inline-grid` 而不是 `grid`。",
+  "api.layout.components.Grid.props.members.justify.description":
+    "控制内联轴上的子项对齐。",
+  "api.layout.components.Grid.props.remarks":
+    "继承原生 HTML 属性，并加入静态、Tailwind 安全的布局变体。",
+  "api.layout.exports.Flex.description":
+    "用于工具栏、行、堆叠和换行操作组的 Flex 布局原语。",
+  "api.layout.exports.FlexProps.description": "贴纸 Flex 布局原语的 props。",
+  "api.layout.exports.FlexProps.remarks":
+    "继承原生 HTML 属性，并加入静态、Tailwind 安全的布局变体。",
+  "api.layout.exports.Grid.description":
+    "用于响应式卡片行和重复内容组的 Grid 布局原语。",
+  "api.layout.exports.GridProps.description": "贴纸 Grid 布局原语的 props。",
+  "api.layout.exports.GridProps.remarks":
+    "继承原生 HTML 属性，并加入静态、Tailwind 安全的布局变体。",
+  "api.layout.exports.flexVariants.description":
+    "根据方向、对齐、间距和换行变体生成 flex 布局 className。",
+  "api.layout.exports.gridVariants.description":
+    "根据列、对齐和间距变体生成 grid 布局 className。",
+  "api.layout.types.FlexProps.description": "贴纸 Flex 布局原语的 props。",
+  "api.layout.types.FlexProps.members.align.description":
+    "控制交叉轴上的子项对齐。",
+  "api.layout.types.FlexProps.members.as.description":
+    "控制布局渲染的语义根元素。",
+  "api.layout.types.FlexProps.members.asChild.description":
+    "将布局 class 和状态 props 渲染到唯一的子元素上。",
+  "api.layout.types.FlexProps.members.direction.description":
+    "控制 flex 轴向和视觉顺序。",
+  "api.layout.types.FlexProps.members.gap.description":
+    "控制子元素之间的间距。",
+  "api.layout.types.FlexProps.members.inline.description":
+    "使用 `inline-flex` 而不是 `flex`。",
+  "api.layout.types.FlexProps.members.justify.description": "控制主轴分布。",
+  "api.layout.types.FlexProps.members.wrap.description": "控制换行行为。",
+  "api.layout.types.FlexProps.remarks":
+    "继承原生 HTML 属性，并加入静态、Tailwind 安全的布局变体。",
+  "api.layout.types.GridProps.description": "贴纸 Grid 布局原语的 props。",
+  "api.layout.types.GridProps.members.align.description":
+    "控制块轴上的子项对齐。",
+  "api.layout.types.GridProps.members.as.description":
+    "控制布局渲染的语义根元素。",
+  "api.layout.types.GridProps.members.asChild.description":
+    "将布局 class 和状态 props 渲染到唯一的子元素上。",
+  "api.layout.types.GridProps.members.columns.description":
+    "控制 grid 列模板。",
+  "api.layout.types.GridProps.members.gap.description":
+    "控制子元素之间的间距。",
+  "api.layout.types.GridProps.members.inline.description":
+    "使用 `inline-grid` 而不是 `grid`。",
+  "api.layout.types.GridProps.members.justify.description":
+    "控制内联轴上的子项对齐。",
+  "api.layout.types.GridProps.remarks":
+    "继承原生 HTML 属性，并加入静态、Tailwind 安全的布局变体。",
+  "api.layout.variants.flexVariants.description":
+    "根据方向、对齐、间距和换行变体生成 flex 布局 className。",
+  "api.layout.variants.gridVariants.description":
+    "根据列、对齐和间距变体生成 grid 布局 className。",
+  "api.divider.description": "用于章节、元数据行和分栏面板的语义贴纸分隔线。",
+  "api.divider.components.Divider.description":
+    "用于章节、元数据行和分栏面板的贴纸分隔线。",
+  "api.divider.components.Divider.props.description": "贴纸分隔线的 props。",
+  "api.divider.components.Divider.props.members.align.description":
+    "沿横向分隔线对齐标签内容。",
+  "api.divider.components.Divider.props.members.decorative.description":
+    "当分隔线仅作装饰时，将其从辅助技术中隐藏。",
+  "api.divider.components.Divider.props.members.orientation.description":
+    "控制分隔线方向。",
+  "api.divider.components.Divider.props.members.tone.description":
+    "控制分隔线的语义颜色。",
+  "api.divider.components.Divider.props.members.variant.description":
+    "控制分隔线样式。",
+  "api.divider.components.Divider.props.members.weight.description":
+    "控制分隔线粗细。",
+  "api.divider.components.Divider.props.remarks":
+    "继承原生 div 属性，并加入线条方向、色调、粗细和可选标签内容。",
+  "api.divider.exports.Divider.description":
+    "用于章节、元数据行和分栏面板的贴纸分隔线。",
+  "api.divider.exports.DividerProps.description": "贴纸分隔线的 props。",
+  "api.divider.exports.DividerProps.remarks":
+    "继承原生 div 属性，并加入线条方向、色调、粗细和可选标签内容。",
+  "api.divider.exports.dividerVariants.description":
+    "根据方向和标签对齐生成分隔线根元素 className。",
+  "api.divider.types.DividerProps.description": "贴纸分隔线的 props。",
+  "api.divider.types.DividerProps.members.align.description":
+    "沿横向分隔线对齐标签内容。",
+  "api.divider.types.DividerProps.members.decorative.description":
+    "当分隔线仅作装饰时，将其从辅助技术中隐藏。",
+  "api.divider.types.DividerProps.members.orientation.description":
+    "控制分隔线方向。",
+  "api.divider.types.DividerProps.members.tone.description":
+    "控制分隔线的语义颜色。",
+  "api.divider.types.DividerProps.members.variant.description":
+    "控制分隔线样式。",
+  "api.divider.types.DividerProps.members.weight.description":
+    "控制分隔线粗细。",
+  "api.divider.types.DividerProps.remarks":
+    "继承原生 div 属性，并加入线条方向、色调、粗细和可选标签内容。",
+  "api.divider.variants.dividerVariants.description":
+    "根据方向和标签对齐生成分隔线根元素 className。",
+  "api.jsx-join.description":
+    "一个在 JSX 子节点之间插入分隔符的小型 React 工具。",
+  "api.jsx-join.components.JsxJoin.description":
+    "用分隔符连接 JSX 子节点，同时保留每个子节点。",
+  "api.jsx-join.components.JsxJoin.props.description":
+    "使用可复用分隔符连接 JSX 子节点的 props。",
+  "api.jsx-join.components.JsxJoin.props.members.as.description":
+    "用于包裹拼接后节点的根元素。",
+  "api.jsx-join.components.JsxJoin.props.members.children.description":
+    "需要连接的子节点。",
+  "api.jsx-join.components.JsxJoin.props.members.filterEmpty.description":
+    "连接前移除 null、undefined、boolean 和空字符串子节点。",
+  "api.jsx-join.components.JsxJoin.props.members.separator.description":
+    "插入到每个子节点之间的分隔节点或渲染函数。",
+  "api.jsx-join.components.JsxJoin.props.remarks":
+    "默认渲染 Fragment，因此可在文本行、列表和组件插槽中使用，不额外引入 DOM。",
+  "api.jsx-join.exports.JsxJoin.description":
+    "用分隔符连接 JSX 子节点，同时保留每个子节点。",
+  "api.jsx-join.exports.JsxJoinProps.description":
+    "使用可复用分隔符连接 JSX 子节点的 props。",
+  "api.jsx-join.exports.JsxJoinProps.remarks":
+    "默认渲染 Fragment，因此可在文本行、列表和组件插槽中使用，不额外引入 DOM。",
+  "api.jsx-join.types.JsxJoinProps.description":
+    "使用可复用分隔符连接 JSX 子节点的 props。",
+  "api.jsx-join.types.JsxJoinProps.members.as.description":
+    "用于包裹拼接后节点的根元素。",
+  "api.jsx-join.types.JsxJoinProps.members.children.description":
+    "需要连接的子节点。",
+  "api.jsx-join.types.JsxJoinProps.members.filterEmpty.description":
+    "连接前移除 null、undefined、boolean 和空字符串子节点。",
+  "api.jsx-join.types.JsxJoinProps.members.separator.description":
+    "插入到每个子节点之间的分隔节点或渲染函数。",
+  "api.jsx-join.types.JsxJoinProps.remarks":
+    "默认渲染 Fragment，因此可在文本行、列表和组件插槽中使用，不额外引入 DOM。",
+  "api.jsx-join.types.JsxJoinSeparatorContext.members.after.description":
+    "分隔符之后的节点。",
+  "api.jsx-join.types.JsxJoinSeparatorContext.members.before.description":
+    "分隔符之前的节点。",
+  "api.jsx-join.types.JsxJoinSeparatorContext.members.index.description":
+    "从零开始的分隔符索引。",
 }
 
 export { ZH_PREVIEW_API_DOC_TRANSLATIONS }

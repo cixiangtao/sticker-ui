@@ -567,8 +567,6 @@ const ZH_PREVIEW_COMPONENT_TRANSLATIONS: Record<string, string> = {
     "Radio 保留 Radix 键盘行为，同时加入厚实贴纸圆圈、硬质阴影和清晰的选中圆点。",
   "RadioGroup exposes onChange(value), so Form.Item can collect the selected string value.":
     "RadioGroup 暴露 onChange(value)，因此 Form.Item 可以收集选中的字符串值。",
-  Ready: "就绪",
-  Review: "评审",
   "Roomy route": "宽松路径",
   "Save route": "保存路径",
   "Sizes align radio controls with compact lists, standard forms, and roomy settings while tone keeps semantic context visible.":
@@ -625,6 +623,72 @@ const ZH_PREVIEW_COMPONENT_TRANSLATIONS: Record<string, string> = {
   "Use valuePropName and onCheckedChange when Switch is controlled by Form.Item.":
     "当 Switch 由 Form.Item 控制时，使用 valuePropName 和 onCheckedChange。",
   "Weekly digest": "每周摘要",
+  "12 ready": "12 个就绪",
+  Draft: "草稿",
+  Flex: "Flex",
+  "Flex Toolbar": "Flex 工具栏",
+  "Flex keeps toolbar alignment predictable while className carries the sticker frame.":
+    "Flex 让工具栏对齐保持可预期，className 则承载贴纸外框。",
+  Grid: "Grid",
+  "Grid presets cover common responsive card rows without dynamic Tailwind class generation.":
+    "Grid 预设覆盖常见响应式卡片行，不需要动态生成 Tailwind class。",
+  Layout: "布局",
+  Navigation: "导航",
+  Publish: "发布",
+  Ready: "就绪",
+  Review: "评审",
+  "Review queue": "评审队列",
+  "Responsive Grid": "响应式 Grid",
+  Sort: "排序",
+  "Sticker Layout": "贴纸布局",
+  "Tailwind-safe Flex and Grid primitives for composition.":
+    "用于组合的 Tailwind 安全 Flex 与 Grid 原语。",
+  "Tailwind-safe Flex and Grid primitives for sticker component composition.":
+    "用于贴纸组件组合的 Tailwind 安全 Flex 与 Grid 原语。",
+  "The grid owns flow and gaps while each card keeps its own sticker surface.":
+    "Grid 负责流动和间距，每张卡片保留自己的贴纸表面。",
+  "Use as to choose semantic roots for navigation, lists, and grouped page regions.":
+    "使用 as 为导航、列表和页面分组区域选择语义根元素。",
+  "28 done": "28 个完成",
+  "4 pending": "4 个待处理",
+  "A semantic sticker separator for sections, metadata rows, and split panes.":
+    "用于章节、元数据行和分栏面板的语义贴纸分隔线。",
+  "A separator render function can react to each gap while children keep their original components.":
+    "separator 渲染函数可以响应每个间隔，同时子节点保留原本的组件。",
+  "A tiny React utility that inserts separators between JSX children.":
+    "一个在 JSX 子节点之间插入分隔符的小型 React 工具。",
+  "Add label content when a section break needs a scannable checkpoint inside dense docs or forms.":
+    "当章节分隔需要在密集文档或表单中提供可扫读检查点时，可添加标签内容。",
+  "Basic Lines": "基础线条",
+  "Component breadcrumb": "组件面包屑",
+  "Copy source remains portable.": "复制源码保持可移植。",
+  "Divider keeps the line semantic while variants tune weight and texture for calm section breaks.":
+    "Divider 保持分隔线语义，同时用变体调整粗细和纹理，形成克制的章节分隔。",
+  "Empty optional children are skipped by default, which keeps conditional rows from rendering stray separators.":
+    "默认会跳过空的可选子节点，避免条件渲染行出现多余分隔符。",
+  "Filter Empty": "过滤空节点",
+  "Insert separators between JSX children without noisy markup.":
+    "在 JSX 子节点之间插入分隔符，不引入嘈杂标记。",
+  JsxJoin: "JsxJoin",
+  "Labeled Sections": "带标签分隔",
+  "Preview examples stay compact and readable.": "预览示例保持紧凑且易读。",
+  published: "已发布",
+  Queue: "队列",
+  Requirements: "需求",
+  "Render Separator": "渲染分隔符",
+  semantic: "语义化",
+  "Semantic separators for sections and split surfaces.":
+    "用于章节和分栏表面的语义分隔线。",
+  Shipped: "已发布",
+  "source-first": "源码优先",
+  "Start with the brief, collect edge cases, then mark the handoff path.":
+    "先阅读需求简报，收集边界情况，再标记交付路径。",
+  "Sticker Divider": "贴纸分隔线",
+  "Use JsxJoin for metadata rows where each item stays independent and separators are generated once.":
+    "在元数据行中使用 JsxJoin，让每个条目保持独立，并统一生成分隔符。",
+  "Vertical dividers separate split panes and toolbar clusters without changing the surrounding layout.":
+    "纵向分隔线可以分隔分栏面板和工具栏组，同时不改变周围布局。",
+  "Vertical Stack": "纵向分隔",
 }
 
 export { ZH_PREVIEW_COMPONENT_TRANSLATIONS }
