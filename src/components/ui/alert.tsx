@@ -11,17 +11,17 @@ const alertVariants = cva(
   {
     compoundVariants: [
       {
-        class: "bg-fill-danger-soft text-text-danger",
+        class: "bg-fill-danger-soft",
         tone: "danger",
         variant: "filled",
       },
       {
-        class: "border-text-danger bg-surface text-text-danger",
+        class: "border-text-danger bg-fill-danger-soft",
         tone: "danger",
         variant: "outlined",
       },
       {
-        class: "border-l-[8px] border-text-danger bg-surface text-text-danger",
+        class: "border-l-[8px] border-text-danger bg-fill-danger-soft",
         tone: "danger",
         variant: "stripe",
       },
@@ -31,75 +31,72 @@ const alertVariants = cva(
         variant: "filled",
       },
       {
-        class: "bg-surface text-ink",
+        class: "bg-fill-default-soft text-ink",
         tone: "default",
         variant: "outlined",
       },
       {
-        class: "border-l-[8px] bg-surface text-ink",
+        class: "border-l-[8px] bg-fill-default-soft text-ink",
         tone: "default",
         variant: "stripe",
       },
       {
-        class: "bg-fill-info text-text-info",
+        class: "bg-fill-info",
         tone: "info",
         variant: "filled",
       },
       {
-        class: "border-text-info bg-surface text-text-info",
+        class: "border-text-info bg-fill-info",
         tone: "info",
         variant: "outlined",
       },
       {
-        class: "border-l-[8px] border-text-info bg-surface text-text-info",
+        class: "border-l-[8px] border-text-info bg-fill-info",
         tone: "info",
         variant: "stripe",
       },
       {
-        class: "bg-fill-secondary text-text-secondary",
+        class: "bg-fill-secondary",
         tone: "secondary",
         variant: "filled",
       },
       {
-        class: "border-text-secondary bg-surface text-text-secondary",
+        class: "border-text-secondary bg-fill-secondary",
         tone: "secondary",
         variant: "outlined",
       },
       {
-        class:
-          "border-l-[8px] border-text-secondary bg-surface text-text-secondary",
+        class: "border-l-[8px] border-text-secondary bg-fill-secondary",
         tone: "secondary",
         variant: "stripe",
       },
       {
-        class: "bg-fill-success text-text-success",
+        class: "bg-fill-success",
         tone: "success",
         variant: "filled",
       },
       {
-        class: "border-text-success bg-surface text-text-success",
+        class: "border-text-success bg-fill-success",
         tone: "success",
         variant: "outlined",
       },
       {
-        class:
-          "border-l-[8px] border-text-success bg-surface text-text-success",
+        class: "border-l-[8px] border-text-success bg-fill-success",
         tone: "success",
         variant: "stripe",
       },
       {
-        class: "bg-fill-warning text-text-warning",
+        class: "bg-fill-warning",
         tone: "warning",
         variant: "filled",
       },
       {
-        class: "border-text-warning bg-surface text-text-warning",
+        class: "border-text-warning bg-fill-warning",
         tone: "warning",
         variant: "outlined",
       },
       {
-        class:
-          "border-l-[8px] border-text-warning bg-surface text-text-warning",
+        class: "border-l-[8px] border-text-warning bg-fill-warning",
         tone: "warning",
         variant: "stripe",
       },
@@ -201,7 +198,7 @@ type AlertDescriptionProps = React.HTMLAttributes<HTMLParagraphElement>
 function AlertDescription({ className, ...props }: AlertDescriptionProps) {
   return (
     <p
-      className={cn("text-sm leading-6 font-medium text-current/85", className)}
+      className={cn("text-sm leading-6 font-medium text-text-muted", className)}
       data-slot="alert-description"
       {...props}
     />
