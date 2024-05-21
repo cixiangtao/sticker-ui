@@ -80,13 +80,13 @@ function Sidebar({ activeRoute }: { activeRoute: RouteId }) {
       >
         {NAV_GROUPS.map((group) => (
           <div className="min-w-[240px] lg:min-w-0" key={group.label}>
-            <div className="mb-2 flex items-center justify-between gap-3">
+            <div className="mb-2 flex items-center justify-start gap-3">
               <h3 className="text-text text-xl font-extrabold uppercase">
                 {t(group.label)}
               </h3>
-              <Tag color="default" size="xs" variant="outlined">
+              {/* <Tag color="default" size="xs" variant="outlined">
                 {group.items.length}
-              </Tag>
+              </Tag> */}
             </div>
             <div className="flex flex-col gap-4">
               {group.sections.map((section) => (
@@ -96,9 +96,9 @@ function Sidebar({ activeRoute }: { activeRoute: RouteId }) {
                       <Divider align="start" tone="warning" variant="dashed">
                         <span className="inline-flex items-center gap-2">
                           <span>{t(section.label)}</span>
-                          <span className="text-text-subtle">
+                          {/* <span className="text-text-subtle">
                             {section.items.length}
-                          </span>
+                          </span> */}
                         </span>
                       </Divider>
                     </div>
