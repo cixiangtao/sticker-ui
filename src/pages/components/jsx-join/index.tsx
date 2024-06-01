@@ -18,4 +18,4 @@ const JsxJoinPage = createComponentPreviewPage({
   name: "jsx-join",
 })
 
-export default JsxJoinPage
+export { JsxJoinPage }

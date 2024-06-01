@@ -18,4 +18,4 @@ const ButtonPage = createComponentPreviewPage({
   name: "button",
 })
 
-export default ButtonPage
+export { ButtonPage }

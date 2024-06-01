@@ -30,4 +30,4 @@ function ShadowsPage() {
   )
 }
 
-export default ShadowsPage
+export { ShadowsPage }

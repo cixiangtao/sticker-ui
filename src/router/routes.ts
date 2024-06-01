@@ -2,7 +2,8 @@ import { defineRoutes } from "@/router/helper"
 
 const routes = defineRoutes([
   {
-    component: () => import("@/pages/overview"),
+    component: () =>
+      import("@/pages/overview").then((module) => module.OverviewPage),
     meta: {
       description: "Library direction, constraints, and preview map.",
       emoji: "S",
@@ -12,7 +13,8 @@ const routes = defineRoutes([
     path: "/",
   },
   {
-    component: () => import("@/pages/foundation/colors"),
+    component: () =>
+      import("@/pages/foundation/colors").then((module) => module.ColorsPage),
     meta: {
       description: "Paper, ink, accent, and semantic color usage.",
       emoji: "C",
@@ -22,7 +24,8 @@ const routes = defineRoutes([
     path: "/foundation/colors",
   },
   {
-    component: () => import("@/pages/foundation/shadows"),
+    component: () =>
+      import("@/pages/foundation/shadows").then((module) => module.ShadowsPage),
     meta: {
       description: "Hard offsets, thick outlines, and pressed states.",
       emoji: "B",
@@ -32,7 +35,8 @@ const routes = defineRoutes([
     path: "/foundation/shadows",
   },
   {
-    component: () => import("@/pages/components/button"),
+    component: () =>
+      import("@/pages/components/button").then((module) => module.ButtonPage),
     meta: {
       description: "Tactile command surface for primary actions.",
       emoji: "B",
@@ -43,7 +47,8 @@ const routes = defineRoutes([
     path: "/components/button",
   },
   {
-    component: () => import("@/pages/components/card"),
+    component: () =>
+      import("@/pages/components/card").then((module) => module.CardPage),
     meta: {
       description:
         "Composable sticker surfaces for cards, panels, and grouped content.",
@@ -55,7 +60,8 @@ const routes = defineRoutes([
     path: "/components/card",
   },
   {
-    component: () => import("@/pages/components/layout"),
+    component: () =>
+      import("@/pages/components/layout").then((module) => module.LayoutPage),
     meta: {
       description: "Tailwind-safe Flex and Grid primitives for composition.",
       emoji: "L",
@@ -66,7 +72,8 @@ const routes = defineRoutes([
     path: "/components/layout",
   },
   {
-    component: () => import("@/pages/components/divider"),
+    component: () =>
+      import("@/pages/components/divider").then((module) => module.DividerPage),
     meta: {
       description: "Semantic separators for sections and split surfaces.",
       emoji: "D",
@@ -77,7 +84,10 @@ const routes = defineRoutes([
     path: "/components/divider",
   },
   {
-    component: () => import("@/pages/components/jsx-join"),
+    component: () =>
+      import("@/pages/components/jsx-join").then(
+        (module) => module.JsxJoinPage,
+      ),
     meta: {
       description:
         "Insert separators between JSX children without noisy markup.",
@@ -89,7 +99,8 @@ const routes = defineRoutes([
     path: "/components/jsx-join",
   },
   {
-    component: () => import("@/pages/components/table"),
+    component: () =>
+      import("@/pages/components/table").then((module) => module.TablePage),
     meta: {
       description: "Scrollable paper tables for API and structured data.",
       emoji: "T",
@@ -100,7 +111,8 @@ const routes = defineRoutes([
     path: "/components/table",
   },
   {
-    component: () => import("@/pages/components/tag"),
+    component: () =>
+      import("@/pages/components/tag").then((module) => module.TagPage),
     meta: {
       description: "Compact sticker labels for status and metadata.",
       emoji: "T",
@@ -111,7 +123,8 @@ const routes = defineRoutes([
     path: "/components/tag",
   },
   {
-    component: () => import("@/pages/components/alert"),
+    component: () =>
+      import("@/pages/components/alert").then((module) => module.AlertPage),
     meta: {
       description: "Readable sticker notes for feedback and status messages.",
       emoji: "A",
@@ -122,7 +135,8 @@ const routes = defineRoutes([
     path: "/components/alert",
   },
   {
-    component: () => import("@/pages/components/form"),
+    component: () =>
+      import("@/pages/components/form").then((module) => module.FormPage),
     meta: {
       description: "Antd-style field state and validation for sticker forms.",
       emoji: "F",
@@ -133,7 +147,8 @@ const routes = defineRoutes([
     path: "/components/form",
   },
   {
-    component: () => import("@/pages/components/input"),
+    component: () =>
+      import("@/pages/components/input").then((module) => module.InputPage),
     meta: {
       description: "Native input controls with chunky sticker frames.",
       emoji: "I",
@@ -144,7 +159,10 @@ const routes = defineRoutes([
     path: "/components/input",
   },
   {
-    component: () => import("@/pages/components/input-password"),
+    component: () =>
+      import("@/pages/components/input-password").then(
+        (module) => module.InputPasswordPage,
+      ),
     meta: {
       description: "Password fields with show-hide sticker toggles.",
       emoji: "P",
@@ -155,7 +173,10 @@ const routes = defineRoutes([
     path: "/components/input-password",
   },
   {
-    component: () => import("@/pages/components/textarea"),
+    component: () =>
+      import("@/pages/components/textarea").then(
+        (module) => module.TextareaPage,
+      ),
     meta: {
       description: "Native multiline controls with chunky sticker frames.",
       emoji: "T",
@@ -166,7 +187,8 @@ const routes = defineRoutes([
     path: "/components/textarea",
   },
   {
-    component: () => import("@/pages/components/select"),
+    component: () =>
+      import("@/pages/components/select").then((module) => module.SelectPage),
     meta: {
       description: "Radix option controls with chunky sticker frames.",
       emoji: "S",
@@ -177,7 +199,10 @@ const routes = defineRoutes([
     path: "/components/select",
   },
   {
-    component: () => import("@/pages/components/checkbox"),
+    component: () =>
+      import("@/pages/components/checkbox").then(
+        (module) => module.CheckboxPage,
+      ),
     meta: {
       description: "Radix checkbox controls with sticker checked states.",
       emoji: "C",
@@ -188,7 +213,8 @@ const routes = defineRoutes([
     path: "/components/checkbox",
   },
   {
-    component: () => import("@/pages/components/radio"),
+    component: () =>
+      import("@/pages/components/radio").then((module) => module.RadioPage),
     meta: {
       description: "Radix radio groups with tactile sticker items.",
       emoji: "R",
@@ -199,7 +225,8 @@ const routes = defineRoutes([
     path: "/components/radio",
   },
   {
-    component: () => import("@/pages/components/switch"),
+    component: () =>
+      import("@/pages/components/switch").then((module) => module.SwitchPage),
     meta: {
       description: "Radix switch controls with tactile sticker tracks.",
       emoji: "S",
@@ -210,7 +237,8 @@ const routes = defineRoutes([
     path: "/components/switch",
   },
   {
-    component: () => import("@/pages/components/label"),
+    component: () =>
+      import("@/pages/components/label").then((module) => module.LabelPage),
     meta: {
       description: "Accessible form captions with small sticker markers.",
       emoji: "L",
@@ -221,7 +249,8 @@ const routes = defineRoutes([
     path: "/components/label",
   },
   {
-    component: () => import("@/pages/registry/usage"),
+    component: () =>
+      import("@/pages/registry/usage").then((module) => module.RegistryPage),
     meta: {
       description: "Generated registry JSON and install commands.",
       emoji: "R",

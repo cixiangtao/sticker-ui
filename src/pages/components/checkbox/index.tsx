@@ -18,4 +18,4 @@ const CheckboxPage = createComponentPreviewPage({
   name: "checkbox",
 })
 
-export default CheckboxPage
+export { CheckboxPage }

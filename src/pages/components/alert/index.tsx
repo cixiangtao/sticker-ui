@@ -18,4 +18,4 @@ const AlertPage = createComponentPreviewPage({
   name: "alert",
 })
 
-export default AlertPage
+export { AlertPage }

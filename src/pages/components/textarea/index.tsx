@@ -18,4 +18,4 @@ const TextareaPage = createComponentPreviewPage({
   name: "textarea",
 })
 
-export default TextareaPage
+export { TextareaPage }

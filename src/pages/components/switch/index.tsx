@@ -18,4 +18,4 @@ const SwitchPage = createComponentPreviewPage({
   name: "switch",
 })
 
-export default SwitchPage
+export { SwitchPage }

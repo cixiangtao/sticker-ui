@@ -88,4 +88,4 @@ function ColorsPage() {
   )
 }
 
-export default ColorsPage
+export { ColorsPage }

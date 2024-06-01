@@ -18,4 +18,4 @@ const FormPage = createComponentPreviewPage({
   name: "form",
 })
 
-export default FormPage
+export { FormPage }

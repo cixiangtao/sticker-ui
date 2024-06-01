@@ -86,4 +86,4 @@ function OverviewPage() {
   )
 }
 
-export default OverviewPage
+export { OverviewPage }

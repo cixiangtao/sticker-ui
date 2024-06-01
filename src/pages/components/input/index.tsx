@@ -18,4 +18,4 @@ const InputPage = createComponentPreviewPage({
   name: "input",
 })
 
-export default InputPage
+export { InputPage }

@@ -18,4 +18,4 @@ const TagPage = createComponentPreviewPage({
   name: "tag",
 })
 
-export default TagPage
+export { TagPage }

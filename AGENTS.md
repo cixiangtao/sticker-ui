@@ -24,6 +24,7 @@
 - Use shared Tailwind CSS variables from `src/globals.css` for common sticker colors, radius, border widths, shadows, focus rings, and preview grid details before reaching for raw hex values or arbitrary shadows.
 - Keep oxfmt sorting focused on project-wide consistency before tuning individual ordering preferences.
 - Prefer focused changes that match the existing file structure.
+- Prefer named exports throughout project source. Do not add new `export default` declarations for components, pages, demos, helpers, or registry entry points. Default exports are only allowed where an external tool or generated asset module requires that shape, such as Vite/Tsup/Oxlint config files or generated JSON module declarations.
 - `src/components/ui/<name>.tsx` is the canonical source for UI components. Do not add or edit component source under `registry/default` for new work.
 - When adding a registry UI component, update the full preview delivery chain together: `src/components/ui/<name>.tsx`, `registry.json`, `src/pages/components/<name>`, `src/router/routes.ts`, generated API docs, and preview i18n dictionaries.
 - Document registry component APIs with TSDoc-style `/** ... */` comments that TypeScript can expose through JSDoc AST APIs.

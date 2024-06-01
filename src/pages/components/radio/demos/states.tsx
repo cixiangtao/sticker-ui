@@ -104,5 +104,4 @@ function RadioOption({
   )
 }
 
-export { Demo }
-export default meta
+export { Demo, meta }

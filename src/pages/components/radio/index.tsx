@@ -18,4 +18,4 @@ const RadioPage = createComponentPreviewPage({
   name: "radio",
 })
 
-export default RadioPage
+export { RadioPage }

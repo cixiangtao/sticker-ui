@@ -18,4 +18,4 @@ const DividerPage = createComponentPreviewPage({
   name: "divider",
 })
 
-export default DividerPage
+export { DividerPage }

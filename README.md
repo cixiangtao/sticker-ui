@@ -69,3 +69,13 @@ registry.json
 components.json
 vite.config.ts
 ```
+
+## Export Style
+
+- Prefer named exports throughout source files. Components, preview pages,
+  demo metadata, helpers, and public package entry points should export their
+  APIs with `export { Name }` and `export type { NameProps }`.
+- Do not add new `export default` declarations in project source. Default
+  exports are only allowed where an external tool or asset module requires
+  that shape, such as Vite/Tsup/Oxlint config files or generated declarations
+  for JSON modules.

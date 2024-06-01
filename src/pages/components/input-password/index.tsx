@@ -18,4 +18,4 @@ const InputPasswordPage = createComponentPreviewPage({
   name: "input-password",
 })
 
-export default InputPasswordPage
+export { InputPasswordPage }

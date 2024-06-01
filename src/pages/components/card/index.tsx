@@ -18,4 +18,4 @@ const CardPage = createComponentPreviewPage({
   name: "card",
 })
 
-export default CardPage
+export { CardPage }

@@ -18,4 +18,4 @@ const SelectPage = createComponentPreviewPage({
   name: "select",
 })
 
-export default SelectPage
+export { SelectPage }

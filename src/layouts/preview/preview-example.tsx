@@ -26,8 +26,8 @@ interface PreviewDemoMeta {
 }
 
 interface PreviewDemoModule {
-  default: PreviewDemoMeta
   Demo: ComponentType
+  meta: PreviewDemoMeta
 }
 
 function defineMeta(meta: PreviewDemoMeta) {

@@ -60,8 +60,8 @@ function comparePreviewDemoExamples(
   firstExample: PreviewDemoExample,
   secondExample: PreviewDemoExample,
 ) {
-  const firstOrder = firstExample.module.default.order
-  const secondOrder = secondExample.module.default.order
+  const firstOrder = firstExample.module.meta.order
+  const secondOrder = secondExample.module.meta.order
 
   if (firstOrder !== undefined && secondOrder !== undefined) {
     return (
@@ -93,7 +93,7 @@ function PreviewDemoPage({
         <PreviewExample
           component={example.module.Demo}
           key={example.path}
-          meta={example.module.default}
+          meta={example.module.meta}
           source={{
             code: example.code,
             language: "tsx",

@@ -18,4 +18,4 @@ const LabelPage = createComponentPreviewPage({
   name: "label",
 })
 
-export default LabelPage
+export { LabelPage }

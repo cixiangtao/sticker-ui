@@ -18,7 +18,7 @@ interface MenuItem {
 interface RouteConfig {
   beforeLoad?: () => Promise<void> | void
   children?: RouteConfig[]
-  component: () => Promise<{ default: RouteComponent }>
+  component: () => Promise<RouteComponent>
   meta: RouteMeta
   path: string
 }
@@ -55,7 +55,9 @@ function createRouteFromConfig(
 ): AnyRoute {
   const route = createRoute({
     beforeLoad: config.beforeLoad,
-    component: lazyRouteComponent(config.component),
+    component: lazyRouteComponent(async () => ({
+      default: await config.component(),
+    })),
     getParentRoute: () => parentRoute,
     path: normalizePathForRoute(config.path),
     staticData: {

@@ -18,4 +18,4 @@ const LayoutPage = createComponentPreviewPage({
   name: "layout",
 })
 
-export default LayoutPage
+export { LayoutPage }

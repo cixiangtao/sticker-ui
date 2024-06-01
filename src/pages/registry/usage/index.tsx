@@ -64,4 +64,4 @@ function RegistryPage() {
   )
 }
 
-export default RegistryPage
+export { RegistryPage }

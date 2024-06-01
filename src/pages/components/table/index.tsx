@@ -18,4 +18,4 @@ const TablePage = createComponentPreviewPage({
   name: "table",
 })
 
-export default TablePage
+export { TablePage }

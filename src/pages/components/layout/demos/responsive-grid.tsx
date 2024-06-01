@@ -55,5 +55,4 @@ function Demo() {
   )
 }
 
-export { Demo }
-export default meta
+export { Demo, meta }
