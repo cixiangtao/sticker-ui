@@ -45,7 +45,7 @@ function OverviewPage() {
                         <a
                           className="rounded-[12px] border border-[#2E3038] bg-[#FFFDF7] px-3 py-2 text-sm font-extrabold transition hover:-translate-y-0.5"
                           href={`#${item.path}`}
-                          key={item.id}
+                          key={item.path}
                         >
                           {item.label}
                         </a>

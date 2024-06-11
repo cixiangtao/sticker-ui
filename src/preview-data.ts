@@ -8,10 +8,8 @@ interface NavGroup {
 
 interface NavItem {
   description: string
-  id: string
   label: string
   path: string
-  status: "draft" | "ready"
 }
 
 interface NavSection {
@@ -21,8 +19,8 @@ interface NavSection {
 }
 
 interface NavGroupConfig {
+  id: string
   label: string
-  matches: (path: string) => boolean
   sections?: NavSectionConfig[]
 }
 
@@ -45,7 +43,6 @@ interface ColorTokenGroup {
   tokens: ColorToken[]
 }
 
-type RouteId = NavItem["id"]
 type PreviewRoute = (typeof routes)[number]
 
 const COMPONENT_NAV_SECTIONS: NavSectionConfig[] = [
@@ -73,21 +70,21 @@ const COMPONENT_NAV_SECTIONS: NavSectionConfig[] = [
 
 const NAV_GROUP_CONFIGS: NavGroupConfig[] = [
   {
+    id: "start",
     label: "Start",
-    matches: (path) => path === "/",
   },
   {
+    id: "foundation",
     label: "Foundation",
-    matches: (path) => path.startsWith("/foundation/"),
   },
   {
+    id: "components",
     label: "Components",
-    matches: (path) => path.startsWith("/components/"),
     sections: COMPONENT_NAV_SECTIONS,
   },
   {
+    id: "registry",
     label: "Registry",
-    matches: (path) => path.startsWith("/registry/"),
   },
 ]
 
@@ -96,11 +93,9 @@ const NAV_GROUPS: NavGroup[] = NAV_GROUP_CONFIGS.map((group) => {
     .filter(
       (route) =>
         !("hideInMenu" in route.meta && route.meta.hideInMenu) &&
-        group.matches(route.path),
+        getRouteGroupId(route.path) === group.id,
     )
-    .sort(
-      (first, second) => getRouteOrder(first.path) - getRouteOrder(second.path),
-    )
+    .sort((first, second) => (first.meta.order ?? 0) - (second.meta.order ?? 0))
   const items = groupRoutes.map((route) => createNavItem(route))
 
   return {
@@ -278,36 +273,19 @@ const COMPONENT_FILES = routes.flatMap((route) => {
   ]
 })
 
-function findNavItemByPath(pathname: string) {
-  for (const group of NAV_GROUPS) {
-    const item = group.items.find((navItem) => navItem.path === pathname)
-    if (item) {
-      return item
-    }
-  }
-
-  return NAV_GROUPS[0].items[0]
-}
-
-function getRouteId(path: string) {
+function getRouteGroupId(path: string) {
   if (path === "/") {
-    return "overview"
+    return "start"
   }
 
-  return path.replace(/^\/+/, "").replaceAll("/", "-")
-}
-
-function getRouteOrder(path: string) {
-  return routes.find((route) => route.path === path)?.meta.order ?? 0
+  return path.split("/").find(Boolean) ?? "start"
 }
 
 function createNavItem(route: PreviewRoute): NavItem {
   return {
     description: route.meta.description ?? "",
-    id: getRouteId(route.path),
     label: route.meta.title,
     path: route.path,
-    status: "ready",
   }
 }
 
@@ -364,5 +342,5 @@ function getRouteComponentName(path: string) {
     ?.componentName
 }
 
-export { COLOR_TOKEN_GROUPS, COMPONENT_FILES, findNavItemByPath, NAV_GROUPS }
-export type { NavGroup, NavItem, NavSection, RouteId }
+export { COLOR_TOKEN_GROUPS, COMPONENT_FILES, NAV_GROUPS }
+export type { NavGroup, NavItem, NavSection }

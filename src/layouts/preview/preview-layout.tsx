@@ -3,12 +3,8 @@ import { useLayoutEffect } from "react"
 import { Button, Card, CardContent, CardHeader, Divider, Tag } from "sticker-ui"
 
 import { type PreviewLanguage, usePreviewI18n } from "../../i18n/preview"
-import {
-  findNavItemByPath,
-  NAV_GROUPS,
-  type NavItem,
-  type RouteId,
-} from "../../preview-data"
+import { NAV_GROUPS } from "../../preview-data"
+import { useCurrentRoute } from "../../router/hooks"
 
 import "./preview-layout.css"
 
@@ -17,7 +13,12 @@ const PREVIEW_CONTENT_SCROLL_SELECTOR = "[data-preview-content-scroll]"
 function PreviewLayout() {
   const location = useLocation()
   const { t } = usePreviewI18n()
-  const activeItem = findNavItemByPath(location.pathname)
+  const currentRoute = useCurrentRoute()
+  const activeRoute = {
+    description: currentRoute?.meta?.description ?? "",
+    label: currentRoute?.meta?.title ?? "",
+    path: currentRoute?.pathname ?? location.pathname,
+  }
 
   useLayoutEffect(() => {
     const scrollContainer = document.querySelector<HTMLElement>(
@@ -30,9 +31,9 @@ function PreviewLayout() {
   return (
     <main className="bg-sticker-grid min-h-screen bg-canvas px-4 py-4 text-ink sm:px-6 lg:h-screen lg:overflow-hidden lg:px-8">
       <div className="mx-auto flex max-w-7xl flex-col gap-4 lg:h-full lg:min-h-0">
-        <TopBar activeItem={activeItem} />
+        <TopBar activeRoute={activeRoute} />
         <div className="grid gap-4 lg:min-h-0 lg:flex-1 lg:grid-cols-[280px_minmax(0,1fr)]">
-          <Sidebar activeRoute={activeItem.id} />
+          <Sidebar activePath={activeRoute.path} />
           <Card
             as="section"
             className="min-h-0 overflow-auto"
@@ -45,14 +46,14 @@ function PreviewLayout() {
                   {t("Preview Route")}
                 </div>
                 <h1 className="mt-1 text-5xl leading-none font-black">
-                  {activeItem.label}
+                  {activeRoute.label}
                 </h1>
                 <p className="mt-3 max-w-2xl text-sm leading-6 font-medium text-text-muted">
-                  {t(activeItem.description)}
+                  {t(activeRoute.description)}
                 </p>
               </div>
               <Tag as="code" color="warning" variant="solid">
-                #{activeItem.path}
+                #{activeRoute.path}
               </Tag>
             </CardHeader>
             <CardContent>
@@ -65,7 +66,7 @@ function PreviewLayout() {
   )
 }
 
-function Sidebar({ activeRoute }: { activeRoute: RouteId }) {
+function Sidebar({ activePath }: { activePath: string }) {
   const { t } = usePreviewI18n()
 
   return (
@@ -108,27 +109,22 @@ function Sidebar({ activeRoute }: { activeRoute: RouteId }) {
                       asChild
                       className={[
                         "rounded-sticker-lg border-ink border-2 px-3 py-3 transition hover:-translate-y-0.5",
-                        activeRoute === item.id
+                        activePath === item.path
                           ? "bg-fill-default shadow-sticker-md"
                           : "bg-surface shadow-sticker-xs",
                       ].join(" ")}
                       interactive
-                      key={item.id}
+                      key={item.path}
                       padding="sm"
                     >
                       <Link
                         aria-current={
-                          activeRoute === item.id ? "page" : undefined
+                          activePath === item.path ? "page" : undefined
                         }
                         resetScroll={false}
                         to={item.path}
                       >
-                        <span className="flex items-center justify-between gap-3">
-                          <span className="font-extrabold">{item.label}</span>
-                          <Tag color="success" size="xs" variant="solid">
-                            {t(item.status)}
-                          </Tag>
-                        </span>
+                        <span className="font-extrabold">{item.label}</span>
                         <span className="mt-1 block text-xs leading-5 font-medium text-text-subtle">
                           {t(item.description)}
                         </span>
@@ -145,7 +141,7 @@ function Sidebar({ activeRoute }: { activeRoute: RouteId }) {
   )
 }
 
-function TopBar({ activeItem }: { activeItem: NavItem }) {
+function TopBar({ activeRoute }: { activeRoute: { label: string } }) {
   const { language, setLanguage, t } = usePreviewI18n()
 
   return (
@@ -161,7 +157,7 @@ function TopBar({ activeItem }: { activeItem: NavItem }) {
         <div>
           <div className="text-2xl leading-none font-black">sticker-ui</div>
           <div className="mt-1 text-sm font-bold text-text-muted">
-            {t("Previewing")} {activeItem.label}
+            {t("Previewing")} {activeRoute.label}
           </div>
         </div>
       </Link>
