@@ -825,6 +825,177 @@ const ZH_PREVIEW_API_DOC_TRANSLATIONS: Record<string, string> = {
     "分隔符之前的节点。",
   "api.jsx-join.types.JsxJoinSeparatorContext.members.index.description":
     "从零开始的分隔符索引。",
+  "api.tooltip.description": "带小型 handbook 贴纸气泡的 Radix Tooltip。",
+  "api.tooltip.components.Tooltip.description":
+    "由 Radix Tooltip 驱动的贴纸 Tooltip 根组件。",
+  "api.tooltip.components.TooltipContent.description":
+    "通过 Portal 渲染的贴纸 Tooltip 气泡。",
+  "api.tooltip.components.TooltipContent.props.description":
+    "贴纸 Tooltip 内容的 props。",
+  "api.tooltip.components.TooltipContent.props.members.showArrow.description":
+    "渲染指向触发器的小型墨色箭头。",
+  "api.tooltip.components.TooltipContent.props.members.size.description":
+    "控制 Tooltip 内边距和文字尺寸。",
+  "api.tooltip.components.TooltipContent.props.members.tone.description":
+    "控制 Tooltip 的纸张色调。",
+  "api.tooltip.components.TooltipContent.props.remarks":
+    "包裹 Radix Tooltip.Content，并加入贴纸色调、尺寸和可选箭头样式。",
+  "api.tooltip.components.TooltipProvider.description":
+    "为贴纸 Tooltip 提供时间控制默认值。",
+  "api.tooltip.components.TooltipProvider.props.description":
+    "贴纸 Tooltip Provider 的 props。",
+  "api.tooltip.components.TooltipProvider.props.members.delayDuration.description":
+    "Tooltip 打开前的延迟毫秒数。",
+  "api.tooltip.components.TooltipProvider.props.members.skipDelayDuration.description":
+    "另一个 Tooltip 复用即时打开窗口前的延迟毫秒数。",
+  "api.tooltip.components.TooltipTrigger.description":
+    "在悬停或聚焦时打开 Tooltip。",
+  "api.tooltip.exports.Tooltip.description":
+    "由 Radix Tooltip 驱动的贴纸 Tooltip 根组件。",
+  "api.tooltip.exports.TooltipContent.description":
+    "通过 Portal 渲染的贴纸 Tooltip 气泡。",
+  "api.tooltip.exports.TooltipContentProps.description":
+    "贴纸 Tooltip 内容的 props。",
+  "api.tooltip.exports.TooltipContentProps.remarks":
+    "包裹 Radix Tooltip.Content，并加入贴纸色调、尺寸和可选箭头样式。",
+  "api.tooltip.exports.TooltipProvider.description":
+    "为贴纸 Tooltip 提供时间控制默认值。",
+  "api.tooltip.exports.TooltipProviderProps.description":
+    "贴纸 Tooltip Provider 的 props。",
+  "api.tooltip.exports.TooltipTrigger.description":
+    "在悬停或聚焦时打开 Tooltip。",
+  "api.tooltip.exports.tooltipContentVariants.description":
+    "根据色调和尺寸选项生成贴纸 Tooltip 内容 className。",
+  "api.tooltip.types.TooltipContentProps.description":
+    "贴纸 Tooltip 内容的 props。",
+  "api.tooltip.types.TooltipContentProps.members.showArrow.description":
+    "渲染指向触发器的小型墨色箭头。",
+  "api.tooltip.types.TooltipContentProps.members.size.description":
+    "控制 Tooltip 内边距和文字尺寸。",
+  "api.tooltip.types.TooltipContentProps.members.tone.description":
+    "控制 Tooltip 的纸张色调。",
+  "api.tooltip.types.TooltipContentProps.remarks":
+    "包裹 Radix Tooltip.Content，并加入贴纸色调、尺寸和可选箭头样式。",
+  "api.tooltip.types.TooltipProviderProps.description":
+    "贴纸 Tooltip Provider 的 props。",
+  "api.tooltip.types.TooltipProviderProps.members.delayDuration.description":
+    "Tooltip 打开前的延迟毫秒数。",
+  "api.tooltip.types.TooltipProviderProps.members.skipDelayDuration.description":
+    "另一个 Tooltip 复用即时打开窗口前的延迟毫秒数。",
+  "api.tooltip.variants.tooltipContentVariants.description":
+    "根据色调和尺寸选项生成贴纸 Tooltip 内容 className。",
+  "api.popover.description": "用于紧凑交互贴纸面板的 Radix Popover。",
+  "api.popover.components.Popover.description":
+    "由 Radix Popover 驱动的贴纸 Popover 根组件。",
+  "api.popover.components.PopoverAnchor.description":
+    "将 Popover 内容定位到自定义锚点。",
+  "api.popover.components.PopoverClose.description": "激活时关闭 Popover。",
+  "api.popover.components.PopoverContent.description":
+    "通过 Portal 渲染的贴纸 Popover 面板，用于交互式浮动内容。",
+  "api.popover.components.PopoverContent.props.description":
+    "贴纸 Popover 内容的 props。",
+  "api.popover.components.PopoverContent.props.members.showArrow.description":
+    "渲染指向触发器的小型墨色箭头。",
+  "api.popover.components.PopoverContent.props.members.size.description":
+    "控制 Popover 宽度和内边距。",
+  "api.popover.components.PopoverContent.props.members.tone.description":
+    "控制 Popover 的纸张色调。",
+  "api.popover.components.PopoverContent.props.remarks":
+    "包裹 Radix Popover.Content，并加入贴纸色调、尺寸和可选箭头样式。",
+  "api.popover.components.PopoverTrigger.description": "打开 Popover。",
+  "api.popover.exports.Popover.description":
+    "由 Radix Popover 驱动的贴纸 Popover 根组件。",
+  "api.popover.exports.PopoverAnchor.description":
+    "将 Popover 内容定位到自定义锚点。",
+  "api.popover.exports.PopoverClose.description": "激活时关闭 Popover。",
+  "api.popover.exports.PopoverContent.description":
+    "通过 Portal 渲染的贴纸 Popover 面板，用于交互式浮动内容。",
+  "api.popover.exports.PopoverContentProps.description":
+    "贴纸 Popover 内容的 props。",
+  "api.popover.exports.PopoverContentProps.remarks":
+    "包裹 Radix Popover.Content，并加入贴纸色调、尺寸和可选箭头样式。",
+  "api.popover.exports.PopoverTrigger.description": "打开 Popover。",
+  "api.popover.exports.popoverContentVariants.description":
+    "根据色调和尺寸选项生成贴纸 Popover 内容 className。",
+  "api.popover.types.PopoverContentProps.description":
+    "贴纸 Popover 内容的 props。",
+  "api.popover.types.PopoverContentProps.members.showArrow.description":
+    "渲染指向触发器的小型墨色箭头。",
+  "api.popover.types.PopoverContentProps.members.size.description":
+    "控制 Popover 宽度和内边距。",
+  "api.popover.types.PopoverContentProps.members.tone.description":
+    "控制 Popover 的纸张色调。",
+  "api.popover.types.PopoverContentProps.remarks":
+    "包裹 Radix Popover.Content，并加入贴纸色调、尺寸和可选箭头样式。",
+  "api.popover.variants.popoverContentVariants.description":
+    "根据色调和尺寸选项生成贴纸 Popover 内容 className。",
+  "api.dialog.description": "带有 handbook 贴纸纸张面板的 Radix 模态 Dialog。",
+  "api.dialog.components.Dialog.description":
+    "由 Radix Dialog 驱动的贴纸 Dialog 根组件。",
+  "api.dialog.components.DialogClose.description": "激活时关闭 Dialog。",
+  "api.dialog.components.DialogContent.description":
+    "通过 Portal 渲染的贴纸 Dialog 面板。",
+  "api.dialog.components.DialogContent.props.description":
+    "贴纸 Dialog 内容的 props。",
+  "api.dialog.components.DialogContent.props.members.closeLabel.description":
+    "图标关闭按钮的可访问标签。",
+  "api.dialog.components.DialogContent.props.members.showClose.description":
+    "渲染右上角关闭按钮。",
+  "api.dialog.components.DialogContent.props.members.size.description":
+    "控制 Dialog 宽度和内边距。",
+  "api.dialog.components.DialogContent.props.members.tone.description":
+    "控制 Dialog 的纸张色调。",
+  "api.dialog.components.DialogContent.props.remarks":
+    "包裹 Radix Dialog.Content，并加入贴纸尺寸、色调和关闭按钮样式。",
+  "api.dialog.components.DialogDescription.description": "贴纸 Dialog 描述。",
+  "api.dialog.components.DialogFooter.description": "Dialog 操作区页脚。",
+  "api.dialog.components.DialogHeader.description":
+    "用于 Dialog 标题和描述的头部区域。",
+  "api.dialog.components.DialogOverlay.description": "贴纸 Dialog 遮罩。",
+  "api.dialog.components.DialogOverlay.props.description":
+    "贴纸 Dialog 遮罩的 props。",
+  "api.dialog.components.DialogPortal.description":
+    "将 Dialog 遮罩和内容 Portal 到 document body。",
+  "api.dialog.components.DialogTitle.description": "贴纸 Dialog 标题。",
+  "api.dialog.components.DialogTrigger.description": "打开 Dialog。",
+  "api.dialog.exports.Dialog.description":
+    "由 Radix Dialog 驱动的贴纸 Dialog 根组件。",
+  "api.dialog.exports.DialogClose.description": "激活时关闭 Dialog。",
+  "api.dialog.exports.DialogContent.description":
+    "通过 Portal 渲染的贴纸 Dialog 面板。",
+  "api.dialog.exports.DialogContentProps.description":
+    "贴纸 Dialog 内容的 props。",
+  "api.dialog.exports.DialogContentProps.remarks":
+    "包裹 Radix Dialog.Content，并加入贴纸尺寸、色调和关闭按钮样式。",
+  "api.dialog.exports.DialogDescription.description": "贴纸 Dialog 描述。",
+  "api.dialog.exports.DialogFooter.description": "Dialog 操作区页脚。",
+  "api.dialog.exports.DialogHeader.description":
+    "用于 Dialog 标题和描述的头部区域。",
+  "api.dialog.exports.DialogOverlay.description": "贴纸 Dialog 遮罩。",
+  "api.dialog.exports.DialogOverlayProps.description":
+    "贴纸 Dialog 遮罩的 props。",
+  "api.dialog.exports.DialogPortal.description":
+    "将 Dialog 遮罩和内容 Portal 到 document body。",
+  "api.dialog.exports.DialogTitle.description": "贴纸 Dialog 标题。",
+  "api.dialog.exports.DialogTrigger.description": "打开 Dialog。",
+  "api.dialog.exports.dialogContentVariants.description":
+    "根据尺寸和色调选项生成贴纸 Dialog 内容 className。",
+  "api.dialog.types.DialogContentProps.description":
+    "贴纸 Dialog 内容的 props。",
+  "api.dialog.types.DialogContentProps.members.closeLabel.description":
+    "图标关闭按钮的可访问标签。",
+  "api.dialog.types.DialogContentProps.members.showClose.description":
+    "渲染右上角关闭按钮。",
+  "api.dialog.types.DialogContentProps.members.size.description":
+    "控制 Dialog 宽度和内边距。",
+  "api.dialog.types.DialogContentProps.members.tone.description":
+    "控制 Dialog 的纸张色调。",
+  "api.dialog.types.DialogContentProps.remarks":
+    "包裹 Radix Dialog.Content，并加入贴纸尺寸、色调和关闭按钮样式。",
+  "api.dialog.types.DialogOverlayProps.description":
+    "贴纸 Dialog 遮罩的 props。",
+  "api.dialog.variants.dialogContentVariants.description":
+    "根据尺寸和色调选项生成贴纸 Dialog 内容 className。",
 }
 
 export { ZH_PREVIEW_API_DOC_TRANSLATIONS }

@@ -689,6 +689,74 @@ const ZH_PREVIEW_COMPONENT_TRANSLATIONS: Record<string, string> = {
   "Vertical dividers separate split panes and toolbar clusters without changing the surrounding layout.":
     "纵向分隔线可以分隔分栏面板和工具栏组，同时不改变周围布局。",
   "Vertical Stack": "纵向分隔",
+  "Action Card": "操作卡片",
+  "Basic Help": "基础提示",
+  "Basic Modal": "基础弹窗",
+  "Board settings": "看板设置",
+  Cancel: "取消",
+  "Chinese preview strings are covered.": "中文预览文案已覆盖。",
+  "Close can wrap a sticker button so short popover workflows can finish from inside the panel.":
+    "Close 可以包裹贴纸按钮，让简短的 Popover 流程在面板内完成。",
+  "Compact interactive panels for filters and quick actions.":
+    "用于筛选和快捷操作的紧凑交互面板。",
+  "Confirm the preview demos, API table, translations, and registry output before marking this component ready.":
+    "在标记组件就绪前，确认预览 demo、API 表格、翻译和 registry 输出。",
+  Dialog: "对话框",
+  Done: "完成",
+  "Draft ready": "草稿已就绪",
+  "Explains a field without interrupting the current task.":
+    "解释字段含义，同时不中断当前任务。",
+  "Floating help, compact panels, and modal surfaces.":
+    "浮动帮助、紧凑面板和模态表面。",
+  "Hover for note": "悬停查看备注",
+  "Interactive floating panels for filters and quick actions.":
+    "用于筛选和快捷操作的交互式浮动面板。",
+  "Keep tooltip copy short, specific, and connected to one visible control.":
+    "让 Tooltip 文案保持简短、具体，并连接到一个可见控件。",
+  "Keep editing": "继续编辑",
+  "Large dialogs give longer checklists and forms enough room while the close button, title, and footer stay predictable.":
+    "大型 Dialog 为较长清单和表单留出空间，同时让关闭按钮、标题和页脚保持可预期。",
+  "Large review": "大型评审",
+  "Looks good": "看起来不错",
+  "Modal sticker panels for focused decisions and forms.":
+    "用于聚焦决策和表单的模态贴纸面板。",
+  "Open dialog": "打开对话框",
+  "Open settings": "打开设置",
+  Overlays: "浮层",
+  Popover: "弹出面板",
+  "Popover hosts compact interactive content such as quick settings, filters, and contextual actions.":
+    "Popover 承载快捷设置、筛选器和上下文操作等紧凑交互内容。",
+  "Preview demos render on desktop and mobile.":
+    "预览 demo 已在桌面和移动端渲染。",
+  "Publish component page?": "发布组件页面？",
+  "Radix help bubbles with compact sticker paper styling.":
+    "带有紧凑贴纸纸张样式的 Radix 帮助气泡。",
+  "Review before shipping": "发布前评审",
+  "Review draft": "评审草稿",
+  "Registry JSON points at source files.": "Registry JSON 指向源码文件。",
+  "Show helper notes": "显示辅助备注",
+  "Shortcut saved": "快捷方式已保存",
+  "Ship it": "发布",
+  "Shows why this action is available.": "说明此操作可用的原因。",
+  "Sizes and tones keep modal surfaces aligned with the amount of content and the kind of decision.":
+    "尺寸和色调让模态表面匹配内容量和决策类型。",
+  "Small dialogs work well for one decision and one follow-up action.":
+    "小型 Dialog 适合一个决策和一个后续操作。",
+  "Small info": "小型信息",
+  "Sticker Dialog": "贴纸对话框",
+  "Sticker Popover": "贴纸弹出面板",
+  "Sticker Tooltip": "贴纸提示",
+  "The component page has demos, API docs, and translated preview copy.":
+    "组件页面已经包含 demo、API 文档和翻译后的预览文案。",
+  "Tooltip adds a compact paper hint for controls that need extra context without taking over the page.":
+    "Tooltip 为需要额外上下文的控件添加紧凑纸张提示，同时不占据页面。",
+  Tooltip: "提示",
+  "Tone and side options keep hint bubbles useful in dense toolbars and status rows.":
+    "色调和方向选项让提示气泡在密集工具栏和状态行中保持好用。",
+  "Tones & Sides": "色调与方向",
+  "Tune the preview without leaving the current surface.":
+    "无需离开当前表面即可调整预览。",
+  "Warns about a small constraint before clicking.": "点击前提示一个小约束。",
 }
 
 export { ZH_PREVIEW_COMPONENT_TRANSLATIONS }

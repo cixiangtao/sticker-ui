@@ -66,6 +66,11 @@ const COMPONENT_NAV_SECTIONS: NavSectionConfig[] = [
     id: "form-controls",
     label: "Form Controls",
   },
+  {
+    description: "Floating help, compact panels, and modal surfaces.",
+    id: "overlays",
+    label: "Overlays",
+  },
 ]
 
 const NAV_GROUP_CONFIGS: NavGroupConfig[] = [

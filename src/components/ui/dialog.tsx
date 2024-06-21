@@ -1,0 +1,231 @@
+import * as DialogPrimitive from "@radix-ui/react-dialog"
+import { cva, type VariantProps } from "class-variance-authority"
+import { X } from "lucide-react"
+import * as React from "react"
+
+import { cn } from "@/lib/utils"
+
+/**
+ * Builds the sticker dialog content className from size and tone options.
+ */
+const dialogContentVariants = cva(
+  "fixed top-1/2 left-1/2 z-50 grid max-h-[calc(100dvh-2rem)] w-[calc(100vw-2rem)] -translate-x-1/2 -translate-y-1/2 gap-4 overflow-y-auto rounded-sticker-panel border-[3px] border-ink text-ink shadow-sticker-2xl transition duration-150 outline-none",
+  {
+    defaultVariants: {
+      size: "md",
+      tone: "default",
+    },
+    variants: {
+      size: {
+        lg: "max-w-2xl p-5 sm:p-6",
+        md: "max-w-lg p-5",
+        sm: "max-w-md p-4",
+      },
+      tone: {
+        default: "bg-paper",
+        info: "bg-fill-info",
+        secondary: "bg-fill-secondary",
+        warning: "bg-fill-warning",
+      },
+    },
+  },
+)
+
+/**
+ * Sticker dialog root powered by Radix Dialog.
+ */
+const Dialog = DialogPrimitive.Root
+
+/**
+ * Opens the dialog.
+ */
+const DialogTrigger = DialogPrimitive.Trigger
+
+/**
+ * Closes the dialog when activated.
+ */
+const DialogClose = DialogPrimitive.Close
+
+/**
+ * Portals dialog overlay and content to the document body.
+ */
+const DialogPortal = DialogPrimitive.Portal
+
+/**
+ * Props for the sticker dialog overlay.
+ */
+type DialogOverlayProps = React.ComponentPropsWithoutRef<
+  typeof DialogPrimitive.Overlay
+>
+
+/**
+ * Sticker dialog scrim.
+ */
+const DialogOverlay = React.forwardRef<
+  React.ElementRef<typeof DialogPrimitive.Overlay>,
+  DialogOverlayProps
+>(({ className, ...props }, ref) => (
+  <DialogPrimitive.Overlay
+    className={cn(
+      "fixed inset-0 z-50 bg-overlay transition duration-150",
+      className,
+    )}
+    data-slot="dialog-overlay"
+    ref={ref}
+    {...props}
+  />
+))
+DialogOverlay.displayName = DialogPrimitive.Overlay.displayName
+
+/**
+ * Props for sticker dialog content.
+ * @remarks Wraps Radix Dialog.Content and adds sticker size, tone, and close button styling.
+ */
+interface DialogContentProps
+  extends
+    React.ComponentPropsWithoutRef<typeof DialogPrimitive.Content>,
+    VariantProps<typeof dialogContentVariants> {
+  /**
+   * Accessible label for the icon close button.
+   * @default "Close dialog"
+   */
+  closeLabel?: string
+  /**
+   * Controls dialog width and padding.
+   * @default "md"
+   */
+  size?: "lg" | "md" | "sm"
+  /**
+   * Renders the top-right close button.
+   * @default true
+   */
+  showClose?: boolean
+  /**
+   * Controls the dialog paper tone.
+   * @default "default"
+   */
+  tone?: "default" | "info" | "secondary" | "warning"
+}
+
+/**
+ * Portaled sticker dialog panel.
+ */
+const DialogContent = React.forwardRef<
+  React.ElementRef<typeof DialogPrimitive.Content>,
+  DialogContentProps
+>(
+  (
+    {
+      children,
+      className,
+      closeLabel = "Close dialog",
+      showClose = true,
+      size = "md",
+      tone = "default",
+      ...props
+    },
+    ref,
+  ) => (
+    <DialogPortal>
+      <DialogOverlay />
+      <DialogPrimitive.Content
+        className={cn(dialogContentVariants({ size, tone }), className)}
+        data-slot="dialog-content"
+        ref={ref}
+        {...props}
+      >
+        {children}
+        {showClose ? (
+          <DialogPrimitive.Close
+            aria-label={closeLabel}
+            className="absolute top-4 right-4 inline-flex size-9 items-center justify-center rounded-sticker-md border-2 border-ink bg-surface text-ink shadow-sticker-sm transition duration-150 outline-none hover:-translate-y-0.5 hover:shadow-sticker-md focus-visible:ring-[2px] focus-visible:ring-ring/65 active:translate-x-0.5 active:translate-y-0.5 active:shadow-sticker-xs"
+            data-slot="dialog-close"
+          >
+            <X aria-hidden="true" className="size-4 stroke-[3]" />
+          </DialogPrimitive.Close>
+        ) : null}
+      </DialogPrimitive.Content>
+    </DialogPortal>
+  ),
+)
+DialogContent.displayName = DialogPrimitive.Content.displayName
+
+/**
+ * Header area for dialog title and description.
+ */
+function DialogHeader({ className, ...props }: React.ComponentProps<"header">) {
+  return (
+    <header
+      className={cn("grid gap-2 pr-10", className)}
+      data-slot="dialog-header"
+      {...props}
+    />
+  )
+}
+
+/**
+ * Footer area for dialog actions.
+ */
+function DialogFooter({ className, ...props }: React.ComponentProps<"footer">) {
+  return (
+    <footer
+      className={cn(
+        "flex flex-col-reverse gap-2 border-t-2 border-ink pt-4 sm:flex-row sm:justify-end",
+        className,
+      )}
+      data-slot="dialog-footer"
+      {...props}
+    />
+  )
+}
+
+/**
+ * Sticker dialog title.
+ */
+const DialogTitle = React.forwardRef<
+  React.ElementRef<typeof DialogPrimitive.Title>,
+  React.ComponentPropsWithoutRef<typeof DialogPrimitive.Title>
+>(({ className, ...props }, ref) => (
+  <DialogPrimitive.Title
+    className={cn("m-0 text-xl leading-7 font-black text-ink", className)}
+    data-slot="dialog-title"
+    ref={ref}
+    {...props}
+  />
+))
+DialogTitle.displayName = DialogPrimitive.Title.displayName
+
+/**
+ * Sticker dialog description.
+ */
+const DialogDescription = React.forwardRef<
+  React.ElementRef<typeof DialogPrimitive.Description>,
+  React.ComponentPropsWithoutRef<typeof DialogPrimitive.Description>
+>(({ className, ...props }, ref) => (
+  <DialogPrimitive.Description
+    className={cn(
+      "m-0 text-sm leading-6 font-medium text-text-muted",
+      className,
+    )}
+    data-slot="dialog-description"
+    ref={ref}
+    {...props}
+  />
+))
+DialogDescription.displayName = DialogPrimitive.Description.displayName
+
+export {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogOverlay,
+  DialogPortal,
+  DialogTitle,
+  DialogTrigger,
+  dialogContentVariants,
+  type DialogContentProps,
+  type DialogOverlayProps,
+}

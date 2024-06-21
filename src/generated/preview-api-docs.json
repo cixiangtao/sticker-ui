@@ -5725,6 +5725,1374 @@
     ],
     "variants": []
   },
+  "tooltip": {
+    "components": [
+      {
+        "description": "Sticker tooltip root powered by Radix Tooltip.",
+        "descriptionKey": "api.tooltip.components.Tooltip.description",
+        "name": "Tooltip",
+        "props": {
+          "inherits": [],
+          "members": [],
+          "type": "React.ComponentPropsWithoutRef<typeof TooltipPrimitive.Root>"
+        }
+      },
+      {
+        "description": "Portaled sticker tooltip bubble.",
+        "descriptionKey": "api.tooltip.components.TooltipContent.description",
+        "name": "TooltipContent",
+        "props": {
+          "description": "Props for sticker tooltip content.",
+          "descriptionKey": "api.tooltip.components.TooltipContent.props.description",
+          "remarks": "Wraps Radix Tooltip.Content and adds sticker tone, size, and optional arrow styling.",
+          "remarksKey": "api.tooltip.components.TooltipContent.props.remarks",
+          "inherits": [
+            "React.ComponentPropsWithoutRef<typeof TooltipPrimitive.Content>",
+            "VariantProps<typeof tooltipContentVariants>"
+          ],
+          "inheritedMembers": [
+            {
+              "description": "Identifies elements that describe the control.",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Indicates whether the current value is invalid.",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "description": "Provides an accessible label when visible text is not enough.",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Identifies elements that label the control.",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Focuses the element when it mounts.",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Content rendered inside the element.",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "description": "Adds custom class names to the root element.",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Sets the initial unchecked or checked state.",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Sets the initial uncontrolled value.",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            },
+            {
+              "description": "Sets the element id.",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Runs when the element loses focus.",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLDivElement>"
+            },
+            {
+              "description": "Runs when the value changes.",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "React.ChangeEventHandler<HTMLDivElement, Element>"
+            },
+            {
+              "description": "Runs when the element is clicked.",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "description": "Runs when the element receives focus.",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLDivElement>"
+            },
+            {
+              "description": "Runs when a key is pressed.",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLDivElement>"
+            },
+            {
+              "description": "Runs when a key is released.",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLDivElement>"
+            },
+            {
+              "description": "Runs when the pointer enters the element.",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "description": "Runs when the pointer leaves the element.",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "description": "Sets the ARIA role.",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "description": "Adds inline styles to the root element.",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "description": "Sets advisory text for the element.",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "members": [
+            {
+              "defaultValue": "true",
+              "description": "Renders the small ink arrow that points at the trigger.",
+              "descriptionKey": "api.tooltip.components.TooltipContent.props.members.showArrow.description",
+              "name": "showArrow",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "defaultValue": "\"md\"",
+              "description": "Controls tooltip padding and text size.",
+              "descriptionKey": "api.tooltip.components.TooltipContent.props.members.size.description",
+              "name": "size",
+              "optional": true,
+              "required": false,
+              "type": "\"lg\" | \"md\" | \"sm\""
+            },
+            {
+              "defaultValue": "\"default\"",
+              "description": "Controls the tooltip paper tone.",
+              "descriptionKey": "api.tooltip.components.TooltipContent.props.members.tone.description",
+              "name": "tone",
+              "optional": true,
+              "required": false,
+              "type": "\"default\" | \"info\" | \"secondary\" | \"success\" | \"warning\""
+            }
+          ],
+          "type": "TooltipContentProps"
+        }
+      },
+      {
+        "description": "Provides responsive timing defaults for sticker tooltips.",
+        "descriptionKey": "api.tooltip.components.TooltipProvider.description",
+        "name": "TooltipProvider",
+        "props": {
+          "description": "Props for the sticker tooltip provider.",
+          "descriptionKey": "api.tooltip.components.TooltipProvider.props.description",
+          "inherits": [
+            "React.ComponentPropsWithoutRef< typeof TooltipPrimitive.Provider >"
+          ],
+          "inheritedMembers": [
+            {
+              "description": "Content rendered inside the element.",
+              "name": "children",
+              "optional": false,
+              "required": true,
+              "type": "React.ReactNode"
+            }
+          ],
+          "members": [
+            {
+              "defaultValue": "120",
+              "description": "Delay in milliseconds before the tooltip opens.",
+              "descriptionKey": "api.tooltip.components.TooltipProvider.props.members.delayDuration.description",
+              "name": "delayDuration",
+              "optional": true,
+              "required": false,
+              "type": "number"
+            },
+            {
+              "defaultValue": "120",
+              "description": "Delay in milliseconds before another tooltip reuses the instant-open window.",
+              "descriptionKey": "api.tooltip.components.TooltipProvider.props.members.skipDelayDuration.description",
+              "name": "skipDelayDuration",
+              "optional": true,
+              "required": false,
+              "type": "number"
+            }
+          ],
+          "type": "TooltipProviderProps"
+        }
+      },
+      {
+        "description": "Opens the tooltip on hover or focus.",
+        "descriptionKey": "api.tooltip.components.TooltipTrigger.description",
+        "name": "TooltipTrigger",
+        "props": {
+          "inherits": [],
+          "members": [],
+          "type": "React.ComponentPropsWithoutRef<typeof TooltipPrimitive.Trigger>"
+        }
+      }
+    ],
+    "description": "A Radix-powered tooltip with a small handbook sticker bubble.",
+    "descriptionKey": "api.tooltip.description",
+    "exports": [
+      {
+        "description": "Sticker tooltip root powered by Radix Tooltip.",
+        "descriptionKey": "api.tooltip.exports.Tooltip.description",
+        "kind": "component",
+        "name": "Tooltip"
+      },
+      {
+        "description": "Portaled sticker tooltip bubble.",
+        "descriptionKey": "api.tooltip.exports.TooltipContent.description",
+        "kind": "component",
+        "name": "TooltipContent"
+      },
+      {
+        "description": "Props for sticker tooltip content.",
+        "descriptionKey": "api.tooltip.exports.TooltipContentProps.description",
+        "remarks": "Wraps Radix Tooltip.Content and adds sticker tone, size, and optional arrow styling.",
+        "remarksKey": "api.tooltip.exports.TooltipContentProps.remarks",
+        "kind": "interface",
+        "name": "TooltipContentProps"
+      },
+      {
+        "description": "Builds the sticker tooltip content className from tone and size options.",
+        "descriptionKey": "api.tooltip.exports.tooltipContentVariants.description",
+        "kind": "variant",
+        "name": "tooltipContentVariants"
+      },
+      {
+        "description": "Provides responsive timing defaults for sticker tooltips.",
+        "descriptionKey": "api.tooltip.exports.TooltipProvider.description",
+        "kind": "component",
+        "name": "TooltipProvider"
+      },
+      {
+        "description": "Props for the sticker tooltip provider.",
+        "descriptionKey": "api.tooltip.exports.TooltipProviderProps.description",
+        "kind": "interface",
+        "name": "TooltipProviderProps"
+      },
+      {
+        "description": "Opens the tooltip on hover or focus.",
+        "descriptionKey": "api.tooltip.exports.TooltipTrigger.description",
+        "kind": "component",
+        "name": "TooltipTrigger"
+      }
+    ],
+    "name": "tooltip",
+    "sourcePath": "src/components/ui/tooltip.tsx",
+    "title": "Sticker Tooltip",
+    "types": [
+      {
+        "description": "Props for sticker tooltip content.",
+        "descriptionKey": "api.tooltip.types.TooltipContentProps.description",
+        "remarks": "Wraps Radix Tooltip.Content and adds sticker tone, size, and optional arrow styling.",
+        "remarksKey": "api.tooltip.types.TooltipContentProps.remarks",
+        "inherits": [
+          "React.ComponentPropsWithoutRef<typeof TooltipPrimitive.Content>",
+          "VariantProps<typeof tooltipContentVariants>"
+        ],
+        "kind": "interface",
+        "members": [
+          {
+            "defaultValue": "true",
+            "description": "Renders the small ink arrow that points at the trigger.",
+            "descriptionKey": "api.tooltip.types.TooltipContentProps.members.showArrow.description",
+            "name": "showArrow",
+            "optional": true,
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "defaultValue": "\"md\"",
+            "description": "Controls tooltip padding and text size.",
+            "descriptionKey": "api.tooltip.types.TooltipContentProps.members.size.description",
+            "name": "size",
+            "optional": true,
+            "required": false,
+            "type": "\"lg\" | \"md\" | \"sm\""
+          },
+          {
+            "defaultValue": "\"default\"",
+            "description": "Controls the tooltip paper tone.",
+            "descriptionKey": "api.tooltip.types.TooltipContentProps.members.tone.description",
+            "name": "tone",
+            "optional": true,
+            "required": false,
+            "type": "\"default\" | \"info\" | \"secondary\" | \"success\" | \"warning\""
+          }
+        ],
+        "name": "TooltipContentProps"
+      },
+      {
+        "description": "Props for the sticker tooltip provider.",
+        "descriptionKey": "api.tooltip.types.TooltipProviderProps.description",
+        "inherits": [
+          "React.ComponentPropsWithoutRef< typeof TooltipPrimitive.Provider >"
+        ],
+        "kind": "interface",
+        "members": [
+          {
+            "defaultValue": "120",
+            "description": "Delay in milliseconds before the tooltip opens.",
+            "descriptionKey": "api.tooltip.types.TooltipProviderProps.members.delayDuration.description",
+            "name": "delayDuration",
+            "optional": true,
+            "required": false,
+            "type": "number"
+          },
+          {
+            "defaultValue": "120",
+            "description": "Delay in milliseconds before another tooltip reuses the instant-open window.",
+            "descriptionKey": "api.tooltip.types.TooltipProviderProps.members.skipDelayDuration.description",
+            "name": "skipDelayDuration",
+            "optional": true,
+            "required": false,
+            "type": "number"
+          }
+        ],
+        "name": "TooltipProviderProps"
+      }
+    ],
+    "variants": [
+      {
+        "description": "Builds the sticker tooltip content className from tone and size options.",
+        "descriptionKey": "api.tooltip.variants.tooltipContentVariants.description",
+        "groups": [
+          {
+            "defaultValue": "md",
+            "name": "size",
+            "values": ["lg", "md", "sm"]
+          },
+          {
+            "defaultValue": "default",
+            "name": "tone",
+            "values": ["default", "info", "secondary", "success", "warning"]
+          }
+        ],
+        "name": "tooltipContentVariants"
+      }
+    ]
+  },
+  "popover": {
+    "components": [
+      {
+        "description": "Sticker popover root powered by Radix Popover.",
+        "descriptionKey": "api.popover.components.Popover.description",
+        "name": "Popover",
+        "props": {
+          "inherits": [],
+          "members": [],
+          "type": "React.ComponentPropsWithoutRef<typeof PopoverPrimitive.Root>"
+        }
+      },
+      {
+        "description": "Positions popover content against a custom anchor.",
+        "descriptionKey": "api.popover.components.PopoverAnchor.description",
+        "name": "PopoverAnchor",
+        "props": {
+          "inherits": [],
+          "members": [],
+          "type": "React.ComponentPropsWithoutRef<typeof PopoverPrimitive.Anchor>"
+        }
+      },
+      {
+        "description": "Closes the popover when activated.",
+        "descriptionKey": "api.popover.components.PopoverClose.description",
+        "name": "PopoverClose",
+        "props": {
+          "inherits": [],
+          "members": [],
+          "type": "React.ComponentPropsWithoutRef<typeof PopoverPrimitive.Close>"
+        }
+      },
+      {
+        "description": "Portaled sticker popover panel for interactive floating content.",
+        "descriptionKey": "api.popover.components.PopoverContent.description",
+        "name": "PopoverContent",
+        "props": {
+          "description": "Props for sticker popover content.",
+          "descriptionKey": "api.popover.components.PopoverContent.props.description",
+          "remarks": "Wraps Radix Popover.Content and adds sticker tone, size, and optional arrow styling.",
+          "remarksKey": "api.popover.components.PopoverContent.props.remarks",
+          "inherits": [
+            "React.ComponentPropsWithoutRef<typeof PopoverPrimitive.Content>",
+            "VariantProps<typeof popoverContentVariants>"
+          ],
+          "inheritedMembers": [
+            {
+              "description": "Identifies elements that describe the control.",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Indicates whether the current value is invalid.",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "description": "Provides an accessible label when visible text is not enough.",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Identifies elements that label the control.",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Focuses the element when it mounts.",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Content rendered inside the element.",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "description": "Adds custom class names to the root element.",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Sets the initial unchecked or checked state.",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Sets the initial uncontrolled value.",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            },
+            {
+              "description": "Sets the element id.",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Runs when the element loses focus.",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLDivElement>"
+            },
+            {
+              "description": "Runs when the value changes.",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "React.ChangeEventHandler<HTMLDivElement, Element>"
+            },
+            {
+              "description": "Runs when the element is clicked.",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "description": "Runs when the element receives focus.",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLDivElement>"
+            },
+            {
+              "description": "Runs when a key is pressed.",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLDivElement>"
+            },
+            {
+              "description": "Runs when a key is released.",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLDivElement>"
+            },
+            {
+              "description": "Runs when the pointer enters the element.",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "description": "Runs when the pointer leaves the element.",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "description": "Sets the ARIA role.",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "description": "Adds inline styles to the root element.",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "description": "Sets advisory text for the element.",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "members": [
+            {
+              "defaultValue": "false",
+              "description": "Renders the small ink arrow that points at the trigger.",
+              "descriptionKey": "api.popover.components.PopoverContent.props.members.showArrow.description",
+              "name": "showArrow",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "defaultValue": "\"md\"",
+              "description": "Controls popover width and padding.",
+              "descriptionKey": "api.popover.components.PopoverContent.props.members.size.description",
+              "name": "size",
+              "optional": true,
+              "required": false,
+              "type": "\"lg\" | \"md\" | \"sm\""
+            },
+            {
+              "defaultValue": "\"default\"",
+              "description": "Controls the popover paper tone.",
+              "descriptionKey": "api.popover.components.PopoverContent.props.members.tone.description",
+              "name": "tone",
+              "optional": true,
+              "required": false,
+              "type": "\"default\" | \"info\" | \"secondary\" | \"success\" | \"warning\""
+            }
+          ],
+          "type": "PopoverContentProps"
+        }
+      },
+      {
+        "description": "Opens the popover.",
+        "descriptionKey": "api.popover.components.PopoverTrigger.description",
+        "name": "PopoverTrigger",
+        "props": {
+          "inherits": [],
+          "members": [],
+          "type": "React.ComponentPropsWithoutRef<typeof PopoverPrimitive.Trigger>"
+        }
+      }
+    ],
+    "description": "A Radix-powered popover for compact interactive sticker panels.",
+    "descriptionKey": "api.popover.description",
+    "exports": [
+      {
+        "description": "Sticker popover root powered by Radix Popover.",
+        "descriptionKey": "api.popover.exports.Popover.description",
+        "kind": "component",
+        "name": "Popover"
+      },
+      {
+        "description": "Positions popover content against a custom anchor.",
+        "descriptionKey": "api.popover.exports.PopoverAnchor.description",
+        "kind": "component",
+        "name": "PopoverAnchor"
+      },
+      {
+        "description": "Closes the popover when activated.",
+        "descriptionKey": "api.popover.exports.PopoverClose.description",
+        "kind": "component",
+        "name": "PopoverClose"
+      },
+      {
+        "description": "Portaled sticker popover panel for interactive floating content.",
+        "descriptionKey": "api.popover.exports.PopoverContent.description",
+        "kind": "component",
+        "name": "PopoverContent"
+      },
+      {
+        "description": "Props for sticker popover content.",
+        "descriptionKey": "api.popover.exports.PopoverContentProps.description",
+        "remarks": "Wraps Radix Popover.Content and adds sticker tone, size, and optional arrow styling.",
+        "remarksKey": "api.popover.exports.PopoverContentProps.remarks",
+        "kind": "interface",
+        "name": "PopoverContentProps"
+      },
+      {
+        "description": "Builds the sticker popover content className from tone and size options.",
+        "descriptionKey": "api.popover.exports.popoverContentVariants.description",
+        "kind": "variant",
+        "name": "popoverContentVariants"
+      },
+      {
+        "description": "Opens the popover.",
+        "descriptionKey": "api.popover.exports.PopoverTrigger.description",
+        "kind": "component",
+        "name": "PopoverTrigger"
+      }
+    ],
+    "name": "popover",
+    "sourcePath": "src/components/ui/popover.tsx",
+    "title": "Sticker Popover",
+    "types": [
+      {
+        "description": "Props for sticker popover content.",
+        "descriptionKey": "api.popover.types.PopoverContentProps.description",
+        "remarks": "Wraps Radix Popover.Content and adds sticker tone, size, and optional arrow styling.",
+        "remarksKey": "api.popover.types.PopoverContentProps.remarks",
+        "inherits": [
+          "React.ComponentPropsWithoutRef<typeof PopoverPrimitive.Content>",
+          "VariantProps<typeof popoverContentVariants>"
+        ],
+        "kind": "interface",
+        "members": [
+          {
+            "defaultValue": "false",
+            "description": "Renders the small ink arrow that points at the trigger.",
+            "descriptionKey": "api.popover.types.PopoverContentProps.members.showArrow.description",
+            "name": "showArrow",
+            "optional": true,
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "defaultValue": "\"md\"",
+            "description": "Controls popover width and padding.",
+            "descriptionKey": "api.popover.types.PopoverContentProps.members.size.description",
+            "name": "size",
+            "optional": true,
+            "required": false,
+            "type": "\"lg\" | \"md\" | \"sm\""
+          },
+          {
+            "defaultValue": "\"default\"",
+            "description": "Controls the popover paper tone.",
+            "descriptionKey": "api.popover.types.PopoverContentProps.members.tone.description",
+            "name": "tone",
+            "optional": true,
+            "required": false,
+            "type": "\"default\" | \"info\" | \"secondary\" | \"success\" | \"warning\""
+          }
+        ],
+        "name": "PopoverContentProps"
+      }
+    ],
+    "variants": [
+      {
+        "description": "Builds the sticker popover content className from tone and size options.",
+        "descriptionKey": "api.popover.variants.popoverContentVariants.description",
+        "groups": [
+          {
+            "defaultValue": "md",
+            "name": "size",
+            "values": ["lg", "md", "sm"]
+          },
+          {
+            "defaultValue": "default",
+            "name": "tone",
+            "values": ["default", "info", "secondary", "success", "warning"]
+          }
+        ],
+        "name": "popoverContentVariants"
+      }
+    ]
+  },
+  "dialog": {
+    "components": [
+      {
+        "description": "Sticker dialog root powered by Radix Dialog.",
+        "descriptionKey": "api.dialog.components.Dialog.description",
+        "name": "Dialog",
+        "props": {
+          "inherits": [],
+          "members": [],
+          "type": "React.ComponentPropsWithoutRef<typeof DialogPrimitive.Root>"
+        }
+      },
+      {
+        "description": "Closes the dialog when activated.",
+        "descriptionKey": "api.dialog.components.DialogClose.description",
+        "name": "DialogClose",
+        "props": {
+          "inherits": [],
+          "members": [],
+          "type": "React.ComponentPropsWithoutRef<typeof DialogPrimitive.Close>"
+        }
+      },
+      {
+        "description": "Portaled sticker dialog panel.",
+        "descriptionKey": "api.dialog.components.DialogContent.description",
+        "name": "DialogContent",
+        "props": {
+          "description": "Props for sticker dialog content.",
+          "descriptionKey": "api.dialog.components.DialogContent.props.description",
+          "remarks": "Wraps Radix Dialog.Content and adds sticker size, tone, and close button styling.",
+          "remarksKey": "api.dialog.components.DialogContent.props.remarks",
+          "inherits": [
+            "React.ComponentPropsWithoutRef<typeof DialogPrimitive.Content>",
+            "VariantProps<typeof dialogContentVariants>"
+          ],
+          "inheritedMembers": [
+            {
+              "description": "Identifies elements that describe the control.",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Indicates whether the current value is invalid.",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "description": "Provides an accessible label when visible text is not enough.",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Identifies elements that label the control.",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Focuses the element when it mounts.",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Content rendered inside the element.",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "description": "Adds custom class names to the root element.",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Sets the initial unchecked or checked state.",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Sets the initial uncontrolled value.",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            },
+            {
+              "description": "Sets the element id.",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Runs when the element loses focus.",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLDivElement>"
+            },
+            {
+              "description": "Runs when the value changes.",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "React.ChangeEventHandler<HTMLDivElement, Element>"
+            },
+            {
+              "description": "Runs when the element is clicked.",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "description": "Runs when the element receives focus.",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLDivElement>"
+            },
+            {
+              "description": "Runs when a key is pressed.",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLDivElement>"
+            },
+            {
+              "description": "Runs when a key is released.",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLDivElement>"
+            },
+            {
+              "description": "Runs when the pointer enters the element.",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "description": "Runs when the pointer leaves the element.",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "description": "Sets the ARIA role.",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "description": "Adds inline styles to the root element.",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "description": "Sets advisory text for the element.",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "members": [
+            {
+              "defaultValue": "\"Close dialog\"",
+              "description": "Accessible label for the icon close button.",
+              "descriptionKey": "api.dialog.components.DialogContent.props.members.closeLabel.description",
+              "name": "closeLabel",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "defaultValue": "true",
+              "description": "Renders the top-right close button.",
+              "descriptionKey": "api.dialog.components.DialogContent.props.members.showClose.description",
+              "name": "showClose",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "defaultValue": "\"md\"",
+              "description": "Controls dialog width and padding.",
+              "descriptionKey": "api.dialog.components.DialogContent.props.members.size.description",
+              "name": "size",
+              "optional": true,
+              "required": false,
+              "type": "\"lg\" | \"md\" | \"sm\""
+            },
+            {
+              "defaultValue": "\"default\"",
+              "description": "Controls the dialog paper tone.",
+              "descriptionKey": "api.dialog.components.DialogContent.props.members.tone.description",
+              "name": "tone",
+              "optional": true,
+              "required": false,
+              "type": "\"default\" | \"info\" | \"secondary\" | \"warning\""
+            }
+          ],
+          "type": "DialogContentProps"
+        }
+      },
+      {
+        "description": "Sticker dialog description.",
+        "descriptionKey": "api.dialog.components.DialogDescription.description",
+        "name": "DialogDescription",
+        "props": {
+          "inherits": [],
+          "members": [],
+          "type": "React.ComponentPropsWithoutRef<typeof DialogPrimitive.Description>"
+        }
+      },
+      {
+        "description": "Footer area for dialog actions.",
+        "descriptionKey": "api.dialog.components.DialogFooter.description",
+        "name": "DialogFooter",
+        "props": {
+          "inherits": [],
+          "members": [],
+          "type": "React.ComponentProps<\"footer\">"
+        }
+      },
+      {
+        "description": "Header area for dialog title and description.",
+        "descriptionKey": "api.dialog.components.DialogHeader.description",
+        "name": "DialogHeader",
+        "props": {
+          "inherits": [],
+          "members": [],
+          "type": "React.ComponentProps<\"header\">"
+        }
+      },
+      {
+        "description": "Sticker dialog scrim.",
+        "descriptionKey": "api.dialog.components.DialogOverlay.description",
+        "name": "DialogOverlay",
+        "props": {
+          "description": "Props for the sticker dialog overlay.",
+          "descriptionKey": "api.dialog.components.DialogOverlay.props.description",
+          "inherits": [],
+          "inheritedMembers": [
+            {
+              "description": "Identifies elements that describe the control.",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Indicates whether the current value is invalid.",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "description": "Provides an accessible label when visible text is not enough.",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Identifies elements that label the control.",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Focuses the element when it mounts.",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Content rendered inside the element.",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "string | number | bigint | boolean | React.ReactElement<unknown, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<string | number | bigint | boolean | React.ReactPortal | React.ReactElement<unknown, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | null> | null"
+            },
+            {
+              "description": "Adds custom class names to the root element.",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Sets the initial unchecked or checked state.",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "description": "Sets the initial uncontrolled value.",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            },
+            {
+              "description": "Sets the element id.",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Runs when the element loses focus.",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLDivElement>"
+            },
+            {
+              "description": "Runs when the value changes.",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "React.ChangeEventHandler<HTMLDivElement, Element>"
+            },
+            {
+              "description": "Runs when the element is clicked.",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "description": "Runs when the element receives focus.",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLDivElement>"
+            },
+            {
+              "description": "Runs when a key is pressed.",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLDivElement>"
+            },
+            {
+              "description": "Runs when a key is released.",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLDivElement>"
+            },
+            {
+              "description": "Runs when the pointer enters the element.",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "description": "Runs when the pointer leaves the element.",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "description": "Sets the ARIA role.",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "description": "Adds inline styles to the root element.",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "description": "Sets advisory text for the element.",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "members": [],
+          "type": "DialogOverlayProps"
+        }
+      },
+      {
+        "description": "Portals dialog overlay and content to the document body.",
+        "descriptionKey": "api.dialog.components.DialogPortal.description",
+        "name": "DialogPortal",
+        "props": {
+          "inherits": [],
+          "members": [],
+          "type": "React.ComponentPropsWithoutRef<typeof DialogPrimitive.Portal>"
+        }
+      },
+      {
+        "description": "Sticker dialog title.",
+        "descriptionKey": "api.dialog.components.DialogTitle.description",
+        "name": "DialogTitle",
+        "props": {
+          "inherits": [],
+          "members": [],
+          "type": "React.ComponentPropsWithoutRef<typeof DialogPrimitive.Title>"
+        }
+      },
+      {
+        "description": "Opens the dialog.",
+        "descriptionKey": "api.dialog.components.DialogTrigger.description",
+        "name": "DialogTrigger",
+        "props": {
+          "inherits": [],
+          "members": [],
+          "type": "React.ComponentPropsWithoutRef<typeof DialogPrimitive.Trigger>"
+        }
+      }
+    ],
+    "description": "A Radix-powered modal dialog with a handbook sticker paper panel.",
+    "descriptionKey": "api.dialog.description",
+    "exports": [
+      {
+        "description": "Sticker dialog root powered by Radix Dialog.",
+        "descriptionKey": "api.dialog.exports.Dialog.description",
+        "kind": "component",
+        "name": "Dialog"
+      },
+      {
+        "description": "Closes the dialog when activated.",
+        "descriptionKey": "api.dialog.exports.DialogClose.description",
+        "kind": "component",
+        "name": "DialogClose"
+      },
+      {
+        "description": "Portaled sticker dialog panel.",
+        "descriptionKey": "api.dialog.exports.DialogContent.description",
+        "kind": "component",
+        "name": "DialogContent"
+      },
+      {
+        "description": "Props for sticker dialog content.",
+        "descriptionKey": "api.dialog.exports.DialogContentProps.description",
+        "remarks": "Wraps Radix Dialog.Content and adds sticker size, tone, and close button styling.",
+        "remarksKey": "api.dialog.exports.DialogContentProps.remarks",
+        "kind": "interface",
+        "name": "DialogContentProps"
+      },
+      {
+        "description": "Builds the sticker dialog content className from size and tone options.",
+        "descriptionKey": "api.dialog.exports.dialogContentVariants.description",
+        "kind": "variant",
+        "name": "dialogContentVariants"
+      },
+      {
+        "description": "Sticker dialog description.",
+        "descriptionKey": "api.dialog.exports.DialogDescription.description",
+        "kind": "component",
+        "name": "DialogDescription"
+      },
+      {
+        "description": "Footer area for dialog actions.",
+        "descriptionKey": "api.dialog.exports.DialogFooter.description",
+        "kind": "component",
+        "name": "DialogFooter"
+      },
+      {
+        "description": "Header area for dialog title and description.",
+        "descriptionKey": "api.dialog.exports.DialogHeader.description",
+        "kind": "component",
+        "name": "DialogHeader"
+      },
+      {
+        "description": "Sticker dialog scrim.",
+        "descriptionKey": "api.dialog.exports.DialogOverlay.description",
+        "kind": "component",
+        "name": "DialogOverlay"
+      },
+      {
+        "description": "Props for the sticker dialog overlay.",
+        "descriptionKey": "api.dialog.exports.DialogOverlayProps.description",
+        "kind": "type",
+        "name": "DialogOverlayProps"
+      },
+      {
+        "description": "Portals dialog overlay and content to the document body.",
+        "descriptionKey": "api.dialog.exports.DialogPortal.description",
+        "kind": "component",
+        "name": "DialogPortal"
+      },
+      {
+        "description": "Sticker dialog title.",
+        "descriptionKey": "api.dialog.exports.DialogTitle.description",
+        "kind": "component",
+        "name": "DialogTitle"
+      },
+      {
+        "description": "Opens the dialog.",
+        "descriptionKey": "api.dialog.exports.DialogTrigger.description",
+        "kind": "component",
+        "name": "DialogTrigger"
+      }
+    ],
+    "name": "dialog",
+    "sourcePath": "src/components/ui/dialog.tsx",
+    "title": "Sticker Dialog",
+    "types": [
+      {
+        "description": "Props for sticker dialog content.",
+        "descriptionKey": "api.dialog.types.DialogContentProps.description",
+        "remarks": "Wraps Radix Dialog.Content and adds sticker size, tone, and close button styling.",
+        "remarksKey": "api.dialog.types.DialogContentProps.remarks",
+        "inherits": [
+          "React.ComponentPropsWithoutRef<typeof DialogPrimitive.Content>",
+          "VariantProps<typeof dialogContentVariants>"
+        ],
+        "kind": "interface",
+        "members": [
+          {
+            "defaultValue": "\"Close dialog\"",
+            "description": "Accessible label for the icon close button.",
+            "descriptionKey": "api.dialog.types.DialogContentProps.members.closeLabel.description",
+            "name": "closeLabel",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "defaultValue": "true",
+            "description": "Renders the top-right close button.",
+            "descriptionKey": "api.dialog.types.DialogContentProps.members.showClose.description",
+            "name": "showClose",
+            "optional": true,
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "defaultValue": "\"md\"",
+            "description": "Controls dialog width and padding.",
+            "descriptionKey": "api.dialog.types.DialogContentProps.members.size.description",
+            "name": "size",
+            "optional": true,
+            "required": false,
+            "type": "\"lg\" | \"md\" | \"sm\""
+          },
+          {
+            "defaultValue": "\"default\"",
+            "description": "Controls the dialog paper tone.",
+            "descriptionKey": "api.dialog.types.DialogContentProps.members.tone.description",
+            "name": "tone",
+            "optional": true,
+            "required": false,
+            "type": "\"default\" | \"info\" | \"secondary\" | \"warning\""
+          }
+        ],
+        "name": "DialogContentProps"
+      },
+      {
+        "description": "Props for the sticker dialog overlay.",
+        "descriptionKey": "api.dialog.types.DialogOverlayProps.description",
+        "inherits": [],
+        "kind": "type",
+        "members": [],
+        "name": "DialogOverlayProps",
+        "type": "React.ComponentPropsWithoutRef< typeof DialogPrimitive.Overlay >"
+      }
+    ],
+    "variants": [
+      {
+        "description": "Builds the sticker dialog content className from size and tone options.",
+        "descriptionKey": "api.dialog.variants.dialogContentVariants.description",
+        "groups": [
+          {
+            "defaultValue": "md",
+            "name": "size",
+            "values": ["lg", "md", "sm"]
+          },
+          {
+            "defaultValue": "default",
+            "name": "tone",
+            "values": ["default", "info", "secondary", "warning"]
+          }
+        ],
+        "name": "dialogContentVariants"
+      }
+    ]
+  },
   "checkbox": {
     "components": [
       {

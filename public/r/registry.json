@@ -210,6 +210,55 @@
       ]
     },
     {
+      "name": "tooltip",
+      "type": "registry:ui",
+      "title": "Sticker Tooltip",
+      "description": "A Radix-powered tooltip with a small handbook sticker bubble.",
+      "dependencies": ["@radix-ui/react-tooltip", "class-variance-authority"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "src/components/ui/tooltip.tsx",
+          "target": "@ui/tooltip.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "popover",
+      "type": "registry:ui",
+      "title": "Sticker Popover",
+      "description": "A Radix-powered popover for compact interactive sticker panels.",
+      "dependencies": ["@radix-ui/react-popover", "class-variance-authority"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "src/components/ui/popover.tsx",
+          "target": "@ui/popover.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dialog",
+      "type": "registry:ui",
+      "title": "Sticker Dialog",
+      "description": "A Radix-powered modal dialog with a handbook sticker paper panel.",
+      "dependencies": [
+        "@radix-ui/react-dialog",
+        "class-variance-authority",
+        "lucide-react"
+      ],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "src/components/ui/dialog.tsx",
+          "target": "@ui/dialog.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "checkbox",
       "type": "registry:ui",
       "title": "Sticker Checkbox",

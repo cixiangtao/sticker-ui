@@ -200,6 +200,42 @@ const routes = defineRoutes([
   },
   {
     component: () =>
+      import("@/pages/components/tooltip").then((module) => module.TooltipPage),
+    meta: {
+      description: "Radix help bubbles with compact sticker paper styling.",
+      emoji: "T",
+      navSection: "overlays",
+      order: 89,
+      title: "Tooltip",
+    },
+    path: "/components/tooltip",
+  },
+  {
+    component: () =>
+      import("@/pages/components/popover").then((module) => module.PopoverPage),
+    meta: {
+      description: "Interactive floating panels for filters and quick actions.",
+      emoji: "P",
+      navSection: "overlays",
+      order: 90,
+      title: "Popover",
+    },
+    path: "/components/popover",
+  },
+  {
+    component: () =>
+      import("@/pages/components/dialog").then((module) => module.DialogPage),
+    meta: {
+      description: "Modal sticker panels for focused decisions and forms.",
+      emoji: "D",
+      navSection: "overlays",
+      order: 91,
+      title: "Dialog",
+    },
+    path: "/components/dialog",
+  },
+  {
+    component: () =>
       import("@/pages/components/checkbox").then(
         (module) => module.CheckboxPage,
       ),

@@ -28,6 +28,23 @@ export {
 } from "./components/ui/card"
 export { Checkbox, checkboxVariants } from "./components/ui/checkbox"
 export type { CheckboxProps } from "./components/ui/checkbox"
+export {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogOverlay,
+  DialogPortal,
+  DialogTitle,
+  DialogTrigger,
+  dialogContentVariants,
+} from "./components/ui/dialog"
+export type {
+  DialogContentProps,
+  DialogOverlayProps,
+} from "./components/ui/dialog"
 export { Divider, dividerVariants } from "./components/ui/divider"
 export type { DividerProps } from "./components/ui/divider"
 export { Form, useForm } from "./components/ui/form"
@@ -57,6 +74,15 @@ export {
   LabelMarker,
   labelTones,
 } from "./components/ui/label"
+export {
+  Popover,
+  PopoverAnchor,
+  PopoverClose,
+  PopoverContent,
+  PopoverTrigger,
+  popoverContentVariants,
+} from "./components/ui/popover"
+export type { PopoverContentProps } from "./components/ui/popover"
 export {
   Select,
   SelectContent,
@@ -93,3 +119,14 @@ export {
 } from "./components/ui/table"
 export { Tag, tagVariants } from "./components/ui/tag"
 export { Textarea, textareaVariants } from "./components/ui/textarea"
+export {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+  tooltipContentVariants,
+} from "./components/ui/tooltip"
+export type {
+  TooltipContentProps,
+  TooltipProviderProps,
+} from "./components/ui/tooltip"
