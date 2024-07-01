@@ -15,7 +15,7 @@ function Demo() {
   const archived = false
 
   return (
-    <div className="rounded-sticker-2xl border-2 border-ink bg-surface p-5 shadow-sticker-lg">
+    <div className="grid gap-4 rounded-sticker-2xl border-2 border-ink bg-surface p-5 shadow-sticker-lg">
       <JsxJoin
         as="div"
         className="flex flex-wrap items-center gap-2"
@@ -30,6 +30,16 @@ function Demo() {
         <Tag color="success" size="sm">
           published
         </Tag>
+      </JsxJoin>
+      <JsxJoin
+        as="div"
+        className="flex flex-wrap items-center gap-2 text-xs font-extrabold text-text-muted"
+        filterEmpty={false}
+        separator={<span aria-hidden="true">/</span>}
+      >
+        Visible empty slots
+        {""}
+        still reserve their separators
       </JsxJoin>
     </div>
   )

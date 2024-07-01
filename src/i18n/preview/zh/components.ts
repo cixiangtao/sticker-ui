@@ -757,6 +757,104 @@ const ZH_PREVIEW_COMPONENT_TRANSLATIONS: Record<string, string> = {
   "Tune the preview without leaving the current surface.":
     "无需离开当前表面即可调整预览。",
   "Warns about a small constraint before clicking.": "点击前提示一个小约束。",
+  "A11y & Change": "可访问性与变更",
+  "Accessible close label": "可访问关闭标签",
+  "Add an optional note": "添加可选备注",
+  "API docs": "API 文档",
+  "Arrows & Sides": "箭头与方向",
+  "As Child": "作为子元素",
+  "asChild moves the sticker button styling onto links or router primitives while preserving loading and disabled states.":
+    "asChild 会把贴纸按钮样式移动到链接或路由原语上，同时保留加载和禁用状态。",
+  "asChild puts the card root classes on the anchor while slot spacing stays explicit.":
+    "asChild 会把卡片根样式放到 anchor 上，同时保持插槽间距显式可控。",
+  "Blocked state": "阻塞状态",
+  "Change Handler": "变更处理",
+  "Change Handlers": "变更处理",
+  "Close Controls": "关闭控制",
+  "Close review dialog": "关闭评审对话框",
+  "Compact hint without the pointer arrow.": "不带指向箭头的紧凑提示。",
+  "Compact section": "紧凑区块",
+  "Controlled field": "受控字段",
+  "Controlled notes": "受控备注",
+  "Controlled title": "受控标题",
+  "Controlled visible": "受控可见",
+  "Columns land on the list": "列布局落在列表上",
+  "Custom label": "自定义标签",
+  "Default visible": "默认可见",
+  "Delegated flex list": "委托的 flex 列表",
+  "Delegated grid list": "委托的 grid 列表",
+  "Delegated link card": "委托链接卡片",
+  "Delivery area": "交付区域",
+  "Disabled link": "禁用链接",
+  "Docs link": "文档链接",
+  "Draft notes stay controlled while keeping native multiline editing.":
+    "草稿备注保持受控，同时保留原生多行编辑体验。",
+  Empty: "空",
+  "Footer only": "仅页脚",
+  "Form-level and item-level triggers can validate on blur, collect non-value props, and show manual status or help copy.":
+    "表单级和字段级触发器可在失焦时校验、收集非 value 属性，并展示手动状态或帮助文案。",
+  Hidden: "已隐藏",
+  "id, aria-describedby, aria-invalid, onChange, and onValueChange are forwarded to the trigger and value callbacks.":
+    "id、aria-describedby、aria-invalid、onChange 与 onValueChange 会传递给触发器和值变更回调。",
+  "I understand": "我明白",
+  "Inline & As Child": "内联与 asChild",
+  "inline switches to inline-flex or inline-grid, while asChild delegates layout classes to an existing semantic element.":
+    "inline 会切换为 inline-flex 或 inline-grid，而 asChild 会把布局类委托给已有语义元素。",
+  "Inline flex": "内联 flex",
+  "Last visibility event:": "上次可见性事件：",
+  "Loading state": "加载状态",
+  "Manual help overrides validation messages for display-only guidance.":
+    "手动 help 会覆盖校验消息，用于仅展示的引导信息。",
+  "No arrow": "无箭头",
+  "No icon close": "无图标关闭",
+  "No wrapper element added": "不额外添加包裹元素",
+  "Offset and alignment keep dense command bars from covering the trigger.":
+    "偏移和对齐可避免密集命令栏覆盖触发器。",
+  "Offset right": "右侧偏移",
+  "onChange receives the next string value first, so controlled fields do not need to read event.currentTarget.value.":
+    "onChange 会优先收到下一个字符串值，因此受控字段无需读取 event.currentTarget.value。",
+  "onValueChange follows Radix naming, while onChange mirrors the form-friendly value callback.":
+    "onValueChange 沿用 Radix 命名，而 onChange 则匹配表单友好的值回调。",
+  "Open composed surface": "打开组合表面",
+  "Opens after a longer provider delay.": "在较长的 Provider 延迟后打开。",
+  "Provider timing props control hover delay, while size and showArrow adjust each tooltip bubble.":
+    "Provider 时间属性控制 hover 延迟，而 size 和 showArrow 调整每个提示气泡。",
+  "Ready to publish": "准备发布",
+  "Registry JSON": "Registry JSON",
+  "Root & Spacing Props": "根元素与间距 Props",
+  "Root props control semantic elements, delegated children, tactile interaction, and the spacing shared by card slots.":
+    "根元素 props 控制语义元素、委托子元素、触感交互，以及卡片插槽共享的间距。",
+  "Selected area:": "已选区域：",
+  "Selected:": "已选择：",
+  Shown: "已显示",
+  "showArrow, side, align, and sideOffset make anchored popovers read clearly in toolbars and edge-aligned panels.":
+    "showArrow、side、align 和 sideOffset 让锚定弹出面板在工具栏和边缘对齐面板中保持清晰。",
+  "showClose and closeLabel tune the built-in icon close button, or remove it when the footer should own dismissal.":
+    "showClose 与 closeLabel 可调整内置图标关闭按钮；当页脚需要负责关闭时，也可以移除它。",
+  "Slow hint": "慢速提示",
+  "Some confirmations keep dismissal in the footer so the available choices remain explicit.":
+    "某些确认流程会把关闭动作放在页脚，让可选操作保持明确。",
+  "sits inside text flow": "位于文本流内",
+  "Switch uses checked and onCheckedChange instead of value and onChange.":
+    "Switch 使用 checked 与 onCheckedChange，而不是 value 与 onChange。",
+  "The arrow points back to the trigger when the relationship needs to be visually explicit.":
+    "当触发关系需要视觉上更明确时，箭头会指回触发器。",
+  "The icon button keeps the same visual treatment while exposing a context-specific aria-label.":
+    "图标按钮保持相同视觉处理，同时暴露上下文相关的 aria-label。",
+  "This field validates on blur because the form sets validateTrigger.":
+    "由于表单设置了 validateTrigger，此字段会在失焦时校验。",
+  "Timing & Arrows": "时机与箭头",
+  "Toggle controlled field": "切换受控字段",
+  "Type a title": "输入标题",
+  "Use lowercase letters and dashes.": "使用小写字母和短横线。",
+  "Validate on blur": "失焦校验",
+  "Visibility can start open, move into controlled mode, and report every toggle through onVisibleChange.":
+    "可见性可以默认打开、进入受控模式，并通过 onVisibleChange 报告每次切换。",
+  "Visibility Control": "可见性控制",
+  "Visible empty slots": "可见空槽位",
+  "With arrow": "带箭头",
+  "Write controlled notes": "编写受控备注",
+  "still reserve their separators": "仍会保留分隔符",
 }
 
 export { ZH_PREVIEW_COMPONENT_TRANSLATIONS }

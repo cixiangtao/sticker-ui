@@ -19,7 +19,10 @@ const meta = defineMeta({
 
 function Demo() {
   return (
-    <Table className="min-w-[640px]">
+    <Table
+      className="min-w-[640px]"
+      containerClassName="bg-fill-info shadow-sticker-lg"
+    >
       <TableHeader>
         <TableRow>
           <TableHead>Prop</TableHead>
