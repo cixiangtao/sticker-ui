@@ -9,6 +9,9 @@ const meta = defineMeta({
     "onValueChange follows Radix naming, while onChange mirrors the form-friendly value callback.",
   order: 40,
   title: "Change Handlers",
+  titleKey: "preview.components.changeHandlers",
+  descriptionKey:
+    "preview.components.onvaluechangeFollowsRadixNamingWhileOnchangeMirrorsTheFormFriendlyValueCallback",
 })
 
 function Demo() {

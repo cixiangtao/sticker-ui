@@ -8,6 +8,9 @@ const meta = defineMeta({
     "Form-level and item-level triggers can validate on blur, collect non-value props, and show manual status or help copy.",
   order: 40,
   title: "Triggers & Status",
+  descriptionKey:
+    "preview.components.formLevelAndItemLevelTriggersCanValidateOnBlurCollectNonValuePropsAndShowManualStatusOrHelpCopy",
+  titleKey: "preview.components.triggersAndStatus",
 })
 
 function Demo() {

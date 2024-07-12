@@ -8,6 +8,9 @@ const meta = defineMeta({
     "Variant controls the tag structure while color carries semantic meaning.",
   order: 10,
   title: "Variants",
+  titleKey: "preview.components.variants",
+  descriptionKey:
+    "preview.components.variantControlsTheTagStructureWhileColorCarriesSemanticMeaning",
 })
 
 function Demo() {

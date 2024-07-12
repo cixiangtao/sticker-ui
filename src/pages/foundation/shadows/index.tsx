@@ -1,7 +1,7 @@
 import { usePreviewI18n } from "@/i18n/preview"
 
 function ShadowsPage() {
-  const { t } = usePreviewI18n()
+  const { tm } = usePreviewI18n()
   const samples = [
     "shadow-[3px_3px_0_#2E3038]",
     "shadow-[5px_5px_0_#2E3038]",
@@ -19,7 +19,7 @@ function ShadowsPage() {
             {index + 1}
           </div>
           <div className="font-extrabold">
-            {t("Offset Level")} {index + 1}
+            {tm("preview.components.offsetLevel")} {index + 1}
           </div>
           <code className="mt-3 block rounded-[12px] border border-[#2E3038] bg-[#FFF6DC] p-3 text-xs font-semibold">
             {shadow}

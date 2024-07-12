@@ -8,6 +8,9 @@ const meta = defineMeta({
     "Rounded tags follow the selected size, while pill tags keep a fully rounded capsule shape.",
   order: 30,
   title: "Rounded",
+  titleKey: "preview.components.rounded",
+  descriptionKey:
+    "preview.components.roundedTagsFollowTheSelectedSizeWhilePillTagsKeepAFullyRoundedCapsuleShape",
 })
 
 function Demo() {

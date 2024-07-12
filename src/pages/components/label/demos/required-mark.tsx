@@ -8,6 +8,9 @@ const meta = defineMeta({
     "Required marks handle field semantics, while LabelMarker stays available for custom status chips.",
   order: 25,
   title: "Required Mark",
+  titleKey: "preview.components.requiredMark",
+  descriptionKey:
+    "preview.components.requiredMarksHandleFieldSemanticsWhileLabelmarkerStaysAvailableForCustomStatusChips",
 })
 
 function Demo() {

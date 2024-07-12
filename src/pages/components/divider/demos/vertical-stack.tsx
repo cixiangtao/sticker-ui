@@ -8,6 +8,9 @@ const meta = defineMeta({
     "Vertical dividers separate split panes and toolbar clusters without changing the surrounding layout.",
   order: 30,
   title: "Vertical Stack",
+  titleKey: "preview.components.verticalStack",
+  descriptionKey:
+    "preview.components.verticalDividersSeparateSplitPanesAndToolbarClustersWithoutChangingTheSurroundingLayout",
 })
 
 function Demo() {

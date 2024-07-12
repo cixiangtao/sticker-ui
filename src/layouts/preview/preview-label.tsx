@@ -14,16 +14,20 @@ function Label({
   tone,
   ...props
 }: ComponentProps<typeof BaseLabel>) {
-  const { t } = usePreviewI18n()
+  const { tm } = usePreviewI18n()
 
   return (
     <BaseLabel tone={tone} {...props}>
       {children}
       {required ? (
-        <BaseLabelMarker tone={tone}>{t("required")}</BaseLabelMarker>
+        <BaseLabelMarker tone={tone}>
+          {tm("preview.components.required")}
+        </BaseLabelMarker>
       ) : null}
       {optional ? (
-        <BaseLabelMarker tone="muted">{t("optional")}</BaseLabelMarker>
+        <BaseLabelMarker tone="muted">
+          {tm("preview.components.optional")}
+        </BaseLabelMarker>
       ) : null}
     </BaseLabel>
   )

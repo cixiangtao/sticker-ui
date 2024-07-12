@@ -17,6 +17,9 @@ const meta = defineMeta({
     "Use card slots to keep headings, body copy, metadata, and actions visually separated.",
   order: 10,
   title: "Basic Composition",
+  titleKey: "preview.components.basicComposition",
+  descriptionKey:
+    "preview.components.useCardSlotsToKeepHeadingsBodyCopyMetadataAndActionsVisuallySeparated",
 })
 
 function Demo() {

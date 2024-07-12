@@ -8,6 +8,9 @@ const meta = defineMeta({
     "Empty optional children are skipped by default, which keeps conditional rows from rendering stray separators.",
   order: 30,
   title: "Filter Empty",
+  titleKey: "preview.components.filterEmpty",
+  descriptionKey:
+    "preview.components.emptyOptionalChildrenAreSkippedByDefaultWhichKeepsConditionalRowsFromRenderingStraySeparators",
 })
 
 function Demo() {

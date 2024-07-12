@@ -9,6 +9,9 @@ const meta = defineMeta({
     "onChange receives the next string value first, so controlled fields do not need to read event.currentTarget.value.",
   order: 40,
   title: "Change Handler",
+  titleKey: "preview.components.changeHandler",
+  descriptionKey:
+    "preview.components.onchangeReceivesTheNextStringValueFirstSoControlledFieldsDoNotNeedToReadEventCurrenttargetValue",
 })
 
 function Demo() {

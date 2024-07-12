@@ -8,6 +8,9 @@ const meta = defineMeta({
     "Sizes align with compact, standard, and roomy controls. Markers can be composed directly when a form needs custom wording.",
   order: 30,
   title: "Sizes & Custom Markers",
+  titleKey: "preview.components.sizesAndCustomMarkers",
+  descriptionKey:
+    "preview.components.sizesAlignWithCompactStandardAndRoomyControlsMarkersCanBeComposedDirectlyWhenAFormNeedsCustomWording",
 })
 
 function Demo() {

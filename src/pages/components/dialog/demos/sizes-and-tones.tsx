@@ -18,6 +18,9 @@ const meta = defineMeta({
     "Sizes and tones keep modal surfaces aligned with the amount of content and the kind of decision.",
   order: 20,
   title: "Sizes & Tones",
+  titleKey: "preview.components.sizesAndTones",
+  descriptionKey:
+    "preview.components.sizesAndTonesKeepModalSurfacesAlignedWithTheAmountOfContentAndTheKindOfDecision",
 })
 
 function Demo() {

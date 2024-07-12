@@ -14,6 +14,9 @@ const meta = defineMeta({
     "Tone and side options keep hint bubbles useful in dense toolbars and status rows.",
   order: 20,
   title: "Tones & Sides",
+  titleKey: "preview.components.tonesAndSides",
+  descriptionKey:
+    "preview.components.toneAndSideOptionsKeepHintBubblesUsefulInDenseToolbarsAndStatusRows",
 })
 
 function Demo() {

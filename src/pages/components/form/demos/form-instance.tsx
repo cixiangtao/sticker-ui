@@ -9,6 +9,9 @@ const meta = defineMeta({
     "The form instance exposes submit, resetFields, validateFields, and value setters for controlled workflows.",
   order: 30,
   title: "Form Instance",
+  titleKey: "preview.components.formInstance",
+  descriptionKey:
+    "preview.components.theFormInstanceExposesSubmitResetfieldsValidatefieldsAndValueSettersForControlledWorkflows",
 })
 
 function Demo() {

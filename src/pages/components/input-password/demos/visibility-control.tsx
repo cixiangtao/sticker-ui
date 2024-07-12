@@ -9,6 +9,9 @@ const meta = defineMeta({
     "Visibility can start open, move into controlled mode, and report every toggle through onVisibleChange.",
   order: 40,
   title: "Visibility Control",
+  titleKey: "preview.components.visibilityControl",
+  descriptionKey:
+    "preview.components.visibilityCanStartOpenMoveIntoControlledModeAndReportEveryToggleThroughOnvisiblechange",
 })
 
 function Demo() {

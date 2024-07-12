@@ -16,6 +16,9 @@ const meta = defineMeta({
     "Select keeps accessible keyboard behavior while adding a chunky sticker menu and a clear paper indicator.",
   order: 10,
   title: "Basic Field",
+  titleKey: "preview.components.basicField",
+  descriptionKey:
+    "preview.components.selectKeepsAccessibleKeyboardBehaviorWhileAddingAChunkyStickerMenuAndAClearPaperIndicator",
 })
 
 function Demo() {

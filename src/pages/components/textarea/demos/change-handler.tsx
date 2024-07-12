@@ -9,6 +9,9 @@ const meta = defineMeta({
     "Textarea mirrors Input by passing the next string value to onChange before the native event.",
   order: 40,
   title: "Change Handler",
+  titleKey: "preview.components.changeHandler",
+  descriptionKey:
+    "preview.components.textareaMirrorsInputByPassingTheNextStringValueToOnchangeBeforeTheNativeEvent",
 })
 
 function Demo() {

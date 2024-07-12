@@ -16,6 +16,9 @@ const meta = defineMeta({
     "Interactive cards keep tactile movement on the root while nested text and badges stay stable.",
   order: 50,
   title: "Interactive List",
+  titleKey: "preview.components.interactiveList",
+  descriptionKey:
+    "preview.components.interactiveCardsKeepTactileMovementOnTheRootWhileNestedTextAndBadgesStayStable",
 })
 
 const tasks = [

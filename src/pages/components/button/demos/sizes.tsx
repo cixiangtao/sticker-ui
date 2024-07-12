@@ -8,6 +8,9 @@ const meta = defineMeta({
     "Size choices are constrained so icon, short text, and long commands still read as one family.",
   order: 20,
   title: "Sizes",
+  descriptionKey:
+    "preview.components.sizeChoicesAreConstrainedSoIconShortTextAndLongCommandsStillReadAsOneFamily",
+  titleKey: "preview.components.sizes",
 })
 
 function Demo() {

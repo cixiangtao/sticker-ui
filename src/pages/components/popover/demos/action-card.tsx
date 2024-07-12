@@ -14,6 +14,9 @@ const meta = defineMeta({
     "Close can wrap a sticker button so short popover workflows can finish from inside the panel.",
   order: 20,
   title: "Action Card",
+  titleKey: "preview.components.actionCard",
+  descriptionKey:
+    "preview.components.closeCanWrapAStickerButtonSoShortPopoverWorkflowsCanFinishFromInsideThePanel",
 })
 
 function Demo() {

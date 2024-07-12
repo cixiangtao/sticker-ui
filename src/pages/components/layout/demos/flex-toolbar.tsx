@@ -8,6 +8,9 @@ const meta = defineMeta({
     "Flex keeps toolbar alignment predictable while className carries the sticker frame.",
   order: 10,
   title: "Flex Toolbar",
+  titleKey: "preview.components.flexToolbar",
+  descriptionKey:
+    "preview.components.flexKeepsToolbarAlignmentPredictableWhileClassnameCarriesTheStickerFrame",
 })
 
 function Demo() {

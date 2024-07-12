@@ -18,6 +18,9 @@ const meta = defineMeta({
     "Compose table cells with tags and code chips while the frame handles scrolling and ink borders.",
   order: 20,
   title: "Status Board",
+  titleKey: "preview.components.statusBoard",
+  descriptionKey:
+    "preview.components.composeTableCellsWithTagsAndCodeChipsWhileTheFrameHandlesScrollingAndInkBorders",
 })
 
 function Demo() {

@@ -8,6 +8,9 @@ const meta = defineMeta({
     "Add label content when a section break needs a scannable checkpoint inside dense docs or forms.",
   order: 20,
   title: "Labeled Sections",
+  titleKey: "preview.components.labeledSections",
+  descriptionKey:
+    "preview.components.addLabelContentWhenASectionBreakNeedsAScannableCheckpointInsideDenseDocsOrForms",
 })
 
 function Demo() {

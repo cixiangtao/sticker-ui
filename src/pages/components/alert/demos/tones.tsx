@@ -8,6 +8,9 @@ const meta = defineMeta({
     "Semantic tones keep feedback readable while the sticker frame gives every message a clear paper surface.",
   order: 20,
   title: "Tones",
+  descriptionKey:
+    "preview.components.semanticTonesKeepFeedbackReadableWhileTheStickerFrameGivesEveryMessageAClearPaperSurface",
+  titleKey: "preview.components.tones",
 })
 
 function Demo() {

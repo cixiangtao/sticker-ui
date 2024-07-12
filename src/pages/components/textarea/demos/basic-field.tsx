@@ -8,6 +8,9 @@ const meta = defineMeta({
     "Textarea keeps native multiline behavior while adding a chunky sticker frame, hard shadow, and comfortable writing space.",
   order: 10,
   title: "Basic Field",
+  titleKey: "preview.components.basicField",
+  descriptionKey:
+    "preview.components.textareaKeepsNativeMultilineBehaviorWhileAddingAChunkyStickerFrameHardShadowAndComfortableWritingSpace",
 })
 
 function Demo() {

@@ -14,6 +14,9 @@ const meta = defineMeta({
     "Popover hosts compact interactive content such as quick settings, filters, and contextual actions.",
   order: 10,
   title: "Quick Panel",
+  descriptionKey:
+    "preview.components.popoverHostsCompactInteractiveContentSuchAsQuickSettingsFiltersAndContextualActions",
+  titleKey: "preview.components.quickPanel",
 })
 
 function Demo() {

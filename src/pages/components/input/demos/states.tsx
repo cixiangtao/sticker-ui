@@ -8,6 +8,9 @@ const meta = defineMeta({
     "Invalid, disabled, and semantic tone states stay visible through native attributes such as aria-invalid and disabled.",
   order: 30,
   title: "States",
+  titleKey: "preview.components.states",
+  descriptionKey:
+    "preview.components.invalidDisabledAndSemanticToneStatesStayVisibleThroughNativeAttributesSuchAsAriaInvalidAndDisabled",
 })
 
 function Demo() {

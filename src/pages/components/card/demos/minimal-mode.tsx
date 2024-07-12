@@ -15,6 +15,9 @@ const meta = defineMeta({
     "Minimal cards remove the shadow and keep only a thin border for quieter grouping.",
   order: 30,
   title: "Minimal Mode",
+  titleKey: "preview.components.minimalMode",
+  descriptionKey:
+    "preview.components.minimalCardsRemoveTheShadowAndKeepOnlyAThinBorderForQuieterGrouping",
 })
 
 function Demo() {

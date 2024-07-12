@@ -8,6 +8,9 @@ const meta = defineMeta({
     "Dot markers add a quick status signal while keeping text readable in dense rows.",
   order: 50,
   title: "Sizes & Dots",
+  titleKey: "preview.components.sizesAndDots",
+  descriptionKey:
+    "preview.components.dotMarkersAddAQuickStatusSignalWhileKeepingTextReadableInDenseRows",
 })
 
 function Demo() {

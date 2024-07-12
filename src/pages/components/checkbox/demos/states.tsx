@@ -8,6 +8,9 @@ const meta = defineMeta({
     "Invalid, disabled, and semantic checkbox states stay visible through Radix props and Form.Item validation.",
   order: 30,
   title: "States",
+  titleKey: "preview.components.states",
+  descriptionKey:
+    "preview.components.invalidDisabledAndSemanticCheckboxStatesStayVisibleThroughRadixPropsAndFormItemValidation",
 })
 
 function Demo() {

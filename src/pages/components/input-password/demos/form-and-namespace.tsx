@@ -8,6 +8,9 @@ const meta = defineMeta({
     "The namespaced Input.Password entry stays available from the package root while preserving Form.Item value and validation wiring.",
   order: 20,
   title: "Form Namespace",
+  titleKey: "preview.components.formNamespace",
+  descriptionKey:
+    "preview.components.theNamespacedInputPasswordEntryStaysAvailableFromThePackageRootWhilePreservingFormItemValueAndValidationWiring",
 })
 
 function Demo() {

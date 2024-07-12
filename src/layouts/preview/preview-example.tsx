@@ -1,7 +1,7 @@
 import { type ComponentType, useState } from "react"
 import { Button, Tag } from "sticker-ui"
 
-import { usePreviewI18n } from "../../i18n/preview"
+import { type PreviewMessageKey, usePreviewI18n } from "../../i18n/preview"
 import {
   Card,
   CardContent,
@@ -21,8 +21,10 @@ interface PreviewExampleProps {
 interface PreviewDemoMeta {
   className?: string
   description: string
+  descriptionKey: PreviewMessageKey
   order?: number
   title: string
+  titleKey: PreviewMessageKey
 }
 
 interface PreviewDemoModule {
@@ -41,13 +43,13 @@ function PreviewExample({
   sourcePath,
 }: PreviewExampleProps) {
   const [isSourceOpen, setIsSourceOpen] = useState(false)
-  const { t } = usePreviewI18n()
+  const { tm } = usePreviewI18n()
 
   return (
     <Card className={meta.className}>
       <CardHeader>
-        <CardTitle>{meta.title}</CardTitle>
-        <CardDescription>{meta.description}</CardDescription>
+        <CardTitle>{tm(meta.titleKey)}</CardTitle>
+        <CardDescription>{tm(meta.descriptionKey)}</CardDescription>
       </CardHeader>
       <CardContent>
         <Demo />
@@ -56,7 +58,7 @@ function PreviewExample({
             <div className="flex items-center justify-between">
               <div className="flex flex-col gap-1">
                 <div className="text-xs font-extrabold text-[#3D5F52] uppercase">
-                  {t("Example code")}
+                  {tm("preview.components.exampleCode")}
                 </div>
                 <Tag as="code" color="default" variant="solid">
                   {sourcePath}
@@ -70,7 +72,9 @@ function PreviewExample({
                 type="button"
                 variant="outlined"
               >
-                {isSourceOpen ? t("Hide code") : t("Show code")}
+                {isSourceOpen
+                  ? tm("preview.components.hideCode")
+                  : tm("preview.components.showCode")}
               </Button>
             </div>
           </CardHeader>

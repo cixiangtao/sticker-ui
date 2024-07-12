@@ -8,6 +8,9 @@ const meta = defineMeta({
     "Grid presets cover common responsive card rows without dynamic Tailwind class generation.",
   order: 20,
   title: "Responsive Grid",
+  titleKey: "preview.components.responsiveGrid",
+  descriptionKey:
+    "preview.components.gridPresetsCoverCommonResponsiveCardRowsWithoutDynamicTailwindClassGeneration",
 })
 
 const items = [

@@ -8,6 +8,9 @@ const meta = defineMeta({
     "Rules run on change by default and can mix required, length, pattern, type, and custom validators.",
   order: 20,
   title: "Validation Rules",
+  titleKey: "preview.components.validationRules",
+  descriptionKey:
+    "preview.components.rulesRunOnChangeByDefaultAndCanMixRequiredLengthPatternTypeAndCustomValidators",
 })
 
 function Demo() {

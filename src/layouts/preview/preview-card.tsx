@@ -8,7 +8,6 @@ import {
   CardTitle as StickerCardTitle,
 } from "sticker-ui"
 
-import { LocalizedPreview } from "../../i18n/preview"
 import { cn } from "../../lib/utils"
 
 function Card({
@@ -23,7 +22,7 @@ function Card({
       data-slot="preview-card"
       {...props}
     >
-      <LocalizedPreview>{children}</LocalizedPreview>
+      {children}
     </StickerCard>
   )
 }

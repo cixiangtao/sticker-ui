@@ -8,6 +8,9 @@ const meta = defineMeta({
     "Variants define structure while color sets the sticker paper tone.",
   order: 10,
   title: "Variants",
+  titleKey: "preview.components.variants",
+  descriptionKey:
+    "preview.components.variantsDefineStructureWhileColorSetsTheStickerPaperTone",
 })
 
 function Demo() {

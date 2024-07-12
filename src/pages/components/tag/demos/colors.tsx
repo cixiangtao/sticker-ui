@@ -50,6 +50,9 @@ const meta = defineMeta({
     "Compare each semantic color across solid, filled, and outlined tags.",
   order: 20,
   title: "Colors",
+  titleKey: "preview.components.colors",
+  descriptionKey:
+    "preview.components.compareEachSemanticColorAcrossSolidFilledAndOutlinedTags",
 })
 
 function Demo() {

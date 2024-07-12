@@ -8,6 +8,9 @@ const meta = defineMeta({
     "Sizes align switches with compact toolbars, standard settings, and roomy preference panels while tone keeps state context visible.",
   order: 20,
   title: "Sizes & Tones",
+  titleKey: "preview.components.sizesAndTones",
+  descriptionKey:
+    "preview.components.sizesAlignSwitchesWithCompactToolbarsStandardSettingsAndRoomyPreferencePanelsWhileToneKeepsStateContextVisible",
 })
 
 function Demo() {

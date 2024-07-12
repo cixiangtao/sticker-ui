@@ -8,6 +8,9 @@ const meta = defineMeta({
     "Labels stay compact, readable, and connected to native controls with the normal htmlFor relationship.",
   order: 10,
   title: "Form Captions",
+  titleKey: "preview.components.formCaptions",
+  descriptionKey:
+    "preview.components.labelsStayCompactReadableAndConnectedToNativeControlsWithTheNormalHtmlforRelationship",
 })
 
 function Demo() {

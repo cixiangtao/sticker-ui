@@ -8,6 +8,9 @@ const meta = defineMeta({
     "Switch keeps Radix pressed state behavior while adding a tactile sticker track and paper thumb.",
   order: 10,
   title: "Basic Field",
+  titleKey: "preview.components.basicField",
+  descriptionKey:
+    "preview.components.switchKeepsRadixPressedStateBehaviorWhileAddingATactileStickerTrackAndPaperThumb",
 })
 
 function Demo() {

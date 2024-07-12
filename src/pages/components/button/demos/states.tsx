@@ -8,6 +8,9 @@ const meta = defineMeta({
     "Disabled and loading states keep the sticker shape while preventing duplicate actions.",
   order: 30,
   title: "States",
+  titleKey: "preview.components.states",
+  descriptionKey:
+    "preview.components.disabledAndLoadingStatesKeepTheStickerShapeWhilePreventingDuplicateActions",
 })
 
 function Demo() {

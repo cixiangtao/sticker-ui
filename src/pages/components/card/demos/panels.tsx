@@ -15,6 +15,9 @@ const meta = defineMeta({
     "Use panel cards for layout shells, preview windows, and grouped page regions.",
   order: 20,
   title: "Panel Surfaces",
+  titleKey: "preview.components.panelSurfaces",
+  descriptionKey:
+    "preview.components.usePanelCardsForLayoutShellsPreviewWindowsAndGroupedPageRegions",
 })
 
 function HeaderDots() {

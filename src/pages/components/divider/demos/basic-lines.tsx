@@ -8,6 +8,9 @@ const meta = defineMeta({
     "Divider keeps the line semantic while variants tune weight and texture for calm section breaks.",
   order: 10,
   title: "Basic Lines",
+  titleKey: "preview.components.basicLines",
+  descriptionKey:
+    "preview.components.dividerKeepsTheLineSemanticWhileVariantsTuneWeightAndTextureForCalmSectionBreaks",
 })
 
 function Demo() {

@@ -8,6 +8,9 @@ const meta = defineMeta({
     "Combine tags with calmer borders for route cards, filters, and registry detail panels.",
   order: 60,
   title: "Metadata Row",
+  titleKey: "preview.components.metadataRow",
+  descriptionKey:
+    "preview.components.combineTagsWithCalmerBordersForRouteCardsFiltersAndRegistryDetailPanels",
 })
 
 function Demo() {

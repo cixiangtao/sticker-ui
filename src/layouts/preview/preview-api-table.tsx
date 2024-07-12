@@ -8,7 +8,7 @@ import {
   Tag,
 } from "sticker-ui"
 
-import { usePreviewI18n } from "../../i18n/preview"
+import { type PreviewMessageKey, usePreviewI18n } from "../../i18n/preview"
 import {
   Card,
   CardContent,
@@ -107,7 +107,7 @@ interface PreviewApiTableProps {
 }
 
 function PreviewApiTable({ api }: PreviewApiTableProps) {
-  const { t } = usePreviewI18n()
+  const { td, tm } = usePreviewI18n()
   const supportingTypes = getSupportingTypes(api)
 
   return (
@@ -116,11 +116,11 @@ function PreviewApiTable({ api }: PreviewApiTableProps) {
         <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
           <div>
             <div className="text-xs font-extrabold text-text-warning-muted uppercase">
-              {t("API Reference")}
+              {tm("preview.common.apiReference")}
             </div>
             <CardTitle className="mt-1">{api.title}</CardTitle>
             <CardDescription>
-              {translateApiText(t, api.descriptionKey, api.description)}
+              {translateApiText(td, api.descriptionKey, api.description)}
             </CardDescription>
           </div>
           <code className="w-fit rounded-sticker-md border border-ink bg-surface px-3 py-2 text-xs font-extrabold">
@@ -147,11 +147,11 @@ function PreviewApiTable({ api }: PreviewApiTableProps) {
 }
 
 function ComponentList({ components }: { components: PreviewApiComponent[] }) {
-  const { t } = usePreviewI18n()
+  const { td, tm } = usePreviewI18n()
 
   return (
     <section className="grid gap-3">
-      <SectionTitle>Components</SectionTitle>
+      <SectionTitle messageKey="preview.components.components" />
       <div className="grid gap-3">
         {components.map((component) => (
           <div
@@ -162,13 +162,13 @@ function ComponentList({ components }: { components: PreviewApiComponent[] }) {
               <div className="flex flex-wrap items-center gap-2">
                 <code className="text-sm font-black">{component.name}</code>
                 <span className="rounded-full border border-ink bg-fill-default px-2 py-0.5 text-[10px] font-extrabold uppercase">
-                  {t("component")}
+                  {tm("preview.common.component")}
                 </span>
               </div>
               {component.description ? (
                 <p className="text-sm leading-6 font-medium text-text-muted">
                   {translateApiText(
-                    t,
+                    td,
                     component.descriptionKey,
                     component.description,
                   )}
@@ -176,7 +176,11 @@ function ComponentList({ components }: { components: PreviewApiComponent[] }) {
               ) : null}
               {component.remarks ? (
                 <p className="text-xs leading-5 font-bold text-text-subtle">
-                  {translateApiText(t, component.remarksKey, component.remarks)}
+                  {translateApiText(
+                    td,
+                    component.remarksKey,
+                    component.remarks,
+                  )}
                 </p>
               ) : null}
             </div>
@@ -184,7 +188,7 @@ function ComponentList({ components }: { components: PreviewApiComponent[] }) {
               <ComponentPropsCard props={component.props} />
             ) : (
               <span className="text-xs font-bold text-text-placeholder">
-                {t("No props detected.")}
+                {tm("preview.common.noPropsDetected")}
               </span>
             )}
           </div>
@@ -195,26 +199,26 @@ function ComponentList({ components }: { components: PreviewApiComponent[] }) {
 }
 
 function ComponentPropsCard({ props }: { props: PreviewApiComponentProps }) {
-  const { t } = usePreviewI18n()
+  const { td, tm } = usePreviewI18n()
   const inheritedMembers = props.inheritedMembers ?? []
 
   return (
     <div className="grid gap-3 rounded-sticker-lg border border-ink bg-paper p-3">
       <div className="grid gap-2">
         <div className="text-xs font-black text-text-subtle uppercase">
-          {t("Props source")}
+          {tm("preview.common.propsSource")}
         </div>
         <Tag as="code" color="default" rounded="pill" size="sm" variant="solid">
           {props.type}
         </Tag>
         {props.description ? (
           <p className="text-sm leading-6 font-medium text-text-muted">
-            {translateApiText(t, props.descriptionKey, props.description)}
+            {translateApiText(td, props.descriptionKey, props.description)}
           </p>
         ) : null}
         {props.remarks ? (
           <p className="text-xs leading-5 font-bold text-text-subtle">
-            {translateApiText(t, props.remarksKey, props.remarks)}
+            {translateApiText(td, props.remarksKey, props.remarks)}
           </p>
         ) : null}
         <InheritanceList inherits={props.inherits} />
@@ -223,13 +227,13 @@ function ComponentPropsCard({ props }: { props: PreviewApiComponentProps }) {
         <MemberTable members={props.members} />
       ) : (
         <span className="text-xs font-bold text-text-placeholder">
-          {t("No custom props detected.")}
+          {tm("preview.common.noCustomPropsDetected")}
         </span>
       )}
       {inheritedMembers.length > 0 ? (
         <div className="grid gap-2">
           <div className="text-xs font-black text-text-subtle uppercase">
-            {t("Inherited native props")}
+            {tm("preview.common.inheritedNativeProps")}
           </div>
           <MemberTable members={inheritedMembers} />
         </div>
@@ -239,7 +243,7 @@ function ComponentPropsCard({ props }: { props: PreviewApiComponentProps }) {
 }
 
 function ExportList({ exports }: { exports: PreviewApiExport[] }) {
-  const { t } = usePreviewI18n()
+  const { tm } = usePreviewI18n()
 
   if (exports.length === 0) {
     return null
@@ -247,7 +251,7 @@ function ExportList({ exports }: { exports: PreviewApiExport[] }) {
 
   return (
     <section className="grid gap-2">
-      <SectionTitle>Exports</SectionTitle>
+      <SectionTitle messageKey="preview.common.exports" />
       <div className="flex flex-wrap gap-2">
         {exports.map((entry) => (
           <span
@@ -256,7 +260,7 @@ function ExportList({ exports }: { exports: PreviewApiExport[] }) {
           >
             <code>{entry.name}</code>
             <span className="rounded-full bg-fill-info px-2 py-0.5 text-[10px] uppercase">
-              {t(entry.kind)}
+              {tm(toApiKindMessageKey(entry.kind))}
             </span>
           </span>
         ))}
@@ -288,12 +292,12 @@ function InheritanceList({ inherits }: { inherits?: string[] }) {
   )
 }
 
-function SectionTitle({ children }: { children: string }) {
-  const { t } = usePreviewI18n()
+function SectionTitle({ messageKey }: { messageKey: PreviewMessageKey }) {
+  const { tm } = usePreviewI18n()
 
   return (
     <h2 className="text-sm font-black tracking-wide text-ink uppercase">
-      {t(children)}
+      {tm(messageKey)}
     </h2>
   )
 }
@@ -305,11 +309,11 @@ function TypeList({
   title?: string
   types: PreviewApiType[]
 }) {
-  const { t } = usePreviewI18n()
+  const { td, tm } = usePreviewI18n()
 
   return (
     <section className="grid gap-3">
-      <SectionTitle>{title}</SectionTitle>
+      <SectionTitle messageKey={toSectionTitleMessageKey(title)} />
       {types.map((type) => (
         <div
           className="grid gap-3 rounded-sticker-xl border-2 border-ink bg-surface p-4 shadow-sticker-md"
@@ -320,17 +324,17 @@ function TypeList({
               <div className="flex flex-wrap items-center gap-2">
                 <code className="text-sm font-black">{type.name}</code>
                 <Tag color="secondary" size="xs" variant="solid">
-                  {t(type.kind)}
+                  {tm(toApiKindMessageKey(type.kind))}
                 </Tag>
               </div>
               {type.description ? (
                 <p className="text-sm leading-6 font-medium text-text-muted">
-                  {translateApiText(t, type.descriptionKey, type.description)}
+                  {translateApiText(td, type.descriptionKey, type.description)}
                 </p>
               ) : null}
               {type.remarks ? (
                 <p className="text-xs leading-5 font-bold text-text-subtle">
-                  {translateApiText(t, type.remarksKey, type.remarks)}
+                  {translateApiText(td, type.remarksKey, type.remarks)}
                 </p>
               ) : null}
             </div>
@@ -350,16 +354,16 @@ function TypeList({
 }
 
 function MemberTable({ members }: { members: PreviewApiMember[] }) {
-  const { t } = usePreviewI18n()
+  const { td, tm } = usePreviewI18n()
 
   return (
     <Table className="min-w-[720px]" containerClassName="shadow-none">
       <TableHeader>
         <TableRow>
-          <TableHead>{t("Prop")}</TableHead>
-          <TableHead>{t("Type")}</TableHead>
-          <TableHead>{t("Default")}</TableHead>
-          <TableHead>{t("Description")}</TableHead>
+          <TableHead>{tm("preview.common.prop")}</TableHead>
+          <TableHead>{tm("preview.components.type")}</TableHead>
+          <TableHead>{tm("preview.components.default")}</TableHead>
+          <TableHead>{tm("preview.components.description")}</TableHead>
         </TableRow>
       </TableHeader>
       <TableBody>
@@ -376,7 +380,7 @@ function MemberTable({ members }: { members: PreviewApiMember[] }) {
                     size="xs"
                     variant="solid"
                   >
-                    {t("required")}
+                    {tm("preview.components.required")}
                   </Tag>
                 ) : null}
               </div>
@@ -406,21 +410,21 @@ function MemberTable({ members }: { members: PreviewApiMember[] }) {
                 {member.description ? (
                   <span className="leading-6 font-medium text-text-muted">
                     {translateApiText(
-                      t,
+                      td,
                       member.descriptionKey,
                       member.description,
                     )}
                   </span>
                 ) : (
                   <span className="text-xs font-bold text-text-placeholder">
-                    {t("No JSDoc description yet.")}
+                    {tm("preview.common.noJsdocDescriptionYet")}
                   </span>
                 )}
                 {member.deprecated ? (
                   <span className="rounded-sticker-xs bg-fill-danger-soft px-2 py-1 text-xs font-extrabold text-text-danger">
-                    {t("Deprecated")}:{" "}
+                    {tm("preview.common.deprecated")}:{" "}
                     {translateApiText(
-                      t,
+                      td,
                       member.deprecatedKey,
                       member.deprecated,
                     )}
@@ -428,7 +432,7 @@ function MemberTable({ members }: { members: PreviewApiMember[] }) {
                 ) : null}
                 {member.remarks ? (
                   <span className="text-xs leading-5 font-bold text-text-subtle">
-                    {translateApiText(t, member.remarksKey, member.remarks)}
+                    {translateApiText(td, member.remarksKey, member.remarks)}
                   </span>
                 ) : null}
               </div>
@@ -441,11 +445,11 @@ function MemberTable({ members }: { members: PreviewApiMember[] }) {
 }
 
 function VariantList({ variants }: { variants: PreviewApiVariant[] }) {
-  const { t } = usePreviewI18n()
+  const { td, tm } = usePreviewI18n()
 
   return (
     <section className="grid gap-3">
-      <SectionTitle>Variants</SectionTitle>
+      <SectionTitle messageKey="preview.components.variants" />
       {variants.map((variant) => (
         <div
           className="grid gap-3 rounded-sticker-xl border-2 border-ink bg-surface p-4 shadow-sticker-md"
@@ -456,7 +460,7 @@ function VariantList({ variants }: { variants: PreviewApiVariant[] }) {
             {variant.description ? (
               <p className="mt-1 text-sm leading-6 font-medium text-text-muted">
                 {translateApiText(
-                  t,
+                  td,
                   variant.descriptionKey,
                   variant.description,
                 )}
@@ -473,7 +477,7 @@ function VariantList({ variants }: { variants: PreviewApiVariant[] }) {
                   <code className="font-black">{group.name}</code>
                   {group.defaultValue ? (
                     <span className="rounded-full bg-fill-secondary px-2 py-0.5 text-[10px] font-extrabold uppercase">
-                      {t("default")}: {group.defaultValue}
+                      {tm("preview.common.default")}: {group.defaultValue}
                     </span>
                   ) : null}
                 </div>
@@ -497,11 +501,29 @@ function VariantList({ variants }: { variants: PreviewApiVariant[] }) {
 }
 
 function translateApiText(
-  t: (message: string, defaultValue?: string) => string,
+  td: (message: string, defaultValue?: string) => string,
   key: string | undefined,
   value: string,
 ) {
-  return key ? t(key, value) : t(value)
+  return key ? td(key, value) : value
+}
+
+function toApiKindMessageKey(kind: string): PreviewMessageKey {
+  if (kind === "interface") {
+    return "preview.common.interface"
+  }
+
+  if (kind === "type") {
+    return "preview.common.type"
+  }
+
+  return "preview.common.variant"
+}
+
+function toSectionTitleMessageKey(title: string): PreviewMessageKey {
+  return title === "Supporting Types"
+    ? "preview.common.supportingTypes"
+    : "preview.common.propsAndTypes"
 }
 
 function getSupportingTypes(api: PreviewApiDoc) {

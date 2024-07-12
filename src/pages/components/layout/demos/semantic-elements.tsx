@@ -8,6 +8,9 @@ const meta = defineMeta({
     "Use as to choose semantic roots for navigation, lists, and grouped page regions.",
   order: 30,
   title: "Semantic Elements",
+  titleKey: "preview.components.semanticElements",
+  descriptionKey:
+    "preview.components.useAsToChooseSemanticRootsForNavigationListsAndGroupedPageRegions",
 })
 
 const links = ["Foundation", "Components", "Registry"]

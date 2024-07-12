@@ -17,6 +17,9 @@ const meta = defineMeta({
     "id, aria-describedby, aria-invalid, onChange, and onValueChange are forwarded to the trigger and value callbacks.",
   order: 40,
   title: "A11y & Change",
+  titleKey: "preview.components.a11yAndChange",
+  descriptionKey:
+    "preview.components.idAriaDescribedbyAriaInvalidOnchangeAndOnvaluechangeAreForwardedToTheTriggerAndValueCallbacks",
 })
 
 function Demo() {

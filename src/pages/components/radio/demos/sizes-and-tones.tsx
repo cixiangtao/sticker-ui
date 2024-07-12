@@ -8,6 +8,9 @@ const meta = defineMeta({
     "Sizes align radio controls with compact lists, standard forms, and roomy settings while tone keeps semantic context visible.",
   order: 20,
   title: "Sizes & Tones",
+  titleKey: "preview.components.sizesAndTones",
+  descriptionKey:
+    "preview.components.sizesAlignRadioControlsWithCompactListsStandardFormsAndRoomySettingsWhileToneKeepsSemanticContextVisible",
 })
 
 function Demo() {

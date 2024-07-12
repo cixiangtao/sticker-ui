@@ -1,8 +1,8 @@
 import { Link, Outlet, useLocation } from "@tanstack/react-router"
 import { useLayoutEffect } from "react"
-import { Button, Card, CardContent, CardHeader, Divider, Tag } from "sticker-ui"
+import { Card, CardContent, CardHeader, Divider, Tag } from "sticker-ui"
 
-import { type PreviewLanguage, usePreviewI18n } from "../../i18n/preview"
+import { type PreviewMessageKey, usePreviewI18n } from "../../i18n/preview"
 import { NAV_GROUPS } from "../../preview-data"
 import { useCurrentRoute } from "../../router/hooks"
 
@@ -12,11 +12,13 @@ const PREVIEW_CONTENT_SCROLL_SELECTOR = "[data-preview-content-scroll]"
 
 function PreviewLayout() {
   const location = useLocation()
-  const { t } = usePreviewI18n()
+  const { tm } = usePreviewI18n()
   const currentRoute = useCurrentRoute()
   const activeRoute = {
     description: currentRoute?.meta?.description ?? "",
+    descriptionKey: currentRoute?.meta?.descriptionKey,
     label: currentRoute?.meta?.title ?? "",
+    labelKey: currentRoute?.meta?.titleKey,
     path: currentRoute?.pathname ?? location.pathname,
   }
 
@@ -43,13 +45,21 @@ function PreviewLayout() {
             <CardHeader decoration divider="dashed" dividerInset="card">
               <div>
                 <div className="text-xs font-extrabold text-text-subtle uppercase">
-                  {t("Preview Route")}
+                  {tm("preview.route.eyebrow")}
                 </div>
                 <h1 className="mt-1 text-5xl leading-none font-black">
-                  {activeRoute.label}
+                  {translatePreviewKey(
+                    tm,
+                    activeRoute.labelKey,
+                    activeRoute.label,
+                  )}
                 </h1>
                 <p className="mt-3 max-w-2xl text-sm leading-6 font-medium text-text-muted">
-                  {t(activeRoute.description)}
+                  {translatePreviewKey(
+                    tm,
+                    activeRoute.descriptionKey,
+                    activeRoute.description,
+                  )}
                 </p>
               </div>
               <Tag as="code" color="warning" variant="solid">
@@ -67,7 +77,7 @@ function PreviewLayout() {
 }
 
 function Sidebar({ activePath }: { activePath: string }) {
-  const { t } = usePreviewI18n()
+  const { tm } = usePreviewI18n()
 
   return (
     <Card
@@ -76,14 +86,14 @@ function Sidebar({ activePath }: { activePath: string }) {
       variant="panel"
     >
       <nav
-        aria-label={t("Preview routes")}
+        aria-label={tm("preview.route.navigationLabel")}
         className="flex w-full min-w-0 gap-3 overflow-x-auto lg:flex-col lg:overflow-visible"
       >
         {NAV_GROUPS.map((group) => (
           <div className="min-w-[240px] lg:min-w-0" key={group.label}>
             <div className="mb-2 flex items-center justify-start gap-3">
               <h3 className="text-text text-xl font-extrabold uppercase">
-                {t(group.label)}
+                {translatePreviewKey(tm, group.labelKey, group.label)}
               </h3>
               {/* <Tag color="default" size="xs" variant="outlined">
                 {group.items.length}
@@ -96,7 +106,13 @@ function Sidebar({ activePath }: { activePath: string }) {
                     <div className="grid gap-1">
                       <Divider align="start" tone="warning" variant="dashed">
                         <span className="inline-flex items-center gap-2">
-                          <span>{t(section.label)}</span>
+                          <span>
+                            {translatePreviewKey(
+                              tm,
+                              section.labelKey,
+                              section.label,
+                            )}
+                          </span>
                           {/* <span className="text-text-subtle">
                             {section.items.length}
                           </span> */}
@@ -124,9 +140,15 @@ function Sidebar({ activePath }: { activePath: string }) {
                         resetScroll={false}
                         to={item.path}
                       >
-                        <span className="font-extrabold">{item.label}</span>
+                        <span className="font-extrabold">
+                          {translatePreviewKey(tm, item.labelKey, item.label)}
+                        </span>
                         <span className="mt-1 block text-xs leading-5 font-medium text-text-subtle">
-                          {t(item.description)}
+                          {translatePreviewKey(
+                            tm,
+                            item.descriptionKey,
+                            item.description,
+                          )}
                         </span>
                       </Link>
                     </Card>
@@ -141,8 +163,12 @@ function Sidebar({ activePath }: { activePath: string }) {
   )
 }
 
-function TopBar({ activeRoute }: { activeRoute: { label: string } }) {
-  const { language, setLanguage, t } = usePreviewI18n()
+function TopBar({
+  activeRoute,
+}: {
+  activeRoute: { label: string; labelKey?: string }
+}) {
+  const { tm } = usePreviewI18n()
 
   return (
     <Card
@@ -157,59 +183,21 @@ function TopBar({ activeRoute }: { activeRoute: { label: string } }) {
         <div>
           <div className="text-2xl leading-none font-black">sticker-ui</div>
           <div className="mt-1 text-sm font-bold text-text-muted">
-            {t("Previewing")} {activeRoute.label}
+            {tm("preview.route.previewing")}{" "}
+            {translatePreviewKey(tm, activeRoute.labelKey, activeRoute.label)}
           </div>
         </div>
       </Link>
-      <div className="flex flex-wrap items-center justify-end gap-2">
-        {[
-          {
-            label: "EN",
-            value: "en",
-          },
-          {
-            label: "中文",
-            value: "zh",
-          },
-        ].map((item) => (
-          <LanguageButton
-            key={item.value}
-            language={item.value as PreviewLanguage}
-            selectedLanguage={language}
-            setLanguage={setLanguage}
-          >
-            {item.label}
-          </LanguageButton>
-        ))}
-      </div>
     </Card>
   )
 }
 
-function LanguageButton({
-  children,
-  language,
-  selectedLanguage,
-  setLanguage,
-}: {
-  children: string
-  language: PreviewLanguage
-  selectedLanguage: PreviewLanguage
-  setLanguage: (language: PreviewLanguage) => void
-}) {
-  const isSelected = language === selectedLanguage
-
-  return (
-    <Button
-      aria-pressed={isSelected}
-      color={isSelected ? "success" : "default"}
-      onClick={() => setLanguage(language)}
-      size="sm"
-      variant={isSelected ? "solid" : "outlined"}
-    >
-      {children}
-    </Button>
-  )
+function translatePreviewKey(
+  tm: (key: PreviewMessageKey) => string,
+  key: string | undefined,
+  fallback: string,
+) {
+  return key ? tm(key as PreviewMessageKey) : fallback
 }
 
 export { PreviewLayout }

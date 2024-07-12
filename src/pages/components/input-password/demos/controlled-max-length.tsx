@@ -11,6 +11,9 @@ const meta = defineMeta({
     "Keeps a controlled password value capped while still using the native maxLength input constraint.",
   order: 30,
   title: "Controlled Max Length",
+  titleKey: "preview.components.controlledMaxLength",
+  descriptionKey:
+    "preview.components.keepsAControlledPasswordValueCappedWhileStillUsingTheNativeMaxlengthInputConstraint",
 })
 
 function clampPassword(value: string) {

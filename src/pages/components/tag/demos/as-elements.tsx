@@ -8,6 +8,9 @@ const meta = defineMeta({
     "Use as to switch the semantic element while keeping the same compact tag styling.",
   order: 40,
   title: "As Elements",
+  titleKey: "preview.components.asElements",
+  descriptionKey:
+    "preview.components.useAsToSwitchTheSemanticElementWhileKeepingTheSameCompactTagStyling",
 })
 
 function Demo() {

@@ -8,6 +8,9 @@ const meta = defineMeta({
     "Tone changes help validation-heavy forms call out the caption while leaving the control style independent.",
   order: 20,
   title: "Tones",
+  titleKey: "preview.components.tones",
+  descriptionKey:
+    "preview.components.toneChangesHelpValidationHeavyFormsCallOutTheCaptionWhileLeavingTheControlStyleIndependent",
 })
 
 function Demo() {

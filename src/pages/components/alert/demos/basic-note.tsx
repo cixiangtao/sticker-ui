@@ -8,6 +8,9 @@ const meta = defineMeta({
     "Alert creates a readable sticker note for status messages, validation summaries, and helpful next steps.",
   order: 10,
   title: "Basic Note",
+  descriptionKey:
+    "preview.components.alertCreatesAReadableStickerNoteForStatusMessagesValidationSummariesAndHelpfulNextSteps",
+  titleKey: "preview.components.basicNote",
 })
 
 function Demo() {

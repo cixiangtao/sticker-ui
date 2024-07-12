@@ -7,12 +7,14 @@ import {
 
 interface MenuItem {
   description?: string
+  descriptionKey?: string
   emoji?: string
   icon?: string
   navSection?: string
   order: number
   path: string
   title: string
+  titleKey?: string
 }
 
 interface RouteConfig {
@@ -25,6 +27,7 @@ interface RouteConfig {
 
 interface RouteMeta {
   description?: string
+  descriptionKey?: string
   emoji?: string
   hideInMenu?: boolean
   icon?: string
@@ -32,6 +35,7 @@ interface RouteMeta {
   order?: number
   permission?: string
   title: string
+  titleKey?: string
 }
 
 function buildRouteTree(
@@ -79,12 +83,14 @@ function generateMenuItems(routeConfigs: readonly RouteConfig[]): MenuItem[] {
     .filter((routeConfig) => !routeConfig.meta.hideInMenu)
     .map((routeConfig) => ({
       description: routeConfig.meta.description,
+      descriptionKey: routeConfig.meta.descriptionKey,
       emoji: routeConfig.meta.emoji,
       icon: routeConfig.meta.icon,
       navSection: routeConfig.meta.navSection,
       order: routeConfig.meta.order ?? 0,
       path: routeConfig.path,
       title: routeConfig.meta.title,
+      titleKey: routeConfig.meta.titleKey,
     }))
     .sort((first, second) => first.order - second.order)
 }

@@ -8,6 +8,9 @@ const meta = defineMeta({
     "Filled, outlined, and stripe variants tune alert emphasis across dense forms and documentation panels.",
   order: 30,
   title: "Variants",
+  titleKey: "preview.components.variants",
+  descriptionKey:
+    "preview.components.filledOutlinedAndStripeVariantsTuneAlertEmphasisAcrossDenseFormsAndDocumentationPanels",
 })
 
 function Demo() {

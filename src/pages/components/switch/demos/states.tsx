@@ -8,6 +8,9 @@ const meta = defineMeta({
     "Invalid, disabled, and semantic switch states stay visible through Radix props and Form.Item validation.",
   order: 30,
   title: "States",
+  titleKey: "preview.components.states",
+  descriptionKey:
+    "preview.components.invalidDisabledAndSemanticSwitchStatesStayVisibleThroughRadixPropsAndFormItemValidation",
 })
 
 function Demo() {

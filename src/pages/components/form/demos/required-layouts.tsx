@@ -8,6 +8,9 @@ const meta = defineMeta({
     "Required fields use sticker badges in roomy layouts and compact asterisks in horizontal label columns.",
   order: 25,
   title: "Required Layouts",
+  titleKey: "preview.components.requiredLayouts",
+  descriptionKey:
+    "preview.components.requiredFieldsUseStickerBadgesInRoomyLayoutsAndCompactAsterisksInHorizontalLabelColumns",
 })
 
 function Demo() {

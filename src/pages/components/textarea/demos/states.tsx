@@ -8,6 +8,9 @@ const meta = defineMeta({
     "Invalid, disabled, and semantic tone states stay visible on multiline fields through native attributes and Form.Item validation.",
   order: 30,
   title: "States",
+  titleKey: "preview.components.states",
+  descriptionKey:
+    "preview.components.invalidDisabledAndSemanticToneStatesStayVisibleOnMultilineFieldsThroughNativeAttributesAndFormItemValidation",
 })
 
 function Demo() {
