@@ -1,5 +1,6 @@
 import { Alert, AlertDescription, AlertTitle } from "sticker-ui"
 
+import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -14,30 +15,31 @@ const meta = defineMeta({
 })
 
 function Demo() {
+  const { tm } = usePreviewI18n()
   return (
     <div className="grid gap-3 md:grid-cols-2">
       <Alert tone="success">
-        <AlertTitle>Ready to ship</AlertTitle>
+        <AlertTitle>{tm("preview.components.readyToShip")}</AlertTitle>
         <AlertDescription>
-          All checks passed for this component.
+          {tm("preview.components.allChecksPassedForThisComponent")}
         </AlertDescription>
       </Alert>
       <Alert tone="warning">
-        <AlertTitle>Needs review</AlertTitle>
+        <AlertTitle>{tm("preview.components.needsReview")}</AlertTitle>
         <AlertDescription>
-          Translation copy changed in this demo.
+          {tm("preview.components.translationCopyChangedInThisDemo")}
         </AlertDescription>
       </Alert>
       <Alert tone="danger">
-        <AlertTitle>Build failed</AlertTitle>
+        <AlertTitle>{tm("preview.components.buildFailed")}</AlertTitle>
         <AlertDescription>
-          Run lint before handing off the registry.
+          {tm("preview.components.runLintBeforeHandingOffTheRegistry")}
         </AlertDescription>
       </Alert>
       <Alert tone="secondary">
-        <AlertTitle>Design note</AlertTitle>
+        <AlertTitle>{tm("preview.components.designNote")}</AlertTitle>
         <AlertDescription>
-          Keep nested surfaces quieter than this alert.
+          {tm("preview.components.keepNestedSurfacesQuieterThanThisAlert")}
         </AlertDescription>
       </Alert>
     </div>

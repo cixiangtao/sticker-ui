@@ -1,5 +1,6 @@
 import { Form, Input } from "sticker-ui"
 
+import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -14,15 +15,16 @@ const meta = defineMeta({
 })
 
 function Demo() {
+  const { tm } = usePreviewI18n()
   return (
     <div className="grid gap-4 lg:grid-cols-2">
       <section className="grid gap-4 rounded-sticker-2xl border-2 border-ink bg-surface p-4 shadow-sticker-md">
         <div className="grid gap-1">
           <h3 className="m-0 text-base leading-6 font-black">
-            Vertical layout
+            {tm("preview.components.verticalLayout")}
           </h3>
           <p className="m-0 text-sm leading-6 font-medium text-text-muted">
-            Roomy fields keep the full required badge.
+            {tm("preview.components.roomyFieldsKeepTheFullRequiredBadge")}
           </p>
         </div>
         <Form
@@ -31,34 +33,44 @@ function Demo() {
           }}
         >
           <Form.Item
-            extra="The badge reads clearly when the label sits above the field."
-            label="Team name"
+            extra={tm(
+              "preview.components.theBadgeReadsClearlyWhenTheLabelSitsAboveTheField",
+            )}
+            label={tm("preview.components.teamName")}
             name="team"
             rules={[
               {
-                message: "Team name is required.",
+                message: tm("preview.components.teamNameIsRequired"),
                 required: true,
                 whitespace: true,
               },
             ]}
           >
-            <Input placeholder="Sticker Rangers" />
+            <Input placeholder={tm("preview.components.stickerRangers")} />
           </Form.Item>
           <Form.Item
-            extra="Optional helper fields do not receive a required mark."
-            label="Notes"
+            extra={tm(
+              "preview.components.optionalHelperFieldsDoNotReceiveARequiredMark",
+            )}
+            label={tm("preview.components.notes")}
           >
-            <Input placeholder="Anything the team should remember" />
+            <Input
+              placeholder={tm(
+                "preview.components.anythingTheTeamShouldRemember",
+              )}
+            />
           </Form.Item>
         </Form>
       </section>
       <section className="grid gap-4 rounded-sticker-2xl border-2 border-ink bg-surface p-4 shadow-sticker-md">
         <div className="grid gap-1">
           <h3 className="m-0 text-base leading-6 font-black">
-            Horizontal layout
+            {tm("preview.components.horizontalLayout")}
           </h3>
           <p className="m-0 text-sm leading-6 font-medium text-text-muted">
-            Narrow label columns switch required fields to an asterisk.
+            {tm(
+              "preview.components.narrowLabelColumnsSwitchRequiredFieldsToAnAsterisk",
+            )}
           </p>
         </div>
         <Form
@@ -68,24 +80,28 @@ function Demo() {
           layout="horizontal"
         >
           <Form.Item
-            extra="The compact mark leaves more room for label text."
-            label="Profile handle"
+            extra={tm(
+              "preview.components.theCompactMarkLeavesMoreRoomForLabelText",
+            )}
+            label={tm("preview.components.profileHandle")}
             name="handle"
             rules={[
               {
-                message: "Profile handle is required.",
+                message: tm("preview.components.profileHandleIsRequired"),
                 required: true,
                 whitespace: true,
               },
             ]}
           >
-            <Input placeholder="@sticker-rangers" />
+            <Input placeholder={tm("preview.components.stickerRangers")} />
           </Form.Item>
           <Form.Item
-            extra="No required rule means no marker."
-            label="Display note"
+            extra={tm("preview.components.noRequiredRuleMeansNoMarker")}
+            label={tm("preview.components.displayNote")}
           >
-            <Input placeholder="Shown beside the profile" />
+            <Input
+              placeholder={tm("preview.components.shownBesideTheProfile")}
+            />
           </Form.Item>
         </Form>
       </section>

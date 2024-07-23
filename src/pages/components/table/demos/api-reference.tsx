@@ -7,6 +7,7 @@ import {
   TableRow,
 } from "sticker-ui"
 
+import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -21,6 +22,8 @@ const meta = defineMeta({
 })
 
 function Demo() {
+  const { tm } = usePreviewI18n()
+
   return (
     <Table
       className="min-w-[640px]"
@@ -28,10 +31,10 @@ function Demo() {
     >
       <TableHeader>
         <TableRow>
-          <TableHead>Prop</TableHead>
-          <TableHead>Type</TableHead>
-          <TableHead>Default</TableHead>
-          <TableHead>Description</TableHead>
+          <TableHead>{tm("preview.common.prop")}</TableHead>
+          <TableHead>{tm("preview.common.type")}</TableHead>
+          <TableHead>{tm("preview.common.default")}</TableHead>
+          <TableHead>{tm("preview.components.description")}</TableHead>
         </TableRow>
       </TableHeader>
       <TableBody>
@@ -46,7 +49,7 @@ function Demo() {
             <span className="text-xs font-bold text-[#858894]">-</span>
           </TableCell>
           <TableCell className="leading-6 font-medium text-[#5B5E6A]">
-            Applies classes to the native table element.
+            {tm("preview.components.appliesClassesToTheNativeTableElement")}
           </TableCell>
         </TableRow>
         <TableRow>
@@ -60,7 +63,9 @@ function Demo() {
             <span className="text-xs font-bold text-[#858894]">-</span>
           </TableCell>
           <TableCell className="leading-6 font-medium text-[#5B5E6A]">
-            Applies classes to the scrollable frame around the table.
+            {tm(
+              "preview.components.appliesClassesToTheScrollableFrameAroundTheTable",
+            )}
           </TableCell>
         </TableRow>
       </TableBody>

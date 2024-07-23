@@ -6,6 +6,7 @@ import {
   TooltipTrigger,
 } from "sticker-ui"
 
+import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -20,27 +21,28 @@ const meta = defineMeta({
 })
 
 function Demo() {
+  const { tm } = usePreviewI18n()
   return (
     <TooltipProvider delayDuration={500} skipDelayDuration={0}>
       <div className="flex flex-wrap gap-3">
         <Tooltip>
           <TooltipTrigger asChild>
             <Button color="success" variant="outlined">
-              Slow hint
+              {tm("preview.components.slowHint")}
             </Button>
           </TooltipTrigger>
           <TooltipContent size="lg" tone="success">
-            Opens after a longer provider delay.
+            {tm("preview.components.opensAfterALongerProviderDelay")}
           </TooltipContent>
         </Tooltip>
         <Tooltip>
           <TooltipTrigger asChild>
             <Button color="secondary" variant="outlined">
-              No arrow
+              {tm("preview.components.noArrow")}
             </Button>
           </TooltipTrigger>
           <TooltipContent showArrow={false} size="sm" tone="secondary">
-            Compact hint without the pointer arrow.
+            {tm("preview.components.compactHintWithoutThePointerArrow")}
           </TooltipContent>
         </Tooltip>
       </div>

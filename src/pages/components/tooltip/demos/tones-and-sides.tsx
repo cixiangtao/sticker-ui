@@ -6,6 +6,7 @@ import {
   TooltipTrigger,
 } from "sticker-ui"
 
+import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -20,27 +21,30 @@ const meta = defineMeta({
 })
 
 function Demo() {
+  const { tm } = usePreviewI18n()
   return (
     <TooltipProvider>
       <div className="flex flex-wrap gap-3">
         <Tooltip>
           <TooltipTrigger asChild>
             <Button color="info" variant="outlined">
-              Info
+              {tm("preview.components.info")}
             </Button>
           </TooltipTrigger>
           <TooltipContent side="top" tone="info">
-            Explains a field without interrupting the current task.
+            {tm(
+              "preview.components.explainsAFieldWithoutInterruptingTheCurrentTask",
+            )}
           </TooltipContent>
         </Tooltip>
         <Tooltip>
           <TooltipTrigger asChild>
             <Button color="success" variant="outlined">
-              Ready
+              {tm("preview.components.ready")}
             </Button>
           </TooltipTrigger>
           <TooltipContent side="bottom" tone="success">
-            Shows why this action is available.
+            {tm("preview.components.showsWhyThisActionIsAvailable")}
           </TooltipContent>
         </Tooltip>
         <Tooltip>
@@ -50,7 +54,7 @@ function Demo() {
             </Button>
           </TooltipTrigger>
           <TooltipContent side="right" tone="warning">
-            Warns about a small constraint before clicking.
+            {tm("preview.components.warnsAboutASmallConstraintBeforeClicking")}
           </TooltipContent>
         </Tooltip>
       </div>

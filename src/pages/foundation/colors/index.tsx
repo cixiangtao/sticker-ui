@@ -1,5 +1,6 @@
 import { Tag } from "sticker-ui"
 
+import { usePreviewI18n } from "@/i18n/preview"
 import {
   Card,
   CardContent,
@@ -15,20 +16,23 @@ const COLOR_TOKEN_COUNT = COLOR_TOKEN_GROUPS.reduce(
 )
 
 function ColorsPage() {
+  const { td, tm } = usePreviewI18n()
+
   return (
     <div className="grid gap-6">
       <Card className="bg-fill-default-soft">
         <CardHeader divider="none">
           <div className="flex flex-wrap items-start justify-between gap-4">
             <div className="grid gap-2">
-              <CardTitle>Color Tokens</CardTitle>
+              <CardTitle>{tm("preview.components.colorTokens")}</CardTitle>
               <CardDescription>
-                Complete color token inventory from tokens.css, grouped by
-                purpose.
+                {tm(
+                  "preview.components.completeColorTokenInventoryFromTokensCssGroupedByPurpose",
+                )}
               </CardDescription>
             </div>
             <div className="rounded-sticker-xl border-2 border-ink bg-surface px-4 py-2 text-sm font-black shadow-sticker-sm">
-              {COLOR_TOKEN_COUNT} tokens
+              {COLOR_TOKEN_COUNT} {tm("preview.components.tokens")}
             </div>
           </div>
         </CardHeader>
@@ -39,11 +43,18 @@ function ColorsPage() {
           <CardHeader>
             <div className="flex flex-wrap items-center justify-between gap-3">
               <div className="grid gap-1">
-                <CardTitle>{group.label}</CardTitle>
-                <CardDescription>{group.description}</CardDescription>
+                <CardTitle>
+                  {td(group.labelKey ?? group.label, group.label)}
+                </CardTitle>
+                <CardDescription>
+                  {td(
+                    group.descriptionKey ?? group.description,
+                    group.description,
+                  )}
+                </CardDescription>
               </div>
               <Tag className="bg-fill-secondary text-xs font-extrabold">
-                {group.tokens.length} tokens
+                {group.tokens.length} {tm("preview.components.tokens")}
               </Tag>
             </div>
           </CardHeader>
@@ -69,7 +80,7 @@ function ColorsPage() {
                   />
                   <div className="grid gap-1">
                     <div className="text-sm font-black text-ink">
-                      {token.label}
+                      {td(token.labelKey ?? token.label, token.label)}
                     </div>
                     <code className="w-fit rounded-sticker-sm bg-surface-muted px-2 py-1 text-xs font-extrabold text-text-muted">
                       {token.name}

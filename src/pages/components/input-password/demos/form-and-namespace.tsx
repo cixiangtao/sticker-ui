@@ -1,5 +1,6 @@
 import { Form, Input } from "sticker-ui"
 
+import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -14,6 +15,7 @@ const meta = defineMeta({
 })
 
 function Demo() {
+  const { tm } = usePreviewI18n()
   return (
     <Form
       initialValues={{
@@ -23,30 +25,37 @@ function Demo() {
     >
       <div className="grid gap-4 md:grid-cols-2">
         <Form.Item
-          extra="Form.Item passes value, onChange, and aria-invalid through to the inner password control."
-          label="Account password"
+          extra={tm(
+            "preview.components.formItemPassesValueOnchangeAndAriaInvalidThroughToTheInnerPasswordControl",
+          )}
+          label={tm("preview.components.accountPassword")}
           name="password"
           rules={[
-            { message: "Password is required.", required: true },
-            { message: "Use at least 8 characters.", min: 8 },
+            {
+              message: tm("preview.components.passwordIsRequired"),
+              required: true,
+            },
+            { message: tm("preview.components.useAtLeast8Characters"), min: 8 },
           ]}
         >
           <Input.Password
             autoComplete="current-password"
-            hideLabel="Hide"
-            placeholder="Enter password"
-            showLabel="Show"
+            hideLabel={tm("preview.components.hide")}
+            placeholder={tm("preview.components.enterPassword")}
+            showLabel={tm("preview.components.show")}
           />
         </Form.Item>
         <Form.Item
-          extra="Disabled password inputs keep the frame and toggle in one locked state."
-          label="Archived secret"
+          extra={tm(
+            "preview.components.disabledPasswordInputsKeepTheFrameAndToggleInOneLockedState",
+          )}
+          label={tm("preview.components.archivedSecret")}
         >
           <Input.Password
             defaultValue="locked-sticker"
             disabled
-            hideLabel="Hide"
-            showLabel="Show"
+            hideLabel={tm("preview.components.hide")}
+            showLabel={tm("preview.components.show")}
             variant="filled"
           />
         </Form.Item>

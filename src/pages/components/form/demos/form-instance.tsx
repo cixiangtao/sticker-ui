@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { Button, Form, Input, Tag } from "sticker-ui"
 
+import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -15,6 +16,7 @@ const meta = defineMeta({
 })
 
 function Demo() {
+  const { tm } = usePreviewI18n()
   const [form] = Form.useForm()
   const [status, setStatus] = useState("Ready to validate")
 
@@ -35,11 +37,11 @@ function Demo() {
       >
         <div className="grid gap-4 md:grid-cols-2">
           <Form.Item
-            label="Project"
+            label={tm("preview.components.project")}
             name="project"
             rules={[
               {
-                message: "Project name is required.",
+                message: tm("preview.components.projectNameIsRequired"),
                 required: true,
                 whitespace: true,
               },
@@ -48,13 +50,18 @@ function Demo() {
             <Input />
           </Form.Item>
           <Form.Item
-            extra="Lowercase letters and hyphens only."
-            label="Slug"
+            extra={tm("preview.components.lowercaseLettersAndHyphensOnly")}
+            label={tm("preview.components.slug")}
             name="slug"
             rules={[
-              { message: "Slug is required.", required: true },
               {
-                message: "Use lowercase letters and hyphens only.",
+                message: tm("preview.components.slugIsRequired"),
+                required: true,
+              },
+              {
+                message: tm(
+                  "preview.components.useLowercaseLettersAndHyphensOnly",
+                ),
                 pattern: /^[a-z-]+$/,
               },
             ]}
@@ -63,7 +70,7 @@ function Demo() {
           </Form.Item>
         </div>
         <div className="flex flex-wrap gap-2">
-          <Button type="submit">Submit</Button>
+          <Button type="submit">{tm("preview.components.submit")}</Button>
           <Button
             onClick={() => {
               form.setFieldsValue({
@@ -75,7 +82,7 @@ function Demo() {
             type="button"
             variant="outlined"
           >
-            Fill preset
+            {tm("preview.components.fillPreset")}
           </Button>
           <Button
             onClick={() => {
@@ -91,7 +98,7 @@ function Demo() {
             type="button"
             variant="dashed"
           >
-            Validate now
+            {tm("preview.components.validateNow")}
           </Button>
           <Button
             onClick={() => {
@@ -101,13 +108,13 @@ function Demo() {
             type="button"
             variant="text"
           >
-            Reset
+            {tm("preview.components.reset")}
           </Button>
         </div>
       </Form>
       <div className="flex items-center gap-3">
         <Tag color="secondary" dot>
-          Instance status
+          {tm("preview.components.instanceStatus")}
         </Tag>
         <span className="text-sm font-bold">{status}</span>
       </div>

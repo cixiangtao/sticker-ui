@@ -1,5 +1,6 @@
 import { Label, LabelDescription, Textarea } from "sticker-ui"
 
+import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -14,19 +15,21 @@ const meta = defineMeta({
 })
 
 function Demo() {
+  const { tm } = usePreviewI18n()
   return (
     <div className="grid max-w-xl gap-3">
       <Label htmlFor="textarea-project-notes" required>
-        Project notes
+        {tm("preview.components.projectNotes")}
       </Label>
       <Textarea
         defaultValue="Draft the launch checklist, capture edge cases, and mark anything the team should revisit before shipping."
         id="textarea-project-notes"
-        placeholder="Write a short project note"
+        placeholder={tm("preview.components.writeAShortProjectNote")}
       />
       <LabelDescription>
-        Pair Textarea with Label when longer copy needs accessible captions and
-        helper text.
+        {tm(
+          "preview.components.pairTextareaWithLabelWhenLongerCopyNeedsAccessibleCaptionsAndHelperText",
+        )}
       </LabelDescription>
     </div>
   )

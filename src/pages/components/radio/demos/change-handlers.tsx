@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Label, RadioGroup, RadioGroupItem } from "sticker-ui"
 
+import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -15,6 +16,7 @@ const meta = defineMeta({
 })
 
 function Demo() {
+  const { tm } = usePreviewI18n()
   const [value, setValue] = React.useState("preview")
   const [lastEvent, setLastEvent] = React.useState("onChange: preview")
 
@@ -42,7 +44,8 @@ function Demo() {
         ))}
       </RadioGroup>
       <div className="rounded-sticker-lg border border-ink bg-surface px-3 py-2 text-sm font-extrabold">
-        Selected: {value} / {lastEvent}
+        {tm("preview.components.selected")}
+        {value} / {lastEvent}
       </div>
     </div>
   )

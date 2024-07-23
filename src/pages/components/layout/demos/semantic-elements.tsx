@@ -1,5 +1,6 @@
 import { Flex, Grid, Tag } from "sticker-ui"
 
+import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -16,17 +17,18 @@ const meta = defineMeta({
 const links = ["Foundation", "Components", "Registry"]
 
 function Demo() {
+  const { tm } = usePreviewI18n()
   return (
     <Grid as="section" columns="responsive-2" gap="lg">
       <Flex
         as="nav"
-        aria-label="Preview sections"
+        aria-label={tm("preview.components.previewSections")}
         className="rounded-sticker-2xl border-2 border-ink bg-surface p-4 shadow-sticker-md"
         direction="column"
         gap="sm"
       >
         <Tag color="secondary" size="sm">
-          Navigation
+          {tm("preview.components.navigation")}
         </Tag>
         <Flex as="ul" direction="column" gap="xs">
           {links.map((link) => (

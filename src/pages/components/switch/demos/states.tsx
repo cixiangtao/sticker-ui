@@ -1,5 +1,6 @@
 import { Button, Form, Switch } from "sticker-ui"
 
+import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -14,6 +15,7 @@ const meta = defineMeta({
 })
 
 function Demo() {
+  const { tm } = usePreviewI18n()
   return (
     <Form
       initialValues={{
@@ -24,12 +26,14 @@ function Demo() {
     >
       <div className="grid gap-4 md:grid-cols-2">
         <Form.Item
-          extra="Use valuePropName and onCheckedChange when Switch is controlled by Form.Item."
-          label="Reminders"
+          extra={tm(
+            "preview.components.useValuepropnameAndOncheckedchangeWhenSwitchIsControlledByFormItem",
+          )}
+          label={tm("preview.components.reminders")}
           name="reminders"
           rules={[
             {
-              message: "Turn on reminders before publishing.",
+              message: tm("preview.components.turnOnRemindersBeforePublishing"),
               validator: (_rule, value) => {
                 if (value !== true) {
                   throw new Error("Turn on reminders before publishing.")
@@ -42,24 +46,30 @@ function Demo() {
         >
           <Switch />
         </Form.Item>
-        <Form.Item extra="Use disabled for managed settings." label="Managed">
+        <Form.Item
+          extra={tm("preview.components.useDisabledForManagedSettings")}
+          label={tm("preview.components.managed")}
+        >
           <Switch checked disabled />
         </Form.Item>
         <Form.Item
-          extra="Tone can reinforce a healthy sync setting."
-          label="Sync"
+          extra={tm("preview.components.toneCanReinforceAHealthySyncSetting")}
+          label={tm("preview.components.sync")}
           name="sync"
           trigger="onCheckedChange"
           valuePropName="checked"
         >
           <Switch tone="success" variant="filled" />
         </Form.Item>
-        <Form.Item extra="Quiet switches sit inside dense cards." label="Beta">
+        <Form.Item
+          extra={tm("preview.components.quietSwitchesSitInsideDenseCards")}
+          label={tm("preview.components.beta")}
+        >
           <Switch defaultChecked tone="secondary" variant="quiet" />
         </Form.Item>
       </div>
       <Button className="w-fit" type="submit">
-        Save settings
+        {tm("preview.components.saveSettings")}
       </Button>
     </Form>
   )

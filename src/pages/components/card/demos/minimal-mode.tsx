@@ -7,6 +7,7 @@ import {
   Tag,
 } from "sticker-ui"
 
+import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -21,21 +22,26 @@ const meta = defineMeta({
 })
 
 function Demo() {
+  const { tm } = usePreviewI18n()
   return (
     <div className="grid gap-4 md:grid-cols-2">
       <Card>
         <CardHeader>
           <Tag rounded="pill" size="sm">
-            Elevated
+            {tm("preview.components.elevated")}
           </Tag>
-          <CardTitle>Sticker Surface</CardTitle>
+          <CardTitle>{tm("preview.components.stickerSurface")}</CardTitle>
           <CardDescription>
-            The default card keeps a chunky outline and hard offset shadow.
+            {tm(
+              "preview.components.theDefaultCardKeepsAChunkyOutlineAndHardOffsetShadow",
+            )}
           </CardDescription>
         </CardHeader>
         <CardContent>
           <p className="m-0 text-sm leading-6 font-medium text-[#5B5E6A]">
-            Use this for prominent previews, route cards, and action groups.
+            {tm(
+              "preview.components.useThisForProminentPreviewsRouteCardsAndActionGroups",
+            )}
           </p>
         </CardContent>
       </Card>
@@ -43,17 +49,20 @@ function Demo() {
       <Card variant="minimal">
         <CardHeader>
           <Tag rounded="pill" size="sm">
-            Minimal
+            {tm("preview.components.minimal")}
           </Tag>
-          <CardTitle>Quiet Surface</CardTitle>
+          <CardTitle>{tm("preview.components.quietSurface")}</CardTitle>
           <CardDescription>
-            Minimal cards remove the shadow and use a thin border.
+            {tm(
+              "preview.components.minimalCardsRemoveTheShadowAndUseAThinBorder",
+            )}
           </CardDescription>
         </CardHeader>
         <CardContent>
           <p className="m-0 text-sm leading-6 font-medium text-[#5B5E6A]">
-            Use this inside dense pages, side panels, and repeated content
-            lists.
+            {tm(
+              "preview.components.useThisInsideDensePagesSidePanelsAndRepeatedContentLists",
+            )}
           </p>
         </CardContent>
       </Card>

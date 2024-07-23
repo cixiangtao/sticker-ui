@@ -1,5 +1,6 @@
 import { JsxJoin, Tag } from "sticker-ui"
 
+import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -14,6 +15,7 @@ const meta = defineMeta({
 })
 
 function Demo() {
+  const { tm } = usePreviewI18n()
   const optionalTone = null
   const archived = false
 
@@ -24,14 +26,16 @@ function Demo() {
         className="flex flex-wrap items-center gap-2"
         separator={<span className="text-text-muted">·</span>}
       >
-        <Tag size="sm">Divider</Tag>
+        <Tag size="sm">{tm("preview.components.divider")}</Tag>
         {optionalTone}
         <Tag color="info" size="sm">
-          semantic
+          {tm("preview.components.semantic")}
         </Tag>
-        {archived && <Tag color="danger">archived</Tag>}
+        {archived && (
+          <Tag color="danger">{tm("preview.components.archived")}</Tag>
+        )}
         <Tag color="success" size="sm">
-          published
+          {tm("preview.components.published")}
         </Tag>
       </JsxJoin>
       <JsxJoin
@@ -40,9 +44,9 @@ function Demo() {
         filterEmpty={false}
         separator={<span aria-hidden="true">/</span>}
       >
-        Visible empty slots
+        {tm("preview.components.visibleEmptySlots")}
         {""}
-        still reserve their separators
+        {tm("preview.components.stillReserveTheirSeparators")}
       </JsxJoin>
     </div>
   )

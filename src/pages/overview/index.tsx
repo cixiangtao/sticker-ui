@@ -1,3 +1,4 @@
+import { usePreviewI18n } from "@/i18n/preview"
 import {
   Card,
   CardContent,
@@ -8,14 +9,17 @@ import {
 import { NAV_GROUPS } from "@/preview-data"
 
 function OverviewPage() {
+  const { td, tm } = usePreviewI18n()
+
   return (
     <div className="grid gap-5 xl:grid-cols-[1.15fr_0.85fr]">
       <Card className="bg-[#EAF7FF]">
         <CardHeader>
-          <CardTitle>Preview Architecture</CardTitle>
+          <CardTitle>{tm("preview.components.previewArchitecture")}</CardTitle>
           <CardDescription>
-            The preview is grouped by documentation jobs: start, foundations,
-            components, and registry delivery.
+            {tm(
+              "preview.components.thePreviewIsGroupedByDocumentationJobsStartFoundationsComponentsAndRegistryDelivery",
+            )}
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -26,7 +30,7 @@ function OverviewPage() {
                 key={group.label}
               >
                 <div className="text-xs font-extrabold text-[#696B76] uppercase">
-                  {group.label}
+                  {td(group.labelKey ?? group.label, group.label)}
                 </div>
                 <div className="mt-3 flex flex-col gap-3">
                   {group.sections.map((section) => (
@@ -34,7 +38,10 @@ function OverviewPage() {
                       {group.sections.length > 1 ? (
                         <div className="flex items-center justify-between rounded-[10px] border border-[#2E3038] bg-[#FFF6DC] px-3 py-1.5">
                           <span className="text-xs font-black uppercase">
-                            {section.label}
+                            {td(
+                              section.labelKey ?? section.label,
+                              section.label,
+                            )}
                           </span>
                           <span className="text-xs font-extrabold text-[#696B76]">
                             {section.items.length}
@@ -47,7 +54,7 @@ function OverviewPage() {
                           href={`#${item.path}`}
                           key={item.path}
                         >
-                          {item.label}
+                          {td(item.labelKey ?? item.label, item.label)}
                         </a>
                       ))}
                     </div>
@@ -61,10 +68,11 @@ function OverviewPage() {
 
       <Card className="bg-[#FFF6DC]">
         <CardHeader>
-          <CardTitle>Dependency Contract</CardTitle>
+          <CardTitle>{tm("preview.components.dependencyContract")}</CardTitle>
           <CardDescription>
-            Vite and React DOM are preview-only. Installed registry components
-            stay source-first and light.
+            {tm(
+              "preview.components.viteAndReactDomArePreviewOnlyInstalledRegistryComponentsStaySourceFirstAndLight",
+            )}
           </CardDescription>
         </CardHeader>
         <CardContent>

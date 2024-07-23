@@ -1,5 +1,6 @@
 import { Label, RadioGroup, RadioGroupItem } from "sticker-ui"
 
+import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -14,6 +15,7 @@ const meta = defineMeta({
 })
 
 function Demo() {
+  const { tm } = usePreviewI18n()
   return (
     <RadioGroup
       className="grid gap-4 md:grid-cols-3"
@@ -23,7 +25,7 @@ function Demo() {
       <div className="flex items-center gap-3 rounded-sticker-xl border border-ink bg-white/80 p-4">
         <RadioGroupItem id="radio-size-small" size="sm" value="small" />
         <Label htmlFor="radio-size-small" size="sm">
-          Small option
+          {tm("preview.components.smallOption")}
         </Label>
       </div>
       <div className="flex items-center gap-3 rounded-sticker-xl border border-ink bg-white/80 p-4">
@@ -32,7 +34,9 @@ function Demo() {
           value="standard"
           variant="filled"
         />
-        <Label htmlFor="radio-size-medium">Standard choice</Label>
+        <Label htmlFor="radio-size-medium">
+          {tm("preview.components.standardChoice")}
+        </Label>
       </div>
       <div className="flex items-center gap-3 rounded-sticker-xl border border-ink bg-white/80 p-4">
         <RadioGroupItem
@@ -42,7 +46,7 @@ function Demo() {
           value="roomy"
         />
         <Label htmlFor="radio-size-large" size="lg">
-          Roomy route
+          {tm("preview.components.roomyRoute")}
         </Label>
       </div>
     </RadioGroup>

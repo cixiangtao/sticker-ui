@@ -8,6 +8,7 @@ import {
   SelectValue,
 } from "sticker-ui"
 
+import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -22,24 +23,32 @@ const meta = defineMeta({
 })
 
 function Demo() {
+  const { tm } = usePreviewI18n()
   return (
     <div className="grid max-w-xl gap-3">
       <Label htmlFor="select-team-role" required>
-        Team role
+        {tm("preview.components.teamRole")}
       </Label>
       <Select defaultValue="designer" id="select-team-role">
         <SelectTrigger>
-          <SelectValue placeholder="Choose a role" />
+          <SelectValue placeholder={tm("preview.components.chooseARole")} />
         </SelectTrigger>
         <SelectContent>
-          <SelectItem value="designer">Design captain</SelectItem>
-          <SelectItem value="engineer">Build lead</SelectItem>
-          <SelectItem value="researcher">Research scout</SelectItem>
+          <SelectItem value="designer">
+            {tm("preview.components.designCaptain")}
+          </SelectItem>
+          <SelectItem value="engineer">
+            {tm("preview.components.buildLead")}
+          </SelectItem>
+          <SelectItem value="researcher">
+            {tm("preview.components.researchScout")}
+          </SelectItem>
         </SelectContent>
       </Select>
       <LabelDescription>
-        Pair Select with Label when a finite option list needs accessible
-        captions and helper text.
+        {tm(
+          "preview.components.pairSelectWithLabelWhenAFiniteOptionListNeedsAccessibleCaptionsAndHelperText",
+        )}
       </LabelDescription>
     </div>
   )

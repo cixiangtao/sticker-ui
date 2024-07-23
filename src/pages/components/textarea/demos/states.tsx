@@ -1,5 +1,6 @@
 import { Form, Textarea } from "sticker-ui"
 
+import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -14,31 +15,42 @@ const meta = defineMeta({
 })
 
 function Demo() {
+  const { tm } = usePreviewI18n()
   return (
     <Form onFinish={() => undefined}>
       <div className="grid gap-4 md:grid-cols-2">
         <Form.Item
-          extra="The field shell passes aria-invalid to Textarea when validation fails."
-          label="Summary"
+          extra={tm(
+            "preview.components.theFieldShellPassesAriaInvalidToTextareaWhenValidationFails",
+          )}
+          label={tm("preview.components.summary")}
           name="summary"
           rules={[
             {
-              message: "Summary is required.",
+              message: tm("preview.components.summaryIsRequired"),
               required: true,
               whitespace: true,
             },
-            { message: "Use at least 12 characters.", min: 12 },
+            {
+              message: tm("preview.components.useAtLeast12Characters"),
+              min: 12,
+            },
           ]}
         >
-          <Textarea placeholder="Write a useful summary" />
+          <Textarea
+            placeholder={tm("preview.components.writeAUsefulSummary")}
+          />
         </Form.Item>
         <Form.Item
-          extra="Use disabled for archived notes."
-          label="Archive note"
+          extra={tm("preview.components.useDisabledForArchivedNotes")}
+          label={tm("preview.components.archiveNote")}
         >
           <Textarea defaultValue="Locked after review." disabled />
         </Form.Item>
-        <Form.Item extra="Tone can reinforce success copy." label="Ready note">
+        <Form.Item
+          extra={tm("preview.components.toneCanReinforceSuccessCopy")}
+          label={tm("preview.components.readyNote")}
+        >
           <Textarea
             defaultValue="This copy is approved and ready to ship."
             tone="success"
@@ -46,11 +58,11 @@ function Demo() {
           />
         </Form.Item>
         <Form.Item
-          extra="Quiet textareas sit inside dense cards."
-          label="Draft"
+          extra={tm("preview.components.quietTextareasSitInsideDenseCards")}
+          label={tm("preview.components.draft")}
         >
           <Textarea
-            placeholder="Capture a rough draft"
+            placeholder={tm("preview.components.captureARoughDraft")}
             tone="secondary"
             variant="quiet"
           />

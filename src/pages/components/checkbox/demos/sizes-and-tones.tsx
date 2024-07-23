@@ -1,5 +1,6 @@
 import { Checkbox, Label } from "sticker-ui"
 
+import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -14,12 +15,13 @@ const meta = defineMeta({
 })
 
 function Demo() {
+  const { tm } = usePreviewI18n()
   return (
     <div className="grid gap-4 md:grid-cols-3">
       <div className="flex items-center gap-3 rounded-sticker-xl border border-ink bg-white/80 p-4">
         <Checkbox defaultChecked id="checkbox-size-small" size="sm" />
         <Label htmlFor="checkbox-size-small" size="sm">
-          Small checklist
+          {tm("preview.components.smallChecklist")}
         </Label>
       </div>
       <div className="flex items-center gap-3 rounded-sticker-xl border border-ink bg-white/80 p-4">
@@ -29,7 +31,9 @@ function Demo() {
           tone="secondary"
           variant="filled"
         />
-        <Label htmlFor="checkbox-size-medium">Standard review</Label>
+        <Label htmlFor="checkbox-size-medium">
+          {tm("preview.components.standardReview")}
+        </Label>
       </div>
       <div className="flex items-center gap-3 rounded-sticker-xl border border-ink bg-white/80 p-4">
         <Checkbox
@@ -39,7 +43,7 @@ function Demo() {
           tone="warning"
         />
         <Label htmlFor="checkbox-size-large" size="lg">
-          Roomy mixed state
+          {tm("preview.components.roomyMixedState")}
         </Label>
       </div>
     </div>

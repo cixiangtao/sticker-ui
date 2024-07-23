@@ -9,6 +9,7 @@ import {
   SelectValue,
 } from "sticker-ui"
 
+import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -23,12 +24,15 @@ const meta = defineMeta({
 })
 
 function Demo() {
+  const { tm } = usePreviewI18n()
   const [value, setValue] = React.useState("preview")
   const descriptionId = "select-a11y-change-description"
 
   return (
     <div className="grid max-w-xl gap-3">
-      <Label htmlFor="select-a11y-change">Delivery area</Label>
+      <Label htmlFor="select-a11y-change">
+        {tm("preview.components.deliveryArea")}
+      </Label>
       <Select
         aria-describedby={descriptionId}
         aria-invalid={value === "blocked"}
@@ -38,16 +42,23 @@ function Demo() {
         value={value}
       >
         <SelectTrigger>
-          <SelectValue placeholder="Choose an area" />
+          <SelectValue placeholder={tm("preview.components.chooseAnArea")} />
         </SelectTrigger>
         <SelectContent>
-          <SelectItem value="preview">Preview demos</SelectItem>
-          <SelectItem value="docs">API docs</SelectItem>
-          <SelectItem value="blocked">Blocked state</SelectItem>
+          <SelectItem value="preview">
+            {tm("preview.components.previewDemos")}
+          </SelectItem>
+          <SelectItem value="docs">
+            {tm("preview.components.apiDocs")}
+          </SelectItem>
+          <SelectItem value="blocked">
+            {tm("preview.components.blockedState")}
+          </SelectItem>
         </SelectContent>
       </Select>
       <LabelDescription id={descriptionId}>
-        Selected area: {value}
+        {tm("preview.components.selectedArea")}
+        {value}
       </LabelDescription>
     </div>
   )

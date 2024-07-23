@@ -1,5 +1,6 @@
 import { Button, Form, Input, Switch } from "sticker-ui"
 
+import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -14,6 +15,7 @@ const meta = defineMeta({
 })
 
 function Demo() {
+  const { tm } = usePreviewI18n()
   return (
     <Form
       disabled={false}
@@ -26,22 +28,26 @@ function Demo() {
       validateTrigger="onBlur"
     >
       <Form.Item
-        extra="This field validates on blur because the form sets validateTrigger."
-        label="Page slug"
+        extra={tm(
+          "preview.components.thisFieldValidatesOnBlurBecauseTheFormSetsValidatetrigger",
+        )}
+        label={tm("preview.components.pageSlug")}
         name="slug"
         required={true}
         rules={[
           {
-            message: "Use lowercase letters and dashes.",
+            message: tm("preview.components.useLowercaseLettersAndDashes"),
             pattern: /^[a-z-]+$/,
           },
         ]}
       >
-        <Input placeholder="sticker-page" />
+        <Input placeholder={tm("preview.components.stickerPage")} />
       </Form.Item>
       <Form.Item
-        extra="Switch uses checked and onCheckedChange instead of value and onChange."
-        label="Ready to publish"
+        extra={tm(
+          "preview.components.switchUsesCheckedAndOncheckedchangeInsteadOfValueAndOnchange",
+        )}
+        label={tm("preview.components.readyToPublish")}
         name="approval"
         trigger="onCheckedChange"
         validateStatus="success"
@@ -51,13 +57,13 @@ function Demo() {
       </Form.Item>
       <Form.Item
         help="Manual help overrides validation messages for display-only guidance."
-        label="Review note"
+        label={tm("preview.components.reviewNote")}
         validateStatus="warning"
       >
-        <Input placeholder="Add an optional note" />
+        <Input placeholder={tm("preview.components.addAnOptionalNote")} />
       </Form.Item>
       <div className="md:col-start-2">
-        <Button type="submit">Validate on blur</Button>
+        <Button type="submit">{tm("preview.components.validateOnBlur")}</Button>
       </div>
     </Form>
   )

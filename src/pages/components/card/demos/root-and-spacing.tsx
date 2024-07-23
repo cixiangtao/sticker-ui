@@ -7,6 +7,7 @@ import {
   Tag,
 } from "sticker-ui"
 
+import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -21,19 +22,21 @@ const meta = defineMeta({
 })
 
 function Demo() {
+  const { tm } = usePreviewI18n()
   return (
     <div className="grid gap-4 lg:grid-cols-2">
       <Card as="section" interactive={true} padding="sm" variant="elevated">
         <CardHeader decoration={true} divider="dashed" dividerInset="card">
-          <CardTitle>Compact section</CardTitle>
+          <CardTitle>{tm("preview.components.compactSection")}</CardTitle>
           <CardDescription>
-            as, interactive, padding, decoration, divider, and dividerInset work
-            together across the composed slots.
+            {tm(
+              "preview.components.asInteractivePaddingDecorationDividerAndDividerinsetWorkTogetherAcrossTheComposedSlots",
+            )}
           </CardDescription>
         </CardHeader>
         <CardContent>
           <Tag color="info" dot={true} size="sm" variant="outlined">
-            padding=sm
+            {tm("preview.components.paddingSm")}
           </Tag>
         </CardContent>
       </Card>
@@ -42,22 +45,23 @@ function Demo() {
         <a
           className="block no-underline"
           href="#card-as-child"
-          aria-label="Open delegated card"
+          aria-label={tm("preview.components.openDelegatedCard")}
         >
           <CardHeader
-            decoration={<Tag size="xs">Link</Tag>}
+            decoration={<Tag size="xs">{tm("preview.components.link")}</Tag>}
             divider="solid"
             dividerInset="md"
           >
-            <CardTitle>Delegated link card</CardTitle>
+            <CardTitle>{tm("preview.components.delegatedLinkCard")}</CardTitle>
             <CardDescription>
-              asChild puts the card root classes on the anchor while slot
-              spacing stays explicit.
+              {tm(
+                "preview.components.aschildPutsTheCardRootClassesOnTheAnchorWhileSlotSpacingStaysExplicit",
+              )}
             </CardDescription>
           </CardHeader>
           <CardContent>
             <span className="text-sm font-extrabold text-ink">
-              Open composed surface
+              {tm("preview.components.openComposedSurface")}
             </span>
           </CardContent>
         </a>

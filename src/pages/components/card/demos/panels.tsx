@@ -7,6 +7,7 @@ import {
   Tag,
 } from "sticker-ui"
 
+import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -44,6 +45,7 @@ function HeaderDots() {
 }
 
 function Demo() {
+  const { tm } = usePreviewI18n()
   return (
     <div className="grid gap-4 md:grid-cols-2">
       <Card variant="panel">
@@ -52,28 +54,32 @@ function Demo() {
           divider="dashed"
           dividerInset="md"
         >
-          <Tag color="danger">Panel</Tag>
-          <CardTitle className="mt-3">Preview Window</CardTitle>
+          <Tag color="danger">{tm("preview.components.panel")}</Tag>
+          <CardTitle className="mt-3">
+            {tm("preview.components.previewWindow")}
+          </CardTitle>
         </CardHeader>
         <div className="grid gap-3 py-5">
           <p className="m-0 text-sm leading-6 font-medium text-text-muted">
-            Use this pattern when the surface frames navigation, filters, or a
-            large preview area.
+            {tm(
+              "preview.components.useThisPatternWhenTheSurfaceFramesNavigationFiltersOrALargePreviewArea",
+            )}
           </p>
-          <Button size="sm">Start review</Button>
+          <Button size="sm">{tm("preview.components.startReview")}</Button>
         </div>
       </Card>
 
       <Card variant="minimal">
         <CardHeader divider="dashed" dividerInset="card">
-          <CardTitle>Toolbar Shell</CardTitle>
+          <CardTitle>{tm("preview.components.toolbarShell")}</CardTitle>
         </CardHeader>
         <CardContent className="grid gap-3">
           <p className="m-0 text-sm leading-6 font-medium text-text-muted">
-            Use minimal panel cards for quiet shells that should sit below
-            content cards in the visual hierarchy.
+            {tm(
+              "preview.components.useMinimalPanelCardsForQuietShellsThatShouldSitBelowContentCardsInTheVisualHierarchy",
+            )}
           </p>
-          <Tag color="info">Dashed divider</Tag>
+          <Tag color="info">{tm("preview.components.dashedDivider")}</Tag>
         </CardContent>
       </Card>
     </div>

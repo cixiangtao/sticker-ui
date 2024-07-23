@@ -1,5 +1,6 @@
 import { Input, Label } from "sticker-ui"
 
+import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -14,34 +15,37 @@ const meta = defineMeta({
 })
 
 function Demo() {
+  const { tm } = usePreviewI18n()
   return (
     <div className="grid gap-4 md:grid-cols-3">
       <div className="grid gap-2 rounded-sticker-xl border border-ink bg-white/80 p-4">
         <Label htmlFor="input-size-small" size="sm">
-          Small search
+          {tm("preview.components.smallSearch")}
         </Label>
         <Input
           id="input-size-small"
-          placeholder="Search docs"
+          placeholder={tm("preview.components.searchDocs")}
           size="sm"
           type="search"
         />
       </div>
       <div className="grid gap-2 rounded-sticker-xl border border-ink bg-white/80 p-4">
-        <Label htmlFor="input-size-medium">Standard URL</Label>
+        <Label htmlFor="input-size-medium">
+          {tm("preview.components.standardUrl")}
+        </Label>
         <Input
           id="input-size-medium"
-          placeholder="https://sticker.dev"
+          placeholder={tm("preview.components.httpsStickerDev")}
           type="url"
         />
       </div>
       <div className="grid gap-2 rounded-sticker-xl border border-ink bg-white/80 p-4">
         <Label htmlFor="input-size-large" size="lg">
-          Roomy email
+          {tm("preview.components.roomyEmail")}
         </Label>
         <Input
           id="input-size-large"
-          placeholder="hello@sticker.dev"
+          placeholder={tm("preview.components.helloStickerDev")}
           size="lg"
           type="email"
         />

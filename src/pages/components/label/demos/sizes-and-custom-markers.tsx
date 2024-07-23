@@ -1,5 +1,6 @@
 import { Input, Label, LabelMarker } from "sticker-ui"
 
+import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -14,34 +15,39 @@ const meta = defineMeta({
 })
 
 function Demo() {
+  const { tm } = usePreviewI18n()
   return (
     <div className="grid gap-4 md:grid-cols-3">
       <div className="rounded-[16px] border border-[#2E3038] bg-white p-4">
         <Label htmlFor="label-small" size="sm">
-          Small caption
+          {tm("preview.components.smallCaption")}
         </Label>
         <Input
           className="mt-3"
           id="label-small"
-          placeholder="Compact"
+          placeholder={tm("preview.components.compact")}
           size="sm"
         />
       </div>
       <div className="rounded-[16px] border border-[#2E3038] bg-white p-4">
         <Label htmlFor="label-default">
-          Default caption
-          <LabelMarker>new</LabelMarker>
+          {tm("preview.components.defaultCaption")}
+          <LabelMarker>{tm("preview.components.new")}</LabelMarker>
         </Label>
-        <Input className="mt-3" id="label-default" placeholder="Standard" />
+        <Input
+          className="mt-3"
+          id="label-default"
+          placeholder={tm("preview.components.standard")}
+        />
       </div>
       <div className="rounded-[16px] border border-[#2E3038] bg-white p-4">
         <Label htmlFor="label-large" size="lg">
-          Large caption
+          {tm("preview.components.largeCaption")}
         </Label>
         <Input
           className="mt-3"
           id="label-large"
-          placeholder="Roomy"
+          placeholder={tm("preview.components.roomy")}
           size="lg"
         />
       </div>

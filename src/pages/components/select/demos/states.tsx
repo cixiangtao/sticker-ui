@@ -7,6 +7,7 @@ import {
   SelectValue,
 } from "sticker-ui"
 
+import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -21,6 +22,7 @@ const meta = defineMeta({
 })
 
 function Demo() {
+  const { tm } = usePreviewI18n()
   return (
     <Form
       initialValues={{
@@ -31,36 +33,58 @@ function Demo() {
     >
       <div className="grid gap-4 md:grid-cols-2">
         <Form.Item
-          extra="The field shell passes aria-invalid to Select when validation fails."
-          label="Destination"
+          extra={tm(
+            "preview.components.theFieldShellPassesAriaInvalidToSelectWhenValidationFails",
+          )}
+          label={tm("preview.components.destination")}
           name="destination"
-          rules={[{ message: "Destination is required.", required: true }]}
+          rules={[
+            {
+              message: tm("preview.components.destinationIsRequired"),
+              required: true,
+            },
+          ]}
         >
           <Select>
             <SelectTrigger>
-              <SelectValue placeholder="Choose a destination" />
+              <SelectValue
+                placeholder={tm("preview.components.chooseADestination")}
+              />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="docs">Docs page</SelectItem>
-              <SelectItem value="registry">Registry card</SelectItem>
-              <SelectItem value="preview">Preview shell</SelectItem>
+              <SelectItem value="docs">
+                {tm("preview.components.docsPage")}
+              </SelectItem>
+              <SelectItem value="registry">
+                {tm("preview.components.registryCard")}
+              </SelectItem>
+              <SelectItem value="preview">
+                {tm("preview.components.previewShell")}
+              </SelectItem>
             </SelectContent>
           </Select>
         </Form.Item>
-        <Form.Item extra="Use disabled for archived settings." label="Archive">
+        <Form.Item
+          extra={tm("preview.components.useDisabledForArchivedSettings")}
+          label={tm("preview.components.archive")}
+        >
           <Select defaultValue="locked" disabled>
             <SelectTrigger>
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="locked">Locked after review</SelectItem>
-              <SelectItem value="editable">Editable draft</SelectItem>
+              <SelectItem value="locked">
+                {tm("preview.components.lockedAfterReview")}
+              </SelectItem>
+              <SelectItem value="editable">
+                {tm("preview.components.editableDraft")}
+              </SelectItem>
             </SelectContent>
           </Select>
         </Form.Item>
         <Form.Item
-          extra="Tone can reinforce selection status."
-          label="Priority"
+          extra={tm("preview.components.toneCanReinforceSelectionStatus")}
+          label={tm("preview.components.priority")}
           name="priority"
         >
           <Select tone="success" variant="filled">
@@ -68,19 +92,30 @@ function Demo() {
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="normal">Normal pass</SelectItem>
-              <SelectItem value="high">High focus</SelectItem>
+              <SelectItem value="normal">
+                {tm("preview.components.normalPass")}
+              </SelectItem>
+              <SelectItem value="high">
+                {tm("preview.components.highFocus")}
+              </SelectItem>
             </SelectContent>
           </Select>
         </Form.Item>
-        <Form.Item extra="Quiet selects sit inside dense cards." label="View">
+        <Form.Item
+          extra={tm("preview.components.quietSelectsSitInsideDenseCards")}
+          label={tm("preview.components.view")}
+        >
           <Select defaultValue="compact" tone="secondary" variant="quiet">
             <SelectTrigger>
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="compact">Compact cards</SelectItem>
-              <SelectItem value="roomy">Roomy panels</SelectItem>
+              <SelectItem value="compact">
+                {tm("preview.components.compactCards")}
+              </SelectItem>
+              <SelectItem value="roomy">
+                {tm("preview.components.roomyPanels")}
+              </SelectItem>
             </SelectContent>
           </Select>
         </Form.Item>

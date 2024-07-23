@@ -6,6 +6,7 @@ import {
   TooltipTrigger,
 } from "sticker-ui"
 
+import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -20,16 +21,20 @@ const meta = defineMeta({
 })
 
 function Demo() {
+  const { tm } = usePreviewI18n()
   return (
     <TooltipProvider>
       <div className="w-fit">
         <Tooltip>
           <TooltipTrigger asChild>
-            <Button variant="outlined">Hover for note</Button>
+            <Button variant="outlined">
+              {tm("preview.components.hoverForNote")}
+            </Button>
           </TooltipTrigger>
           <TooltipContent>
-            Keep tooltip copy short, specific, and connected to one visible
-            control.
+            {tm(
+              "preview.components.keepTooltipCopyShortSpecificAndConnectedToOneVisibleControl",
+            )}
           </TooltipContent>
         </Tooltip>
       </div>

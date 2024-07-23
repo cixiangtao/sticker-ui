@@ -1,5 +1,6 @@
 import { Tag } from "sticker-ui"
 
+import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -14,17 +15,18 @@ const meta = defineMeta({
 })
 
 function Demo() {
+  const { tm } = usePreviewI18n()
   return (
     <div className="flex flex-wrap items-center gap-3">
       <Tag dot size="xs">
-        Tiny
+        {tm("preview.components.tiny")}
       </Tag>
       <Tag dot size="sm">
-        Small
+        {tm("preview.components.small")}
       </Tag>
-      <Tag dot>Ready</Tag>
+      <Tag dot>{tm("preview.components.ready")}</Tag>
       <Tag color="info" dot size="lg">
-        Large Label
+        {tm("preview.components.largeLabel")}
       </Tag>
     </div>
   )

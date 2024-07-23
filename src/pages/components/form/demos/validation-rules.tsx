@@ -1,5 +1,6 @@
 import { Button, Form, Input } from "sticker-ui"
 
+import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -14,6 +15,7 @@ const meta = defineMeta({
 })
 
 function Demo() {
+  const { tm } = usePreviewI18n()
   return (
     <Form
       initialValues={{
@@ -24,28 +26,28 @@ function Demo() {
       onFinish={() => undefined}
     >
       <Form.Item
-        extra="Between 3 and 18 characters."
-        label="Nickname"
+        extra={tm("preview.components.between3And18Characters")}
+        label={tm("preview.components.nickname")}
         name="nickname"
         rules={[
           {
-            message: "Nickname is required.",
+            message: tm("preview.components.nicknameIsRequired"),
             required: true,
             whitespace: true,
           },
-          { message: "Nickname is too short.", min: 3 },
-          { message: "Nickname is too long.", max: 18 },
+          { message: tm("preview.components.nicknameIsTooShort"), min: 3 },
+          { message: tm("preview.components.nicknameIsTooLong"), max: 18 },
         ]}
       >
         <Input />
       </Form.Item>
       <Form.Item
-        extra="Only https URLs are accepted in this example."
-        label="Website"
+        extra={tm("preview.components.onlyHttpsUrlsAreAcceptedInThisExample")}
+        label={tm("preview.components.website")}
         name="website"
         rules={[
           {
-            message: "Website must start with https://.",
+            message: tm("preview.components.websiteMustStartWithHttps"),
             pattern: /^https:\/\/.+/,
           },
         ]}
@@ -53,11 +55,11 @@ function Demo() {
         <Input />
       </Form.Item>
       <Form.Item
-        label="Invite code"
+        label={tm("preview.components.inviteCode")}
         name="inviteCode"
         rules={[
           {
-            message: "Invite code must be STICKER.",
+            message: tm("preview.components.inviteCodeMustBeSticker"),
             validator: (_rule, value) => {
               if (value && value !== "STICKER") {
                 throw new Error("Invite code must be STICKER.")
@@ -66,10 +68,10 @@ function Demo() {
           },
         ]}
       >
-        <Input placeholder="STICKER" />
+        <Input placeholder={tm("preview.components.sticker")} />
       </Form.Item>
       <div className="md:col-start-2">
-        <Button type="submit">Check rules</Button>
+        <Button type="submit">{tm("preview.components.checkRules")}</Button>
       </div>
     </Form>
   )

@@ -1,5 +1,6 @@
 import { Button } from "sticker-ui"
 
+import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -14,23 +15,24 @@ const meta = defineMeta({
 })
 
 function Demo() {
+  const { tm } = usePreviewI18n()
   return (
     <div className="flex flex-wrap gap-3">
-      <Button>Solid</Button>
+      <Button>{tm("preview.components.solid")}</Button>
       <Button color="info" variant="outlined">
-        Outlined
+        {tm("preview.components.outlined")}
       </Button>
       <Button color="warning" variant="dashed">
-        Dashed
+        {tm("preview.components.dashed")}
       </Button>
       <Button color="success" variant="filled">
-        Filled
+        {tm("preview.components.filled")}
       </Button>
       <Button color="danger" variant="text">
-        Text
+        {tm("preview.components.text")}
       </Button>
       <Button color="secondary" variant="link">
-        Link
+        {tm("preview.components.link")}
       </Button>
     </div>
   )

@@ -1,3 +1,4 @@
+import { usePreviewI18n } from "@/i18n/preview"
 import {
   Card,
   CardContent,
@@ -8,14 +9,16 @@ import {
 import { COMPONENT_FILES } from "@/preview-data"
 
 function RegistryPage() {
+  const { tm } = usePreviewI18n()
   return (
     <div className="grid gap-5">
       <Card className="bg-[#EAF7FF]">
         <CardHeader>
-          <CardTitle>Install Commands</CardTitle>
+          <CardTitle>{tm("preview.components.installCommands")}</CardTitle>
           <CardDescription>
-            These paths come from the generated files in public/r after running
-            the shadcn registry build.
+            {tm(
+              "preview.components.thesePathsComeFromTheGeneratedFilesInPublicRAfterRunningTheShadcnRegistryBuild",
+            )}
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -25,7 +28,8 @@ function RegistryPage() {
                 className="block overflow-x-auto rounded-[16px] border border-[#2E3038] bg-white p-4 text-sm font-bold"
                 key={file.name}
               >
-                npx shadcn@latest add {file.registry}
+                {tm("preview.components.npxShadcnLatestAdd")}
+                {file.registry}
               </code>
             ))}
           </div>
@@ -34,10 +38,11 @@ function RegistryPage() {
 
       <Card className="bg-[#FFF6DC]">
         <CardHeader>
-          <CardTitle>Build Flow</CardTitle>
+          <CardTitle>{tm("preview.components.buildFlow")}</CardTitle>
           <CardDescription>
-            Edit registry source, build JSON, then publish public/r as static
-            files.
+            {tm(
+              "preview.components.editRegistrySourceBuildJsonThenPublishPublicRAsStaticFiles",
+            )}
           </CardDescription>
         </CardHeader>
         <CardContent>

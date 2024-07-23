@@ -10,6 +10,7 @@ import {
   DialogTrigger,
 } from "sticker-ui"
 
+import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -24,25 +25,31 @@ const meta = defineMeta({
 })
 
 function Demo() {
+  const { tm } = usePreviewI18n()
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button>Open dialog</Button>
+        <Button>{tm("preview.components.openDialog")}</Button>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Publish component page?</DialogTitle>
+          <DialogTitle>
+            {tm("preview.components.publishComponentPage")}
+          </DialogTitle>
           <DialogDescription>
-            Confirm the preview demos, API table, translations, and registry
-            output before marking this component ready.
+            {tm(
+              "preview.components.confirmThePreviewDemosApiTableTranslationsAndRegistryOutputBeforeMarkingThisComponentReady",
+            )}
           </DialogDescription>
         </DialogHeader>
         <DialogFooter>
           <DialogClose asChild>
-            <Button variant="outlined">Cancel</Button>
+            <Button variant="outlined">
+              {tm("preview.components.cancel")}
+            </Button>
           </DialogClose>
           <DialogClose asChild>
-            <Button color="success">Publish</Button>
+            <Button color="success">{tm("preview.components.publish")}</Button>
           </DialogClose>
         </DialogFooter>
       </DialogContent>

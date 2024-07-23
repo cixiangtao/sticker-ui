@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Button, InputPassword, Label, LabelDescription } from "sticker-ui"
 
+import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -15,13 +16,16 @@ const meta = defineMeta({
 })
 
 function Demo() {
+  const { tm } = usePreviewI18n()
   const [visible, setVisible] = React.useState(false)
   const [lastState, setLastState] = React.useState("Hidden")
 
   return (
     <div className="grid max-w-xl gap-4">
       <div className="grid gap-3">
-        <Label htmlFor="input-password-default-visible">Default visible</Label>
+        <Label htmlFor="input-password-default-visible">
+          {tm("preview.components.defaultVisible")}
+        </Label>
         <InputPassword
           defaultValue="sticker-secret"
           defaultVisible={true}
@@ -33,12 +37,12 @@ function Demo() {
       </div>
       <div className="grid gap-3">
         <Label htmlFor="input-password-controlled-visible">
-          Controlled visible
+          {tm("preview.components.controlledVisible")}
         </Label>
         <InputPassword
           id="input-password-controlled-visible"
           onVisibleChange={setVisible}
-          placeholder="Controlled visibility"
+          placeholder={tm("preview.components.controlledVisibility")}
           visible={visible}
         />
       </div>
@@ -50,9 +54,12 @@ function Demo() {
           size="sm"
           variant="outlined"
         >
-          Toggle controlled field
+          {tm("preview.components.toggleControlledField")}
         </Button>
-        <LabelDescription>Last visibility event: {lastState}</LabelDescription>
+        <LabelDescription>
+          {tm("preview.components.lastVisibilityEvent")}
+          {lastState}
+        </LabelDescription>
       </div>
     </div>
   )

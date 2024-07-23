@@ -2144,6 +2144,170 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   "preview.components.more": {
     zh: "更多",
   },
+  "preview.components.appliesClassesToTheNativeTableElement": {
+    zh: "将 class 应用到原生 table 元素。",
+  },
+  "preview.components.appliesClassesToTheScrollableFrameAroundTheTable": {
+    zh: "将 class 应用到表格外层的可滚动边框。",
+  },
+  "preview.components.asInteractivePaddingDecorationDividerAndDividerinsetWorkTogetherAcrossTheComposedSlots":
+    {
+      zh: "as、interactive、padding、decoration、divider 和 dividerInset 会在组合插槽中协同工作。",
+    },
+  "preview.components.buildFlow": {
+    zh: "构建流程",
+  },
+  "preview.components.chooseAnArea": {
+    zh: "选择一个区域",
+  },
+  "preview.components.componentName": {
+    zh: "组件名称",
+  },
+  "preview.components.componentReadinessSnapshot": {
+    zh: "组件就绪度快照。",
+  },
+  "preview.components.core": {
+    zh: "核心",
+  },
+  "preview.components.controlledVisibility": {
+    zh: "受控可见性",
+  },
+  "preview.components.currentValue": {
+    zh: "当前值：",
+  },
+  "preview.components.dangerLabel": {
+    zh: "危险标签",
+  },
+  "preview.components.defaultCaption": {
+    zh: "默认标题",
+  },
+  "preview.components.defaultLabel": {
+    zh: "默认标签",
+  },
+  "preview.components.dependencyContract": {
+    zh: "依赖约定",
+  },
+  "preview.components.demos": {
+    zh: "Demo",
+  },
+  "preview.components.descriptionCopyCanSitUnderAnyControlInTheSameField": {
+    zh: "描述文案可以放在同一字段中的任意控件下方。",
+  },
+  "preview.components.editRegistrySourceBuildJsonThenPublishPublicRAsStaticFiles":
+    {
+      zh: "编辑 registry 源文件，构建 JSON，然后将 public/r 作为静态文件发布。",
+    },
+  "preview.components.helloStickerDev": {
+    zh: "hello@sticker.dev",
+  },
+  "preview.components.httpsStickerDev": {
+    zh: "https://sticker.dev",
+  },
+  "preview.components.installCommands": {
+    zh: "安装命令",
+  },
+  "preview.components.keepNestedSurfacesQuieterThanThisAlert": {
+    zh: "让嵌套表面比这条提醒更安静。",
+  },
+  "preview.components.largeAction": {
+    zh: "大型操作",
+  },
+  "preview.components.largeCaption": {
+    zh: "大号标题",
+  },
+  "preview.components.largeLabel": {
+    zh: "大号标签",
+  },
+  "preview.components.largeRounded": {
+    zh: "大号圆角",
+  },
+  "preview.components.mediumRounded": {
+    zh: "中号圆角",
+  },
+  "preview.components.mutedLabel": {
+    zh: "弱化标签",
+  },
+  "preview.components.npxShadcnLatestAdd": {
+    zh: "npx shadcn@latest add",
+  },
+  "preview.components.new": {
+    zh: "新",
+  },
+  "preview.components.openDelegatedCard": {
+    zh: "打开委托卡片",
+  },
+  "preview.components.owner": {
+    zh: "负责人",
+  },
+  "preview.components.paddingSm": {
+    zh: "padding=sm",
+  },
+  "preview.components.pageSlug": {
+    zh: "页面 slug",
+  },
+  "preview.components.previewArchitecture": {
+    zh: "预览架构",
+  },
+  "preview.components.previewDemos": {
+    zh: "预览示例",
+  },
+  "preview.components.previewSections": {
+    zh: "预览区块",
+  },
+  "preview.components.previewTactileStates": {
+    zh: "预览触感状态",
+  },
+  "preview.components.releaseNote": {
+    zh: "发布备注",
+  },
+  "preview.components.requiredMarkersArePartOfTheCaptionNotTheInputFrame": {
+    zh: "必填标记属于标题，而不是输入框边框。",
+  },
+  "preview.components.reviewNote": {
+    zh: "评审备注",
+  },
+  "preview.components.smallCaption": {
+    zh: "小号标题",
+  },
+  "preview.components.smallRounded": {
+    zh: "小号圆角",
+  },
+  "preview.components.stable": {
+    zh: "稳定",
+  },
+  "preview.components.sticker": {
+    zh: "STICKER",
+  },
+  "preview.components.stickerPage": {
+    zh: "sticker-page",
+  },
+  "preview.components.status": {
+    zh: "状态",
+  },
+  "preview.components.successLabel": {
+    zh: "成功标签",
+  },
+  "preview.components.thePreviewIsGroupedByDocumentationJobsStartFoundationsComponentsAndRegistryDelivery":
+    {
+      zh: "预览按文档任务分组：起点、基础、组件和 registry 交付。",
+    },
+  "preview.components.thesePathsComeFromTheGeneratedFilesInPublicRAfterRunningTheShadcnRegistryBuild":
+    {
+      zh: "这些路径来自运行 shadcn registry 构建后 public/r 中生成的文件。",
+    },
+  "preview.components.toneCanReinforceSuccessCopy": {
+    zh: "色调可以强化成功文案。",
+  },
+  "preview.components.totalDemos": {
+    zh: "Demo 总数",
+  },
+  "preview.components.viteAndReactDomArePreviewOnlyInstalledRegistryComponentsStaySourceFirstAndLight":
+    {
+      zh: "Vite 和 React DOM 仅用于预览。安装后的 registry 组件保持源码优先且轻量。",
+    },
+  "preview.components.warningLabel": {
+    zh: "警告标签",
+  },
 })
 
 export { ZH_PREVIEW_COMPONENT_MESSAGES }

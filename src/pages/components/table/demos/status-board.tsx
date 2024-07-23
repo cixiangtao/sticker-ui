@@ -10,6 +10,7 @@ import {
   Tag,
 } from "sticker-ui"
 
+import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -24,42 +25,58 @@ const meta = defineMeta({
 })
 
 function Demo() {
+  const { tm } = usePreviewI18n()
+
   return (
     <Table className="min-w-[620px]">
-      <TableCaption>Component readiness snapshot.</TableCaption>
+      <TableCaption>
+        {tm("preview.components.componentReadinessSnapshot")}
+      </TableCaption>
       <TableHeader>
         <TableRow>
-          <TableHead>Component</TableHead>
-          <TableHead>Status</TableHead>
-          <TableHead>Owner</TableHead>
-          <TableHead className="text-right">Demos</TableHead>
+          <TableHead>{tm("preview.common.component")}</TableHead>
+          <TableHead>{tm("preview.components.status")}</TableHead>
+          <TableHead>{tm("preview.components.owner")}</TableHead>
+          <TableHead className="text-right">
+            {tm("preview.components.demos")}
+          </TableHead>
         </TableRow>
       </TableHeader>
       <TableBody>
         <TableRow>
-          <TableCell className="font-black">Button</TableCell>
+          <TableCell className="font-black">
+            {tm("preview.components.button")}
+          </TableCell>
           <TableCell>
             <Tag color="success" dot size="sm">
-              stable
+              {tm("preview.components.stable")}
             </Tag>
           </TableCell>
-          <TableCell className="font-medium text-[#5B5E6A]">Core</TableCell>
+          <TableCell className="font-medium text-[#5B5E6A]">
+            {tm("preview.components.core")}
+          </TableCell>
           <TableCell className="text-right font-extrabold">2</TableCell>
         </TableRow>
         <TableRow>
-          <TableCell className="font-black">Table</TableCell>
+          <TableCell className="font-black">
+            {tm("preview.components.table")}
+          </TableCell>
           <TableCell>
             <Tag color="info" dot size="sm">
-              new
+              {tm("preview.components.new")}
             </Tag>
           </TableCell>
-          <TableCell className="font-medium text-[#5B5E6A]">Docs</TableCell>
+          <TableCell className="font-medium text-[#5B5E6A]">
+            {tm("preview.components.docs")}
+          </TableCell>
           <TableCell className="text-right font-extrabold">2</TableCell>
         </TableRow>
       </TableBody>
       <TableFooter>
         <TableRow>
-          <TableCell colSpan={3}>Total demos</TableCell>
+          <TableCell colSpan={3}>
+            {tm("preview.components.totalDemos")}
+          </TableCell>
           <TableCell className="text-right">4</TableCell>
         </TableRow>
       </TableFooter>

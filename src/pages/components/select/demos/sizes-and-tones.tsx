@@ -7,6 +7,7 @@ import {
   SelectValue,
 } from "sticker-ui"
 
+import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -21,25 +22,34 @@ const meta = defineMeta({
 })
 
 function Demo() {
+  const { tm } = usePreviewI18n()
   return (
     <div className="grid gap-4 md:grid-cols-3">
       <div className="grid gap-2 rounded-sticker-xl border border-ink bg-white/80 p-4">
         <Label htmlFor="select-size-small" size="sm">
-          Small filter
+          {tm("preview.components.smallFilter")}
         </Label>
         <Select defaultValue="open" id="select-size-small" size="sm">
           <SelectTrigger>
             <SelectValue />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="open">Open</SelectItem>
-            <SelectItem value="ready">Ready</SelectItem>
-            <SelectItem value="archived">Archived</SelectItem>
+            <SelectItem value="open">
+              {tm("preview.components.open")}
+            </SelectItem>
+            <SelectItem value="ready">
+              {tm("preview.components.ready")}
+            </SelectItem>
+            <SelectItem value="archived">
+              {tm("preview.components.archived")}
+            </SelectItem>
           </SelectContent>
         </Select>
       </div>
       <div className="grid gap-2 rounded-sticker-xl border border-ink bg-white/80 p-4">
-        <Label htmlFor="select-size-medium">Standard plan</Label>
+        <Label htmlFor="select-size-medium">
+          {tm("preview.components.standardPlan")}
+        </Label>
         <Select
           defaultValue="weekly"
           id="select-size-medium"
@@ -50,15 +60,21 @@ function Demo() {
             <SelectValue />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="daily">Daily check</SelectItem>
-            <SelectItem value="weekly">Weekly review</SelectItem>
-            <SelectItem value="monthly">Monthly map</SelectItem>
+            <SelectItem value="daily">
+              {tm("preview.components.dailyCheck")}
+            </SelectItem>
+            <SelectItem value="weekly">
+              {tm("preview.components.weeklyReview")}
+            </SelectItem>
+            <SelectItem value="monthly">
+              {tm("preview.components.monthlyMap")}
+            </SelectItem>
           </SelectContent>
         </Select>
       </div>
       <div className="grid gap-2 rounded-sticker-xl border border-ink bg-white/80 p-4">
         <Label htmlFor="select-size-large" size="lg">
-          Roomy priority
+          {tm("preview.components.roomyPriority")}
         </Label>
         <Select
           defaultValue="high"
@@ -71,9 +87,15 @@ function Demo() {
             <SelectValue />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="low">Low touch</SelectItem>
-            <SelectItem value="normal">Normal pass</SelectItem>
-            <SelectItem value="high">High focus</SelectItem>
+            <SelectItem value="low">
+              {tm("preview.components.lowTouch")}
+            </SelectItem>
+            <SelectItem value="normal">
+              {tm("preview.components.normalPass")}
+            </SelectItem>
+            <SelectItem value="high">
+              {tm("preview.components.highFocus")}
+            </SelectItem>
           </SelectContent>
         </Select>
       </div>
