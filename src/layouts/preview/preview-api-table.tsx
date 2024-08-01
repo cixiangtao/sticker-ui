@@ -119,9 +119,7 @@ function PreviewApiTable({ api }: PreviewApiTableProps) {
               {tm("preview.common.apiReference")}
             </div>
             <CardTitle className="mt-1">{api.title}</CardTitle>
-            <CardDescription>
-              {translateApiText(td, api.descriptionKey, api.description)}
-            </CardDescription>
+            <CardDescription>{td(api.descriptionKey)}</CardDescription>
           </div>
           <code className="w-fit rounded-sticker-md border border-ink bg-surface px-3 py-2 text-xs font-extrabold">
             {api.sourcePath}
@@ -167,20 +165,12 @@ function ComponentList({ components }: { components: PreviewApiComponent[] }) {
               </div>
               {component.description ? (
                 <p className="text-sm leading-6 font-medium text-text-muted">
-                  {translateApiText(
-                    td,
-                    component.descriptionKey,
-                    component.description,
-                  )}
+                  {td(component.descriptionKey)}
                 </p>
               ) : null}
               {component.remarks ? (
                 <p className="text-xs leading-5 font-bold text-text-subtle">
-                  {translateApiText(
-                    td,
-                    component.remarksKey,
-                    component.remarks,
-                  )}
+                  {td(component.remarksKey)}
                 </p>
               ) : null}
             </div>
@@ -213,12 +203,12 @@ function ComponentPropsCard({ props }: { props: PreviewApiComponentProps }) {
         </Tag>
         {props.description ? (
           <p className="text-sm leading-6 font-medium text-text-muted">
-            {translateApiText(td, props.descriptionKey, props.description)}
+            {td(props.descriptionKey)}
           </p>
         ) : null}
         {props.remarks ? (
           <p className="text-xs leading-5 font-bold text-text-subtle">
-            {translateApiText(td, props.remarksKey, props.remarks)}
+            {td(props.remarksKey)}
           </p>
         ) : null}
         <InheritanceList inherits={props.inherits} />
@@ -329,12 +319,12 @@ function TypeList({
               </div>
               {type.description ? (
                 <p className="text-sm leading-6 font-medium text-text-muted">
-                  {translateApiText(td, type.descriptionKey, type.description)}
+                  {td(type.descriptionKey)}
                 </p>
               ) : null}
               {type.remarks ? (
                 <p className="text-xs leading-5 font-bold text-text-subtle">
-                  {translateApiText(td, type.remarksKey, type.remarks)}
+                  {td(type.remarksKey)}
                 </p>
               ) : null}
             </div>
@@ -409,11 +399,7 @@ function MemberTable({ members }: { members: PreviewApiMember[] }) {
               <div className="grid gap-1">
                 {member.description ? (
                   <span className="leading-6 font-medium text-text-muted">
-                    {translateApiText(
-                      td,
-                      member.descriptionKey,
-                      member.description,
-                    )}
+                    {td(member.descriptionKey)}
                   </span>
                 ) : (
                   <span className="text-xs font-bold text-text-placeholder">
@@ -423,16 +409,12 @@ function MemberTable({ members }: { members: PreviewApiMember[] }) {
                 {member.deprecated ? (
                   <span className="rounded-sticker-xs bg-fill-danger-soft px-2 py-1 text-xs font-extrabold text-text-danger">
                     {tm("preview.common.deprecated")}:{" "}
-                    {translateApiText(
-                      td,
-                      member.deprecatedKey,
-                      member.deprecated,
-                    )}
+                    {td(member.deprecatedKey)}
                   </span>
                 ) : null}
                 {member.remarks ? (
                   <span className="text-xs leading-5 font-bold text-text-subtle">
-                    {translateApiText(td, member.remarksKey, member.remarks)}
+                    {td(member.remarksKey)}
                   </span>
                 ) : null}
               </div>
@@ -459,11 +441,7 @@ function VariantList({ variants }: { variants: PreviewApiVariant[] }) {
             <code className="text-sm font-black">{variant.name}</code>
             {variant.description ? (
               <p className="mt-1 text-sm leading-6 font-medium text-text-muted">
-                {translateApiText(
-                  td,
-                  variant.descriptionKey,
-                  variant.description,
-                )}
+                {td(variant.descriptionKey)}
               </p>
             ) : null}
           </div>
@@ -498,14 +476,6 @@ function VariantList({ variants }: { variants: PreviewApiVariant[] }) {
       ))}
     </section>
   )
-}
-
-function translateApiText(
-  td: (message: string, defaultValue?: string) => string,
-  key: string | undefined,
-  value: string,
-) {
-  return key ? td(key, value) : value
 }
 
 function toApiKindMessageKey(kind: string): PreviewMessageKey {

@@ -30,7 +30,7 @@ function OverviewPage() {
                 key={group.label}
               >
                 <div className="text-xs font-extrabold text-[#696B76] uppercase">
-                  {td(group.labelKey ?? group.label, group.label)}
+                  {td(group.labelKey)}
                 </div>
                 <div className="mt-3 flex flex-col gap-3">
                   {group.sections.map((section) => (
@@ -38,10 +38,7 @@ function OverviewPage() {
                       {group.sections.length > 1 ? (
                         <div className="flex items-center justify-between rounded-[10px] border border-[#2E3038] bg-[#FFF6DC] px-3 py-1.5">
                           <span className="text-xs font-black uppercase">
-                            {td(
-                              section.labelKey ?? section.label,
-                              section.label,
-                            )}
+                            {td(section.labelKey)}
                           </span>
                           <span className="text-xs font-extrabold text-[#696B76]">
                             {section.items.length}
@@ -54,7 +51,7 @@ function OverviewPage() {
                           href={`#${item.path}`}
                           key={item.path}
                         >
-                          {td(item.labelKey ?? item.label, item.label)}
+                          {td(item.labelKey)}
                         </a>
                       ))}
                     </div>

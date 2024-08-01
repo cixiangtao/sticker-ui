@@ -21,6 +21,7 @@ interface PreviewI18nProviderProps {
 }
 
 const PREVIEW_RESOURCES = createPreviewResources(PREVIEW_MESSAGES)
+const MISSING_PREVIEW_MESSAGE_KEY = "[missing preview message key]"
 
 i18n.use(initReactI18next).init({
   defaultNS: "preview",
@@ -55,10 +56,17 @@ function usePreviewI18n() {
   const language = toPreviewLanguage(i18nInstance.resolvedLanguage)
 
   return {
-    td: (key: string, defaultValue?: string) => t(key, { defaultValue }),
+    td: (key: string | undefined) => translatePreviewMessage(t, key),
     language,
-    tm: (key: PreviewMessageKey) => t(key),
+    tm: (key: PreviewMessageKey | undefined) => translatePreviewMessage(t, key),
   }
+}
+
+function translatePreviewMessage(
+  translate: (key: string) => string,
+  key: string | undefined,
+) {
+  return key ? translate(key) : MISSING_PREVIEW_MESSAGE_KEY
 }
 
 function PreviewLanguageSync() {

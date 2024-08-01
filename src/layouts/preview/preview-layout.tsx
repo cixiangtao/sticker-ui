@@ -2,7 +2,7 @@ import { Link, Outlet, useLocation } from "@tanstack/react-router"
 import { useLayoutEffect } from "react"
 import { Card, CardContent, CardHeader, Divider, Tag } from "sticker-ui"
 
-import { type PreviewMessageKey, usePreviewI18n } from "../../i18n/preview"
+import { usePreviewI18n } from "../../i18n/preview"
 import { NAV_GROUPS } from "../../preview-data"
 import { useCurrentRoute } from "../../router/hooks"
 
@@ -12,12 +12,10 @@ const PREVIEW_CONTENT_SCROLL_SELECTOR = "[data-preview-content-scroll]"
 
 function PreviewLayout() {
   const location = useLocation()
-  const { tm } = usePreviewI18n()
+  const { td, tm } = usePreviewI18n()
   const currentRoute = useCurrentRoute()
   const activeRoute = {
-    description: currentRoute?.meta?.description ?? "",
     descriptionKey: currentRoute?.meta?.descriptionKey,
-    label: currentRoute?.meta?.title ?? "",
     labelKey: currentRoute?.meta?.titleKey,
     path: currentRoute?.pathname ?? location.pathname,
   }
@@ -48,18 +46,10 @@ function PreviewLayout() {
                   {tm("preview.route.eyebrow")}
                 </div>
                 <h1 className="mt-1 text-5xl leading-none font-black">
-                  {translatePreviewKey(
-                    tm,
-                    activeRoute.labelKey,
-                    activeRoute.label,
-                  )}
+                  {td(activeRoute.labelKey)}
                 </h1>
                 <p className="mt-3 max-w-2xl text-sm leading-6 font-medium text-text-muted">
-                  {translatePreviewKey(
-                    tm,
-                    activeRoute.descriptionKey,
-                    activeRoute.description,
-                  )}
+                  {td(activeRoute.descriptionKey)}
                 </p>
               </div>
               <Tag as="code" color="warning" variant="solid">
@@ -77,7 +67,7 @@ function PreviewLayout() {
 }
 
 function Sidebar({ activePath }: { activePath: string }) {
-  const { tm } = usePreviewI18n()
+  const { td, tm } = usePreviewI18n()
 
   return (
     <Card
@@ -93,7 +83,7 @@ function Sidebar({ activePath }: { activePath: string }) {
           <div className="min-w-[240px] lg:min-w-0" key={group.label}>
             <div className="mb-2 flex items-center justify-start gap-3">
               <h3 className="text-text text-xl font-extrabold uppercase">
-                {translatePreviewKey(tm, group.labelKey, group.label)}
+                {td(group.labelKey)}
               </h3>
               {/* <Tag color="default" size="xs" variant="outlined">
                 {group.items.length}
@@ -106,13 +96,7 @@ function Sidebar({ activePath }: { activePath: string }) {
                     <div className="grid gap-1">
                       <Divider align="start" tone="warning" variant="dashed">
                         <span className="inline-flex items-center gap-2">
-                          <span>
-                            {translatePreviewKey(
-                              tm,
-                              section.labelKey,
-                              section.label,
-                            )}
-                          </span>
+                          <span>{td(section.labelKey)}</span>
                           {/* <span className="text-text-subtle">
                             {section.items.length}
                           </span> */}
@@ -141,14 +125,10 @@ function Sidebar({ activePath }: { activePath: string }) {
                         to={item.path}
                       >
                         <span className="font-extrabold">
-                          {translatePreviewKey(tm, item.labelKey, item.label)}
+                          {td(item.labelKey)}
                         </span>
                         <span className="mt-1 block text-xs leading-5 font-medium text-text-subtle">
-                          {translatePreviewKey(
-                            tm,
-                            item.descriptionKey,
-                            item.description,
-                          )}
+                          {td(item.descriptionKey)}
                         </span>
                       </Link>
                     </Card>
@@ -163,12 +143,8 @@ function Sidebar({ activePath }: { activePath: string }) {
   )
 }
 
-function TopBar({
-  activeRoute,
-}: {
-  activeRoute: { label: string; labelKey?: string }
-}) {
-  const { tm } = usePreviewI18n()
+function TopBar({ activeRoute }: { activeRoute: { labelKey?: string } }) {
+  const { td, tm } = usePreviewI18n()
 
   return (
     <Card
@@ -183,21 +159,12 @@ function TopBar({
         <div>
           <div className="text-2xl leading-none font-black">sticker-ui</div>
           <div className="mt-1 text-sm font-bold text-text-muted">
-            {tm("preview.route.previewing")}{" "}
-            {translatePreviewKey(tm, activeRoute.labelKey, activeRoute.label)}
+            {tm("preview.route.previewing")} {td(activeRoute.labelKey)}
           </div>
         </div>
       </Link>
     </Card>
   )
-}
-
-function translatePreviewKey(
-  tm: (key: PreviewMessageKey) => string,
-  key: string | undefined,
-  fallback: string,
-) {
-  return key ? tm(key as PreviewMessageKey) : fallback
 }
 
 export { PreviewLayout }

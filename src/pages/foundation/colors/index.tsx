@@ -43,15 +43,8 @@ function ColorsPage() {
           <CardHeader>
             <div className="flex flex-wrap items-center justify-between gap-3">
               <div className="grid gap-1">
-                <CardTitle>
-                  {td(group.labelKey ?? group.label, group.label)}
-                </CardTitle>
-                <CardDescription>
-                  {td(
-                    group.descriptionKey ?? group.description,
-                    group.description,
-                  )}
-                </CardDescription>
+                <CardTitle>{td(group.labelKey)}</CardTitle>
+                <CardDescription>{td(group.descriptionKey)}</CardDescription>
               </div>
               <Tag className="bg-fill-secondary text-xs font-extrabold">
                 {group.tokens.length} {tm("preview.components.tokens")}
@@ -80,7 +73,7 @@ function ColorsPage() {
                   />
                   <div className="grid gap-1">
                     <div className="text-sm font-black text-ink">
-                      {td(token.labelKey ?? token.label, token.label)}
+                      {td(token.labelKey)}
                     </div>
                     <code className="w-fit rounded-sticker-sm bg-surface-muted px-2 py-1 text-xs font-extrabold text-text-muted">
                       {token.name}
