@@ -12,10 +12,7 @@ import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
   className: "bg-[#EAF7FF]",
-  description:
-    "Root props control semantic elements, delegated children, tactile interaction, and the spacing shared by card slots.",
   order: 60,
-  title: "Root & Spacing Props",
   titleKey: "preview.components.rootAndSpacingProps",
   descriptionKey:
     "preview.components.rootPropsControlSemanticElementsDelegatedChildrenTactileInteractionAndTheSpacingSharedByCardSlots",

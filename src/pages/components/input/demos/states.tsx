@@ -5,10 +5,7 @@ import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
   className: "bg-[#FFF0F4]",
-  description:
-    "Invalid, disabled, and semantic tone states stay visible through native attributes such as aria-invalid and disabled.",
   order: 30,
-  title: "States",
   titleKey: "preview.components.states",
   descriptionKey:
     "preview.components.invalidDisabledAndSemanticToneStatesStayVisibleThroughNativeAttributesSuchAsAriaInvalidAndDisabled",

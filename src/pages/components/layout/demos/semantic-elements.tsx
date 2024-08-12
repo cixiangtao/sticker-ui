@@ -5,10 +5,7 @@ import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
   className: "bg-[#F6EFFF]",
-  description:
-    "Use as to choose semantic roots for navigation, lists, and grouped page regions.",
   order: 30,
-  title: "Semantic Elements",
   titleKey: "preview.components.semanticElements",
   descriptionKey:
     "preview.components.useAsToChooseSemanticRootsForNavigationListsAndGroupedPageRegions",

@@ -12,10 +12,7 @@ import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
   className: "bg-[#FFF0F4]",
-  description:
-    "Invalid, disabled, and quiet select states stay visible through Radix props and Form.Item validation.",
   order: 30,
-  title: "States",
   titleKey: "preview.components.states",
   descriptionKey:
     "preview.components.invalidDisabledAndQuietSelectStatesStayVisibleThroughRadixPropsAndFormItemValidation",

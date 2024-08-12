@@ -5,10 +5,7 @@ import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
   className: "bg-[#EAF7FF]",
-  description:
-    "Radio keeps Radix keyboard behavior while adding chunky sticker circles, hard shadows, and a clear selected dot.",
   order: 10,
-  title: "Basic Field",
   titleKey: "preview.components.basicField",
   descriptionKey:
     "preview.components.radioKeepsRadixKeyboardBehaviorWhileAddingChunkyStickerCirclesHardShadowsAndAClearSelectedDot",

@@ -5,10 +5,7 @@ import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
   className: "bg-[#FFF0F4]",
-  description:
-    "Required fields use sticker badges in roomy layouts and compact asterisks in horizontal label columns.",
   order: 25,
-  title: "Required Layouts",
   titleKey: "preview.components.requiredLayouts",
   descriptionKey:
     "preview.components.requiredFieldsUseStickerBadgesInRoomyLayoutsAndCompactAsterisksInHorizontalLabelColumns",

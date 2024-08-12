@@ -5,10 +5,7 @@ import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
   className: "bg-[#FFF6DC]",
-  description:
-    "Sizes scale the writing area for compact notes, standard forms, and roomy planning panels while tone keeps semantic feedback visible.",
   order: 20,
-  title: "Sizes & Tones",
   titleKey: "preview.components.sizesAndTones",
   descriptionKey:
     "preview.components.sizesScaleTheWritingAreaForCompactNotesStandardFormsAndRoomyPlanningPanelsWhileToneKeepsSemanticFeedbackVisible",

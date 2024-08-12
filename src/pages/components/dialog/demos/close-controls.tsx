@@ -15,10 +15,7 @@ import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
   className: "bg-[#EAFBF5]",
-  description:
-    "showClose and closeLabel tune the built-in icon close button, or remove it when the footer should own dismissal.",
   order: 30,
-  title: "Close Controls",
   titleKey: "preview.components.closeControls",
   descriptionKey:
     "preview.components.showcloseAndCloselabelTuneTheBuiltInIconCloseButtonOrRemoveItWhenTheFooterShouldOwnDismissal",

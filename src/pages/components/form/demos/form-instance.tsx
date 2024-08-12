@@ -6,10 +6,7 @@ import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
   className: "bg-[#F6EFFF]",
-  description:
-    "The form instance exposes submit, resetFields, validateFields, and value setters for controlled workflows.",
   order: 30,
-  title: "Form Instance",
   titleKey: "preview.components.formInstance",
   descriptionKey:
     "preview.components.theFormInstanceExposesSubmitResetfieldsValidatefieldsAndValueSettersForControlledWorkflows",

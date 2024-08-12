@@ -5,10 +5,7 @@ import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
   className: "bg-[#FFF6DC]",
-  description:
-    "A separator render function can react to each gap while children keep their original components.",
   order: 20,
-  title: "Render Separator",
   titleKey: "preview.components.renderSeparator",
   descriptionKey:
     "preview.components.aSeparatorRenderFunctionCanReactToEachGapWhileChildrenKeepTheirOriginalComponents",

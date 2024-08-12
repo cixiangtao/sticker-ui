@@ -6,10 +6,7 @@ import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
   className: "bg-[#F6EFFF]",
-  description:
-    "onValueChange follows Radix naming, while onChange mirrors the form-friendly value callback.",
   order: 40,
-  title: "Change Handlers",
   titleKey: "preview.components.changeHandlers",
   descriptionKey:
     "preview.components.onvaluechangeFollowsRadixNamingWhileOnchangeMirrorsTheFormFriendlyValueCallback",

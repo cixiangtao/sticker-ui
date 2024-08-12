@@ -12,10 +12,7 @@ import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
   className: "bg-[#EAF7FF]",
-  description:
-    "Use className to customize card paper, header accents, and badge colors.",
   order: 40,
-  title: "Custom Colors",
   titleKey: "preview.components.customColors",
   descriptionKey:
     "preview.components.useClassnameToCustomizeCardPaperHeaderAccentsAndBadgeColors",

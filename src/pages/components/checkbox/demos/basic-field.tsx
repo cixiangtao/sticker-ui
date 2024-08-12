@@ -5,10 +5,7 @@ import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
   className: "bg-[#EAF7FF]",
-  description:
-    "Checkbox keeps Radix keyboard behavior while adding a chunky sticker square, hard shadow, and clear checked mark.",
   order: 10,
-  title: "Basic Field",
   titleKey: "preview.components.basicField",
   descriptionKey:
     "preview.components.checkboxKeepsRadixKeyboardBehaviorWhileAddingAChunkyStickerSquareHardShadowAndClearCheckedMark",

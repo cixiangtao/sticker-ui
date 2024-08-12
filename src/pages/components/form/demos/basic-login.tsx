@@ -6,10 +6,7 @@ import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
   className: "bg-[#FFF6DC]",
-  description:
-    "Form keeps an antd-like API while the field shell carries the sticker label, helper, and error states.",
   order: 10,
-  title: "Basic Login",
   titleKey: "preview.components.basicLogin",
   descriptionKey:
     "preview.components.formKeepsAnAntdLikeApiWhileTheFieldShellCarriesTheStickerLabelHelperAndErrorStates",

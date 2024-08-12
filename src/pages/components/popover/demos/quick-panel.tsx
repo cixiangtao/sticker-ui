@@ -11,10 +11,7 @@ import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
   className: "bg-[#F6EFFF]",
-  description:
-    "Popover hosts compact interactive content such as quick settings, filters, and contextual actions.",
   order: 10,
-  title: "Quick Panel",
   descriptionKey:
     "preview.components.popoverHostsCompactInteractiveContentSuchAsQuickSettingsFiltersAndContextualActions",
   titleKey: "preview.components.quickPanel",

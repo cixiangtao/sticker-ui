@@ -15,10 +15,7 @@ import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
   className: "bg-[#EAF7FF]",
-  description:
-    "Dialog creates a focused modal sticker panel for decisions that need title, description, and actions.",
   order: 10,
-  title: "Basic Modal",
   titleKey: "preview.components.basicModal",
   descriptionKey:
     "preview.components.dialogCreatesAFocusedModalStickerPanelForDecisionsThatNeedTitleDescriptionAndActions",

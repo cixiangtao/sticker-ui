@@ -5,10 +5,7 @@ import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
   className: "bg-[#EAFBF5]",
-  description:
-    "inline switches to inline-flex or inline-grid, while asChild delegates layout classes to an existing semantic element.",
   order: 40,
-  title: "Inline & As Child",
   titleKey: "preview.components.inlineAndAsChild",
   descriptionKey:
     "preview.components.inlineSwitchesToInlineFlexOrInlineGridWhileAschildDelegatesLayoutClassesToAnExistingSemanticElement",

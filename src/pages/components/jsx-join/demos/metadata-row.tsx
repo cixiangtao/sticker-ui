@@ -5,10 +5,7 @@ import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
   className: "bg-[#EAFBF5]",
-  description:
-    "Use JsxJoin for metadata rows where each item stays independent and separators are generated once.",
   order: 10,
-  title: "Metadata Row",
   titleKey: "preview.components.metadataRow",
   descriptionKey:
     "preview.components.useJsxjoinForMetadataRowsWhereEachItemStaysIndependentAndSeparatorsAreGeneratedOnce",

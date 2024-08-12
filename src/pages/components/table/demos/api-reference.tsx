@@ -12,10 +12,7 @@ import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
   className: "bg-[#FFF6DC]",
-  description:
-    "Use tables for API props, registry metadata, and compact technical reference blocks.",
   order: 10,
-  title: "API Reference",
   titleKey: "preview.common.apiReference",
   descriptionKey:
     "preview.components.useTablesForApiPropsRegistryMetadataAndCompactTechnicalReferenceBlocks",

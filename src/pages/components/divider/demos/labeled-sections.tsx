@@ -5,10 +5,7 @@ import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
   className: "bg-[#EAF7FF]",
-  description:
-    "Add label content when a section break needs a scannable checkpoint inside dense docs or forms.",
   order: 20,
-  title: "Labeled Sections",
   titleKey: "preview.components.labeledSections",
   descriptionKey:
     "preview.components.addLabelContentWhenASectionBreakNeedsAScannableCheckpointInsideDenseDocsOrForms",

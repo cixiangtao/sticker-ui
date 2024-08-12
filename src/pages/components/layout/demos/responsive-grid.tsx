@@ -6,10 +6,7 @@ import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
   className: "bg-[#FFF6DC]",
-  description:
-    "Grid presets cover common responsive card rows without dynamic Tailwind class generation.",
   order: 20,
-  title: "Responsive Grid",
   titleKey: "preview.components.responsiveGrid",
   descriptionKey:
     "preview.components.gridPresetsCoverCommonResponsiveCardRowsWithoutDynamicTailwindClassGeneration",

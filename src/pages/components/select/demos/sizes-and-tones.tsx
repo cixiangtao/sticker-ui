@@ -12,10 +12,7 @@ import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
   className: "bg-[#FFF6DC]",
-  description:
-    "Sizes align selects with compact filters, standard forms, and roomy settings panels while tone keeps semantic context visible.",
   order: 20,
-  title: "Sizes & Tones",
   titleKey: "preview.components.sizesAndTones",
   descriptionKey:
     "preview.components.sizesAlignSelectsWithCompactFiltersStandardFormsAndRoomySettingsPanelsWhileToneKeepsSemanticContextVisible",

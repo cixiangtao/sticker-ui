@@ -14,10 +14,7 @@ import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
   className: "bg-[#FFF6DC]",
-  description:
-    "Use card slots to keep headings, body copy, metadata, and actions visually separated.",
   order: 10,
-  title: "Basic Composition",
   titleKey: "preview.components.basicComposition",
   descriptionKey:
     "preview.components.useCardSlotsToKeepHeadingsBodyCopyMetadataAndActionsVisuallySeparated",

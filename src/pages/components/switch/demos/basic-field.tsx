@@ -5,10 +5,7 @@ import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
   className: "bg-[#EAF7FF]",
-  description:
-    "Switch keeps Radix pressed state behavior while adding a tactile sticker track and paper thumb.",
   order: 10,
-  title: "Basic Field",
   titleKey: "preview.components.basicField",
   descriptionKey:
     "preview.components.switchKeepsRadixPressedStateBehaviorWhileAddingATactileStickerTrackAndPaperThumb",

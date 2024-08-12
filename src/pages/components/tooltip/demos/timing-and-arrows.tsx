@@ -11,10 +11,7 @@ import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
   className: "bg-[#EAFBF5]",
-  description:
-    "Provider timing props control hover delay, while size and showArrow adjust each tooltip bubble.",
   order: 30,
-  title: "Timing & Arrows",
   titleKey: "preview.components.timingAndArrows",
   descriptionKey:
     "preview.components.providerTimingPropsControlHoverDelayWhileSizeAndShowarrowAdjustEachTooltipBubble",

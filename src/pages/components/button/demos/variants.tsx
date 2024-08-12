@@ -5,10 +5,7 @@ import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
   className: "bg-[#EAF7FF]",
-  description:
-    "Variants define structure while color sets the sticker paper tone.",
   order: 10,
-  title: "Variants",
   titleKey: "preview.components.variants",
   descriptionKey:
     "preview.components.variantsDefineStructureWhileColorSetsTheStickerPaperTone",

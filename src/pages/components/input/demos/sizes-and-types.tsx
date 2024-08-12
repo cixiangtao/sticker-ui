@@ -5,10 +5,7 @@ import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
   className: "bg-[#FFF6DC]",
-  description:
-    "Sizes align text inputs with compact filters, standard forms, and roomy settings panels while type stays focused on text entry.",
   order: 20,
-  title: "Sizes & Types",
   titleKey: "preview.components.sizesAndTypes",
   descriptionKey:
     "preview.components.sizesAlignTextInputsWithCompactFiltersStandardFormsAndRoomySettingsPanelsWhileTypeStaysFocusedOnTextEntry",

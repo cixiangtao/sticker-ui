@@ -6,10 +6,7 @@ import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
   className: "bg-[#F6EFFF]",
-  description:
-    "asChild moves the sticker button styling onto links or router primitives while preserving loading and disabled states.",
   order: 40,
-  title: "As Child",
   titleKey: "preview.components.asChild",
   descriptionKey:
     "preview.components.aschildMovesTheStickerButtonStylingOntoLinksOrRouterPrimitivesWhilePreservingLoadingAndDisabledStates",

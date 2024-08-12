@@ -11,10 +11,7 @@ import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
   className: "bg-[#EAF7FF]",
-  description:
-    "Tooltip adds a compact paper hint for controls that need extra context without taking over the page.",
   order: 10,
-  title: "Basic Help",
   titleKey: "preview.components.basicHelp",
   descriptionKey:
     "preview.components.tooltipAddsACompactPaperHintForControlsThatNeedExtraContextWithoutTakingOverThePage",

@@ -5,10 +5,7 @@ import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
   className: "bg-[#FFF6DC]",
-  description:
-    "Tone changes help validation-heavy forms call out the caption while leaving the control style independent.",
   order: 20,
-  title: "Tones",
   titleKey: "preview.components.tones",
   descriptionKey:
     "preview.components.toneChangesHelpValidationHeavyFormsCallOutTheCaptionWhileLeavingTheControlStyleIndependent",

@@ -5,10 +5,7 @@ import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
   className: "bg-[#EAF7FF]",
-  description:
-    "Variant controls the tag structure while color carries semantic meaning.",
   order: 10,
-  title: "Variants",
   titleKey: "preview.components.variants",
   descriptionKey:
     "preview.components.variantControlsTheTagStructureWhileColorCarriesSemanticMeaning",

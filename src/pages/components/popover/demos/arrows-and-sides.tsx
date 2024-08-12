@@ -5,10 +5,7 @@ import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
   className: "bg-[#EAF7FF]",
-  description:
-    "showArrow, side, align, and sideOffset make anchored popovers read clearly in toolbars and edge-aligned panels.",
   order: 30,
-  title: "Arrows & Sides",
   titleKey: "preview.components.arrowsAndSides",
   descriptionKey:
     "preview.components.showarrowSideAlignAndSideoffsetMakeAnchoredPopoversReadClearlyInToolbarsAndEdgeAlignedPanels",

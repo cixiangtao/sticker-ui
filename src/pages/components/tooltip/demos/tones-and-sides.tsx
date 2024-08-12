@@ -11,10 +11,7 @@ import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
   className: "bg-[#FFF6DC]",
-  description:
-    "Tone and side options keep hint bubbles useful in dense toolbars and status rows.",
   order: 20,
-  title: "Tones & Sides",
   titleKey: "preview.components.tonesAndSides",
   descriptionKey:
     "preview.components.toneAndSideOptionsKeepHintBubblesUsefulInDenseToolbarsAndStatusRows",

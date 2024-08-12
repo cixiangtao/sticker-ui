@@ -5,10 +5,7 @@ import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
   className: "bg-[#FFF0F4]",
-  description:
-    "Filled, outlined, and stripe variants tune alert emphasis across dense forms and documentation panels.",
   order: 30,
-  title: "Variants",
   titleKey: "preview.components.variants",
   descriptionKey:
     "preview.components.filledOutlinedAndStripeVariantsTuneAlertEmphasisAcrossDenseFormsAndDocumentationPanels",

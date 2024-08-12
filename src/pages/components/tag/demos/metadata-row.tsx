@@ -5,10 +5,7 @@ import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
   className: "bg-[#F6EFFF]",
-  description:
-    "Combine tags with calmer borders for route cards, filters, and registry detail panels.",
   order: 60,
-  title: "Metadata Row",
   titleKey: "preview.components.metadataRow",
   descriptionKey:
     "preview.components.combineTagsWithCalmerBordersForRouteCardsFiltersAndRegistryDetailPanels",

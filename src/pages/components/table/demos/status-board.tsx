@@ -15,10 +15,7 @@ import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
   className: "rotate-[-1deg] bg-[#EAF7FF]",
-  description:
-    "Compose table cells with tags and code chips while the frame handles scrolling and ink borders.",
   order: 20,
-  title: "Status Board",
   titleKey: "preview.components.statusBoard",
   descriptionKey:
     "preview.components.composeTableCellsWithTagsAndCodeChipsWhileTheFrameHandlesScrollingAndInkBorders",

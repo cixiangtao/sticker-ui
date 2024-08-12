@@ -51,8 +51,8 @@ Component preview pages should use the standard `PreviewDemoPage` template:
 Demo files should:
 
 - Define metadata with `defineMeta({ ... })`.
-- Export that `meta` as the default export.
 - Export a named `Demo` component.
+- Export named bindings with `export { Demo, meta }`.
 
 ## Preview I18n
 

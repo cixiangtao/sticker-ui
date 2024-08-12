@@ -5,10 +5,7 @@ import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
   className: "bg-[#FFF6DC]",
-  description:
-    "Semantic tones keep feedback readable while the sticker frame gives every message a clear paper surface.",
   order: 20,
-  title: "Tones",
   descriptionKey:
     "preview.components.semanticTonesKeepFeedbackReadableWhileTheStickerFrameGivesEveryMessageAClearPaperSurface",
   titleKey: "preview.components.tones",

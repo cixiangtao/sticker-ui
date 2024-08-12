@@ -32,6 +32,7 @@
 ## Skills
 
 - Use `.agents/skills/handbook-sticker-ui/SKILL.md` for detailed handbook sticker visual, accessibility, semantic slot, and Tailwind component guidance.
+- Use `.agents/skills/demo/SKILL.md` when adding, changing, renaming, removing, or reviewing component preview demos, demo metadata, demo ordering, source-code previews, or demo i18n copy.
 - Use `.agents/skills/registry-preview-workflow/SKILL.md` when adding, changing, renaming, or removing registry UI components, component demos, preview pages, generated API docs, or preview i18n dictionaries.
 - Use `.agents/skills/route-configuration/SKILL.md` when registering pages, changing route metadata, or touching route/menu behavior.
 

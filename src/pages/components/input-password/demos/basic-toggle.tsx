@@ -5,10 +5,7 @@ import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
   className: "bg-[#EAF7FF]",
-  description:
-    "InputPassword wraps a native password field with the same sticker frame and an accessible show-hide toggle.",
   order: 10,
-  title: "Basic Toggle",
   titleKey: "preview.components.basicToggle",
   descriptionKey:
     "preview.components.inputpasswordWrapsANativePasswordFieldWithTheSameStickerFrameAndAnAccessibleShowHideToggle",

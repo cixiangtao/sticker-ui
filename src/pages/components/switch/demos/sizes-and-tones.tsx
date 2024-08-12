@@ -5,10 +5,7 @@ import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
   className: "bg-[#FFF6DC]",
-  description:
-    "Sizes align switches with compact toolbars, standard settings, and roomy preference panels while tone keeps state context visible.",
   order: 20,
-  title: "Sizes & Tones",
   titleKey: "preview.components.sizesAndTones",
   descriptionKey:
     "preview.components.sizesAlignSwitchesWithCompactToolbarsStandardSettingsAndRoomyPreferencePanelsWhileToneKeepsStateContextVisible",

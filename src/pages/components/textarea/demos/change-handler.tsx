@@ -6,10 +6,7 @@ import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
   className: "bg-[#F6EFFF]",
-  description:
-    "Textarea mirrors Input by passing the next string value to onChange before the native event.",
   order: 40,
-  title: "Change Handler",
   titleKey: "preview.components.changeHandler",
   descriptionKey:
     "preview.components.textareaMirrorsInputByPassingTheNextStringValueToOnchangeBeforeTheNativeEvent",

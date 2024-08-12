@@ -5,10 +5,7 @@ import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
   className: "bg-[#EAF7FF]",
-  description:
-    "Inputs keep native form behavior while adding a chunky sticker frame, hard shadow, and readable helper copy.",
   order: 10,
-  title: "Basic Field",
   titleKey: "preview.components.basicField",
   descriptionKey:
     "preview.components.inputsKeepNativeFormBehaviorWhileAddingAChunkyStickerFrameHardShadowAndReadableHelperCopy",

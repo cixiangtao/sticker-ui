@@ -5,10 +5,7 @@ import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
   className: "bg-[#FFF6DC]",
-  description:
-    "Size choices are constrained so icon, short text, and long commands still read as one family.",
   order: 20,
-  title: "Sizes",
   descriptionKey:
     "preview.components.sizeChoicesAreConstrainedSoIconShortTextAndLongCommandsStillReadAsOneFamily",
   titleKey: "preview.components.sizes",

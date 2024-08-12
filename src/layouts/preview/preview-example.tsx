@@ -20,10 +20,8 @@ interface PreviewExampleProps {
 
 interface PreviewDemoMeta {
   className?: string
-  description: string
   descriptionKey: PreviewMessageKey
   order?: number
-  title: string
   titleKey: PreviewMessageKey
 }
 
