@@ -40,19 +40,40 @@ For route details, also use the `route-configuration` skill.
 
 ## Preview Page Shape
 
-Component preview pages should use the standard `PreviewDemoPage` template:
+Component preview pages should normally use `createComponentPreviewPage` from `@/layouts/preview`:
 
-- `import.meta.glob` for demo modules and raw sources.
-- Explicit `DEMO_PATHS`.
-- `getPreviewDemoExamples`.
-- `sourceRoot`.
-- `trailing={<PreviewApiTable api={apiDocs.<name>} />}`.
+```tsx
+import {
+  createComponentPreviewPage,
+  type PreviewDemoModule,
+} from "@/layouts/preview"
+
+const demoModules = import.meta.glob<PreviewDemoModule>("./demos/*.tsx", {
+  eager: true,
+})
+const demoSources = import.meta.glob<string>("./demos/*.tsx", {
+  eager: true,
+  import: "default",
+  query: "?raw",
+})
+
+const ExamplePage = createComponentPreviewPage({
+  demoModules,
+  demoSources,
+  name: "example",
+})
+
+export { ExamplePage }
+```
+
+This helper wires demos, source previews, `sourceRoot`, and `PreviewApiTable` together. Reach for hand-written `PreviewDemoPage`, `getPreviewDemoExamples`, or custom trailing content only when a preview page genuinely needs a layout the helper cannot express.
 
 Demo files should:
 
 - Define metadata with `defineMeta({ ... })`.
 - Export a named `Demo` component.
 - Export named bindings with `export { Demo, meta }`.
+- Avoid default exports.
 
 ## Preview I18n
 
@@ -65,7 +86,8 @@ Any component development work must update preview i18n in the same change.
 
 ## Registry Output
 
-- After changing `registry.json` or component source, run `pnpm run build:registry` so `public/r/*.json` stays aligned with the preview.
+- After changing `registry.json` or component source, run `pnpm build:registry` so `public/r/*.json` stays aligned with the preview.
+- After changing preview page, demo, route, or API doc generation behavior, run `pnpm build:preview` when the change could affect the full preview delivery chain.
 - Keep registry components source-only and easy to copy through shadcn.
 - React, Tailwind, and Radix primitives are the baseline UI stack for registry components.
 - Keep extra runtime dependencies minimal. Add non-baseline dependencies only when they provide clear component-level value, and declare them on the specific registry item that needs them.
@@ -78,3 +100,4 @@ Before handoff:
 - User-visible English preview copy has a Chinese translation.
 - Generated files have been refreshed when their sources changed.
 - Run the narrowest relevant verification; for normal code changes, prefer `pnpm lint:fix`.
+- Run `pnpm build:registry` for component source or `registry.json` changes, and `pnpm build:preview` for preview chain changes.

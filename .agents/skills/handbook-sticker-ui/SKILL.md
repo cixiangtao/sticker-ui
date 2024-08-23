@@ -22,9 +22,9 @@ Avoid this style for dense enterprise admin tables, finance/legal workflows, med
 
 Build a "handbook directory with sticker cards" interface:
 
-- Warm paper canvas: cream, soft yellow, peach, or notebook beige.
-- Chunky ink outlines: use a near-black such as `#2E3038` for borders and text.
-- Hard offset shadows: `shadow-[8px_8px_0_#2E3038]`, not blurry SaaS shadows.
+- Warm paper canvas: use project tokens such as `bg-canvas`, `bg-paper`, `bg-surface`, and `bg-fill-default`.
+- Chunky ink outlines: use `border-ink` and `text-ink` before raw hex values.
+- Hard offset shadows: use `shadow-sticker-*` tokens before arbitrary shadow values.
 - Sticker cards: rounded rectangles, thick left borders, emoji or icon badges, slight rotations.
 - Tactile controls: buttons and links should move like pressed paper tabs.
 - Decorative geometry: circles, labels, tape strips, dots, and grid-paper backgrounds.
@@ -171,7 +171,7 @@ For smaller surfaces, collapse to a single column while keeping the cover block 
 
 When authoring registry components, follow the shadcn-style split between semantic theme utilities, native Tailwind structure utilities, and small component-local CSS variables:
 
-- Use semantic Tailwind theme utilities for fixed project tokens, such as `border-ink`, `bg-surface`, `text-ink`, `bg-fill-default`, and `text-text-muted`. These are generated from `@theme inline` variables in `src/globals.css` and keep component code readable.
+- Use semantic Tailwind theme utilities for fixed project tokens, such as `border-ink`, `bg-surface`, `text-ink`, `bg-fill-default`, `rounded-sticker-lg`, `shadow-sticker-md`, and `text-text-muted`. These are generated from `@theme inline` variables in `src/tokens.css`, which is imported by `src/globals.css`, and keep component code readable.
 - Use native Tailwind border width utilities for border thickness: `border`, `border-2`, `border-[3px]`, and `border-l-[8px]`. Avoid custom border-width token classes like `border-sticker` or `border-sticker-heavy` inside components that pass through `cn()` / `tailwind-merge`; they can be misclassified as border-color utilities and removed when combined with `border-ink`.
 - Keep fixed ink outlines explicit and semantic: prefer `border-2 border-ink` for standard interactive controls and `border-[3px] border-ink` for heavyweight panels.
 - Use component-local CSS variables only when a variant axis needs to change the same slot across many variants. For example, a button color variant can define `[--button-fill:var(--color-fill-default)]` and variants can consume it with `bg-[var(--button-fill)]`.
@@ -179,31 +179,33 @@ When authoring registry components, follow the shadcn-style split between semant
 - Keep `className={cn(...)}` as the public escape hatch, but remember that `tailwind-merge` understands built-in Tailwind classes better than project-specific utilities. When adding a new custom utility that overlaps Tailwind groups, quickly test representative combinations such as `border-2 border-ink`.
 - Match shadcn's structure: use `cva()` for variant maps, semantic utilities in variant strings, native sizing/spacing classes, and `cn(buttonVariants({ ... }), className)` for consumer overrides.
 
-Core token:
+Useful token families:
 
-```tsx
-const INK = "#2E3038"
-```
+- Color: `bg-canvas`, `bg-paper`, `bg-surface`, `bg-fill-default`, `bg-fill-info`, `bg-fill-success`, `bg-fill-warning`, `bg-fill-danger-soft`, `text-ink`, `text-text-muted`, `text-text-info`, `text-text-success`, `text-text-warning`, `text-text-danger`.
+- Radius: `rounded-sticker-xs` through `rounded-sticker-panel`.
+- Shadow: `shadow-sticker-xs` through `shadow-sticker-2xl`.
+
+Use raw hex values only when introducing a genuinely new accent that is not already represented in `src/tokens.css`.
 
 Panel:
 
 ```tsx
 className =
-  "rounded-[34px] border-[3px] border-ink bg-white p-[22px] shadow-[10px_10px_0_#2E3038]"
+  "rounded-sticker-panel border-[3px] border-ink bg-surface p-[22px] shadow-sticker-2xl"
 ```
 
 Cover panel:
 
 ```tsx
 className =
-  "rounded-[34px] border-[3px] border-ink bg-[#FFE08A] p-[28px] shadow-[10px_10px_0_#2E3038]"
+  "rounded-sticker-panel border-[3px] border-ink bg-fill-default p-[28px] shadow-sticker-2xl"
 ```
 
 Sticker card:
 
 ```tsx
 className =
-  "rounded-sticker-3xl border-2 border-l-[8px] border-ink bg-[#EAF7FF] px-[20px] py-[16px] shadow-[4px_4px_0_#2E3038] transition hover:translate-y-[-3px] hover:shadow-[5px_5px_0_#2E3038] active:translate-y-[2px] active:shadow-[2px_2px_0_#2E3038]"
+  "rounded-sticker-3xl border-2 border-l-[8px] border-ink bg-fill-info px-[20px] py-[16px] shadow-sticker-lg transition hover:translate-y-[-3px] hover:shadow-sticker-xl active:translate-y-[2px] active:shadow-sticker-sm"
 ```
 
 Nested note:
@@ -217,19 +219,18 @@ Emoji badge:
 
 ```tsx
 className =
-  "flex h-[58px] w-[58px] -rotate-3 items-center justify-center rounded-sticker-xl border-2 border-ink bg-white text-[29px] shadow-[3px_3px_0_#2E3038] transition-transform group-hover:rotate-3"
+  "flex h-[58px] w-[58px] -rotate-3 items-center justify-center rounded-sticker-xl border-2 border-ink bg-surface text-[29px] shadow-sticker-md transition-transform group-hover:rotate-3"
 ```
 
 Accent palette:
 
 ```tsx
 const CARD_ACCENTS = [
-  "border-l-[#4EA8DE] bg-[#EAF7FF] text-[#126B9A]",
-  "border-l-[#9B5DE5] bg-[#F6EFFF] text-[#6930A8]",
-  "border-l-[#00B894] bg-[#EAFBF5] text-[#007B63]",
-  "border-l-[#F6A609] bg-[#FFF6DC] text-[#9A6500]",
-  "border-l-[#EF476F] bg-[#FFF0F4] text-[#A61E42]",
-  "border-l-[#5465FF] bg-[#EEF1FF] text-[#2D3BB8]",
+  "border-l-accent-info bg-fill-info text-text-info",
+  "border-l-accent-secondary bg-fill-secondary text-text-secondary",
+  "border-l-accent-success bg-fill-success text-text-success",
+  "border-l-accent-warning bg-fill-warning text-text-warning",
+  "border-l-accent-danger bg-fill-danger-soft text-text-danger",
 ]
 ```
 

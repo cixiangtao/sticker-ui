@@ -79,7 +79,7 @@ export { Demo, meta }
 
 ## Component Preview Pages
 
-For component pages, prefer `createComponentPreviewPage` from `@/layouts/preview`:
+For component pages, prefer `createComponentPreviewPage` from `@/layouts/preview`. It keeps rendered demos, raw source previews, source paths, and API table wiring consistent:
 
 ```tsx
 import {
@@ -107,6 +107,8 @@ export { ExamplePage }
 
 Keep demo module loading and raw source loading pointed at the same `./demos/*.tsx` glob so every rendered demo has matching source code.
 
+Use hand-written `PreviewDemoPage` / `getPreviewDemoExamples` only when a preview page genuinely needs custom layout or trailing content that `createComponentPreviewPage` cannot express.
+
 ## Review Checklist
 
 Before finishing demo work:
@@ -118,3 +120,4 @@ Before finishing demo work:
 - Raw source previews still match rendered demo modules.
 - New examples show meaningful component behavior, not duplicate decorative states.
 - Run the narrowest relevant verification. For normal edits, use `pnpm lint:fix`.
+- Run `pnpm build:preview` when changing preview loading, page templates, or demo source rendering behavior.
