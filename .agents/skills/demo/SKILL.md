@@ -62,9 +62,13 @@ export { Demo, meta }
 
 - Show realistic component usage, not only visual variants.
 - Cover common states expected by users: default, disabled, controlled/uncontrolled behavior, validation, sizes, tones, composition, and accessibility behavior when relevant.
-- When a component prop has a small fixed value set, show all meaningful values in the demo suite. This is especially important for props such as `tone`, `color`, `size`, `variant`, `placement`, `align`, `side`, and boolean state props.
+- For the component's own public props, identify fixed value sets such as union types, enums, CVA variants, and documented options, then show examples for every practical value in the demo suite.
+- Prioritize complete coverage for props such as `size`, `tone`, `color`, `variant`, `placement`, `align`, `side`, and boolean state props. Inherited native HTML/Radix props can be demonstrated selectively when they clarify real usage; they do not need exhaustive examples.
 - Keep each demo focused on one concept. Add another demo instead of making a single example do too many jobs.
-- Prefer existing registry components and local preview helpers before adding new dependencies.
+- Prefer the UI library's own components from `src/components/ui` for demo controls, surfaces, labels, form fields, tables, tags, buttons, and supporting composition whenever a matching primitive exists.
+- Do not recreate an existing UI component's appearance with raw HTML and Tailwind inside demos. Use raw elements only for minimal semantic wrappers, native behavior that has no matching UI primitive, or layout glue around the component being demonstrated.
+- Prefer shared Tailwind tokens exposed through `src/tokens.css` and `src/globals.css` for colors, surfaces, borders, shadows, spacing, and radius before raw values, one-off hex colors, or arbitrary Tailwind classes.
+- Prefer local preview helpers before adding new dependencies.
 - Keep examples copyable through shadcn: do not rely on app-specific stores, routes, network calls, or hidden preview-only state unless the demo is explicitly about that integration.
 - Preserve the handbook sticker visual language with warm paper surfaces, ink outlines, hard shadows, tactile states, and clear semantic structure.
 - Use semantic HTML and accessible names for interactive examples. Demonstrate keyboard and ARIA behavior when that is part of the component contract.
