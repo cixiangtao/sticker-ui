@@ -1,14 +1,13 @@
 import { type CSSProperties, useEffect, useState } from "react"
 import {
-  type BundledLanguage,
-  type BundledTheme,
-  createHighlighter,
+  type LanguageRegistration,
   type ThemedToken,
-} from "shiki"
+  type ThemeRegistration,
+} from "shiki/core"
 
 interface SourceCode {
   code: string
-  language: BundledLanguage
+  language: "tsx"
 }
 
 interface SourceCodeBlockProps {
@@ -22,12 +21,24 @@ interface HighlightedSource {
   lines: ThemedToken[][]
 }
 
-const SHIKI_LANGUAGE = "tsx" satisfies BundledLanguage
-const SHIKI_THEME = "github-light-default" satisfies BundledTheme
-const highlighterPromise = createHighlighter({
-  langs: [SHIKI_LANGUAGE],
-  themes: [SHIKI_THEME],
-})
+const SHIKI_LANGUAGE = "tsx"
+const SHIKI_THEME = "github-light-default"
+
+interface PreviewHighlighter {
+  codeToTokens: (
+    code: string,
+    options: {
+      lang: typeof SHIKI_LANGUAGE
+      theme: typeof SHIKI_THEME
+    },
+  ) => {
+    bg?: string
+    fg?: string
+    tokens: ThemedToken[][]
+  }
+}
+
+let highlighterPromise: Promise<PreviewHighlighter> | undefined
 
 function SourceCodeBlock({ className = "", source }: SourceCodeBlockProps) {
   const highlightedSource = useHighlightedSource(source)
@@ -65,7 +76,7 @@ function useHighlightedSource(source: SourceCode) {
     let isMounted = true
 
     async function highlightSource() {
-      const highlighter = await highlighterPromise
+      const highlighter = await getHighlighter()
       const result = highlighter.codeToTokens(source.code, {
         lang: source.language,
         theme: SHIKI_THEME,
@@ -91,6 +102,31 @@ function useHighlightedSource(source: SourceCode) {
   }, [source])
 
   return highlightedSource
+}
+
+function getHighlighter() {
+  highlighterPromise ??= createPreviewHighlighter()
+  return highlighterPromise
+}
+
+async function createPreviewHighlighter() {
+  const [
+    { createHighlighterCore },
+    { createJavaScriptRegexEngine },
+    { default: tsx },
+    { default: githubLightDefault },
+  ] = await Promise.all([
+    import("shiki/core"),
+    import("shiki/engine/javascript"),
+    import("shiki/langs/tsx.mjs"),
+    import("shiki/themes/github-light-default.mjs"),
+  ])
+
+  return createHighlighterCore({
+    engine: createJavaScriptRegexEngine(),
+    langs: tsx as LanguageRegistration[],
+    themes: [githubLightDefault as ThemeRegistration],
+  })
 }
 
 function getTokenStyle(token: ThemedToken): CSSProperties {

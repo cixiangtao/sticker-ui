@@ -6,8 +6,6 @@ import { usePreviewI18n } from "../../i18n/preview"
 import { NAV_GROUPS } from "../../preview-data"
 import { useCurrentRoute } from "../../router/hooks"
 
-import "./preview-layout.css"
-
 const PREVIEW_CONTENT_SCROLL_SELECTOR = "[data-preview-content-scroll]"
 
 function PreviewLayout() {
@@ -29,7 +27,7 @@ function PreviewLayout() {
   }, [location.pathname])
 
   return (
-    <main className="bg-sticker-grid min-h-screen bg-canvas px-4 py-4 text-ink sm:px-6 lg:h-screen lg:overflow-hidden lg:px-8">
+    <main className="min-h-screen bg-canvas bg-[linear-gradient(90deg,rgb(46_48_56_/_0.04)_1px,transparent_1px),linear-gradient(0deg,rgb(46_48_56_/_0.04)_1px,transparent_1px)] bg-[length:28px_28px] px-4 py-4 text-ink sm:px-6 lg:h-screen lg:overflow-hidden lg:px-8">
       <div className="mx-auto flex max-w-7xl flex-col gap-4 lg:h-full lg:min-h-0">
         <TopBar activeRoute={activeRoute} />
         <div className="grid gap-4 lg:min-h-0 lg:flex-1 lg:grid-cols-[280px_minmax(0,1fr)]">
