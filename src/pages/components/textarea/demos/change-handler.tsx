@@ -5,7 +5,7 @@ import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
-  className: "bg-[#F6EFFF]",
+  className: "bg-fill-secondary",
   order: 40,
   titleKey: "preview.components.changeHandler",
   descriptionKey:
@@ -15,7 +15,7 @@ const meta = defineMeta({
 function Demo() {
   const { tm } = usePreviewI18n()
   const [value, setValue] = React.useState(
-    "Draft notes stay controlled while keeping native multiline editing.",
+    tm("preview.components.controlledDraftNotes"),
   )
 
   return (
@@ -29,7 +29,10 @@ function Demo() {
         placeholder={tm("preview.components.writeControlledNotes")}
         value={value}
       />
-      <LabelDescription>{value.length} characters</LabelDescription>
+      <LabelDescription>
+        {value.length}
+        {tm("preview.components.characters")}
+      </LabelDescription>
     </div>
   )
 }

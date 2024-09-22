@@ -4,7 +4,7 @@ import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
-  className: "bg-[#FFF0F4]",
+  className: "bg-fill-danger-soft",
   order: 25,
   titleKey: "preview.components.requiredLayouts",
   descriptionKey:

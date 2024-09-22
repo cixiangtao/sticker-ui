@@ -4,7 +4,7 @@ import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
-  className: "bg-[#FFF6DC]",
+  className: "bg-fill-warning",
   order: 20,
   titleKey: "preview.components.formNamespace",
   descriptionKey:
@@ -16,7 +16,7 @@ function Demo() {
   return (
     <Form
       initialValues={{
-        password: "sticker-secret",
+        password: tm("preview.components.stickerSecret"),
       }}
       onFinish={() => undefined}
     >
@@ -49,7 +49,7 @@ function Demo() {
           label={tm("preview.components.archivedSecret")}
         >
           <Input.Password
-            defaultValue="locked-sticker"
+            defaultValue={tm("preview.components.lockedSticker")}
             disabled
             hideLabel={tm("preview.components.hide")}
             showLabel={tm("preview.components.show")}

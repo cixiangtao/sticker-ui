@@ -4,7 +4,7 @@ import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
-  className: "bg-[#EAF7FF]",
+  className: "bg-fill-info",
   order: 10,
   titleKey: "preview.components.basicField",
   descriptionKey:
@@ -19,7 +19,9 @@ function Demo() {
         {tm("preview.components.projectNotes")}
       </Label>
       <Textarea
-        defaultValue="Draft the launch checklist, capture edge cases, and mark anything the team should revisit before shipping."
+        defaultValue={tm(
+          "preview.components.draftTheLaunchChecklistCaptureEdgeCasesAndMarkAnythingTheTeamShouldRevisitBeforeShipping",
+        )}
         id="textarea-project-notes"
         placeholder={tm("preview.components.writeAShortProjectNote")}
       />

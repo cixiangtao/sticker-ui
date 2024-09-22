@@ -11,7 +11,7 @@ import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
-  className: "bg-[#FFE8F0]",
+  className: "bg-fill-danger-soft",
   order: 20,
   titleKey: "preview.components.panelSurfaces",
   descriptionKey:
@@ -26,15 +26,15 @@ function HeaderDots() {
       data-slot="panel-header-dots"
     >
       <span
-        className="size-3.5 rounded-full border-2 border-ink bg-[#EF476F]"
+        className="size-3.5 rounded-full border-2 border-ink bg-accent-danger"
         data-slot="panel-header-dot"
       />
       <span
-        className="size-3.5 rounded-full border-2 border-ink bg-[#FFCF56]"
+        className="size-3.5 rounded-full border-2 border-ink bg-fill-default"
         data-slot="panel-header-dot"
       />
       <span
-        className="size-3.5 rounded-full border-2 border-ink bg-[#00B894]"
+        className="size-3.5 rounded-full border-2 border-ink bg-accent-success"
         data-slot="panel-header-dot"
       />
     </div>

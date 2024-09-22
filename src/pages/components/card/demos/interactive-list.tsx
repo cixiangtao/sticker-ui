@@ -12,7 +12,7 @@ import { defineMeta } from "@/layouts/preview"
 import { cn } from "@/lib/utils"
 
 const meta = defineMeta({
-  className: "bg-[#FFF0F4]",
+  className: "bg-fill-danger-soft",
   order: 50,
   titleKey: "preview.components.interactiveList",
   descriptionKey:

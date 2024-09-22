@@ -4,7 +4,7 @@ import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
-  className: "bg-[#EAF7FF]",
+  className: "bg-fill-info",
   order: 10,
   titleKey: "preview.components.flexToolbar",
   descriptionKey:
@@ -27,7 +27,7 @@ function Demo() {
           {tm("preview.components.reviewQueue")}
         </span>
         <Tag color="success" size="sm" variant="filled">
-          12 ready
+          {tm("preview.components.12Ready")}
         </Tag>
       </Flex>
       <Flex align="center" gap="xs">

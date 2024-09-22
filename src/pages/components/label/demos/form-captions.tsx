@@ -4,7 +4,7 @@ import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
-  className: "bg-[#EAF7FF]",
+  className: "bg-fill-info",
   order: 10,
   titleKey: "preview.components.formCaptions",
   descriptionKey:
@@ -20,7 +20,7 @@ function Demo() {
           {tm("preview.components.componentName")}
         </Label>
         <Input
-          defaultValue="Sticker Label"
+          defaultValue={tm("preview.components.stickerLabel")}
           id="label-component-name"
           required
         />
@@ -35,8 +35,10 @@ function Demo() {
           {tm("preview.components.releaseNote")}
         </Label>
         <textarea
-          className="min-h-24 resize-none rounded-[16px] border-2 border-[#2E3038] bg-white px-3 py-2 text-sm font-bold shadow-[2px_2px_0_#2E3038] outline-none focus-visible:ring-2 focus-visible:ring-[#FF9BB2]"
-          defaultValue="Use optional markers for helper fields and short notes."
+          className="min-h-24 resize-none rounded-sticker-lg border-2 border-ink bg-white px-3 py-2 text-sm font-bold shadow-sticker-sm outline-none focus-visible:ring-2 focus-visible:ring-fill-danger"
+          defaultValue={tm(
+            "preview.components.useOptionalMarkersForHelperFieldsAndShortNotes",
+          )}
           id="label-component-note"
         />
         <LabelDescription>

@@ -4,7 +4,7 @@ import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
-  className: "bg-[#FFF6DC]",
+  className: "bg-fill-warning",
   order: 20,
   titleKey: "preview.components.sizesAndTones",
   descriptionKey:
@@ -32,7 +32,9 @@ function Demo() {
           {tm("preview.components.feedback")}
         </Label>
         <Textarea
-          defaultValue="The sticker frame keeps comments readable without losing the playful paper tone."
+          defaultValue={tm(
+            "preview.components.theStickerFrameKeepsCommentsReadableWithoutLosingThePlayfulPaperTone",
+          )}
           id="textarea-size-medium"
           placeholder={tm("preview.components.shareFeedback")}
           tone="info"

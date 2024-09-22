@@ -14,7 +14,7 @@ import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
-  className: "rotate-[-1deg] bg-[#EAF7FF]",
+  className: "rotate-[-1deg] bg-fill-info",
   order: 20,
   titleKey: "preview.components.statusBoard",
   descriptionKey:
@@ -49,7 +49,7 @@ function Demo() {
               {tm("preview.components.stable")}
             </Tag>
           </TableCell>
-          <TableCell className="font-medium text-[#5B5E6A]">
+          <TableCell className="font-medium text-text-muted">
             {tm("preview.components.core")}
           </TableCell>
           <TableCell className="text-right font-extrabold">2</TableCell>
@@ -63,7 +63,7 @@ function Demo() {
               {tm("preview.components.new")}
             </Tag>
           </TableCell>
-          <TableCell className="font-medium text-[#5B5E6A]">
+          <TableCell className="font-medium text-text-muted">
             {tm("preview.components.docs")}
           </TableCell>
           <TableCell className="text-right font-extrabold">2</TableCell>

@@ -5,7 +5,7 @@ import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
-  className: "bg-[#FFF6DC]",
+  className: "bg-fill-warning",
   order: 40,
   titleKey: "preview.components.visibilityControl",
   descriptionKey:
@@ -15,7 +15,9 @@ const meta = defineMeta({
 function Demo() {
   const { tm } = usePreviewI18n()
   const [visible, setVisible] = React.useState(false)
-  const [lastState, setLastState] = React.useState("Hidden")
+  const [lastState, setLastState] = React.useState(() =>
+    tm("preview.components.hidden"),
+  )
 
   return (
     <div className="grid max-w-xl gap-4">
@@ -24,11 +26,15 @@ function Demo() {
           {tm("preview.components.defaultVisible")}
         </Label>
         <InputPassword
-          defaultValue="sticker-secret"
+          defaultValue={tm("preview.components.stickerSecret")}
           defaultVisible={true}
           id="input-password-default-visible"
           onVisibleChange={(nextVisible) => {
-            setLastState(nextVisible ? "Shown" : "Hidden")
+            setLastState(
+              nextVisible
+                ? tm("preview.components.shown")
+                : tm("preview.components.hidden"),
+            )
           }}
         />
       </div>

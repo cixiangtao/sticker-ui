@@ -55,7 +55,7 @@ const TAG_VARIANTS = [
 ] as const
 
 const meta = defineMeta({
-  className: "bg-[#FFF6DC]",
+  className: "bg-fill-warning",
   order: 20,
   titleKey: "preview.components.colors",
   descriptionKey:

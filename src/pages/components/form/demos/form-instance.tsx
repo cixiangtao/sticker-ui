@@ -5,7 +5,7 @@ import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
-  className: "bg-[#F6EFFF]",
+  className: "bg-fill-secondary",
   order: 30,
   titleKey: "preview.components.formInstance",
   descriptionKey:
@@ -15,7 +15,9 @@ const meta = defineMeta({
 function Demo() {
   const { tm } = usePreviewI18n()
   const [form] = Form.useForm()
-  const [status, setStatus] = useState("Ready to validate")
+  const [status, setStatus] = useState(() =>
+    tm("preview.components.readyToValidate"),
+  )
 
   return (
     <div className="grid gap-4">
@@ -26,10 +28,14 @@ function Demo() {
           slug: "sticker-ui",
         }}
         onFinish={(values) => {
-          setStatus(`Saved ${String(values.project ?? "")}`)
+          setStatus(
+            `${tm("preview.components.saved")}${String(values.project ?? "")}`,
+          )
         }}
         onFinishFailed={({ errorFields }) => {
-          setStatus(`${errorFields.length} field needs attention`)
+          setStatus(
+            `${errorFields.length}${tm("preview.components.fieldsNeedAttention")}`,
+          )
         }}
       >
         <div className="grid gap-4 md:grid-cols-2">
@@ -74,7 +80,7 @@ function Demo() {
                 project: "Handbook Kit",
                 slug: "handbook-kit",
               })
-              setStatus("Preset values applied")
+              setStatus(tm("preview.components.presetValuesApplied"))
             }}
             type="button"
             variant="outlined"
@@ -86,10 +92,10 @@ function Demo() {
               void form
                 .validateFields()
                 .then(() => {
-                  setStatus("All fields passed")
+                  setStatus(tm("preview.components.allFieldsPassed"))
                 })
                 .catch(() => {
-                  setStatus("Validation found issues")
+                  setStatus(tm("preview.components.validationFoundIssues"))
                 })
             }}
             type="button"
@@ -100,7 +106,7 @@ function Demo() {
           <Button
             onClick={() => {
               form.resetFields()
-              setStatus("Fields reset")
+              setStatus(tm("preview.components.fieldsReset"))
             }}
             type="button"
             variant="text"

@@ -18,8 +18,14 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   "preview.components.archiveNote": {
     zh: "归档备注",
   },
+  "preview.components.characters": {
+    zh: " 个字符",
+  },
   "preview.components.captureARoughDraft": {
     zh: "记录草稿",
+  },
+  "preview.components.controlledDraftNotes": {
+    zh: "草稿备注保持受控，同时保留原生多行编辑。",
   },
   "preview.components.draftTheLaunchChecklistCaptureEdgeCasesAndMarkAnythingTheTeamShouldRevisitBeforeShipping":
     {
@@ -415,6 +421,9 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   },
   "preview.components.fieldsReset": {
     zh: "字段已重置",
+  },
+  "preview.components.fieldsNeedAttention": {
+    zh: " 个字段需要处理",
   },
   "preview.components.form": {
     zh: "表单",
@@ -836,6 +845,9 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   "preview.components.stickerLabel": {
     zh: "贴纸标签",
   },
+  "preview.components.stickerSecret": {
+    zh: "sticker-secret",
+  },
   "preview.components.stickerPasswordInput": {
     zh: "贴纸密码输入框",
   },
@@ -1151,6 +1163,9 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   },
   "preview.components.warning": {
     zh: "警告",
+  },
+  "preview.components.watch": {
+    zh: "留意",
   },
   "preview.components.warmPaperForSetupNotesAndMigrationReminders": {
     zh: "暖色纸张适合设置备注和迁移提醒。",
@@ -1847,6 +1862,12 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
     },
   "preview.components.tonesAndSides": {
     zh: "色调与方向",
+  },
+  "preview.components.defaultTooltipsStayNeutralForGeneralHelp": {
+    zh: "默认提示适合保持中性的通用帮助。",
+  },
+  "preview.components.secondaryTooltipsFitQuietMetadata": {
+    zh: "secondary 提示适合低强调的元数据说明。",
   },
   "preview.components.tuneThePreviewWithoutLeavingTheCurrentSurface": {
     zh: "无需离开当前表面即可调整预览。",

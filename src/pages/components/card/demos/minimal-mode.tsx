@@ -11,7 +11,7 @@ import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
-  className: "bg-[#FFFDF7]",
+  className: "bg-paper",
   order: 30,
   titleKey: "preview.components.minimalMode",
   descriptionKey:
@@ -35,7 +35,7 @@ function Demo() {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <p className="m-0 text-sm leading-6 font-medium text-[#5B5E6A]">
+          <p className="m-0 text-sm leading-6 font-medium text-text-muted">
             {tm(
               "preview.components.useThisForProminentPreviewsRouteCardsAndActionGroups",
             )}
@@ -56,7 +56,7 @@ function Demo() {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <p className="m-0 text-sm leading-6 font-medium text-[#5B5E6A]">
+          <p className="m-0 text-sm leading-6 font-medium text-text-muted">
             {tm(
               "preview.components.useThisInsideDensePagesSidePanelsAndRepeatedContentLists",
             )}

@@ -11,7 +11,7 @@ import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
-  className: "bg-[#FFF6DC]",
+  className: "bg-fill-warning",
   order: 10,
   titleKey: "preview.common.apiReference",
   descriptionKey:
@@ -43,9 +43,9 @@ function Demo() {
             <code className="text-xs font-bold">string</code>
           </TableCell>
           <TableCell>
-            <span className="text-xs font-bold text-[#858894]">-</span>
+            <span className="text-xs font-bold text-text-placeholder">-</span>
           </TableCell>
-          <TableCell className="leading-6 font-medium text-[#5B5E6A]">
+          <TableCell className="leading-6 font-medium text-text-muted">
             {tm("preview.components.appliesClassesToTheNativeTableElement")}
           </TableCell>
         </TableRow>
@@ -57,9 +57,9 @@ function Demo() {
             <code className="text-xs font-bold">string</code>
           </TableCell>
           <TableCell>
-            <span className="text-xs font-bold text-[#858894]">-</span>
+            <span className="text-xs font-bold text-text-placeholder">-</span>
           </TableCell>
-          <TableCell className="leading-6 font-medium text-[#5B5E6A]">
+          <TableCell className="leading-6 font-medium text-text-muted">
             {tm(
               "preview.components.appliesClassesToTheScrollableFrameAroundTheTable",
             )}

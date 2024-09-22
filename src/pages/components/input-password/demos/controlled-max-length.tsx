@@ -7,7 +7,7 @@ import { defineMeta } from "@/layouts/preview"
 const MAX_PASSWORD_LENGTH = 8
 
 const meta = defineMeta({
-  className: "bg-[#EAFBF5]",
+  className: "bg-fill-success",
   order: 30,
   titleKey: "preview.components.controlledMaxLength",
   descriptionKey:

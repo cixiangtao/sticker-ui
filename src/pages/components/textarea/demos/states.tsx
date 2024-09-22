@@ -4,7 +4,7 @@ import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
-  className: "bg-[#FFF0F4]",
+  className: "bg-fill-danger-soft",
   order: 30,
   titleKey: "preview.components.states",
   descriptionKey:
@@ -42,14 +42,19 @@ function Demo() {
           extra={tm("preview.components.useDisabledForArchivedNotes")}
           label={tm("preview.components.archiveNote")}
         >
-          <Textarea defaultValue="Locked after review." disabled />
+          <Textarea
+            defaultValue={tm("preview.components.lockedAfterReview")}
+            disabled
+          />
         </Form.Item>
         <Form.Item
           extra={tm("preview.components.toneCanReinforceSuccessCopy")}
           label={tm("preview.components.readyNote")}
         >
           <Textarea
-            defaultValue="This copy is approved and ready to ship."
+            defaultValue={tm(
+              "preview.components.thisCopyIsApprovedAndReadyToShip",
+            )}
             tone="success"
             variant="filled"
           />

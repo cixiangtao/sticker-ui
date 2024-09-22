@@ -4,7 +4,7 @@ import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
-  className: "bg-[#F6EFFF]",
+  className: "bg-fill-secondary",
   order: 30,
   titleKey: "preview.components.sizesAndCustomMarkers",
   descriptionKey:
@@ -15,7 +15,7 @@ function Demo() {
   const { tm } = usePreviewI18n()
   return (
     <div className="grid gap-4 md:grid-cols-3">
-      <div className="rounded-[16px] border border-[#2E3038] bg-white p-4">
+      <div className="rounded-sticker-lg border border-ink bg-white p-4">
         <Label htmlFor="label-small" size="sm">
           {tm("preview.components.smallCaption")}
         </Label>
@@ -26,7 +26,7 @@ function Demo() {
           size="sm"
         />
       </div>
-      <div className="rounded-[16px] border border-[#2E3038] bg-white p-4">
+      <div className="rounded-sticker-lg border border-ink bg-white p-4">
         <Label htmlFor="label-default">
           {tm("preview.components.defaultCaption")}
           <LabelMarker>{tm("preview.components.new")}</LabelMarker>
@@ -37,7 +37,7 @@ function Demo() {
           placeholder={tm("preview.components.standard")}
         />
       </div>
-      <div className="rounded-[16px] border border-[#2E3038] bg-white p-4">
+      <div className="rounded-sticker-lg border border-ink bg-white p-4">
         <Label htmlFor="label-large" size="lg">
           {tm("preview.components.largeCaption")}
         </Label>

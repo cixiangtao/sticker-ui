@@ -4,7 +4,7 @@ import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
-  className: "bg-[#F6EFFF]",
+  className: "bg-fill-secondary",
   order: 30,
   titleKey: "preview.components.verticalStack",
   descriptionKey:
@@ -19,21 +19,27 @@ function Demo() {
         <Tag color="info" size="sm">
           {tm("preview.components.queue")}
         </Tag>
-        <strong className="text-lg leading-6 text-ink">12 ready</strong>
+        <strong className="text-lg leading-6 text-ink">
+          {tm("preview.components.12Ready")}
+        </strong>
       </div>
       <Divider decorative={false} orientation="vertical" tone="secondary" />
       <div className="grid min-w-36 content-center gap-2">
         <Tag color="warning" size="sm">
           {tm("preview.components.review")}
         </Tag>
-        <strong className="text-lg leading-6 text-ink">4 pending</strong>
+        <strong className="text-lg leading-6 text-ink">
+          {tm("preview.components.4Pending")}
+        </strong>
       </div>
       <Divider orientation="vertical" tone="success" variant="dashed" />
       <div className="grid min-w-36 content-center gap-2">
         <Tag color="success" size="sm">
           {tm("preview.components.shipped")}
         </Tag>
-        <strong className="text-lg leading-6 text-ink">28 done</strong>
+        <strong className="text-lg leading-6 text-ink">
+          {tm("preview.components.28Done")}
+        </strong>
       </div>
     </div>
   )
