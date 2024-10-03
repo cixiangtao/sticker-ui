@@ -330,20 +330,9 @@
           {
             "defaultValue": "default",
             "name": "color",
-            "values": [
-              "danger",
-              "default",
-              "info",
-              "secondary",
-              "success",
-              "warning"
-            ]
+            "values": ["danger", "default", "info", "secondary", "success", "warning"]
           },
-          {
-            "defaultValue": "md",
-            "name": "size",
-            "values": ["icon", "lg", "md", "sm"]
-          },
+          { "defaultValue": "md", "name": "size", "values": ["icon", "lg", "md", "sm"] },
           {
             "defaultValue": "solid",
             "name": "variant",
@@ -363,10 +352,7 @@
           "descriptionKey": "api.card.components.Card.props.description",
           "remarks": "Inherits native HTML attributes and adds semantic element and interactive states.",
           "remarksKey": "api.card.components.Card.props.remarks",
-          "inherits": [
-            "React.HTMLAttributes<HTMLElement>",
-            "VariantProps<typeof cardVariants>"
-          ],
+          "inherits": ["React.HTMLAttributes<HTMLElement>", "VariantProps<typeof cardVariants>"],
           "inheritedMembers": [
             {
               "description": "Identifies elements that describe the control.",
@@ -568,27 +554,15 @@
       },
       {
         "name": "CardContent",
-        "props": {
-          "inherits": [],
-          "members": [],
-          "type": "React.ComponentProps<\"div\">"
-        }
+        "props": { "inherits": [], "members": [], "type": "React.ComponentProps<\"div\">" }
       },
       {
         "name": "CardDescription",
-        "props": {
-          "inherits": [],
-          "members": [],
-          "type": "React.ComponentProps<\"p\">"
-        }
+        "props": { "inherits": [], "members": [], "type": "React.ComponentProps<\"p\">" }
       },
       {
         "name": "CardFooter",
-        "props": {
-          "inherits": [],
-          "members": [],
-          "type": "React.ComponentProps<\"footer\">"
-        }
+        "props": { "inherits": [], "members": [], "type": "React.ComponentProps<\"footer\">" }
       },
       {
         "name": "CardHeader",
@@ -781,11 +755,7 @@
       },
       {
         "name": "CardTitle",
-        "props": {
-          "inherits": [],
-          "members": [],
-          "type": "React.ComponentProps<\"h3\">"
-        }
+        "props": { "inherits": [], "members": [], "type": "React.ComponentProps<\"h3\">" }
       }
     ],
     "description": "A composable handbook sticker surface for cards, panels, and grouped content.",
@@ -851,10 +821,7 @@
         "descriptionKey": "api.card.types.CardProps.description",
         "remarks": "Inherits native HTML attributes and adds semantic element and interactive states.",
         "remarksKey": "api.card.types.CardProps.remarks",
-        "inherits": [
-          "React.HTMLAttributes<HTMLElement>",
-          "VariantProps<typeof cardVariants>"
-        ],
+        "inherits": ["React.HTMLAttributes<HTMLElement>", "VariantProps<typeof cardVariants>"],
         "kind": "interface",
         "members": [
           {
@@ -911,11 +878,7 @@
         "description": "Builds the sticker card header className from structure variants.",
         "descriptionKey": "api.card.variants.cardHeaderVariants.description",
         "groups": [
-          {
-            "defaultValue": "solid",
-            "name": "divider",
-            "values": ["dashed", "none", "solid"]
-          },
+          { "defaultValue": "solid", "name": "divider", "values": ["dashed", "none", "solid"] },
           {
             "defaultValue": "none",
             "name": "dividerInset",
@@ -928,11 +891,7 @@
         "description": "Builds the sticker card className from structure variants.",
         "descriptionKey": "api.card.variants.cardVariants.description",
         "groups": [
-          {
-            "defaultValue": "md",
-            "name": "padding",
-            "values": ["lg", "md", "none", "sm"]
-          },
+          { "defaultValue": "md", "name": "padding", "values": ["lg", "md", "none", "sm"] },
           {
             "defaultValue": "elevated",
             "name": "variant",
@@ -954,10 +913,7 @@
           "descriptionKey": "api.layout.components.Flex.props.description",
           "remarks": "Inherits native HTML attributes and adds static Tailwind-safe layout variants.",
           "remarksKey": "api.layout.components.Flex.props.remarks",
-          "inherits": [
-            "React.HTMLAttributes<HTMLElement>",
-            "VariantProps<typeof flexVariants>"
-          ],
+          "inherits": ["React.HTMLAttributes<HTMLElement>", "VariantProps<typeof flexVariants>"],
           "inheritedMembers": [
             {
               "description": "Identifies elements that describe the control.",
@@ -1193,10 +1149,7 @@
           "descriptionKey": "api.layout.components.Grid.props.description",
           "remarks": "Inherits native HTML attributes and adds static Tailwind-safe layout variants.",
           "remarksKey": "api.layout.components.Grid.props.remarks",
-          "inherits": [
-            "React.HTMLAttributes<HTMLElement>",
-            "VariantProps<typeof gridVariants>"
-          ],
+          "inherits": ["React.HTMLAttributes<HTMLElement>", "VariantProps<typeof gridVariants>"],
           "inheritedMembers": [
             {
               "description": "Identifies elements that describe the control.",
@@ -1468,10 +1421,7 @@
         "descriptionKey": "api.layout.types.FlexProps.description",
         "remarks": "Inherits native HTML attributes and adds static Tailwind-safe layout variants.",
         "remarksKey": "api.layout.types.FlexProps.remarks",
-        "inherits": [
-          "React.HTMLAttributes<HTMLElement>",
-          "VariantProps<typeof flexVariants>"
-        ],
+        "inherits": ["React.HTMLAttributes<HTMLElement>", "VariantProps<typeof flexVariants>"],
         "kind": "interface",
         "members": [
           {
@@ -1554,10 +1504,7 @@
         "descriptionKey": "api.layout.types.GridProps.description",
         "remarks": "Inherits native HTML attributes and adds static Tailwind-safe layout variants.",
         "remarksKey": "api.layout.types.GridProps.remarks",
-        "inherits": [
-          "React.HTMLAttributes<HTMLElement>",
-          "VariantProps<typeof gridVariants>"
-        ],
+        "inherits": ["React.HTMLAttributes<HTMLElement>", "VariantProps<typeof gridVariants>"],
         "kind": "interface",
         "members": [
           {
@@ -1642,26 +1589,14 @@
             "name": "direction",
             "values": ["column", "column-reverse", "row", "row-reverse"]
           },
-          {
-            "defaultValue": "md",
-            "name": "gap",
-            "values": ["lg", "md", "none", "sm", "xl", "xs"]
-          },
-          {
-            "defaultValue": "false",
-            "name": "inline",
-            "values": ["false", "true"]
-          },
+          { "defaultValue": "md", "name": "gap", "values": ["lg", "md", "none", "sm", "xl", "xs"] },
+          { "defaultValue": "false", "name": "inline", "values": ["false", "true"] },
           {
             "defaultValue": "start",
             "name": "justify",
             "values": ["around", "between", "center", "end", "evenly", "start"]
           },
-          {
-            "defaultValue": "nowrap",
-            "name": "wrap",
-            "values": ["nowrap", "reverse", "wrap"]
-          }
+          { "defaultValue": "nowrap", "name": "wrap", "values": ["nowrap", "reverse", "wrap"] }
         ],
         "name": "flexVariants"
       },
@@ -1691,16 +1626,8 @@
               "responsive-4"
             ]
           },
-          {
-            "defaultValue": "md",
-            "name": "gap",
-            "values": ["lg", "md", "none", "sm", "xl", "xs"]
-          },
-          {
-            "defaultValue": "false",
-            "name": "inline",
-            "values": ["false", "true"]
-          },
+          { "defaultValue": "md", "name": "gap", "values": ["lg", "md", "none", "sm", "xl", "xs"] },
+          { "defaultValue": "false", "name": "inline", "values": ["false", "true"] },
           {
             "defaultValue": "stretch",
             "name": "justify",
@@ -2045,25 +1972,10 @@
           {
             "defaultValue": "default",
             "name": "tone",
-            "values": [
-              "danger",
-              "default",
-              "info",
-              "secondary",
-              "success",
-              "warning"
-            ]
+            "values": ["danger", "default", "info", "secondary", "success", "warning"]
           },
-          {
-            "defaultValue": "solid",
-            "name": "variant",
-            "values": ["dashed", "dotted", "solid"]
-          },
-          {
-            "defaultValue": "md",
-            "name": "weight",
-            "values": ["lg", "md", "sm"]
-          }
+          { "defaultValue": "solid", "name": "variant", "values": ["dashed", "dotted", "solid"] },
+          { "defaultValue": "md", "name": "weight", "values": ["lg", "md", "sm"] }
         ],
         "name": "dividerLineVariants"
       },
@@ -2071,11 +1983,7 @@
         "description": "Builds the divider root className from orientation and label alignment.",
         "descriptionKey": "api.divider.variants.dividerVariants.description",
         "groups": [
-          {
-            "defaultValue": "center",
-            "name": "align",
-            "values": ["center", "end", "start"]
-          },
+          { "defaultValue": "center", "name": "align", "values": ["center", "end", "start"] },
           {
             "defaultValue": "horizontal",
             "name": "orientation",
@@ -2567,59 +2475,31 @@
       },
       {
         "name": "TableBody",
-        "props": {
-          "inherits": [],
-          "members": [],
-          "type": "React.ComponentProps<\"tbody\">"
-        }
+        "props": { "inherits": [], "members": [], "type": "React.ComponentProps<\"tbody\">" }
       },
       {
         "name": "TableCaption",
-        "props": {
-          "inherits": [],
-          "members": [],
-          "type": "React.ComponentProps<\"caption\">"
-        }
+        "props": { "inherits": [], "members": [], "type": "React.ComponentProps<\"caption\">" }
       },
       {
         "name": "TableCell",
-        "props": {
-          "inherits": [],
-          "members": [],
-          "type": "React.ComponentProps<\"td\">"
-        }
+        "props": { "inherits": [], "members": [], "type": "React.ComponentProps<\"td\">" }
       },
       {
         "name": "TableFooter",
-        "props": {
-          "inherits": [],
-          "members": [],
-          "type": "React.ComponentProps<\"tfoot\">"
-        }
+        "props": { "inherits": [], "members": [], "type": "React.ComponentProps<\"tfoot\">" }
       },
       {
         "name": "TableHead",
-        "props": {
-          "inherits": [],
-          "members": [],
-          "type": "React.ComponentProps<\"th\">"
-        }
+        "props": { "inherits": [], "members": [], "type": "React.ComponentProps<\"th\">" }
       },
       {
         "name": "TableHeader",
-        "props": {
-          "inherits": [],
-          "members": [],
-          "type": "React.ComponentProps<\"thead\">"
-        }
+        "props": { "inherits": [], "members": [], "type": "React.ComponentProps<\"thead\">" }
       },
       {
         "name": "TableRow",
-        "props": {
-          "inherits": [],
-          "members": [],
-          "type": "React.ComponentProps<\"tr\">"
-        }
+        "props": { "inherits": [], "members": [], "type": "React.ComponentProps<\"tr\">" }
       }
     ],
     "description": "A scrollable paper table frame for API references and structured data.",
@@ -2674,10 +2554,7 @@
           "descriptionKey": "api.tag.components.Tag.props.description",
           "remarks": "Inherits native HTML attributes and adds semantic element and sticker variants.",
           "remarksKey": "api.tag.components.Tag.props.remarks",
-          "inherits": [
-            "React.HTMLAttributes<HTMLElement>",
-            "VariantProps<typeof tagVariants>"
-          ],
+          "inherits": ["React.HTMLAttributes<HTMLElement>", "VariantProps<typeof tagVariants>"],
           "inheritedMembers": [
             {
               "description": "Identifies elements that describe the control.",
@@ -2907,10 +2784,7 @@
         "descriptionKey": "api.tag.types.TagProps.description",
         "remarks": "Inherits native HTML attributes and adds semantic element and sticker variants.",
         "remarksKey": "api.tag.types.TagProps.remarks",
-        "inherits": [
-          "React.HTMLAttributes<HTMLElement>",
-          "VariantProps<typeof tagVariants>"
-        ],
+        "inherits": ["React.HTMLAttributes<HTMLElement>", "VariantProps<typeof tagVariants>"],
         "kind": "interface",
         "members": [
           {
@@ -2979,30 +2853,11 @@
           {
             "defaultValue": "default",
             "name": "color",
-            "values": [
-              "danger",
-              "default",
-              "info",
-              "secondary",
-              "success",
-              "warning"
-            ]
+            "values": ["danger", "default", "info", "secondary", "success", "warning"]
           },
-          {
-            "defaultValue": "rounded",
-            "name": "rounded",
-            "values": ["pill", "rounded"]
-          },
-          {
-            "defaultValue": "default",
-            "name": "size",
-            "values": ["default", "lg", "sm", "xs"]
-          },
-          {
-            "defaultValue": "solid",
-            "name": "variant",
-            "values": ["filled", "outlined", "solid"]
-          }
+          { "defaultValue": "rounded", "name": "rounded", "values": ["pill", "rounded"] },
+          { "defaultValue": "default", "name": "size", "values": ["default", "lg", "sm", "xs"] },
+          { "defaultValue": "solid", "name": "variant", "values": ["filled", "outlined", "solid"] }
         ],
         "name": "tagVariants"
       }
@@ -3577,10 +3432,7 @@
         "descriptionKey": "api.alert.types.AlertProps.description",
         "remarks": "Inherits native div attributes and adds semantic tone, size, and structure variants.",
         "remarksKey": "api.alert.types.AlertProps.remarks",
-        "inherits": [
-          "React.HTMLAttributes<HTMLDivElement>",
-          "VariantProps<typeof alertVariants>"
-        ],
+        "inherits": ["React.HTMLAttributes<HTMLDivElement>", "VariantProps<typeof alertVariants>"],
         "kind": "interface",
         "members": [
           {
@@ -3626,22 +3478,11 @@
         "description": "Builds the sticker alert className from tone and variant options.",
         "descriptionKey": "api.alert.variants.alertVariants.description",
         "groups": [
-          {
-            "defaultValue": "md",
-            "name": "size",
-            "values": ["lg", "md", "sm"]
-          },
+          { "defaultValue": "md", "name": "size", "values": ["lg", "md", "sm"] },
           {
             "defaultValue": "default",
             "name": "tone",
-            "values": [
-              "danger",
-              "default",
-              "info",
-              "secondary",
-              "success",
-              "warning"
-            ]
+            "values": ["danger", "default", "info", "secondary", "success", "warning"]
           },
           {
             "defaultValue": "stripe",
@@ -3881,11 +3722,7 @@
       },
       {
         "name": "LabelDescription",
-        "props": {
-          "inherits": [],
-          "members": [],
-          "type": "React.ComponentProps<\"p\">"
-        }
+        "props": { "inherits": [], "members": [], "type": "React.ComponentProps<\"p\">" }
       },
       {
         "name": "LabelMarker",
@@ -4165,11 +4002,7 @@
         "description": "Builds the sticker label className from size and tone variants.",
         "descriptionKey": "api.label.variants.labelTones.description",
         "groups": [
-          {
-            "defaultValue": "default",
-            "name": "size",
-            "values": ["default", "lg", "sm"]
-          },
+          { "defaultValue": "default", "name": "size", "values": ["default", "lg", "sm"] },
           {
             "defaultValue": "default",
             "name": "tone",
@@ -4566,22 +4399,11 @@
         "description": "Builds the sticker input className from structure, tone, and size variants.",
         "descriptionKey": "api.input.variants.inputVariants.description",
         "groups": [
-          {
-            "defaultValue": "md",
-            "name": "size",
-            "values": ["lg", "md", "sm"]
-          },
+          { "defaultValue": "md", "name": "size", "values": ["lg", "md", "sm"] },
           {
             "defaultValue": "default",
             "name": "tone",
-            "values": [
-              "danger",
-              "default",
-              "info",
-              "secondary",
-              "success",
-              "warning"
-            ]
+            "values": ["danger", "default", "info", "secondary", "success", "warning"]
           },
           {
             "defaultValue": "outlined",
@@ -5938,9 +5760,7 @@
         "props": {
           "description": "Props for the sticker tooltip provider.",
           "descriptionKey": "api.tooltip.components.TooltipProvider.props.description",
-          "inherits": [
-            "React.ComponentPropsWithoutRef< typeof TooltipPrimitive.Provider >"
-          ],
+          "inherits": ["React.ComponentPropsWithoutRef< typeof TooltipPrimitive.Provider >"],
           "inheritedMembers": [
             {
               "description": "Content rendered inside the element.",
@@ -6080,9 +5900,7 @@
       {
         "description": "Props for the sticker tooltip provider.",
         "descriptionKey": "api.tooltip.types.TooltipProviderProps.description",
-        "inherits": [
-          "React.ComponentPropsWithoutRef< typeof TooltipPrimitive.Provider >"
-        ],
+        "inherits": ["React.ComponentPropsWithoutRef< typeof TooltipPrimitive.Provider >"],
         "kind": "interface",
         "members": [
           {
@@ -6112,11 +5930,7 @@
         "description": "Builds the sticker tooltip content className from tone and size options.",
         "descriptionKey": "api.tooltip.variants.tooltipContentVariants.description",
         "groups": [
-          {
-            "defaultValue": "md",
-            "name": "size",
-            "values": ["lg", "md", "sm"]
-          },
+          { "defaultValue": "md", "name": "size", "values": ["lg", "md", "sm"] },
           {
             "defaultValue": "default",
             "name": "tone",
@@ -6463,11 +6277,7 @@
         "description": "Builds the sticker popover content className from tone and size options.",
         "descriptionKey": "api.popover.variants.popoverContentVariants.description",
         "groups": [
-          {
-            "defaultValue": "md",
-            "name": "size",
-            "values": ["lg", "md", "sm"]
-          },
+          { "defaultValue": "md", "name": "size", "values": ["lg", "md", "sm"] },
           {
             "defaultValue": "default",
             "name": "tone",
@@ -6717,21 +6527,13 @@
         "description": "Footer area for dialog actions.",
         "descriptionKey": "api.dialog.components.DialogFooter.description",
         "name": "DialogFooter",
-        "props": {
-          "inherits": [],
-          "members": [],
-          "type": "React.ComponentProps<\"footer\">"
-        }
+        "props": { "inherits": [], "members": [], "type": "React.ComponentProps<\"footer\">" }
       },
       {
         "description": "Header area for dialog title and description.",
         "descriptionKey": "api.dialog.components.DialogHeader.description",
         "name": "DialogHeader",
-        "props": {
-          "inherits": [],
-          "members": [],
-          "type": "React.ComponentProps<\"header\">"
-        }
+        "props": { "inherits": [], "members": [], "type": "React.ComponentProps<\"header\">" }
       },
       {
         "description": "Sticker dialog scrim.",
@@ -7078,11 +6880,7 @@
         "description": "Builds the sticker dialog content className from size and tone options.",
         "descriptionKey": "api.dialog.variants.dialogContentVariants.description",
         "groups": [
-          {
-            "defaultValue": "md",
-            "name": "size",
-            "values": ["lg", "md", "sm"]
-          },
+          { "defaultValue": "md", "name": "size", "values": ["lg", "md", "sm"] },
           {
             "defaultValue": "default",
             "name": "tone",
@@ -9059,13 +8857,7 @@
         "name": "NamePath",
         "type": "NamePathPart | readonly NamePathPart[]"
       },
-      {
-        "inherits": [],
-        "kind": "type",
-        "members": [],
-        "name": "StoreValue",
-        "type": "unknown"
-      },
+      { "inherits": [], "kind": "type", "members": [], "name": "StoreValue", "type": "unknown" },
       {
         "description": "Error info passed to `onFinishFailed`.",
         "descriptionKey": "api.form.types.ValidateErrorInfo.description",
