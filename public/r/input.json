@@ -3,8 +3,12 @@
   "name": "input",
   "title": "Sticker Input",
   "description": "A native form input with chunky sticker frames and semantic field states.",
-  "dependencies": ["class-variance-authority"],
-  "registryDependencies": ["utils"],
+  "dependencies": [
+    "class-variance-authority"
+  ],
+  "registryDependencies": [
+    "utils"
+  ],
   "files": [
     {
       "path": "src/components/ui/input.tsx",

@@ -39,12 +39,40 @@ const Dialog = DialogPrimitive.Root
 /**
  * Opens the dialog.
  */
-const DialogTrigger = DialogPrimitive.Trigger
+const DialogTrigger = React.forwardRef<
+  React.ElementRef<typeof DialogPrimitive.Trigger>,
+  React.ComponentPropsWithoutRef<typeof DialogPrimitive.Trigger>
+>(({ className, ...props }, ref) => (
+  <DialogPrimitive.Trigger
+    className={cn(
+      "cursor-pointer disabled:cursor-not-allowed data-[disabled]:cursor-not-allowed",
+      className,
+    )}
+    data-slot="dialog-trigger"
+    ref={ref}
+    {...props}
+  />
+))
+DialogTrigger.displayName = DialogPrimitive.Trigger.displayName
 
 /**
  * Closes the dialog when activated.
  */
-const DialogClose = DialogPrimitive.Close
+const DialogClose = React.forwardRef<
+  React.ElementRef<typeof DialogPrimitive.Close>,
+  React.ComponentPropsWithoutRef<typeof DialogPrimitive.Close>
+>(({ className, ...props }, ref) => (
+  <DialogPrimitive.Close
+    className={cn(
+      "cursor-pointer disabled:cursor-not-allowed data-[disabled]:cursor-not-allowed",
+      className,
+    )}
+    data-slot="dialog-close"
+    ref={ref}
+    {...props}
+  />
+))
+DialogClose.displayName = DialogPrimitive.Close.displayName
 
 /**
  * Portals dialog overlay and content to the document body.
@@ -136,13 +164,12 @@ const DialogContent = React.forwardRef<
       >
         {children}
         {showClose ? (
-          <DialogPrimitive.Close
+          <DialogClose
             aria-label={closeLabel}
-            className="absolute top-4 right-4 inline-flex size-9 items-center justify-center rounded-sticker-md border-2 border-ink bg-surface text-ink shadow-sticker-sm transition duration-150 outline-none hover:-translate-y-0.5 hover:shadow-sticker-md focus-visible:ring-[2px] focus-visible:ring-ring/65 active:translate-x-0.5 active:translate-y-0.5 active:shadow-sticker-xs"
-            data-slot="dialog-close"
+            className="absolute top-4 right-4 inline-flex size-9 cursor-pointer items-center justify-center rounded-sticker-md border-2 border-ink bg-surface text-ink shadow-sticker-sm transition duration-150 outline-none hover:-translate-y-0.5 hover:shadow-sticker-md focus-visible:ring-[2px] focus-visible:ring-ring/65 active:translate-x-0.5 active:translate-y-0.5 active:shadow-sticker-xs"
           >
             <X aria-hidden="true" className="size-4 stroke-[3]" />
-          </DialogPrimitive.Close>
+          </DialogClose>
         ) : null}
       </DialogPrimitive.Content>
     </DialogPortal>

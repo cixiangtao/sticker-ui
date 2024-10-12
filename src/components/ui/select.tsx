@@ -74,7 +74,7 @@ const selectVariants = ({
 }: SelectVariantOptions = {}) =>
   cn(
     inputVariants({ size, tone, variant }),
-    "items-center justify-between gap-2 text-left data-[placeholder]:text-text-placeholder data-[state=open]:shadow-sticker-md data-[state=open]:ring-[2px] data-[state=open]:ring-ring/65 [&>span]:truncate",
+    "cursor-pointer items-center justify-between gap-2 text-left data-[placeholder]:text-text-placeholder data-[state=open]:shadow-sticker-md data-[state=open]:ring-[2px] data-[state=open]:ring-ring/65 [&>span]:truncate",
     selectSizeClassNames[size].trigger,
     className,
   )

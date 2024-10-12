@@ -3,7 +3,9 @@
   "name": "table",
   "title": "Sticker Table",
   "description": "A scrollable paper table frame for API references and structured data.",
-  "registryDependencies": ["utils"],
+  "registryDependencies": [
+    "utils"
+  ],
   "files": [
     {
       "path": "src/components/ui/table.tsx",

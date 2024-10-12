@@ -74,7 +74,21 @@ const Tooltip = TooltipPrimitive.Root
 /**
  * Opens the tooltip on hover or focus.
  */
-const TooltipTrigger = TooltipPrimitive.Trigger
+const TooltipTrigger = React.forwardRef<
+  React.ElementRef<typeof TooltipPrimitive.Trigger>,
+  React.ComponentPropsWithoutRef<typeof TooltipPrimitive.Trigger>
+>(({ className, ...props }, ref) => (
+  <TooltipPrimitive.Trigger
+    className={cn(
+      "cursor-pointer disabled:cursor-not-allowed data-[disabled]:cursor-not-allowed",
+      className,
+    )}
+    data-slot="tooltip-trigger"
+    ref={ref}
+    {...props}
+  />
+))
+TooltipTrigger.displayName = TooltipPrimitive.Trigger.displayName
 
 /**
  * Props for sticker tooltip content.

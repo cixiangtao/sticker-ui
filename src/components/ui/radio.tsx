@@ -103,7 +103,7 @@ const radioVariants = ({
   variant = "outlined",
 }: RadioVariantOptions = {}) =>
   cn(
-    "peer inline-flex shrink-0 items-center justify-center rounded-full border-2 border-ink bg-surface text-ink shadow-sticker-sm transition duration-150 outline-none focus-visible:shadow-sticker-md focus-visible:ring-[2px] focus-visible:ring-ring/65 disabled:cursor-not-allowed disabled:opacity-55 aria-invalid:border-text-danger aria-invalid:bg-fill-danger-soft data-[state=checked]:shadow-sticker-md",
+    "peer inline-flex shrink-0 cursor-pointer items-center justify-center rounded-full border-2 border-ink bg-surface text-ink shadow-sticker-sm transition duration-150 outline-none focus-visible:shadow-sticker-md focus-visible:ring-[2px] focus-visible:ring-ring/65 disabled:cursor-not-allowed disabled:opacity-55 aria-invalid:border-text-danger aria-invalid:bg-fill-danger-soft data-[state=checked]:shadow-sticker-md",
     radioSizeClassNames[size].item,
     radioToneClassNames[tone].checked,
     variant === "filled" && radioToneClassNames[tone].fill,

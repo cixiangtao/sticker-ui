@@ -39,7 +39,21 @@ const Popover = PopoverPrimitive.Root
 /**
  * Opens the popover.
  */
-const PopoverTrigger = PopoverPrimitive.Trigger
+const PopoverTrigger = React.forwardRef<
+  React.ElementRef<typeof PopoverPrimitive.Trigger>,
+  React.ComponentPropsWithoutRef<typeof PopoverPrimitive.Trigger>
+>(({ className, ...props }, ref) => (
+  <PopoverPrimitive.Trigger
+    className={cn(
+      "cursor-pointer disabled:cursor-not-allowed data-[disabled]:cursor-not-allowed",
+      className,
+    )}
+    data-slot="popover-trigger"
+    ref={ref}
+    {...props}
+  />
+))
+PopoverTrigger.displayName = PopoverPrimitive.Trigger.displayName
 
 /**
  * Positions popover content against a custom anchor.
@@ -49,7 +63,21 @@ const PopoverAnchor = PopoverPrimitive.Anchor
 /**
  * Closes the popover when activated.
  */
-const PopoverClose = PopoverPrimitive.Close
+const PopoverClose = React.forwardRef<
+  React.ElementRef<typeof PopoverPrimitive.Close>,
+  React.ComponentPropsWithoutRef<typeof PopoverPrimitive.Close>
+>(({ className, ...props }, ref) => (
+  <PopoverPrimitive.Close
+    className={cn(
+      "cursor-pointer disabled:cursor-not-allowed data-[disabled]:cursor-not-allowed",
+      className,
+    )}
+    data-slot="popover-close"
+    ref={ref}
+    {...props}
+  />
+))
+PopoverClose.displayName = PopoverPrimitive.Close.displayName
 
 /**
  * Props for sticker popover content.

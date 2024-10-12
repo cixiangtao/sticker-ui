@@ -3,8 +3,12 @@
   "name": "alert",
   "title": "Sticker Alert",
   "description": "A readable sticker note for status messages and feedback.",
-  "dependencies": ["class-variance-authority"],
-  "registryDependencies": ["utils"],
+  "dependencies": [
+    "class-variance-authority"
+  ],
+  "registryDependencies": [
+    "utils"
+  ],
   "files": [
     {
       "path": "src/components/ui/alert.tsx",

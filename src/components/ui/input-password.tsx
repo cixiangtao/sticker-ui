@@ -139,7 +139,7 @@ function InputPassword({
         aria-label={visibilityLabel}
         aria-pressed={visible}
         className={cn(
-          "inline-flex shrink-0 items-center justify-center rounded-sticker-md bg-transparent text-ink/70 transition duration-150 outline-none hover:text-ink focus-visible:ring-2 focus-visible:ring-ring/65 active:text-ink disabled:pointer-events-none disabled:opacity-55",
+          "inline-flex shrink-0 cursor-pointer items-center justify-center rounded-sticker-md bg-transparent text-ink/70 transition duration-150 outline-none hover:text-ink focus-visible:ring-2 focus-visible:ring-ring/65 active:text-ink disabled:pointer-events-none disabled:opacity-55",
           inputPasswordSizeClassNames[size].toggle,
         )}
         data-slot="input-password-toggle"

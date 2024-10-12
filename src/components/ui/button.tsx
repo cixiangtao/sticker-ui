@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils"
  * Builds the sticker button className from structure, color, and size variants.
  */
 const buttonVariants = cva(
-  "inline-flex shrink-0 items-center justify-center gap-2 rounded-sticker-md border-2 leading-none font-extrabold transition duration-150 outline-none focus-visible:ring-[2px] focus-visible:ring-ring/65 disabled:pointer-events-none disabled:opacity-55 data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-55 data-[loading=true]:cursor-wait data-[loading=true]:opacity-75",
+  "inline-flex shrink-0 cursor-pointer items-center justify-center gap-2 rounded-sticker-md border-2 leading-none font-extrabold transition duration-150 outline-none focus-visible:ring-[2px] focus-visible:ring-ring/65 disabled:pointer-events-none disabled:opacity-55 data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-55 data-[loading=true]:cursor-wait data-[loading=true]:opacity-75",
   {
     compoundVariants: [
       {

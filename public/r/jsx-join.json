@@ -3,7 +3,9 @@
   "name": "jsx-join",
   "title": "JsxJoin",
   "description": "A tiny React utility that inserts separators between JSX children.",
-  "registryDependencies": ["utils"],
+  "registryDependencies": [
+    "utils"
+  ],
   "files": [
     {
       "path": "src/components/ui/jsx-join.tsx",
