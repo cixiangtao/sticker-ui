@@ -10,7 +10,7 @@ type LabelTone = "danger" | "default" | "muted" | "success" | "warning"
  * Builds the sticker label className from size and tone variants.
  */
 const labelTones = cva(
-  "inline-flex w-fit min-w-0 items-center gap-2 leading-none font-black text-ink",
+  "inline-flex w-fit min-w-0 items-center gap-2 leading-none font-black text-ink select-none",
   {
     defaultVariants: {
       size: "default",

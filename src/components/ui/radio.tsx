@@ -51,36 +51,37 @@ const radioSizeClassNames = {
 const radioToneClassNames = {
   danger: {
     checked:
-      "data-[state=checked]:bg-fill-danger data-[state=checked]:text-ink",
+      "data-[state=checked]:bg-surface data-[state=checked]:text-accent-danger",
     fill: "bg-fill-danger-soft text-text-danger",
     quiet: "bg-fill-danger-soft text-text-danger",
   },
   default: {
     checked:
-      "data-[state=checked]:bg-fill-default data-[state=checked]:text-ink",
+      "data-[state=checked]:bg-surface data-[state=checked]:text-fill-default",
     fill: "bg-fill-default-soft text-ink",
     quiet: "bg-surface-muted text-ink",
   },
   info: {
-    checked: "data-[state=checked]:bg-fill-info data-[state=checked]:text-ink",
+    checked:
+      "data-[state=checked]:bg-surface data-[state=checked]:text-accent-info",
     fill: "bg-fill-info text-text-info",
     quiet: "bg-fill-info text-text-info",
   },
   secondary: {
     checked:
-      "data-[state=checked]:bg-fill-secondary data-[state=checked]:text-ink",
+      "data-[state=checked]:bg-surface data-[state=checked]:text-accent-secondary",
     fill: "bg-fill-secondary text-text-secondary",
     quiet: "bg-fill-secondary text-text-secondary",
   },
   success: {
     checked:
-      "data-[state=checked]:bg-fill-success data-[state=checked]:text-ink",
+      "data-[state=checked]:bg-surface data-[state=checked]:text-accent-success",
     fill: "bg-fill-success text-text-success",
     quiet: "bg-fill-success text-text-success",
   },
   warning: {
     checked:
-      "data-[state=checked]:bg-fill-warning data-[state=checked]:text-ink",
+      "data-[state=checked]:bg-surface data-[state=checked]:text-accent-warning",
     fill: "bg-fill-warning text-text-warning",
     quiet: "bg-fill-warning text-text-warning",
   },
@@ -103,7 +104,7 @@ const radioVariants = ({
   variant = "outlined",
 }: RadioVariantOptions = {}) =>
   cn(
-    "peer inline-flex shrink-0 cursor-pointer items-center justify-center rounded-full border-2 border-ink bg-surface text-ink shadow-sticker-sm transition duration-150 outline-none focus-visible:shadow-sticker-md focus-visible:ring-[2px] focus-visible:ring-ring/65 disabled:cursor-not-allowed disabled:opacity-55 aria-invalid:border-text-danger aria-invalid:bg-fill-danger-soft data-[state=checked]:shadow-sticker-md",
+    "peer inline-flex shrink-0 cursor-pointer items-center justify-center rounded-full border-2 border-ink bg-surface text-ink shadow-sticker-sm transition-shadow duration-150 outline-none focus-visible:shadow-sticker-md focus-visible:ring-[2px] focus-visible:ring-ring/65 disabled:cursor-not-allowed disabled:opacity-55 aria-invalid:border-text-danger aria-invalid:bg-fill-danger-soft data-[state=checked]:shadow-sticker-md",
     radioSizeClassNames[size].item,
     radioToneClassNames[tone].checked,
     variant === "filled" && radioToneClassNames[tone].fill,
