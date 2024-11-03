@@ -9,7 +9,6 @@ import {
   Tag,
 } from "sticker-ui"
 
-import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -21,31 +20,28 @@ const meta = defineMeta({
 })
 
 function Demo() {
-  const { tm } = usePreviewI18n()
   return (
     <Card className="max-w-md">
       <CardHeader>
         <Tag rounded="pill" size="sm">
-          {tm("preview.components.preview")}
+          Preview
         </Tag>
-        <CardTitle>{tm("preview.components.componentKit")}</CardTitle>
+        <CardTitle>Component Kit</CardTitle>
         <CardDescription>
-          {tm(
-            "preview.components.aCompactPaperCardForComponentSummariesDocsLinksAndQuickActions",
-          )}
+          A compact paper card for component summaries docs links and quick
+          actions.
         </CardDescription>
       </CardHeader>
       <CardContent>
         <p className="m-0 text-sm leading-6 font-medium text-text-muted">
-          {tm(
-            "preview.components.theHeaderOwnsTheAccentStripWhileTheContentKeepsAQuieterPaperSurfaceForLongerCopy",
-          )}
+          The header owns the accent strip while the content keeps a quieter
+          paper surface for longer copy.
         </p>
       </CardContent>
       <CardFooter>
-        <Button size="sm">{tm("preview.components.openDocs")}</Button>
+        <Button size="sm">Open Docs</Button>
         <Button size="sm" variant="text">
-          {tm("preview.components.copyImport")}
+          Copy Import
         </Button>
       </CardFooter>
     </Card>

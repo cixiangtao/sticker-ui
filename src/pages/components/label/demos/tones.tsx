@@ -1,6 +1,5 @@
 import { Label } from "sticker-ui"
 
-import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -12,30 +11,29 @@ const meta = defineMeta({
 })
 
 function Demo() {
-  const { tm } = usePreviewI18n()
   return (
     <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-5">
       <div className="rounded-sticker-lg border border-ink bg-white p-4">
-        <Label>{tm("preview.components.defaultLabel")}</Label>
+        <Label>Default Label</Label>
       </div>
       <div className="rounded-sticker-lg border border-ink bg-white p-4">
         <Label required tone="success">
-          {tm("preview.components.successLabel")}
+          Success Label
         </Label>
       </div>
       <div className="rounded-sticker-lg border border-ink bg-white p-4">
         <Label required tone="warning">
-          {tm("preview.components.warningLabel")}
+          Warning Label
         </Label>
       </div>
       <div className="rounded-sticker-lg border border-ink bg-white p-4">
         <Label required tone="danger">
-          {tm("preview.components.dangerLabel")}
+          Danger Label
         </Label>
       </div>
       <div className="rounded-sticker-lg border border-ink bg-white p-4">
         <Label optional tone="muted">
-          {tm("preview.components.mutedLabel")}
+          Muted Label
         </Label>
       </div>
     </div>

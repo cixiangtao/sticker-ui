@@ -1,7 +1,6 @@
 import * as React from "react"
 import { Button, InputPassword, Label, LabelDescription } from "sticker-ui"
 
-import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const MAX_PASSWORD_LENGTH = 8
@@ -19,7 +18,6 @@ function clampPassword(value: string) {
 }
 
 function Demo() {
-  const { tm } = usePreviewI18n()
   const [value, setValue] = React.useState("sticker")
   const remaining = MAX_PASSWORD_LENGTH - value.length
 
@@ -28,7 +26,7 @@ function Demo() {
       <div className="grid gap-3">
         <div className="flex items-end justify-between gap-3">
           <Label htmlFor="input-password-controlled-max-length">
-            {tm("preview.components.inviteSecret")}
+            Invite Secret
           </Label>
           <span className="rounded-sticker-sm border border-ink bg-surface px-2 py-1 text-xs font-extrabold text-text-muted">
             {value.length}/{MAX_PASSWORD_LENGTH}
@@ -36,14 +34,14 @@ function Demo() {
         </div>
         <InputPassword
           autoComplete="new-password"
-          hideLabel={tm("preview.components.hide")}
+          hideLabel="Hide"
           id="input-password-controlled-max-length"
           maxLength={MAX_PASSWORD_LENGTH}
           onChange={(nextValue) => {
             setValue(clampPassword(nextValue))
           }}
-          placeholder={tm("preview.components.tryTypingOrPastingALongPassword")}
-          showLabel={tm("preview.components.show")}
+          placeholder="Try typing or pasting a long password."
+          showLabel="Show"
           value={value}
         />
       </div>
@@ -55,7 +53,7 @@ function Demo() {
           size="sm"
           variant="outlined"
         >
-          {tm("preview.components.fillLongValue")}
+          Fill Long Value
         </Button>
         <Button
           onClick={() => {
@@ -64,7 +62,7 @@ function Demo() {
           size="sm"
           variant="text"
         >
-          {tm("preview.components.clear")}
+          Clear
         </Button>
       </div>
       <LabelDescription>

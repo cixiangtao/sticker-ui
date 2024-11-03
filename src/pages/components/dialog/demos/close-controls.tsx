@@ -10,7 +10,6 @@ import {
   DialogTrigger,
 } from "sticker-ui"
 
-import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -22,27 +21,20 @@ const meta = defineMeta({
 })
 
 function Demo() {
-  const { tm } = usePreviewI18n()
   return (
     <div className="flex flex-wrap gap-3">
       <Dialog>
         <DialogTrigger asChild>
           <Button color="success" variant="outlined">
-            {tm("preview.components.customLabel")}
+            Custom Label
           </Button>
         </DialogTrigger>
-        <DialogContent
-          closeLabel={tm("preview.components.closeReviewDialog")}
-          tone="info"
-        >
+        <DialogContent closeLabel="Close Review Dialog" tone="info">
           <DialogHeader>
-            <DialogTitle>
-              {tm("preview.components.accessibleCloseLabel")}
-            </DialogTitle>
+            <DialogTitle>Accessible Close Label</DialogTitle>
             <DialogDescription>
-              {tm(
-                "preview.components.theIconButtonKeepsTheSameVisualTreatmentWhileExposingAContextSpecificAriaLabel",
-              )}
+              The icon button keeps the same visual treatment while exposing a
+              context specific ARIA label.
             </DialogDescription>
           </DialogHeader>
         </DialogContent>
@@ -51,23 +43,20 @@ function Demo() {
       <Dialog>
         <DialogTrigger asChild>
           <Button color="warning" variant="outlined">
-            {tm("preview.components.footerOnly")}
+            Footer Only
           </Button>
         </DialogTrigger>
         <DialogContent showClose={false} tone="warning">
           <DialogHeader className="pr-0">
-            <DialogTitle>{tm("preview.components.noIconClose")}</DialogTitle>
+            <DialogTitle>No Icon Close</DialogTitle>
             <DialogDescription>
-              {tm(
-                "preview.components.someConfirmationsKeepDismissalInTheFooterSoTheAvailableChoicesRemainExplicit",
-              )}
+              Some confirmations keep dismissal in the footer so the available
+              choices remain explicit.
             </DialogDescription>
           </DialogHeader>
           <DialogFooter>
             <DialogClose asChild>
-              <Button color="warning">
-                {tm("preview.components.iUnderstand")}
-              </Button>
+              <Button color="warning">I Understand</Button>
             </DialogClose>
           </DialogFooter>
         </DialogContent>

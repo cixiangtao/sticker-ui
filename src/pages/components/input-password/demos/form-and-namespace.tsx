@@ -1,6 +1,5 @@
 import { Form, Input } from "sticker-ui"
 
-import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -12,47 +11,42 @@ const meta = defineMeta({
 })
 
 function Demo() {
-  const { tm } = usePreviewI18n()
   return (
     <Form
       initialValues={{
-        password: tm("preview.components.stickerSecret"),
+        password: "Sticker Secret",
       }}
       onFinish={() => undefined}
     >
       <div className="grid gap-4 md:grid-cols-2">
         <Form.Item
-          extra={tm(
-            "preview.components.formItemPassesValueOnchangeAndAriaInvalidThroughToTheInnerPasswordControl",
-          )}
-          label={tm("preview.components.accountPassword")}
+          extra="Form item passes value onchange and ARIA invalid through to the inner password control."
+          label="Account Password"
           name="password"
           rules={[
             {
-              message: tm("preview.components.passwordIsRequired"),
+              message: "Password Is Required",
               required: true,
             },
-            { message: tm("preview.components.useAtLeast8Characters"), min: 8 },
+            { message: "Use at least 8 characters.", min: 8 },
           ]}
         >
           <Input.Password
             autoComplete="current-password"
-            hideLabel={tm("preview.components.hide")}
-            placeholder={tm("preview.components.enterPassword")}
-            showLabel={tm("preview.components.show")}
+            hideLabel="Hide"
+            placeholder="Enter Password"
+            showLabel="Show"
           />
         </Form.Item>
         <Form.Item
-          extra={tm(
-            "preview.components.disabledPasswordInputsKeepTheFrameAndToggleInOneLockedState",
-          )}
-          label={tm("preview.components.archivedSecret")}
+          extra="Disabled password inputs keep the frame and toggle in one locked state."
+          label="Archived Secret"
         >
           <Input.Password
-            defaultValue={tm("preview.components.lockedSticker")}
+            defaultValue="Locked Sticker"
             disabled
-            hideLabel={tm("preview.components.hide")}
-            showLabel={tm("preview.components.show")}
+            hideLabel="Hide"
+            showLabel="Show"
             variant="filled"
           />
         </Form.Item>

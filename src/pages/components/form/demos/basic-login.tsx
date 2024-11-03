@@ -1,7 +1,6 @@
 import { useState } from "react"
 import { Button, Form, Input, Tag } from "sticker-ui"
 
-import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -13,7 +12,6 @@ const meta = defineMeta({
 })
 
 function Demo() {
-  const { tm } = usePreviewI18n()
   const [submittedEmail, setSubmittedEmail] = useState("Not submitted yet")
 
   return (
@@ -28,47 +26,45 @@ function Demo() {
         }}
       >
         <Form.Item
-          extra={tm(
-            "preview.components.useTheSameNameAndRulesShapeYouWouldExpectFromAntDesign",
-          )}
-          label={tm("preview.components.email")}
+          extra="Use the same name and rules shape you would expect from ant design."
+          label="Email"
           name="email"
           rules={[
             {
-              message: tm("preview.components.emailIsRequired"),
+              message: "Email Is Required",
               required: true,
               whitespace: true,
             },
             {
-              message: tm("preview.components.useAValidEmailAddress"),
+              message: "Use a valid email address.",
               type: "email",
             },
           ]}
         >
-          <Input placeholder={tm("preview.components.helloStickerDev")} />
+          <Input placeholder="Hello Sticker Dev" />
         </Form.Item>
         <Form.Item
-          label={tm("preview.components.password")}
+          label="Password"
           name="password"
           rules={[
             {
-              message: tm("preview.components.passwordIsRequired"),
+              message: "Password Is Required",
               required: true,
             },
-            { message: tm("preview.components.useAtLeast6Characters"), min: 6 },
+            { message: "Use at least 6 characters.", min: 6 },
           ]}
         >
           <Input.Password
-            hideLabel={tm("preview.components.hide")}
-            placeholder={tm("preview.components.enterPassword")}
-            showLabel={tm("preview.components.show")}
+            hideLabel="Hide"
+            placeholder="Enter Password"
+            showLabel="Show"
           />
         </Form.Item>
-        <Button type="submit">{tm("preview.components.submitForm")}</Button>
+        <Button type="submit">Submit Form</Button>
       </Form>
       <div className="grid content-start gap-3 rounded-sticker-2xl border-2 border-ink bg-surface p-4 shadow-sticker-md">
         <Tag color="success" dot>
-          {tm("preview.components.latestSubmit")}
+          Latest Submit
         </Tag>
         <p className="m-0 text-sm leading-6 font-bold">{submittedEmail}</p>
       </div>

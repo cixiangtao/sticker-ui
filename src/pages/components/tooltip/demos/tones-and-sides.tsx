@@ -6,7 +6,6 @@ import {
   TooltipTrigger,
 } from "sticker-ui"
 
-import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -18,60 +17,55 @@ const meta = defineMeta({
 })
 
 function Demo() {
-  const { tm } = usePreviewI18n()
   return (
     <TooltipProvider>
       <div className="flex flex-wrap gap-3">
         <Tooltip>
           <TooltipTrigger asChild>
-            <Button variant="outlined">
-              {tm("preview.components.default")}
-            </Button>
+            <Button variant="outlined">Default</Button>
           </TooltipTrigger>
           <TooltipContent side="left">
-            {tm("preview.components.defaultTooltipsStayNeutralForGeneralHelp")}
+            Default tooltips stay neutral for general help.
           </TooltipContent>
         </Tooltip>
         <Tooltip>
           <TooltipTrigger asChild>
             <Button color="info" variant="outlined">
-              {tm("preview.components.info")}
+              Info
             </Button>
           </TooltipTrigger>
           <TooltipContent side="top" tone="info">
-            {tm(
-              "preview.components.explainsAFieldWithoutInterruptingTheCurrentTask",
-            )}
+            Explains a field without interrupting the current task.
           </TooltipContent>
         </Tooltip>
         <Tooltip>
           <TooltipTrigger asChild>
             <Button color="success" variant="outlined">
-              {tm("preview.components.ready")}
+              Ready
             </Button>
           </TooltipTrigger>
           <TooltipContent side="bottom" tone="success">
-            {tm("preview.components.showsWhyThisActionIsAvailable")}
+            Shows why this action is available.
           </TooltipContent>
         </Tooltip>
         <Tooltip>
           <TooltipTrigger asChild>
             <Button color="warning" variant="outlined">
-              {tm("preview.components.watch")}
+              Watch
             </Button>
           </TooltipTrigger>
           <TooltipContent side="right" tone="warning">
-            {tm("preview.components.warnsAboutASmallConstraintBeforeClicking")}
+            Warns about a small constraint before clicking.
           </TooltipContent>
         </Tooltip>
         <Tooltip>
           <TooltipTrigger asChild>
             <Button color="secondary" variant="outlined">
-              {tm("preview.components.secondary")}
+              Secondary
             </Button>
           </TooltipTrigger>
           <TooltipContent side="left" tone="secondary">
-            {tm("preview.components.secondaryTooltipsFitQuietMetadata")}
+            Secondary tooltips fit quiet metadata.
           </TooltipContent>
         </Tooltip>
       </div>

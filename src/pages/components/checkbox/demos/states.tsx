@@ -1,6 +1,5 @@
 import { Button, Checkbox, Form } from "sticker-ui"
 
-import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -12,7 +11,6 @@ const meta = defineMeta({
 })
 
 function Demo() {
-  const { tm } = usePreviewI18n()
   return (
     <Form
       initialValues={{
@@ -23,14 +21,12 @@ function Demo() {
     >
       <div className="grid gap-4 md:grid-cols-2">
         <Form.Item
-          extra={tm(
-            "preview.components.useValuepropnameAndOncheckedchangeWhenCheckboxIsControlledByFormItem",
-          )}
-          label={tm("preview.components.terms")}
+          extra="Use valuePropName and onCheckedChange when checkbox is controlled by form item."
+          label="Terms"
           name="accepted"
           rules={[
             {
-              message: tm("preview.components.pleaseAcceptTheStickerTerms"),
+              message: "Please accept the sticker terms.",
               required: true,
               type: "boolean",
               validator: (_rule, value) => {
@@ -46,16 +42,14 @@ function Demo() {
           <Checkbox />
         </Form.Item>
         <Form.Item
-          extra={tm("preview.components.useDisabledForLockedChecklistItems")}
-          label={tm("preview.components.archive")}
+          extra="Use disabled for locked checklist items."
+          label="Archive"
         >
           <Checkbox checked disabled />
         </Form.Item>
         <Form.Item
-          extra={tm(
-            "preview.components.toneCanReinforceSuccessfulSubscriptionChoices",
-          )}
-          label={tm("preview.components.digest")}
+          extra="Tone can reinforce successful subscription choices."
+          label="Digest"
           name="digest"
           trigger="onCheckedChange"
           valuePropName="checked"
@@ -63,14 +57,14 @@ function Demo() {
           <Checkbox tone="success" variant="filled" />
         </Form.Item>
         <Form.Item
-          extra={tm("preview.components.quietCheckboxesSitInsideDenseCards")}
-          label={tm("preview.components.flag")}
+          extra="Quiet checkboxes sit inside dense cards."
+          label="Flag"
         >
           <Checkbox defaultChecked tone="secondary" variant="quiet" />
         </Form.Item>
       </div>
       <Button className="w-fit" type="submit">
-        {tm("preview.components.saveChoices")}
+        Save Choices
       </Button>
     </Form>
   )

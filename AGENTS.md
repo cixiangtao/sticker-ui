@@ -20,12 +20,13 @@
 - Preserve the handbook sticker style: warm paper surfaces, chunky outlines, hard offset shadows, tactile states, and accessible semantics.
 - Prefer shared Tailwind tokens from `src/tokens.css` via `src/globals.css` before raw values or arbitrary shadows.
 - Document public registry component APIs with TSDoc-style `/** ... */` comments.
+- Keep demo example content in English literals; reserve preview i18n for metadata, page chrome, API docs, and prop descriptions.
 - Keep changes focused and aligned with the existing file structure.
 
 ## Skills
 
 - Use `.agents/skills/registry-preview-workflow/SKILL.md` for registry components and preview delivery chain changes.
-- Use `.agents/skills/demo/SKILL.md` for component demos, demo metadata, ordering, source previews, and demo i18n copy.
+- Use `.agents/skills/demo/SKILL.md` for component demos, demo metadata, ordering, source previews, and demo i18n boundaries.
 - Use `.agents/skills/route-configuration/SKILL.md` for route, menu, and route meta changes.
 - Use `.agents/skills/handbook-sticker-ui/SKILL.md` for handbook sticker visual, accessibility, semantic slot, and Tailwind component guidance.
 

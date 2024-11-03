@@ -1,6 +1,5 @@
 import { Input, Label, LabelDescription } from "sticker-ui"
 
-import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -12,21 +11,19 @@ const meta = defineMeta({
 })
 
 function Demo() {
-  const { tm } = usePreviewI18n()
   return (
     <div className="grid max-w-xl gap-3">
       <Label htmlFor="input-project-name" required>
-        {tm("preview.components.projectName")}
+        Project Name
       </Label>
       <Input
-        defaultValue={tm("preview.components.stickerHandbook")}
+        defaultValue="Sticker Handbook"
         id="input-project-name"
-        placeholder={tm("preview.components.stickerHandbook")}
+        placeholder="Sticker Handbook"
       />
       <LabelDescription>
-        {tm(
-          "preview.components.pairInputWithLabelWhenTheFieldNeedsAccessibleCaptionsAndHelperText",
-        )}
+        Pair input with label when the field needs accessible captions and
+        helper text.
       </LabelDescription>
     </div>
   )

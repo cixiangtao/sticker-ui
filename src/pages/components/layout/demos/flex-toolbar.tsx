@@ -1,6 +1,5 @@
 import { Button, Flex, Tag } from "sticker-ui"
 
-import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -12,7 +11,6 @@ const meta = defineMeta({
 })
 
 function Demo() {
-  const { tm } = usePreviewI18n()
   return (
     <Flex
       align="center"
@@ -22,19 +20,17 @@ function Demo() {
       wrap="wrap"
     >
       <Flex align="center" gap="sm" wrap="wrap">
-        <Tag color="info">{tm("preview.components.layout")}</Tag>
-        <span className="text-sm font-extrabold text-ink">
-          {tm("preview.components.reviewQueue")}
-        </span>
+        <Tag color="info">Layout</Tag>
+        <span className="text-sm font-extrabold text-ink">Review Queue</span>
         <Tag color="success" size="sm" variant="filled">
-          {tm("preview.components.12Ready")}
+          12 Ready
         </Tag>
       </Flex>
       <Flex align="center" gap="xs">
         <Button size="sm" variant="outlined">
-          {tm("preview.components.sort")}
+          Sort
         </Button>
-        <Button size="sm">{tm("preview.components.publish")}</Button>
+        <Button size="sm">Publish</Button>
       </Flex>
     </Flex>
   )

@@ -1,6 +1,5 @@
 import { JsxJoin } from "sticker-ui"
 
-import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -12,10 +11,9 @@ const meta = defineMeta({
 })
 
 function Demo() {
-  const { tm } = usePreviewI18n()
   return (
     <nav
-      aria-label={tm("preview.components.componentBreadcrumb")}
+      aria-label="Component Breadcrumb"
       className="rounded-sticker-2xl border-2 border-ink bg-surface p-5 shadow-sticker-lg"
     >
       <JsxJoin
@@ -30,9 +28,9 @@ function Demo() {
           </li>
         )}
       >
-        <li>{tm("preview.components.components")}</li>
-        <li>{tm("preview.components.layout")}</li>
-        <li>{tm("preview.components.jsxjoin")}</li>
+        <li>Components</li>
+        <li>Layout</li>
+        <li>JSX Join</li>
       </JsxJoin>
     </nav>
   )

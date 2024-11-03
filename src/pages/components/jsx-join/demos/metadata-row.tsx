@@ -1,6 +1,5 @@
 import { JsxJoin, Tag } from "sticker-ui"
 
-import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -12,7 +11,6 @@ const meta = defineMeta({
 })
 
 function Demo() {
-  const { tm } = usePreviewI18n()
   return (
     <div className="rounded-sticker-2xl border-2 border-ink bg-surface p-5 shadow-sticker-lg">
       <JsxJoin
@@ -26,10 +24,10 @@ function Demo() {
       >
         <Tag size="sm">registry:ui</Tag>
         <Tag color="success" dot size="sm">
-          {tm("preview.components.ready")}
+          Ready
         </Tag>
         <Tag color="info" size="sm" variant="filled">
-          {tm("preview.components.sourceFirst")}
+          Source First
         </Tag>
       </JsxJoin>
     </div>

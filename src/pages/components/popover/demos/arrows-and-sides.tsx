@@ -1,6 +1,5 @@
 import { Button, Popover, PopoverContent, PopoverTrigger } from "sticker-ui"
 
-import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -12,27 +11,25 @@ const meta = defineMeta({
 })
 
 function Demo() {
-  const { tm } = usePreviewI18n()
   return (
     <div className="flex flex-wrap gap-3">
       <Popover>
         <PopoverTrigger asChild>
           <Button color="info" variant="outlined">
-            {tm("preview.components.withArrow")}
+            With Arrow
           </Button>
         </PopoverTrigger>
         <PopoverContent align="start" showArrow={true} side="bottom">
           <p className="m-0 text-sm leading-6 font-bold">
-            {tm(
-              "preview.components.theArrowPointsBackToTheTriggerWhenTheRelationshipNeedsToBeVisuallyExplicit",
-            )}
+            The arrow points back to the trigger when the relationship needs to
+            be visually explicit.
           </p>
         </PopoverContent>
       </Popover>
       <Popover>
         <PopoverTrigger asChild>
           <Button color="warning" variant="outlined">
-            {tm("preview.components.offsetRight")}
+            Offset Right
           </Button>
         </PopoverTrigger>
         <PopoverContent
@@ -43,9 +40,8 @@ function Demo() {
           tone="warning"
         >
           <p className="m-0 text-sm leading-6 font-bold">
-            {tm(
-              "preview.components.offsetAndAlignmentKeepDenseCommandBarsFromCoveringTheTrigger",
-            )}
+            Offset and alignment keep dense command bars from covering the
+            trigger.
           </p>
         </PopoverContent>
       </Popover>

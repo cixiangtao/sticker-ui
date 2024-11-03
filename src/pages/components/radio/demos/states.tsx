@@ -1,6 +1,5 @@
 import { Button, Form, Label, RadioGroup, RadioGroupItem } from "sticker-ui"
 
-import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -12,7 +11,6 @@ const meta = defineMeta({
 })
 
 function Demo() {
-  const { tm } = usePreviewI18n()
   return (
     <Form
       initialValues={{
@@ -23,88 +21,72 @@ function Demo() {
     >
       <div className="grid gap-4 md:grid-cols-2">
         <Form.Item
-          extra={tm(
-            "preview.components.radiogroupExposesOnchangeValueSoFormItemCanCollectTheSelectedStringValue",
-          )}
-          label={tm("preview.components.channel")}
+          extra="Radiogroup exposes onchange value so form item can collect the selected string value."
+          label="Channel"
           name="channel"
           rules={[
             {
-              message: tm("preview.components.chooseOneLaunchChannel"),
+              message: "Choose One Launch Channel",
               required: true,
             },
           ]}
         >
           <RadioGroup>
-            <RadioOption
-              id="radio-state-docs"
-              label={tm("preview.components.docsPage")}
-              value="docs"
-            />
+            <RadioOption id="radio-state-docs" label="Docs Page" value="docs" />
             <RadioOption
               id="radio-state-registry"
-              label={tm("preview.components.registryCard")}
+              label="Registry Card"
               value="registry"
             />
           </RadioGroup>
         </Form.Item>
         <Form.Item
-          extra={tm("preview.components.useDisabledForLockedChoiceGroups")}
-          label={tm("preview.components.locked")}
+          extra="Use disabled for locked choice groups."
+          label="Locked"
         >
           <RadioGroup defaultValue="managed" disabled>
             <RadioOption
               id="radio-state-managed"
-              label={tm("preview.components.managed")}
+              label="Managed"
               value="managed"
             />
-            <RadioOption
-              id="radio-state-open"
-              label={tm("preview.components.open")}
-              value="open"
-            />
+            <RadioOption id="radio-state-open" label="Open" value="open" />
           </RadioGroup>
         </Form.Item>
         <Form.Item
-          extra={tm(
-            "preview.components.toneCanReinforceConfidentRoutingChoices",
-          )}
-          label={tm("preview.components.confidence")}
+          extra="Tone can reinforce confident routing choices."
+          label="Confidence"
           name="confidence"
         >
           <RadioGroup tone="success" variant="filled">
-            <RadioOption
-              id="radio-state-ready"
-              label={tm("preview.components.ready")}
-              value="ready"
-            />
+            <RadioOption id="radio-state-ready" label="Ready" value="ready" />
             <RadioOption
               id="radio-state-review"
-              label={tm("preview.components.review")}
+              label="Review"
               value="review"
             />
           </RadioGroup>
         </Form.Item>
         <Form.Item
-          extra={tm("preview.components.quietRadioItemsSitInsideDenseCards")}
-          label={tm("preview.components.view")}
+          extra="Quiet radio items sit inside dense cards."
+          label="View"
         >
           <RadioGroup defaultValue="compact" tone="secondary" variant="quiet">
             <RadioOption
               id="radio-state-compact"
-              label={tm("preview.components.compactCards")}
+              label="Compact Cards"
               value="compact"
             />
             <RadioOption
               id="radio-state-roomy"
-              label={tm("preview.components.roomyPanels")}
+              label="Roomy Panels"
               value="roomy"
             />
           </RadioGroup>
         </Form.Item>
       </div>
       <Button className="w-fit" type="submit">
-        {tm("preview.components.saveRoute")}
+        Save Route
       </Button>
     </Form>
   )

@@ -32,7 +32,6 @@ Each demo file must:
 The module shape is:
 
 ```tsx
-import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -43,9 +42,7 @@ const meta = defineMeta({
 })
 
 function Demo() {
-  const { tm } = usePreviewI18n()
-
-  return <div>{tm("preview.components.exampleLabel")}</div>
+  return <div>Example label</div>
 }
 
 export { Demo, meta }
@@ -70,16 +67,16 @@ export { Demo, meta }
 - Prefer shared Tailwind tokens exposed through `src/tokens.css` and `src/globals.css` for colors, surfaces, borders, shadows, spacing, and radius before raw values, one-off hex colors, or arbitrary Tailwind classes.
 - Prefer local preview helpers before adding new dependencies.
 - Keep examples copyable through shadcn: do not rely on app-specific stores, routes, network calls, or hidden preview-only state unless the demo is explicitly about that integration.
+- Keep rendered demo example content in English literals so source previews stay copyable and do not depend on preview-only i18n helpers.
 - Preserve the handbook sticker visual language with warm paper surfaces, ink outlines, hard shadows, tactile states, and clear semantic structure.
 - Use semantic HTML and accessible names for interactive examples. Demonstrate keyboard and ARIA behavior when that is part of the component contract.
 
 ## I18n Rules
 
-- Import and call `usePreviewI18n()` inside `Demo` when rendering user-visible strings.
-- Use `tm(...)` for typed preview message keys.
-- Add new keys to the preview i18n dictionaries in the same change.
-- Translate demo titles, descriptions, labels, button text, captions, helper text, statuses, and table copy.
-- Keep code identifiers, prop names, path fragments, and literal API values in English.
+- Always provide i18n-backed `meta.titleKey` and `meta.descriptionKey`; preview page chrome, docs, API tables, and prop descriptions should keep using preview i18n.
+- Do not import `usePreviewI18n()` only to render demo example labels, button text, captions, helper text, statuses, placeholder copy, or table rows. Write that example content directly in English.
+- Keep code identifiers, prop names, path fragments, literal API values, and demo example content in English.
+- Add preview i18n keys in the same change only when changing metadata, page chrome, generated API docs, prop descriptions, or a demo whose purpose is explicitly to demonstrate localization.
 
 ## Component Preview Pages
 
@@ -119,7 +116,7 @@ Before finishing demo work:
 
 - Every demo exports `Demo` and `meta` as named exports.
 - `meta.titleKey` and `meta.descriptionKey` exist in preview i18n resources.
-- User-visible demo strings go through `usePreviewI18n`.
+- Rendered demo example strings are English literals unless the demo is explicitly about localization.
 - Demo order is deliberate and stable.
 - Raw source previews still match rendered demo modules.
 - New examples show meaningful component behavior, not duplicate decorative states.

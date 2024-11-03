@@ -1,6 +1,5 @@
 import { Form, Input } from "sticker-ui"
 
-import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -12,7 +11,6 @@ const meta = defineMeta({
 })
 
 function Demo() {
-  const { tm } = usePreviewI18n()
   return (
     <Form
       initialValues={{
@@ -23,49 +21,31 @@ function Demo() {
     >
       <div className="grid gap-4 md:grid-cols-2">
         <Form.Item
-          extra={tm(
-            "preview.components.theFieldShellPassesAriaInvalidToInputWhenValidationFails",
-          )}
-          label={tm("preview.components.email")}
+          extra="The field shell passes ARIA invalid to input when validation fails."
+          label="Email"
           name="email"
           rules={[
             {
-              message: tm("preview.components.emailIsRequired"),
+              message: "Email Is Required",
               required: true,
               whitespace: true,
             },
             {
-              message: tm("preview.components.useAValidEmailAddress"),
+              message: "Use a valid email address.",
               type: "email",
             },
           ]}
         >
-          <Input
-            placeholder={tm("preview.components.helloStickerDev")}
-            type="email"
-          />
+          <Input placeholder="Hello Sticker Dev" type="email" />
         </Form.Item>
-        <Form.Item
-          extra={tm("preview.components.useDisabledForLockedSettings")}
-          label={tm("preview.components.handle")}
-        >
+        <Form.Item extra="Use disabled for locked settings." label="Handle">
           <Input defaultValue="@sticker" disabled />
         </Form.Item>
-        <Form.Item
-          extra={tm("preview.components.toneCanReinforceSuccessCopy")}
-          label={tm("preview.components.readyState")}
-        >
+        <Form.Item extra="Tone can reinforce success copy." label="Ready State">
           <Input defaultValue="ready-to-ship" tone="success" variant="filled" />
         </Form.Item>
-        <Form.Item
-          extra={tm("preview.components.quietInputsSitInsideDenseCards")}
-          label={tm("preview.components.invite")}
-        >
-          <Input
-            placeholder={tm("preview.components.sticker")}
-            tone="secondary"
-            variant="quiet"
-          />
+        <Form.Item extra="Quiet inputs sit inside dense cards." label="Invite">
+          <Input placeholder="Sticker" tone="secondary" variant="quiet" />
         </Form.Item>
       </div>
     </Form>

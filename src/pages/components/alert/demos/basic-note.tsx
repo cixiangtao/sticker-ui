@@ -1,6 +1,5 @@
 import { Alert, AlertDescription, AlertTitle } from "sticker-ui"
 
-import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -12,14 +11,12 @@ const meta = defineMeta({
 })
 
 function Demo() {
-  const { tm } = usePreviewI18n()
   return (
     <Alert className="max-w-xl" tone="info">
-      <AlertTitle>{tm("preview.components.previewUpdated")}</AlertTitle>
+      <AlertTitle>Preview Updated</AlertTitle>
       <AlertDescription>
-        {tm(
-          "preview.components.theRegistryOutputIsReadyToInspectBeforePublishingTheComponentPage",
-        )}
+        The registry output is ready to inspect before publishing the component
+        page.
       </AlertDescription>
     </Alert>
   )

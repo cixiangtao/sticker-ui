@@ -1,6 +1,5 @@
 import { Form, Textarea } from "sticker-ui"
 
-import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -12,59 +11,46 @@ const meta = defineMeta({
 })
 
 function Demo() {
-  const { tm } = usePreviewI18n()
   return (
     <Form onFinish={() => undefined}>
       <div className="grid gap-4 md:grid-cols-2">
         <Form.Item
-          extra={tm(
-            "preview.components.theFieldShellPassesAriaInvalidToTextareaWhenValidationFails",
-          )}
-          label={tm("preview.components.summary")}
+          extra="The field shell passes ARIA invalid to textarea when validation fails."
+          label="Summary"
           name="summary"
           rules={[
             {
-              message: tm("preview.components.summaryIsRequired"),
+              message: "Summary Is Required",
               required: true,
               whitespace: true,
             },
             {
-              message: tm("preview.components.useAtLeast12Characters"),
+              message: "Use at least 12 characters.",
               min: 12,
             },
           ]}
         >
-          <Textarea
-            placeholder={tm("preview.components.writeAUsefulSummary")}
-          />
+          <Textarea placeholder="Write A Useful Summary" />
         </Form.Item>
         <Form.Item
-          extra={tm("preview.components.useDisabledForArchivedNotes")}
-          label={tm("preview.components.archiveNote")}
+          extra="Use disabled for archived notes."
+          label="Archive Note"
         >
-          <Textarea
-            defaultValue={tm("preview.components.lockedAfterReview")}
-            disabled
-          />
+          <Textarea defaultValue="Locked After Review" disabled />
         </Form.Item>
-        <Form.Item
-          extra={tm("preview.components.toneCanReinforceSuccessCopy")}
-          label={tm("preview.components.readyNote")}
-        >
+        <Form.Item extra="Tone can reinforce success copy." label="Ready Note">
           <Textarea
-            defaultValue={tm(
-              "preview.components.thisCopyIsApprovedAndReadyToShip",
-            )}
+            defaultValue="This copy is approved and ready to ship."
             tone="success"
             variant="filled"
           />
         </Form.Item>
         <Form.Item
-          extra={tm("preview.components.quietTextareasSitInsideDenseCards")}
-          label={tm("preview.components.draft")}
+          extra="Quiet textareas sit inside dense cards."
+          label="Draft"
         >
           <Textarea
-            placeholder={tm("preview.components.captureARoughDraft")}
+            placeholder="Capture A Rough Draft"
             tone="secondary"
             variant="quiet"
           />

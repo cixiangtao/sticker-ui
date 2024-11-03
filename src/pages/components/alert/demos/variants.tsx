@@ -1,6 +1,5 @@
 import { Alert, AlertDescription, AlertTitle } from "sticker-ui"
 
-import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -12,25 +11,20 @@ const meta = defineMeta({
 })
 
 function Demo() {
-  const { tm } = usePreviewI18n()
   return (
     <div className="grid gap-3 md:grid-cols-3">
       <Alert size="sm" tone="info" variant="filled">
-        <AlertTitle>{tm("preview.components.filled")}</AlertTitle>
-        <AlertDescription>
-          {tm("preview.components.useForProminentInlineFeedback")}
-        </AlertDescription>
+        <AlertTitle>Filled</AlertTitle>
+        <AlertDescription>Use for prominent inline feedback.</AlertDescription>
       </Alert>
       <Alert size="sm" tone="success" variant="outlined">
-        <AlertTitle>{tm("preview.components.outlined")}</AlertTitle>
-        <AlertDescription>
-          {tm("preview.components.useForCalmerStatusNotes")}
-        </AlertDescription>
+        <AlertTitle>Outlined</AlertTitle>
+        <AlertDescription>Use for calmer status notes.</AlertDescription>
       </Alert>
       <Alert size="sm" tone="warning" variant="stripe">
-        <AlertTitle>{tm("preview.components.stripe")}</AlertTitle>
+        <AlertTitle>Stripe</AlertTitle>
         <AlertDescription>
-          {tm("preview.components.useForCompactDocumentationHints")}
+          Use for compact documentation hints.
         </AlertDescription>
       </Alert>
     </div>

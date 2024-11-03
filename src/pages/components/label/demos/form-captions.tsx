@@ -1,6 +1,5 @@
 import { Input, Label, LabelDescription } from "sticker-ui"
 
-import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -12,39 +11,32 @@ const meta = defineMeta({
 })
 
 function Demo() {
-  const { tm } = usePreviewI18n()
   return (
     <div className="grid gap-4 md:grid-cols-2">
       <div className="grid gap-2">
         <Label htmlFor="label-component-name" required>
-          {tm("preview.components.componentName")}
+          Component Name
         </Label>
         <Input
-          defaultValue={tm("preview.components.stickerLabel")}
+          defaultValue="Sticker Label"
           id="label-component-name"
           required
         />
         <LabelDescription>
-          {tm(
-            "preview.components.requiredMarkersArePartOfTheCaptionNotTheInputFrame",
-          )}
+          Required markers are part of the caption not the input frame.
         </LabelDescription>
       </div>
       <div className="grid gap-2">
         <Label htmlFor="label-component-note" optional>
-          {tm("preview.components.releaseNote")}
+          Release Note
         </Label>
         <textarea
           className="min-h-24 resize-none rounded-sticker-lg border-2 border-ink bg-white px-3 py-2 text-sm font-bold shadow-sticker-sm outline-none focus-visible:ring-2 focus-visible:ring-fill-danger"
-          defaultValue={tm(
-            "preview.components.useOptionalMarkersForHelperFieldsAndShortNotes",
-          )}
+          defaultValue="Use optional markers for helper fields and short notes."
           id="label-component-note"
         />
         <LabelDescription>
-          {tm(
-            "preview.components.descriptionCopyCanSitUnderAnyControlInTheSameField",
-          )}
+          Description copy can sit under any control in the same field.
         </LabelDescription>
       </div>
     </div>

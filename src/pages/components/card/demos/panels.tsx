@@ -7,7 +7,6 @@ import {
   Tag,
 } from "sticker-ui"
 
-import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -42,7 +41,6 @@ function HeaderDots() {
 }
 
 function Demo() {
-  const { tm } = usePreviewI18n()
   return (
     <div className="grid gap-4 md:grid-cols-2">
       <Card variant="panel">
@@ -51,32 +49,28 @@ function Demo() {
           divider="dashed"
           dividerInset="md"
         >
-          <Tag color="danger">{tm("preview.components.panel")}</Tag>
-          <CardTitle className="mt-3">
-            {tm("preview.components.previewWindow")}
-          </CardTitle>
+          <Tag color="danger">Panel</Tag>
+          <CardTitle className="mt-3">Preview Window</CardTitle>
         </CardHeader>
         <div className="grid gap-3 py-5">
           <p className="m-0 text-sm leading-6 font-medium text-text-muted">
-            {tm(
-              "preview.components.useThisPatternWhenTheSurfaceFramesNavigationFiltersOrALargePreviewArea",
-            )}
+            Use this pattern when the surface frames navigation filters or a
+            large preview area.
           </p>
-          <Button size="sm">{tm("preview.components.startReview")}</Button>
+          <Button size="sm">Start Review</Button>
         </div>
       </Card>
 
       <Card variant="minimal">
         <CardHeader divider="dashed" dividerInset="card">
-          <CardTitle>{tm("preview.components.toolbarShell")}</CardTitle>
+          <CardTitle>Toolbar Shell</CardTitle>
         </CardHeader>
         <CardContent className="grid gap-3">
           <p className="m-0 text-sm leading-6 font-medium text-text-muted">
-            {tm(
-              "preview.components.useMinimalPanelCardsForQuietShellsThatShouldSitBelowContentCardsInTheVisualHierarchy",
-            )}
+            Use minimal panel cards for quiet shells that should sit below
+            content cards in the visual hierarchy.
           </p>
-          <Tag color="info">{tm("preview.components.dashedDivider")}</Tag>
+          <Tag color="info">Dashed Divider</Tag>
         </CardContent>
       </Card>
     </div>

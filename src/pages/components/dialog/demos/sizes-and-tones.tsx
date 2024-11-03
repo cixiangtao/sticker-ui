@@ -10,7 +10,6 @@ import {
   DialogTrigger,
 } from "sticker-ui"
 
-import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -22,27 +21,24 @@ const meta = defineMeta({
 })
 
 function Demo() {
-  const { tm } = usePreviewI18n()
   return (
     <div className="flex flex-wrap gap-3">
       <Dialog>
         <DialogTrigger asChild>
           <Button color="info" variant="outlined">
-            {tm("preview.components.smallInfo")}
+            Small Info
           </Button>
         </DialogTrigger>
         <DialogContent size="sm" tone="info">
           <DialogHeader>
-            <DialogTitle>{tm("preview.components.shortcutSaved")}</DialogTitle>
+            <DialogTitle>Shortcut Saved</DialogTitle>
             <DialogDescription>
-              {tm(
-                "preview.components.smallDialogsWorkWellForOneDecisionAndOneFollowUpAction",
-              )}
+              Small dialogs work well for one decision and one follow up action.
             </DialogDescription>
           </DialogHeader>
           <DialogFooter>
             <DialogClose asChild>
-              <Button color="info">{tm("preview.components.done")}</Button>
+              <Button color="info">Done</Button>
             </DialogClose>
           </DialogFooter>
         </DialogContent>
@@ -50,39 +46,28 @@ function Demo() {
       <Dialog>
         <DialogTrigger asChild>
           <Button color="warning" variant="outlined">
-            {tm("preview.components.largeReview")}
+            Large Review
           </Button>
         </DialogTrigger>
         <DialogContent size="lg" tone="warning">
           <DialogHeader>
-            <DialogTitle>
-              {tm("preview.components.reviewBeforeShipping")}
-            </DialogTitle>
+            <DialogTitle>Review Before Shipping</DialogTitle>
             <DialogDescription>
-              {tm(
-                "preview.components.largeDialogsGiveLongerChecklistsAndFormsEnoughRoomWhileTheCloseButtonTitleAndFooterStayPredictable",
-              )}
+              Large dialogs give longer checklists and forms enough room while
+              the close button title and footer stay predictable.
             </DialogDescription>
           </DialogHeader>
           <div className="grid gap-2 rounded-sticker-xl border border-ink bg-surface p-3 text-sm font-bold">
-            <span>
-              {tm("preview.components.previewDemosRenderOnDesktopAndMobile")}
-            </span>
-            <span>
-              {tm("preview.components.registryJsonPointsAtSourceFiles")}
-            </span>
-            <span>
-              {tm("preview.components.chinesePreviewStringsAreCovered")}
-            </span>
+            <span>Preview demos render on desktop and mobile.</span>
+            <span>Registry json points at source files.</span>
+            <span>Chinese preview strings are covered.</span>
           </div>
           <DialogFooter>
             <DialogClose asChild>
-              <Button variant="outlined">
-                {tm("preview.components.keepEditing")}
-              </Button>
+              <Button variant="outlined">Keep Editing</Button>
             </DialogClose>
             <DialogClose asChild>
-              <Button color="warning">{tm("preview.components.shipIt")}</Button>
+              <Button color="warning">Ship It</Button>
             </DialogClose>
           </DialogFooter>
         </DialogContent>

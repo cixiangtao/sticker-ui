@@ -7,7 +7,6 @@ import {
   Tag,
 } from "sticker-ui"
 
-import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -19,26 +18,21 @@ const meta = defineMeta({
 })
 
 function Demo() {
-  const { tm } = usePreviewI18n()
   return (
     <div className="grid gap-4 md:grid-cols-2">
       <Card>
         <CardHeader>
           <Tag rounded="pill" size="sm">
-            {tm("preview.components.elevated")}
+            Elevated
           </Tag>
-          <CardTitle>{tm("preview.components.stickerSurface")}</CardTitle>
+          <CardTitle>Sticker Surface</CardTitle>
           <CardDescription>
-            {tm(
-              "preview.components.theDefaultCardKeepsAChunkyOutlineAndHardOffsetShadow",
-            )}
+            The default card keeps a chunky outline and hard offset shadow.
           </CardDescription>
         </CardHeader>
         <CardContent>
           <p className="m-0 text-sm leading-6 font-medium text-text-muted">
-            {tm(
-              "preview.components.useThisForProminentPreviewsRouteCardsAndActionGroups",
-            )}
+            Use this for prominent previews route cards and action groups.
           </p>
         </CardContent>
       </Card>
@@ -46,20 +40,16 @@ function Demo() {
       <Card variant="minimal">
         <CardHeader>
           <Tag rounded="pill" size="sm">
-            {tm("preview.components.minimal")}
+            Minimal
           </Tag>
-          <CardTitle>{tm("preview.components.quietSurface")}</CardTitle>
+          <CardTitle>Quiet Surface</CardTitle>
           <CardDescription>
-            {tm(
-              "preview.components.minimalCardsRemoveTheShadowAndUseAThinBorder",
-            )}
+            Minimal cards remove the shadow and use a thin border.
           </CardDescription>
         </CardHeader>
         <CardContent>
           <p className="m-0 text-sm leading-6 font-medium text-text-muted">
-            {tm(
-              "preview.components.useThisInsideDensePagesSidePanelsAndRepeatedContentLists",
-            )}
+            Use this inside dense pages side panels and repeated content lists.
           </p>
         </CardContent>
       </Card>

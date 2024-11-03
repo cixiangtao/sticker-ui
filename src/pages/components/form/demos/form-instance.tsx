@@ -1,7 +1,6 @@
 import { useState } from "react"
 import { Button, Form, Input, Tag } from "sticker-ui"
 
-import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -13,11 +12,8 @@ const meta = defineMeta({
 })
 
 function Demo() {
-  const { tm } = usePreviewI18n()
   const [form] = Form.useForm()
-  const [status, setStatus] = useState(() =>
-    tm("preview.components.readyToValidate"),
-  )
+  const [status, setStatus] = useState(() => "Ready to validate")
 
   return (
     <div className="grid gap-4">
@@ -28,23 +24,19 @@ function Demo() {
           slug: "sticker-ui",
         }}
         onFinish={(values) => {
-          setStatus(
-            `${tm("preview.components.saved")}${String(values.project ?? "")}`,
-          )
+          setStatus(`Saved: ${String(values.project ?? "")}`)
         }}
         onFinishFailed={({ errorFields }) => {
-          setStatus(
-            `${errorFields.length}${tm("preview.components.fieldsNeedAttention")}`,
-          )
+          setStatus(`${errorFields.length} fields need attention`)
         }}
       >
         <div className="grid gap-4 md:grid-cols-2">
           <Form.Item
-            label={tm("preview.components.project")}
+            label="Project"
             name="project"
             rules={[
               {
-                message: tm("preview.components.projectNameIsRequired"),
+                message: "Project Name Is Required",
                 required: true,
                 whitespace: true,
               },
@@ -53,18 +45,16 @@ function Demo() {
             <Input />
           </Form.Item>
           <Form.Item
-            extra={tm("preview.components.lowercaseLettersAndHyphensOnly")}
-            label={tm("preview.components.slug")}
+            extra="Lowercase letters and hyphens only."
+            label="Slug"
             name="slug"
             rules={[
               {
-                message: tm("preview.components.slugIsRequired"),
+                message: "Slug Is Required",
                 required: true,
               },
               {
-                message: tm(
-                  "preview.components.useLowercaseLettersAndHyphensOnly",
-                ),
+                message: "Use lowercase letters and hyphens only.",
                 pattern: /^[a-z-]+$/,
               },
             ]}
@@ -73,51 +63,51 @@ function Demo() {
           </Form.Item>
         </div>
         <div className="flex flex-wrap gap-2">
-          <Button type="submit">{tm("preview.components.submit")}</Button>
+          <Button type="submit">Submit</Button>
           <Button
             onClick={() => {
               form.setFieldsValue({
                 project: "Handbook Kit",
                 slug: "handbook-kit",
               })
-              setStatus(tm("preview.components.presetValuesApplied"))
+              setStatus("Preset Values Applied")
             }}
             type="button"
             variant="outlined"
           >
-            {tm("preview.components.fillPreset")}
+            Fill Preset
           </Button>
           <Button
             onClick={() => {
               void form
                 .validateFields()
                 .then(() => {
-                  setStatus(tm("preview.components.allFieldsPassed"))
+                  setStatus("All Fields Passed")
                 })
                 .catch(() => {
-                  setStatus(tm("preview.components.validationFoundIssues"))
+                  setStatus("Validation Found Issues")
                 })
             }}
             type="button"
             variant="dashed"
           >
-            {tm("preview.components.validateNow")}
+            Validate Now
           </Button>
           <Button
             onClick={() => {
               form.resetFields()
-              setStatus(tm("preview.components.fieldsReset"))
+              setStatus("Fields Reset")
             }}
             type="button"
             variant="text"
           >
-            {tm("preview.components.reset")}
+            Reset
           </Button>
         </div>
       </Form>
       <div className="flex items-center gap-3">
         <Tag color="secondary" dot>
-          {tm("preview.components.instanceStatus")}
+          Instance Status
         </Tag>
         <span className="text-sm font-bold">{status}</span>
       </div>

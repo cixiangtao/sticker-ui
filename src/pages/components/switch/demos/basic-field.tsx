@@ -1,6 +1,5 @@
 import { Label, LabelDescription, Switch } from "sticker-ui"
 
-import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -12,18 +11,14 @@ const meta = defineMeta({
 })
 
 function Demo() {
-  const { tm } = usePreviewI18n()
   return (
     <div className="grid max-w-xl gap-3">
       <div className="flex items-start justify-between gap-4 rounded-sticker-xl border border-ink bg-white/80 p-4">
         <div className="grid gap-1">
-          <Label htmlFor="switch-weekly-digest">
-            {tm("preview.components.weeklyDigest")}
-          </Label>
+          <Label htmlFor="switch-weekly-digest">Weekly Digest</Label>
           <LabelDescription>
-            {tm(
-              "preview.components.pairSwitchWithLabelForImmediateOnOffPreferencesAndSettings",
-            )}
+            Pair switch with label for immediate on off preferences and
+            settings.
           </LabelDescription>
         </div>
         <Switch defaultChecked id="switch-weekly-digest" />

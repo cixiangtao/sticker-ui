@@ -1,6 +1,5 @@
 import { Input, Label, LabelDescription, LabelMarker } from "sticker-ui"
 
-import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -12,20 +11,19 @@ const meta = defineMeta({
 })
 
 function Demo() {
-  const { tm } = usePreviewI18n()
   return (
     <div className="grid gap-4 md:grid-cols-3">
       <div className="grid gap-2 rounded-sticker-lg border border-ink bg-white p-4">
         <Label htmlFor="label-required-badge" required>
-          {tm("preview.components.badgeRequired")}
+          Badge Required
         </Label>
         <Input
-          defaultValue={tm("preview.components.badgeKeepsTheStickerFeel")}
+          defaultValue="Badge keeps the sticker feel."
           id="label-required-badge"
           required
         />
         <LabelDescription>
-          {tm("preview.components.useTheDefaultBadgeWhenTheLabelHasRoom")}
+          Use the default badge when the label has room.
         </LabelDescription>
       </div>
       <div className="grid gap-2 rounded-sticker-lg border border-ink bg-white p-4">
@@ -34,34 +32,27 @@ function Demo() {
           required
           requiredMark="asterisk"
         >
-          {tm("preview.components.asteriskRequired")}
+          Asterisk Required
         </Label>
         <Input
-          defaultValue={tm("preview.components.compactForNarrowLabelColumns")}
+          defaultValue="Compact for narrow label columns."
           id="label-required-asterisk"
           required
         />
         <LabelDescription>
-          {tm(
-            "preview.components.useTheAsteriskWhenHorizontalFormsNeedTighterLabels",
-          )}
+          Use the asterisk when horizontal forms need tighter labels.
         </LabelDescription>
       </div>
       <div className="grid gap-2 rounded-sticker-lg border border-ink bg-white p-4">
         <Label htmlFor="label-marker-custom">
-          {tm("preview.components.customMarker")}
-          <LabelMarker tone="success">
-            {tm("preview.components.new")}
-          </LabelMarker>
+          Custom Marker<LabelMarker tone="success">New</LabelMarker>
         </Label>
         <Input
-          defaultValue={tm("preview.components.statusCopyStaysManual")}
+          defaultValue="Status Copy Stays Manual"
           id="label-marker-custom"
         />
         <LabelDescription>
-          {tm(
-            "preview.components.labelmarkerIsForExtraStatusTextNotRequiredSemantics",
-          )}
+          Labelmarker is for extra status text not required semantics.
         </LabelDescription>
       </div>
     </div>

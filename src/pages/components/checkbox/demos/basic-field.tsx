@@ -1,6 +1,5 @@
 import { Checkbox, Label, LabelDescription } from "sticker-ui"
 
-import { usePreviewI18n } from "@/i18n/preview"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -12,19 +11,15 @@ const meta = defineMeta({
 })
 
 function Demo() {
-  const { tm } = usePreviewI18n()
   return (
     <div className="grid max-w-xl gap-3">
       <div className="flex items-start gap-3 rounded-sticker-xl border border-ink bg-white/80 p-4">
         <Checkbox defaultChecked id="checkbox-launch-notes" />
         <div className="grid gap-1">
-          <Label htmlFor="checkbox-launch-notes">
-            {tm("preview.components.publishLaunchNotes")}
-          </Label>
+          <Label htmlFor="checkbox-launch-notes">Publish Launch Notes</Label>
           <LabelDescription>
-            {tm(
-              "preview.components.pairCheckboxWithLabelWhenASingleOptionNeedsAccessibleCopyAndHelperText",
-            )}
+            Pair checkbox with label when a single option needs accessible copy
+            and helper text.
           </LabelDescription>
         </div>
       </div>
