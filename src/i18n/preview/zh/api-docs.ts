@@ -1323,13 +1323,13 @@ const ZH_PREVIEW_API_DOC_MESSAGES = defineMessages({
     zh: "根据方向和标签对齐生成分隔线根元素 className。",
   },
   "api.jsx-join.description": {
-    zh: "一个在 JSX 子节点之间插入分隔符的小型 React 工具。",
+    zh: "一个在子节点之间插入分隔符的小型 React 工具。",
   },
   "api.jsx-join.components.JsxJoin.description": {
-    zh: "用分隔符连接 JSX 子节点，同时保留每个子节点。",
+    zh: "用分隔符连接子节点，同时保留每个子节点。",
   },
   "api.jsx-join.components.JsxJoin.props.description": {
-    zh: "使用可复用分隔符连接 JSX 子节点的 props。",
+    zh: "使用可复用分隔符连接子节点的 props。",
   },
   "api.jsx-join.components.JsxJoin.props.members.as.description": {
     zh: "用于包裹拼接后节点的根元素。",
@@ -1347,16 +1347,16 @@ const ZH_PREVIEW_API_DOC_MESSAGES = defineMessages({
     zh: "默认渲染 Fragment，因此可在文本行、列表和组件插槽中使用，不额外引入 DOM。",
   },
   "api.jsx-join.exports.JsxJoin.description": {
-    zh: "用分隔符连接 JSX 子节点，同时保留每个子节点。",
+    zh: "用分隔符连接子节点，同时保留每个子节点。",
   },
   "api.jsx-join.exports.JsxJoinProps.description": {
-    zh: "使用可复用分隔符连接 JSX 子节点的 props。",
+    zh: "使用可复用分隔符连接子节点的 props。",
   },
   "api.jsx-join.exports.JsxJoinProps.remarks": {
     zh: "默认渲染 Fragment，因此可在文本行、列表和组件插槽中使用，不额外引入 DOM。",
   },
   "api.jsx-join.types.JsxJoinProps.description": {
-    zh: "使用可复用分隔符连接 JSX 子节点的 props。",
+    zh: "使用可复用分隔符连接子节点的 props。",
   },
   "api.jsx-join.types.JsxJoinProps.members.as.description": {
     zh: "用于包裹拼接后节点的根元素。",

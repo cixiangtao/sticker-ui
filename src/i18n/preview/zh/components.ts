@@ -613,10 +613,10 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
     zh: "过滤空节点",
   },
   "preview.components.insertSeparatorsBetweenJsxChildrenWithoutNoisyMarkup": {
-    zh: "在 JSX 子节点之间插入分隔符，不引入嘈杂标记。",
+    zh: "在子节点之间插入分隔符，不引入额外标记。",
   },
   "preview.components.jsxjoin": {
-    zh: "JsxJoin",
+    zh: "节点连接",
   },
   "preview.components.labeledSections": {
     zh: "带标签分隔",
@@ -629,7 +629,7 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   },
   "preview.components.useJsxjoinForMetadataRowsWhereEachItemStaysIndependentAndSeparatorsAreGeneratedOnce":
     {
-      zh: "在元数据行中使用 JsxJoin，让每个条目保持独立，并统一生成分隔符。",
+      zh: "在元数据行中使用节点连接，让每个条目保持独立，并统一生成分隔符。",
     },
   "preview.components.verticalDividersSeparateSplitPanesAndToolbarClustersWithoutChangingTheSurroundingLayout":
     {
