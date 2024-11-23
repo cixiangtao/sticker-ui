@@ -19,8 +19,7 @@ import {
 
 interface PreviewApiDoc {
   components?: PreviewApiComponent[]
-  description: string
-  descriptionKey?: string
+  descriptionKey: string
   exports: PreviewApiExport[]
   name: string
   sourcePath: string
@@ -30,30 +29,24 @@ interface PreviewApiDoc {
 }
 
 interface PreviewApiComponent {
-  description?: string
   descriptionKey?: string
   name: string
   props?: PreviewApiComponentProps
-  remarks?: string
   remarksKey?: string
 }
 
 interface PreviewApiComponentProps {
   defaultValue?: string
-  deprecated?: string
   deprecatedKey?: string
-  description?: string
   descriptionKey?: string
   inherits?: string[]
   inheritedMembers?: PreviewApiMember[]
   members: PreviewApiMember[]
-  remarks?: string
   remarksKey?: string
   type: string
 }
 
 interface PreviewApiExport {
-  description?: string
   descriptionKey?: string
   kind: string
   name: string
@@ -61,13 +54,10 @@ interface PreviewApiExport {
 
 interface PreviewApiMember {
   defaultValue?: string
-  deprecated?: string
   deprecatedKey?: string
-  description?: string
   descriptionKey?: string
   name: string
   optional?: boolean
-  remarks?: string
   remarksKey?: string
   required?: boolean
   type: string
@@ -75,22 +65,18 @@ interface PreviewApiMember {
 
 interface PreviewApiType {
   defaultValue?: string
-  deprecated?: string
   deprecatedKey?: string
-  description?: string
   descriptionKey?: string
   inherits?: string[]
   inheritedMembers?: PreviewApiMember[]
   kind: string
   members: PreviewApiMember[]
   name: string
-  remarks?: string
   remarksKey?: string
   type?: string
 }
 
 interface PreviewApiVariant {
-  description?: string
   descriptionKey?: string
   groups: PreviewApiVariantGroup[]
   name: string
@@ -163,12 +149,12 @@ function ComponentList({ components }: { components: PreviewApiComponent[] }) {
                   {tm("preview.common.component")}
                 </span>
               </div>
-              {component.description ? (
+              {component.descriptionKey ? (
                 <p className="text-sm leading-6 font-medium text-text-muted">
                   {td(component.descriptionKey)}
                 </p>
               ) : null}
-              {component.remarks ? (
+              {component.remarksKey ? (
                 <p className="text-xs leading-5 font-bold text-text-subtle">
                   {td(component.remarksKey)}
                 </p>
@@ -201,12 +187,12 @@ function ComponentPropsCard({ props }: { props: PreviewApiComponentProps }) {
         <Tag as="code" color="default" rounded="pill" size="sm" variant="solid">
           {props.type}
         </Tag>
-        {props.description ? (
+        {props.descriptionKey ? (
           <p className="text-sm leading-6 font-medium text-text-muted">
             {td(props.descriptionKey)}
           </p>
         ) : null}
-        {props.remarks ? (
+        {props.remarksKey ? (
           <p className="text-xs leading-5 font-bold text-text-subtle">
             {td(props.remarksKey)}
           </p>
@@ -317,12 +303,12 @@ function TypeList({
                   {tm(toApiKindMessageKey(type.kind))}
                 </Tag>
               </div>
-              {type.description ? (
+              {type.descriptionKey ? (
                 <p className="text-sm leading-6 font-medium text-text-muted">
                   {td(type.descriptionKey)}
                 </p>
               ) : null}
-              {type.remarks ? (
+              {type.remarksKey ? (
                 <p className="text-xs leading-5 font-bold text-text-subtle">
                   {td(type.remarksKey)}
                 </p>
@@ -397,7 +383,7 @@ function MemberTable({ members }: { members: PreviewApiMember[] }) {
             </TableCell>
             <TableCell>
               <div className="grid gap-1">
-                {member.description ? (
+                {member.descriptionKey ? (
                   <span className="leading-6 font-medium text-text-muted">
                     {td(member.descriptionKey)}
                   </span>
@@ -406,13 +392,13 @@ function MemberTable({ members }: { members: PreviewApiMember[] }) {
                     {tm("preview.common.noJsdocDescriptionYet")}
                   </span>
                 )}
-                {member.deprecated ? (
+                {member.deprecatedKey ? (
                   <span className="rounded-sticker-xs bg-fill-danger-soft px-2 py-1 text-xs font-extrabold text-text-danger">
                     {tm("preview.common.deprecated")}:{" "}
                     {td(member.deprecatedKey)}
                   </span>
                 ) : null}
-                {member.remarks ? (
+                {member.remarksKey ? (
                   <span className="text-xs leading-5 font-bold text-text-subtle">
                     {td(member.remarksKey)}
                   </span>
@@ -439,7 +425,7 @@ function VariantList({ variants }: { variants: PreviewApiVariant[] }) {
         >
           <div>
             <code className="text-sm font-black">{variant.name}</code>
-            {variant.description ? (
+            {variant.descriptionKey ? (
               <p className="mt-1 text-sm leading-6 font-medium text-text-muted">
                 {td(variant.descriptionKey)}
               </p>

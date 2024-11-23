@@ -58,45 +58,6 @@ const COMMON_INHERITED_PROP_NAMES = [
   "value",
 ]
 const COMMON_INHERITED_PROP_NAME_SET = new Set(COMMON_INHERITED_PROP_NAMES)
-const COMMON_INHERITED_PROP_DESCRIPTIONS = {
-  "aria-describedby": "Identifies elements that describe the control.",
-  "aria-invalid": "Indicates whether the current value is invalid.",
-  "aria-label": "Provides an accessible label when visible text is not enough.",
-  "aria-labelledby": "Identifies elements that label the control.",
-  autoComplete: "Controls browser autocomplete behavior.",
-  autoFocus: "Focuses the element when it mounts.",
-  checked: "Controls the checked state.",
-  children: "Content rendered inside the element.",
-  className: "Adds custom class names to the root element.",
-  defaultChecked: "Sets the initial unchecked or checked state.",
-  defaultValue: "Sets the initial uncontrolled value.",
-  disabled: "Disables user interaction with the element.",
-  form: "Associates the control with a form by id.",
-  htmlFor: "Associates the label with a form control id.",
-  id: "Sets the element id.",
-  max: "Sets the maximum accepted value.",
-  maxLength: "Sets the maximum text length.",
-  min: "Sets the minimum accepted value.",
-  minLength: "Sets the minimum text length.",
-  name: "Sets the form field name.",
-  onBlur: "Runs when the element loses focus.",
-  onChange: "Runs when the value changes.",
-  onClick: "Runs when the element is clicked.",
-  onFocus: "Runs when the element receives focus.",
-  onKeyDown: "Runs when a key is pressed.",
-  onKeyUp: "Runs when a key is released.",
-  onMouseEnter: "Runs when the pointer enters the element.",
-  onMouseLeave: "Runs when the pointer leaves the element.",
-  pattern: "Sets a validation pattern for the value.",
-  placeholder: "Shows placeholder text when the field is empty.",
-  readOnly: "Prevents user edits while keeping the value readable.",
-  required: "Marks the field as required for native validation.",
-  role: "Sets the ARIA role.",
-  style: "Adds inline styles to the root element.",
-  title: "Sets advisory text for the element.",
-  type: "Sets the native control type.",
-  value: "Controls the current value.",
-}
 
 function cleanText(value) {
   return value.replaceAll(/\r?\n/g, " ").replaceAll(/\s+/g, " ").trim()
@@ -174,11 +135,8 @@ function readJsDoc(node) {
 function withI18nTextFields(doc, keyBase) {
   return {
     defaultValue: doc.defaultValue,
-    deprecated: doc.deprecated,
     deprecatedKey: doc.deprecated ? `${keyBase}.deprecated` : undefined,
-    description: doc.description,
     descriptionKey: doc.description ? `${keyBase}.description` : undefined,
-    remarks: doc.remarks,
     remarksKey: doc.remarks ? `${keyBase}.remarks` : undefined,
   }
 }
@@ -429,7 +387,12 @@ function getInheritedMembersFromResolvedType(declaration, ownMembers) {
         typeof symbol.isOptional === "function" ? symbol.isOptional() : true
 
       return {
-        description: COMMON_INHERITED_PROP_DESCRIPTIONS[name],
+        descriptionKey: getApiI18nKey(
+          "common",
+          "inheritedProps",
+          name,
+          "description",
+        ),
         name,
         optional,
         required: !optional,
@@ -730,7 +693,6 @@ async function main() {
 
     docs[item.name] = {
       components: getComponentApis(sourceFile, item.name),
-      description: item.description,
       descriptionKey: getApiI18nKey(item.name, "description"),
       exports: getExports(sourceFile, item.name),
       name: item.name,

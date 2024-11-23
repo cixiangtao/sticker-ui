@@ -39,7 +39,7 @@ function ColorsPage() {
       </Card>
 
       {COLOR_TOKEN_GROUPS.map((group) => (
-        <Card className="bg-surface" key={group.label}>
+        <Card className="bg-surface" key={group.labelKey}>
           <CardHeader>
             <div className="flex flex-wrap items-center justify-between gap-3">
               <div className="grid gap-1">

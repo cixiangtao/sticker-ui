@@ -35,11 +35,9 @@ The project keeps route declarations config-driven and named-export based:
   component: () =>
     import("@/pages/components/button").then((module) => module.ButtonPage),
   meta: {
-    description: "Tactile command surface for primary actions.",
     emoji: "B",
     navSection: "actions",
     order: 30,
-    title: "Button",
     titleKey: "preview.components.button",
     descriptionKey:
       "preview.components.tactileCommandSurfaceForPrimaryActions",
@@ -66,10 +64,8 @@ Use hand-written TanStack routes only when the config model cannot express the b
 
 `RouteMeta` supports:
 
-- `title`: English fallback label.
-- `titleKey`: preview i18n key for the visible page title or menu label.
-- `description`: English fallback description.
-- `descriptionKey`: preview i18n key for visible descriptions.
+- `titleKey`: required preview i18n key for the visible page title or menu label.
+- `descriptionKey`: required preview i18n key for visible descriptions.
 - `emoji` or `icon`: compact visual affordance for navigation surfaces.
 - `order`: menu and overview sort weight. Smaller values appear first.
 - `navSection`: sidebar group key for component routes, such as `actions`, `surfaces-data`, `feedback-status`, `form-controls`, or `overlays`.
@@ -77,6 +73,12 @@ Use hand-written TanStack routes only when the config model cannot express the b
 - `permission`: currently part of the shared type, but do not add permission behavior unless the preview app actually implements it.
 
 Keep route metadata as the source of truth for preview navigation. Avoid adding parallel menu-only data when a path segment, `navSection`, or route meta field can express the same thing.
+
+For preview navigation data in `src/preview-data.ts`, keep visible copy key-only:
+
+- Use stable non-copy identifiers such as `id`, `path`, or token `name` for React keys and grouping.
+- Use `labelKey`, `titleKey`, and `descriptionKey` for visible copy.
+- Do not pair visible fallback fields such as `label`, `title`, or `description` with matching `*Key` fields.
 
 ## Adding A Page Route
 
@@ -86,7 +88,7 @@ Follow this workflow:
 2. Export the page as a named binding, such as `export { ButtonPage }`.
 3. Add an entry to `routes` in `src/router/routes.ts`.
 4. Resolve the named page export in `component`, for example `import(...).then((module) => module.ButtonPage)`.
-5. Provide `meta.title`, `meta.titleKey`, `meta.description`, and `meta.descriptionKey`.
+5. Provide `meta.titleKey` and `meta.descriptionKey`; do not add parallel title or description fallback text.
 6. Add `meta.order`; add `meta.navSection` for component pages that should appear in a component sidebar group.
 7. Add `hideInMenu: true` only for hidden utility pages or routes that should not appear in generated preview navigation.
 8. Update preview i18n dictionaries for new `titleKey` and `descriptionKey` values.
@@ -162,7 +164,7 @@ Before finishing routing work:
 - The route is registered in exactly one place unless an alias is intentional.
 - The page path and lazy import path match the actual file.
 - The lazy import resolves a named page export.
-- Visible routes have useful `meta.title`, `meta.titleKey`, `descriptionKey`, and sensible `order`.
+- Visible routes have useful `meta.titleKey`, `meta.descriptionKey`, and sensible `order`.
 - Component routes have the right `navSection`.
 - Hidden/detail routes use `hideInMenu: true`.
 - User-visible route labels and descriptions have preview i18n entries.

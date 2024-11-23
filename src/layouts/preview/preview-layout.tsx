@@ -78,7 +78,7 @@ function Sidebar({ activePath }: { activePath: string }) {
         className="flex w-full min-w-0 gap-3 overflow-x-auto lg:flex-col lg:overflow-visible"
       >
         {NAV_GROUPS.map((group) => (
-          <div className="min-w-[240px] lg:min-w-0" key={group.label}>
+          <div className="min-w-[240px] lg:min-w-0" key={group.id}>
             <div className="mb-2 flex items-center justify-start gap-3">
               <h3 className="text-text text-xl font-extrabold uppercase">
                 {td(group.labelKey)}
@@ -89,7 +89,7 @@ function Sidebar({ activePath }: { activePath: string }) {
             </div>
             <div className="flex flex-col gap-4">
               {group.sections.map((section) => (
-                <div className="flex flex-col gap-2" key={section.label}>
+                <div className="flex flex-col gap-2" key={section.id}>
                   {group.sections.length > 1 ? (
                     <div className="grid gap-1">
                       <Divider align="start" tone="warning" variant="dashed">

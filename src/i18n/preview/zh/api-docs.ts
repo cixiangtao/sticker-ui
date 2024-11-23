@@ -1,6 +1,117 @@
 import { defineMessages } from "../messages"
 
 const ZH_PREVIEW_API_DOC_MESSAGES = defineMessages({
+  "api.common.inheritedProps.aria-describedby.description": {
+    zh: "标识用于描述控件的元素。",
+  },
+  "api.common.inheritedProps.aria-invalid.description": {
+    zh: "标记当前值是否无效。",
+  },
+  "api.common.inheritedProps.aria-label.description": {
+    zh: "在可见文本不足时提供可访问名称。",
+  },
+  "api.common.inheritedProps.aria-labelledby.description": {
+    zh: "标识用于命名控件的元素。",
+  },
+  "api.common.inheritedProps.autoComplete.description": {
+    zh: "控制浏览器自动填充行为。",
+  },
+  "api.common.inheritedProps.autoFocus.description": {
+    zh: "在元素挂载时自动聚焦。",
+  },
+  "api.common.inheritedProps.checked.description": {
+    zh: "控制选中状态。",
+  },
+  "api.common.inheritedProps.children.description": {
+    zh: "渲染在元素内部的内容。",
+  },
+  "api.common.inheritedProps.className.description": {
+    zh: "向根元素添加自定义 className。",
+  },
+  "api.common.inheritedProps.defaultChecked.description": {
+    zh: "设置初始非受控选中状态。",
+  },
+  "api.common.inheritedProps.defaultValue.description": {
+    zh: "设置初始非受控值。",
+  },
+  "api.common.inheritedProps.disabled.description": {
+    zh: "禁用用户交互。",
+  },
+  "api.common.inheritedProps.form.description": {
+    zh: "通过 id 将控件关联到表单。",
+  },
+  "api.common.inheritedProps.htmlFor.description": {
+    zh: "将标签关联到表单控件 id。",
+  },
+  "api.common.inheritedProps.id.description": {
+    zh: "设置元素 id。",
+  },
+  "api.common.inheritedProps.max.description": {
+    zh: "设置可接受的最大值。",
+  },
+  "api.common.inheritedProps.maxLength.description": {
+    zh: "设置最大文本长度。",
+  },
+  "api.common.inheritedProps.min.description": {
+    zh: "设置可接受的最小值。",
+  },
+  "api.common.inheritedProps.minLength.description": {
+    zh: "设置最小文本长度。",
+  },
+  "api.common.inheritedProps.name.description": {
+    zh: "设置表单字段名称。",
+  },
+  "api.common.inheritedProps.onBlur.description": {
+    zh: "在元素失去焦点时运行。",
+  },
+  "api.common.inheritedProps.onChange.description": {
+    zh: "在值变化时运行。",
+  },
+  "api.common.inheritedProps.onClick.description": {
+    zh: "在元素被点击时运行。",
+  },
+  "api.common.inheritedProps.onFocus.description": {
+    zh: "在元素获得焦点时运行。",
+  },
+  "api.common.inheritedProps.onKeyDown.description": {
+    zh: "在按下按键时运行。",
+  },
+  "api.common.inheritedProps.onKeyUp.description": {
+    zh: "在松开按键时运行。",
+  },
+  "api.common.inheritedProps.onMouseEnter.description": {
+    zh: "在指针进入元素时运行。",
+  },
+  "api.common.inheritedProps.onMouseLeave.description": {
+    zh: "在指针离开元素时运行。",
+  },
+  "api.common.inheritedProps.pattern.description": {
+    zh: "设置值的校验模式。",
+  },
+  "api.common.inheritedProps.placeholder.description": {
+    zh: "在字段为空时显示占位文本。",
+  },
+  "api.common.inheritedProps.readOnly.description": {
+    zh: "阻止用户编辑，同时保留值的可读性。",
+  },
+  "api.common.inheritedProps.required.description": {
+    zh: "将字段标记为原生校验所需。",
+  },
+  "api.common.inheritedProps.role.description": {
+    zh: "设置 ARIA role。",
+  },
+  "api.common.inheritedProps.style.description": {
+    zh: "向根元素添加内联样式。",
+  },
+  "api.common.inheritedProps.title.description": {
+    zh: "设置元素的辅助说明文本。",
+  },
+  "api.common.inheritedProps.type.description": {
+    zh: "设置原生控件类型。",
+  },
+  "api.common.inheritedProps.value.description": {
+    zh: "控制当前值。",
+  },
   "api.alert.description": {
     zh: "用于状态消息和反馈的易读贴纸提示。",
   },
