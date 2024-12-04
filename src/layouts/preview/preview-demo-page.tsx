@@ -1,8 +1,10 @@
-import type { ReactNode } from "react"
+import { lazy, Suspense, type ReactNode } from "react"
 
 import apiDocs from "@/generated/preview-api-docs.json"
 
+import { usePreviewI18n } from "../../i18n/preview"
 import { PreviewApiTable } from "./preview-api-table"
+import { Card, CardContent } from "./preview-card"
 import type { PreviewDemoModule } from "./preview-example"
 import { PreviewExample } from "./preview-example"
 
@@ -18,6 +20,15 @@ interface GetPreviewDemoExamplesOptions {
   missingLabel: string
 }
 
+type PreviewDemoModuleLoader = () => Promise<PreviewDemoModule>
+type PreviewDemoSourceLoader = () => Promise<string>
+
+interface LoadPreviewDemoExamplesOptions {
+  demoModuleLoaders: Record<string, PreviewDemoModuleLoader | undefined>
+  demoSourceLoaders: Record<string, PreviewDemoSourceLoader | undefined>
+  missingLabel: string
+}
+
 interface PreviewDemoPageProps {
   className?: string
   examples: PreviewDemoExample[]
@@ -28,8 +39,8 @@ interface PreviewDemoPageProps {
 type ComponentPreviewName = keyof typeof apiDocs
 
 interface CreateComponentPreviewPageOptions {
-  demoModules: Record<string, PreviewDemoModule | undefined>
-  demoSources: Record<string, string | undefined>
+  demoModuleLoaders: Record<string, PreviewDemoModuleLoader | undefined>
+  demoSourceLoaders: Record<string, PreviewDemoSourceLoader | undefined>
   name: ComponentPreviewName
 }
 
@@ -54,6 +65,36 @@ function getPreviewDemoExamples({
       }
     })
     .sort(comparePreviewDemoExamples)
+}
+
+async function loadPreviewDemoExamples({
+  demoModuleLoaders,
+  demoSourceLoaders,
+  missingLabel,
+}: LoadPreviewDemoExamplesOptions) {
+  const demoExamples = await Promise.all(
+    Object.keys(demoModuleLoaders).map(async (path) => {
+      const demoModuleLoader = demoModuleLoaders[path]
+      const demoSourceLoader = demoSourceLoaders[path]
+
+      if (!demoModuleLoader || !demoSourceLoader) {
+        throw new Error(`Missing ${missingLabel} demo: ${path}`)
+      }
+
+      const [demoModule, code] = await Promise.all([
+        demoModuleLoader(),
+        demoSourceLoader(),
+      ])
+
+      return {
+        code,
+        module: demoModule,
+        path,
+      }
+    }),
+  )
+
+  return demoExamples.sort(comparePreviewDemoExamples)
 }
 
 function comparePreviewDemoExamples(
@@ -107,27 +148,49 @@ function PreviewDemoPage({
 }
 
 function createComponentPreviewPage({
-  demoModules,
-  demoSources,
+  demoModuleLoaders,
+  demoSourceLoaders,
   name,
 }: CreateComponentPreviewPageOptions) {
-  const demoExamples = getPreviewDemoExamples({
-    demoModules,
-    demoSources,
-    missingLabel: name,
+  const ComponentPreviewContent = lazy(async () => {
+    const demoExamples = await loadPreviewDemoExamples({
+      demoModuleLoaders,
+      demoSourceLoaders,
+      missingLabel: name,
+    })
+
+    return {
+      default: () => (
+        <PreviewDemoPage
+          examples={demoExamples}
+          sourceRoot={`src/pages/components/${name}`}
+          trailing={<PreviewApiTable api={apiDocs[name]} />}
+        />
+      ),
+    }
   })
 
   function ComponentPreviewPage() {
     return (
-      <PreviewDemoPage
-        examples={demoExamples}
-        sourceRoot={`src/pages/components/${name}`}
-        trailing={<PreviewApiTable api={apiDocs[name]} />}
-      />
+      <Suspense fallback={<PreviewDemoLoading />}>
+        <ComponentPreviewContent />
+      </Suspense>
     )
   }
 
   return ComponentPreviewPage
+}
+
+function PreviewDemoLoading() {
+  const { tm } = usePreviewI18n()
+
+  return (
+    <Card>
+      <CardContent className="text-sm font-extrabold text-ink/70">
+        {tm("preview.components.loadingDemos")}
+      </CardContent>
+    </Card>
+  )
 }
 
 export { createComponentPreviewPage, getPreviewDemoExamples, PreviewDemoPage }

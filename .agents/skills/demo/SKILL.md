@@ -19,7 +19,7 @@ For full registry component additions, also use `registry-preview-workflow`. For
 
 ## Current Demo Contract
 
-Demo modules are loaded by component preview pages through `import.meta.glob<PreviewDemoModule>("./demos/*.tsx", { eager: true })`.
+Demo modules are loaded by the central component preview page module through lazy `import.meta.glob<PreviewDemoModule>("./*/demos/*.tsx")` loaders.
 
 Each demo file must:
 
@@ -80,33 +80,15 @@ export { Demo, meta }
 
 ## Component Preview Pages
 
-For component pages, prefer `createComponentPreviewPage` from `@/layouts/preview`. It keeps rendered demos, raw source previews, source paths, and API table wiring consistent:
+For component pages, add a named page export in `src/pages/components/index.tsx` through the existing `createRegistryComponentPage` helper. It keeps rendered demos, async raw source previews, source paths, and API table wiring consistent without adding a repeated `index.tsx` file in every component folder:
 
 ```tsx
-import {
-  createComponentPreviewPage,
-  type PreviewDemoModule,
-} from "@/layouts/preview"
-
-const demoModules = import.meta.glob<PreviewDemoModule>("./demos/*.tsx", {
-  eager: true,
-})
-const demoSources = import.meta.glob<string>("./demos/*.tsx", {
-  eager: true,
-  import: "default",
-  query: "?raw",
-})
-
-const ExamplePage = createComponentPreviewPage({
-  demoModules,
-  demoSources,
-  name: "example",
-})
+const ExamplePage = createRegistryComponentPage("example")
 
 export { ExamplePage }
 ```
 
-Keep demo module loading and raw source loading pointed at the same `./demos/*.tsx` glob so every rendered demo has matching source code.
+Keep demo module loading and raw source loading pointed at the same lazy `./*/demos/*.tsx` glob so every rendered demo has matching source code.
 
 Use hand-written `PreviewDemoPage` / `getPreviewDemoExamples` only when a preview page genuinely needs custom layout or trailing content that `createComponentPreviewPage` cannot express.
 

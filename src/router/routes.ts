@@ -38,7 +38,7 @@ const routes = defineRoutes([
   },
   {
     component: () =>
-      import("@/pages/components/button").then((module) => module.ButtonPage),
+      import("@/pages/components").then((module) => module.ButtonPage),
     meta: {
       emoji: "B",
       navSection: "actions",
@@ -51,7 +51,7 @@ const routes = defineRoutes([
   },
   {
     component: () =>
-      import("@/pages/components/card").then((module) => module.CardPage),
+      import("@/pages/components").then((module) => module.CardPage),
     meta: {
       emoji: "C",
       navSection: "surfaces-data",
@@ -64,7 +64,7 @@ const routes = defineRoutes([
   },
   {
     component: () =>
-      import("@/pages/components/layout").then((module) => module.LayoutPage),
+      import("@/pages/components").then((module) => module.LayoutPage),
     meta: {
       emoji: "L",
       navSection: "surfaces-data",
@@ -77,7 +77,7 @@ const routes = defineRoutes([
   },
   {
     component: () =>
-      import("@/pages/components/divider").then((module) => module.DividerPage),
+      import("@/pages/components").then((module) => module.DividerPage),
     meta: {
       emoji: "D",
       navSection: "surfaces-data",
@@ -90,9 +90,7 @@ const routes = defineRoutes([
   },
   {
     component: () =>
-      import("@/pages/components/jsx-join").then(
-        (module) => module.JsxJoinPage,
-      ),
+      import("@/pages/components").then((module) => module.JsxJoinPage),
     meta: {
       emoji: "J",
       navSection: "surfaces-data",
@@ -105,7 +103,7 @@ const routes = defineRoutes([
   },
   {
     component: () =>
-      import("@/pages/components/table").then((module) => module.TablePage),
+      import("@/pages/components").then((module) => module.TablePage),
     meta: {
       emoji: "T",
       navSection: "surfaces-data",
@@ -118,7 +116,7 @@ const routes = defineRoutes([
   },
   {
     component: () =>
-      import("@/pages/components/tag").then((module) => module.TagPage),
+      import("@/pages/components").then((module) => module.TagPage),
     meta: {
       emoji: "T",
       navSection: "feedback-status",
@@ -131,7 +129,7 @@ const routes = defineRoutes([
   },
   {
     component: () =>
-      import("@/pages/components/alert").then((module) => module.AlertPage),
+      import("@/pages/components").then((module) => module.AlertPage),
     meta: {
       emoji: "A",
       navSection: "feedback-status",
@@ -144,7 +142,7 @@ const routes = defineRoutes([
   },
   {
     component: () =>
-      import("@/pages/components/form").then((module) => module.FormPage),
+      import("@/pages/components").then((module) => module.FormPage),
     meta: {
       emoji: "F",
       navSection: "form-controls",
@@ -157,7 +155,7 @@ const routes = defineRoutes([
   },
   {
     component: () =>
-      import("@/pages/components/input").then((module) => module.InputPage),
+      import("@/pages/components").then((module) => module.InputPage),
     meta: {
       emoji: "I",
       navSection: "form-controls",
@@ -170,9 +168,7 @@ const routes = defineRoutes([
   },
   {
     component: () =>
-      import("@/pages/components/input-password").then(
-        (module) => module.InputPasswordPage,
-      ),
+      import("@/pages/components").then((module) => module.InputPasswordPage),
     meta: {
       emoji: "P",
       navSection: "form-controls",
@@ -185,9 +181,7 @@ const routes = defineRoutes([
   },
   {
     component: () =>
-      import("@/pages/components/textarea").then(
-        (module) => module.TextareaPage,
-      ),
+      import("@/pages/components").then((module) => module.TextareaPage),
     meta: {
       emoji: "T",
       navSection: "form-controls",
@@ -200,7 +194,7 @@ const routes = defineRoutes([
   },
   {
     component: () =>
-      import("@/pages/components/select").then((module) => module.SelectPage),
+      import("@/pages/components").then((module) => module.SelectPage),
     meta: {
       emoji: "S",
       navSection: "form-controls",
@@ -213,7 +207,7 @@ const routes = defineRoutes([
   },
   {
     component: () =>
-      import("@/pages/components/tooltip").then((module) => module.TooltipPage),
+      import("@/pages/components").then((module) => module.TooltipPage),
     meta: {
       emoji: "T",
       navSection: "overlays",
@@ -226,7 +220,7 @@ const routes = defineRoutes([
   },
   {
     component: () =>
-      import("@/pages/components/popover").then((module) => module.PopoverPage),
+      import("@/pages/components").then((module) => module.PopoverPage),
     meta: {
       emoji: "P",
       navSection: "overlays",
@@ -239,7 +233,7 @@ const routes = defineRoutes([
   },
   {
     component: () =>
-      import("@/pages/components/dialog").then((module) => module.DialogPage),
+      import("@/pages/components").then((module) => module.DialogPage),
     meta: {
       emoji: "D",
       navSection: "overlays",
@@ -252,9 +246,7 @@ const routes = defineRoutes([
   },
   {
     component: () =>
-      import("@/pages/components/checkbox").then(
-        (module) => module.CheckboxPage,
-      ),
+      import("@/pages/components").then((module) => module.CheckboxPage),
     meta: {
       emoji: "C",
       navSection: "form-controls",
@@ -267,7 +259,7 @@ const routes = defineRoutes([
   },
   {
     component: () =>
-      import("@/pages/components/radio").then((module) => module.RadioPage),
+      import("@/pages/components").then((module) => module.RadioPage),
     meta: {
       emoji: "R",
       navSection: "form-controls",
@@ -280,7 +272,7 @@ const routes = defineRoutes([
   },
   {
     component: () =>
-      import("@/pages/components/switch").then((module) => module.SwitchPage),
+      import("@/pages/components").then((module) => module.SwitchPage),
     meta: {
       emoji: "S",
       navSection: "form-controls",
@@ -293,7 +285,7 @@ const routes = defineRoutes([
   },
   {
     component: () =>
-      import("@/pages/components/label").then((module) => module.LabelPage),
+      import("@/pages/components").then((module) => module.LabelPage),
     meta: {
       emoji: "L",
       navSection: "form-controls",

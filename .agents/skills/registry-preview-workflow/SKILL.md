@@ -20,7 +20,7 @@ New registry UI components must land as a synchronized set:
 
 1. Component source at `src/components/ui/<name>.tsx`.
 2. A `registry:ui` item in `registry.json`.
-3. Preview page at `src/pages/components/<name>/index.tsx`.
+3. Preview page export in `src/pages/components/index.tsx`.
 4. Demo files under `src/pages/components/<name>/demos`.
 5. Route registration in `src/router/routes.ts`.
 6. Generated API docs in `src/generated/preview-api-docs.json`.
@@ -40,33 +40,25 @@ For route details, also use the `route-configuration` skill.
 
 ## Preview Page Shape
 
-Component preview pages should normally use `createComponentPreviewPage` from `@/layouts/preview`:
+Component preview pages should normally be exported from `src/pages/components/index.tsx`.
+That central module uses `createComponentPreviewPage` from `@/layouts/preview`
+and lazy static `./*/demos/*.tsx` globs so each component folder only needs its
+demo files while each page loads only its own demo modules and raw sources:
 
 ```tsx
-import {
-  createComponentPreviewPage,
-  type PreviewDemoModule,
-} from "@/layouts/preview"
-
-const demoModules = import.meta.glob<PreviewDemoModule>("./demos/*.tsx", {
-  eager: true,
-})
-const demoSources = import.meta.glob<string>("./demos/*.tsx", {
-  eager: true,
+const demoModuleLoaders =
+  import.meta.glob<PreviewDemoModule>("./*/demos/*.tsx")
+const demoSourceLoaders = import.meta.glob<string>("./*/demos/*.tsx", {
   import: "default",
   query: "?raw",
 })
 
-const ExamplePage = createComponentPreviewPage({
-  demoModules,
-  demoSources,
-  name: "example",
-})
+const ExamplePage = createRegistryComponentPage("example")
 
 export { ExamplePage }
 ```
 
-This helper wires demos, source previews, `sourceRoot`, and `PreviewApiTable` together. Reach for hand-written `PreviewDemoPage`, `getPreviewDemoExamples`, or custom trailing content only when a preview page genuinely needs a layout the helper cannot express.
+The local `createRegistryComponentPage` helper wires demos, source previews, `sourceRoot`, and `PreviewApiTable` together. Reach for hand-written `PreviewDemoPage`, `getPreviewDemoExamples`, or custom trailing content only when a preview page genuinely needs a layout the helper cannot express.
 
 Demo files should:
 

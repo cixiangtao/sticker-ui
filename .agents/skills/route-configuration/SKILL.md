@@ -33,7 +33,7 @@ The project keeps route declarations config-driven and named-export based:
 ```ts
 {
   component: () =>
-    import("@/pages/components/button").then((module) => module.ButtonPage),
+    import("@/pages/components").then((module) => module.ButtonPage),
   meta: {
     emoji: "B",
     navSection: "actions",
@@ -84,7 +84,7 @@ For preview navigation data in `src/preview-data.ts`, keep visible copy key-only
 
 Follow this workflow:
 
-1. Create the page at `src/pages/<area>/<name>/index.tsx`.
+1. Create or export the page from the relevant page module. Component preview pages are exported from `src/pages/components/index.tsx`.
 2. Export the page as a named binding, such as `export { ButtonPage }`.
 3. Add an entry to `routes` in `src/router/routes.ts`.
 4. Resolve the named page export in `component`, for example `import(...).then((module) => module.ButtonPage)`.
@@ -96,33 +96,15 @@ Follow this workflow:
 
 ## Component Preview Routes
 
-Component preview pages should normally use `createComponentPreviewPage` from `@/layouts/preview`:
+Component preview pages should normally be added to `src/pages/components/index.tsx` with `createRegistryComponentPage`:
 
 ```tsx
-import {
-  createComponentPreviewPage,
-  type PreviewDemoModule,
-} from "@/layouts/preview"
-
-const demoModules = import.meta.glob<PreviewDemoModule>("./demos/*.tsx", {
-  eager: true,
-})
-const demoSources = import.meta.glob<string>("./demos/*.tsx", {
-  eager: true,
-  import: "default",
-  query: "?raw",
-})
-
-const ExamplePage = createComponentPreviewPage({
-  demoModules,
-  demoSources,
-  name: "example",
-})
+const ExamplePage = createRegistryComponentPage("example")
 
 export { ExamplePage }
 ```
 
-Keep demo module loading and raw source loading pointed at the same `./demos/*.tsx` glob.
+Keep demo module loading and raw source loading pointed at the same central lazy `./*/demos/*.tsx` glob.
 
 ## Menus And Route Hooks
 

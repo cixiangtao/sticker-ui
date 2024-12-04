@@ -289,6 +289,9 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   "preview.components.libraryDirectionConstraintsAndPreviewMap": {
     zh: "组件库方向、约束和预览地图。",
   },
+  "preview.components.loadingDemos": {
+    zh: "正在加载示例...",
+  },
   "preview.components.metadataRow": {
     zh: "元数据行",
   },
