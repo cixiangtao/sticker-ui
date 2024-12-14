@@ -1,3 +1,4 @@
+import { Divider } from "@/components/ui/divider"
 import { usePreviewI18n } from "@/i18n/preview"
 import {
   Card,
@@ -36,14 +37,9 @@ function OverviewPage() {
                   {group.sections.map((section) => (
                     <div className="flex flex-col gap-2" key={section.id}>
                       {group.sections.length > 1 ? (
-                        <div className="flex items-center justify-between rounded-[10px] border border-[#2E3038] bg-[#FFF6DC] px-3 py-1.5">
-                          <span className="text-xs font-black uppercase">
-                            {td(section.labelKey)}
-                          </span>
-                          <span className="text-xs font-extrabold text-[#696B76]">
-                            {section.items.length}
-                          </span>
-                        </div>
+                        <Divider variant="dashed" tone="warning">
+                          {td(section.labelKey)}
+                        </Divider>
                       ) : null}
                       {section.items.map((item) => (
                         <a
