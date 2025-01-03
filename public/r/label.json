@@ -3,12 +3,8 @@
   "name": "label",
   "title": "Sticker Label",
   "description": "An accessible form caption with optional sticker markers.",
-  "dependencies": [
-    "class-variance-authority"
-  ],
-  "registryDependencies": [
-    "utils"
-  ],
+  "dependencies": ["class-variance-authority"],
+  "registryDependencies": ["utils"],
   "files": [
     {
       "path": "src/components/ui/label.tsx",

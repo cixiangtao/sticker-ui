@@ -3,12 +3,8 @@
   "name": "tag",
   "title": "Sticker Tag",
   "description": "A compact sticker tag for statuses, labels, and metadata chips.",
-  "dependencies": [
-    "class-variance-authority"
-  ],
-  "registryDependencies": [
-    "utils"
-  ],
+  "dependencies": ["class-variance-authority"],
+  "registryDependencies": ["utils"],
   "files": [
     {
       "path": "src/components/ui/tag.tsx",

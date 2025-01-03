@@ -3,12 +3,8 @@
   "name": "switch",
   "title": "Sticker Switch",
   "description": "A Radix-powered switch with a tactile sticker track and paper thumb.",
-  "dependencies": [
-    "@radix-ui/react-switch"
-  ],
-  "registryDependencies": [
-    "utils"
-  ],
+  "dependencies": ["@radix-ui/react-switch"],
+  "registryDependencies": ["utils"],
   "files": [
     {
       "path": "src/components/ui/switch.tsx",

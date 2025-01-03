@@ -3,13 +3,8 @@
   "name": "button",
   "title": "Sticker Button",
   "description": "A tactile handbook sticker button with chunky ink borders.",
-  "dependencies": [
-    "@radix-ui/react-slot",
-    "class-variance-authority"
-  ],
-  "registryDependencies": [
-    "utils"
-  ],
+  "dependencies": ["@radix-ui/react-slot", "class-variance-authority"],
+  "registryDependencies": ["utils"],
   "files": [
     {
       "path": "src/components/ui/button.tsx",

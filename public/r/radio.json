@@ -3,12 +3,8 @@
   "name": "radio",
   "title": "Sticker Radio",
   "description": "A Radix-powered radio group with tactile sticker items and selected states.",
-  "dependencies": [
-    "@radix-ui/react-radio-group"
-  ],
-  "registryDependencies": [
-    "utils"
-  ],
+  "dependencies": ["@radix-ui/react-radio-group"],
+  "registryDependencies": ["utils"],
   "files": [
     {
       "path": "src/components/ui/radio.tsx",

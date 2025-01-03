@@ -3,10 +3,7 @@
   "name": "form",
   "title": "Sticker Form",
   "description": "An antd-style form controller with handbook sticker field states.",
-  "registryDependencies": [
-    "utils",
-    "label"
-  ],
+  "registryDependencies": ["utils", "label"],
   "files": [
     {
       "path": "src/components/ui/form.tsx",

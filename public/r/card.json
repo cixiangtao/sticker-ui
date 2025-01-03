@@ -3,13 +3,8 @@
   "name": "card",
   "title": "Sticker Card",
   "description": "A composable handbook sticker surface for cards, panels, and grouped content.",
-  "dependencies": [
-    "@radix-ui/react-slot",
-    "class-variance-authority"
-  ],
-  "registryDependencies": [
-    "utils"
-  ],
+  "dependencies": ["@radix-ui/react-slot", "class-variance-authority"],
+  "registryDependencies": ["utils"],
   "files": [
     {
       "path": "src/components/ui/card.tsx",

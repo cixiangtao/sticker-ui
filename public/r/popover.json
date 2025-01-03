@@ -3,13 +3,8 @@
   "name": "popover",
   "title": "Sticker Popover",
   "description": "A Radix-powered popover for compact interactive sticker panels.",
-  "dependencies": [
-    "@radix-ui/react-popover",
-    "class-variance-authority"
-  ],
-  "registryDependencies": [
-    "utils"
-  ],
+  "dependencies": ["@radix-ui/react-popover", "class-variance-authority"],
+  "registryDependencies": ["utils"],
   "files": [
     {
       "path": "src/components/ui/popover.tsx",

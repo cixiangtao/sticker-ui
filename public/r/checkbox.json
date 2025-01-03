@@ -3,13 +3,8 @@
   "name": "checkbox",
   "title": "Sticker Checkbox",
   "description": "A Radix-powered checkbox with sticker checked and indeterminate states.",
-  "dependencies": [
-    "@radix-ui/react-checkbox",
-    "lucide-react"
-  ],
-  "registryDependencies": [
-    "utils"
-  ],
+  "dependencies": ["@radix-ui/react-checkbox", "lucide-react"],
+  "registryDependencies": ["utils"],
   "files": [
     {
       "path": "src/components/ui/checkbox.tsx",

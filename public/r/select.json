@@ -3,14 +3,8 @@
   "name": "select",
   "title": "Sticker Select",
   "description": "A Radix-powered select with sticker trigger, menu, and item states.",
-  "dependencies": [
-    "@radix-ui/react-select",
-    "lucide-react"
-  ],
-  "registryDependencies": [
-    "utils",
-    "input"
-  ],
+  "dependencies": ["@radix-ui/react-select", "lucide-react"],
+  "registryDependencies": ["utils", "input"],
   "files": [
     {
       "path": "src/components/ui/select.tsx",

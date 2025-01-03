@@ -3,13 +3,8 @@
   "name": "tooltip",
   "title": "Sticker Tooltip",
   "description": "A Radix-powered tooltip with a small handbook sticker bubble.",
-  "dependencies": [
-    "@radix-ui/react-tooltip",
-    "class-variance-authority"
-  ],
-  "registryDependencies": [
-    "utils"
-  ],
+  "dependencies": ["@radix-ui/react-tooltip", "class-variance-authority"],
+  "registryDependencies": ["utils"],
   "files": [
     {
       "path": "src/components/ui/tooltip.tsx",
