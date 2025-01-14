@@ -591,7 +591,6 @@ function FormRoot({
             : "grid gap-4",
           className,
         )}
-        data-disabled={disabled}
         data-layout={layout}
         data-slot="form"
         noValidate

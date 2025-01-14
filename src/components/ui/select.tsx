@@ -18,6 +18,7 @@ type SelectChangeHandler = (value: string) => void
 
 interface SelectContextState {
   describedBy?: string
+  disabled?: boolean
   id?: string
   invalid?: React.AriaAttributes["aria-invalid"]
   size: SelectSize
@@ -27,9 +28,16 @@ interface SelectContextState {
 
 interface SelectVariantOptions {
   className?: string
+  disabled?: boolean
   size?: SelectSize
   tone?: SelectTone
   variant?: SelectVariant
+}
+
+interface SelectItemVariantOptions {
+  className?: string
+  disabled?: boolean
+  size?: SelectSize
 }
 
 const SelectContext = React.createContext<SelectContextState>({
@@ -68,14 +76,27 @@ const selectSizeClassNames = {
  */
 const selectVariants = ({
   className,
+  disabled,
   size = "md",
   tone = "default",
   variant = "outlined",
 }: SelectVariantOptions = {}) =>
   cn(
-    inputVariants({ size, tone, variant }),
+    inputVariants({ disabled, size, tone, variant }),
     "cursor-pointer items-center justify-between gap-2 text-left data-[placeholder]:text-text-placeholder data-[state=open]:shadow-sticker-md data-[state=open]:ring-[2px] data-[state=open]:ring-ring/65 [&>span]:truncate",
     selectSizeClassNames[size].trigger,
+    className,
+  )
+
+const selectItemVariants = ({
+  className,
+  disabled,
+  size = "md",
+}: SelectItemVariantOptions = {}) =>
+  cn(
+    "relative flex w-full cursor-default items-center rounded-sticker-md border border-transparent pr-9 pl-3 font-bold text-ink transition duration-150 outline-none select-none data-[highlighted]:bg-fill-default-soft data-[state=checked]:bg-fill-info data-[state=checked]:text-text-info",
+    disabled && "cursor-not-allowed opacity-55",
+    selectSizeClassNames[size].item,
     className,
   )
 
@@ -132,6 +153,7 @@ function Select({
   "aria-describedby": describedBy,
   "aria-invalid": invalid,
   children,
+  disabled,
   id,
   onChange,
   onValueChange,
@@ -143,13 +165,14 @@ function Select({
   const contextValue = React.useMemo<SelectContextState>(
     () => ({
       describedBy,
+      disabled,
       id,
       invalid,
       size,
       tone,
       variant,
     }),
-    [describedBy, id, invalid, size, tone, variant],
+    [describedBy, disabled, id, invalid, size, tone, variant],
   )
 
   return (
@@ -163,6 +186,7 @@ function Select({
           onValueChange?.(value)
           onChange?.(value)
         }}
+        disabled={disabled}
         {...props}
       >
         {children}
@@ -206,8 +230,9 @@ SelectLabel.displayName = SelectPrimitive.Label.displayName
 const SelectTrigger = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Trigger>
->(({ children, className, id, ...props }, ref) => {
+>(({ children, className, disabled, id, ...props }, ref) => {
   const context = React.useContext(SelectContext)
+  const resolvedDisabled = disabled ?? context.disabled
 
   return (
     <SelectPrimitive.Trigger
@@ -215,6 +240,7 @@ const SelectTrigger = React.forwardRef<
       aria-invalid={props["aria-invalid"] ?? context.invalid}
       className={cn(
         selectVariants({
+          disabled: resolvedDisabled,
           size: context.size,
           tone: context.tone,
           variant: context.variant,
@@ -223,6 +249,7 @@ const SelectTrigger = React.forwardRef<
         className,
       )}
       data-slot="select-trigger"
+      disabled={resolvedDisabled}
       id={id ?? context.id}
       ref={ref}
       {...props}
@@ -329,17 +356,18 @@ SelectContent.displayName = SelectPrimitive.Content.displayName
 const SelectItem = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Item>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Item>
->(({ children, className, ...props }, ref) => {
+>(({ children, className, disabled, ...props }, ref) => {
   const context = React.useContext(SelectContext)
 
   return (
     <SelectPrimitive.Item
-      className={cn(
-        "relative flex w-full cursor-default items-center rounded-sticker-md border border-transparent pr-9 pl-3 font-bold text-ink transition duration-150 outline-none select-none data-[disabled]:pointer-events-none data-[disabled]:opacity-45 data-[highlighted]:bg-fill-default-soft data-[state=checked]:bg-fill-info data-[state=checked]:text-text-info",
-        selectSizeClassNames[context.size].item,
+      className={selectItemVariants({
         className,
-      )}
+        disabled,
+        size: context.size,
+      })}
       data-slot="select-item"
+      disabled={disabled}
       ref={ref}
       {...props}
     >

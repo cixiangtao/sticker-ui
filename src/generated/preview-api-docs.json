@@ -8,7 +8,7 @@
           "remarksKey": "api.button.components.Button.props.remarks",
           "inherits": [
             "React.ButtonHTMLAttributes<HTMLButtonElement>",
-            "VariantProps<typeof buttonVariants>"
+            "Omit<VariantProps<typeof buttonVariants>, \"disabled\" | \"loading\">"
           ],
           "inheritedMembers": [
             {
@@ -258,7 +258,7 @@
         "remarksKey": "api.button.types.ButtonProps.remarks",
         "inherits": [
           "React.ButtonHTMLAttributes<HTMLButtonElement>",
-          "VariantProps<typeof buttonVariants>"
+          "Omit<VariantProps<typeof buttonVariants>, \"disabled\" | \"loading\">"
         ],
         "kind": "interface",
         "members": [
@@ -322,6 +322,8 @@
               "warning"
             ]
           },
+          { "name": "disabled", "values": ["false", "true"] },
+          { "name": "loading", "values": ["false", "true"] },
           {
             "defaultValue": "md",
             "name": "size",
@@ -3978,7 +3980,7 @@
           "remarksKey": "api.input.components.Input.props.remarks",
           "inherits": [
             "Omit< React.InputHTMLAttributes<HTMLInputElement>, \"onChange\" | \"size\" | \"type\" >",
-            "Omit<VariantProps<typeof inputVariants>, \"size\" | \"tone\" | \"variant\">"
+            "Omit< VariantProps<typeof inputVariants>, \"disabled\" | \"size\" | \"tone\" | \"variant\" >"
           ],
           "inheritedMembers": [
             {
@@ -4284,7 +4286,7 @@
         "remarksKey": "api.input.types.InputProps.remarks",
         "inherits": [
           "Omit< React.InputHTMLAttributes<HTMLInputElement>, \"onChange\" | \"size\" | \"type\" >",
-          "Omit<VariantProps<typeof inputVariants>, \"size\" | \"tone\" | \"variant\">"
+          "Omit< VariantProps<typeof inputVariants>, \"disabled\" | \"size\" | \"tone\" | \"variant\" >"
         ],
         "kind": "interface",
         "members": [
@@ -4336,6 +4338,7 @@
       {
         "descriptionKey": "api.input.variants.inputVariants.description",
         "groups": [
+          { "name": "disabled", "values": ["false", "true"] },
           {
             "defaultValue": "md",
             "name": "size",

@@ -15,6 +15,7 @@ type SwitchVariant = "filled" | "outlined" | "quiet"
 
 interface SwitchVariantOptions {
   className?: string
+  disabled?: boolean
   size?: SwitchSize
   tone?: SwitchTone
   variant?: SwitchVariant
@@ -80,12 +81,14 @@ const switchToneClassNames = {
  */
 const switchVariants = ({
   className,
+  disabled,
   size = "md",
   tone = "default",
   variant = "outlined",
 }: SwitchVariantOptions = {}) =>
   cn(
-    "peer inline-flex shrink-0 cursor-pointer items-center border-2 border-ink bg-surface shadow-sticker-sm transition duration-150 outline-none focus-visible:shadow-sticker-md focus-visible:ring-[2px] focus-visible:ring-ring/65 disabled:cursor-not-allowed disabled:opacity-55 aria-invalid:border-text-danger aria-invalid:bg-fill-danger-soft data-[state=checked]:shadow-sticker-md",
+    "peer inline-flex shrink-0 cursor-pointer items-center border-2 border-ink bg-surface shadow-sticker-sm transition duration-150 outline-none focus-visible:shadow-sticker-md focus-visible:ring-[2px] focus-visible:ring-ring/65 aria-invalid:border-text-danger aria-invalid:bg-fill-danger-soft data-[state=checked]:shadow-sticker-md",
+    disabled && "cursor-not-allowed opacity-55",
     switchSizeClassNames[size].root,
     switchToneClassNames[tone].checked,
     variant === "filled" && switchToneClassNames[tone].fill,
@@ -133,6 +136,7 @@ const Switch = React.forwardRef<
   (
     {
       className,
+      disabled,
       size = "md",
       tone = "default",
       variant = "outlined",
@@ -141,8 +145,12 @@ const Switch = React.forwardRef<
     ref,
   ) => (
     <SwitchPrimitive.Root
-      className={cn(switchVariants({ size, tone, variant }), className)}
+      className={cn(
+        switchVariants({ disabled, size, tone, variant }),
+        className,
+      )}
       data-slot="switch"
+      disabled={disabled}
       ref={ref}
       {...props}
     >

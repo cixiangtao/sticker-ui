@@ -31,6 +31,10 @@ const tooltipContentVariants = cva(
   },
 )
 
+function getTooltipTriggerClassName(disabled?: boolean) {
+  return cn("cursor-pointer", disabled && "cursor-not-allowed opacity-55")
+}
+
 /**
  * Props for the sticker tooltip provider.
  */
@@ -77,13 +81,11 @@ const Tooltip = TooltipPrimitive.Root
 const TooltipTrigger = React.forwardRef<
   React.ElementRef<typeof TooltipPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof TooltipPrimitive.Trigger>
->(({ className, ...props }, ref) => (
+>(({ className, disabled, ...props }, ref) => (
   <TooltipPrimitive.Trigger
-    className={cn(
-      "cursor-pointer disabled:cursor-not-allowed data-[disabled]:cursor-not-allowed",
-      className,
-    )}
+    className={cn(getTooltipTriggerClassName(disabled), className)}
     data-slot="tooltip-trigger"
+    disabled={disabled}
     ref={ref}
     {...props}
   />

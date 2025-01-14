@@ -31,6 +31,10 @@ const popoverContentVariants = cva(
   },
 )
 
+function getPopoverActionClassName(disabled?: boolean) {
+  return cn("cursor-pointer", disabled && "cursor-not-allowed opacity-55")
+}
+
 /**
  * Sticker popover root powered by Radix Popover.
  */
@@ -42,13 +46,11 @@ const Popover = PopoverPrimitive.Root
 const PopoverTrigger = React.forwardRef<
   React.ElementRef<typeof PopoverPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof PopoverPrimitive.Trigger>
->(({ className, ...props }, ref) => (
+>(({ className, disabled, ...props }, ref) => (
   <PopoverPrimitive.Trigger
-    className={cn(
-      "cursor-pointer disabled:cursor-not-allowed data-[disabled]:cursor-not-allowed",
-      className,
-    )}
+    className={cn(getPopoverActionClassName(disabled), className)}
     data-slot="popover-trigger"
+    disabled={disabled}
     ref={ref}
     {...props}
   />
@@ -66,13 +68,11 @@ const PopoverAnchor = PopoverPrimitive.Anchor
 const PopoverClose = React.forwardRef<
   React.ElementRef<typeof PopoverPrimitive.Close>,
   React.ComponentPropsWithoutRef<typeof PopoverPrimitive.Close>
->(({ className, ...props }, ref) => (
+>(({ className, disabled, ...props }, ref) => (
   <PopoverPrimitive.Close
-    className={cn(
-      "cursor-pointer disabled:cursor-not-allowed data-[disabled]:cursor-not-allowed",
-      className,
-    )}
+    className={cn(getPopoverActionClassName(disabled), className)}
     data-slot="popover-close"
+    disabled={disabled}
     ref={ref}
     {...props}
   />

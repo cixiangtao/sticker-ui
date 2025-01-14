@@ -19,6 +19,7 @@ type TextareaChangeHandler = (
 
 interface TextareaVariantOptions {
   className?: string
+  disabled?: boolean
   size?: TextareaSize
   tone?: TextareaTone
   variant?: TextareaVariant
@@ -35,12 +36,13 @@ const textareaSizeClassNames = {
  */
 const textareaVariants = ({
   className,
+  disabled,
   size = "md",
   tone = "default",
   variant = "outlined",
 }: TextareaVariantOptions = {}) =>
   cn(
-    inputVariants({ size, tone, variant }),
+    inputVariants({ disabled, size, tone, variant }),
     "resize-y",
     textareaSizeClassNames[size],
     className,
@@ -78,6 +80,7 @@ interface TextareaProps extends Omit<
 
 function Textarea({
   className,
+  disabled,
   onChange,
   size = "md",
   tone = "default",
@@ -86,8 +89,12 @@ function Textarea({
 }: TextareaProps) {
   return (
     <textarea
-      className={cn(textareaVariants({ size, tone, variant }), className)}
+      className={cn(
+        textareaVariants({ disabled, size, tone, variant }),
+        className,
+      )}
       data-slot="textarea"
+      disabled={disabled}
       onChange={(event) => {
         onChange?.(event.currentTarget.value, event)
       }}

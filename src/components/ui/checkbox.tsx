@@ -16,6 +16,7 @@ type CheckboxVariant = "filled" | "outlined" | "quiet"
 
 interface CheckboxVariantOptions {
   className?: string
+  disabled?: boolean
   size?: CheckboxSize
   tone?: CheckboxTone
   variant?: CheckboxVariant
@@ -86,12 +87,14 @@ const checkboxToneClassNames = {
  */
 const checkboxVariants = ({
   className,
+  disabled,
   size = "md",
   tone = "default",
   variant = "outlined",
 }: CheckboxVariantOptions = {}) =>
   cn(
-    "peer inline-flex shrink-0 cursor-pointer items-center justify-center border-2 border-ink bg-surface text-ink shadow-sticker-sm transition duration-150 outline-none focus-visible:shadow-sticker-md focus-visible:ring-[2px] focus-visible:ring-ring/65 disabled:cursor-not-allowed disabled:opacity-55 aria-invalid:border-text-danger aria-invalid:bg-fill-danger-soft data-[state=checked]:shadow-sticker-md data-[state=indeterminate]:bg-ink data-[state=indeterminate]:text-paper",
+    "peer inline-flex shrink-0 cursor-pointer items-center justify-center border-2 border-ink bg-surface text-ink shadow-sticker-sm transition duration-150 outline-none focus-visible:shadow-sticker-md focus-visible:ring-[2px] focus-visible:ring-ring/65 aria-invalid:border-text-danger aria-invalid:bg-fill-danger-soft data-[state=checked]:shadow-sticker-md data-[state=indeterminate]:bg-ink data-[state=indeterminate]:text-paper",
+    disabled && "cursor-not-allowed opacity-55",
     checkboxSizeClassNames[size].root,
     checkboxToneClassNames[tone].checked,
     variant === "filled" && checkboxToneClassNames[tone].fill,
@@ -139,6 +142,7 @@ const Checkbox = React.forwardRef<
   (
     {
       className,
+      disabled,
       size = "md",
       tone = "default",
       variant = "outlined",
@@ -147,8 +151,12 @@ const Checkbox = React.forwardRef<
     ref,
   ) => (
     <CheckboxPrimitive.Root
-      className={cn(checkboxVariants({ size, tone, variant }), className)}
+      className={cn(
+        checkboxVariants({ disabled, size, tone, variant }),
+        className,
+      )}
       data-slot="checkbox"
+      disabled={disabled}
       ref={ref}
       {...props}
     >

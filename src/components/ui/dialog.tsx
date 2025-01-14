@@ -31,6 +31,10 @@ const dialogContentVariants = cva(
   },
 )
 
+function getDialogActionClassName(disabled?: boolean) {
+  return cn("cursor-pointer", disabled && "cursor-not-allowed opacity-55")
+}
+
 /**
  * Sticker dialog root powered by Radix Dialog.
  */
@@ -42,13 +46,11 @@ const Dialog = DialogPrimitive.Root
 const DialogTrigger = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Trigger>
->(({ className, ...props }, ref) => (
+>(({ className, disabled, ...props }, ref) => (
   <DialogPrimitive.Trigger
-    className={cn(
-      "cursor-pointer disabled:cursor-not-allowed data-[disabled]:cursor-not-allowed",
-      className,
-    )}
+    className={cn(getDialogActionClassName(disabled), className)}
     data-slot="dialog-trigger"
+    disabled={disabled}
     ref={ref}
     {...props}
   />
@@ -61,13 +63,11 @@ DialogTrigger.displayName = DialogPrimitive.Trigger.displayName
 const DialogClose = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Close>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Close>
->(({ className, ...props }, ref) => (
+>(({ className, disabled, ...props }, ref) => (
   <DialogPrimitive.Close
-    className={cn(
-      "cursor-pointer disabled:cursor-not-allowed data-[disabled]:cursor-not-allowed",
-      className,
-    )}
+    className={cn(getDialogActionClassName(disabled), className)}
     data-slot="dialog-close"
+    disabled={disabled}
     ref={ref}
     {...props}
   />

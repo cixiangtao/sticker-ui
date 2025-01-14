@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils"
  * Builds the sticker input className from structure, tone, and size variants.
  */
 const inputVariants = cva(
-  "flex w-full min-w-0 border-2 border-ink bg-surface font-bold text-ink shadow-sticker-sm transition duration-150 outline-none selection:bg-fill-default selection:text-ink placeholder:text-text-placeholder focus-visible:shadow-sticker-md focus-visible:ring-[2px] focus-visible:ring-ring/65 disabled:cursor-not-allowed disabled:opacity-55 aria-invalid:border-text-danger aria-invalid:bg-fill-danger-soft aria-invalid:text-text-danger",
+  "flex w-full min-w-0 border-2 border-ink bg-surface font-bold text-ink shadow-sticker-sm transition duration-150 outline-none selection:bg-fill-default selection:text-ink placeholder:text-text-placeholder focus-visible:shadow-sticker-md focus-visible:ring-[2px] focus-visible:ring-ring/65 aria-invalid:border-text-danger aria-invalid:bg-fill-danger-soft aria-invalid:text-text-danger",
   {
     compoundVariants: [
       {
@@ -110,6 +110,10 @@ const inputVariants = cva(
       variant: "outlined",
     },
     variants: {
+      disabled: {
+        false: "",
+        true: "cursor-not-allowed opacity-55",
+      },
       size: {
         lg: "h-12 rounded-sticker-xl px-4 text-base",
         md: "h-11 rounded-sticker-lg px-3.5 text-sm",
@@ -149,7 +153,10 @@ interface InputProps
       React.InputHTMLAttributes<HTMLInputElement>,
       "onChange" | "size" | "type"
     >,
-    Omit<VariantProps<typeof inputVariants>, "size" | "tone" | "variant"> {
+    Omit<
+      VariantProps<typeof inputVariants>,
+      "disabled" | "size" | "tone" | "variant"
+    > {
   /**
    * Runs when the input value changes.
    * @remarks Receives the next string value first and the native change event second.
@@ -179,6 +186,7 @@ interface InputProps
 
 function Input({
   className,
+  disabled,
   onChange,
   size = "md",
   tone = "default",
@@ -188,8 +196,12 @@ function Input({
 }: InputProps) {
   return (
     <input
-      className={cn(inputVariants({ size, tone, variant }), className)}
+      className={cn(
+        inputVariants({ disabled, size, tone, variant }),
+        className,
+      )}
       data-slot="input"
+      disabled={disabled}
       onChange={(event) => {
         onChange?.(event.currentTarget.value, event)
       }}

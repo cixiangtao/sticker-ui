@@ -3,8 +3,12 @@
   "name": "divider",
   "title": "Sticker Divider",
   "description": "A semantic sticker separator for sections, metadata rows, and split panes.",
-  "dependencies": ["class-variance-authority"],
-  "registryDependencies": ["utils"],
+  "dependencies": [
+    "class-variance-authority"
+  ],
+  "registryDependencies": [
+    "utils"
+  ],
   "files": [
     {
       "path": "src/components/ui/divider.tsx",

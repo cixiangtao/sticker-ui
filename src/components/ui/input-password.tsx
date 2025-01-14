@@ -36,6 +36,13 @@ const inputPasswordSizeClassNames = {
   }
 >
 
+function getInputPasswordToggleClassName(disabled?: boolean) {
+  return cn(
+    "inline-flex shrink-0 cursor-pointer items-center justify-center rounded-sticker-md bg-transparent text-ink/70 transition duration-150 outline-none hover:text-ink focus-visible:ring-2 focus-visible:ring-ring/65 active:text-ink",
+    disabled && "cursor-not-allowed opacity-55",
+  )
+}
+
 /**
  * Props for the sticker password input element.
  * @remarks Inherits sticker input attributes, except `onChange`, the native `type`, and numeric HTML `size` attributes are replaced by password-specific sticker APIs.
@@ -113,19 +120,17 @@ function InputPassword({
     <div
       aria-invalid={ariaInvalid}
       className={cn(
-        inputVariants({ size, tone, variant }),
+        inputVariants({ disabled, size, tone, variant }),
         "items-center gap-2 py-0 focus-within:shadow-sticker-md focus-within:ring-2 focus-within:ring-ring/65",
-        disabled && "cursor-not-allowed opacity-55",
         inputPasswordSizeClassNames[size].root,
         className,
       )}
-      data-disabled={disabled ? "" : undefined}
       data-slot="input-password"
     >
       <input
         aria-invalid={ariaInvalid}
         className={cn(
-          "h-full min-w-0 flex-1 bg-transparent font-bold text-inherit outline-none placeholder:text-text-placeholder disabled:cursor-not-allowed",
+          "h-full min-w-0 flex-1 bg-transparent font-bold text-inherit outline-none placeholder:text-text-placeholder",
         )}
         data-slot="input-password-control"
         disabled={disabled}
@@ -139,7 +144,7 @@ function InputPassword({
         aria-label={visibilityLabel}
         aria-pressed={visible}
         className={cn(
-          "inline-flex shrink-0 cursor-pointer items-center justify-center rounded-sticker-md bg-transparent text-ink/70 transition duration-150 outline-none hover:text-ink focus-visible:ring-2 focus-visible:ring-ring/65 active:text-ink disabled:pointer-events-none disabled:opacity-55",
+          getInputPasswordToggleClassName(disabled),
           inputPasswordSizeClassNames[size].toggle,
         )}
         data-slot="input-password-toggle"

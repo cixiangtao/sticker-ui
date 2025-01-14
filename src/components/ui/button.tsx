@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils"
  * Builds the sticker button className from structure, color, and size variants.
  */
 const buttonVariants = cva(
-  "inline-flex shrink-0 cursor-pointer items-center justify-center gap-2 rounded-sticker-md border-2 leading-none font-extrabold transition duration-150 outline-none focus-visible:ring-[2px] focus-visible:ring-ring/65 disabled:pointer-events-none disabled:opacity-55 data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-55 data-[loading=true]:cursor-wait data-[loading=true]:opacity-75",
+  "inline-flex shrink-0 cursor-pointer items-center justify-center gap-2 rounded-sticker-md border-2 leading-none font-extrabold transition duration-150 outline-none focus-visible:ring-[2px] focus-visible:ring-ring/65",
   {
     compoundVariants: [
       {
@@ -147,6 +147,14 @@ const buttonVariants = cva(
         success: "",
         warning: "",
       },
+      disabled: {
+        false: "",
+        true: "cursor-not-allowed opacity-55",
+      },
+      loading: {
+        false: "",
+        true: "cursor-wait opacity-75",
+      },
       size: {
         icon: "size-11 p-0",
         lg: "h-12 rounded-sticker-lg px-6 text-base",
@@ -176,7 +184,7 @@ const buttonVariants = cva(
 interface ButtonProps
   extends
     React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {
+    Omit<VariantProps<typeof buttonVariants>, "disabled" | "loading"> {
   /**
    * Renders the button styles and state props on the only child element.
    * @default false
@@ -210,6 +218,8 @@ function Button({
   color = "default",
   disabled,
   loading = false,
+  onClick,
+  onClickCapture,
   size = "md",
   type = "button",
   variant = "solid",
@@ -225,10 +235,35 @@ function Button({
   return (
     <Component
       aria-busy={loading || undefined}
-      className={cn(buttonVariants({ color, size, variant }), className)}
-      data-disabled={isDisabled}
-      data-loading={loading}
+      className={cn(
+        buttonVariants({
+          color,
+          disabled: isDisabled,
+          loading,
+          size,
+          variant,
+        }),
+        className,
+      )}
       data-slot="button"
+      onClickCapture={(event) => {
+        if (isDisabled) {
+          event.preventDefault()
+          event.stopPropagation()
+          return
+        }
+
+        onClickCapture?.(event)
+      }}
+      onClick={(event) => {
+        if (isDisabled) {
+          event.preventDefault()
+          event.stopPropagation()
+          return
+        }
+
+        onClick?.(event)
+      }}
       {...childProps}
       {...props}
     >

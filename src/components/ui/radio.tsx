@@ -15,6 +15,7 @@ type RadioVariant = "filled" | "outlined" | "quiet"
 type RadioChangeHandler = (value: string) => void
 
 interface RadioContextState {
+  disabled?: boolean
   size: RadioSize
   tone: RadioTone
   variant: RadioVariant
@@ -22,6 +23,7 @@ interface RadioContextState {
 
 interface RadioVariantOptions {
   className?: string
+  disabled?: boolean
   size?: RadioSize
   tone?: RadioTone
   variant?: RadioVariant
@@ -99,12 +101,14 @@ const radioToneClassNames = {
  */
 const radioVariants = ({
   className,
+  disabled,
   size = "md",
   tone = "default",
   variant = "outlined",
 }: RadioVariantOptions = {}) =>
   cn(
-    "peer inline-flex shrink-0 cursor-pointer items-center justify-center rounded-full border-2 border-ink bg-surface text-ink shadow-sticker-sm transition-shadow duration-150 outline-none focus-visible:shadow-sticker-md focus-visible:ring-[2px] focus-visible:ring-ring/65 disabled:cursor-not-allowed disabled:opacity-55 aria-invalid:border-text-danger aria-invalid:bg-fill-danger-soft data-[state=checked]:shadow-sticker-md",
+    "peer inline-flex shrink-0 cursor-pointer items-center justify-center rounded-full border-2 border-ink bg-surface text-ink shadow-sticker-sm transition-shadow duration-150 outline-none focus-visible:shadow-sticker-md focus-visible:ring-[2px] focus-visible:ring-ring/65 aria-invalid:border-text-danger aria-invalid:bg-fill-danger-soft data-[state=checked]:shadow-sticker-md",
+    disabled && "cursor-not-allowed opacity-55",
     radioSizeClassNames[size].item,
     radioToneClassNames[tone].checked,
     variant === "filled" && radioToneClassNames[tone].fill,
@@ -157,6 +161,7 @@ interface RadioGroupProps extends Omit<
 function RadioGroup({
   children,
   className,
+  disabled,
   onChange,
   onValueChange,
   size = "md",
@@ -166,11 +171,12 @@ function RadioGroup({
 }: RadioGroupProps) {
   const contextValue = React.useMemo<RadioContextState>(
     () => ({
+      disabled,
       size,
       tone,
       variant,
     }),
-    [size, tone, variant],
+    [disabled, size, tone, variant],
   )
 
   return (
@@ -178,6 +184,7 @@ function RadioGroup({
       <RadioGroupPrimitive.Root
         className={cn("grid gap-2", className)}
         data-slot="radio-group"
+        disabled={disabled}
         onValueChange={(value) => {
           onValueChange?.(value)
           onChange?.(value)
@@ -222,14 +229,16 @@ interface RadioGroupItemProps extends Omit<
 const RadioGroupItem = React.forwardRef<
   React.ElementRef<typeof RadioGroupPrimitive.Item>,
   RadioGroupItemProps
->(({ className, size, tone, variant, ...props }, ref) => {
+>(({ className, disabled, size, tone, variant, ...props }, ref) => {
   const context = React.useContext(RadioContext)
   const resolvedSize = size ?? context.size
+  const resolvedDisabled = Boolean(context.disabled || disabled)
 
   return (
     <RadioGroupPrimitive.Item
       className={cn(
         radioVariants({
+          disabled: resolvedDisabled,
           size: resolvedSize,
           tone: tone ?? context.tone,
           variant: variant ?? context.variant,
@@ -237,6 +246,7 @@ const RadioGroupItem = React.forwardRef<
         className,
       )}
       data-slot="radio-group-item"
+      disabled={resolvedDisabled}
       ref={ref}
       {...props}
     >
