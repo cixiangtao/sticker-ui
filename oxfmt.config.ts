@@ -31,6 +31,7 @@ export default defineConfig({
     "node_modules",
     "package-lock.json",
     "pnpm-lock.yaml",
+    "public/r",
   ],
   printWidth: 80,
   semi: false,

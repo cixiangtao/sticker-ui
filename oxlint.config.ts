@@ -9,7 +9,13 @@ export default defineConfig({
     es2022: true,
     node: true,
   },
-  ignorePatterns: [".agents", ".playwright-mcp", "dist", "node_modules"],
+  ignorePatterns: [
+    ".agents",
+    ".playwright-mcp",
+    "dist",
+    "node_modules",
+    "public/r",
+  ],
   plugins: ["eslint", "import", "typescript", "react"],
   rules: {
     "import/no-unassigned-import": "off",
