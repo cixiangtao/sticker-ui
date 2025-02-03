@@ -3,7 +3,7 @@ import { useLayoutEffect } from "react"
 import { Card, CardContent, CardHeader, Divider, Tag } from "sticker-ui"
 
 import { usePreviewI18n } from "../../i18n/preview"
-import { NAV_GROUPS } from "../../preview-data"
+import { NAV_GROUPS, resolvePreviewLabel } from "../../preview-data"
 import { useCurrentRoute } from "../../router/hooks"
 
 const PREVIEW_CONTENT_SCROLL_SELECTOR = "[data-preview-content-scroll]"
@@ -12,9 +12,11 @@ function PreviewLayout() {
   const location = useLocation()
   const { td, tm } = usePreviewI18n()
   const currentRoute = useCurrentRoute()
+  const currentRouteMeta = currentRoute?.meta
   const activeRoute = {
-    descriptionKey: currentRoute?.meta?.descriptionKey,
-    labelKey: currentRoute?.meta?.titleKey,
+    descriptionKey: currentRouteMeta?.descriptionKey,
+    label: currentRouteMeta?.title,
+    labelKey: currentRouteMeta?.titleKey,
     path: currentRoute?.pathname ?? location.pathname,
   }
 
@@ -44,7 +46,7 @@ function PreviewLayout() {
                   {tm("preview.route.eyebrow")}
                 </div>
                 <h1 className="mt-1 text-5xl leading-none font-black">
-                  {td(activeRoute.labelKey)}
+                  {resolvePreviewLabel(activeRoute, td)}
                 </h1>
                 <p className="mt-3 max-w-2xl text-sm leading-6 font-medium text-text-muted">
                   {td(activeRoute.descriptionKey)}
@@ -123,7 +125,7 @@ function Sidebar({ activePath }: { activePath: string }) {
                         to={item.path}
                       >
                         <span className="font-extrabold">
-                          {td(item.labelKey)}
+                          {resolvePreviewLabel(item, td)}
                         </span>
                         <span className="mt-1 block text-xs leading-5 font-medium text-text-subtle">
                           {td(item.descriptionKey)}
@@ -141,7 +143,11 @@ function Sidebar({ activePath }: { activePath: string }) {
   )
 }
 
-function TopBar({ activeRoute }: { activeRoute: { labelKey?: string } }) {
+function TopBar({
+  activeRoute,
+}: {
+  activeRoute: { label?: string; labelKey?: string }
+}) {
   const { td, tm } = usePreviewI18n()
 
   return (
@@ -157,7 +163,8 @@ function TopBar({ activeRoute }: { activeRoute: { labelKey?: string } }) {
         <div>
           <div className="text-2xl leading-none font-black">sticker-ui</div>
           <div className="mt-1 text-sm font-bold text-text-muted">
-            {tm("preview.route.previewing")} {td(activeRoute.labelKey)}
+            {tm("preview.route.previewing")}{" "}
+            {resolvePreviewLabel(activeRoute, td)}
           </div>
         </div>
       </Link>

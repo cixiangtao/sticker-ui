@@ -7,7 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/layouts/preview"
-import { NAV_GROUPS } from "@/preview-data"
+import { NAV_GROUPS, resolvePreviewLabel } from "@/preview-data"
 
 function OverviewPage() {
   const { td, tm } = usePreviewI18n()
@@ -47,7 +47,7 @@ function OverviewPage() {
                           href={`#${item.path}`}
                           key={item.path}
                         >
-                          {td(item.labelKey)}
+                          {resolvePreviewLabel(item, td)}
                         </a>
                       ))}
                     </div>

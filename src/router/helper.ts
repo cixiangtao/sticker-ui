@@ -12,7 +12,8 @@ interface MenuItem {
   navSection?: string
   order: number
   path: string
-  titleKey: string
+  title?: string
+  titleKey?: string
 }
 
 interface RouteConfig {
@@ -23,7 +24,19 @@ interface RouteConfig {
   path: string
 }
 
-interface RouteMeta {
+type RouteMeta = RouteBaseMeta & RouteTitleMeta
+
+type RouteTitleMeta =
+  | {
+      title: string
+      titleKey?: never
+    }
+  | {
+      title?: never
+      titleKey: string
+    }
+
+interface RouteBaseMeta {
   descriptionKey: string
   emoji?: string
   hideInMenu?: boolean
@@ -31,7 +44,6 @@ interface RouteMeta {
   navSection?: string
   order?: number
   permission?: string
-  titleKey: string
 }
 
 function buildRouteTree(
@@ -84,6 +96,7 @@ function generateMenuItems(routeConfigs: readonly RouteConfig[]): MenuItem[] {
       navSection: routeConfig.meta.navSection,
       order: routeConfig.meta.order ?? 0,
       path: routeConfig.path,
+      title: routeConfig.meta.title,
       titleKey: routeConfig.meta.titleKey,
     }))
     .sort((first, second) => first.order - second.order)

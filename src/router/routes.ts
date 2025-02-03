@@ -43,7 +43,7 @@ const routes = defineRoutes([
       emoji: "B",
       navSection: "actions",
       order: 30,
-      titleKey: "preview.components.button",
+      title: "Button",
       descriptionKey:
         "preview.components.tactileCommandSurfaceForPrimaryActions",
     },
@@ -56,7 +56,7 @@ const routes = defineRoutes([
       emoji: "C",
       navSection: "surfaces-data",
       order: 40,
-      titleKey: "preview.components.card",
+      title: "Card",
       descriptionKey:
         "preview.components.composableStickerSurfacesForCardsPanelsAndGroupedContent",
     },
@@ -69,7 +69,7 @@ const routes = defineRoutes([
       emoji: "L",
       navSection: "surfaces-data",
       order: 45,
-      titleKey: "preview.components.layout",
+      title: "Flex / Grid",
       descriptionKey:
         "preview.components.tailwindSafeFlexAndGridPrimitivesForComposition",
     },
@@ -84,7 +84,7 @@ const routes = defineRoutes([
       order: 47,
       descriptionKey:
         "preview.components.semanticSeparatorsForSectionsAndSplitSurfaces",
-      titleKey: "preview.components.divider",
+      title: "Divider",
     },
     path: "/components/divider",
   },
@@ -95,7 +95,7 @@ const routes = defineRoutes([
       emoji: "J",
       navSection: "surfaces-data",
       order: 48,
-      titleKey: "preview.components.jsxjoin",
+      title: "JsxJoin",
       descriptionKey:
         "preview.components.insertSeparatorsBetweenJsxChildrenWithoutNoisyMarkup",
     },
@@ -108,7 +108,7 @@ const routes = defineRoutes([
       emoji: "T",
       navSection: "surfaces-data",
       order: 50,
-      titleKey: "preview.components.table",
+      title: "Table",
       descriptionKey:
         "preview.components.scrollablePaperTablesForApiAndStructuredData",
     },
@@ -121,7 +121,7 @@ const routes = defineRoutes([
       emoji: "T",
       navSection: "feedback-status",
       order: 60,
-      titleKey: "preview.components.tag",
+      title: "Tag",
       descriptionKey:
         "preview.components.compactStickerLabelsForStatusAndMetadata",
     },
@@ -134,7 +134,7 @@ const routes = defineRoutes([
       emoji: "A",
       navSection: "feedback-status",
       order: 65,
-      titleKey: "preview.components.alert",
+      title: "Alert",
       descriptionKey:
         "preview.components.readableStickerNotesForFeedbackAndStatusMessages",
     },
@@ -147,7 +147,7 @@ const routes = defineRoutes([
       emoji: "F",
       navSection: "form-controls",
       order: 90,
-      titleKey: "preview.components.form",
+      title: "Form",
       descriptionKey:
         "preview.components.antdStyleFieldStateAndValidationForStickerForms",
     },
@@ -160,7 +160,7 @@ const routes = defineRoutes([
       emoji: "I",
       navSection: "form-controls",
       order: 70,
-      titleKey: "preview.components.input",
+      title: "Input",
       descriptionKey:
         "preview.components.nativeInputControlsWithChunkyStickerFrames",
     },
@@ -175,7 +175,7 @@ const routes = defineRoutes([
       order: 75,
       descriptionKey:
         "preview.components.passwordFieldsWithShowHideStickerToggles",
-      titleKey: "preview.components.inputPassword",
+      title: "InputPassword",
     },
     path: "/components/input-password",
   },
@@ -186,7 +186,7 @@ const routes = defineRoutes([
       emoji: "T",
       navSection: "form-controls",
       order: 80,
-      titleKey: "preview.components.textarea",
+      title: "Textarea",
       descriptionKey:
         "preview.components.nativeMultilineControlsWithChunkyStickerFrames",
     },
@@ -199,7 +199,7 @@ const routes = defineRoutes([
       emoji: "S",
       navSection: "form-controls",
       order: 85,
-      titleKey: "preview.components.select",
+      title: "Select",
       descriptionKey:
         "preview.components.radixOptionControlsWithChunkyStickerFrames",
     },
@@ -212,7 +212,7 @@ const routes = defineRoutes([
       emoji: "T",
       navSection: "overlays",
       order: 89,
-      titleKey: "preview.components.tooltip",
+      title: "Tooltip",
       descriptionKey:
         "preview.components.radixHelpBubblesWithCompactStickerPaperStyling",
     },
@@ -225,7 +225,7 @@ const routes = defineRoutes([
       emoji: "P",
       navSection: "overlays",
       order: 90,
-      titleKey: "preview.components.popover",
+      title: "Popover",
       descriptionKey:
         "preview.components.interactiveFloatingPanelsForFiltersAndQuickActions",
     },
@@ -238,7 +238,7 @@ const routes = defineRoutes([
       emoji: "D",
       navSection: "overlays",
       order: 91,
-      titleKey: "preview.components.dialog",
+      title: "Dialog",
       descriptionKey:
         "preview.components.modalStickerPanelsForFocusedDecisionsAndForms",
     },
@@ -251,7 +251,7 @@ const routes = defineRoutes([
       emoji: "C",
       navSection: "form-controls",
       order: 86,
-      titleKey: "preview.components.checkbox",
+      title: "Checkbox",
       descriptionKey:
         "preview.components.radixCheckboxControlsWithStickerCheckedStates",
     },
@@ -264,7 +264,7 @@ const routes = defineRoutes([
       emoji: "R",
       navSection: "form-controls",
       order: 87,
-      titleKey: "preview.components.radio",
+      title: "RadioGroup",
       descriptionKey:
         "preview.components.radixRadioGroupsWithTactileStickerItems",
     },
@@ -277,7 +277,7 @@ const routes = defineRoutes([
       emoji: "S",
       navSection: "form-controls",
       order: 88,
-      titleKey: "preview.components.switch",
+      title: "Switch",
       descriptionKey:
         "preview.components.radixSwitchControlsWithTactileStickerTracks",
     },
@@ -290,7 +290,7 @@ const routes = defineRoutes([
       emoji: "L",
       navSection: "form-controls",
       order: 100,
-      titleKey: "preview.components.label",
+      title: "Label",
       descriptionKey:
         "preview.components.accessibleFormCaptionsWithSmallStickerMarkers",
     },

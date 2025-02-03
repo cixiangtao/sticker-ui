@@ -18,9 +18,6 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
     {
       zh: "尺寸会缩放书写区域，以适配紧凑备注、标准表单和宽松计划面板，同时 tone 保持语义反馈可见。",
     },
-  "preview.components.textarea": {
-    zh: "多行输入框",
-  },
   "preview.components.textareaKeepsNativeMultilineBehaviorWhileAddingAChunkyStickerFrameHardShadowAndComfortableWritingSpace":
     {
       zh: "Textarea 保留原生多行输入行为，同时加入厚实贴纸边框、硬质阴影和舒适的书写空间。",
@@ -164,17 +161,11 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   "preview.components.bordersAndShadows": {
     zh: "边框与阴影",
   },
-  "preview.components.button": {
-    zh: "按钮",
-  },
   "preview.components.asElements": {
     zh: "作为元素",
   },
   "preview.components.basicComposition": {
     zh: "基础组合",
-  },
-  "preview.components.card": {
-    zh: "卡片",
   },
   "preview.components.disabledAndLoadingStatesKeepTheStickerShapeWhilePreventingDuplicateActions":
     {
@@ -230,9 +221,6 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   "preview.components.exampleCode": {
     zh: "示例代码",
   },
-  "preview.components.form": {
-    zh: "表单",
-  },
   "preview.components.formCaptions": {
     zh: "表单标题",
   },
@@ -261,9 +249,6 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   "preview.components.ink": {
     zh: "墨色",
   },
-  "preview.components.input": {
-    zh: "输入框",
-  },
   "preview.components.inputsKeepNativeFormBehaviorWhileAddingAChunkyStickerFrameHardShadowAndReadableHelperCopy":
     {
       zh: "Input 保留原生表单行为，同时加入厚实贴纸边框、硬质阴影和清晰的辅助文案。",
@@ -278,9 +263,6 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
     },
   "preview.components.interactiveList": {
     zh: "交互列表",
-  },
-  "preview.components.label": {
-    zh: "标签",
   },
   "preview.components.labelsStayCompactReadableAndConnectedToNativeControlsWithTheNormalHtmlforRelationship":
     {
@@ -408,12 +390,6 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   "preview.components.surfacesAndData": {
     zh: "界面与数据",
   },
-  "preview.components.table": {
-    zh: "表格",
-  },
-  "preview.components.tag": {
-    zh: "标签",
-  },
   "preview.components.tactileCommandSurfaceForPrimaryActions": {
     zh: "用于主要操作的触感命令界面。",
   },
@@ -486,9 +462,6 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   "preview.components.radixOptionControlsWithChunkyStickerFrames": {
     zh: "带有厚实贴纸边框的 Radix 选项控件。",
   },
-  "preview.components.select": {
-    zh: "选择框",
-  },
   "preview.components.selectKeepsAccessibleKeyboardBehaviorWhileAddingAChunkyStickerMenuAndAClearPaperIndicator":
     {
       zh: "Select 保留可访问键盘行为，同时加入厚实贴纸菜单和清晰的纸张指示器。",
@@ -497,16 +470,10 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
     {
       zh: "尺寸让选择框适配紧凑筛选、标准表单和宽松设置面板，同时 tone 保持语义上下文可见。",
     },
-  "preview.components.alert": {
-    zh: "提示",
-  },
   "preview.components.alertCreatesAReadableStickerNoteForStatusMessagesValidationSummariesAndHelpfulNextSteps":
     {
       zh: "Alert 会创建易读的贴纸提示，用于状态消息、校验摘要和有用的下一步。",
     },
-  "preview.components.checkbox": {
-    zh: "复选框",
-  },
   "preview.components.checkboxKeepsRadixKeyboardBehaviorWhileAddingAChunkyStickerSquareHardShadowAndClearCheckedMark":
     {
       zh: "Checkbox 保留 Radix 键盘行为，同时加入厚实贴纸方块、硬质阴影和清晰的选中标记。",
@@ -529,9 +496,6 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
     },
   "preview.components.radixRadioGroupsWithTactileStickerItems": {
     zh: "带触感贴纸选项的 Radix 单选组。",
-  },
-  "preview.components.radio": {
-    zh: "单选",
   },
   "preview.components.radioKeepsRadixKeyboardBehaviorWhileAddingChunkyStickerCirclesHardShadowsAndAClearSelectedDot":
     {
@@ -562,9 +526,6 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
     {
       zh: "尺寸让开关适配紧凑工具栏、标准设置和宽松偏好面板，同时 tone 保持状态上下文可见。",
     },
-  "preview.components.switch": {
-    zh: "开关",
-  },
   "preview.components.switchKeepsRadixPressedStateBehaviorWhileAddingATactileStickerTrackAndPaperThumb":
     {
       zh: "Switch 保留 Radix 按下状态行为，同时加入触感贴纸轨道和纸张滑块。",
@@ -580,9 +541,6 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
     {
       zh: "Grid 预设覆盖常见响应式卡片行，不需要动态生成 Tailwind class。",
     },
-  "preview.components.layout": {
-    zh: "布局",
-  },
   "preview.components.responsiveGrid": {
     zh: "响应式 Grid",
   },
@@ -618,9 +576,6 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   "preview.components.insertSeparatorsBetweenJsxChildrenWithoutNoisyMarkup": {
     zh: "在子节点之间插入分隔符，不引入额外标记。",
   },
-  "preview.components.jsxjoin": {
-    zh: "节点连接",
-  },
   "preview.components.labeledSections": {
     zh: "带标签分隔",
   },
@@ -654,9 +609,6 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
     {
       zh: "Close 可以包裹贴纸按钮，让简短的 Popover 流程在面板内完成。",
     },
-  "preview.components.dialog": {
-    zh: "对话框",
-  },
   "preview.components.floatingHelpCompactPanelsAndModalSurfaces": {
     zh: "浮动帮助、紧凑面板和模态表面。",
   },
@@ -668,9 +620,6 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   },
   "preview.components.overlays": {
     zh: "浮层",
-  },
-  "preview.components.popover": {
-    zh: "弹出面板",
   },
   "preview.components.popoverHostsCompactInteractiveContentSuchAsQuickSettingsFiltersAndContextualActions":
     {
@@ -687,9 +636,6 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
     {
       zh: "Tooltip 为需要额外上下文的控件添加紧凑纸张提示，同时不占据页面。",
     },
-  "preview.components.tooltip": {
-    zh: "提示",
-  },
   "preview.components.toneAndSideOptionsKeepHintBubblesUsefulInDenseToolbarsAndStatusRows":
     {
       zh: "色调和方向选项让提示气泡在密集工具栏和状态行中保持好用。",
@@ -798,12 +744,6 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
     {
       zh: "Textarea 与 Input 保持一致，会先把下一次字符串值传给 onChange，再传递原生事件。",
     },
-  "preview.components.divider": {
-    zh: "分隔线",
-  },
-  "preview.components.inputPassword": {
-    zh: "密码输入框",
-  },
   "preview.components.more": {
     zh: "更多",
   },

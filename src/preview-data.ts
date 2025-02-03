@@ -9,8 +9,14 @@ interface NavGroup {
 
 interface NavItem {
   descriptionKey: string
-  labelKey: string
+  label?: string
+  labelKey?: string
   path: string
+}
+
+interface PreviewLabelSource {
+  label?: string
+  labelKey?: string
 }
 
 interface NavSection {
@@ -384,7 +390,8 @@ function getRouteGroupId(path: string) {
 function createNavItem(route: PreviewRoute): NavItem {
   return {
     descriptionKey: route.meta.descriptionKey,
-    labelKey: route.meta.titleKey,
+    label: "title" in route.meta ? route.meta.title : undefined,
+    labelKey: "titleKey" in route.meta ? route.meta.titleKey : undefined,
     path: route.path,
   }
 }
@@ -435,6 +442,13 @@ function getRouteNavSection(route: PreviewRoute) {
   return "navSection" in route.meta ? route.meta.navSection : undefined
 }
 
+function resolvePreviewLabel(
+  item: PreviewLabelSource,
+  translate: (key: string | undefined) => string,
+) {
+  return item.label ?? translate(item.labelKey)
+}
+
 function getRegistrySourcePath(componentName: string) {
   return `src/components/ui/${componentName}.tsx`
 }
@@ -444,5 +458,5 @@ function getRouteComponentName(path: string) {
     ?.componentName
 }
 
-export { COLOR_TOKEN_GROUPS, COMPONENT_FILES, NAV_GROUPS }
-export type { NavGroup, NavItem, NavSection }
+export { COLOR_TOKEN_GROUPS, COMPONENT_FILES, NAV_GROUPS, resolvePreviewLabel }
+export type { NavGroup, NavItem, NavSection, PreviewLabelSource }

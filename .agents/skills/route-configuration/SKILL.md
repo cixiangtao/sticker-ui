@@ -38,7 +38,7 @@ The project keeps route declarations config-driven and named-export based:
     emoji: "B",
     navSection: "actions",
     order: 30,
-    titleKey: "preview.components.button",
+    title: "Button",
     descriptionKey:
       "preview.components.tactileCommandSurfaceForPrimaryActions",
   },
@@ -64,7 +64,8 @@ Use hand-written TanStack routes only when the config model cannot express the b
 
 `RouteMeta` supports:
 
-- `titleKey`: required preview i18n key for the visible page title or menu label.
+- `title`: literal visible page title or menu label for registry component names that should not be translated, such as `Button` or `InputPassword`.
+- `titleKey`: preview i18n key for translatable page titles and menu labels, such as overview, foundation, and registry pages.
 - `descriptionKey`: required preview i18n key for visible descriptions.
 - `emoji` or `icon`: compact visual affordance for navigation surfaces.
 - `order`: menu and overview sort weight. Smaller values appear first.
@@ -74,11 +75,12 @@ Use hand-written TanStack routes only when the config model cannot express the b
 
 Keep route metadata as the source of truth for preview navigation. Avoid adding parallel menu-only data when a path segment, `navSection`, or route meta field can express the same thing.
 
-For preview navigation data in `src/preview-data.ts`, keep visible copy key-only:
+For preview navigation data in `src/preview-data.ts`, keep translated copy key-only and component display names literal:
 
 - Use stable non-copy identifiers such as `id`, `path`, or token `name` for React keys and grouping.
-- Use `labelKey`, `titleKey`, and `descriptionKey` for visible copy.
-- Do not pair visible fallback fields such as `label`, `title`, or `description` with matching `*Key` fields.
+- Use `labelKey`, `titleKey`, and `descriptionKey` for translated visible copy.
+- Use `label` or `title` only for registry component display names that should stay as exported component identifiers across every language.
+- Do not pair translated fallback fields such as `description` with matching `*Key` fields.
 
 ## Adding A Page Route
 
@@ -88,10 +90,10 @@ Follow this workflow:
 2. Export the page as a named binding, such as `export { ButtonPage }`.
 3. Add an entry to `routes` in `src/router/routes.ts`.
 4. Resolve the named page export in `component`, for example `import(...).then((module) => module.ButtonPage)`.
-5. Provide `meta.titleKey` and `meta.descriptionKey`; do not add parallel title or description fallback text.
+5. Provide `meta.descriptionKey`, plus either `meta.title` for registry component display names or `meta.titleKey` for translatable page titles.
 6. Add `meta.order`; add `meta.navSection` for component pages that should appear in a component sidebar group.
 7. Add `hideInMenu: true` only for hidden utility pages or routes that should not appear in generated preview navigation.
-8. Update preview i18n dictionaries for new `titleKey` and `descriptionKey` values.
+8. Update preview i18n dictionaries for new `titleKey` and `descriptionKey` values. Do not add component display names to preview i18n dictionaries.
 9. Run the narrowest relevant check. For route changes, `pnpm lint:fix` is usually enough; for preview chain changes, run `pnpm build:preview`.
 
 ## Component Preview Routes
@@ -146,10 +148,10 @@ Before finishing routing work:
 - The route is registered in exactly one place unless an alias is intentional.
 - The page path and lazy import path match the actual file.
 - The lazy import resolves a named page export.
-- Visible routes have useful `meta.titleKey`, `meta.descriptionKey`, and sensible `order`.
+- Visible routes have useful `meta.title` or `meta.titleKey`, `meta.descriptionKey`, and sensible `order`.
 - Component routes have the right `navSection`.
 - Hidden/detail routes use `hideInMenu: true`.
-- User-visible route labels and descriptions have preview i18n entries.
+- Translatable route labels and descriptions have preview i18n entries; registry component names stay as literal exported component names.
 - Menu or overview behavior is derived from routes rather than a parallel hard-coded list.
 - Redirects cannot loop.
 - The relevant check has been run before handoff.
