@@ -313,22 +313,11 @@
           {
             "defaultValue": "default",
             "name": "color",
-            "values": [
-              "danger",
-              "default",
-              "info",
-              "secondary",
-              "success",
-              "warning"
-            ]
+            "values": ["danger", "default", "info", "secondary", "success", "warning"]
           },
           { "name": "disabled", "values": ["false", "true"] },
           { "name": "loading", "values": ["false", "true"] },
-          {
-            "defaultValue": "md",
-            "name": "size",
-            "values": ["icon", "lg", "md", "sm"]
-          },
+          { "defaultValue": "md", "name": "size", "values": ["icon", "lg", "md", "sm"] },
           {
             "defaultValue": "solid",
             "name": "variant",
@@ -346,10 +335,7 @@
         "props": {
           "descriptionKey": "api.card.components.Card.props.description",
           "remarksKey": "api.card.components.Card.props.remarks",
-          "inherits": [
-            "React.HTMLAttributes<HTMLElement>",
-            "VariantProps<typeof cardVariants>"
-          ],
+          "inherits": ["React.HTMLAttributes<HTMLElement>", "VariantProps<typeof cardVariants>"],
           "inheritedMembers": [
             {
               "descriptionKey": "api.common.inheritedProps.aria-describedby.description",
@@ -546,27 +532,15 @@
       },
       {
         "name": "CardContent",
-        "props": {
-          "inherits": [],
-          "members": [],
-          "type": "React.ComponentProps<\"div\">"
-        }
+        "props": { "inherits": [], "members": [], "type": "React.ComponentProps<\"div\">" }
       },
       {
         "name": "CardDescription",
-        "props": {
-          "inherits": [],
-          "members": [],
-          "type": "React.ComponentProps<\"p\">"
-        }
+        "props": { "inherits": [], "members": [], "type": "React.ComponentProps<\"p\">" }
       },
       {
         "name": "CardFooter",
-        "props": {
-          "inherits": [],
-          "members": [],
-          "type": "React.ComponentProps<\"footer\">"
-        }
+        "props": { "inherits": [], "members": [], "type": "React.ComponentProps<\"footer\">" }
       },
       {
         "name": "CardHeader",
@@ -754,11 +728,7 @@
       },
       {
         "name": "CardTitle",
-        "props": {
-          "inherits": [],
-          "members": [],
-          "type": "React.ComponentProps<\"h3\">"
-        }
+        "props": { "inherits": [], "members": [], "type": "React.ComponentProps<\"h3\">" }
       }
     ],
     "descriptionKey": "api.card.description",
@@ -815,10 +785,7 @@
       {
         "descriptionKey": "api.card.types.CardProps.description",
         "remarksKey": "api.card.types.CardProps.remarks",
-        "inherits": [
-          "React.HTMLAttributes<HTMLElement>",
-          "VariantProps<typeof cardVariants>"
-        ],
+        "inherits": ["React.HTMLAttributes<HTMLElement>", "VariantProps<typeof cardVariants>"],
         "kind": "interface",
         "members": [
           {
@@ -869,11 +836,7 @@
       {
         "descriptionKey": "api.card.variants.cardHeaderVariants.description",
         "groups": [
-          {
-            "defaultValue": "solid",
-            "name": "divider",
-            "values": ["dashed", "none", "solid"]
-          },
+          { "defaultValue": "solid", "name": "divider", "values": ["dashed", "none", "solid"] },
           {
             "defaultValue": "none",
             "name": "dividerInset",
@@ -885,11 +848,7 @@
       {
         "descriptionKey": "api.card.variants.cardVariants.description",
         "groups": [
-          {
-            "defaultValue": "md",
-            "name": "padding",
-            "values": ["lg", "md", "none", "sm"]
-          },
+          { "defaultValue": "md", "name": "padding", "values": ["lg", "md", "none", "sm"] },
           {
             "defaultValue": "elevated",
             "name": "variant",
@@ -908,10 +867,7 @@
         "props": {
           "descriptionKey": "api.layout.components.Flex.props.description",
           "remarksKey": "api.layout.components.Flex.props.remarks",
-          "inherits": [
-            "React.HTMLAttributes<HTMLElement>",
-            "VariantProps<typeof flexVariants>"
-          ],
+          "inherits": ["React.HTMLAttributes<HTMLElement>", "VariantProps<typeof flexVariants>"],
           "inheritedMembers": [
             {
               "descriptionKey": "api.common.inheritedProps.aria-describedby.description",
@@ -1136,10 +1092,7 @@
         "props": {
           "descriptionKey": "api.layout.components.Grid.props.description",
           "remarksKey": "api.layout.components.Grid.props.remarks",
-          "inherits": [
-            "React.HTMLAttributes<HTMLElement>",
-            "VariantProps<typeof gridVariants>"
-          ],
+          "inherits": ["React.HTMLAttributes<HTMLElement>", "VariantProps<typeof gridVariants>"],
           "inheritedMembers": [
             {
               "descriptionKey": "api.common.inheritedProps.aria-describedby.description",
@@ -1393,10 +1346,7 @@
       {
         "descriptionKey": "api.layout.types.FlexProps.description",
         "remarksKey": "api.layout.types.FlexProps.remarks",
-        "inherits": [
-          "React.HTMLAttributes<HTMLElement>",
-          "VariantProps<typeof flexVariants>"
-        ],
+        "inherits": ["React.HTMLAttributes<HTMLElement>", "VariantProps<typeof flexVariants>"],
         "kind": "interface",
         "members": [
           {
@@ -1469,10 +1419,7 @@
       {
         "descriptionKey": "api.layout.types.GridProps.description",
         "remarksKey": "api.layout.types.GridProps.remarks",
-        "inherits": [
-          "React.HTMLAttributes<HTMLElement>",
-          "VariantProps<typeof gridVariants>"
-        ],
+        "inherits": ["React.HTMLAttributes<HTMLElement>", "VariantProps<typeof gridVariants>"],
         "kind": "interface",
         "members": [
           {
@@ -1549,26 +1496,14 @@
             "name": "direction",
             "values": ["column", "column-reverse", "row", "row-reverse"]
           },
-          {
-            "defaultValue": "md",
-            "name": "gap",
-            "values": ["lg", "md", "none", "sm", "xl", "xs"]
-          },
-          {
-            "defaultValue": "false",
-            "name": "inline",
-            "values": ["false", "true"]
-          },
+          { "defaultValue": "md", "name": "gap", "values": ["lg", "md", "none", "sm", "xl", "xs"] },
+          { "defaultValue": "false", "name": "inline", "values": ["false", "true"] },
           {
             "defaultValue": "start",
             "name": "justify",
             "values": ["around", "between", "center", "end", "evenly", "start"]
           },
-          {
-            "defaultValue": "nowrap",
-            "name": "wrap",
-            "values": ["nowrap", "reverse", "wrap"]
-          }
+          { "defaultValue": "nowrap", "name": "wrap", "values": ["nowrap", "reverse", "wrap"] }
         ],
         "name": "flexVariants"
       },
@@ -1597,16 +1532,8 @@
               "responsive-4"
             ]
           },
-          {
-            "defaultValue": "md",
-            "name": "gap",
-            "values": ["lg", "md", "none", "sm", "xl", "xs"]
-          },
-          {
-            "defaultValue": "false",
-            "name": "inline",
-            "values": ["false", "true"]
-          },
+          { "defaultValue": "md", "name": "gap", "values": ["lg", "md", "none", "sm", "xl", "xs"] },
+          { "defaultValue": "false", "name": "inline", "values": ["false", "true"] },
           {
             "defaultValue": "stretch",
             "name": "justify",
@@ -1929,36 +1856,17 @@
           {
             "defaultValue": "default",
             "name": "tone",
-            "values": [
-              "danger",
-              "default",
-              "info",
-              "secondary",
-              "success",
-              "warning"
-            ]
+            "values": ["danger", "default", "info", "secondary", "success", "warning"]
           },
-          {
-            "defaultValue": "solid",
-            "name": "variant",
-            "values": ["dashed", "dotted", "solid"]
-          },
-          {
-            "defaultValue": "md",
-            "name": "weight",
-            "values": ["lg", "md", "sm"]
-          }
+          { "defaultValue": "solid", "name": "variant", "values": ["dashed", "dotted", "solid"] },
+          { "defaultValue": "md", "name": "weight", "values": ["lg", "md", "sm"] }
         ],
         "name": "dividerLineVariants"
       },
       {
         "descriptionKey": "api.divider.variants.dividerVariants.description",
         "groups": [
-          {
-            "defaultValue": "center",
-            "name": "align",
-            "values": ["center", "end", "start"]
-          },
+          { "defaultValue": "center", "name": "align", "values": ["center", "end", "start"] },
           {
             "defaultValue": "horizontal",
             "name": "orientation",
@@ -2426,59 +2334,31 @@
       },
       {
         "name": "TableBody",
-        "props": {
-          "inherits": [],
-          "members": [],
-          "type": "React.ComponentProps<\"tbody\">"
-        }
+        "props": { "inherits": [], "members": [], "type": "React.ComponentProps<\"tbody\">" }
       },
       {
         "name": "TableCaption",
-        "props": {
-          "inherits": [],
-          "members": [],
-          "type": "React.ComponentProps<\"caption\">"
-        }
+        "props": { "inherits": [], "members": [], "type": "React.ComponentProps<\"caption\">" }
       },
       {
         "name": "TableCell",
-        "props": {
-          "inherits": [],
-          "members": [],
-          "type": "React.ComponentProps<\"td\">"
-        }
+        "props": { "inherits": [], "members": [], "type": "React.ComponentProps<\"td\">" }
       },
       {
         "name": "TableFooter",
-        "props": {
-          "inherits": [],
-          "members": [],
-          "type": "React.ComponentProps<\"tfoot\">"
-        }
+        "props": { "inherits": [], "members": [], "type": "React.ComponentProps<\"tfoot\">" }
       },
       {
         "name": "TableHead",
-        "props": {
-          "inherits": [],
-          "members": [],
-          "type": "React.ComponentProps<\"th\">"
-        }
+        "props": { "inherits": [], "members": [], "type": "React.ComponentProps<\"th\">" }
       },
       {
         "name": "TableHeader",
-        "props": {
-          "inherits": [],
-          "members": [],
-          "type": "React.ComponentProps<\"thead\">"
-        }
+        "props": { "inherits": [], "members": [], "type": "React.ComponentProps<\"thead\">" }
       },
       {
         "name": "TableRow",
-        "props": {
-          "inherits": [],
-          "members": [],
-          "type": "React.ComponentProps<\"tr\">"
-        }
+        "props": { "inherits": [], "members": [], "type": "React.ComponentProps<\"tr\">" }
       }
     ],
     "descriptionKey": "api.table.description",
@@ -2526,10 +2406,7 @@
         "props": {
           "descriptionKey": "api.tag.components.Tag.props.description",
           "remarksKey": "api.tag.components.Tag.props.remarks",
-          "inherits": [
-            "React.HTMLAttributes<HTMLElement>",
-            "VariantProps<typeof tagVariants>"
-          ],
+          "inherits": ["React.HTMLAttributes<HTMLElement>", "VariantProps<typeof tagVariants>"],
           "inheritedMembers": [
             {
               "descriptionKey": "api.common.inheritedProps.aria-describedby.description",
@@ -2749,10 +2626,7 @@
       {
         "descriptionKey": "api.tag.types.TagProps.description",
         "remarksKey": "api.tag.types.TagProps.remarks",
-        "inherits": [
-          "React.HTMLAttributes<HTMLElement>",
-          "VariantProps<typeof tagVariants>"
-        ],
+        "inherits": ["React.HTMLAttributes<HTMLElement>", "VariantProps<typeof tagVariants>"],
         "kind": "interface",
         "members": [
           {
@@ -2814,30 +2688,11 @@
           {
             "defaultValue": "default",
             "name": "color",
-            "values": [
-              "danger",
-              "default",
-              "info",
-              "secondary",
-              "success",
-              "warning"
-            ]
+            "values": ["danger", "default", "info", "secondary", "success", "warning"]
           },
-          {
-            "defaultValue": "rounded",
-            "name": "rounded",
-            "values": ["pill", "rounded"]
-          },
-          {
-            "defaultValue": "default",
-            "name": "size",
-            "values": ["default", "lg", "sm", "xs"]
-          },
-          {
-            "defaultValue": "solid",
-            "name": "variant",
-            "values": ["filled", "outlined", "solid"]
-          }
+          { "defaultValue": "rounded", "name": "rounded", "values": ["pill", "rounded"] },
+          { "defaultValue": "default", "name": "size", "values": ["default", "lg", "sm", "xs"] },
+          { "defaultValue": "solid", "name": "variant", "values": ["filled", "outlined", "solid"] }
         ],
         "name": "tagVariants"
       }
@@ -3395,10 +3250,7 @@
       {
         "descriptionKey": "api.alert.types.AlertProps.description",
         "remarksKey": "api.alert.types.AlertProps.remarks",
-        "inherits": [
-          "React.HTMLAttributes<HTMLDivElement>",
-          "VariantProps<typeof alertVariants>"
-        ],
+        "inherits": ["React.HTMLAttributes<HTMLDivElement>", "VariantProps<typeof alertVariants>"],
         "kind": "interface",
         "members": [
           {
@@ -3440,22 +3292,11 @@
       {
         "descriptionKey": "api.alert.variants.alertVariants.description",
         "groups": [
-          {
-            "defaultValue": "md",
-            "name": "size",
-            "values": ["lg", "md", "sm"]
-          },
+          { "defaultValue": "md", "name": "size", "values": ["lg", "md", "sm"] },
           {
             "defaultValue": "default",
             "name": "tone",
-            "values": [
-              "danger",
-              "default",
-              "info",
-              "secondary",
-              "success",
-              "warning"
-            ]
+            "values": ["danger", "default", "info", "secondary", "success", "warning"]
           },
           {
             "defaultValue": "stripe",
@@ -3688,11 +3529,7 @@
       },
       {
         "name": "LabelDescription",
-        "props": {
-          "inherits": [],
-          "members": [],
-          "type": "React.ComponentProps<\"p\">"
-        }
+        "props": { "inherits": [], "members": [], "type": "React.ComponentProps<\"p\">" }
       },
       {
         "name": "LabelMarker",
@@ -3956,11 +3793,7 @@
       {
         "descriptionKey": "api.label.variants.labelTones.description",
         "groups": [
-          {
-            "defaultValue": "default",
-            "name": "size",
-            "values": ["default", "lg", "sm"]
-          },
+          { "defaultValue": "default", "name": "size", "values": ["default", "lg", "sm"] },
           {
             "defaultValue": "default",
             "name": "tone",
@@ -4339,22 +4172,11 @@
         "descriptionKey": "api.input.variants.inputVariants.description",
         "groups": [
           { "name": "disabled", "values": ["false", "true"] },
-          {
-            "defaultValue": "md",
-            "name": "size",
-            "values": ["lg", "md", "sm"]
-          },
+          { "defaultValue": "md", "name": "size", "values": ["lg", "md", "sm"] },
           {
             "defaultValue": "default",
             "name": "tone",
-            "values": [
-              "danger",
-              "default",
-              "info",
-              "secondary",
-              "success",
-              "warning"
-            ]
+            "values": ["danger", "default", "info", "secondary", "success", "warning"]
           },
           {
             "defaultValue": "outlined",
@@ -5621,9 +5443,7 @@
         "name": "TooltipProvider",
         "props": {
           "descriptionKey": "api.tooltip.components.TooltipProvider.props.description",
-          "inherits": [
-            "React.ComponentPropsWithoutRef< typeof TooltipPrimitive.Provider >"
-          ],
+          "inherits": ["React.ComponentPropsWithoutRef< typeof TooltipPrimitive.Provider >"],
           "inheritedMembers": [
             {
               "descriptionKey": "api.common.inheritedProps.children.description",
@@ -5745,9 +5565,7 @@
       },
       {
         "descriptionKey": "api.tooltip.types.TooltipProviderProps.description",
-        "inherits": [
-          "React.ComponentPropsWithoutRef< typeof TooltipPrimitive.Provider >"
-        ],
+        "inherits": ["React.ComponentPropsWithoutRef< typeof TooltipPrimitive.Provider >"],
         "kind": "interface",
         "members": [
           {
@@ -5774,11 +5592,7 @@
       {
         "descriptionKey": "api.tooltip.variants.tooltipContentVariants.description",
         "groups": [
-          {
-            "defaultValue": "md",
-            "name": "size",
-            "values": ["lg", "md", "sm"]
-          },
+          { "defaultValue": "md", "name": "size", "values": ["lg", "md", "sm"] },
           {
             "defaultValue": "default",
             "name": "tone",
@@ -6100,11 +5914,7 @@
       {
         "descriptionKey": "api.popover.variants.popoverContentVariants.description",
         "groups": [
-          {
-            "defaultValue": "md",
-            "name": "size",
-            "values": ["lg", "md", "sm"]
-          },
+          { "defaultValue": "md", "name": "size", "values": ["lg", "md", "sm"] },
           {
             "defaultValue": "default",
             "name": "tone",
@@ -6343,20 +6153,12 @@
       {
         "descriptionKey": "api.dialog.components.DialogFooter.description",
         "name": "DialogFooter",
-        "props": {
-          "inherits": [],
-          "members": [],
-          "type": "React.ComponentProps<\"footer\">"
-        }
+        "props": { "inherits": [], "members": [], "type": "React.ComponentProps<\"footer\">" }
       },
       {
         "descriptionKey": "api.dialog.components.DialogHeader.description",
         "name": "DialogHeader",
-        "props": {
-          "inherits": [],
-          "members": [],
-          "type": "React.ComponentProps<\"header\">"
-        }
+        "props": { "inherits": [], "members": [], "type": "React.ComponentProps<\"header\">" }
       },
       {
         "descriptionKey": "api.dialog.components.DialogOverlay.description",
@@ -6675,11 +6477,7 @@
       {
         "descriptionKey": "api.dialog.variants.dialogContentVariants.description",
         "groups": [
-          {
-            "defaultValue": "md",
-            "name": "size",
-            "values": ["lg", "md", "sm"]
-          },
+          { "defaultValue": "md", "name": "size", "values": ["lg", "md", "sm"] },
           {
             "defaultValue": "default",
             "name": "tone",
@@ -8513,13 +8311,7 @@
         "name": "NamePath",
         "type": "NamePathPart | readonly NamePathPart[]"
       },
-      {
-        "inherits": [],
-        "kind": "type",
-        "members": [],
-        "name": "StoreValue",
-        "type": "unknown"
-      },
+      { "inherits": [], "kind": "type", "members": [], "name": "StoreValue", "type": "unknown" },
       {
         "descriptionKey": "api.form.types.ValidateErrorInfo.description",
         "inherits": [],
