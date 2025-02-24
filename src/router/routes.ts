@@ -142,6 +142,57 @@ const routes = defineRoutes([
   },
   {
     component: () =>
+      import("@/pages/components").then((module) => module.BadgePage),
+    meta: {
+      emoji: "B",
+      navSection: "feedback-status",
+      order: 66,
+      title: "Badge",
+      descriptionKey: "preview.components.cornerBadgesForCountsAndStatusDots",
+    },
+    path: "/components/badge",
+  },
+  {
+    component: () =>
+      import("@/pages/components").then((module) => module.ProgressPage),
+    meta: {
+      emoji: "P",
+      navSection: "feedback-status",
+      order: 67,
+      title: "Progress",
+      descriptionKey:
+        "preview.components.accessibleStickerProgressBarsForCompletionAndLoadingStates",
+    },
+    path: "/components/progress",
+  },
+  {
+    component: () =>
+      import("@/pages/components").then((module) => module.SkeletonPage),
+    meta: {
+      emoji: "S",
+      navSection: "feedback-status",
+      order: 68,
+      title: "Skeleton",
+      descriptionKey:
+        "preview.components.warmPaperPlaceholdersForLoadingCardsRowsAndText",
+    },
+    path: "/components/skeleton",
+  },
+  {
+    component: () =>
+      import("@/pages/components").then((module) => module.SpinnerPage),
+    meta: {
+      emoji: "S",
+      navSection: "feedback-status",
+      order: 69,
+      title: "Spinner",
+      descriptionKey:
+        "preview.components.compactAccessibleSpinnersForPendingAsyncRegions",
+    },
+    path: "/components/spinner",
+  },
+  {
+    component: () =>
       import("@/pages/components").then((module) => module.FormPage),
     meta: {
       emoji: "F",

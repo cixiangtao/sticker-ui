@@ -1,16 +1,81 @@
 import { defineMessages } from "../messages"
 
 const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
+  "preview.components.accessibleStickerProgressBarsForCompletionAndLoadingStates":
+    {
+      zh: "用于完成度与加载状态的可访问贴纸进度条。",
+    },
   "preview.components.accessibleFormCaptionsWithSmallStickerMarkers": {
     zh: "可访问的表单标题，并带有小巧的贴纸标记。",
+  },
+  "preview.components.animationCanBeDisabledWhenThePlaceholderIsPartOfALargerBusyRegion":
+    {
+      zh: "当占位符属于更大的忙碌区域时，可以关闭动画。",
+    },
+  "preview.components.asyncRegion": {
+    zh: "异步区域",
+  },
+  "preview.components.attachedCorners": {
+    zh: "附着角标",
+  },
+  "preview.components.badgeCountsCanCapOverflowShowZeroOrDisappearWhenInactive":
+    {
+      zh: "Badge 计数可以限制溢出、显示 0，或在非激活状态下隐藏。",
+    },
+  "preview.components.badgePlacementControlsWhichCornerReceivesTheIndicator": {
+    zh: "Badge placement 控制角标吸附到哪个角。",
+  },
+  "preview.components.badgesAttachCountsAndDotsToTheCornerOfAnyElement": {
+    zh: "Badge 可把计数和状态点附着到任意元素的角上。",
+  },
+  "preview.components.basicLoading": {
+    zh: "基础加载",
+  },
+  "preview.components.compactAccessibleSpinnersForPendingAsyncRegions": {
+    zh: "用于待处理异步区域的紧凑可访问加载转圈。",
+  },
+  "preview.components.cornerBadgesForCountsAndStatusDots": {
+    zh: "用于计数和状态点的角标贴纸。",
+  },
+  "preview.components.countsAndVisibility": {
+    zh: "计数与可见性",
   },
   "preview.components.invalidDisabledAndSemanticToneStatesStayVisibleOnMultilineFieldsThroughNativeAttributesAndFormItemValidation":
     {
       zh: "无效、禁用和语义色调状态会通过原生属性与 Form.Item 校验在多行字段上保持可见。",
     },
+  "preview.components.indeterminate": {
+    zh: "不定进度",
+  },
+  "preview.components.loadingCard": {
+    zh: "加载卡片",
+  },
   "preview.components.nativeMultilineControlsWithChunkyStickerFrames": {
     zh: "带有厚实贴纸边框的原生多行控件。",
   },
+  "preview.components.nullValueCreatesAnIndeterminateStripeForWorkThatHasStartedButCannotBeMeasuredYet":
+    {
+      zh: "传入 null value 会创建不定进度条，适合已开始但暂时无法度量的任务。",
+    },
+  "preview.components.progressPairsWithTextOrBadgesSoCompletionIsNotCommunicatedByColorAlone":
+    {
+      zh: "Progress 可与文本或 Badge 搭配，避免只依靠颜色表达完成度。",
+    },
+  "preview.components.progressSizesFitDenseRowsStandardCardsAndLargerSummaryPanels":
+    {
+      zh: "Progress 尺寸适配密集行、标准卡片和更大的摘要面板。",
+    },
+  "preview.components.shapesAndTones": {
+    zh: "形状与色调",
+  },
+  "preview.components.skeletonShapesMapToCommonLoadingSlotsAndTonesCanMatchTheSurroundingPaper":
+    {
+      zh: "Skeleton 形状对应常见加载插槽，色调可匹配周围纸张表面。",
+    },
+  "preview.components.skeletonsReserveTheShapeOfContentWhileKeepingTheLoadingStateQuiet":
+    {
+      zh: "Skeleton 会保留内容轮廓，同时让加载状态保持克制。",
+    },
   "preview.components.sizesAndTones": {
     zh: "尺寸与色调",
   },
@@ -22,6 +87,33 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
     {
       zh: "Textarea 保留原生多行输入行为，同时加入厚实贴纸边框、硬质阴影和舒适的书写空间。",
     },
+  "preview.components.spinnerCanAnnouncePendingWorkOrStayDecorativeBesideVisibleLoadingText":
+    {
+      zh: "Spinner 可以播报待处理任务，也可以在已有加载文案旁作为装饰。",
+    },
+  "preview.components.spinnerSizesAndTonesMatchInlineControlsCardsAndStatusPanels":
+    {
+      zh: "Spinner 尺寸与色调可匹配行内控件、卡片和状态面板。",
+    },
+  "preview.components.staticPlaceholder": {
+    zh: "静态占位",
+  },
+  "preview.components.statusRegionsCanUseASingleAnnouncedSpinnerWithQuieterSupportingCopy":
+    {
+      zh: "状态区域可以使用一个可播报的 Spinner，并配合更克制的辅助文案。",
+    },
+  "preview.components.statusRow": {
+    zh: "状态行",
+  },
+  "preview.components.taskProgress": {
+    zh: "任务进度",
+  },
+  "preview.components.placementsAndSizes": {
+    zh: "位置与尺寸",
+  },
+  "preview.components.warmPaperPlaceholdersForLoadingCardsRowsAndText": {
+    zh: "用于加载卡片、行和文本的温暖纸张占位符。",
+  },
   "preview.components.accent": {
     zh: "强调色",
   },

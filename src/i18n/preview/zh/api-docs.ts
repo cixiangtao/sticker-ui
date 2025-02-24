@@ -1781,6 +1781,276 @@ const ZH_PREVIEW_API_DOC_MESSAGES = defineMessages({
   "api.dialog.variants.dialogContentVariants.description": {
     zh: "根据尺寸和色调选项生成贴纸 Dialog 内容 className。",
   },
+  "api.badge.description": {
+    zh: "用于把计数和状态点附着到任意元素角上的贴纸角标。",
+  },
+  "api.badge.components.Badge.description": {
+    zh: "用于计数、状态点和通知标记的角标贴纸。",
+  },
+  "api.badge.components.Badge.props.description": {
+    zh: "贴纸 Badge 根元素的 props。",
+  },
+  "api.badge.components.Badge.props.members.children.description": {
+    zh: "接收角标的元素或内容。",
+  },
+  "api.badge.components.Badge.props.members.content.description": {
+    zh: "渲染在角标指示器内的内容。",
+  },
+  "api.badge.components.Badge.props.members.dot.description": {
+    zh: "将指示器渲染为圆点，而不是显示内容。",
+  },
+  "api.badge.components.Badge.props.members.indicatorClassName.description": {
+    zh: "定位指示器的自定义 className。",
+  },
+  "api.badge.components.Badge.props.members.max.description": {
+    zh: "超过该数字时显示加号后缀。",
+  },
+  "api.badge.components.Badge.props.members.placement.description": {
+    zh: "当存在 children 时，控制角标吸附到哪个角。",
+  },
+  "api.badge.components.Badge.props.members.show.description": {
+    zh: "控制是否渲染角标指示器。",
+  },
+  "api.badge.components.Badge.props.members.showZero.description": {
+    zh: "显示数字 0，而不是隐藏角标。",
+  },
+  "api.badge.components.Badge.props.members.size.description": {
+    zh: "控制角标指示器的高度、最小宽度和文本尺寸。",
+  },
+  "api.badge.components.Badge.props.members.tone.description": {
+    zh: "控制角标的语义色调。",
+  },
+  "api.badge.components.Badge.props.members.variant.description": {
+    zh: "控制角标表面的强调程度。",
+  },
+  "api.badge.components.Badge.props.remarks": {
+    zh: "继承原生 span 属性，并将紧凑指示器定位到可选 children 上。",
+  },
+  "api.badge.exports.Badge.description": {
+    zh: "用于计数、状态点和通知标记的角标贴纸。",
+  },
+  "api.badge.exports.BadgeProps.description": {
+    zh: "贴纸 Badge 根元素的 props。",
+  },
+  "api.badge.exports.BadgeProps.remarks": {
+    zh: "继承原生 span 属性，并将紧凑指示器定位到可选 children 上。",
+  },
+  "api.badge.exports.badgeVariants.description": {
+    zh: "根据色调、尺寸和强调程度生成贴纸 Badge 指示器 className。",
+  },
+  "api.badge.types.BadgeProps.description": {
+    zh: "贴纸 Badge 根元素的 props。",
+  },
+  "api.badge.types.BadgeProps.members.children.description": {
+    zh: "接收角标的元素或内容。",
+  },
+  "api.badge.types.BadgeProps.members.content.description": {
+    zh: "渲染在角标指示器内的内容。",
+  },
+  "api.badge.types.BadgeProps.members.dot.description": {
+    zh: "将指示器渲染为圆点，而不是显示内容。",
+  },
+  "api.badge.types.BadgeProps.members.indicatorClassName.description": {
+    zh: "定位指示器的自定义 className。",
+  },
+  "api.badge.types.BadgeProps.members.max.description": {
+    zh: "超过该数字时显示加号后缀。",
+  },
+  "api.badge.types.BadgeProps.members.placement.description": {
+    zh: "当存在 children 时，控制角标吸附到哪个角。",
+  },
+  "api.badge.types.BadgeProps.members.show.description": {
+    zh: "控制是否渲染角标指示器。",
+  },
+  "api.badge.types.BadgeProps.members.showZero.description": {
+    zh: "显示数字 0，而不是隐藏角标。",
+  },
+  "api.badge.types.BadgeProps.members.size.description": {
+    zh: "控制角标指示器的高度、最小宽度和文本尺寸。",
+  },
+  "api.badge.types.BadgeProps.members.tone.description": {
+    zh: "控制角标的语义色调。",
+  },
+  "api.badge.types.BadgeProps.members.variant.description": {
+    zh: "控制角标表面的强调程度。",
+  },
+  "api.badge.types.BadgeProps.remarks": {
+    zh: "继承原生 span 属性，并将紧凑指示器定位到可选 children 上。",
+  },
+  "api.badge.variants.badgeVariants.description": {
+    zh: "根据色调、尺寸和强调程度生成贴纸 Badge 指示器 className。",
+  },
+  "api.progress.description": {
+    zh: "用于完成度与加载状态的可访问贴纸进度条。",
+  },
+  "api.progress.components.Progress.description": {
+    zh: "用于任务完成度与加载进度的可访问贴纸进度条。",
+  },
+  "api.progress.components.Progress.props.description": {
+    zh: "贴纸 Progress 的 props。",
+  },
+  "api.progress.components.Progress.props.members.max.description": {
+    zh: "用于计算完成度的最大值。",
+  },
+  "api.progress.components.Progress.props.members.showValue.description": {
+    zh: "将当前百分比显示为紧凑标签。",
+  },
+  "api.progress.components.Progress.props.members.size.description": {
+    zh: "控制进度条轨道高度。",
+  },
+  "api.progress.components.Progress.props.members.tone.description": {
+    zh: "控制填充条的语义色调。",
+  },
+  "api.progress.components.Progress.props.members.value.description": {
+    zh: "当前进度值。传入 null 可显示不定加载条。",
+  },
+  "api.progress.components.Progress.props.remarks": {
+    zh: "继承原生 div 属性，并暴露 ARIA progressbar 数值。",
+  },
+  "api.progress.exports.Progress.description": {
+    zh: "用于任务完成度与加载进度的可访问贴纸进度条。",
+  },
+  "api.progress.exports.ProgressProps.description": {
+    zh: "贴纸 Progress 的 props。",
+  },
+  "api.progress.exports.ProgressProps.remarks": {
+    zh: "继承原生 div 属性，并暴露 ARIA progressbar 数值。",
+  },
+  "api.progress.exports.progressVariants.description": {
+    zh: "根据尺寸和色调生成贴纸 Progress 轨道 className。",
+  },
+  "api.progress.types.ProgressProps.description": {
+    zh: "贴纸 Progress 的 props。",
+  },
+  "api.progress.types.ProgressProps.members.max.description": {
+    zh: "用于计算完成度的最大值。",
+  },
+  "api.progress.types.ProgressProps.members.showValue.description": {
+    zh: "将当前百分比显示为紧凑标签。",
+  },
+  "api.progress.types.ProgressProps.members.size.description": {
+    zh: "控制进度条轨道高度。",
+  },
+  "api.progress.types.ProgressProps.members.tone.description": {
+    zh: "控制填充条的语义色调。",
+  },
+  "api.progress.types.ProgressProps.members.value.description": {
+    zh: "当前进度值。传入 null 可显示不定加载条。",
+  },
+  "api.progress.types.ProgressProps.remarks": {
+    zh: "继承原生 div 属性，并暴露 ARIA progressbar 数值。",
+  },
+  "api.progress.variants.progressVariants.description": {
+    zh: "根据尺寸和色调生成贴纸 Progress 轨道 className。",
+  },
+  "api.skeleton.description": {
+    zh: "用于卡片、行、头像和文本行的温暖纸张加载占位符。",
+  },
+  "api.skeleton.components.Skeleton.description": {
+    zh: "用于加载卡片、行、头像和文本行的贴纸占位符。",
+  },
+  "api.skeleton.components.Skeleton.props.description": {
+    zh: "贴纸 Skeleton 占位符的 props。",
+  },
+  "api.skeleton.components.Skeleton.props.members.animated.description": {
+    zh: "控制内容加载时占位符是否脉冲动画。",
+  },
+  "api.skeleton.components.Skeleton.props.members.shape.description": {
+    zh: "控制占位符的几何形状。",
+  },
+  "api.skeleton.components.Skeleton.props.members.tone.description": {
+    zh: "控制占位符的纸张色调。",
+  },
+  "api.skeleton.components.Skeleton.props.remarks": {
+    zh: "继承原生 div 属性，并默认对辅助技术隐藏。",
+  },
+  "api.skeleton.exports.Skeleton.description": {
+    zh: "用于加载卡片、行、头像和文本行的贴纸占位符。",
+  },
+  "api.skeleton.exports.SkeletonProps.description": {
+    zh: "贴纸 Skeleton 占位符的 props。",
+  },
+  "api.skeleton.exports.SkeletonProps.remarks": {
+    zh: "继承原生 div 属性，并默认对辅助技术隐藏。",
+  },
+  "api.skeleton.exports.skeletonVariants.description": {
+    zh: "根据形状、色调和动画选项生成贴纸 Skeleton className。",
+  },
+  "api.skeleton.types.SkeletonProps.description": {
+    zh: "贴纸 Skeleton 占位符的 props。",
+  },
+  "api.skeleton.types.SkeletonProps.members.animated.description": {
+    zh: "控制内容加载时占位符是否脉冲动画。",
+  },
+  "api.skeleton.types.SkeletonProps.members.shape.description": {
+    zh: "控制占位符的几何形状。",
+  },
+  "api.skeleton.types.SkeletonProps.members.tone.description": {
+    zh: "控制占位符的纸张色调。",
+  },
+  "api.skeleton.types.SkeletonProps.remarks": {
+    zh: "继承原生 div 属性，并默认对辅助技术隐藏。",
+  },
+  "api.skeleton.variants.skeletonVariants.description": {
+    zh: "根据形状、色调和动画选项生成贴纸 Skeleton className。",
+  },
+  "api.spinner.description": {
+    zh: "用于待处理异步区域的紧凑可访问加载转圈。",
+  },
+  "api.spinner.components.Spinner.description": {
+    zh: "用于按钮、卡片和异步区域的贴纸加载转圈。",
+  },
+  "api.spinner.components.Spinner.props.description": {
+    zh: "贴纸 Spinner 的 props。",
+  },
+  "api.spinner.components.Spinner.props.members.decorative.description": {
+    zh: "当附近文本已经说明加载状态时，将 Spinner 从辅助技术中隐藏。",
+  },
+  "api.spinner.components.Spinner.props.members.label.description": {
+    zh: "Spinner 非装饰模式下使用的可访问状态标签。",
+  },
+  "api.spinner.components.Spinner.props.members.size.description": {
+    zh: "控制 Spinner 尺寸。",
+  },
+  "api.spinner.components.Spinner.props.members.tone.description": {
+    zh: "控制 Spinner 的语义颜色。",
+  },
+  "api.spinner.components.Spinner.props.remarks": {
+    zh: "继承原生 span 属性，可作为装饰元素或状态播报元素。",
+  },
+  "api.spinner.exports.Spinner.description": {
+    zh: "用于按钮、卡片和异步区域的贴纸加载转圈。",
+  },
+  "api.spinner.exports.SpinnerProps.description": {
+    zh: "贴纸 Spinner 的 props。",
+  },
+  "api.spinner.exports.SpinnerProps.remarks": {
+    zh: "继承原生 span 属性，可作为装饰元素或状态播报元素。",
+  },
+  "api.spinner.exports.spinnerVariants.description": {
+    zh: "根据尺寸和色调生成贴纸 Spinner className。",
+  },
+  "api.spinner.types.SpinnerProps.description": {
+    zh: "贴纸 Spinner 的 props。",
+  },
+  "api.spinner.types.SpinnerProps.members.decorative.description": {
+    zh: "当附近文本已经说明加载状态时，将 Spinner 从辅助技术中隐藏。",
+  },
+  "api.spinner.types.SpinnerProps.members.label.description": {
+    zh: "Spinner 非装饰模式下使用的可访问状态标签。",
+  },
+  "api.spinner.types.SpinnerProps.members.size.description": {
+    zh: "控制 Spinner 尺寸。",
+  },
+  "api.spinner.types.SpinnerProps.members.tone.description": {
+    zh: "控制 Spinner 的语义颜色。",
+  },
+  "api.spinner.types.SpinnerProps.remarks": {
+    zh: "继承原生 span 属性，可作为装饰元素或状态播报元素。",
+  },
+  "api.spinner.variants.spinnerVariants.description": {
+    zh: "根据尺寸和色调生成贴纸 Spinner className。",
+  },
 })
 
 export { ZH_PREVIEW_API_DOC_MESSAGES }

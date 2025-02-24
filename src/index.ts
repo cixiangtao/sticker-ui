@@ -17,6 +17,8 @@ export type {
   AlertProps,
   AlertTitleProps,
 } from "./components/ui/alert"
+export { Badge, badgeVariants } from "./components/ui/badge"
+export type { BadgeProps } from "./components/ui/badge"
 export {
   Card,
   CardContent,
@@ -105,6 +107,12 @@ export type {
   RadioGroupItemProps,
   RadioGroupProps,
 } from "./components/ui/radio"
+export { Progress, progressVariants } from "./components/ui/progress"
+export type { ProgressProps } from "./components/ui/progress"
+export { Skeleton, skeletonVariants } from "./components/ui/skeleton"
+export type { SkeletonProps } from "./components/ui/skeleton"
+export { Spinner, spinnerVariants } from "./components/ui/spinner"
+export type { SpinnerProps } from "./components/ui/spinner"
 export { Switch, switchVariants } from "./components/ui/switch"
 export type { SwitchProps } from "./components/ui/switch"
 export {

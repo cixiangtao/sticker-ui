@@ -1,0 +1,28 @@
+import { Skeleton } from "sticker-ui"
+
+import { defineMeta } from "@/layouts/preview"
+
+const meta = defineMeta({
+  className: "bg-fill-secondary",
+  order: 30,
+  titleKey: "preview.components.staticPlaceholder",
+  descriptionKey:
+    "preview.components.animationCanBeDisabledWhenThePlaceholderIsPartOfALargerBusyRegion",
+})
+
+function Demo() {
+  return (
+    <div
+      aria-busy="true"
+      aria-label="Loading notebook summary"
+      className="grid gap-3 rounded-sticker-2xl border-2 border-ink bg-surface p-4 shadow-sticker-md"
+      role="status"
+    >
+      <Skeleton animated={false} className="max-w-52" shape="line" />
+      <Skeleton animated={false} shape="block" tone="secondary" />
+      <Skeleton animated={false} className="max-w-72" shape="line" />
+    </div>
+  )
+}
+
+export { Demo, meta }

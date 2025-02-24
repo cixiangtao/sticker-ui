@@ -3308,6 +3308,1239 @@
       }
     ]
   },
+  "badge": {
+    "components": [
+      {
+        "descriptionKey": "api.badge.components.Badge.description",
+        "name": "Badge",
+        "props": {
+          "descriptionKey": "api.badge.components.Badge.props.description",
+          "remarksKey": "api.badge.components.Badge.props.remarks",
+          "inherits": [
+            "Omit<React.HTMLAttributes<HTMLSpanElement>, \"content\">",
+            "Pick<VariantProps<typeof badgeVariants>, \"size\" | \"tone\" | \"variant\">"
+          ],
+          "inheritedMembers": [
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-describedby.description",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-invalid.description",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-label.description",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-labelledby.description",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.autoFocus.description",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.className.description",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultChecked.description",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultValue.description",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.id.description",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onBlur.description",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLSpanElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onChange.description",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "React.ChangeEventHandler<HTMLSpanElement, Element>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onClick.description",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLSpanElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onFocus.description",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLSpanElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyDown.description",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLSpanElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyUp.description",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLSpanElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseEnter.description",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLSpanElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseLeave.description",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLSpanElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.role.description",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.style.description",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.title.description",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "members": [
+            {
+              "descriptionKey": "api.badge.components.Badge.props.members.children.description",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "descriptionKey": "api.badge.components.Badge.props.members.content.description",
+              "name": "content",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "defaultValue": "false",
+              "descriptionKey": "api.badge.components.Badge.props.members.dot.description",
+              "name": "dot",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.badge.components.Badge.props.members.indicatorClassName.description",
+              "name": "indicatorClassName",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "defaultValue": "99",
+              "descriptionKey": "api.badge.components.Badge.props.members.max.description",
+              "name": "max",
+              "optional": true,
+              "required": false,
+              "type": "number"
+            },
+            {
+              "defaultValue": "\"top-right\"",
+              "descriptionKey": "api.badge.components.Badge.props.members.placement.description",
+              "name": "placement",
+              "optional": true,
+              "required": false,
+              "type": "BadgePlacement"
+            },
+            {
+              "defaultValue": "true",
+              "descriptionKey": "api.badge.components.Badge.props.members.show.description",
+              "name": "show",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "defaultValue": "false",
+              "descriptionKey": "api.badge.components.Badge.props.members.showZero.description",
+              "name": "showZero",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "defaultValue": "\"md\"",
+              "descriptionKey": "api.badge.components.Badge.props.members.size.description",
+              "name": "size",
+              "optional": true,
+              "required": false,
+              "type": "BadgeSize"
+            },
+            {
+              "defaultValue": "\"default\"",
+              "descriptionKey": "api.badge.components.Badge.props.members.tone.description",
+              "name": "tone",
+              "optional": true,
+              "required": false,
+              "type": "\"danger\" | \"default\" | \"info\" | \"secondary\" | \"success\" | \"warning\""
+            },
+            {
+              "defaultValue": "\"solid\"",
+              "descriptionKey": "api.badge.components.Badge.props.members.variant.description",
+              "name": "variant",
+              "optional": true,
+              "required": false,
+              "type": "\"outline\" | \"soft\" | \"solid\""
+            }
+          ],
+          "type": "BadgeProps"
+        }
+      }
+    ],
+    "descriptionKey": "api.badge.description",
+    "exports": [
+      {
+        "descriptionKey": "api.badge.exports.Badge.description",
+        "kind": "component",
+        "name": "Badge"
+      },
+      {
+        "descriptionKey": "api.badge.exports.BadgeProps.description",
+        "remarksKey": "api.badge.exports.BadgeProps.remarks",
+        "kind": "interface",
+        "name": "BadgeProps"
+      },
+      {
+        "descriptionKey": "api.badge.exports.badgeVariants.description",
+        "kind": "variant",
+        "name": "badgeVariants"
+      }
+    ],
+    "name": "badge",
+    "sourcePath": "src/components/ui/badge.tsx",
+    "title": "Sticker Badge",
+    "types": [
+      {
+        "descriptionKey": "api.badge.types.BadgeProps.description",
+        "remarksKey": "api.badge.types.BadgeProps.remarks",
+        "inherits": [
+          "Omit<React.HTMLAttributes<HTMLSpanElement>, \"content\">",
+          "Pick<VariantProps<typeof badgeVariants>, \"size\" | \"tone\" | \"variant\">"
+        ],
+        "kind": "interface",
+        "members": [
+          {
+            "descriptionKey": "api.badge.types.BadgeProps.members.children.description",
+            "name": "children",
+            "optional": true,
+            "required": false,
+            "type": "React.ReactNode"
+          },
+          {
+            "descriptionKey": "api.badge.types.BadgeProps.members.content.description",
+            "name": "content",
+            "optional": true,
+            "required": false,
+            "type": "React.ReactNode"
+          },
+          {
+            "defaultValue": "false",
+            "descriptionKey": "api.badge.types.BadgeProps.members.dot.description",
+            "name": "dot",
+            "optional": true,
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "descriptionKey": "api.badge.types.BadgeProps.members.indicatorClassName.description",
+            "name": "indicatorClassName",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "defaultValue": "99",
+            "descriptionKey": "api.badge.types.BadgeProps.members.max.description",
+            "name": "max",
+            "optional": true,
+            "required": false,
+            "type": "number"
+          },
+          {
+            "defaultValue": "\"top-right\"",
+            "descriptionKey": "api.badge.types.BadgeProps.members.placement.description",
+            "name": "placement",
+            "optional": true,
+            "required": false,
+            "type": "BadgePlacement"
+          },
+          {
+            "defaultValue": "true",
+            "descriptionKey": "api.badge.types.BadgeProps.members.show.description",
+            "name": "show",
+            "optional": true,
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "defaultValue": "false",
+            "descriptionKey": "api.badge.types.BadgeProps.members.showZero.description",
+            "name": "showZero",
+            "optional": true,
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "defaultValue": "\"md\"",
+            "descriptionKey": "api.badge.types.BadgeProps.members.size.description",
+            "name": "size",
+            "optional": true,
+            "required": false,
+            "type": "BadgeSize"
+          },
+          {
+            "defaultValue": "\"default\"",
+            "descriptionKey": "api.badge.types.BadgeProps.members.tone.description",
+            "name": "tone",
+            "optional": true,
+            "required": false,
+            "type": "\"danger\" | \"default\" | \"info\" | \"secondary\" | \"success\" | \"warning\""
+          },
+          {
+            "defaultValue": "\"solid\"",
+            "descriptionKey": "api.badge.types.BadgeProps.members.variant.description",
+            "name": "variant",
+            "optional": true,
+            "required": false,
+            "type": "\"outline\" | \"soft\" | \"solid\""
+          }
+        ],
+        "name": "BadgeProps"
+      }
+    ],
+    "variants": [
+      {
+        "descriptionKey": "api.badge.variants.badgeVariants.description",
+        "groups": [
+          { "defaultValue": "md", "name": "size", "values": ["lg", "md", "sm"] },
+          {
+            "defaultValue": "default",
+            "name": "tone",
+            "values": ["danger", "default", "info", "secondary", "success", "warning"]
+          },
+          { "defaultValue": "solid", "name": "variant", "values": ["outline", "soft", "solid"] }
+        ],
+        "name": "badgeVariants"
+      }
+    ]
+  },
+  "progress": {
+    "components": [
+      {
+        "descriptionKey": "api.progress.components.Progress.description",
+        "name": "Progress",
+        "props": {
+          "descriptionKey": "api.progress.components.Progress.props.description",
+          "remarksKey": "api.progress.components.Progress.props.remarks",
+          "inherits": [
+            "React.HTMLAttributes<HTMLDivElement>",
+            "VariantProps<typeof progressVariants>"
+          ],
+          "inheritedMembers": [
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-describedby.description",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-invalid.description",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-label.description",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-labelledby.description",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.autoFocus.description",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.children.description",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.className.description",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultChecked.description",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultValue.description",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.id.description",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onBlur.description",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onChange.description",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "React.ChangeEventHandler<HTMLDivElement, Element>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onClick.description",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onFocus.description",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyDown.description",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyUp.description",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseEnter.description",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseLeave.description",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.role.description",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.style.description",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.title.description",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "members": [
+            {
+              "defaultValue": "100",
+              "descriptionKey": "api.progress.components.Progress.props.members.max.description",
+              "name": "max",
+              "optional": true,
+              "required": false,
+              "type": "number"
+            },
+            {
+              "defaultValue": "false",
+              "descriptionKey": "api.progress.components.Progress.props.members.showValue.description",
+              "name": "showValue",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "defaultValue": "\"md\"",
+              "descriptionKey": "api.progress.components.Progress.props.members.size.description",
+              "name": "size",
+              "optional": true,
+              "required": false,
+              "type": "\"lg\" | \"md\" | \"sm\""
+            },
+            {
+              "defaultValue": "\"default\"",
+              "descriptionKey": "api.progress.components.Progress.props.members.tone.description",
+              "name": "tone",
+              "optional": true,
+              "required": false,
+              "type": "\"danger\" | \"default\" | \"info\" | \"secondary\" | \"success\" | \"warning\""
+            },
+            {
+              "defaultValue": "0",
+              "descriptionKey": "api.progress.components.Progress.props.members.value.description",
+              "name": "value",
+              "optional": true,
+              "required": false,
+              "type": "null | number"
+            }
+          ],
+          "type": "ProgressProps"
+        }
+      }
+    ],
+    "descriptionKey": "api.progress.description",
+    "exports": [
+      {
+        "descriptionKey": "api.progress.exports.Progress.description",
+        "kind": "component",
+        "name": "Progress"
+      },
+      {
+        "descriptionKey": "api.progress.exports.ProgressProps.description",
+        "remarksKey": "api.progress.exports.ProgressProps.remarks",
+        "kind": "interface",
+        "name": "ProgressProps"
+      },
+      {
+        "descriptionKey": "api.progress.exports.progressVariants.description",
+        "kind": "variant",
+        "name": "progressVariants"
+      }
+    ],
+    "name": "progress",
+    "sourcePath": "src/components/ui/progress.tsx",
+    "title": "Sticker Progress",
+    "types": [
+      {
+        "descriptionKey": "api.progress.types.ProgressProps.description",
+        "remarksKey": "api.progress.types.ProgressProps.remarks",
+        "inherits": [
+          "React.HTMLAttributes<HTMLDivElement>",
+          "VariantProps<typeof progressVariants>"
+        ],
+        "kind": "interface",
+        "members": [
+          {
+            "defaultValue": "100",
+            "descriptionKey": "api.progress.types.ProgressProps.members.max.description",
+            "name": "max",
+            "optional": true,
+            "required": false,
+            "type": "number"
+          },
+          {
+            "defaultValue": "false",
+            "descriptionKey": "api.progress.types.ProgressProps.members.showValue.description",
+            "name": "showValue",
+            "optional": true,
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "defaultValue": "\"md\"",
+            "descriptionKey": "api.progress.types.ProgressProps.members.size.description",
+            "name": "size",
+            "optional": true,
+            "required": false,
+            "type": "\"lg\" | \"md\" | \"sm\""
+          },
+          {
+            "defaultValue": "\"default\"",
+            "descriptionKey": "api.progress.types.ProgressProps.members.tone.description",
+            "name": "tone",
+            "optional": true,
+            "required": false,
+            "type": "\"danger\" | \"default\" | \"info\" | \"secondary\" | \"success\" | \"warning\""
+          },
+          {
+            "defaultValue": "0",
+            "descriptionKey": "api.progress.types.ProgressProps.members.value.description",
+            "name": "value",
+            "optional": true,
+            "required": false,
+            "type": "null | number"
+          }
+        ],
+        "name": "ProgressProps"
+      }
+    ],
+    "variants": [
+      {
+        "descriptionKey": "api.progress.variants.progressVariants.description",
+        "groups": [
+          { "defaultValue": "md", "name": "size", "values": ["lg", "md", "sm"] },
+          {
+            "defaultValue": "default",
+            "name": "tone",
+            "values": ["danger", "default", "info", "secondary", "success", "warning"]
+          }
+        ],
+        "name": "progressVariants"
+      }
+    ]
+  },
+  "skeleton": {
+    "components": [
+      {
+        "descriptionKey": "api.skeleton.components.Skeleton.description",
+        "name": "Skeleton",
+        "props": {
+          "descriptionKey": "api.skeleton.components.Skeleton.props.description",
+          "remarksKey": "api.skeleton.components.Skeleton.props.remarks",
+          "inherits": [
+            "React.HTMLAttributes<HTMLDivElement>",
+            "VariantProps<typeof skeletonVariants>"
+          ],
+          "inheritedMembers": [
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-describedby.description",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-invalid.description",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-label.description",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-labelledby.description",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.autoFocus.description",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.children.description",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.className.description",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultChecked.description",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultValue.description",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.id.description",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onBlur.description",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onChange.description",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "React.ChangeEventHandler<HTMLDivElement, Element>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onClick.description",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onFocus.description",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyDown.description",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyUp.description",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseEnter.description",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseLeave.description",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.role.description",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.style.description",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.title.description",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "members": [
+            {
+              "defaultValue": "true",
+              "descriptionKey": "api.skeleton.components.Skeleton.props.members.animated.description",
+              "name": "animated",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "defaultValue": "\"block\"",
+              "descriptionKey": "api.skeleton.components.Skeleton.props.members.shape.description",
+              "name": "shape",
+              "optional": true,
+              "required": false,
+              "type": "\"avatar\" | \"block\" | \"card\" | \"line\""
+            },
+            {
+              "defaultValue": "\"default\"",
+              "descriptionKey": "api.skeleton.components.Skeleton.props.members.tone.description",
+              "name": "tone",
+              "optional": true,
+              "required": false,
+              "type": "\"default\" | \"info\" | \"secondary\" | \"warning\""
+            }
+          ],
+          "type": "SkeletonProps"
+        }
+      }
+    ],
+    "descriptionKey": "api.skeleton.description",
+    "exports": [
+      {
+        "descriptionKey": "api.skeleton.exports.Skeleton.description",
+        "kind": "component",
+        "name": "Skeleton"
+      },
+      {
+        "descriptionKey": "api.skeleton.exports.SkeletonProps.description",
+        "remarksKey": "api.skeleton.exports.SkeletonProps.remarks",
+        "kind": "interface",
+        "name": "SkeletonProps"
+      },
+      {
+        "descriptionKey": "api.skeleton.exports.skeletonVariants.description",
+        "kind": "variant",
+        "name": "skeletonVariants"
+      }
+    ],
+    "name": "skeleton",
+    "sourcePath": "src/components/ui/skeleton.tsx",
+    "title": "Sticker Skeleton",
+    "types": [
+      {
+        "descriptionKey": "api.skeleton.types.SkeletonProps.description",
+        "remarksKey": "api.skeleton.types.SkeletonProps.remarks",
+        "inherits": [
+          "React.HTMLAttributes<HTMLDivElement>",
+          "VariantProps<typeof skeletonVariants>"
+        ],
+        "kind": "interface",
+        "members": [
+          {
+            "defaultValue": "true",
+            "descriptionKey": "api.skeleton.types.SkeletonProps.members.animated.description",
+            "name": "animated",
+            "optional": true,
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "defaultValue": "\"block\"",
+            "descriptionKey": "api.skeleton.types.SkeletonProps.members.shape.description",
+            "name": "shape",
+            "optional": true,
+            "required": false,
+            "type": "\"avatar\" | \"block\" | \"card\" | \"line\""
+          },
+          {
+            "defaultValue": "\"default\"",
+            "descriptionKey": "api.skeleton.types.SkeletonProps.members.tone.description",
+            "name": "tone",
+            "optional": true,
+            "required": false,
+            "type": "\"default\" | \"info\" | \"secondary\" | \"warning\""
+          }
+        ],
+        "name": "SkeletonProps"
+      }
+    ],
+    "variants": [
+      {
+        "descriptionKey": "api.skeleton.variants.skeletonVariants.description",
+        "groups": [
+          { "defaultValue": "true", "name": "animated", "values": ["false", "true"] },
+          {
+            "defaultValue": "block",
+            "name": "shape",
+            "values": ["avatar", "block", "card", "line"]
+          },
+          {
+            "defaultValue": "default",
+            "name": "tone",
+            "values": ["default", "info", "secondary", "warning"]
+          }
+        ],
+        "name": "skeletonVariants"
+      }
+    ]
+  },
+  "spinner": {
+    "components": [
+      {
+        "descriptionKey": "api.spinner.components.Spinner.description",
+        "name": "Spinner",
+        "props": {
+          "descriptionKey": "api.spinner.components.Spinner.props.description",
+          "remarksKey": "api.spinner.components.Spinner.props.remarks",
+          "inherits": [
+            "React.HTMLAttributes<HTMLSpanElement>",
+            "VariantProps<typeof spinnerVariants>"
+          ],
+          "inheritedMembers": [
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-describedby.description",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-invalid.description",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-label.description",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-labelledby.description",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.autoFocus.description",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.children.description",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.className.description",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultChecked.description",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultValue.description",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.id.description",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onBlur.description",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLSpanElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onChange.description",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "React.ChangeEventHandler<HTMLSpanElement, Element>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onClick.description",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLSpanElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onFocus.description",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLSpanElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyDown.description",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLSpanElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyUp.description",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLSpanElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseEnter.description",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLSpanElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseLeave.description",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLSpanElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.role.description",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.style.description",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.title.description",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "members": [
+            {
+              "defaultValue": "false",
+              "descriptionKey": "api.spinner.components.Spinner.props.members.decorative.description",
+              "name": "decorative",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "defaultValue": "\"Loading\"",
+              "descriptionKey": "api.spinner.components.Spinner.props.members.label.description",
+              "name": "label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "defaultValue": "\"md\"",
+              "descriptionKey": "api.spinner.components.Spinner.props.members.size.description",
+              "name": "size",
+              "optional": true,
+              "required": false,
+              "type": "\"lg\" | \"md\" | \"sm\""
+            },
+            {
+              "defaultValue": "\"default\"",
+              "descriptionKey": "api.spinner.components.Spinner.props.members.tone.description",
+              "name": "tone",
+              "optional": true,
+              "required": false,
+              "type": "\"danger\" | \"default\" | \"info\" | \"secondary\" | \"success\" | \"warning\""
+            }
+          ],
+          "type": "SpinnerProps"
+        }
+      }
+    ],
+    "descriptionKey": "api.spinner.description",
+    "exports": [
+      {
+        "descriptionKey": "api.spinner.exports.Spinner.description",
+        "kind": "component",
+        "name": "Spinner"
+      },
+      {
+        "descriptionKey": "api.spinner.exports.SpinnerProps.description",
+        "remarksKey": "api.spinner.exports.SpinnerProps.remarks",
+        "kind": "interface",
+        "name": "SpinnerProps"
+      },
+      {
+        "descriptionKey": "api.spinner.exports.spinnerVariants.description",
+        "kind": "variant",
+        "name": "spinnerVariants"
+      }
+    ],
+    "name": "spinner",
+    "sourcePath": "src/components/ui/spinner.tsx",
+    "title": "Sticker Spinner",
+    "types": [
+      {
+        "descriptionKey": "api.spinner.types.SpinnerProps.description",
+        "remarksKey": "api.spinner.types.SpinnerProps.remarks",
+        "inherits": [
+          "React.HTMLAttributes<HTMLSpanElement>",
+          "VariantProps<typeof spinnerVariants>"
+        ],
+        "kind": "interface",
+        "members": [
+          {
+            "defaultValue": "false",
+            "descriptionKey": "api.spinner.types.SpinnerProps.members.decorative.description",
+            "name": "decorative",
+            "optional": true,
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "defaultValue": "\"Loading\"",
+            "descriptionKey": "api.spinner.types.SpinnerProps.members.label.description",
+            "name": "label",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "defaultValue": "\"md\"",
+            "descriptionKey": "api.spinner.types.SpinnerProps.members.size.description",
+            "name": "size",
+            "optional": true,
+            "required": false,
+            "type": "\"lg\" | \"md\" | \"sm\""
+          },
+          {
+            "defaultValue": "\"default\"",
+            "descriptionKey": "api.spinner.types.SpinnerProps.members.tone.description",
+            "name": "tone",
+            "optional": true,
+            "required": false,
+            "type": "\"danger\" | \"default\" | \"info\" | \"secondary\" | \"success\" | \"warning\""
+          }
+        ],
+        "name": "SpinnerProps"
+      }
+    ],
+    "variants": [
+      {
+        "descriptionKey": "api.spinner.variants.spinnerVariants.description",
+        "groups": [
+          { "defaultValue": "md", "name": "size", "values": ["lg", "md", "sm"] },
+          {
+            "defaultValue": "default",
+            "name": "tone",
+            "values": ["danger", "default", "info", "secondary", "success", "warning"]
+          }
+        ],
+        "name": "spinnerVariants"
+      }
+    ]
+  },
   "label": {
     "components": [
       {

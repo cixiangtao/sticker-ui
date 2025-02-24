@@ -136,6 +136,66 @@
       ]
     },
     {
+      "name": "badge",
+      "type": "registry:ui",
+      "title": "Sticker Badge",
+      "description": "A corner badge for attaching counts and status dots to any element.",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "src/components/ui/badge.tsx",
+          "target": "@ui/badge.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "progress",
+      "type": "registry:ui",
+      "title": "Sticker Progress",
+      "description": "An accessible sticker progress bar for completion and loading states.",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "src/components/ui/progress.tsx",
+          "target": "@ui/progress.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "skeleton",
+      "type": "registry:ui",
+      "title": "Sticker Skeleton",
+      "description": "A warm paper loading placeholder for cards, rows, avatars, and text lines.",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "src/components/ui/skeleton.tsx",
+          "target": "@ui/skeleton.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "spinner",
+      "type": "registry:ui",
+      "title": "Sticker Spinner",
+      "description": "A compact accessible loading spinner for pending async regions.",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "src/components/ui/spinner.tsx",
+          "target": "@ui/spinner.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "label",
       "type": "registry:ui",
       "title": "Sticker Label",
