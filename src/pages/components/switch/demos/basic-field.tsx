@@ -1,4 +1,4 @@
-import { Label, LabelDescription, Switch } from "sticker-ui"
+import { Field, Switch } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
@@ -13,16 +13,15 @@ const meta = defineMeta({
 function Demo() {
   return (
     <div className="grid max-w-xl gap-3">
-      <div className="flex items-start justify-between gap-4 rounded-sticker-xl border border-ink bg-white/80 p-4">
-        <div className="grid gap-1">
-          <Label htmlFor="switch-weekly-digest">Weekly Digest</Label>
-          <LabelDescription>
-            Pair switch with label for immediate on off preferences and
-            settings.
-          </LabelDescription>
-        </div>
-        <Switch defaultChecked id="switch-weekly-digest" />
-      </div>
+      <Field
+        className="rounded-sticker-xl border border-ink bg-white/80 p-4"
+        classNames={{ body: "order-1 flex-1", control: "order-2" }}
+        controlPlacement="start"
+        description="Pair switch with label for immediate on off preferences and settings."
+        label="Weekly Digest"
+      >
+        <Switch defaultChecked />
+      </Field>
     </div>
   )
 }

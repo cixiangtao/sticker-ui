@@ -1,4 +1,4 @@
-import { Label, LabelDescription, Textarea } from "sticker-ui"
+import { Field, Textarea } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
@@ -13,18 +13,16 @@ const meta = defineMeta({
 function Demo() {
   return (
     <div className="grid max-w-xl gap-3">
-      <Label htmlFor="textarea-project-notes" required>
-        Project Notes
-      </Label>
-      <Textarea
-        defaultValue="Draft the launch checklist capture edge cases and mark anything the team should revisit before shipping."
-        id="textarea-project-notes"
-        placeholder="Write a short project note."
-      />
-      <LabelDescription>
-        Pair textarea with label when longer copy needs accessible captions and
-        helper text.
-      </LabelDescription>
+      <Field
+        description="Pair textarea with label when longer copy needs accessible captions and helper text."
+        label="Project Notes"
+        required
+      >
+        <Textarea
+          defaultValue="Draft the launch checklist capture edge cases and mark anything the team should revisit before shipping."
+          placeholder="Write a short project note."
+        />
+      </Field>
     </div>
   )
 }

@@ -5,8 +5,8 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
     {
       zh: "用于完成度与加载状态的可访问贴纸进度条。",
     },
-  "preview.components.accessibleFormCaptionsWithSmallStickerMarkers": {
-    zh: "可访问的表单标题，并带有小巧的贴纸标记。",
+  "preview.components.autoBoundFieldCaptionsWithSmallStickerMarkers": {
+    zh: "可自动绑定控件的字段标题，并带有小巧的贴纸标记。",
   },
   "preview.components.animationCanBeDisabledWhenThePlaceholderIsPartOfALargerBusyRegion":
     {
@@ -356,9 +356,9 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   "preview.components.interactiveList": {
     zh: "交互列表",
   },
-  "preview.components.labelsStayCompactReadableAndConnectedToNativeControlsWithTheNormalHtmlforRelationship":
+  "preview.components.fieldsStayCompactReadableAndConnectedToNativeControlsWithTheNormalHtmlforRelationship":
     {
-      zh: "Label 保持紧凑可读，并通过常规 htmlFor 关系连接原生控件。",
+      zh: "Field 会保持标题紧凑可读，并自动连接控件 id、htmlFor 与描述。",
     },
   "preview.components.libraryDirectionConstraintsAndPreviewMap": {
     zh: "组件库方向、约束和预览地图。",
@@ -416,9 +416,9 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
     {
       zh: "必填字段在宽松布局中使用贴纸胶囊，在水平标签列中使用紧凑星号。",
     },
-  "preview.components.requiredMarksHandleFieldSemanticsWhileLabelmarkerStaysAvailableForCustomStatusChips":
+  "preview.components.requiredMarksHandleFieldSemanticsWhileFieldmarkerStaysAvailableForCustomStatusChips":
     {
-      zh: "requiredMark 处理字段必填语义，LabelMarker 则用于自定义状态胶囊。",
+      zh: "requiredMark 处理字段必填语义，FieldMarker 则用于自定义状态胶囊。",
     },
   "preview.components.rounded": {
     zh: "圆角",
@@ -461,7 +461,7 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   },
   "preview.components.sizesAlignWithCompactStandardAndRoomyControlsMarkersCanBeComposedDirectlyWhenAFormNeedsCustomWording":
     {
-      zh: "尺寸与紧凑、标准和宽松控件对齐。表单需要自定义措辞时，可直接组合标记。",
+      zh: "Field 尺寸与紧凑、标准和宽松控件对齐。表单需要自定义措辞时，可直接组合标记。",
     },
   "preview.components.sizesAlignTextInputsWithCompactFiltersStandardFormsAndRoomySettingsPanelsWhileTypeStaysFocusedOnTextEntry":
     {

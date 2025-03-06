@@ -1,4 +1,4 @@
-import { InputPassword, Label, LabelDescription } from "sticker-ui"
+import { Field, InputPassword } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
@@ -13,20 +13,18 @@ const meta = defineMeta({
 function Demo() {
   return (
     <div className="grid max-w-xl gap-3">
-      <Label htmlFor="input-password-basic" required>
-        Password
-      </Label>
-      <InputPassword
-        autoComplete="current-password"
-        hideLabel="Hide"
-        id="input-password-basic"
-        placeholder="Enter Password"
-        showLabel="Show"
-      />
-      <LabelDescription>
-        Use inputpassword when a password field needs a built in visibility
-        toggle.
-      </LabelDescription>
+      <Field
+        description="Use inputpassword when a password field needs a built in visibility toggle."
+        label="Password"
+        required
+      >
+        <InputPassword
+          autoComplete="current-password"
+          hideLabel="Hide"
+          placeholder="Enter Password"
+          showLabel="Show"
+        />
+      </Field>
     </div>
   )
 }

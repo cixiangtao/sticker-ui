@@ -1,6 +1,5 @@
 import {
-  Label,
-  LabelDescription,
+  Field,
   Select,
   SelectContent,
   SelectItem,
@@ -21,23 +20,22 @@ const meta = defineMeta({
 function Demo() {
   return (
     <div className="grid max-w-xl gap-3">
-      <Label htmlFor="select-team-role" required>
-        Team Role
-      </Label>
-      <Select defaultValue="designer" id="select-team-role">
-        <SelectTrigger>
-          <SelectValue placeholder="Choose A Role" />
-        </SelectTrigger>
-        <SelectContent>
-          <SelectItem value="designer">Design Captain</SelectItem>
-          <SelectItem value="engineer">Build Lead</SelectItem>
-          <SelectItem value="researcher">Research Scout</SelectItem>
-        </SelectContent>
-      </Select>
-      <LabelDescription>
-        Pair select with label when a finite option list needs accessible
-        captions and helper text.
-      </LabelDescription>
+      <Field
+        description="Pair select with label when a finite option list needs accessible captions and helper text."
+        label="Team Role"
+        required
+      >
+        <Select defaultValue="designer">
+          <SelectTrigger>
+            <SelectValue placeholder="Choose A Role" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="designer">Design Captain</SelectItem>
+            <SelectItem value="engineer">Build Lead</SelectItem>
+            <SelectItem value="researcher">Research Scout</SelectItem>
+          </SelectContent>
+        </Select>
+      </Field>
     </div>
   )
 }

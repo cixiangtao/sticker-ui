@@ -1,4 +1,4 @@
-import { Label, RadioGroup, RadioGroupItem } from "sticker-ui"
+import { Field, RadioGroup, RadioGroupItem } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
@@ -17,31 +17,29 @@ function Demo() {
       defaultValue="standard"
       tone="secondary"
     >
-      <div className="flex items-center gap-3 rounded-sticker-xl border border-ink bg-white/80 p-4">
-        <RadioGroupItem id="radio-size-small" size="sm" value="small" />
-        <Label htmlFor="radio-size-small" size="sm">
-          Small Option
-        </Label>
-      </div>
-      <div className="flex items-center gap-3 rounded-sticker-xl border border-ink bg-white/80 p-4">
-        <RadioGroupItem
-          id="radio-size-medium"
-          value="standard"
-          variant="filled"
-        />
-        <Label htmlFor="radio-size-medium">Standard Choice</Label>
-      </div>
-      <div className="flex items-center gap-3 rounded-sticker-xl border border-ink bg-white/80 p-4">
-        <RadioGroupItem
-          id="radio-size-large"
-          size="lg"
-          tone="warning"
-          value="roomy"
-        />
-        <Label htmlFor="radio-size-large" size="lg">
-          Roomy Route
-        </Label>
-      </div>
+      <Field
+        className="items-center rounded-sticker-xl border border-ink bg-white/80 p-4"
+        controlPlacement="start"
+        label="Small Option"
+        size="sm"
+      >
+        <RadioGroupItem size="sm" value="small" />
+      </Field>
+      <Field
+        className="items-center rounded-sticker-xl border border-ink bg-white/80 p-4"
+        controlPlacement="start"
+        label="Standard Choice"
+      >
+        <RadioGroupItem value="standard" variant="filled" />
+      </Field>
+      <Field
+        className="items-center rounded-sticker-xl border border-ink bg-white/80 p-4"
+        controlPlacement="start"
+        label="Roomy Route"
+        size="lg"
+      >
+        <RadioGroupItem size="lg" tone="warning" value="roomy" />
+      </Field>
     </RadioGroup>
   )
 }

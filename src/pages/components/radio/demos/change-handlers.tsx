@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Label, RadioGroup, RadioGroupItem } from "sticker-ui"
+import { Field, RadioGroup, RadioGroupItem } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
@@ -29,13 +29,14 @@ function Demo() {
           ["docs", "API docs"],
           ["registry", "Registry JSON"],
         ].map(([itemValue, label]) => (
-          <div className="flex items-center gap-3" key={itemValue}>
-            <RadioGroupItem
-              id={`radio-change-${itemValue}`}
-              value={itemValue}
-            />
-            <Label htmlFor={`radio-change-${itemValue}`}>{label}</Label>
-          </div>
+          <Field
+            className="items-center"
+            controlPlacement="start"
+            key={itemValue}
+            label={label}
+          >
+            <RadioGroupItem value={itemValue} />
+          </Field>
         ))}
       </RadioGroup>
       <div className="rounded-sticker-lg border border-ink bg-surface px-3 py-2 text-sm font-extrabold">

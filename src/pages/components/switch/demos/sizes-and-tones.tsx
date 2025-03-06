@@ -1,4 +1,4 @@
-import { Label, Switch } from "sticker-ui"
+import { Field, Switch } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
@@ -13,33 +13,32 @@ const meta = defineMeta({
 function Demo() {
   return (
     <div className="grid gap-4 md:grid-cols-3">
-      <div className="flex items-center justify-between gap-3 rounded-sticker-xl border border-ink bg-white/80 p-4">
-        <Label htmlFor="switch-size-small" size="sm">
-          Small Toggle
-        </Label>
-        <Switch defaultChecked id="switch-size-small" size="sm" />
-      </div>
-      <div className="flex items-center justify-between gap-3 rounded-sticker-xl border border-ink bg-white/80 p-4">
-        <Label htmlFor="switch-size-medium">Standard Sync</Label>
-        <Switch
-          defaultChecked
-          id="switch-size-medium"
-          tone="secondary"
-          variant="filled"
-        />
-      </div>
-      <div className="flex items-center justify-between gap-3 rounded-sticker-xl border border-ink bg-white/80 p-4">
-        <Label htmlFor="switch-size-large" size="lg">
-          Roomy Alerts
-        </Label>
-        <Switch
-          defaultChecked
-          id="switch-size-large"
-          size="lg"
-          tone="success"
-          variant="filled"
-        />
-      </div>
+      <Field
+        className="rounded-sticker-xl border border-ink bg-white/80 p-4"
+        classNames={{ body: "order-1 flex-1", control: "order-2" }}
+        controlPlacement="start"
+        label="Small Toggle"
+        size="sm"
+      >
+        <Switch defaultChecked size="sm" />
+      </Field>
+      <Field
+        className="rounded-sticker-xl border border-ink bg-white/80 p-4"
+        classNames={{ body: "order-1 flex-1", control: "order-2" }}
+        controlPlacement="start"
+        label="Standard Sync"
+      >
+        <Switch defaultChecked tone="secondary" variant="filled" />
+      </Field>
+      <Field
+        className="rounded-sticker-xl border border-ink bg-white/80 p-4"
+        classNames={{ body: "order-1 flex-1", control: "order-2" }}
+        controlPlacement="start"
+        label="Roomy Alerts"
+        size="lg"
+      >
+        <Switch defaultChecked size="lg" tone="success" variant="filled" />
+      </Field>
     </div>
   )
 }

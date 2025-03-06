@@ -43,11 +43,11 @@ const CardPage = createRegistryComponentPage("card")
 const CheckboxPage = createRegistryComponentPage("checkbox")
 const DialogPage = createRegistryComponentPage("dialog")
 const DividerPage = createRegistryComponentPage("divider")
+const FieldPage = createRegistryComponentPage("field")
 const FormPage = createRegistryComponentPage("form")
 const InputPage = createRegistryComponentPage("input")
 const InputPasswordPage = createRegistryComponentPage("input-password")
 const JsxJoinPage = createRegistryComponentPage("jsx-join")
-const LabelPage = createRegistryComponentPage("label")
 const LayoutPage = createRegistryComponentPage("layout")
 const PopoverPage = createRegistryComponentPage("popover")
 const ProgressPage = createRegistryComponentPage("progress")
@@ -69,11 +69,11 @@ export {
   CheckboxPage,
   DialogPage,
   DividerPage,
+  FieldPage,
   FormPage,
   InputPage,
   InputPasswordPage,
   JsxJoinPage,
-  LabelPage,
   LayoutPage,
   PopoverPage,
   ProgressPage,

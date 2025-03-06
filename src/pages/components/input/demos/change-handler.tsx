@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Input, Label, LabelDescription } from "sticker-ui"
+import { Field, Input } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
@@ -16,14 +16,12 @@ function Demo() {
 
   return (
     <div className="grid max-w-xl gap-3">
-      <Label htmlFor="input-change-handler">Controlled Title</Label>
-      <Input
-        id="input-change-handler"
-        onChange={setValue}
-        placeholder="Type A Title"
-        value={value}
-      />
-      <LabelDescription>Current value: {value || "Empty"}</LabelDescription>
+      <Field
+        description={`Current value: ${value || "Empty"}`}
+        label="Controlled Title"
+      >
+        <Input onChange={setValue} placeholder="Type A Title" value={value} />
+      </Field>
     </div>
   )
 }

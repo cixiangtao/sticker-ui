@@ -15,7 +15,6 @@ export {
 } from "./preview-demo-page"
 export { defineMeta, PreviewExample } from "./preview-example"
 export type { PreviewDemoMeta, PreviewDemoModule } from "./preview-example"
-export { Label, LabelDescription, LabelMarker } from "./preview-label"
 export { PreviewLayout } from "./preview-layout"
 export { SourceCodeBlock } from "./preview-source"
 export type { SourceCode } from "./preview-source"

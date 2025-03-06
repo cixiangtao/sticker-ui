@@ -4541,16 +4541,263 @@
       }
     ]
   },
-  "label": {
+  "field": {
     "components": [
       {
-        "name": "Label",
+        "name": "Field",
         "props": {
-          "descriptionKey": "api.label.components.Label.props.description",
-          "remarksKey": "api.label.components.Label.props.remarks",
+          "descriptionKey": "api.field.components.Field.props.description",
+          "remarksKey": "api.field.components.Field.props.remarks",
+          "inherits": ["Omit< React.ComponentProps<\"div\">, \"children\" | \"id\" >"],
+          "inheritedMembers": [
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-describedby.description",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-invalid.description",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"false\" | \"true\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-label.description",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-labelledby.description",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.autoFocus.description",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.className.description",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultChecked.description",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultValue.description",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onBlur.description",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onChange.description",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "React.ChangeEventHandler<HTMLDivElement, Element>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onClick.description",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onFocus.description",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyDown.description",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyUp.description",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseEnter.description",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseLeave.description",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.role.description",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.style.description",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.title.description",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "members": [
+            {
+              "descriptionKey": "api.field.components.Field.props.members.children.description",
+              "name": "children",
+              "optional": false,
+              "required": true,
+              "type": "React.ReactNode"
+            },
+            {
+              "descriptionKey": "api.field.components.Field.props.members.classNames.description",
+              "name": "classNames",
+              "optional": true,
+              "required": false,
+              "type": "FieldClassNames"
+            },
+            {
+              "defaultValue": "\"end\"",
+              "descriptionKey": "api.field.components.Field.props.members.controlPlacement.description",
+              "name": "controlPlacement",
+              "optional": true,
+              "required": false,
+              "type": "\"end\" | \"start\""
+            },
+            {
+              "descriptionKey": "api.field.components.Field.props.members.description.description",
+              "name": "description",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "descriptionKey": "api.field.components.Field.props.members.descriptionProps.description",
+              "name": "descriptionProps",
+              "optional": true,
+              "required": false,
+              "type": "Omit< React.ComponentProps<typeof FieldDescription>, \"children\" > & { [key: `data-${string}`]: string | undefined }"
+            },
+            {
+              "descriptionKey": "api.field.components.Field.props.members.id.description",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.field.components.Field.props.members.label.description",
+              "name": "label",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "descriptionKey": "api.field.components.Field.props.members.labelProps.description",
+              "name": "labelProps",
+              "optional": true,
+              "required": false,
+              "type": "Omit< FieldLabelProps, | \"children\" | \"htmlFor\" | \"optional\" | \"required\" | \"requiredMark\" | \"size\" | \"tone\" > & { [key: `data-${string}`]: string | undefined }"
+            },
+            {
+              "defaultValue": "false",
+              "descriptionKey": "api.field.components.Field.props.members.optional.description",
+              "name": "optional",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "defaultValue": "false",
+              "descriptionKey": "api.field.components.Field.props.members.required.description",
+              "name": "required",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "defaultValue": "\"badge\"",
+              "descriptionKey": "api.field.components.Field.props.members.requiredMark.description",
+              "name": "requiredMark",
+              "optional": true,
+              "required": false,
+              "type": "\"asterisk\" | \"badge\""
+            },
+            {
+              "defaultValue": "\"default\"",
+              "descriptionKey": "api.field.components.Field.props.members.size.description",
+              "name": "size",
+              "optional": true,
+              "required": false,
+              "type": "\"default\" | \"lg\" | \"sm\""
+            },
+            {
+              "defaultValue": "\"default\"",
+              "descriptionKey": "api.field.components.Field.props.members.tone.description",
+              "name": "tone",
+              "optional": true,
+              "required": false,
+              "type": "FieldTone"
+            }
+          ],
+          "type": "FieldProps"
+        }
+      },
+      {
+        "name": "FieldDescription",
+        "props": { "inherits": [], "members": [], "type": "React.ComponentProps<\"p\">" }
+      },
+      {
+        "name": "FieldLabel",
+        "props": {
+          "descriptionKey": "api.field.components.FieldLabel.props.description",
+          "remarksKey": "api.field.components.FieldLabel.props.remarks",
           "inherits": [
             "React.LabelHTMLAttributes<HTMLLabelElement>",
-            "VariantProps<typeof labelTones>"
+            "VariantProps<typeof fieldLabelVariants>"
           ],
           "inheritedMembers": [
             {
@@ -4565,7 +4812,7 @@
               "name": "aria-invalid",
               "optional": true,
               "required": false,
-              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
+              "type": "boolean | \"false\" | \"true\" | \"grammar\" | \"spelling\""
             },
             {
               "descriptionKey": "api.common.inheritedProps.aria-label.description",
@@ -4718,7 +4965,7 @@
           "members": [
             {
               "defaultValue": "false",
-              "descriptionKey": "api.label.components.Label.props.members.optional.description",
+              "descriptionKey": "api.field.components.FieldLabel.props.members.optional.description",
               "name": "optional",
               "optional": true,
               "required": false,
@@ -4726,7 +4973,7 @@
             },
             {
               "defaultValue": "false",
-              "descriptionKey": "api.label.components.Label.props.members.required.description",
+              "descriptionKey": "api.field.components.FieldLabel.props.members.required.description",
               "name": "required",
               "optional": true,
               "required": false,
@@ -4734,7 +4981,7 @@
             },
             {
               "defaultValue": "\"badge\"",
-              "descriptionKey": "api.label.components.Label.props.members.requiredMark.description",
+              "descriptionKey": "api.field.components.FieldLabel.props.members.requiredMark.description",
               "name": "requiredMark",
               "optional": true,
               "required": false,
@@ -4742,7 +4989,7 @@
             },
             {
               "defaultValue": "\"default\"",
-              "descriptionKey": "api.label.components.Label.props.members.size.description",
+              "descriptionKey": "api.field.components.FieldLabel.props.members.size.description",
               "name": "size",
               "optional": true,
               "required": false,
@@ -4750,25 +4997,21 @@
             },
             {
               "defaultValue": "\"default\"",
-              "descriptionKey": "api.label.components.Label.props.members.tone.description",
+              "descriptionKey": "api.field.components.FieldLabel.props.members.tone.description",
               "name": "tone",
               "optional": true,
               "required": false,
-              "type": "LabelTone"
+              "type": "FieldTone"
             }
           ],
-          "type": "LabelProps"
+          "type": "FieldLabelProps"
         }
       },
       {
-        "name": "LabelDescription",
-        "props": { "inherits": [], "members": [], "type": "React.ComponentProps<\"p\">" }
-      },
-      {
-        "name": "LabelMarker",
+        "name": "FieldMarker",
         "props": {
-          "descriptionKey": "api.label.components.LabelMarker.props.description",
-          "remarksKey": "api.label.components.LabelMarker.props.remarks",
+          "descriptionKey": "api.field.components.FieldMarker.props.description",
+          "remarksKey": "api.field.components.FieldMarker.props.remarks",
           "inherits": [
             "Omit< React.ComponentProps<typeof Tag>, \"as\" | \"color\" | \"dot\" | \"rounded\" | \"size\" | \"variant\" >"
           ],
@@ -4785,7 +5028,7 @@
               "name": "aria-invalid",
               "optional": true,
               "required": false,
-              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
+              "type": "boolean | \"false\" | \"true\" | \"grammar\" | \"spelling\""
             },
             {
               "descriptionKey": "api.common.inheritedProps.aria-label.description",
@@ -4924,63 +5167,101 @@
           "members": [
             {
               "defaultValue": "\"default\"",
-              "descriptionKey": "api.label.components.LabelMarker.props.members.tone.description",
+              "descriptionKey": "api.field.components.FieldMarker.props.members.tone.description",
               "name": "tone",
               "optional": true,
               "required": false,
-              "type": "LabelTone"
+              "type": "FieldTone"
             }
           ],
-          "type": "LabelMarkerProps"
+          "type": "FieldMarkerProps"
         }
       }
     ],
-    "descriptionKey": "api.label.description",
+    "descriptionKey": "api.field.description",
     "exports": [
-      { "kind": "component", "name": "Label" },
-      { "kind": "component", "name": "LabelDescription" },
-      { "kind": "component", "name": "LabelMarker" },
+      { "kind": "component", "name": "Field" },
+      { "kind": "type", "name": "FieldClassNames" },
+      { "kind": "component", "name": "FieldDescription" },
+      { "kind": "component", "name": "FieldLabel" },
       {
-        "descriptionKey": "api.label.exports.labelTones.description",
-        "kind": "value",
-        "name": "labelTones"
-      }
-    ],
-    "name": "label",
-    "sourcePath": "src/components/ui/label.tsx",
-    "title": "Sticker Label",
-    "types": [
-      {
-        "descriptionKey": "api.label.types.LabelMarkerProps.description",
-        "remarksKey": "api.label.types.LabelMarkerProps.remarks",
-        "inherits": [
-          "Omit< React.ComponentProps<typeof Tag>, \"as\" | \"color\" | \"dot\" | \"rounded\" | \"size\" | \"variant\" >"
-        ],
+        "descriptionKey": "api.field.exports.FieldLabelProps.description",
+        "remarksKey": "api.field.exports.FieldLabelProps.remarks",
         "kind": "interface",
-        "members": [
-          {
-            "defaultValue": "\"default\"",
-            "descriptionKey": "api.label.types.LabelMarkerProps.members.tone.description",
-            "name": "tone",
-            "optional": true,
-            "required": false,
-            "type": "LabelTone"
-          }
-        ],
-        "name": "LabelMarkerProps"
+        "name": "FieldLabelProps"
       },
       {
-        "descriptionKey": "api.label.types.LabelProps.description",
-        "remarksKey": "api.label.types.LabelProps.remarks",
+        "descriptionKey": "api.field.exports.fieldLabelVariants.description",
+        "kind": "variant",
+        "name": "fieldLabelVariants"
+      },
+      { "kind": "component", "name": "FieldMarker" },
+      {
+        "descriptionKey": "api.field.exports.FieldProps.description",
+        "remarksKey": "api.field.exports.FieldProps.remarks",
+        "kind": "interface",
+        "name": "FieldProps"
+      }
+    ],
+    "name": "field",
+    "sourcePath": "src/components/ui/field.tsx",
+    "title": "Sticker Field",
+    "types": [
+      {
+        "inherits": [],
+        "kind": "type",
+        "members": [
+          {
+            "descriptionKey": "api.field.types.FieldClassNames.members.body.description",
+            "name": "body",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "descriptionKey": "api.field.types.FieldClassNames.members.control.description",
+            "name": "control",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "descriptionKey": "api.field.types.FieldClassNames.members.description.description",
+            "name": "description",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "descriptionKey": "api.field.types.FieldClassNames.members.label.description",
+            "name": "label",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "descriptionKey": "api.field.types.FieldClassNames.members.root.description",
+            "name": "root",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "name": "FieldClassNames",
+        "type": "{ /** * Field body that groups the label and description when the control renders first. */ body?: string /** * Control wrapper. */ control?: string /** * Field description text. */ description?: string /** * Field label. */ label?: string /** * Field root. */ root?: string }"
+      },
+      {
+        "descriptionKey": "api.field.types.FieldLabelProps.description",
+        "remarksKey": "api.field.types.FieldLabelProps.remarks",
         "inherits": [
           "React.LabelHTMLAttributes<HTMLLabelElement>",
-          "VariantProps<typeof labelTones>"
+          "VariantProps<typeof fieldLabelVariants>"
         ],
         "kind": "interface",
         "members": [
           {
             "defaultValue": "false",
-            "descriptionKey": "api.label.types.LabelProps.members.optional.description",
+            "descriptionKey": "api.field.types.FieldLabelProps.members.optional.description",
             "name": "optional",
             "optional": true,
             "required": false,
@@ -4988,7 +5269,7 @@
           },
           {
             "defaultValue": "false",
-            "descriptionKey": "api.label.types.LabelProps.members.required.description",
+            "descriptionKey": "api.field.types.FieldLabelProps.members.required.description",
             "name": "required",
             "optional": true,
             "required": false,
@@ -4996,7 +5277,7 @@
           },
           {
             "defaultValue": "\"badge\"",
-            "descriptionKey": "api.label.types.LabelProps.members.requiredMark.description",
+            "descriptionKey": "api.field.types.FieldLabelProps.members.requiredMark.description",
             "name": "requiredMark",
             "optional": true,
             "required": false,
@@ -5004,7 +5285,7 @@
           },
           {
             "defaultValue": "\"default\"",
-            "descriptionKey": "api.label.types.LabelProps.members.size.description",
+            "descriptionKey": "api.field.types.FieldLabelProps.members.size.description",
             "name": "size",
             "optional": true,
             "required": false,
@@ -5012,19 +5293,144 @@
           },
           {
             "defaultValue": "\"default\"",
-            "descriptionKey": "api.label.types.LabelProps.members.tone.description",
+            "descriptionKey": "api.field.types.FieldLabelProps.members.tone.description",
             "name": "tone",
             "optional": true,
             "required": false,
-            "type": "LabelTone"
+            "type": "FieldTone"
           }
         ],
-        "name": "LabelProps"
+        "name": "FieldLabelProps"
+      },
+      {
+        "descriptionKey": "api.field.types.FieldMarkerProps.description",
+        "remarksKey": "api.field.types.FieldMarkerProps.remarks",
+        "inherits": [
+          "Omit< React.ComponentProps<typeof Tag>, \"as\" | \"color\" | \"dot\" | \"rounded\" | \"size\" | \"variant\" >"
+        ],
+        "kind": "interface",
+        "members": [
+          {
+            "defaultValue": "\"default\"",
+            "descriptionKey": "api.field.types.FieldMarkerProps.members.tone.description",
+            "name": "tone",
+            "optional": true,
+            "required": false,
+            "type": "FieldTone"
+          }
+        ],
+        "name": "FieldMarkerProps"
+      },
+      {
+        "descriptionKey": "api.field.types.FieldProps.description",
+        "remarksKey": "api.field.types.FieldProps.remarks",
+        "inherits": ["Omit< React.ComponentProps<\"div\">, \"children\" | \"id\" >"],
+        "kind": "interface",
+        "members": [
+          {
+            "descriptionKey": "api.field.types.FieldProps.members.children.description",
+            "name": "children",
+            "optional": false,
+            "required": true,
+            "type": "React.ReactNode"
+          },
+          {
+            "descriptionKey": "api.field.types.FieldProps.members.classNames.description",
+            "name": "classNames",
+            "optional": true,
+            "required": false,
+            "type": "FieldClassNames"
+          },
+          {
+            "defaultValue": "\"end\"",
+            "descriptionKey": "api.field.types.FieldProps.members.controlPlacement.description",
+            "name": "controlPlacement",
+            "optional": true,
+            "required": false,
+            "type": "\"end\" | \"start\""
+          },
+          {
+            "descriptionKey": "api.field.types.FieldProps.members.description.description",
+            "name": "description",
+            "optional": true,
+            "required": false,
+            "type": "React.ReactNode"
+          },
+          {
+            "descriptionKey": "api.field.types.FieldProps.members.descriptionProps.description",
+            "name": "descriptionProps",
+            "optional": true,
+            "required": false,
+            "type": "Omit< React.ComponentProps<typeof FieldDescription>, \"children\" > & { [key: `data-${string}`]: string | undefined }"
+          },
+          {
+            "descriptionKey": "api.field.types.FieldProps.members.id.description",
+            "name": "id",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "descriptionKey": "api.field.types.FieldProps.members.label.description",
+            "name": "label",
+            "optional": true,
+            "required": false,
+            "type": "React.ReactNode"
+          },
+          {
+            "descriptionKey": "api.field.types.FieldProps.members.labelProps.description",
+            "name": "labelProps",
+            "optional": true,
+            "required": false,
+            "type": "Omit< FieldLabelProps, | \"children\" | \"htmlFor\" | \"optional\" | \"required\" | \"requiredMark\" | \"size\" | \"tone\" > & { [key: `data-${string}`]: string | undefined }"
+          },
+          {
+            "defaultValue": "false",
+            "descriptionKey": "api.field.types.FieldProps.members.optional.description",
+            "name": "optional",
+            "optional": true,
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "defaultValue": "false",
+            "descriptionKey": "api.field.types.FieldProps.members.required.description",
+            "name": "required",
+            "optional": true,
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "defaultValue": "\"badge\"",
+            "descriptionKey": "api.field.types.FieldProps.members.requiredMark.description",
+            "name": "requiredMark",
+            "optional": true,
+            "required": false,
+            "type": "\"asterisk\" | \"badge\""
+          },
+          {
+            "defaultValue": "\"default\"",
+            "descriptionKey": "api.field.types.FieldProps.members.size.description",
+            "name": "size",
+            "optional": true,
+            "required": false,
+            "type": "\"default\" | \"lg\" | \"sm\""
+          },
+          {
+            "defaultValue": "\"default\"",
+            "descriptionKey": "api.field.types.FieldProps.members.tone.description",
+            "name": "tone",
+            "optional": true,
+            "required": false,
+            "type": "FieldTone"
+          }
+        ],
+        "name": "FieldProps"
       }
     ],
     "variants": [
       {
-        "descriptionKey": "api.label.variants.labelTones.description",
+        "descriptionKey": "api.field.variants.fieldLabelVariants.description",
         "groups": [
           { "defaultValue": "default", "name": "size", "values": ["default", "lg", "sm"] },
           {
@@ -5033,7 +5439,7 @@
             "values": ["danger", "default", "muted", "success", "warning"]
           }
         ],
-        "name": "labelTones"
+        "name": "fieldLabelVariants"
       }
     ]
   },

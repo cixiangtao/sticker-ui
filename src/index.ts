@@ -71,11 +71,17 @@ export type {
 export { Flex, Grid, flexVariants, gridVariants } from "./components/ui/layout"
 export type { FlexProps, GridProps } from "./components/ui/layout"
 export {
-  Label,
-  LabelDescription,
-  LabelMarker,
-  labelTones,
-} from "./components/ui/label"
+  Field,
+  FieldDescription,
+  FieldLabel,
+  FieldMarker,
+  fieldLabelVariants,
+} from "./components/ui/field"
+export type {
+  FieldClassNames,
+  FieldLabelProps,
+  FieldProps,
+} from "./components/ui/field"
 export {
   Popover,
   PopoverAnchor,

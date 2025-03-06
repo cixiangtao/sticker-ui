@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Button, InputPassword, Label, LabelDescription } from "sticker-ui"
+import { Button, Field, InputPassword } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
@@ -23,19 +23,24 @@ function Demo() {
 
   return (
     <div className="grid max-w-xl gap-4">
-      <div className="grid gap-3">
-        <div className="flex items-end justify-between gap-3">
-          <Label htmlFor="input-password-controlled-max-length">
-            Invite Secret
-          </Label>
-          <span className="rounded-sticker-sm border border-ink bg-surface px-2 py-1 text-xs font-extrabold text-text-muted">
-            {value.length}/{MAX_PASSWORD_LENGTH}
+      <Field
+        description={
+          remaining === 0
+            ? "The controlled value is capped at 8 characters."
+            : "Typing and paste stay inside the same 8 character limit."
+        }
+        label={
+          <span className="flex w-full items-end justify-between gap-3">
+            <span>Invite Secret</span>
+            <span className="rounded-sticker-sm border border-ink bg-surface px-2 py-1 text-xs font-extrabold text-text-muted">
+              {value.length}/{MAX_PASSWORD_LENGTH}
+            </span>
           </span>
-        </div>
+        }
+      >
         <InputPassword
           autoComplete="new-password"
           hideLabel="Hide"
-          id="input-password-controlled-max-length"
           maxLength={MAX_PASSWORD_LENGTH}
           onChange={(nextValue) => {
             setValue(clampPassword(nextValue))
@@ -44,7 +49,7 @@ function Demo() {
           showLabel="Show"
           value={value}
         />
-      </div>
+      </Field>
       <div className="flex flex-wrap gap-2">
         <Button
           onClick={() => {
@@ -65,11 +70,6 @@ function Demo() {
           Clear
         </Button>
       </div>
-      <LabelDescription>
-        {remaining === 0
-          ? "The controlled value is capped at 8 characters."
-          : "Typing and paste stay inside the same 8 character limit."}
-      </LabelDescription>
     </div>
   )
 }

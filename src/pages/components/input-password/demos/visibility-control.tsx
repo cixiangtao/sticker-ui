@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Button, InputPassword, Label, LabelDescription } from "sticker-ui"
+import { Button, Field, InputPassword, FieldDescription } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
@@ -17,28 +17,22 @@ function Demo() {
 
   return (
     <div className="grid max-w-xl gap-4">
-      <div className="grid gap-3">
-        <Label htmlFor="input-password-default-visible">Default Visible</Label>
+      <Field label="Default Visible">
         <InputPassword
           defaultValue="Sticker Secret"
           defaultVisible={true}
-          id="input-password-default-visible"
           onVisibleChange={(nextVisible) => {
             setLastState(nextVisible ? "Shown" : "Hidden")
           }}
         />
-      </div>
-      <div className="grid gap-3">
-        <Label htmlFor="input-password-controlled-visible">
-          Controlled Visible
-        </Label>
+      </Field>
+      <Field label="Controlled Visible">
         <InputPassword
-          id="input-password-controlled-visible"
           onVisibleChange={setVisible}
           placeholder="Controlled Visibility"
           visible={visible}
         />
-      </div>
+      </Field>
       <div className="flex flex-wrap items-center gap-3">
         <Button
           onClick={() => {
@@ -49,7 +43,7 @@ function Demo() {
         >
           Toggle Controlled Field
         </Button>
-        <LabelDescription>Last visibility event: {lastState}</LabelDescription>
+        <FieldDescription>Last visibility event: {lastState}</FieldDescription>
       </div>
     </div>
   )

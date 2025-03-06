@@ -1,4 +1,4 @@
-import { Label } from "sticker-ui"
+import { FieldLabel } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
@@ -14,27 +14,27 @@ function Demo() {
   return (
     <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-5">
       <div className="rounded-sticker-lg border border-ink bg-white p-4">
-        <Label>Default Label</Label>
+        <FieldLabel>Default Caption</FieldLabel>
       </div>
       <div className="rounded-sticker-lg border border-ink bg-white p-4">
-        <Label required tone="success">
-          Success Label
-        </Label>
+        <FieldLabel required tone="success">
+          Success Caption
+        </FieldLabel>
       </div>
       <div className="rounded-sticker-lg border border-ink bg-white p-4">
-        <Label required tone="warning">
-          Warning Label
-        </Label>
+        <FieldLabel required tone="warning">
+          Warning Caption
+        </FieldLabel>
       </div>
       <div className="rounded-sticker-lg border border-ink bg-white p-4">
-        <Label required tone="danger">
-          Danger Label
-        </Label>
+        <FieldLabel required tone="danger">
+          Danger Caption
+        </FieldLabel>
       </div>
       <div className="rounded-sticker-lg border border-ink bg-white p-4">
-        <Label optional tone="muted">
-          Muted Label
-        </Label>
+        <FieldLabel optional tone="muted">
+          Muted Caption
+        </FieldLabel>
       </div>
     </div>
   )

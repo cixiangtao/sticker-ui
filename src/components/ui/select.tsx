@@ -117,7 +117,7 @@ interface SelectProps extends Omit<
    */
   "aria-invalid"?: React.AriaAttributes["aria-invalid"]
   /**
-   * Gives the trigger a stable id when used with Label.
+   * Gives the trigger a stable id when used with Field.
    */
   id?: string
   /**

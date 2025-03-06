@@ -364,74 +364,191 @@ const ZH_PREVIEW_API_DOC_MESSAGES = defineMessages({
   "api.checkbox.types.CheckboxProps.remarks": {
     zh: "包裹 Radix Checkbox.Root，并加入贴纸尺寸、色调和变体 props。",
   },
-  "api.label.description": {
-    zh: "带可选贴纸标记的可访问表单标题。",
+  "api.field.description": {
+    zh: "可自动绑定控件的贴纸字段外壳，以及低层 FieldLabel 标题组件。",
   },
-  "api.label.components.Label.props.description": {
-    zh: "贴纸标签根元素的 props。",
+  "api.field.components.Field.props.description": {
+    zh: "贴纸字段外壳的 props。",
   },
-  "api.label.components.Label.props.members.optional.description": {
-    zh: "在标签内容后显示可选标记。",
+  "api.field.components.Field.props.members.children.description": {
+    zh: "接收生成 id 和描述关联的单个控件。",
   },
-  "api.label.components.Label.props.members.required.description": {
-    zh: "在标签内容后显示必填标记。",
+  "api.field.components.Field.props.members.classNames.description": {
+    zh: "字段内部插槽的 className。",
   },
-  "api.label.components.Label.props.members.requiredMark.description": {
+  "api.field.components.Field.props.members.controlPlacement.description": {
+    zh: "将控件放在标签前方，用于 checkbox 和 switch 风格字段。",
+  },
+  "api.field.components.Field.props.members.description.description": {
+    zh: "通过 aria-describedby 关联到控件的辅助说明。",
+  },
+  "api.field.components.Field.props.members.descriptionProps.description": {
+    zh: "传给描述元素的 props。",
+  },
+  "api.field.components.Field.props.members.id.description": {
+    zh: "绑定控件的 id；未提供时会复用子控件 id 或自动生成。",
+  },
+  "api.field.components.Field.props.members.label.description": {
+    zh: "字段标题内容。",
+  },
+  "api.field.components.Field.props.members.labelProps.description": {
+    zh: "传给 FieldLabel 元素的 props。",
+  },
+  "api.field.components.Field.props.members.optional.description": {
+    zh: "在标题内容后显示可选标记。",
+  },
+  "api.field.components.Field.props.members.required.description": {
+    zh: "在标题内容后显示必填标记。",
+  },
+  "api.field.components.Field.props.members.requiredMark.description": {
     zh: "控制必填标记的渲染样式。",
   },
-  "api.label.components.Label.props.members.size.description": {
-    zh: "控制标签文字尺寸。",
+  "api.field.components.Field.props.members.size.description": {
+    zh: "控制标题文字尺寸。",
   },
-  "api.label.components.Label.props.members.tone.description": {
-    zh: "控制标签文字色调和必填标记颜色。",
+  "api.field.components.Field.props.members.tone.description": {
+    zh: "控制标题文字色调和必填标记颜色。",
   },
-  "api.label.components.Label.props.remarks": {
-    zh: "继承原生 label 属性，并加入贴纸变体。",
+  "api.field.components.Field.props.remarks": {
+    zh: "把一个字段控件连接到带样式的 FieldLabel 和可选描述，并生成相关 id。",
   },
-  "api.label.components.LabelMarker.props.description": {
-    zh: "内联标签标记的 props。",
+  "api.field.components.FieldLabel.props.description": {
+    zh: "贴纸 FieldLabel 元素的 props。",
   },
-  "api.label.components.LabelMarker.props.members.tone.description": {
-    zh: "控制标记纸张颜色。",
+  "api.field.components.FieldLabel.props.members.optional.description": {
+    zh: "在标题内容后显示可选标记。",
   },
-  "api.label.components.LabelMarker.props.remarks": {
-    zh: "继承原生 span 属性，并加入贴纸色调变体。",
+  "api.field.components.FieldLabel.props.members.required.description": {
+    zh: "在标题内容后显示必填标记。",
   },
-  "api.label.exports.labelTones.description": {
-    zh: "根据尺寸和色调变体生成贴纸标签的 className。",
-  },
-  "api.label.types.LabelMarkerProps.description": {
-    zh: "内联标签标记的 props。",
-  },
-  "api.label.types.LabelMarkerProps.members.tone.description": {
-    zh: "控制标记纸张颜色。",
-  },
-  "api.label.types.LabelMarkerProps.remarks": {
-    zh: "继承原生 span 属性，并加入贴纸色调变体。",
-  },
-  "api.label.types.LabelProps.description": {
-    zh: "贴纸标签根元素的 props。",
-  },
-  "api.label.types.LabelProps.members.optional.description": {
-    zh: "在标签内容后显示可选标记。",
-  },
-  "api.label.types.LabelProps.members.required.description": {
-    zh: "在标签内容后显示必填标记。",
-  },
-  "api.label.types.LabelProps.members.requiredMark.description": {
+  "api.field.components.FieldLabel.props.members.requiredMark.description": {
     zh: "控制必填标记的渲染样式。",
   },
-  "api.label.types.LabelProps.members.size.description": {
-    zh: "控制标签文字尺寸。",
+  "api.field.components.FieldLabel.props.members.size.description": {
+    zh: "控制标题文字尺寸。",
   },
-  "api.label.types.LabelProps.members.tone.description": {
-    zh: "控制标签文字色调和必填标记颜色。",
+  "api.field.components.FieldLabel.props.members.tone.description": {
+    zh: "控制标题文字色调和必填标记颜色。",
   },
-  "api.label.types.LabelProps.remarks": {
+  "api.field.components.FieldLabel.props.remarks": {
     zh: "继承原生 label 属性，并加入贴纸变体。",
   },
-  "api.label.variants.labelTones.description": {
-    zh: "根据尺寸和色调变体生成贴纸标签的 className。",
+  "api.field.components.FieldMarker.props.description": {
+    zh: "内联字段标记的 props。",
+  },
+  "api.field.components.FieldMarker.props.members.tone.description": {
+    zh: "控制标记纸张颜色。",
+  },
+  "api.field.components.FieldMarker.props.remarks": {
+    zh: "继承原生 span 属性，并加入贴纸色调变体。",
+  },
+  "api.field.exports.FieldProps.description": {
+    zh: "贴纸字段外壳的 props。",
+  },
+  "api.field.exports.FieldProps.remarks": {
+    zh: "把一个字段控件连接到带样式的 FieldLabel 和可选描述，并生成相关 id。",
+  },
+  "api.field.exports.FieldLabelProps.description": {
+    zh: "贴纸 FieldLabel 元素的 props。",
+  },
+  "api.field.exports.FieldLabelProps.remarks": {
+    zh: "继承原生 label 属性，并加入贴纸变体。",
+  },
+  "api.field.exports.fieldLabelVariants.description": {
+    zh: "根据尺寸和色调变体生成贴纸 FieldLabel 的 className。",
+  },
+  "api.field.types.FieldClassNames.members.body.description": {
+    zh: "当控件先渲染时，用来组合标签和描述的字段主体。",
+  },
+  "api.field.types.FieldClassNames.members.control.description": {
+    zh: "控件包裹层。",
+  },
+  "api.field.types.FieldClassNames.members.description.description": {
+    zh: "字段描述文本。",
+  },
+  "api.field.types.FieldClassNames.members.label.description": {
+    zh: "字段标题。",
+  },
+  "api.field.types.FieldClassNames.members.root.description": {
+    zh: "字段根元素。",
+  },
+  "api.field.types.FieldProps.description": {
+    zh: "贴纸字段外壳的 props。",
+  },
+  "api.field.types.FieldProps.members.children.description": {
+    zh: "接收生成 id 和描述关联的单个控件。",
+  },
+  "api.field.types.FieldProps.members.classNames.description": {
+    zh: "字段内部插槽的 className。",
+  },
+  "api.field.types.FieldProps.members.controlPlacement.description": {
+    zh: "将控件放在标签前方，用于 checkbox 和 switch 风格字段。",
+  },
+  "api.field.types.FieldProps.members.description.description": {
+    zh: "通过 aria-describedby 关联到控件的辅助说明。",
+  },
+  "api.field.types.FieldProps.members.descriptionProps.description": {
+    zh: "传给描述元素的 props。",
+  },
+  "api.field.types.FieldProps.members.id.description": {
+    zh: "绑定控件的 id；未提供时会复用子控件 id 或自动生成。",
+  },
+  "api.field.types.FieldProps.members.label.description": {
+    zh: "字段标题内容。",
+  },
+  "api.field.types.FieldProps.members.labelProps.description": {
+    zh: "传给 FieldLabel 元素的 props。",
+  },
+  "api.field.types.FieldProps.members.optional.description": {
+    zh: "在标题内容后显示可选标记。",
+  },
+  "api.field.types.FieldProps.members.required.description": {
+    zh: "在标题内容后显示必填标记。",
+  },
+  "api.field.types.FieldProps.members.requiredMark.description": {
+    zh: "控制必填标记的渲染样式。",
+  },
+  "api.field.types.FieldProps.members.size.description": {
+    zh: "控制标题文字尺寸。",
+  },
+  "api.field.types.FieldProps.members.tone.description": {
+    zh: "控制标题文字色调和必填标记颜色。",
+  },
+  "api.field.types.FieldProps.remarks": {
+    zh: "把一个字段控件连接到带样式的 FieldLabel 和可选描述，并生成相关 id。",
+  },
+  "api.field.types.FieldMarkerProps.description": {
+    zh: "内联字段标记的 props。",
+  },
+  "api.field.types.FieldMarkerProps.members.tone.description": {
+    zh: "控制标记纸张颜色。",
+  },
+  "api.field.types.FieldMarkerProps.remarks": {
+    zh: "继承原生 span 属性，并加入贴纸色调变体。",
+  },
+  "api.field.types.FieldLabelProps.description": {
+    zh: "贴纸 FieldLabel 元素的 props。",
+  },
+  "api.field.types.FieldLabelProps.members.optional.description": {
+    zh: "在标题内容后显示可选标记。",
+  },
+  "api.field.types.FieldLabelProps.members.required.description": {
+    zh: "在标题内容后显示必填标记。",
+  },
+  "api.field.types.FieldLabelProps.members.requiredMark.description": {
+    zh: "控制必填标记的渲染样式。",
+  },
+  "api.field.types.FieldLabelProps.members.size.description": {
+    zh: "控制标题文字尺寸。",
+  },
+  "api.field.types.FieldLabelProps.members.tone.description": {
+    zh: "控制标题文字色调和必填标记颜色。",
+  },
+  "api.field.types.FieldLabelProps.remarks": {
+    zh: "继承原生 label 属性，并加入贴纸变体。",
+  },
+  "api.field.variants.fieldLabelVariants.description": {
+    zh: "根据尺寸和色调变体生成贴纸 FieldLabel 的 className。",
   },
   "api.input.description": {
     zh: "带有厚实贴纸边框和语义字段状态的原生表单输入框。",
@@ -627,7 +744,7 @@ const ZH_PREVIEW_API_DOC_MESSAGES = defineMessages({
     zh: "在 Form.Item 中使用时标记触发器为无效状态。",
   },
   "api.select.components.Select.props.members.id.description": {
-    zh: "与 Label 搭配使用时，为触发器提供稳定 id。",
+    zh: "与 Field 搭配使用时，为触发器提供稳定 id。",
   },
   "api.select.components.Select.props.members.onChange.description": {
     zh: "选择值变化时调用。",
@@ -720,7 +837,7 @@ const ZH_PREVIEW_API_DOC_MESSAGES = defineMessages({
     zh: "在 Form.Item 中使用时标记触发器为无效状态。",
   },
   "api.select.types.SelectProps.members.id.description": {
-    zh: "与 Label 搭配使用时，为触发器提供稳定 id。",
+    zh: "与 Field 搭配使用时，为触发器提供稳定 id。",
   },
   "api.select.types.SelectProps.members.onChange.description": {
     zh: "选择值变化时调用。",
@@ -1032,7 +1149,7 @@ const ZH_PREVIEW_API_DOC_MESSAGES = defineMessages({
     zh: "自定义帮助内容。省略时显示校验错误。",
   },
   "api.form.types.FormItemProps.members.label.description": {
-    zh: "字段标签。",
+    zh: "字段标题。",
   },
   "api.form.types.FormItemProps.members.name.description": {
     zh: "字段名称路径。",

@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import { Label } from "@/components/ui/label"
+import { Field } from "@/components/ui/field"
 import { cn } from "@/lib/utils"
 
 type NamePathPart = number | string
@@ -658,12 +658,9 @@ function FormItem({
         ? "error"
         : undefined)
   const helpNode = help ?? meta.errors[0]
-  const describedBy = [
-    helpNode && fieldId ? `${fieldId}-help` : undefined,
-    extra && fieldId ? `${fieldId}-extra` : undefined,
-  ]
-    .filter(Boolean)
-    .join(" ")
+  const descriptionId =
+    (helpNode || extra) && fieldId ? `${fieldId}-description` : undefined
+  const describedBy = descriptionId ?? ""
   const isRequired = required || rules.some((rule) => Boolean(rule.required))
   const control = getControlledChild({
     child: children,
@@ -680,66 +677,65 @@ function FormItem({
   })
 
   return (
-    <div
+    <Field
       className={cn(
         "group/form-item grid min-w-0 gap-2",
         layout === "horizontal" && "md:flex md:items-start md:gap-4",
         layout === "inline" && "min-w-52 flex-1",
         className,
       )}
+      classNames={{
+        body: cn(
+          "grid max-w-full min-w-0 gap-1.5 *:max-w-full *:min-w-0",
+          layout === "horizontal" && "md:flex-1",
+        ),
+        description: "grid min-w-0 gap-1",
+        label: cn(
+          "max-w-full flex-wrap pt-1 leading-5 wrap-break-word",
+          layout === "horizontal" && "md:w-32 md:shrink-0",
+        ),
+      }}
       data-has-error={status === "error"}
       data-name={nameKey}
       data-slot="form-item"
       data-status={status}
+      description={
+        helpNode || extra ? (
+          <>
+            {helpNode ? (
+              <span
+                className={cn(
+                  "m-0 min-w-0 text-xs leading-5 font-bold wrap-break-word",
+                  status === "error" ? "text-text-danger" : "text-text-muted",
+                )}
+                data-slot="form-item-help"
+                role={status === "error" ? "alert" : undefined}
+              >
+                {helpNode}
+              </span>
+            ) : null}
+            {extra ? (
+              <span
+                className="m-0 min-w-0 text-xs leading-5 font-medium wrap-break-word text-text-subtle"
+                data-slot="form-item-extra"
+              >
+                {extra}
+              </span>
+            ) : null}
+          </>
+        ) : undefined
+      }
+      descriptionProps={{ id: descriptionId }}
+      id={fieldId}
+      label={label}
+      labelProps={{ "data-slot": "form-item-label" }}
+      required={isRequired}
+      requiredMark={layout === "horizontal" ? "asterisk" : "badge"}
+      tone={status === "error" ? "danger" : "default"}
       {...props}
     >
-      {label ? (
-        <Label
-          className={cn(
-            "max-w-full flex-wrap pt-1 leading-5 wrap-break-word",
-            layout === "horizontal" && "md:w-32 md:shrink-0",
-          )}
-          data-slot="form-item-label"
-          htmlFor={fieldId}
-          required={isRequired}
-          requiredMark={layout === "horizontal" ? "asterisk" : "badge"}
-          tone={status === "error" ? "danger" : "default"}
-        >
-          {label}
-        </Label>
-      ) : null}
-      <div
-        className={cn(
-          "grid max-w-full min-w-0 gap-1.5 *:max-w-full *:min-w-0",
-          layout === "horizontal" && "md:flex-1",
-        )}
-        data-slot="form-item-control"
-      >
-        {control}
-        {helpNode ? (
-          <div
-            className={cn(
-              "m-0 min-w-0 text-xs leading-5 font-bold wrap-break-word",
-              status === "error" ? "text-text-danger" : "text-text-muted",
-            )}
-            data-slot="form-item-help"
-            id={fieldId ? `${fieldId}-help` : undefined}
-            role={status === "error" ? "alert" : undefined}
-          >
-            {helpNode}
-          </div>
-        ) : null}
-        {extra ? (
-          <div
-            className="m-0 min-w-0 text-xs leading-5 font-medium wrap-break-word text-text-subtle"
-            data-slot="form-item-extra"
-            id={fieldId ? `${fieldId}-extra` : undefined}
-          >
-            {extra}
-          </div>
-        ) : null}
-      </div>
-    </div>
+      {control}
+    </Field>
   )
 }
 

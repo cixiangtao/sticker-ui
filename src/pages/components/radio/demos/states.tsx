@@ -1,4 +1,4 @@
-import { Button, Form, Label, RadioGroup, RadioGroupItem } from "sticker-ui"
+import { Button, Field, Form, RadioGroup, RadioGroupItem } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
@@ -32,12 +32,8 @@ function Demo() {
           ]}
         >
           <RadioGroup>
-            <RadioOption id="radio-state-docs" label="Docs Page" value="docs" />
-            <RadioOption
-              id="radio-state-registry"
-              label="Registry Card"
-              value="registry"
-            />
+            <RadioOption label="Docs Page" value="docs" />
+            <RadioOption label="Registry Card" value="registry" />
           </RadioGroup>
         </Form.Item>
         <Form.Item
@@ -45,12 +41,8 @@ function Demo() {
           label="Locked"
         >
           <RadioGroup defaultValue="managed" disabled>
-            <RadioOption
-              id="radio-state-managed"
-              label="Managed"
-              value="managed"
-            />
-            <RadioOption id="radio-state-open" label="Open" value="open" />
+            <RadioOption label="Managed" value="managed" />
+            <RadioOption label="Open" value="open" />
           </RadioGroup>
         </Form.Item>
         <Form.Item
@@ -59,12 +51,8 @@ function Demo() {
           name="confidence"
         >
           <RadioGroup tone="success" variant="filled">
-            <RadioOption id="radio-state-ready" label="Ready" value="ready" />
-            <RadioOption
-              id="radio-state-review"
-              label="Review"
-              value="review"
-            />
+            <RadioOption label="Ready" value="ready" />
+            <RadioOption label="Review" value="review" />
           </RadioGroup>
         </Form.Item>
         <Form.Item
@@ -72,16 +60,8 @@ function Demo() {
           label="View"
         >
           <RadioGroup defaultValue="compact" tone="secondary" variant="quiet">
-            <RadioOption
-              id="radio-state-compact"
-              label="Compact Cards"
-              value="compact"
-            />
-            <RadioOption
-              id="radio-state-roomy"
-              label="Roomy Panels"
-              value="roomy"
-            />
+            <RadioOption label="Compact Cards" value="compact" />
+            <RadioOption label="Roomy Panels" value="roomy" />
           </RadioGroup>
         </Form.Item>
       </div>
@@ -92,20 +72,15 @@ function Demo() {
   )
 }
 
-function RadioOption({
-  id,
-  label,
-  value,
-}: {
-  id: string
-  label: string
-  value: string
-}) {
+function RadioOption({ label, value }: { label: string; value: string }) {
   return (
-    <div className="flex items-center gap-3 rounded-sticker-lg border border-ink bg-white/80 px-3 py-2">
-      <RadioGroupItem id={id} value={value} />
-      <Label htmlFor={id}>{label}</Label>
-    </div>
+    <Field
+      className="items-center rounded-sticker-lg border border-ink bg-white/80 px-3 py-2"
+      controlPlacement="start"
+      label={label}
+    >
+      <RadioGroupItem value={value} />
+    </Field>
   )
 }
 

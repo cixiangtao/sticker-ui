@@ -336,16 +336,16 @@ const routes = defineRoutes([
   },
   {
     component: () =>
-      import("@/pages/components").then((module) => module.LabelPage),
+      import("@/pages/components").then((module) => module.FieldPage),
     meta: {
-      emoji: "L",
+      emoji: "F",
       navSection: "form-controls",
       order: 100,
-      title: "Label",
+      title: "Field",
       descriptionKey:
-        "preview.components.accessibleFormCaptionsWithSmallStickerMarkers",
+        "preview.components.autoBoundFieldCaptionsWithSmallStickerMarkers",
     },
-    path: "/components/label",
+    path: "/components/field",
   },
   {
     component: () =>
