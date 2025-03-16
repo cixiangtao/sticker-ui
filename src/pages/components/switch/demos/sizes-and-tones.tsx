@@ -16,8 +16,8 @@ function Demo() {
       <Field
         className="rounded-sticker-xl border border-ink bg-white/80 p-4"
         classNames={{ body: "order-1 flex-1", control: "order-2" }}
-        controlPlacement="start"
         label="Small Toggle"
+        layout="inline"
         size="sm"
       >
         <Switch defaultChecked size="sm" />
@@ -25,16 +25,16 @@ function Demo() {
       <Field
         className="rounded-sticker-xl border border-ink bg-white/80 p-4"
         classNames={{ body: "order-1 flex-1", control: "order-2" }}
-        controlPlacement="start"
         label="Standard Sync"
+        layout="inline"
       >
         <Switch defaultChecked tone="secondary" variant="filled" />
       </Field>
       <Field
         className="rounded-sticker-xl border border-ink bg-white/80 p-4"
         classNames={{ body: "order-1 flex-1", control: "order-2" }}
-        controlPlacement="start"
         label="Roomy Alerts"
+        layout="inline"
         size="lg"
       >
         <Switch defaultChecked size="lg" tone="success" variant="filled" />

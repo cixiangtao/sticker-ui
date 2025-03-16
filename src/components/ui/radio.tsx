@@ -39,16 +39,22 @@ const radioSizeClassNames = {
   lg: {
     indicator: "size-3.5",
     item: "size-7",
+    label: "text-base",
   },
   md: {
     indicator: "size-2.5",
     item: "size-6",
+    label: "text-sm",
   },
   sm: {
     indicator: "size-2",
     item: "size-5",
+    label: "text-xs",
   },
-} satisfies Record<RadioSize, { indicator: string; item: string }>
+} satisfies Record<
+  RadioSize,
+  { indicator: string; item: string; label: string }
+>
 
 const radioToneClassNames = {
   danger: {
@@ -107,7 +113,7 @@ const radioVariants = ({
   variant = "outlined",
 }: RadioVariantOptions = {}) =>
   cn(
-    "peer inline-flex shrink-0 cursor-pointer items-center justify-center rounded-full border-2 border-ink bg-surface text-ink shadow-sticker-sm transition-shadow duration-150 outline-none focus-visible:shadow-sticker-md focus-visible:ring-[2px] focus-visible:ring-ring/65 aria-invalid:border-text-danger aria-invalid:bg-fill-danger-soft data-[state=checked]:shadow-sticker-md",
+    "peer relative inline-flex shrink-0 cursor-pointer items-center justify-center rounded-full border-2 border-ink bg-surface text-ink shadow-sticker-sm transition-shadow duration-150 outline-none focus-visible:shadow-sticker-md focus-visible:ring-[2px] focus-visible:ring-ring/65 aria-invalid:border-text-danger aria-invalid:bg-fill-danger-soft data-[state=checked]:shadow-sticker-md",
     disabled && "cursor-not-allowed opacity-55",
     radioSizeClassNames[size].item,
     radioToneClassNames[tone].checked,
@@ -203,12 +209,16 @@ function RadioGroup({
  */
 interface RadioGroupItemProps extends Omit<
   React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Item>,
-  "className"
+  "children" | "className"
 > {
   /**
    * Custom className for the radio item root.
    */
   className?: string
+  /**
+   * Clickable option label rendered next to the radio item.
+   */
+  label?: React.ReactNode
   /**
    * Controls the radio item and dot size.
    */
@@ -229,12 +239,14 @@ interface RadioGroupItemProps extends Omit<
 const RadioGroupItem = React.forwardRef<
   React.ElementRef<typeof RadioGroupPrimitive.Item>,
   RadioGroupItemProps
->(({ className, disabled, size, tone, variant, ...props }, ref) => {
+>(({ className, disabled, id, label, size, tone, variant, ...props }, ref) => {
   const context = React.useContext(RadioContext)
   const resolvedSize = size ?? context.size
   const resolvedDisabled = Boolean(context.disabled || disabled)
-
-  return (
+  const generatedId = React.useId()
+  const hasLabel = label !== undefined && label !== null && label !== false
+  const controlId = id ?? (hasLabel ? generatedId : undefined)
+  const control = (
     <RadioGroupPrimitive.Item
       className={cn(
         radioVariants({
@@ -247,11 +259,12 @@ const RadioGroupItem = React.forwardRef<
       )}
       data-slot="radio-group-item"
       disabled={resolvedDisabled}
+      id={controlId}
       ref={ref}
       {...props}
     >
       <RadioGroupPrimitive.Indicator
-        className="flex items-center justify-center"
+        className="pointer-events-none absolute inset-0 flex items-center justify-center"
         data-slot="radio-group-indicator"
       >
         <span
@@ -263,6 +276,33 @@ const RadioGroupItem = React.forwardRef<
         />
       </RadioGroupPrimitive.Indicator>
     </RadioGroupPrimitive.Item>
+  )
+
+  if (!hasLabel) {
+    return control
+  }
+
+  return (
+    <label
+      className={cn(
+        "inline-flex min-w-0 cursor-pointer items-center gap-3 text-ink select-none",
+        resolvedDisabled && "cursor-not-allowed",
+      )}
+      data-slot="radio-group-label"
+      htmlFor={controlId}
+    >
+      {control}
+      <span
+        className={cn(
+          "min-w-0 leading-none font-black",
+          radioSizeClassNames[resolvedSize].label,
+          resolvedDisabled && "opacity-55",
+        )}
+        data-slot="radio-group-label-text"
+      >
+        {label}
+      </span>
+    </label>
   )
 })
 RadioGroupItem.displayName = RadioGroupPrimitive.Item.displayName

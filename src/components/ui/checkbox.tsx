@@ -25,17 +25,20 @@ interface CheckboxVariantOptions {
 const checkboxSizeClassNames = {
   lg: {
     icon: "size-4",
+    label: "text-base",
     root: "size-7 rounded-md",
   },
   md: {
     icon: "size-3.5",
+    label: "text-sm",
     root: "size-6 rounded-sm",
   },
   sm: {
     icon: "size-3",
+    label: "text-xs",
     root: "size-5 rounded-sm",
   },
-} satisfies Record<CheckboxSize, { icon: string; root: string }>
+} satisfies Record<CheckboxSize, { icon: string; label: string; root: string }>
 
 const checkboxToneClassNames = {
   danger: {
@@ -93,7 +96,7 @@ const checkboxVariants = ({
   variant = "outlined",
 }: CheckboxVariantOptions = {}) =>
   cn(
-    "peer inline-flex shrink-0 cursor-pointer items-center justify-center border-2 border-ink bg-surface text-ink shadow-sticker-sm transition duration-150 outline-none focus-visible:shadow-sticker-md focus-visible:ring-[2px] focus-visible:ring-ring/65 aria-invalid:border-text-danger aria-invalid:bg-fill-danger-soft data-[state=checked]:shadow-sticker-md data-[state=indeterminate]:bg-ink data-[state=indeterminate]:text-paper",
+    "peer relative inline-flex shrink-0 cursor-pointer items-center justify-center border-2 border-ink bg-surface text-ink shadow-sticker-sm transition duration-150 outline-none focus-visible:shadow-sticker-md focus-visible:ring-[2px] focus-visible:ring-ring/65 aria-invalid:border-text-danger aria-invalid:bg-fill-danger-soft data-[state=checked]:shadow-sticker-md data-[state=indeterminate]:bg-ink data-[state=indeterminate]:text-paper",
     disabled && "cursor-not-allowed opacity-55",
     checkboxSizeClassNames[size].root,
     checkboxToneClassNames[tone].checked,
@@ -109,12 +112,16 @@ const checkboxVariants = ({
  */
 interface CheckboxProps extends Omit<
   React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>,
-  "className"
+  "children" | "className"
 > {
   /**
    * Custom className for the checkbox root.
    */
   className?: string
+  /**
+   * Clickable option label rendered next to the checkbox.
+   */
+  label?: React.ReactNode
   /**
    * Controls the checkbox square, icon, and radius size.
    * @default "md"
@@ -143,44 +150,79 @@ const Checkbox = React.forwardRef<
     {
       className,
       disabled,
+      id,
+      label,
       size = "md",
       tone = "default",
       variant = "outlined",
       ...props
     },
     ref,
-  ) => (
-    <CheckboxPrimitive.Root
-      className={cn(
-        checkboxVariants({ disabled, size, tone, variant }),
-        className,
-      )}
-      data-slot="checkbox"
-      disabled={disabled}
-      ref={ref}
-      {...props}
-    >
-      <CheckboxPrimitive.Indicator
-        className="group flex items-center justify-center"
-        data-slot="checkbox-indicator"
+  ) => {
+    const generatedId = React.useId()
+    const hasLabel = label !== undefined && label !== null && label !== false
+    const controlId = id ?? (hasLabel ? generatedId : undefined)
+    const control = (
+      <CheckboxPrimitive.Root
+        className={cn(
+          checkboxVariants({ disabled, size, tone, variant }),
+          className,
+        )}
+        data-slot="checkbox"
+        disabled={disabled}
+        id={controlId}
+        ref={ref}
+        {...props}
       >
-        <Minus
-          aria-hidden="true"
+        <CheckboxPrimitive.Indicator
+          className="group pointer-events-none absolute inset-0 flex items-center justify-center"
+          data-slot="checkbox-indicator"
+        >
+          <Minus
+            aria-hidden="true"
+            className={cn(
+              "hidden stroke-[3.5] group-data-[state=indeterminate]:block",
+              checkboxSizeClassNames[size].icon,
+            )}
+          />
+          <Check
+            aria-hidden="true"
+            className={cn(
+              "stroke-[3.5] group-data-[state=indeterminate]:hidden",
+              checkboxSizeClassNames[size].icon,
+            )}
+          />
+        </CheckboxPrimitive.Indicator>
+      </CheckboxPrimitive.Root>
+    )
+
+    if (!hasLabel) {
+      return control
+    }
+
+    return (
+      <label
+        className={cn(
+          "inline-flex min-w-0 cursor-pointer items-center gap-3 text-ink select-none",
+          disabled && "cursor-not-allowed",
+        )}
+        data-slot="checkbox-label"
+        htmlFor={controlId}
+      >
+        {control}
+        <span
           className={cn(
-            "hidden stroke-[3.5] group-data-[state=indeterminate]:block",
-            checkboxSizeClassNames[size].icon,
+            "min-w-0 leading-none font-black",
+            checkboxSizeClassNames[size].label,
+            disabled && "opacity-55",
           )}
-        />
-        <Check
-          aria-hidden="true"
-          className={cn(
-            "stroke-[3.5] group-data-[state=indeterminate]:hidden",
-            checkboxSizeClassNames[size].icon,
-          )}
-        />
-      </CheckboxPrimitive.Indicator>
-    </CheckboxPrimitive.Root>
-  ),
+          data-slot="checkbox-label-text"
+        >
+          {label}
+        </span>
+      </label>
+    )
+  },
 )
 Checkbox.displayName = CheckboxPrimitive.Root.displayName
 

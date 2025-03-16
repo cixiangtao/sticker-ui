@@ -4700,7 +4700,7 @@
               "type": "FieldClassNames"
             },
             {
-              "defaultValue": "\"end\"",
+              "deprecatedKey": "api.field.components.Field.props.members.controlPlacement.deprecated",
               "descriptionKey": "api.field.components.Field.props.members.controlPlacement.description",
               "name": "controlPlacement",
               "optional": true,
@@ -4741,6 +4741,14 @@
               "optional": true,
               "required": false,
               "type": "Omit< FieldLabelProps, | \"children\" | \"htmlFor\" | \"optional\" | \"required\" | \"requiredMark\" | \"size\" | \"tone\" > & { [key: `data-${string}`]: string | undefined }"
+            },
+            {
+              "defaultValue": "\"stack\"",
+              "descriptionKey": "api.field.components.Field.props.members.layout.description",
+              "name": "layout",
+              "optional": true,
+              "required": false,
+              "type": "\"inline\" | \"stack\""
             },
             {
               "defaultValue": "false",
@@ -5248,7 +5256,7 @@
           }
         ],
         "name": "FieldClassNames",
-        "type": "{ /** * Field body that groups the label and description when the control renders first. */ body?: string /** * Control wrapper. */ control?: string /** * Field description text. */ description?: string /** * Field label. */ label?: string /** * Field root. */ root?: string }"
+        "type": "{ /** * Field body that groups the label and description in `layout=\"inline\"`. */ body?: string /** * Control wrapper. */ control?: string /** * Field description text. */ description?: string /** * Field label. */ label?: string /** * Field root. */ root?: string }"
       },
       {
         "descriptionKey": "api.field.types.FieldLabelProps.description",
@@ -5342,7 +5350,7 @@
             "type": "FieldClassNames"
           },
           {
-            "defaultValue": "\"end\"",
+            "deprecatedKey": "api.field.types.FieldProps.members.controlPlacement.deprecated",
             "descriptionKey": "api.field.types.FieldProps.members.controlPlacement.description",
             "name": "controlPlacement",
             "optional": true,
@@ -5383,6 +5391,14 @@
             "optional": true,
             "required": false,
             "type": "Omit< FieldLabelProps, | \"children\" | \"htmlFor\" | \"optional\" | \"required\" | \"requiredMark\" | \"size\" | \"tone\" > & { [key: `data-${string}`]: string | undefined }"
+          },
+          {
+            "defaultValue": "\"stack\"",
+            "descriptionKey": "api.field.types.FieldProps.members.layout.description",
+            "name": "layout",
+            "optional": true,
+            "required": false,
+            "type": "\"inline\" | \"stack\""
           },
           {
             "defaultValue": "false",
@@ -8136,7 +8152,7 @@
           "descriptionKey": "api.checkbox.components.Checkbox.props.description",
           "remarksKey": "api.checkbox.components.Checkbox.props.remarks",
           "inherits": [
-            "Omit< React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>, \"className\" >"
+            "Omit< React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>, \"children\" | \"className\" >"
           ],
           "inheritedMembers": [
             {
@@ -8180,13 +8196,6 @@
               "optional": true,
               "required": false,
               "type": "CheckboxPrimitive.CheckedState"
-            },
-            {
-              "descriptionKey": "api.common.inheritedProps.children.description",
-              "name": "children",
-              "optional": true,
-              "required": false,
-              "type": "React.ReactNode"
             },
             {
               "descriptionKey": "api.common.inheritedProps.defaultChecked.description",
@@ -8338,6 +8347,13 @@
               "type": "string"
             },
             {
+              "descriptionKey": "api.checkbox.components.Checkbox.props.members.label.description",
+              "name": "label",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
               "defaultValue": "\"md\"",
               "descriptionKey": "api.checkbox.components.Checkbox.props.members.size.description",
               "name": "size",
@@ -8393,7 +8409,7 @@
         "descriptionKey": "api.checkbox.types.CheckboxProps.description",
         "remarksKey": "api.checkbox.types.CheckboxProps.remarks",
         "inherits": [
-          "Omit< React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>, \"className\" >"
+          "Omit< React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>, \"children\" | \"className\" >"
         ],
         "kind": "interface",
         "members": [
@@ -8403,6 +8419,13 @@
             "optional": true,
             "required": false,
             "type": "string"
+          },
+          {
+            "descriptionKey": "api.checkbox.types.CheckboxProps.members.label.description",
+            "name": "label",
+            "optional": true,
+            "required": false,
+            "type": "React.ReactNode"
           },
           {
             "defaultValue": "\"md\"",
@@ -8666,7 +8689,7 @@
           "descriptionKey": "api.radio.components.RadioGroupItem.props.description",
           "remarksKey": "api.radio.components.RadioGroupItem.props.remarks",
           "inherits": [
-            "Omit< React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Item>, \"className\" >"
+            "Omit< React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Item>, \"children\" | \"className\" >"
           ],
           "inheritedMembers": [
             {
@@ -8710,13 +8733,6 @@
               "optional": true,
               "required": false,
               "type": "boolean"
-            },
-            {
-              "descriptionKey": "api.common.inheritedProps.children.description",
-              "name": "children",
-              "optional": true,
-              "required": false,
-              "type": "React.ReactNode"
             },
             {
               "descriptionKey": "api.common.inheritedProps.defaultChecked.description",
@@ -8861,6 +8877,13 @@
               "type": "string"
             },
             {
+              "descriptionKey": "api.radio.components.RadioGroupItem.props.members.label.description",
+              "name": "label",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
               "descriptionKey": "api.radio.components.RadioGroupItem.props.members.size.description",
               "name": "size",
               "optional": true,
@@ -8924,7 +8947,7 @@
         "descriptionKey": "api.radio.types.RadioGroupItemProps.description",
         "remarksKey": "api.radio.types.RadioGroupItemProps.remarks",
         "inherits": [
-          "Omit< React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Item>, \"className\" >"
+          "Omit< React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Item>, \"children\" | \"className\" >"
         ],
         "kind": "interface",
         "members": [
@@ -8934,6 +8957,13 @@
             "optional": true,
             "required": false,
             "type": "string"
+          },
+          {
+            "descriptionKey": "api.radio.types.RadioGroupItemProps.members.label.description",
+            "name": "label",
+            "optional": true,
+            "required": false,
+            "type": "React.ReactNode"
           },
           {
             "descriptionKey": "api.radio.types.RadioGroupItemProps.members.size.description",

@@ -8,7 +8,7 @@ type FieldTone = "danger" | "default" | "muted" | "success" | "warning"
 
 type FieldClassNames = {
   /**
-   * Field body that groups the label and description when the control renders first.
+   * Field body that groups the label and description in `layout="inline"`.
    */
   body?: string
   /**
@@ -183,8 +183,13 @@ interface FieldProps extends Omit<
    */
   optional?: boolean
   /**
-   * Places the control before the label for checkbox and switch style fields.
-   * @default "end"
+   * Controls the field structure.
+   * @default "stack"
+   */
+  layout?: "inline" | "stack"
+  /**
+   * Legacy control placement API.
+   * @deprecated Use `layout="inline"` for checkbox, radio, and switch style fields.
    */
   controlPlacement?: "end" | "start"
   /**
@@ -263,12 +268,13 @@ function Field({
   children,
   className,
   classNames,
-  controlPlacement = "end",
+  controlPlacement,
   description,
   descriptionProps,
   id,
   label,
   labelProps,
+  layout,
   optional = false,
   required = false,
   requiredMark = "badge",
@@ -287,6 +293,8 @@ function Field({
     "data-slot"
   ]
   const control = getFieldControl(children, controlId, descriptionId)
+  const resolvedLayout =
+    layout ?? (controlPlacement === "start" ? "inline" : "stack")
   const labelNode =
     label === undefined || label === null || label === false ? null : (
       <FieldLabel
@@ -314,11 +322,12 @@ function Field({
     </FieldDescription>
   ) : null
 
-  if (controlPlacement === "start") {
+  if (resolvedLayout === "inline") {
     return (
       <div
         className={cn(
-          "flex min-w-0 items-start gap-3",
+          "flex min-w-0 gap-3",
+          descriptionNode ? "items-start" : "items-center",
           classNames?.root,
           className,
         )}

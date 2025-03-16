@@ -322,6 +322,9 @@ const ZH_PREVIEW_API_DOC_MESSAGES = defineMessages({
   "api.checkbox.components.Checkbox.props.members.className.description": {
     zh: "复选框根元素的自定义 className。",
   },
+  "api.checkbox.components.Checkbox.props.members.label.description": {
+    zh: "渲染在复选框旁边的可点击选项文本。",
+  },
   "api.checkbox.components.Checkbox.props.members.size.description": {
     zh: "控制复选框方块、图标和圆角尺寸。",
   },
@@ -352,6 +355,9 @@ const ZH_PREVIEW_API_DOC_MESSAGES = defineMessages({
   "api.checkbox.types.CheckboxProps.members.className.description": {
     zh: "复选框根元素的自定义 className。",
   },
+  "api.checkbox.types.CheckboxProps.members.label.description": {
+    zh: "渲染在复选框旁边的可点击选项文本。",
+  },
   "api.checkbox.types.CheckboxProps.members.size.description": {
     zh: "控制复选框方块、图标和圆角尺寸。",
   },
@@ -376,8 +382,11 @@ const ZH_PREVIEW_API_DOC_MESSAGES = defineMessages({
   "api.field.components.Field.props.members.classNames.description": {
     zh: "字段内部插槽的 className。",
   },
+  "api.field.components.Field.props.members.controlPlacement.deprecated": {
+    zh: '请改用 `layout="inline"` 来表示 checkbox、radio 和 switch 这类字段。',
+  },
   "api.field.components.Field.props.members.controlPlacement.description": {
-    zh: "将控件放在标签前方，用于 checkbox 和 switch 风格字段。",
+    zh: "旧版控件位置 API。",
   },
   "api.field.components.Field.props.members.description.description": {
     zh: "通过 aria-describedby 关联到控件的辅助说明。",
@@ -393,6 +402,9 @@ const ZH_PREVIEW_API_DOC_MESSAGES = defineMessages({
   },
   "api.field.components.Field.props.members.labelProps.description": {
     zh: "传给 FieldLabel 元素的 props。",
+  },
+  "api.field.components.Field.props.members.layout.description": {
+    zh: "控制字段结构。",
   },
   "api.field.components.Field.props.members.optional.description": {
     zh: "在标题内容后显示可选标记。",
@@ -458,7 +470,7 @@ const ZH_PREVIEW_API_DOC_MESSAGES = defineMessages({
     zh: "根据尺寸和色调变体生成贴纸 FieldLabel 的 className。",
   },
   "api.field.types.FieldClassNames.members.body.description": {
-    zh: "当控件先渲染时，用来组合标签和描述的字段主体。",
+    zh: '字段主体区域，在 `layout="inline"` 中组合标题和描述。',
   },
   "api.field.types.FieldClassNames.members.control.description": {
     zh: "控件包裹层。",
@@ -481,8 +493,11 @@ const ZH_PREVIEW_API_DOC_MESSAGES = defineMessages({
   "api.field.types.FieldProps.members.classNames.description": {
     zh: "字段内部插槽的 className。",
   },
+  "api.field.types.FieldProps.members.controlPlacement.deprecated": {
+    zh: '请改用 `layout="inline"` 来表示 checkbox、radio 和 switch 这类字段。',
+  },
   "api.field.types.FieldProps.members.controlPlacement.description": {
-    zh: "将控件放在标签前方，用于 checkbox 和 switch 风格字段。",
+    zh: "旧版控件位置 API。",
   },
   "api.field.types.FieldProps.members.description.description": {
     zh: "通过 aria-describedby 关联到控件的辅助说明。",
@@ -498,6 +513,9 @@ const ZH_PREVIEW_API_DOC_MESSAGES = defineMessages({
   },
   "api.field.types.FieldProps.members.labelProps.description": {
     zh: "传给 FieldLabel 元素的 props。",
+  },
+  "api.field.types.FieldProps.members.layout.description": {
+    zh: "控制字段结构。",
   },
   "api.field.types.FieldProps.members.optional.description": {
     zh: "在标题内容后显示可选标记。",
@@ -902,6 +920,9 @@ const ZH_PREVIEW_API_DOC_MESSAGES = defineMessages({
   "api.radio.components.RadioGroupItem.props.members.className.description": {
     zh: "单选项根元素的自定义 className。",
   },
+  "api.radio.components.RadioGroupItem.props.members.label.description": {
+    zh: "渲染在单选项旁边的可点击选项文本。",
+  },
   "api.radio.components.RadioGroupItem.props.members.size.description": {
     zh: "控制单选项和圆点尺寸。",
   },
@@ -940,6 +961,9 @@ const ZH_PREVIEW_API_DOC_MESSAGES = defineMessages({
   },
   "api.radio.types.RadioGroupItemProps.members.className.description": {
     zh: "单选项根元素的自定义 className。",
+  },
+  "api.radio.types.RadioGroupItemProps.members.label.description": {
+    zh: "渲染在单选项旁边的可点击选项文本。",
   },
   "api.radio.types.RadioGroupItemProps.members.size.description": {
     zh: "控制单选项和圆点尺寸。",

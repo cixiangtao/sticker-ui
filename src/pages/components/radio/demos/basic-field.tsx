@@ -1,7 +1,6 @@
 import {
-  Field,
-  FieldLabel,
   FieldDescription,
+  FieldLabel,
   RadioGroup,
   RadioGroupItem,
 } from "sticker-ui"
@@ -28,12 +27,8 @@ function Demo() {
           </FieldDescription>
         </div>
         <RadioGroup aria-labelledby="radio-launch-rhythm" defaultValue="weekly">
-          <Field controlPlacement="start" label="Weekly Review">
-            <RadioGroupItem value="weekly" />
-          </Field>
-          <Field controlPlacement="start" label="Monthly Map">
-            <RadioGroupItem value="monthly" />
-          </Field>
+          <RadioGroupItem label="Weekly Review" value="weekly" />
+          <RadioGroupItem label="Monthly Map" value="monthly" />
         </RadioGroup>
       </div>
     </div>

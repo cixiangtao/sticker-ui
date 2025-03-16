@@ -39,13 +39,13 @@ function Demo() {
           trigger="onCheckedChange"
           valuePropName="checked"
         >
-          <Checkbox />
+          <Checkbox label="Accept Terms" />
         </Form.Item>
         <Form.Item
           extra="Use disabled for locked checklist items."
           label="Archive"
         >
-          <Checkbox checked disabled />
+          <Checkbox checked disabled label="Locked Archive" />
         </Form.Item>
         <Form.Item
           extra="Tone can reinforce successful subscription choices."
@@ -54,13 +54,18 @@ function Demo() {
           trigger="onCheckedChange"
           valuePropName="checked"
         >
-          <Checkbox tone="success" variant="filled" />
+          <Checkbox label="Weekly Digest" tone="success" variant="filled" />
         </Form.Item>
         <Form.Item
           extra="Quiet checkboxes sit inside dense cards."
           label="Flag"
         >
-          <Checkbox defaultChecked tone="secondary" variant="quiet" />
+          <Checkbox
+            defaultChecked
+            label="Compact Flag"
+            tone="secondary"
+            variant="quiet"
+          />
         </Form.Item>
       </div>
       <Button className="w-fit" type="submit">

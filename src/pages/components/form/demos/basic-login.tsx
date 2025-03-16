@@ -1,5 +1,20 @@
 import { useState } from "react"
-import { Button, Form, Input, Tag } from "sticker-ui"
+import {
+  Button,
+  Checkbox,
+  Form,
+  Input,
+  RadioGroup,
+  RadioGroupItem,
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+  Switch,
+  Tag,
+  Textarea,
+} from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
@@ -12,17 +27,30 @@ const meta = defineMeta({
 })
 
 function Demo() {
-  const [submittedEmail, setSubmittedEmail] = useState("Not submitted yet")
+  const [submittedValues, setSubmittedValues] = useState(
+    "No project submitted yet",
+  )
 
   return (
-    <div className="grid gap-4 md:grid-cols-[minmax(0,1fr)_14rem]">
+    <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_16rem]">
       <Form
         initialValues={{
+          consent: true,
           email: "hello@sticker.dev",
+          notes: "Ship a warm, copyable component registry.",
           password: "",
+          plan: "team",
+          role: "maintainer",
+          updates: true,
         }}
         onFinish={(values) => {
-          setSubmittedEmail(String(values.email ?? ""))
+          setSubmittedValues(
+            [
+              String(values.email ?? ""),
+              String(values.plan ?? "no plan"),
+              values.updates ? "updates on" : "updates off",
+            ].join(" / "),
+          )
         }}
       >
         <Form.Item
@@ -60,13 +88,73 @@ function Demo() {
             showLabel="Show"
           />
         </Form.Item>
+        <Form.Item
+          extra="Select keeps a Form.Item-friendly onChange value alias."
+          label="Plan"
+          name="plan"
+          rules={[
+            {
+              message: "Choose a workspace plan.",
+              required: true,
+            },
+          ]}
+        >
+          <Select>
+            <SelectTrigger>
+              <SelectValue placeholder="Choose A Plan" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="starter">Starter</SelectItem>
+              <SelectItem value="team">Team</SelectItem>
+              <SelectItem value="studio">Studio</SelectItem>
+            </SelectContent>
+          </Select>
+        </Form.Item>
+        <Form.Item
+          extra="RadioGroup also reports the next value through onChange."
+          label="Role"
+          name="role"
+        >
+          <RadioGroup className="grid gap-3 sm:grid-cols-3">
+            <RadioGroupItem label="Owner" value="owner" />
+            <RadioGroupItem label="Maintainer" value="maintainer" />
+            <RadioGroupItem label="Viewer" value="viewer" />
+          </RadioGroup>
+        </Form.Item>
+        <Form.Item
+          extra="Textarea uses the same value and onChange contract as Input."
+          label="Project Notes"
+          name="notes"
+        >
+          <Textarea placeholder="Tell the team what this form should remember." />
+        </Form.Item>
+        <div className="grid gap-3 sm:grid-cols-2">
+          <Form.Item
+            extra="Checkbox stores checked through onCheckedChange."
+            name="consent"
+            trigger="onCheckedChange"
+            valuePropName="checked"
+            label="Consent"
+          >
+            <Checkbox label="Accept Terms" />
+          </Form.Item>
+          <Form.Item
+            extra="Switch uses the same checked binding for toggle settings."
+            label="Email Updates"
+            name="updates"
+            trigger="onCheckedChange"
+            valuePropName="checked"
+          >
+            <Switch />
+          </Form.Item>
+        </div>
         <Button type="submit">Submit Form</Button>
       </Form>
       <div className="grid content-start gap-3 rounded-sticker-2xl border-2 border-ink bg-surface p-4 shadow-sticker-md">
         <Tag color="success" dot>
           Latest Submit
         </Tag>
-        <p className="m-0 text-sm leading-6 font-bold">{submittedEmail}</p>
+        <p className="m-0 text-sm leading-6 font-bold">{submittedValues}</p>
       </div>
     </div>
   )

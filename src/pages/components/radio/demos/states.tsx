@@ -1,4 +1,4 @@
-import { Button, Field, Form, RadioGroup, RadioGroupItem } from "sticker-ui"
+import { Button, Form, RadioGroup, RadioGroupItem } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
@@ -74,13 +74,9 @@ function Demo() {
 
 function RadioOption({ label, value }: { label: string; value: string }) {
   return (
-    <Field
-      className="items-center rounded-sticker-lg border border-ink bg-white/80 px-3 py-2"
-      controlPlacement="start"
-      label={label}
-    >
-      <RadioGroupItem value={value} />
-    </Field>
+    <div className="rounded-sticker-lg border border-ink bg-white/80 px-3 py-2">
+      <RadioGroupItem label={label} value={value} />
+    </div>
   )
 }
 

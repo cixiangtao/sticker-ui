@@ -16,9 +16,9 @@ function Demo() {
       <Field
         className="rounded-sticker-xl border border-ink bg-white/80 p-4"
         classNames={{ body: "order-1 flex-1", control: "order-2" }}
-        controlPlacement="start"
         description="Pair switch with label for immediate on off preferences and settings."
         label="Weekly Digest"
+        layout="inline"
       >
         <Switch defaultChecked />
       </Field>

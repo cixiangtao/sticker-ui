@@ -1,4 +1,4 @@
-import { Checkbox, Field } from "sticker-ui"
+import { Checkbox } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
@@ -13,14 +13,9 @@ const meta = defineMeta({
 function Demo() {
   return (
     <div className="grid max-w-xl gap-3">
-      <Field
-        className="rounded-sticker-xl border border-ink bg-white/80 p-4"
-        controlPlacement="start"
-        description="Pair checkbox with label when a single option needs accessible copy and helper text."
-        label="Publish Launch Notes"
-      >
-        <Checkbox defaultChecked />
-      </Field>
+      <div className="rounded-sticker-xl border border-ink bg-white/80 p-4">
+        <Checkbox defaultChecked label="Publish Launch Notes" />
+      </div>
     </div>
   )
 }
