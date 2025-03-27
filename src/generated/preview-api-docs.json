@@ -8380,6 +8380,252 @@
           ],
           "type": "CheckboxProps"
         }
+      },
+      {
+        "descriptionKey": "api.checkbox.components.CheckboxGroup.description",
+        "name": "CheckboxGroup",
+        "props": {
+          "descriptionKey": "api.checkbox.components.CheckboxGroup.props.description",
+          "remarksKey": "api.checkbox.components.CheckboxGroup.props.remarks",
+          "inherits": [
+            "Omit< React.FieldsetHTMLAttributes<HTMLFieldSetElement>, \"className\" | \"defaultValue\" | \"onChange\" | \"value\" >"
+          ],
+          "inheritedMembers": [
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-describedby.description",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-invalid.description",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-label.description",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-labelledby.description",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.autoFocus.description",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.children.description",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultChecked.description",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.disabled.description",
+              "name": "disabled",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.form.description",
+              "name": "form",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.id.description",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onBlur.description",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLFieldSetElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onClick.description",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLFieldSetElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onFocus.description",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLFieldSetElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyDown.description",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLFieldSetElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyUp.description",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLFieldSetElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseEnter.description",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLFieldSetElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseLeave.description",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLFieldSetElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.role.description",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.style.description",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.title.description",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "members": [
+            {
+              "descriptionKey": "api.checkbox.components.CheckboxGroup.props.members.className.description",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "defaultValue": "[]",
+              "descriptionKey": "api.checkbox.components.CheckboxGroup.props.members.defaultValue.description",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "CheckboxGroupValue"
+            },
+            {
+              "descriptionKey": "api.checkbox.components.CheckboxGroup.props.members.description.description",
+              "name": "description",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "defaultValue": "\"vertical\"",
+              "descriptionKey": "api.checkbox.components.CheckboxGroup.props.members.direction.description",
+              "name": "direction",
+              "optional": true,
+              "required": false,
+              "type": "CheckboxGroupDirection"
+            },
+            {
+              "descriptionKey": "api.checkbox.components.CheckboxGroup.props.members.label.description",
+              "name": "label",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "descriptionKey": "api.checkbox.components.CheckboxGroup.props.members.name.description",
+              "name": "name",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.checkbox.components.CheckboxGroup.props.members.onChange.description",
+              "remarksKey": "api.checkbox.components.CheckboxGroup.props.members.onChange.remarks",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "CheckboxGroupChangeHandler"
+            },
+            {
+              "descriptionKey": "api.checkbox.components.CheckboxGroup.props.members.onValueChange.description",
+              "name": "onValueChange",
+              "optional": true,
+              "required": false,
+              "type": "CheckboxGroupChangeHandler"
+            },
+            {
+              "defaultValue": "\"md\"",
+              "descriptionKey": "api.checkbox.components.CheckboxGroup.props.members.size.description",
+              "name": "size",
+              "optional": true,
+              "required": false,
+              "type": "CheckboxSize"
+            },
+            {
+              "defaultValue": "\"default\"",
+              "descriptionKey": "api.checkbox.components.CheckboxGroup.props.members.tone.description",
+              "name": "tone",
+              "optional": true,
+              "required": false,
+              "type": "CheckboxTone"
+            },
+            {
+              "descriptionKey": "api.checkbox.components.CheckboxGroup.props.members.value.description",
+              "name": "value",
+              "optional": true,
+              "required": false,
+              "type": "CheckboxGroupValue"
+            },
+            {
+              "defaultValue": "\"outlined\"",
+              "descriptionKey": "api.checkbox.components.CheckboxGroup.props.members.variant.description",
+              "name": "variant",
+              "optional": true,
+              "required": false,
+              "type": "CheckboxVariant"
+            }
+          ],
+          "type": "CheckboxGroupProps"
+        }
       }
     ],
     "descriptionKey": "api.checkbox.description",
@@ -8388,6 +8634,17 @@
         "descriptionKey": "api.checkbox.exports.Checkbox.description",
         "kind": "component",
         "name": "Checkbox"
+      },
+      {
+        "descriptionKey": "api.checkbox.exports.CheckboxGroup.description",
+        "kind": "component",
+        "name": "CheckboxGroup"
+      },
+      {
+        "descriptionKey": "api.checkbox.exports.CheckboxGroupProps.description",
+        "remarksKey": "api.checkbox.exports.CheckboxGroupProps.remarks",
+        "kind": "interface",
+        "name": "CheckboxGroupProps"
       },
       {
         "descriptionKey": "api.checkbox.exports.CheckboxProps.description",
@@ -8405,6 +8662,114 @@
     "sourcePath": "src/components/ui/checkbox.tsx",
     "title": "Sticker Checkbox",
     "types": [
+      {
+        "descriptionKey": "api.checkbox.types.CheckboxGroupProps.description",
+        "remarksKey": "api.checkbox.types.CheckboxGroupProps.remarks",
+        "inherits": [
+          "Omit< React.FieldsetHTMLAttributes<HTMLFieldSetElement>, \"className\" | \"defaultValue\" | \"onChange\" | \"value\" >"
+        ],
+        "kind": "interface",
+        "members": [
+          {
+            "descriptionKey": "api.checkbox.types.CheckboxGroupProps.members.className.description",
+            "name": "className",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "defaultValue": "[]",
+            "descriptionKey": "api.checkbox.types.CheckboxGroupProps.members.defaultValue.description",
+            "name": "defaultValue",
+            "optional": true,
+            "required": false,
+            "type": "CheckboxGroupValue"
+          },
+          {
+            "descriptionKey": "api.checkbox.types.CheckboxGroupProps.members.description.description",
+            "name": "description",
+            "optional": true,
+            "required": false,
+            "type": "React.ReactNode"
+          },
+          {
+            "defaultValue": "\"vertical\"",
+            "descriptionKey": "api.checkbox.types.CheckboxGroupProps.members.direction.description",
+            "name": "direction",
+            "optional": true,
+            "required": false,
+            "type": "CheckboxGroupDirection"
+          },
+          {
+            "descriptionKey": "api.checkbox.types.CheckboxGroupProps.members.label.description",
+            "name": "label",
+            "optional": true,
+            "required": false,
+            "type": "React.ReactNode"
+          },
+          {
+            "descriptionKey": "api.checkbox.types.CheckboxGroupProps.members.name.description",
+            "name": "name",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "descriptionKey": "api.checkbox.types.CheckboxGroupProps.members.onChange.description",
+            "remarksKey": "api.checkbox.types.CheckboxGroupProps.members.onChange.remarks",
+            "name": "onChange",
+            "optional": true,
+            "required": false,
+            "type": "CheckboxGroupChangeHandler"
+          },
+          {
+            "descriptionKey": "api.checkbox.types.CheckboxGroupProps.members.onValueChange.description",
+            "name": "onValueChange",
+            "optional": true,
+            "required": false,
+            "type": "CheckboxGroupChangeHandler"
+          },
+          {
+            "defaultValue": "\"md\"",
+            "descriptionKey": "api.checkbox.types.CheckboxGroupProps.members.size.description",
+            "name": "size",
+            "optional": true,
+            "required": false,
+            "type": "CheckboxSize"
+          },
+          {
+            "defaultValue": "\"default\"",
+            "descriptionKey": "api.checkbox.types.CheckboxGroupProps.members.tone.description",
+            "name": "tone",
+            "optional": true,
+            "required": false,
+            "type": "CheckboxTone"
+          },
+          {
+            "descriptionKey": "api.checkbox.types.CheckboxGroupProps.members.value.description",
+            "name": "value",
+            "optional": true,
+            "required": false,
+            "type": "CheckboxGroupValue"
+          },
+          {
+            "defaultValue": "\"outlined\"",
+            "descriptionKey": "api.checkbox.types.CheckboxGroupProps.members.variant.description",
+            "name": "variant",
+            "optional": true,
+            "required": false,
+            "type": "CheckboxVariant"
+          }
+        ],
+        "name": "CheckboxGroupProps"
+      },
+      {
+        "inherits": [],
+        "kind": "type",
+        "members": [],
+        "name": "CheckboxGroupValue",
+        "type": "string[]"
+      },
       {
         "descriptionKey": "api.checkbox.types.CheckboxProps.description",
         "remarksKey": "api.checkbox.types.CheckboxProps.remarks",

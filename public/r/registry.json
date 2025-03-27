@@ -322,7 +322,7 @@
       "name": "checkbox",
       "type": "registry:ui",
       "title": "Sticker Checkbox",
-      "description": "A Radix-powered checkbox with sticker checked and indeterminate states.",
+      "description": "A Radix-powered checkbox and checkbox group with sticker checked states.",
       "dependencies": ["@radix-ui/react-checkbox", "lucide-react"],
       "registryDependencies": ["utils"],
       "files": [

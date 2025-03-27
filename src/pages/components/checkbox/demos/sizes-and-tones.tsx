@@ -4,7 +4,7 @@ import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
   className: "bg-fill-warning",
-  order: 20,
+  order: 30,
   titleKey: "preview.components.sizesAndTones",
   descriptionKey:
     "preview.components.sizesAlignCheckboxControlsWithCompactListsStandardFormsAndRoomySettingsWhileToneKeepsSemanticContextVisible",

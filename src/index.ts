@@ -28,8 +28,15 @@ export {
   CardTitle,
   cardVariants,
 } from "./components/ui/card"
-export { Checkbox, checkboxVariants } from "./components/ui/checkbox"
-export type { CheckboxProps } from "./components/ui/checkbox"
+export {
+  Checkbox,
+  CheckboxGroup,
+  checkboxVariants,
+} from "./components/ui/checkbox"
+export type {
+  CheckboxGroupProps,
+  CheckboxProps,
+} from "./components/ui/checkbox"
 export {
   Dialog,
   DialogClose,

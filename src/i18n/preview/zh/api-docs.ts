@@ -335,19 +335,124 @@ const ZH_PREVIEW_API_DOC_MESSAGES = defineMessages({
     zh: "控制复选框边框和填充强调程度。",
   },
   "api.checkbox.components.Checkbox.props.remarks": {
-    zh: "包裹 Radix Checkbox.Root，并加入贴纸尺寸、色调和变体 props。",
+    zh: "包裹 Radix Checkbox.Root，并可从 CheckboxGroup 继承视觉变体和选中状态。",
+  },
+  "api.checkbox.components.CheckboxGroup.description": {
+    zh: "用于管理多个选中值的贴纸复选框组。",
+  },
+  "api.checkbox.components.CheckboxGroup.props.description": {
+    zh: "贴纸复选框组的 props。",
+  },
+  "api.checkbox.components.CheckboxGroup.props.members.className.description": {
+    zh: "组 fieldset 的自定义 className。",
+  },
+  "api.checkbox.components.CheckboxGroup.props.members.defaultValue.description":
+    {
+      zh: "非受控组的初始选中复选框值。",
+    },
+  "api.checkbox.components.CheckboxGroup.props.members.description.description":
+    {
+      zh: "渲染在组标题下方的辅助说明。",
+    },
+  "api.checkbox.components.CheckboxGroup.props.members.direction.description": {
+    zh: "控制复选框子项的排列方式。",
+  },
+  "api.checkbox.components.CheckboxGroup.props.members.label.description": {
+    zh: "作为 fieldset legend 渲染的组标题。",
+  },
+  "api.checkbox.components.CheckboxGroup.props.members.name.description": {
+    zh: "传给复选框子项、用于原生表单提交的共享 name。",
+  },
+  "api.checkbox.components.CheckboxGroup.props.members.onChange.description": {
+    zh: "选中值数组变化时触发。",
+  },
+  "api.checkbox.components.CheckboxGroup.props.members.onChange.remarks": {
+    zh: "接收下一个字符串数组。这个别名对应项目内 Form.Item 的 trigger 约定。",
+  },
+  "api.checkbox.components.CheckboxGroup.props.members.onValueChange.description":
+    {
+      zh: "选中值数组变化时触发。",
+    },
+  "api.checkbox.components.CheckboxGroup.props.members.size.description": {
+    zh: "控制子复选框方块、图标和圆角尺寸。",
+  },
+  "api.checkbox.components.CheckboxGroup.props.members.tone.description": {
+    zh: "控制子复选框的语义纸张色调。",
+  },
+  "api.checkbox.components.CheckboxGroup.props.members.value.description": {
+    zh: "当前选中的复选框值。",
+  },
+  "api.checkbox.components.CheckboxGroup.props.members.variant.description": {
+    zh: "控制子复选框边框和填充强调程度。",
+  },
+  "api.checkbox.components.CheckboxGroup.props.remarks": {
+    zh: "管理与子 Checkbox 的 `value` prop 匹配的字符串数组。",
   },
   "api.checkbox.exports.Checkbox.description": {
     zh: "由 Radix Checkbox 驱动的贴纸复选框。",
+  },
+  "api.checkbox.exports.CheckboxGroup.description": {
+    zh: "用于管理多个选中值的贴纸复选框组。",
+  },
+  "api.checkbox.exports.CheckboxGroupProps.description": {
+    zh: "贴纸复选框组的 props。",
+  },
+  "api.checkbox.exports.CheckboxGroupProps.remarks": {
+    zh: "管理与子 Checkbox 的 `value` prop 匹配的字符串数组。",
   },
   "api.checkbox.exports.CheckboxProps.description": {
     zh: "贴纸复选框根元素的 props。",
   },
   "api.checkbox.exports.CheckboxProps.remarks": {
-    zh: "包裹 Radix Checkbox.Root，并加入贴纸尺寸、色调和变体 props。",
+    zh: "包裹 Radix Checkbox.Root，并可从 CheckboxGroup 继承视觉变体和选中状态。",
   },
   "api.checkbox.exports.checkboxVariants.description": {
     zh: "根据结构、色调和尺寸变体生成贴纸复选框的 className。",
+  },
+  "api.checkbox.types.CheckboxGroupProps.description": {
+    zh: "贴纸复选框组的 props。",
+  },
+  "api.checkbox.types.CheckboxGroupProps.members.className.description": {
+    zh: "组 fieldset 的自定义 className。",
+  },
+  "api.checkbox.types.CheckboxGroupProps.members.defaultValue.description": {
+    zh: "非受控组的初始选中复选框值。",
+  },
+  "api.checkbox.types.CheckboxGroupProps.members.description.description": {
+    zh: "渲染在组标题下方的辅助说明。",
+  },
+  "api.checkbox.types.CheckboxGroupProps.members.direction.description": {
+    zh: "控制复选框子项的排列方式。",
+  },
+  "api.checkbox.types.CheckboxGroupProps.members.label.description": {
+    zh: "作为 fieldset legend 渲染的组标题。",
+  },
+  "api.checkbox.types.CheckboxGroupProps.members.name.description": {
+    zh: "传给复选框子项、用于原生表单提交的共享 name。",
+  },
+  "api.checkbox.types.CheckboxGroupProps.members.onChange.description": {
+    zh: "选中值数组变化时触发。",
+  },
+  "api.checkbox.types.CheckboxGroupProps.members.onChange.remarks": {
+    zh: "接收下一个字符串数组。这个别名对应项目内 Form.Item 的 trigger 约定。",
+  },
+  "api.checkbox.types.CheckboxGroupProps.members.onValueChange.description": {
+    zh: "选中值数组变化时触发。",
+  },
+  "api.checkbox.types.CheckboxGroupProps.members.size.description": {
+    zh: "控制子复选框方块、图标和圆角尺寸。",
+  },
+  "api.checkbox.types.CheckboxGroupProps.members.tone.description": {
+    zh: "控制子复选框的语义纸张色调。",
+  },
+  "api.checkbox.types.CheckboxGroupProps.members.value.description": {
+    zh: "当前选中的复选框值。",
+  },
+  "api.checkbox.types.CheckboxGroupProps.members.variant.description": {
+    zh: "控制子复选框边框和填充强调程度。",
+  },
+  "api.checkbox.types.CheckboxGroupProps.remarks": {
+    zh: "管理与子 Checkbox 的 `value` prop 匹配的字符串数组。",
   },
   "api.checkbox.types.CheckboxProps.description": {
     zh: "贴纸复选框根元素的 props。",
@@ -368,7 +473,7 @@ const ZH_PREVIEW_API_DOC_MESSAGES = defineMessages({
     zh: "控制复选框边框和填充强调程度。",
   },
   "api.checkbox.types.CheckboxProps.remarks": {
-    zh: "包裹 Radix Checkbox.Root，并加入贴纸尺寸、色调和变体 props。",
+    zh: "包裹 Radix Checkbox.Root，并可从 CheckboxGroup 继承视觉变体和选中状态。",
   },
   "api.field.description": {
     zh: "可自动绑定控件的贴纸字段外壳，以及低层 FieldLabel 标题组件。",

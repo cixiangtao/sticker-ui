@@ -4,7 +4,7 @@ import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
   className: "bg-fill-danger-soft",
-  order: 30,
+  order: 40,
   titleKey: "preview.components.states",
   descriptionKey:
     "preview.components.invalidDisabledAndSemanticCheckboxStatesStayVisibleThroughRadixPropsAndFormItemValidation",

@@ -570,6 +570,10 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
     {
       zh: "Checkbox 保留 Radix 键盘行为，同时加入厚实贴纸方块、硬质阴影和清晰的选中标记。",
     },
+  "preview.components.checkboxGroupManagesMultipleSelectedValuesWhileSharingSizeToneVariantAndDisabledState":
+    {
+      zh: "CheckboxGroup 会管理多个选中值，同时共享尺寸、色调、变体和禁用状态。",
+    },
   "preview.components.filledOutlinedAndStripeVariantsTuneAlertEmphasisAcrossDenseFormsAndDocumentationPanels":
     {
       zh: "filled、outlined 和 stripe 变体可调整提示在密集表单和文档面板中的强调程度。",
@@ -599,6 +603,9 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
     },
   "preview.components.radixCheckboxControlsWithStickerCheckedStates": {
     zh: "带贴纸选中状态的 Radix 复选框控件。",
+  },
+  "preview.components.groupedChoices": {
+    zh: "分组选项",
   },
   "preview.components.radixSwitchControlsWithTactileStickerTracks": {
     zh: "带触感贴纸轨道的 Radix 开关控件。",
