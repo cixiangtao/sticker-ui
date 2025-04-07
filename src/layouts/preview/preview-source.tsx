@@ -1,9 +1,11 @@
-import { type CSSProperties, useEffect, useState } from "react"
+import { type CSSProperties, useEffect, useMemo, useState } from "react"
 import {
   type LanguageRegistration,
   type ThemedToken,
   type ThemeRegistration,
 } from "shiki/core"
+
+import { cn } from "../../lib/utils"
 
 interface SourceCode {
   code: string
@@ -15,14 +17,33 @@ interface SourceCodeBlockProps {
   source: SourceCode
 }
 
-interface HighlightedSource {
-  backgroundColor?: string
+interface HighlightedToken {
   color?: string
-  lines: ThemedToken[][]
+  content: string
 }
+
+interface HighlightedLine {
+  tokens: HighlightedToken[]
+}
+
+type HighlightState =
+  | { status: "error" }
+  | { status: "loading" }
+  | { color?: string; lines: HighlightedLine[]; status: "ready" }
 
 const SHIKI_LANGUAGE = "tsx"
 const SHIKI_THEME = "github-light-default"
+const SOURCE_CODE_BLOCK_CLASS_NAME =
+  "overflow-x-auto rounded-sticker-lg border border-ink bg-paper p-4 font-mono text-[13px] leading-6 text-ink shadow-sticker-xs"
+const SOURCE_CODE_BLOCK_STYLE = {
+  tabSize: 2,
+} satisfies CSSProperties
+const ERROR_HIGHLIGHT_STATE = {
+  status: "error",
+} satisfies HighlightState
+const LOADING_HIGHLIGHT_STATE = {
+  status: "loading",
+} satisfies HighlightState
 
 interface PreviewHighlighter {
   codeToTokens: (
@@ -41,71 +62,88 @@ interface PreviewHighlighter {
 let highlighterPromise: Promise<PreviewHighlighter> | undefined
 
 function SourceCodeBlock({ className = "", source }: SourceCodeBlockProps) {
-  const highlightedSource = useHighlightedSource(source)
+  const highlightState = useHighlightedSource(source)
+  const plainLines = useMemo(
+    () => getPlainSourceLines(source.code),
+    [source.code],
+  )
+  const lines =
+    highlightState.status === "ready" ? highlightState.lines : plainLines
 
   return (
     <pre
-      className={["text-[13px] leading-6 text-[#FFF7DF]", className].join(" ")}
-      style={{
-        backgroundColor: highlightedSource?.backgroundColor,
-        color: highlightedSource?.color,
-      }}
+      className={cn(SOURCE_CODE_BLOCK_CLASS_NAME, className)}
+      data-name="SourceCodeBlock"
+      data-slot="root"
+      data-state={highlightState.status}
+      style={getSourceBlockStyle(highlightState)}
     >
-      <code>
-        {highlightedSource
-          ? highlightedSource.lines.map((line, lineIndex) => (
-              <span className="block min-h-6" key={lineIndex}>
-                {line.map((token, tokenIndex) => (
-                  <span key={tokenIndex} style={getTokenStyle(token)}>
-                    {token.content}
-                  </span>
-                ))}
+      <code aria-busy={isSourceBusy(highlightState)} data-slot="code">
+        {lines.map((line, lineIndex) => (
+          <span className="block min-h-6" data-slot="line" key={lineIndex}>
+            {line.tokens.map((token, tokenIndex) => (
+              <span key={tokenIndex} style={getTokenStyle(token)}>
+                {token.content}
               </span>
-            ))
-          : source.code}
+            ))}
+          </span>
+        ))}
       </code>
     </pre>
   )
 }
 
 function useHighlightedSource(source: SourceCode) {
-  const [highlightedSource, setHighlightedSource] =
-    useState<HighlightedSource>()
+  const [highlightState, setHighlightState] = useState<HighlightState>(
+    LOADING_HIGHLIGHT_STATE,
+  )
 
   useEffect(() => {
     let isMounted = true
 
     async function highlightSource() {
-      const highlighter = await getHighlighter()
-      const result = highlighter.codeToTokens(source.code, {
-        lang: source.language,
-        theme: SHIKI_THEME,
-      })
+      try {
+        const highlighter = await getHighlighter()
+        const result = highlighter.codeToTokens(source.code, {
+          lang: source.language,
+          theme: SHIKI_THEME,
+        })
 
-      if (!isMounted) {
-        return
+        if (!isMounted) {
+          return
+        }
+
+        setHighlightState({
+          color: result.fg,
+          lines: getHighlightedLines(result.tokens),
+          status: "ready",
+        })
+      } catch (error) {
+        console.error("Failed to highlight preview source.", error)
+
+        if (isMounted) {
+          setHighlightState(ERROR_HIGHLIGHT_STATE)
+        }
       }
-
-      setHighlightedSource({
-        backgroundColor: result.bg,
-        color: result.fg,
-        lines: result.tokens,
-      })
     }
 
-    setHighlightedSource(undefined)
+    setHighlightState(LOADING_HIGHLIGHT_STATE)
     void highlightSource()
 
     return () => {
       isMounted = false
     }
-  }, [source])
+  }, [source.code, source.language])
 
-  return highlightedSource
+  return highlightState
 }
 
 function getHighlighter() {
-  highlighterPromise ??= createPreviewHighlighter()
+  highlighterPromise ??= createPreviewHighlighter().catch((error: unknown) => {
+    highlighterPromise = undefined
+    throw error
+  })
+
   return highlighterPromise
 }
 
@@ -129,10 +167,44 @@ async function createPreviewHighlighter() {
   })
 }
 
-function getTokenStyle(token: ThemedToken): CSSProperties {
+function getHighlightedLines(lines: ThemedToken[][]): HighlightedLine[] {
+  return lines.map((line) => ({
+    tokens: line.map((token) => ({
+      color: token.color,
+      content: token.content,
+    })),
+  }))
+}
+
+function getPlainSourceLines(sourceCode: string): HighlightedLine[] {
+  return sourceCode.split("\n").map((line) => ({
+    tokens: [{ content: line }],
+  }))
+}
+
+function getSourceBlockStyle(highlightState: HighlightState) {
+  if (highlightState.status !== "ready" || !highlightState.color) {
+    return SOURCE_CODE_BLOCK_STYLE
+  }
+
+  return {
+    ...SOURCE_CODE_BLOCK_STYLE,
+    color: highlightState.color,
+  } satisfies CSSProperties
+}
+
+function getTokenStyle(token: HighlightedToken) {
+  if (!token.color) {
+    return undefined
+  }
+
   return {
     color: token.color,
-  }
+  } satisfies CSSProperties
+}
+
+function isSourceBusy(highlightState: HighlightState) {
+  return highlightState.status === "loading" ? true : undefined
 }
 
 export { SourceCodeBlock }
