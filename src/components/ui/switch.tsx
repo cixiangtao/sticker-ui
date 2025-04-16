@@ -24,15 +24,15 @@ interface SwitchVariantOptions {
 const switchSizeClassNames = {
   lg: {
     root: "h-8 w-15 rounded-full p-1",
-    thumb: "size-6 data-[state=checked]:translate-x-7",
+    thumb: "size-6 data-[state=checked]:translate-x-6",
   },
   md: {
     root: "h-7 w-13 rounded-full p-1",
-    thumb: "size-5 data-[state=checked]:translate-x-6",
+    thumb: "size-5 data-[state=checked]:translate-x-5",
   },
   sm: {
     root: "h-6 w-11 rounded-full p-0.5",
-    thumb: "size-5 data-[state=checked]:translate-x-5",
+    thumb: "size-4 data-[state=checked]:translate-x-5",
   },
 } satisfies Record<SwitchSize, { root: string; thumb: string }>
 
@@ -87,7 +87,7 @@ const switchVariants = ({
   variant = "outlined",
 }: SwitchVariantOptions = {}) =>
   cn(
-    "peer inline-flex shrink-0 cursor-pointer items-center border-2 border-ink bg-surface shadow-sticker-sm transition duration-150 outline-none focus-visible:shadow-sticker-md focus-visible:ring-[2px] focus-visible:ring-ring/65 aria-invalid:border-text-danger aria-invalid:bg-fill-danger-soft data-[state=checked]:shadow-sticker-md",
+    "peer inline-flex shrink-0 cursor-pointer items-center border-2 border-ink bg-surface shadow-sticker-sm transition duration-150 outline-none focus-visible:shadow-sticker-md focus-visible:ring-[2px] focus-visible:ring-ring/65 aria-invalid:border-text-danger aria-invalid:bg-fill-danger-soft data-[state=checked]:shadow-sticker-md data-[state=unchecked]:bg-surface",
     disabled && "cursor-not-allowed opacity-55",
     switchSizeClassNames[size].root,
     switchToneClassNames[tone].checked,
