@@ -37,6 +37,16 @@ export type {
   CheckboxGroupProps,
   CheckboxProps,
 } from "./components/ui/checkbox"
+export { DataTable } from "./components/ui/data-table"
+export type {
+  DataTableChangeState,
+  DataTableClassNames,
+  DataTableColumn,
+  DataTableFilterOption,
+  DataTablePaginationConfig,
+  DataTableProps,
+  DataTableRowSelection,
+} from "./components/ui/data-table"
 export {
   Dialog,
   DialogClose,

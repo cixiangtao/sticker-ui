@@ -2297,6 +2297,223 @@ const ZH_PREVIEW_API_DOC_MESSAGES = defineMessages({
   "api.spinner.variants.spinnerVariants.description": {
     zh: "根据尺寸和色调生成贴纸 Spinner className。",
   },
+  "api.data-table.description": {
+    zh: "支持排序、筛选、分页和行选择的贴纸数据表格。",
+  },
+  "api.data-table.components.DataTable.description": {
+    zh: "由 TanStack Table 驱动，并使用贴纸原语渲染的 Ant Design 风格数据表格。",
+  },
+  "api.data-table.exports.DataTable.description": {
+    zh: "由 TanStack Table 驱动，并使用贴纸原语渲染的 Ant Design 风格数据表格。",
+  },
+  "api.data-table.exports.DataTableChangeState.description": {
+    zh: "表格状态变化时传出的状态载荷。",
+  },
+  "api.data-table.exports.DataTableClassNames.description": {
+    zh: "数据表格聚合界面的插槽 className。",
+  },
+  "api.data-table.exports.DataTableColumn.description": {
+    zh: "DataTable 的列定义。",
+  },
+  "api.data-table.exports.DataTableColumn.remarks": {
+    zh: "保持类似 antd 的列配置形状，组件内部会映射为 TanStack Table。",
+  },
+  "api.data-table.exports.DataTableFilterOption.description": {
+    zh: "数据表格列筛选的可选项。",
+  },
+  "api.data-table.exports.DataTablePaginationConfig.description": {
+    zh: "DataTable 的分页配置。",
+  },
+  "api.data-table.exports.DataTableProps.description": {
+    zh: "贴纸数据表格的 props。",
+  },
+  "api.data-table.exports.DataTableRowSelection.description": {
+    zh: "DataTable 的行选择配置。",
+  },
+  "api.data-table.types.DataTableChangeState.description": {
+    zh: "表格状态变化时传出的状态载荷。",
+  },
+  "api.data-table.types.DataTableChangeState.members.filters.description": {
+    zh: "当前激活的列筛选状态。",
+  },
+  "api.data-table.types.DataTableChangeState.members.pagination.description": {
+    zh: "当前分页状态。",
+  },
+  "api.data-table.types.DataTableChangeState.members.selectedRowKeys.description":
+    {
+      zh: "当前选中的行 key。",
+    },
+  "api.data-table.types.DataTableChangeState.members.selectedRows.description":
+    {
+      zh: "从 dataSource 中解析出的当前选中记录。",
+    },
+  "api.data-table.types.DataTableChangeState.members.sorting.description": {
+    zh: "当前激活的排序状态。",
+  },
+  "api.data-table.types.DataTableClassNames.description": {
+    zh: "数据表格聚合界面的插槽 className。",
+  },
+  "api.data-table.types.DataTableClassNames.members.cell.description": {
+    zh: "应用到表格主体单元格的 className。",
+  },
+  "api.data-table.types.DataTableClassNames.members.emptyState.description": {
+    zh: "应用到空状态或加载行的 className。",
+  },
+  "api.data-table.types.DataTableClassNames.members.filter.description": {
+    zh: "应用到表头筛选控件的 className。",
+  },
+  "api.data-table.types.DataTableClassNames.members.headerCell.description": {
+    zh: "应用到表头单元格的 className。",
+  },
+  "api.data-table.types.DataTableClassNames.members.loadingSummary.description":
+    {
+      zh: "应用到加载摘要徽章的 className。",
+    },
+  "api.data-table.types.DataTableClassNames.members.pagination.description": {
+    zh: "应用到分页页脚的 className。",
+  },
+  "api.data-table.types.DataTableClassNames.members.row.description": {
+    zh: "应用到表格主体行的 className。",
+  },
+  "api.data-table.types.DataTableClassNames.members.selectionSummary.description":
+    {
+      zh: "应用到选中行摘要的 className。",
+    },
+  "api.data-table.types.DataTableClassNames.members.table.description": {
+    zh: "应用到原生 table 元素的 className。",
+  },
+  "api.data-table.types.DataTableClassNames.members.tableContainer.description":
+    {
+      zh: "应用到表格滚动外框的 className。",
+    },
+  "api.data-table.types.DataTableClassNames.members.toolbar.description": {
+    zh: "应用到顶部工具栏的 className。",
+  },
+  "api.data-table.types.DataTableColumn.description": {
+    zh: "DataTable 的列定义。",
+  },
+  "api.data-table.types.DataTableColumn.remarks": {
+    zh: "保持类似 antd 的列配置形状，组件内部会映射为 TanStack Table。",
+  },
+  "api.data-table.types.DataTableColumn.members.align.description": {
+    zh: "设置表头和主体单元格的对齐方式。",
+  },
+  "api.data-table.types.DataTableColumn.members.className.description": {
+    zh: "应用到该列主体单元格的 className。",
+  },
+  "api.data-table.types.DataTableColumn.members.dataIndex.description": {
+    zh: "用于读取列值的属性 key 或访问器函数。",
+  },
+  "api.data-table.types.DataTableColumn.members.filterable.description": {
+    zh: "为该列启用文本筛选输入框。",
+  },
+  "api.data-table.types.DataTableColumn.members.filterFn.description": {
+    zh: "该列的自定义筛选判断函数。",
+  },
+  "api.data-table.types.DataTableColumn.members.filterPlaceholder.description":
+    {
+      zh: "文本筛选输入框的占位文案。",
+    },
+  "api.data-table.types.DataTableColumn.members.filters.description": {
+    zh: "该列的下拉筛选选项。",
+  },
+  "api.data-table.types.DataTableColumn.members.headerClassName.description": {
+    zh: "应用到该列表头单元格的 className。",
+  },
+  "api.data-table.types.DataTableColumn.members.key.description": {
+    zh: "稳定列 key。当 dataIndex 是访问器函数时需要提供。",
+  },
+  "api.data-table.types.DataTableColumn.members.render.description": {
+    zh: "自定义单元格渲染函数。",
+  },
+  "api.data-table.types.DataTableColumn.members.sortable.description": {
+    zh: "启用该列排序。",
+  },
+  "api.data-table.types.DataTableColumn.members.title.description": {
+    zh: "表头内容。",
+  },
+  "api.data-table.types.DataTableColumn.members.width.description": {
+    zh: "应用到该列表头和主体单元格的宽度。",
+  },
+  "api.data-table.types.DataTableFilterOption.description": {
+    zh: "数据表格列筛选的可选项。",
+  },
+  "api.data-table.types.DataTableFilterOption.members.label.description": {
+    zh: "可见的选项标签。",
+  },
+  "api.data-table.types.DataTableFilterOption.members.value.description": {
+    zh: "写入列筛选状态的选项值。",
+  },
+  "api.data-table.types.DataTablePaginationConfig.description": {
+    zh: "DataTable 的分页配置。",
+  },
+  "api.data-table.types.DataTablePaginationConfig.members.defaultPageIndex.description":
+    {
+      zh: "初始的零基页码。",
+    },
+  "api.data-table.types.DataTablePaginationConfig.members.defaultPageSize.description":
+    {
+      zh: "初始每页行数。",
+    },
+  "api.data-table.types.DataTablePaginationConfig.members.pageSizeOptions.description":
+    {
+      zh: "页脚每页行数选择器展示的选项。",
+    },
+  "api.data-table.types.DataTablePaginationConfig.members.showSizeChanger.description":
+    {
+      zh: "是否展示每页行数选择器。",
+    },
+  "api.data-table.types.DataTableProps.description": {
+    zh: "贴纸数据表格的 props。",
+  },
+  "api.data-table.types.DataTableProps.members.classNames.description": {
+    zh: "聚合表格各插槽的 className。",
+  },
+  "api.data-table.types.DataTableProps.members.columns.description": {
+    zh: "列定义。",
+  },
+  "api.data-table.types.DataTableProps.members.dataSource.description": {
+    zh: "表格渲染的记录数组。",
+  },
+  "api.data-table.types.DataTableProps.members.emptyText.description": {
+    zh: "当前行模型为空时显示的空状态内容。",
+  },
+  "api.data-table.types.DataTableProps.members.loading.description": {
+    zh: "在数据待处理时展示加载状态。",
+  },
+  "api.data-table.types.DataTableProps.members.onChange.description": {
+    zh: "当表格状态变化时触发。",
+  },
+  "api.data-table.types.DataTableProps.members.pagination.description": {
+    zh: "分页配置。传入 false 可渲染全部筛选后的行。",
+  },
+  "api.data-table.types.DataTableProps.members.rowKey.description": {
+    zh: "行 key 属性或解析函数。",
+  },
+  "api.data-table.types.DataTableProps.members.rowSelection.description": {
+    zh: "启用行选择。传入对象可控制选中 key 或行复选框行为。",
+  },
+  "api.data-table.types.DataTableProps.members.toolbar.description": {
+    zh: "渲染在表格上方的额外内容。",
+  },
+  "api.data-table.types.DataTableRowSelection.description": {
+    zh: "DataTable 的行选择配置。",
+  },
+  "api.data-table.types.DataTableRowSelection.members.defaultSelectedRowKeys.description":
+    {
+      zh: "非受控选择的初始选中行 key。",
+    },
+  "api.data-table.types.DataTableRowSelection.members.getCheckboxProps.description":
+    {
+      zh: "每行复选框的 props。返回 disabled 可阻止选择该行。",
+    },
+  "api.data-table.types.DataTableRowSelection.members.onChange.description": {
+    zh: "当选中行 key 变化时触发。",
+  },
+  "api.data-table.types.DataTableRowSelection.members.selectedRowKeys.description":
+    {
+      zh: "受控的选中行 key。",
+    },
 })
 
 export { ZH_PREVIEW_API_DOC_MESSAGES }

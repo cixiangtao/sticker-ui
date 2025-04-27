@@ -116,6 +116,19 @@ const routes = defineRoutes([
   },
   {
     component: () =>
+      import("@/pages/components").then((module) => module.DataTablePage),
+    meta: {
+      emoji: "D",
+      navSection: "surfaces-data",
+      order: 52,
+      title: "DataTable",
+      descriptionKey:
+        "preview.components.antdLikeDataTablesForSortingFilteringPaginationAndRowSelection",
+    },
+    path: "/components/data-table",
+  },
+  {
+    component: () =>
       import("@/pages/components").then((module) => module.TagPage),
     meta: {
       emoji: "T",

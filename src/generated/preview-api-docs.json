@@ -2399,6 +2399,485 @@
     ],
     "variants": []
   },
+  "data-table": {
+    "components": [
+      {
+        "descriptionKey": "api.data-table.components.DataTable.description",
+        "name": "DataTable",
+        "props": { "inherits": [], "members": [], "type": "DataTableProps<TData>" }
+      }
+    ],
+    "descriptionKey": "api.data-table.description",
+    "exports": [
+      {
+        "descriptionKey": "api.data-table.exports.DataTable.description",
+        "kind": "component",
+        "name": "DataTable"
+      },
+      {
+        "descriptionKey": "api.data-table.exports.DataTableChangeState.description",
+        "kind": "interface",
+        "name": "DataTableChangeState"
+      },
+      {
+        "descriptionKey": "api.data-table.exports.DataTableClassNames.description",
+        "kind": "interface",
+        "name": "DataTableClassNames"
+      },
+      {
+        "descriptionKey": "api.data-table.exports.DataTableColumn.description",
+        "remarksKey": "api.data-table.exports.DataTableColumn.remarks",
+        "kind": "interface",
+        "name": "DataTableColumn"
+      },
+      {
+        "descriptionKey": "api.data-table.exports.DataTableFilterOption.description",
+        "kind": "interface",
+        "name": "DataTableFilterOption"
+      },
+      {
+        "descriptionKey": "api.data-table.exports.DataTablePaginationConfig.description",
+        "kind": "interface",
+        "name": "DataTablePaginationConfig"
+      },
+      {
+        "descriptionKey": "api.data-table.exports.DataTableProps.description",
+        "kind": "interface",
+        "name": "DataTableProps"
+      },
+      {
+        "descriptionKey": "api.data-table.exports.DataTableRowSelection.description",
+        "kind": "interface",
+        "name": "DataTableRowSelection"
+      }
+    ],
+    "name": "data-table",
+    "sourcePath": "src/components/ui/data-table.tsx",
+    "title": "Sticker DataTable",
+    "types": [
+      {
+        "descriptionKey": "api.data-table.types.DataTableChangeState.description",
+        "inherits": [],
+        "kind": "interface",
+        "members": [
+          {
+            "descriptionKey": "api.data-table.types.DataTableChangeState.members.filters.description",
+            "name": "filters",
+            "optional": false,
+            "required": true,
+            "type": "ColumnFiltersState"
+          },
+          {
+            "descriptionKey": "api.data-table.types.DataTableChangeState.members.pagination.description",
+            "name": "pagination",
+            "optional": false,
+            "required": true,
+            "type": "PaginationState"
+          },
+          {
+            "descriptionKey": "api.data-table.types.DataTableChangeState.members.selectedRowKeys.description",
+            "name": "selectedRowKeys",
+            "optional": false,
+            "required": true,
+            "type": "string[]"
+          },
+          {
+            "descriptionKey": "api.data-table.types.DataTableChangeState.members.selectedRows.description",
+            "name": "selectedRows",
+            "optional": false,
+            "required": true,
+            "type": "TData[]"
+          },
+          {
+            "descriptionKey": "api.data-table.types.DataTableChangeState.members.sorting.description",
+            "name": "sorting",
+            "optional": false,
+            "required": true,
+            "type": "SortingState"
+          }
+        ],
+        "name": "DataTableChangeState"
+      },
+      {
+        "descriptionKey": "api.data-table.types.DataTableClassNames.description",
+        "inherits": [],
+        "kind": "interface",
+        "members": [
+          {
+            "descriptionKey": "api.data-table.types.DataTableClassNames.members.cell.description",
+            "name": "cell",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "descriptionKey": "api.data-table.types.DataTableClassNames.members.emptyState.description",
+            "name": "emptyState",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "descriptionKey": "api.data-table.types.DataTableClassNames.members.filter.description",
+            "name": "filter",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "descriptionKey": "api.data-table.types.DataTableClassNames.members.headerCell.description",
+            "name": "headerCell",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "descriptionKey": "api.data-table.types.DataTableClassNames.members.loadingSummary.description",
+            "name": "loadingSummary",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "descriptionKey": "api.data-table.types.DataTableClassNames.members.pagination.description",
+            "name": "pagination",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "descriptionKey": "api.data-table.types.DataTableClassNames.members.row.description",
+            "name": "row",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "descriptionKey": "api.data-table.types.DataTableClassNames.members.selectionSummary.description",
+            "name": "selectionSummary",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "descriptionKey": "api.data-table.types.DataTableClassNames.members.table.description",
+            "name": "table",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "descriptionKey": "api.data-table.types.DataTableClassNames.members.tableContainer.description",
+            "name": "tableContainer",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "descriptionKey": "api.data-table.types.DataTableClassNames.members.toolbar.description",
+            "name": "toolbar",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "name": "DataTableClassNames"
+      },
+      {
+        "descriptionKey": "api.data-table.types.DataTableColumn.description",
+        "remarksKey": "api.data-table.types.DataTableColumn.remarks",
+        "inherits": [],
+        "kind": "interface",
+        "members": [
+          {
+            "defaultValue": "\"left\"",
+            "descriptionKey": "api.data-table.types.DataTableColumn.members.align.description",
+            "name": "align",
+            "optional": true,
+            "required": false,
+            "type": "DataTableAlign"
+          },
+          {
+            "descriptionKey": "api.data-table.types.DataTableColumn.members.className.description",
+            "name": "className",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "descriptionKey": "api.data-table.types.DataTableColumn.members.dataIndex.description",
+            "name": "dataIndex",
+            "optional": true,
+            "required": false,
+            "type": "DataTableDataIndex<TData>"
+          },
+          {
+            "defaultValue": "false",
+            "descriptionKey": "api.data-table.types.DataTableColumn.members.filterable.description",
+            "name": "filterable",
+            "optional": true,
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "descriptionKey": "api.data-table.types.DataTableColumn.members.filterFn.description",
+            "name": "filterFn",
+            "optional": true,
+            "required": false,
+            "type": "(value: unknown, record: TData, filterValue: unknown) => boolean"
+          },
+          {
+            "defaultValue": "\"Filter...\"",
+            "descriptionKey": "api.data-table.types.DataTableColumn.members.filterPlaceholder.description",
+            "name": "filterPlaceholder",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "descriptionKey": "api.data-table.types.DataTableColumn.members.filters.description",
+            "name": "filters",
+            "optional": true,
+            "required": false,
+            "type": "DataTableFilterOption[]"
+          },
+          {
+            "descriptionKey": "api.data-table.types.DataTableColumn.members.headerClassName.description",
+            "name": "headerClassName",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "descriptionKey": "api.data-table.types.DataTableColumn.members.key.description",
+            "name": "key",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "descriptionKey": "api.data-table.types.DataTableColumn.members.render.description",
+            "name": "render",
+            "optional": true,
+            "required": false,
+            "type": "(value: unknown, record: TData, index: number) => React.ReactNode"
+          },
+          {
+            "defaultValue": "false",
+            "descriptionKey": "api.data-table.types.DataTableColumn.members.sortable.description",
+            "name": "sortable",
+            "optional": true,
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "descriptionKey": "api.data-table.types.DataTableColumn.members.title.description",
+            "name": "title",
+            "optional": false,
+            "required": true,
+            "type": "React.ReactNode"
+          },
+          {
+            "descriptionKey": "api.data-table.types.DataTableColumn.members.width.description",
+            "name": "width",
+            "optional": true,
+            "required": false,
+            "type": "number | string"
+          }
+        ],
+        "name": "DataTableColumn"
+      },
+      {
+        "descriptionKey": "api.data-table.types.DataTableFilterOption.description",
+        "inherits": [],
+        "kind": "interface",
+        "members": [
+          {
+            "descriptionKey": "api.data-table.types.DataTableFilterOption.members.label.description",
+            "name": "label",
+            "optional": false,
+            "required": true,
+            "type": "React.ReactNode"
+          },
+          {
+            "descriptionKey": "api.data-table.types.DataTableFilterOption.members.value.description",
+            "name": "value",
+            "optional": false,
+            "required": true,
+            "type": "DataTableFilterValue"
+          }
+        ],
+        "name": "DataTableFilterOption"
+      },
+      {
+        "inherits": [],
+        "kind": "type",
+        "members": [],
+        "name": "DataTableFilterValue",
+        "type": "number | string"
+      },
+      {
+        "descriptionKey": "api.data-table.types.DataTablePaginationConfig.description",
+        "inherits": [],
+        "kind": "interface",
+        "members": [
+          {
+            "defaultValue": "0",
+            "descriptionKey": "api.data-table.types.DataTablePaginationConfig.members.defaultPageIndex.description",
+            "name": "defaultPageIndex",
+            "optional": true,
+            "required": false,
+            "type": "number"
+          },
+          {
+            "defaultValue": "10",
+            "descriptionKey": "api.data-table.types.DataTablePaginationConfig.members.defaultPageSize.description",
+            "name": "defaultPageSize",
+            "optional": true,
+            "required": false,
+            "type": "number"
+          },
+          {
+            "defaultValue": "[5, 10, 20, 50]",
+            "descriptionKey": "api.data-table.types.DataTablePaginationConfig.members.pageSizeOptions.description",
+            "name": "pageSizeOptions",
+            "optional": true,
+            "required": false,
+            "type": "number[]"
+          },
+          {
+            "defaultValue": "true",
+            "descriptionKey": "api.data-table.types.DataTablePaginationConfig.members.showSizeChanger.description",
+            "name": "showSizeChanger",
+            "optional": true,
+            "required": false,
+            "type": "boolean"
+          }
+        ],
+        "name": "DataTablePaginationConfig"
+      },
+      {
+        "descriptionKey": "api.data-table.types.DataTableProps.description",
+        "inherits": ["Omit< React.HTMLAttributes<HTMLDivElement>, \"onChange\" >"],
+        "kind": "interface",
+        "members": [
+          {
+            "descriptionKey": "api.data-table.types.DataTableProps.members.classNames.description",
+            "name": "classNames",
+            "optional": true,
+            "required": false,
+            "type": "DataTableClassNames"
+          },
+          {
+            "descriptionKey": "api.data-table.types.DataTableProps.members.columns.description",
+            "name": "columns",
+            "optional": false,
+            "required": true,
+            "type": "DataTableColumn<TData>[]"
+          },
+          {
+            "descriptionKey": "api.data-table.types.DataTableProps.members.dataSource.description",
+            "name": "dataSource",
+            "optional": false,
+            "required": true,
+            "type": "TData[]"
+          },
+          {
+            "defaultValue": "\"No data\"",
+            "descriptionKey": "api.data-table.types.DataTableProps.members.emptyText.description",
+            "name": "emptyText",
+            "optional": true,
+            "required": false,
+            "type": "React.ReactNode"
+          },
+          {
+            "defaultValue": "false",
+            "descriptionKey": "api.data-table.types.DataTableProps.members.loading.description",
+            "name": "loading",
+            "optional": true,
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "descriptionKey": "api.data-table.types.DataTableProps.members.onChange.description",
+            "name": "onChange",
+            "optional": true,
+            "required": false,
+            "type": "(state: DataTableChangeState<TData>) => void"
+          },
+          {
+            "defaultValue": "true",
+            "descriptionKey": "api.data-table.types.DataTableProps.members.pagination.description",
+            "name": "pagination",
+            "optional": true,
+            "required": false,
+            "type": "boolean | DataTablePaginationConfig"
+          },
+          {
+            "defaultValue": "row index",
+            "descriptionKey": "api.data-table.types.DataTableProps.members.rowKey.description",
+            "name": "rowKey",
+            "optional": true,
+            "required": false,
+            "type": "DataTableRowKey<TData>"
+          },
+          {
+            "defaultValue": "false",
+            "descriptionKey": "api.data-table.types.DataTableProps.members.rowSelection.description",
+            "name": "rowSelection",
+            "optional": true,
+            "required": false,
+            "type": "boolean | DataTableRowSelection<TData>"
+          },
+          {
+            "descriptionKey": "api.data-table.types.DataTableProps.members.toolbar.description",
+            "name": "toolbar",
+            "optional": true,
+            "required": false,
+            "type": "React.ReactNode"
+          }
+        ],
+        "name": "DataTableProps"
+      },
+      {
+        "descriptionKey": "api.data-table.types.DataTableRowSelection.description",
+        "inherits": [],
+        "kind": "interface",
+        "members": [
+          {
+            "descriptionKey": "api.data-table.types.DataTableRowSelection.members.defaultSelectedRowKeys.description",
+            "name": "defaultSelectedRowKeys",
+            "optional": true,
+            "required": false,
+            "type": "string[]"
+          },
+          {
+            "descriptionKey": "api.data-table.types.DataTableRowSelection.members.getCheckboxProps.description",
+            "name": "getCheckboxProps",
+            "optional": true,
+            "required": false,
+            "type": "(record: TData) => { \"aria-label\"?: string disabled?: boolean }"
+          },
+          {
+            "descriptionKey": "api.data-table.types.DataTableRowSelection.members.onChange.description",
+            "name": "onChange",
+            "optional": true,
+            "required": false,
+            "type": "(selectedRowKeys: string[], selectedRows: TData[]) => void"
+          },
+          {
+            "descriptionKey": "api.data-table.types.DataTableRowSelection.members.selectedRowKeys.description",
+            "name": "selectedRowKeys",
+            "optional": true,
+            "required": false,
+            "type": "string[]"
+          }
+        ],
+        "name": "DataTableRowSelection"
+      }
+    ],
+    "variants": []
+  },
   "tag": {
     "components": [
       {
@@ -5483,7 +5962,7 @@
               "name": "aria-invalid",
               "optional": true,
               "required": false,
-              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
+              "type": "boolean | \"false\" | \"true\" | \"grammar\" | \"spelling\""
             },
             {
               "descriptionKey": "api.common.inheritedProps.aria-label.description",

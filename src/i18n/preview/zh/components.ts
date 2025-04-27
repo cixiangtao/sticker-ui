@@ -126,8 +126,15 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   "preview.components.antdStyleFieldStateAndValidationForStickerForms": {
     zh: "用于贴纸表单的 Ant Design 风格字段状态与校验。",
   },
+  "preview.components.antdLikeDataTablesForSortingFilteringPaginationAndRowSelection":
+    {
+      zh: "用于排序、筛选、分页和行选择的 Ant Design 风格数据表格。",
+    },
   "preview.components.background": {
     zh: "背景",
+  },
+  "preview.components.basicDataTable": {
+    zh: "基础数据表格",
   },
   "preview.components.basicField": {
     zh: "基础字段",
@@ -277,6 +284,10 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
     {
       zh: "将标签与更克制的边框组合，用于路由卡片、筛选器和 registry 详情面板。",
     },
+  "preview.components.columnsMapRecordsIntoSortablePaginatedRowsWithStickerControls":
+    {
+      zh: "列配置会把记录映射为可排序、可分页的行，并搭配贴纸风格控制项。",
+    },
   "preview.components.compareEachSemanticColorAcrossSolidFilledAndOutlinedTags":
     {
       zh: "对比每个语义色在 solid、filled 和 outlined 标签中的效果。",
@@ -366,6 +377,13 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   "preview.components.loadingDemos": {
     zh: "正在加载示例...",
   },
+  "preview.components.loadingAndEmpty": {
+    zh: "加载与空状态",
+  },
+  "preview.components.loadingAndEmptyStatesKeepDenseTablesAccessibleWithoutReplacingTheUnderlyingColumnModel":
+    {
+      zh: "加载与空状态保持密集表格可访问，同时不替换底层列模型。",
+    },
   "preview.components.metadataRow": {
     zh: "元数据行",
   },
@@ -420,6 +438,10 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
     {
       zh: "requiredMark 处理字段必填语义，FieldMarker 则用于自定义状态胶囊。",
     },
+  "preview.components.rowSelectionAndColumnFiltersStayControlledWhileTheTableKeepsPaginationPredictable":
+    {
+      zh: "行选择和列筛选可保持受控，同时表格分页仍然可预期。",
+    },
   "preview.components.rounded": {
     zh: "圆角",
   },
@@ -436,6 +458,9 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   },
   "preview.components.semanticElements": {
     zh: "语义元素",
+  },
+  "preview.components.selectionAndFilters": {
+    zh: "选择与筛选",
   },
   "preview.components.shadcnInstall": {
     zh: "shadcn 安装",

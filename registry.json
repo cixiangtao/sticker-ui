@@ -106,6 +106,29 @@
       ]
     },
     {
+      "name": "data-table",
+      "type": "registry:ui",
+      "title": "Sticker DataTable",
+      "description": "An antd-like data table with sorting, filtering, pagination, and row selection.",
+      "dependencies": ["@tanstack/react-table", "lucide-react"],
+      "registryDependencies": [
+        "button",
+        "checkbox",
+        "input",
+        "select",
+        "spinner",
+        "table",
+        "utils"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/data-table.tsx",
+          "target": "@ui/data-table.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "tag",
       "type": "registry:ui",
       "title": "Sticker Tag",

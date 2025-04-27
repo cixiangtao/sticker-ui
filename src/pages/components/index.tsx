@@ -41,6 +41,7 @@ const BadgePage = createRegistryComponentPage("badge")
 const ButtonPage = createRegistryComponentPage("button")
 const CardPage = createRegistryComponentPage("card")
 const CheckboxPage = createRegistryComponentPage("checkbox")
+const DataTablePage = createRegistryComponentPage("data-table")
 const DialogPage = createRegistryComponentPage("dialog")
 const DividerPage = createRegistryComponentPage("divider")
 const FieldPage = createRegistryComponentPage("field")
@@ -67,6 +68,7 @@ export {
   ButtonPage,
   CardPage,
   CheckboxPage,
+  DataTablePage,
   DialogPage,
   DividerPage,
   FieldPage,
