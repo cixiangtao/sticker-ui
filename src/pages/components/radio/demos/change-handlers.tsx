@@ -4,7 +4,7 @@ import { RadioGroup, RadioGroupItem } from "sticker-ui"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
-  className: "bg-fill-secondary",
+  className: "bg-su-fill-secondary",
   order: 40,
   titleKey: "preview.components.changeHandlers",
   descriptionKey:
@@ -32,7 +32,7 @@ function Demo() {
           <RadioGroupItem key={itemValue} label={label} value={itemValue} />
         ))}
       </RadioGroup>
-      <div className="rounded-sticker-lg border border-ink bg-surface px-3 py-2 text-sm font-extrabold">
+      <div className="rounded-su-lg border border-su-ink bg-su-surface px-3 py-2 text-sm font-extrabold">
         Selected: {value} / {lastEvent}
       </div>
     </div>

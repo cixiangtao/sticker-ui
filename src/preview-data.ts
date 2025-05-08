@@ -125,27 +125,27 @@ const COLOR_TOKEN_GROUPS = [
   {
     tokens: [
       {
-        name: "--color-ink",
+        name: "--color-su-ink",
         value: "#2e3038",
         labelKey: "preview.components.ink",
       },
       {
-        name: "--color-paper",
+        name: "--color-su-paper",
         value: "#fffdf7",
         labelKey: "preview.components.paper",
       },
       {
-        name: "--color-canvas",
+        name: "--color-su-canvas",
         value: "#fff7df",
         labelKey: "preview.components.canvas",
       },
       {
-        name: "--color-surface",
+        name: "--color-su-surface",
         value: "#ffffff",
         labelKey: "preview.components.surface",
       },
       {
-        name: "--color-surface-muted",
+        name: "--color-su-surface-muted",
         value: "#f1efe6",
         labelKey: "preview.components.surfaceMuted",
       },
@@ -157,64 +157,27 @@ const COLOR_TOKEN_GROUPS = [
   {
     tokens: [
       {
-        name: "--color-background",
-        value: "var(--color-canvas)",
-        labelKey: "preview.components.background",
-      },
-      {
-        name: "--color-foreground",
-        value: "var(--color-ink)",
-        labelKey: "preview.components.foreground",
-      },
-      {
-        name: "--color-primary",
-        value: "var(--color-fill-default)",
-        labelKey: "preview.components.primary",
-      },
-      {
-        name: "--color-primary-foreground",
-        value: "var(--color-ink)",
-        labelKey: "preview.components.primaryForeground",
-      },
-      {
-        name: "--color-border",
-        value: "var(--color-ink)",
-        labelKey: "preview.components.border",
-      },
-      {
-        name: "--color-ring",
-        value: "var(--color-primary)",
-        labelKey: "preview.components.ring",
-      },
-    ],
-    descriptionKey:
-      "preview.components.themeAliasesConsumedByTailwindAndAppLevelSurfaces",
-    labelKey: "preview.components.aliases",
-  },
-  {
-    tokens: [
-      {
-        name: "--color-accent-info",
-        value: "#4ea8de",
-        labelKey: "preview.components.info",
-      },
-      {
-        name: "--color-accent-secondary",
+        name: "--color-su-accent-secondary",
         value: "#9b5de5",
         labelKey: "preview.components.secondary",
       },
       {
-        name: "--color-accent-success",
+        name: "--color-su-accent-info",
+        value: "#4ea8de",
+        labelKey: "preview.components.info",
+      },
+      {
+        name: "--color-su-accent-success",
         value: "#00b894",
         labelKey: "preview.components.success",
       },
       {
-        name: "--color-accent-warning",
+        name: "--color-su-accent-warning",
         value: "#f6a609",
         labelKey: "preview.components.warning",
       },
       {
-        name: "--color-accent-danger",
+        name: "--color-su-accent-danger",
         value: "#ef476f",
         labelKey: "preview.components.danger",
       },
@@ -226,64 +189,64 @@ const COLOR_TOKEN_GROUPS = [
   {
     tokens: [
       {
-        name: "--color-fill-default",
+        name: "--color-su-fill-default",
         value: "#ffe08a",
         labelKey: "preview.components.default",
       },
       {
-        name: "--color-fill-default-soft",
+        name: "--color-su-fill-default-soft",
         value: "#fff3bf",
         labelKey: "preview.components.defaultSoft",
       },
       {
-        name: "--color-fill-secondary",
+        name: "--color-su-fill-secondary",
         value: "#f6efff",
         labelKey: "preview.components.secondary",
       },
       {
-        name: "--color-fill-secondary-strong",
+        name: "--color-su-fill-secondary-strong",
         value: "#eadbff",
         labelKey: "preview.components.secondaryStrong",
       },
       {
-        name: "--color-fill-danger",
-        value: "#ff9bb2",
-        labelKey: "preview.components.danger",
-      },
-      {
-        name: "--color-fill-info",
+        name: "--color-su-fill-info",
         value: "#eaf7ff",
         labelKey: "preview.components.info",
       },
       {
-        name: "--color-fill-info-strong",
+        name: "--color-su-fill-info-strong",
         value: "#cdeeff",
         labelKey: "preview.components.infoStrong",
       },
       {
-        name: "--color-fill-success",
+        name: "--color-su-fill-success",
         value: "#eafbf5",
         labelKey: "preview.components.success",
       },
       {
-        name: "--color-fill-success-strong",
+        name: "--color-su-fill-success-strong",
         value: "#cff8e6",
         labelKey: "preview.components.successStrong",
       },
       {
-        name: "--color-fill-warning",
+        name: "--color-su-fill-warning",
         value: "#fff6dc",
         labelKey: "preview.components.warning",
       },
       {
-        name: "--color-fill-warning-strong",
+        name: "--color-su-fill-warning-strong",
         value: "#ffe9a8",
         labelKey: "preview.components.warningStrong",
       },
       {
-        name: "--color-fill-danger-soft",
+        name: "--color-su-fill-danger",
         value: "#fff0f4",
-        labelKey: "preview.components.dangerSoft",
+        labelKey: "preview.components.danger",
+      },
+      {
+        name: "--color-su-fill-danger-strong",
+        value: "#ff9bb2",
+        labelKey: "preview.components.dangerStrong",
       },
     ],
     descriptionKey:
@@ -293,52 +256,42 @@ const COLOR_TOKEN_GROUPS = [
   {
     tokens: [
       {
-        name: "--color-text-muted",
+        name: "--color-su-fg-muted",
         value: "#5b5e6a",
         labelKey: "preview.components.muted",
       },
       {
-        name: "--color-text-subtle",
+        name: "--color-su-fg-subtle",
         value: "#696b76",
         labelKey: "preview.components.subtle",
       },
       {
-        name: "--color-text-placeholder",
+        name: "--color-su-fg-placeholder",
         value: "#858894",
         labelKey: "preview.components.placeholder",
       },
       {
-        name: "--color-text-info",
-        value: "#126b9a",
-        labelKey: "preview.components.info",
-      },
-      {
-        name: "--color-text-secondary",
+        name: "--color-su-fg-secondary",
         value: "#6930a8",
         labelKey: "preview.components.secondary",
       },
       {
-        name: "--color-text-success",
+        name: "--color-su-fg-info",
+        value: "#126b9a",
+        labelKey: "preview.components.info",
+      },
+      {
+        name: "--color-su-fg-success",
         value: "#007b63",
         labelKey: "preview.components.success",
       },
       {
-        name: "--color-text-success-muted",
-        value: "#3d5f52",
-        labelKey: "preview.components.successMuted",
-      },
-      {
-        name: "--color-text-warning",
+        name: "--color-su-fg-warning",
         value: "#9a6500",
         labelKey: "preview.components.warning",
       },
       {
-        name: "--color-text-warning-muted",
-        value: "#8b6f24",
-        labelKey: "preview.components.warningMuted",
-      },
-      {
-        name: "--color-text-danger",
+        name: "--color-su-fg-danger",
         value: "#a61e42",
         labelKey: "preview.components.danger",
       },
@@ -350,15 +303,20 @@ const COLOR_TOKEN_GROUPS = [
   {
     tokens: [
       {
-        name: "--color-overlay",
+        name: "--color-su-ring",
+        value: "var(--color-su-fill-default)",
+        labelKey: "preview.components.ring",
+      },
+      {
+        name: "--color-su-overlay",
         preview:
-          "linear-gradient(135deg, var(--color-overlay), var(--color-overlay)), var(--color-fill-default-soft)",
+          "linear-gradient(135deg, var(--color-su-overlay), var(--color-su-overlay)), var(--color-su-fill-default-soft)",
         value: "rgb(46 48 56 / 0.35)",
         labelKey: "preview.components.overlay",
       },
     ],
     descriptionKey:
-      "preview.components.utilityColorForScrimsAndLayeredPreviewOverlays",
+      "preview.components.utilityColorsForFocusRingsScrimsAndLayeredOverlays",
     labelKey: "preview.components.utility",
   },
 ] satisfies ColorTokenGroup[]

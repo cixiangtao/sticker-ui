@@ -4,7 +4,7 @@ import { Button, Form, Input, Tag } from "sticker-ui"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
-  className: "bg-fill-secondary",
+  className: "bg-su-fill-secondary",
   order: 30,
   titleKey: "preview.components.formInstance",
   descriptionKey:

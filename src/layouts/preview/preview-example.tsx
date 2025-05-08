@@ -52,10 +52,10 @@ function PreviewExample({
       <CardContent>
         <Demo />
         <Card>
-          <CardHeader className="bg-fill-secondary">
+          <CardHeader className="bg-su-fill-secondary">
             <div className="flex items-center justify-between">
               <div className="flex flex-col gap-1">
-                <div className="text-xs font-extrabold text-[#3D5F52] uppercase">
+                <div className="text-xs font-extrabold text-su-fg-success uppercase">
                   {tm("preview.components.exampleCode")}
                 </div>
                 <Tag as="code" color="default" variant="solid">

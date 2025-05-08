@@ -38,34 +38,34 @@ const switchSizeClassNames = {
 
 const switchToneClassNames = {
   danger: {
-    checked: "data-[state=checked]:bg-fill-danger",
-    fill: "bg-fill-danger-soft",
-    quiet: "bg-fill-danger-soft",
+    checked: "data-[state=checked]:bg-su-fill-danger-strong",
+    fill: "bg-su-fill-danger",
+    quiet: "bg-su-fill-danger",
   },
   default: {
-    checked: "data-[state=checked]:bg-fill-default",
-    fill: "bg-fill-default-soft",
-    quiet: "bg-surface-muted",
+    checked: "data-[state=checked]:bg-su-fill-default",
+    fill: "bg-su-fill-default-soft",
+    quiet: "bg-su-surface-muted",
   },
   info: {
-    checked: "data-[state=checked]:bg-fill-info",
-    fill: "bg-fill-info",
-    quiet: "bg-fill-info",
+    checked: "data-[state=checked]:bg-su-fill-info",
+    fill: "bg-su-fill-info",
+    quiet: "bg-su-fill-info",
   },
   secondary: {
-    checked: "data-[state=checked]:bg-fill-secondary",
-    fill: "bg-fill-secondary",
-    quiet: "bg-fill-secondary",
+    checked: "data-[state=checked]:bg-su-fill-secondary",
+    fill: "bg-su-fill-secondary",
+    quiet: "bg-su-fill-secondary",
   },
   success: {
-    checked: "data-[state=checked]:bg-fill-success",
-    fill: "bg-fill-success",
-    quiet: "bg-fill-success",
+    checked: "data-[state=checked]:bg-su-fill-success",
+    fill: "bg-su-fill-success",
+    quiet: "bg-su-fill-success",
   },
   warning: {
-    checked: "data-[state=checked]:bg-fill-warning",
-    fill: "bg-fill-warning",
-    quiet: "bg-fill-warning",
+    checked: "data-[state=checked]:bg-su-fill-warning",
+    fill: "bg-su-fill-warning",
+    quiet: "bg-su-fill-warning",
   },
 } satisfies Record<
   SwitchTone,
@@ -87,7 +87,7 @@ const switchVariants = ({
   variant = "outlined",
 }: SwitchVariantOptions = {}) =>
   cn(
-    "peer inline-flex shrink-0 cursor-pointer items-center border-2 border-ink bg-surface shadow-sticker-sm transition duration-150 outline-none focus-visible:shadow-sticker-md focus-visible:ring-[2px] focus-visible:ring-ring/65 aria-invalid:border-text-danger aria-invalid:bg-fill-danger-soft data-[state=checked]:shadow-sticker-md data-[state=unchecked]:bg-surface",
+    "peer inline-flex shrink-0 cursor-pointer items-center border-2 border-su-ink bg-su-surface shadow-su-sm transition duration-150 outline-none focus-visible:shadow-su-md focus-visible:ring-[2px] focus-visible:ring-su-ring/65 aria-invalid:border-su-fg-danger aria-invalid:bg-su-fill-danger data-[state=checked]:shadow-su-md data-[state=unchecked]:bg-su-surface",
     disabled && "cursor-not-allowed opacity-55",
     switchSizeClassNames[size].root,
     switchToneClassNames[tone].checked,
@@ -156,7 +156,7 @@ const Switch = React.forwardRef<
     >
       <SwitchPrimitive.Thumb
         className={cn(
-          "block rounded-full border-2 border-ink bg-surface shadow-sticker-xs transition-transform duration-150",
+          "block rounded-full border-2 border-su-ink bg-su-surface shadow-su-xs transition-transform duration-150",
           switchSizeClassNames[size].thumb,
         )}
         data-slot="switch-thumb"

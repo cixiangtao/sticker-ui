@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils"
  * Builds the sticker dialog content className from size and tone options.
  */
 const dialogContentVariants = cva(
-  "fixed top-1/2 left-1/2 z-50 grid max-h-[calc(100dvh-2rem)] w-[calc(100vw-2rem)] -translate-x-1/2 -translate-y-1/2 gap-4 overflow-y-auto rounded-sticker-panel border-[3px] border-ink text-ink shadow-sticker-2xl transition duration-150 outline-none",
+  "fixed top-1/2 left-1/2 z-50 grid max-h-[calc(100dvh-2rem)] w-[calc(100vw-2rem)] -translate-x-1/2 -translate-y-1/2 gap-4 overflow-y-auto rounded-su-panel border-[3px] border-su-ink text-su-ink shadow-su-2xl transition duration-150 outline-none",
   {
     defaultVariants: {
       size: "md",
@@ -22,10 +22,10 @@ const dialogContentVariants = cva(
         sm: "max-w-md p-4",
       },
       tone: {
-        default: "bg-paper",
-        info: "bg-fill-info",
-        secondary: "bg-fill-secondary",
-        warning: "bg-fill-warning",
+        default: "bg-su-paper",
+        info: "bg-su-fill-info",
+        secondary: "bg-su-fill-secondary",
+        warning: "bg-su-fill-warning",
       },
     },
   },
@@ -95,7 +95,7 @@ const DialogOverlay = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <DialogPrimitive.Overlay
     className={cn(
-      "fixed inset-0 z-50 bg-overlay transition duration-150",
+      "fixed inset-0 z-50 bg-su-overlay transition duration-150",
       className,
     )}
     data-slot="dialog-overlay"
@@ -166,7 +166,7 @@ const DialogContent = React.forwardRef<
         {showClose ? (
           <DialogClose
             aria-label={closeLabel}
-            className="absolute top-4 right-4 inline-flex size-9 cursor-pointer items-center justify-center rounded-sticker-md border-2 border-ink bg-surface text-ink shadow-sticker-sm transition duration-150 outline-none hover:-translate-y-0.5 hover:shadow-sticker-md focus-visible:ring-[2px] focus-visible:ring-ring/65 active:translate-x-0.5 active:translate-y-0.5 active:shadow-sticker-xs"
+            className="absolute top-4 right-4 inline-flex size-9 cursor-pointer items-center justify-center rounded-su-md border-2 border-su-ink bg-su-surface text-su-ink shadow-su-sm transition duration-150 outline-none hover:-translate-y-0.5 hover:shadow-su-md focus-visible:ring-[2px] focus-visible:ring-su-ring/65 active:translate-x-0.5 active:translate-y-0.5 active:shadow-su-xs"
           >
             <X aria-hidden="true" className="size-4 stroke-[3]" />
           </DialogClose>
@@ -197,7 +197,7 @@ function DialogFooter({ className, ...props }: React.ComponentProps<"footer">) {
   return (
     <footer
       className={cn(
-        "flex flex-col-reverse gap-2 border-t-2 border-ink pt-4 sm:flex-row sm:justify-end",
+        "flex flex-col-reverse gap-2 border-t-2 border-su-ink pt-4 sm:flex-row sm:justify-end",
         className,
       )}
       data-slot="dialog-footer"
@@ -214,7 +214,7 @@ const DialogTitle = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Title>
 >(({ className, ...props }, ref) => (
   <DialogPrimitive.Title
-    className={cn("m-0 text-xl leading-7 font-black text-ink", className)}
+    className={cn("m-0 text-xl leading-7 font-black text-su-ink", className)}
     data-slot="dialog-title"
     ref={ref}
     {...props}
@@ -231,7 +231,7 @@ const DialogDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <DialogPrimitive.Description
     className={cn(
-      "m-0 text-sm leading-6 font-medium text-text-muted",
+      "m-0 text-sm leading-6 font-medium text-su-fg-muted",
       className,
     )}
     data-slot="dialog-description"

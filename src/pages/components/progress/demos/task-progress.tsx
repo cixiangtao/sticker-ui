@@ -10,7 +10,7 @@ import {
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
-  className: "bg-fill-info",
+  className: "bg-su-fill-info",
   order: 10,
   titleKey: "preview.components.taskProgress",
   descriptionKey:
@@ -31,7 +31,7 @@ function Demo() {
           tone="success"
           value={72}
         />
-        <p className="text-sm leading-6 font-medium text-text-muted">
+        <p className="text-sm leading-6 font-medium text-su-fg-muted">
           Three new examples are ready, with one accessibility pass remaining.
         </p>
       </CardContent>

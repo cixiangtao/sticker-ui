@@ -11,7 +11,7 @@ type ProgressStyle = React.CSSProperties & {
  * Builds the sticker progress track className from size and tone.
  */
 const progressVariants = cva(
-  "relative overflow-hidden rounded-full border-2 border-ink bg-surface shadow-sticker-xs",
+  "relative overflow-hidden rounded-full border-2 border-su-ink bg-su-surface shadow-su-xs",
   {
     defaultVariants: {
       size: "md",
@@ -24,12 +24,12 @@ const progressVariants = cva(
         sm: "h-3",
       },
       tone: {
-        danger: "[--progress-fill:var(--color-fill-danger)]",
-        default: "[--progress-fill:var(--color-fill-default)]",
-        info: "[--progress-fill:var(--color-fill-info-strong)]",
-        secondary: "[--progress-fill:var(--color-fill-secondary-strong)]",
-        success: "[--progress-fill:var(--color-fill-success-strong)]",
-        warning: "[--progress-fill:var(--color-fill-warning-strong)]",
+        danger: "[--progress-fill:var(--color-su-fill-danger-strong)]",
+        default: "[--progress-fill:var(--color-su-fill-default)]",
+        info: "[--progress-fill:var(--color-su-fill-info-strong)]",
+        secondary: "[--progress-fill:var(--color-su-fill-secondary-strong)]",
+        success: "[--progress-fill:var(--color-su-fill-success-strong)]",
+        warning: "[--progress-fill:var(--color-su-fill-warning-strong)]",
       },
     },
   },
@@ -108,7 +108,7 @@ function Progress({
     >
       <div
         className={cn(
-          "h-full w-[var(--progress-value)] rounded-full border-r-2 border-ink bg-[var(--progress-fill)] transition-[width] duration-300",
+          "h-full w-[var(--progress-value)] rounded-full border-r-2 border-su-ink bg-[var(--progress-fill)] transition-[width] duration-300",
           percentage === null && "animate-pulse",
         )}
         data-slot="progress-indicator"
@@ -116,7 +116,7 @@ function Progress({
       {showValue && percentage !== null ? (
         <span
           className={cn(
-            "absolute inset-0 flex items-center justify-center font-black text-ink",
+            "absolute inset-0 flex items-center justify-center font-black text-su-ink",
             size === "lg" ? "text-xs" : "text-[10px]",
             size === "sm" && "sr-only",
           )}

@@ -10,7 +10,7 @@ import {
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
-  className: "bg-fill-warning",
+  className: "bg-su-fill-warning",
   order: 10,
   titleKey: "preview.common.apiReference",
   descriptionKey:
@@ -21,7 +21,7 @@ function Demo() {
   return (
     <Table
       className="min-w-[640px]"
-      containerClassName="bg-fill-info shadow-sticker-lg"
+      containerClassName="bg-su-fill-info shadow-su-lg"
     >
       <TableHeader>
         <TableRow>
@@ -40,9 +40,9 @@ function Demo() {
             <code className="text-xs font-bold">string</code>
           </TableCell>
           <TableCell>
-            <span className="text-xs font-bold text-text-placeholder">-</span>
+            <span className="text-xs font-bold text-su-fg-placeholder">-</span>
           </TableCell>
-          <TableCell className="leading-6 font-medium text-text-muted">
+          <TableCell className="leading-6 font-medium text-su-fg-muted">
             Applies classes to the native table element.
           </TableCell>
         </TableRow>
@@ -54,9 +54,9 @@ function Demo() {
             <code className="text-xs font-bold">string</code>
           </TableCell>
           <TableCell>
-            <span className="text-xs font-bold text-text-placeholder">-</span>
+            <span className="text-xs font-bold text-su-fg-placeholder">-</span>
           </TableCell>
-          <TableCell className="leading-6 font-medium text-text-muted">
+          <TableCell className="leading-6 font-medium text-su-fg-muted">
             Applies classes to the scrollable frame around the table.
           </TableCell>
         </TableRow>

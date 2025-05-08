@@ -35,7 +35,7 @@ The module shape is:
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
-  className: "bg-[#EAF7FF]",
+  className: "bg-su-fill-info",
   order: 10,
   titleKey: "preview.components.variants",
   descriptionKey: "preview.components.exampleDescriptionKey",

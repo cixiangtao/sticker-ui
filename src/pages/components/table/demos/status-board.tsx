@@ -13,7 +13,7 @@ import {
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
-  className: "rotate-[-1deg] bg-fill-info",
+  className: "rotate-[-1deg] bg-su-fill-info",
   order: 20,
   titleKey: "preview.components.statusBoard",
   descriptionKey:
@@ -40,7 +40,7 @@ function Demo() {
               Stable
             </Tag>
           </TableCell>
-          <TableCell className="font-medium text-text-muted">Core</TableCell>
+          <TableCell className="font-medium text-su-fg-muted">Core</TableCell>
           <TableCell className="text-right font-extrabold">2</TableCell>
         </TableRow>
         <TableRow>
@@ -50,7 +50,7 @@ function Demo() {
               New
             </Tag>
           </TableCell>
-          <TableCell className="font-medium text-text-muted">Docs</TableCell>
+          <TableCell className="font-medium text-su-fg-muted">Docs</TableCell>
           <TableCell className="text-right font-extrabold">2</TableCell>
         </TableRow>
       </TableBody>

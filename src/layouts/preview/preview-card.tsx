@@ -18,7 +18,7 @@ function Card({
   return (
     <StickerCard
       as="div"
-      className={cn("bg-surface", className)}
+      className={cn("bg-su-surface", className)}
       data-slot="preview-card"
       {...props}
     >
@@ -46,7 +46,7 @@ function CardDescription({
 }: ComponentProps<typeof StickerCardDescription>) {
   return (
     <StickerCardDescription
-      className={cn("text-ink/70", className)}
+      className={cn("text-su-ink/70", className)}
       data-slot="preview-card-description"
       {...props}
     />

@@ -3,7 +3,7 @@ import { Button, Popover, PopoverContent, PopoverTrigger } from "sticker-ui"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
-  className: "bg-fill-info",
+  className: "bg-su-fill-info",
   order: 30,
   titleKey: "preview.components.arrowsAndSides",
   descriptionKey:

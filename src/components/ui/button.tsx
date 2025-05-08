@@ -8,127 +8,128 @@ import { cn } from "@/lib/utils"
  * Builds the sticker button className from structure, color, and size variants.
  */
 const buttonVariants = cva(
-  "inline-flex shrink-0 cursor-pointer items-center justify-center gap-2 rounded-sticker-md border-2 leading-none font-extrabold transition duration-150 outline-none focus-visible:ring-[2px] focus-visible:ring-ring/65",
+  "inline-flex shrink-0 cursor-pointer items-center justify-center gap-2 rounded-su-md border-2 leading-none font-extrabold transition duration-150 outline-none focus-visible:ring-[2px] focus-visible:ring-su-ring/65",
   {
     compoundVariants: [
       {
-        class: "text-text-danger hover:bg-fill-danger-soft",
+        class: "text-su-fg-danger hover:bg-su-fill-danger",
         color: "danger",
         variant: ["dashed", "outlined", "text"],
       },
       {
-        class: "bg-fill-danger-soft text-text-danger hover:bg-fill-danger",
+        class:
+          "bg-su-fill-danger text-su-fg-danger hover:bg-su-fill-danger-strong",
         color: "danger",
         variant: "filled",
       },
       {
-        class: "text-text-danger hover:text-ink",
+        class: "text-su-fg-danger hover:text-su-ink",
         color: "danger",
         variant: "link",
       },
       {
-        class: "bg-fill-danger text-ink",
+        class: "bg-su-fill-danger-strong text-su-ink",
         color: "danger",
         variant: "solid",
       },
       {
-        class: "text-ink hover:bg-fill-warning",
+        class: "text-su-ink hover:bg-su-fill-warning",
         color: "default",
         variant: ["dashed", "outlined", "text"],
       },
       {
-        class: "bg-fill-warning text-ink hover:bg-fill-default",
+        class: "bg-su-fill-warning text-su-ink hover:bg-su-fill-default",
         color: "default",
         variant: "filled",
       },
       {
-        class: "text-ink hover:text-ink",
+        class: "text-su-ink hover:text-su-ink",
         color: "default",
         variant: "link",
       },
       {
-        class: "bg-fill-default text-ink",
+        class: "bg-su-fill-default text-su-ink",
         color: "default",
         variant: "solid",
       },
       {
-        class: "text-text-info hover:bg-fill-info",
+        class: "text-su-fg-info hover:bg-su-fill-info",
         color: "info",
         variant: ["dashed", "outlined", "text"],
       },
       {
-        class: "bg-fill-info text-text-info hover:bg-fill-info",
+        class: "bg-su-fill-info text-su-fg-info hover:bg-su-fill-info",
         color: "info",
         variant: "filled",
       },
       {
-        class: "text-text-info hover:text-ink",
+        class: "text-su-fg-info hover:text-su-ink",
         color: "info",
         variant: "link",
       },
       {
-        class: "bg-fill-info text-ink",
+        class: "bg-su-fill-info text-su-ink",
         color: "info",
         variant: "solid",
       },
       {
-        class: "text-text-secondary hover:bg-fill-secondary",
+        class: "text-su-fg-secondary hover:bg-su-fill-secondary",
         color: "secondary",
         variant: ["dashed", "outlined", "text"],
       },
       {
         class:
-          "bg-fill-secondary text-text-secondary hover:bg-fill-secondary-strong",
+          "bg-su-fill-secondary text-su-fg-secondary hover:bg-su-fill-secondary-strong",
         color: "secondary",
         variant: "filled",
       },
       {
-        class: "text-text-secondary hover:text-ink",
+        class: "text-su-fg-secondary hover:text-su-ink",
         color: "secondary",
         variant: "link",
       },
       {
-        class: "bg-fill-secondary text-ink",
+        class: "bg-su-fill-secondary text-su-ink",
         color: "secondary",
         variant: "solid",
       },
       {
-        class: "text-text-success hover:bg-fill-success",
+        class: "text-su-fg-success hover:bg-su-fill-success",
         color: "success",
         variant: ["dashed", "outlined", "text"],
       },
       {
-        class: "bg-fill-success text-text-success hover:bg-fill-success",
+        class: "bg-su-fill-success text-su-fg-success hover:bg-su-fill-success",
         color: "success",
         variant: "filled",
       },
       {
-        class: "text-text-success hover:text-ink",
+        class: "text-su-fg-success hover:text-su-ink",
         color: "success",
         variant: "link",
       },
       {
-        class: "bg-fill-success text-ink",
+        class: "bg-su-fill-success text-su-ink",
         color: "success",
         variant: "solid",
       },
       {
-        class: "text-text-warning hover:bg-fill-warning",
+        class: "text-su-fg-warning hover:bg-su-fill-warning",
         color: "warning",
         variant: ["dashed", "outlined", "text"],
       },
       {
-        class: "bg-fill-warning text-text-warning hover:bg-fill-warning",
+        class: "bg-su-fill-warning text-su-fg-warning hover:bg-su-fill-warning",
         color: "warning",
         variant: "filled",
       },
       {
-        class: "text-text-warning hover:text-ink",
+        class: "text-su-fg-warning hover:text-su-ink",
         color: "warning",
         variant: "link",
       },
       {
-        class: "bg-fill-warning text-ink",
+        class: "bg-su-fill-warning text-su-ink",
         color: "warning",
         variant: "solid",
       },
@@ -157,20 +158,20 @@ const buttonVariants = cva(
       },
       size: {
         icon: "size-11 p-0",
-        lg: "h-12 rounded-sticker-lg px-6 text-base",
+        lg: "h-12 rounded-su-lg px-6 text-base",
         md: "h-11 px-5 text-sm",
-        sm: "h-9 rounded-sticker-sm px-3 text-xs",
+        sm: "h-9 rounded-su-sm px-3 text-xs",
       },
       variant: {
         dashed:
-          "border-dashed border-ink bg-surface shadow-sticker-sm hover:-translate-y-0.5 hover:shadow-sticker-md active:translate-x-0.5 active:translate-y-0.5 active:shadow-sticker-xs",
+          "border-dashed border-su-ink bg-su-surface shadow-su-sm hover:-translate-y-0.5 hover:shadow-su-md active:translate-x-0.5 active:translate-y-0.5 active:shadow-su-xs",
         filled:
           "border-0 shadow-none hover:-translate-y-0.5 hover:shadow-none active:translate-x-0.5 active:translate-y-0.5 active:shadow-none",
         link: "border-transparent bg-transparent underline decoration-[3px] underline-offset-4 shadow-none hover:-translate-y-0.5 hover:bg-transparent hover:shadow-none active:translate-y-0 active:shadow-none",
         outlined:
-          "border-ink bg-surface shadow-sticker-md hover:-translate-y-0.5 hover:shadow-sticker-lg active:translate-x-1 active:translate-y-1 active:shadow-sticker-xs",
+          "border-su-ink bg-su-surface shadow-su-md hover:-translate-y-0.5 hover:shadow-su-lg active:translate-x-1 active:translate-y-1 active:shadow-su-xs",
         solid:
-          "border-ink shadow-sticker-md hover:-translate-y-0.5 hover:shadow-sticker-lg active:translate-x-1 active:translate-y-1 active:shadow-sticker-xs",
+          "border-su-ink shadow-su-md hover:-translate-y-0.5 hover:shadow-su-lg active:translate-x-1 active:translate-y-1 active:shadow-su-xs",
         text: "border-transparent bg-transparent shadow-none hover:-translate-y-0.5 hover:shadow-none active:translate-y-0 active:shadow-none",
       },
     },

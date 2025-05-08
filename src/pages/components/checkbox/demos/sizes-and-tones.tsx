@@ -3,7 +3,7 @@ import { Checkbox } from "sticker-ui"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
-  className: "bg-fill-warning",
+  className: "bg-su-fill-warning",
   order: 30,
   titleKey: "preview.components.sizesAndTones",
   descriptionKey:
@@ -13,10 +13,10 @@ const meta = defineMeta({
 function Demo() {
   return (
     <div className="grid gap-4 md:grid-cols-3">
-      <div className="rounded-sticker-xl border border-ink bg-white/80 p-4">
+      <div className="rounded-su-xl border border-su-ink bg-white/80 p-4">
         <Checkbox defaultChecked label="Small Checklist" size="sm" />
       </div>
-      <div className="rounded-sticker-xl border border-ink bg-white/80 p-4">
+      <div className="rounded-su-xl border border-su-ink bg-white/80 p-4">
         <Checkbox
           defaultChecked
           label="Standard Review"
@@ -24,7 +24,7 @@ function Demo() {
           variant="filled"
         />
       </div>
-      <div className="rounded-sticker-xl border border-ink bg-white/80 p-4">
+      <div className="rounded-su-xl border border-su-ink bg-white/80 p-4">
         <Checkbox
           defaultChecked="indeterminate"
           label="Roomy Mixed State"

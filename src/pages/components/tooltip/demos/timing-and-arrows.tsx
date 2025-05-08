@@ -9,7 +9,7 @@ import {
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
-  className: "bg-fill-success",
+  className: "bg-su-fill-success",
   order: 30,
   titleKey: "preview.components.timingAndArrows",
   descriptionKey:

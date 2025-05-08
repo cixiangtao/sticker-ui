@@ -69,38 +69,39 @@ const checkboxSizeClassNames = {
 const checkboxToneClassNames = {
   danger: {
     checked:
-      "data-[state=checked]:bg-fill-danger data-[state=checked]:text-ink",
-    fill: "bg-fill-danger-soft text-text-danger",
-    quiet: "bg-fill-danger-soft text-text-danger",
+      "data-[state=checked]:bg-su-fill-danger-strong data-[state=checked]:text-su-ink",
+    fill: "bg-su-fill-danger text-su-fg-danger",
+    quiet: "bg-su-fill-danger text-su-fg-danger",
   },
   default: {
     checked:
-      "data-[state=checked]:bg-fill-default data-[state=checked]:text-ink",
-    fill: "bg-fill-default-soft text-ink",
-    quiet: "bg-surface-muted text-ink",
+      "data-[state=checked]:bg-su-fill-default data-[state=checked]:text-su-ink",
+    fill: "bg-su-fill-default-soft text-su-ink",
+    quiet: "bg-su-surface-muted text-su-ink",
   },
   info: {
-    checked: "data-[state=checked]:bg-fill-info data-[state=checked]:text-ink",
-    fill: "bg-fill-info text-text-info",
-    quiet: "bg-fill-info text-text-info",
+    checked:
+      "data-[state=checked]:bg-su-fill-info data-[state=checked]:text-su-ink",
+    fill: "bg-su-fill-info text-su-fg-info",
+    quiet: "bg-su-fill-info text-su-fg-info",
   },
   secondary: {
     checked:
-      "data-[state=checked]:bg-fill-secondary data-[state=checked]:text-ink",
-    fill: "bg-fill-secondary text-text-secondary",
-    quiet: "bg-fill-secondary text-text-secondary",
+      "data-[state=checked]:bg-su-fill-secondary data-[state=checked]:text-su-ink",
+    fill: "bg-su-fill-secondary text-su-fg-secondary",
+    quiet: "bg-su-fill-secondary text-su-fg-secondary",
   },
   success: {
     checked:
-      "data-[state=checked]:bg-fill-success data-[state=checked]:text-ink",
-    fill: "bg-fill-success text-text-success",
-    quiet: "bg-fill-success text-text-success",
+      "data-[state=checked]:bg-su-fill-success data-[state=checked]:text-su-ink",
+    fill: "bg-su-fill-success text-su-fg-success",
+    quiet: "bg-su-fill-success text-su-fg-success",
   },
   warning: {
     checked:
-      "data-[state=checked]:bg-fill-warning data-[state=checked]:text-ink",
-    fill: "bg-fill-warning text-text-warning",
-    quiet: "bg-fill-warning text-text-warning",
+      "data-[state=checked]:bg-su-fill-warning data-[state=checked]:text-su-ink",
+    fill: "bg-su-fill-warning text-su-fg-warning",
+    quiet: "bg-su-fill-warning text-su-fg-warning",
   },
 } satisfies Record<
   CheckboxTone,
@@ -127,7 +128,7 @@ const checkboxVariants = ({
   variant = "outlined",
 }: CheckboxVariantOptions = {}) =>
   cn(
-    "peer relative inline-flex shrink-0 cursor-pointer items-center justify-center border-2 border-ink bg-surface text-ink shadow-sticker-sm transition duration-150 outline-none focus-visible:shadow-sticker-md focus-visible:ring-[2px] focus-visible:ring-ring/65 aria-invalid:border-text-danger aria-invalid:bg-fill-danger-soft data-[state=checked]:shadow-sticker-md data-[state=indeterminate]:bg-ink data-[state=indeterminate]:text-paper",
+    "peer relative inline-flex shrink-0 cursor-pointer items-center justify-center border-2 border-su-ink bg-su-surface text-su-ink shadow-su-sm transition duration-150 outline-none focus-visible:shadow-su-md focus-visible:ring-[2px] focus-visible:ring-su-ring/65 aria-invalid:border-su-fg-danger aria-invalid:bg-su-fill-danger data-[state=checked]:shadow-su-md data-[state=indeterminate]:bg-su-ink data-[state=indeterminate]:text-su-paper",
     disabled && "cursor-not-allowed opacity-55",
     checkboxSizeClassNames[size].root,
     checkboxToneClassNames[tone].checked,
@@ -314,7 +315,7 @@ const CheckboxGroup = React.forwardRef<HTMLFieldSetElement, CheckboxGroupProps>(
           {hasLabel && (
             <legend
               className={cn(
-                "text-sm leading-none font-black text-ink select-none",
+                "text-sm leading-none font-black text-su-ink select-none",
                 hasDescription ? "mb-1" : "mb-3",
               )}
               data-slot="checkbox-group-label"
@@ -324,7 +325,7 @@ const CheckboxGroup = React.forwardRef<HTMLFieldSetElement, CheckboxGroupProps>(
           )}
           {hasDescription && (
             <p
-              className="mb-3 text-sm leading-6 font-medium text-text-muted"
+              className="mb-3 text-sm leading-6 font-medium text-su-fg-muted"
               data-slot="checkbox-group-description"
               id={descriptionId}
             >
@@ -436,7 +437,7 @@ const Checkbox = React.forwardRef<
     return (
       <label
         className={cn(
-          "inline-flex min-w-0 cursor-pointer items-center gap-3 text-ink select-none",
+          "inline-flex min-w-0 cursor-pointer items-center gap-3 text-su-ink select-none",
           resolvedDisabled && "cursor-not-allowed",
         )}
         data-slot="checkbox-label"

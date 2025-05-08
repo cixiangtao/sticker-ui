@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, Skeleton } from "sticker-ui"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
-  className: "bg-fill-info",
+  className: "bg-su-fill-info",
   order: 10,
   titleKey: "preview.components.loadingCard",
   descriptionKey:

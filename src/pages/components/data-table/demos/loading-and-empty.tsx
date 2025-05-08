@@ -28,7 +28,7 @@ const columns: DataTableColumn<AuditRow>[] = [
 ]
 
 const meta = defineMeta({
-  className: "bg-fill-secondary",
+  className: "bg-su-fill-secondary",
   order: 30,
   titleKey: "preview.components.loadingAndEmpty",
   descriptionKey:
@@ -45,7 +45,7 @@ function Demo() {
         pagination={false}
         rowKey="id"
         toolbar={
-          <span className="text-sm font-black text-ink">
+          <span className="text-sm font-black text-su-ink">
             Fetching audit rows
           </span>
         }
@@ -57,7 +57,9 @@ function Demo() {
         pagination={false}
         rowKey="id"
         toolbar={
-          <span className="text-sm font-black text-ink">Filtered results</span>
+          <span className="text-sm font-black text-su-ink">
+            Filtered results
+          </span>
         }
       />
     </div>

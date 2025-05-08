@@ -510,7 +510,7 @@ function DataTable<TData extends object>({
           {loading ? (
             <span
               className={cn(
-                "inline-flex items-center gap-2 rounded-sticker-md border border-ink bg-fill-warning px-3 py-1.5 text-xs font-black text-ink",
+                "inline-flex items-center gap-2 rounded-su-md border border-su-ink bg-su-fill-warning px-3 py-1.5 text-xs font-black text-su-ink",
                 classNames?.loadingSummary,
               )}
               data-slot="data-table-loading-summary"
@@ -522,7 +522,7 @@ function DataTable<TData extends object>({
           ) : isRowSelectionEnabled ? (
             <span
               className={cn(
-                "rounded-sticker-md border border-ink bg-fill-info px-3 py-1.5 text-xs font-black text-text-info",
+                "rounded-su-md border border-su-ink bg-su-fill-info px-3 py-1.5 text-xs font-black text-su-fg-info",
                 classNames?.selectionSummary,
               )}
               data-slot="data-table-selection-summary"
@@ -536,7 +536,7 @@ function DataTable<TData extends object>({
       <Table
         className={cn("min-w-[760px]", classNames?.table)}
         containerClassName={cn(
-          "relative bg-surface",
+          "relative bg-su-surface",
           classNames?.tableContainer,
         )}
       >
@@ -586,7 +586,7 @@ function DataTable<TData extends object>({
                 data-state={row.getIsSelected() ? "selected" : undefined}
                 key={row.id}
                 className={cn(
-                  row.getIsSelected() && "bg-fill-info/50",
+                  row.getIsSelected() && "bg-su-fill-info/50",
                   classNames?.row,
                 )}
               >
@@ -617,7 +617,7 @@ function DataTable<TData extends object>({
               <TableCell
                 className={cn(
                   EMPTY_ROW_HEIGHT_CLASS,
-                  "text-center align-middle font-bold text-text-muted",
+                  "text-center align-middle font-bold text-su-fg-muted",
                   classNames?.emptyState,
                 )}
                 colSpan={visibleColumnCount}
@@ -642,13 +642,13 @@ function DataTable<TData extends object>({
       {isPaginationEnabled ? (
         <div
           className={cn(
-            "flex min-w-0 flex-wrap items-center justify-between gap-3 rounded-sticker-xl border-2 border-ink bg-paper px-3 py-2 shadow-sticker-sm",
+            "flex min-w-0 flex-wrap items-center justify-between gap-3 rounded-su-xl border-2 border-su-ink bg-su-paper px-3 py-2 shadow-su-sm",
             classNames?.pagination,
           )}
           data-slot="data-table-pagination"
         >
           {paginationConfig?.showSizeChanger !== false ? (
-            <label className="flex items-center gap-2 text-xs font-black text-ink">
+            <label className="flex items-center gap-2 text-xs font-black text-su-ink">
               Rows per page
               <Select
                 onValueChange={(value) => {
@@ -675,7 +675,7 @@ function DataTable<TData extends object>({
 
           <div className="flex items-center gap-2">
             <span
-              className="text-xs font-black text-text-muted"
+              className="text-xs font-black text-su-fg-muted"
               data-slot="data-table-page-summary"
             >
               Page {table.getState().pagination.pageIndex + 1} of {pageCount}
@@ -749,7 +749,7 @@ function ColumnHeader<TData extends object>({
   return (
     <button
       aria-label={`Sort column ${column.id}`}
-      className="inline-flex min-w-0 cursor-pointer items-center gap-1.5 rounded-sticker-sm text-left transition hover:text-text-info focus-visible:ring-[2px] focus-visible:ring-ring/65 focus-visible:outline-none"
+      className="inline-flex min-w-0 cursor-pointer items-center gap-1.5 rounded-su-sm text-left transition hover:text-su-fg-info focus-visible:ring-[2px] focus-visible:ring-su-ring/65 focus-visible:outline-none"
       onClick={column.getToggleSortingHandler()}
       type="button"
     >
@@ -971,7 +971,7 @@ function getWidthStyle(width: number | string | undefined) {
 
 function renderPlainValue(value: unknown) {
   if (value === null || value === undefined || value === "") {
-    return <span className="text-text-placeholder">-</span>
+    return <span className="text-su-fg-placeholder">-</span>
   }
 
   return String(value)

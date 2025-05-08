@@ -11,7 +11,7 @@ import { defineMeta } from "@/layouts/preview"
 import { cn } from "@/lib/utils"
 
 const meta = defineMeta({
-  className: "bg-fill-danger-soft",
+  className: "bg-su-fill-danger",
   order: 50,
   titleKey: "preview.components.interactiveList",
   descriptionKey:
@@ -20,25 +20,25 @@ const meta = defineMeta({
 
 const tasks = [
   {
-    cardClassName: "bg-fill-info",
+    cardClassName: "bg-su-fill-info",
     description: "Check props, variants, and translation coverage.",
-    headerClassName: "bg-accent-info",
+    headerClassName: "bg-su-accent-info",
     status: "docs",
     tagColor: "info",
     title: "Audit API table",
   },
   {
-    cardClassName: "bg-fill-warning",
+    cardClassName: "bg-su-fill-warning",
     description: "Confirm generated registry JSON includes source files.",
-    headerClassName: "bg-accent-warning",
+    headerClassName: "bg-su-accent-warning",
     status: "registry",
     tagColor: "warning",
     title: "Build package entry",
   },
   {
-    cardClassName: "bg-fill-success",
+    cardClassName: "bg-su-fill-success",
     description: "Verify hover and active tactile states.",
-    headerClassName: "bg-accent-success",
+    headerClassName: "bg-su-accent-success",
     status: "ready",
     tagColor: "success",
     title: "Preview tactile states",
@@ -73,7 +73,7 @@ function Demo() {
             </Tag>
           </CardHeader>
           <CardContent>
-            <p className="m-0 text-sm leading-6 font-medium text-text-muted">
+            <p className="m-0 text-sm leading-6 font-medium text-su-fg-muted">
               Add handlers at the card root when the whole surface behaves like
               one action.
             </p>

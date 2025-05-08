@@ -33,7 +33,7 @@ type FieldClassNames = {
  * Builds the sticker field label className from size and tone variants.
  */
 const fieldLabelVariants = cva(
-  "inline-flex w-fit min-w-0 items-center gap-2 leading-none font-black text-ink select-none",
+  "inline-flex w-fit min-w-0 items-center gap-2 leading-none font-black text-su-ink select-none",
   {
     defaultVariants: {
       size: "default",
@@ -46,11 +46,11 @@ const fieldLabelVariants = cva(
         sm: "text-xs",
       },
       tone: {
-        danger: "text-text-danger",
+        danger: "text-su-fg-danger",
         default: "",
-        muted: "text-text-muted",
-        success: "text-text-success",
-        warning: "text-text-warning",
+        muted: "text-su-fg-muted",
+        success: "text-su-fg-success",
+        warning: "text-su-fg-warning",
       },
     },
   },
@@ -85,8 +85,8 @@ const fieldMarkerColors = {
 const fieldMarkerToneClasses = {
   danger: "",
   default: "",
-  muted: "bg-surface-muted",
-  success: "bg-fill-success-strong",
+  muted: "bg-su-surface-muted",
+  success: "bg-su-fill-success-strong",
   warning: "",
 } as const satisfies Record<FieldTone, string>
 
@@ -235,7 +235,7 @@ function FieldLabel({
         requiredMark === "asterisk" ? (
           <span
             aria-hidden="true"
-            className="-ml-1 inline-flex h-5 shrink-0 items-center text-base leading-none font-black text-text-danger"
+            className="-ml-1 inline-flex h-5 shrink-0 items-center text-base leading-none font-black text-su-fg-danger"
             data-slot="field-required-mark"
           >
             *
@@ -255,7 +255,7 @@ function FieldDescription({ className, ...props }: React.ComponentProps<"p">) {
   return (
     <p
       className={cn(
-        "m-0 text-xs leading-5 font-medium text-text-muted",
+        "m-0 text-xs leading-5 font-medium text-su-fg-muted",
         className,
       )}
       data-slot="field-description"
@@ -384,7 +384,7 @@ function FieldMarker({
       aria-hidden="true"
       as="span"
       className={cn(
-        "px-2 font-black uppercase shadow-sticker-xs",
+        "px-2 font-black uppercase shadow-su-xs",
         fieldMarkerToneClasses[tone],
         className,
       )}

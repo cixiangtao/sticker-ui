@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils"
  * Builds the skeleton className from shape, tone, and animation options.
  */
 const skeletonVariants = cva(
-  "relative overflow-hidden border border-ink/10 bg-surface-muted",
+  "relative overflow-hidden border border-su-ink/10 bg-su-surface-muted",
   {
     defaultVariants: {
       animated: true,
@@ -21,15 +21,15 @@ const skeletonVariants = cva(
       },
       shape: {
         avatar: "size-12 rounded-full",
-        block: "h-24 rounded-sticker-lg",
-        card: "h-36 rounded-sticker-2xl",
+        block: "h-24 rounded-su-lg",
+        card: "h-36 rounded-su-2xl",
         line: "h-4 rounded-full",
       },
       tone: {
-        default: "bg-surface-muted",
-        info: "bg-fill-info",
-        secondary: "bg-fill-secondary",
-        warning: "bg-fill-warning",
+        default: "bg-su-surface-muted",
+        info: "bg-su-fill-info",
+        secondary: "bg-su-fill-secondary",
+        warning: "bg-su-fill-warning",
       },
     },
   },

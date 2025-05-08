@@ -3,7 +3,7 @@ import { Button, Form, RadioGroup, RadioGroupItem } from "sticker-ui"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
-  className: "bg-fill-danger-soft",
+  className: "bg-su-fill-danger",
   order: 30,
   titleKey: "preview.components.states",
   descriptionKey:
@@ -74,7 +74,7 @@ function Demo() {
 
 function RadioOption({ label, value }: { label: string; value: string }) {
   return (
-    <div className="rounded-sticker-lg border border-ink bg-white/80 px-3 py-2">
+    <div className="rounded-su-lg border border-su-ink bg-white/80 px-3 py-2">
       <RadioGroupItem label={label} value={value} />
     </div>
   )

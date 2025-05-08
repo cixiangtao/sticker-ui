@@ -7,99 +7,100 @@ import { cn } from "@/lib/utils"
  * Builds the sticker input className from structure, tone, and size variants.
  */
 const inputVariants = cva(
-  "flex w-full min-w-0 border-2 border-ink bg-surface font-bold text-ink shadow-sticker-sm transition duration-150 outline-none selection:bg-fill-default selection:text-ink placeholder:text-text-placeholder focus-visible:shadow-sticker-md focus-visible:ring-[2px] focus-visible:ring-ring/65 aria-invalid:border-text-danger aria-invalid:bg-fill-danger-soft aria-invalid:text-text-danger",
+  "flex w-full min-w-0 border-2 border-su-ink bg-su-surface font-bold text-su-ink shadow-su-sm transition duration-150 outline-none selection:bg-su-fill-default selection:text-su-ink placeholder:text-su-fg-placeholder focus-visible:shadow-su-md focus-visible:ring-[2px] focus-visible:ring-su-ring/65 aria-invalid:border-su-fg-danger aria-invalid:bg-su-fill-danger aria-invalid:text-su-fg-danger",
   {
     compoundVariants: [
       {
-        class: "border-text-danger bg-fill-danger-soft text-text-danger",
+        class: "border-su-fg-danger bg-su-fill-danger text-su-fg-danger",
         tone: "danger",
         variant: "filled",
       },
       {
-        class: "border-text-danger bg-surface text-text-danger",
+        class: "border-su-fg-danger bg-su-surface text-su-fg-danger",
         tone: "danger",
         variant: "outlined",
       },
       {
-        class: "border-transparent bg-fill-danger-soft text-text-danger",
+        class: "border-transparent bg-su-fill-danger text-su-fg-danger",
         tone: "danger",
         variant: "quiet",
       },
       {
-        class: "bg-fill-default-soft",
+        class: "bg-su-fill-default-soft",
         tone: "default",
         variant: "filled",
       },
       {
-        class: "bg-surface",
+        class: "bg-su-surface",
         tone: "default",
         variant: "outlined",
       },
       {
-        class: "border-transparent bg-surface-muted shadow-none",
+        class: "border-transparent bg-su-surface-muted shadow-none",
         tone: "default",
         variant: "quiet",
       },
       {
-        class: "border-text-info bg-fill-info text-text-info",
+        class: "border-su-fg-info bg-su-fill-info text-su-fg-info",
         tone: "info",
         variant: "filled",
       },
       {
-        class: "border-text-info bg-surface text-text-info",
+        class: "border-su-fg-info bg-su-surface text-su-fg-info",
         tone: "info",
         variant: "outlined",
       },
       {
-        class: "border-transparent bg-fill-info text-text-info shadow-none",
+        class: "border-transparent bg-su-fill-info text-su-fg-info shadow-none",
         tone: "info",
         variant: "quiet",
       },
       {
-        class: "border-text-secondary bg-fill-secondary text-text-secondary",
+        class:
+          "border-su-fg-secondary bg-su-fill-secondary text-su-fg-secondary",
         tone: "secondary",
         variant: "filled",
       },
       {
-        class: "border-text-secondary bg-surface text-text-secondary",
+        class: "border-su-fg-secondary bg-su-surface text-su-fg-secondary",
         tone: "secondary",
         variant: "outlined",
       },
       {
         class:
-          "border-transparent bg-fill-secondary text-text-secondary shadow-none",
+          "border-transparent bg-su-fill-secondary text-su-fg-secondary shadow-none",
         tone: "secondary",
         variant: "quiet",
       },
       {
-        class: "border-text-success bg-fill-success text-text-success",
+        class: "border-su-fg-success bg-su-fill-success text-su-fg-success",
         tone: "success",
         variant: "filled",
       },
       {
-        class: "border-text-success bg-surface text-text-success",
+        class: "border-su-fg-success bg-su-surface text-su-fg-success",
         tone: "success",
         variant: "outlined",
       },
       {
         class:
-          "border-transparent bg-fill-success text-text-success shadow-none",
+          "border-transparent bg-su-fill-success text-su-fg-success shadow-none",
         tone: "success",
         variant: "quiet",
       },
       {
-        class: "border-text-warning bg-fill-warning text-text-warning",
+        class: "border-su-fg-warning bg-su-fill-warning text-su-fg-warning",
         tone: "warning",
         variant: "filled",
       },
       {
-        class: "border-text-warning bg-surface text-text-warning",
+        class: "border-su-fg-warning bg-su-surface text-su-fg-warning",
         tone: "warning",
         variant: "outlined",
       },
       {
         class:
-          "border-transparent bg-fill-warning text-text-warning shadow-none",
+          "border-transparent bg-su-fill-warning text-su-fg-warning shadow-none",
         tone: "warning",
         variant: "quiet",
       },
@@ -115,9 +116,9 @@ const inputVariants = cva(
         true: "cursor-not-allowed opacity-55",
       },
       size: {
-        lg: "h-12 rounded-sticker-xl px-4 text-base",
-        md: "h-11 rounded-sticker-lg px-3.5 text-sm",
-        sm: "h-9 rounded-sticker-md px-3 text-xs",
+        lg: "h-12 rounded-su-xl px-4 text-base",
+        md: "h-11 rounded-su-lg px-3.5 text-sm",
+        sm: "h-9 rounded-su-md px-3 text-xs",
       },
       tone: {
         danger: "",

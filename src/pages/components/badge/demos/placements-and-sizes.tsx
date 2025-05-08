@@ -16,7 +16,7 @@ const BADGE_SIZES = [
 ] as const
 
 const meta = defineMeta({
-  className: "bg-fill-warning",
+  className: "bg-su-fill-warning",
   order: 20,
   titleKey: "preview.components.placementsAndSizes",
   descriptionKey:
@@ -40,7 +40,7 @@ function Demo() {
                 {placement.replace("-", " ")}
               </CardTitle>
             </CardHeader>
-            <CardContent className="text-sm font-medium text-text-muted">
+            <CardContent className="text-sm font-medium text-su-fg-muted">
               {BADGE_SIZES[index % BADGE_SIZES.length][1]} updates
             </CardContent>
           </Card>

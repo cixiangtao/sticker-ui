@@ -3,7 +3,7 @@ import { JsxJoin } from "sticker-ui"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
-  className: "bg-fill-warning",
+  className: "bg-su-fill-warning",
   order: 20,
   titleKey: "preview.components.renderSeparator",
   descriptionKey:
@@ -14,15 +14,15 @@ function Demo() {
   return (
     <nav
       aria-label="Component Breadcrumb"
-      className="rounded-sticker-2xl border-2 border-ink bg-surface p-5 shadow-sticker-lg"
+      className="rounded-su-2xl border-2 border-su-ink bg-su-surface p-5 shadow-su-lg"
     >
       <JsxJoin
         as="ol"
-        className="flex flex-wrap items-center gap-2 text-sm font-extrabold text-ink"
+        className="flex flex-wrap items-center gap-2 text-sm font-extrabold text-su-ink"
         separator={({ index }) => (
           <li
             aria-hidden="true"
-            className="rounded-sticker-sm border border-ink bg-fill-default px-1.5 py-0.5 text-[10px] leading-none shadow-sticker-xs"
+            className="rounded-su-sm border border-su-ink bg-su-fill-default px-1.5 py-0.5 text-[10px] leading-none shadow-su-xs"
           >
             {index + 1}
           </li>

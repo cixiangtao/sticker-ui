@@ -14,7 +14,7 @@ function OverviewPage() {
 
   return (
     <div className="grid gap-5 xl:grid-cols-[1.15fr_0.85fr]">
-      <Card className="bg-[#EAF7FF]">
+      <Card className="bg-su-fill-info">
         <CardHeader>
           <CardTitle>{tm("preview.components.previewArchitecture")}</CardTitle>
           <CardDescription>
@@ -27,10 +27,10 @@ function OverviewPage() {
           <div className="grid gap-3 md:grid-cols-2">
             {NAV_GROUPS.map((group) => (
               <div
-                className="rounded-[18px] border-[2px] border-l-[8px] border-[#2E3038] bg-white p-4"
+                className="rounded-su-xl border-2 border-l-[8px] border-su-ink bg-su-surface p-4"
                 key={group.id}
               >
-                <div className="text-xs font-extrabold text-[#696B76] uppercase">
+                <div className="text-xs font-extrabold text-su-fg-subtle uppercase">
                   {td(group.labelKey)}
                 </div>
                 <div className="mt-3 flex flex-col gap-3">
@@ -43,7 +43,7 @@ function OverviewPage() {
                       ) : null}
                       {section.items.map((item) => (
                         <a
-                          className="rounded-[12px] border border-[#2E3038] bg-[#FFFDF7] px-3 py-2 text-sm font-extrabold transition hover:-translate-y-0.5"
+                          className="rounded-su-sm border border-su-ink bg-su-paper px-3 py-2 text-sm font-extrabold transition hover:-translate-y-0.5"
                           href={`#${item.path}`}
                           key={item.path}
                         >
@@ -59,7 +59,7 @@ function OverviewPage() {
         </CardContent>
       </Card>
 
-      <Card className="bg-[#FFF6DC]">
+      <Card className="bg-su-fill-warning">
         <CardHeader>
           <CardTitle>{tm("preview.components.dependencyContract")}</CardTitle>
           <CardDescription>
@@ -73,7 +73,7 @@ function OverviewPage() {
             {["peer: react", "peer: tailwindcss", "dev: vite preview"].map(
               (item) => (
                 <div
-                  className="rounded-[16px] border-[2px] border-[#2E3038] bg-white px-4 py-3 font-extrabold shadow-[2px_2px_0_#2E3038]"
+                  className="rounded-su-lg border-2 border-su-ink bg-su-surface px-4 py-3 font-extrabold shadow-su-sm"
                   key={item}
                 >
                   {item}

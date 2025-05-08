@@ -10,7 +10,7 @@ import {
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
-  className: "bg-fill-warning",
+  className: "bg-su-fill-warning",
   order: 20,
   titleKey: "preview.components.sizesAndTones",
   descriptionKey:
@@ -20,7 +20,7 @@ const meta = defineMeta({
 function Demo() {
   return (
     <div className="grid gap-4 md:grid-cols-3">
-      <div className="grid gap-2 rounded-sticker-xl border border-ink bg-white/80 p-4">
+      <div className="grid gap-2 rounded-su-xl border border-su-ink bg-white/80 p-4">
         <Field label="Small Filter" size="sm">
           <Select defaultValue="open" size="sm">
             <SelectTrigger>
@@ -34,7 +34,7 @@ function Demo() {
           </Select>
         </Field>
       </div>
-      <div className="grid gap-2 rounded-sticker-xl border border-ink bg-white/80 p-4">
+      <div className="grid gap-2 rounded-su-xl border border-su-ink bg-white/80 p-4">
         <Field label="Standard Plan">
           <Select defaultValue="weekly" tone="secondary" variant="filled">
             <SelectTrigger>
@@ -48,7 +48,7 @@ function Demo() {
           </Select>
         </Field>
       </div>
-      <div className="grid gap-2 rounded-sticker-xl border border-ink bg-white/80 p-4">
+      <div className="grid gap-2 rounded-su-xl border border-su-ink bg-white/80 p-4">
         <Field label="Roomy Priority" size="lg">
           <Select defaultValue="high" size="lg" tone="success" variant="filled">
             <SelectTrigger>

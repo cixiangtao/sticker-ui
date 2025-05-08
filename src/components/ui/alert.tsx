@@ -7,96 +7,96 @@ import { cn } from "@/lib/utils"
  * Builds the sticker alert className from tone and variant options.
  */
 const alertVariants = cva(
-  "relative grid w-full gap-2 overflow-hidden border-2 border-ink text-ink shadow-sticker-md",
+  "relative grid w-full gap-2 overflow-hidden border-2 border-su-ink text-su-ink shadow-su-md",
   {
     compoundVariants: [
       {
-        class: "bg-fill-danger-soft",
+        class: "bg-su-fill-danger",
         tone: "danger",
         variant: "filled",
       },
       {
-        class: "border-text-danger bg-fill-danger-soft",
+        class: "border-su-fg-danger bg-su-fill-danger",
         tone: "danger",
         variant: "outlined",
       },
       {
-        class: "border-l-[8px] border-text-danger bg-fill-danger-soft",
+        class: "border-l-[8px] border-su-fg-danger bg-su-fill-danger",
         tone: "danger",
         variant: "stripe",
       },
       {
-        class: "bg-fill-default-soft text-ink",
+        class: "bg-su-fill-default-soft text-su-ink",
         tone: "default",
         variant: "filled",
       },
       {
-        class: "bg-fill-default-soft text-ink",
+        class: "bg-su-fill-default-soft text-su-ink",
         tone: "default",
         variant: "outlined",
       },
       {
-        class: "border-l-[8px] bg-fill-default-soft text-ink",
+        class: "border-l-[8px] bg-su-fill-default-soft text-su-ink",
         tone: "default",
         variant: "stripe",
       },
       {
-        class: "bg-fill-info",
+        class: "bg-su-fill-info",
         tone: "info",
         variant: "filled",
       },
       {
-        class: "border-text-info bg-fill-info",
+        class: "border-su-fg-info bg-su-fill-info",
         tone: "info",
         variant: "outlined",
       },
       {
-        class: "border-l-[8px] border-text-info bg-fill-info",
+        class: "border-l-[8px] border-su-fg-info bg-su-fill-info",
         tone: "info",
         variant: "stripe",
       },
       {
-        class: "bg-fill-secondary",
+        class: "bg-su-fill-secondary",
         tone: "secondary",
         variant: "filled",
       },
       {
-        class: "border-text-secondary bg-fill-secondary",
+        class: "border-su-fg-secondary bg-su-fill-secondary",
         tone: "secondary",
         variant: "outlined",
       },
       {
-        class: "border-l-[8px] border-text-secondary bg-fill-secondary",
+        class: "border-l-[8px] border-su-fg-secondary bg-su-fill-secondary",
         tone: "secondary",
         variant: "stripe",
       },
       {
-        class: "bg-fill-success",
+        class: "bg-su-fill-success",
         tone: "success",
         variant: "filled",
       },
       {
-        class: "border-text-success bg-fill-success",
+        class: "border-su-fg-success bg-su-fill-success",
         tone: "success",
         variant: "outlined",
       },
       {
-        class: "border-l-[8px] border-text-success bg-fill-success",
+        class: "border-l-[8px] border-su-fg-success bg-su-fill-success",
         tone: "success",
         variant: "stripe",
       },
       {
-        class: "bg-fill-warning",
+        class: "bg-su-fill-warning",
         tone: "warning",
         variant: "filled",
       },
       {
-        class: "border-text-warning bg-fill-warning",
+        class: "border-su-fg-warning bg-su-fill-warning",
         tone: "warning",
         variant: "outlined",
       },
       {
-        class: "border-l-[8px] border-text-warning bg-fill-warning",
+        class: "border-l-[8px] border-su-fg-warning bg-su-fill-warning",
         tone: "warning",
         variant: "stripe",
       },
@@ -108,9 +108,9 @@ const alertVariants = cva(
     },
     variants: {
       size: {
-        lg: "rounded-sticker-2xl p-5",
-        md: "rounded-sticker-xl p-4",
-        sm: "rounded-sticker-lg p-3",
+        lg: "rounded-su-2xl p-5",
+        md: "rounded-su-xl p-4",
+        sm: "rounded-su-lg p-3",
       },
       tone: {
         danger: "",
@@ -122,8 +122,8 @@ const alertVariants = cva(
       },
       variant: {
         filled: "",
-        outlined: "shadow-sticker-sm",
-        stripe: "shadow-sticker-sm",
+        outlined: "shadow-su-sm",
+        stripe: "shadow-su-sm",
       },
     },
   },
@@ -198,7 +198,10 @@ type AlertDescriptionProps = React.HTMLAttributes<HTMLParagraphElement>
 function AlertDescription({ className, ...props }: AlertDescriptionProps) {
   return (
     <p
-      className={cn("text-sm leading-6 font-medium text-text-muted", className)}
+      className={cn(
+        "text-sm leading-6 font-medium text-su-fg-muted",
+        className,
+      )}
       data-slot="alert-description"
       {...props}
     />

@@ -20,14 +20,14 @@ function Table({ className, containerClassName, ...props }: TableProps) {
   return (
     <div
       className={cn(
-        "w-full overflow-x-auto rounded-sticker-xl border-2 border-ink bg-paper shadow-sticker-md",
+        "w-full overflow-x-auto rounded-su-xl border-2 border-su-ink bg-su-paper shadow-su-md",
         containerClassName,
       )}
       data-slot="table-container"
     >
       <table
         className={cn(
-          "w-full caption-bottom border-collapse text-left text-sm text-ink",
+          "w-full caption-bottom border-collapse text-left text-sm text-su-ink",
           className,
         )}
         data-slot="table"
@@ -53,7 +53,7 @@ function TableCaption({
 }: React.ComponentProps<"caption">) {
   return (
     <caption
-      className={cn("mt-3 text-xs font-bold text-text-subtle", className)}
+      className={cn("mt-3 text-xs font-bold text-su-fg-subtle", className)}
       data-slot="table-caption"
       {...props}
     />
@@ -74,7 +74,7 @@ function TableFooter({ className, ...props }: React.ComponentProps<"tfoot">) {
   return (
     <tfoot
       className={cn(
-        "border-t-2 border-ink bg-fill-warning font-extrabold",
+        "border-t-2 border-su-ink bg-su-fill-warning font-extrabold",
         className,
       )}
       data-slot="table-footer"
@@ -99,7 +99,7 @@ function TableHead({ className, ...props }: React.ComponentProps<"th">) {
 function TableHeader({ className, ...props }: React.ComponentProps<"thead">) {
   return (
     <thead
-      className={cn("border-b-2 border-ink bg-fill-info", className)}
+      className={cn("border-b-2 border-su-ink bg-su-fill-info", className)}
       data-slot="table-header"
       {...props}
     />
@@ -110,7 +110,7 @@ function TableRow({ className, ...props }: React.ComponentProps<"tr">) {
   return (
     <tr
       className={cn(
-        "border-b border-ink/25 transition-colors hover:bg-fill-warning/55",
+        "border-b border-su-ink/25 transition-colors hover:bg-su-fill-warning/55",
         className,
       )}
       data-slot="table-row"

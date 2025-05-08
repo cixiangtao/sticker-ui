@@ -10,7 +10,7 @@ import {
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
-  className: "bg-paper",
+  className: "bg-su-paper",
   order: 30,
   titleKey: "preview.components.minimalMode",
   descriptionKey:
@@ -31,7 +31,7 @@ function Demo() {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <p className="m-0 text-sm leading-6 font-medium text-text-muted">
+          <p className="m-0 text-sm leading-6 font-medium text-su-fg-muted">
             Use this for prominent previews route cards and action groups.
           </p>
         </CardContent>
@@ -48,7 +48,7 @@ function Demo() {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <p className="m-0 text-sm leading-6 font-medium text-text-muted">
+          <p className="m-0 text-sm leading-6 font-medium text-su-fg-muted">
             Use this inside dense pages side panels and repeated content lists.
           </p>
         </CardContent>

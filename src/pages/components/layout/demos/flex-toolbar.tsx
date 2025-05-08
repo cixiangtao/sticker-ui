@@ -3,7 +3,7 @@ import { Button, Flex, Tag } from "sticker-ui"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
-  className: "bg-fill-info",
+  className: "bg-su-fill-info",
   order: 10,
   titleKey: "preview.components.flexToolbar",
   descriptionKey:
@@ -14,14 +14,14 @@ function Demo() {
   return (
     <Flex
       align="center"
-      className="rounded-sticker-2xl border-2 border-ink bg-surface p-3 shadow-sticker-lg"
+      className="rounded-su-2xl border-2 border-su-ink bg-su-surface p-3 shadow-su-lg"
       gap="sm"
       justify="between"
       wrap="wrap"
     >
       <Flex align="center" gap="sm" wrap="wrap">
         <Tag color="info">Layout</Tag>
-        <span className="text-sm font-extrabold text-ink">Review Queue</span>
+        <span className="text-sm font-extrabold text-su-ink">Review Queue</span>
         <Tag color="success" size="sm" variant="filled">
           12 Ready
         </Tag>

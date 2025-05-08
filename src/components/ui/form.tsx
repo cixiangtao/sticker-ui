@@ -585,7 +585,7 @@ function FormRoot({
     <FormContext.Provider value={{ form: internalForm, layout }}>
       <form
         className={cn(
-          "text-ink",
+          "text-su-ink",
           layout === "inline"
             ? "flex flex-wrap items-start gap-3"
             : "grid gap-4",
@@ -706,7 +706,7 @@ function FormItem({
               <span
                 className={cn(
                   "m-0 min-w-0 text-xs leading-5 font-bold wrap-break-word",
-                  status === "error" ? "text-text-danger" : "text-text-muted",
+                  status === "error" ? "text-su-fg-danger" : "text-su-fg-muted",
                 )}
                 data-slot="form-item-help"
                 role={status === "error" ? "alert" : undefined}
@@ -716,7 +716,7 @@ function FormItem({
             ) : null}
             {extra ? (
               <span
-                className="m-0 min-w-0 text-xs leading-5 font-medium wrap-break-word text-text-subtle"
+                className="m-0 min-w-0 text-xs leading-5 font-medium wrap-break-word text-su-fg-subtle"
                 data-slot="form-item-extra"
               >
                 {extra}

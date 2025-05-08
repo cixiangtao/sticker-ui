@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle, Grid, Tag } from "sticker-ui"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
-  className: "bg-fill-warning",
+  className: "bg-su-fill-warning",
   order: 20,
   titleKey: "preview.components.responsiveGrid",
   descriptionKey:
@@ -12,17 +12,17 @@ const meta = defineMeta({
 
 const items = [
   {
-    accent: "border-l-accent-info",
+    accent: "border-l-su-accent-info",
     label: "Docs page",
     status: "Draft",
   },
   {
-    accent: "border-l-accent-success",
+    accent: "border-l-su-accent-success",
     label: "Registry card",
     status: "Ready",
   },
   {
-    accent: "border-l-accent-warning",
+    accent: "border-l-su-accent-warning",
     label: "Preview shell",
     status: "Review",
   },
@@ -48,7 +48,7 @@ function Demo() {
             <CardTitle>{item.label}</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="m-0 text-sm leading-6 font-medium text-text-muted">
+            <p className="m-0 text-sm leading-6 font-medium text-su-fg-muted">
               The grid owns flow and gaps while each card keeps its own sticker
               surface.
             </p>

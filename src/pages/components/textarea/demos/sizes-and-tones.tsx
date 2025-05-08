@@ -3,7 +3,7 @@ import { Field, Textarea } from "sticker-ui"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
-  className: "bg-fill-warning",
+  className: "bg-su-fill-warning",
   order: 20,
   titleKey: "preview.components.sizesAndTones",
   descriptionKey:
@@ -13,7 +13,7 @@ const meta = defineMeta({
 function Demo() {
   return (
     <div className="grid gap-4 md:grid-cols-3">
-      <div className="grid gap-2 rounded-sticker-xl border border-ink bg-white/80 p-4">
+      <div className="grid gap-2 rounded-su-xl border border-su-ink bg-white/80 p-4">
         <Field label="Quick Note" size="sm">
           <Textarea
             placeholder="Add A Compact Note"
@@ -23,7 +23,7 @@ function Demo() {
           />
         </Field>
       </div>
-      <div className="grid gap-2 rounded-sticker-xl border border-ink bg-white/80 p-4">
+      <div className="grid gap-2 rounded-su-xl border border-su-ink bg-white/80 p-4">
         <Field label="Feedback">
           <Textarea
             defaultValue="The sticker frame keeps comments readable without losing the playful paper tone."
@@ -33,7 +33,7 @@ function Demo() {
           />
         </Field>
       </div>
-      <div className="grid gap-2 rounded-sticker-xl border border-ink bg-white/80 p-4">
+      <div className="grid gap-2 rounded-su-xl border border-su-ink bg-white/80 p-4">
         <Field label="Launch Plan" size="lg">
           <Textarea
             placeholder="Outline the launch plan"

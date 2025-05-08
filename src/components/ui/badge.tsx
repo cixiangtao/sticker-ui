@@ -10,96 +10,96 @@ type BadgeSize = "lg" | "md" | "sm"
  * Builds the badge indicator className from tone, size, and emphasis.
  */
 const badgeVariants = cva(
-  "z-10 inline-flex shrink-0 items-center justify-center rounded-full border-2 border-ink leading-none font-extrabold whitespace-nowrap ring-2 ring-surface",
+  "z-10 inline-flex shrink-0 items-center justify-center rounded-full border-2 border-su-ink leading-none font-extrabold whitespace-nowrap ring-2 ring-su-surface",
   {
     compoundVariants: [
       {
-        class: "bg-fill-danger-soft text-text-danger",
+        class: "bg-su-fill-danger text-su-fg-danger",
         tone: "danger",
         variant: "soft",
       },
       {
-        class: "bg-surface text-text-danger",
+        class: "bg-su-surface text-su-fg-danger",
         tone: "danger",
         variant: "outline",
       },
       {
-        class: "bg-fill-danger text-ink",
+        class: "bg-su-fill-danger-strong text-su-ink",
         tone: "danger",
         variant: "solid",
       },
       {
-        class: "bg-fill-default-soft text-ink",
+        class: "bg-su-fill-default-soft text-su-ink",
         tone: "default",
         variant: "soft",
       },
       {
-        class: "bg-surface text-ink",
+        class: "bg-su-surface text-su-ink",
         tone: "default",
         variant: "outline",
       },
       {
-        class: "bg-fill-default text-ink",
+        class: "bg-su-fill-default text-su-ink",
         tone: "default",
         variant: "solid",
       },
       {
-        class: "bg-fill-info text-text-info",
+        class: "bg-su-fill-info text-su-fg-info",
         tone: "info",
         variant: "soft",
       },
       {
-        class: "bg-surface text-text-info",
+        class: "bg-su-surface text-su-fg-info",
         tone: "info",
         variant: "outline",
       },
       {
-        class: "bg-fill-info-strong text-ink",
+        class: "bg-su-fill-info-strong text-su-ink",
         tone: "info",
         variant: "solid",
       },
       {
-        class: "bg-fill-secondary text-text-secondary",
+        class: "bg-su-fill-secondary text-su-fg-secondary",
         tone: "secondary",
         variant: "soft",
       },
       {
-        class: "bg-surface text-text-secondary",
+        class: "bg-su-surface text-su-fg-secondary",
         tone: "secondary",
         variant: "outline",
       },
       {
-        class: "bg-fill-secondary-strong text-ink",
+        class: "bg-su-fill-secondary-strong text-su-ink",
         tone: "secondary",
         variant: "solid",
       },
       {
-        class: "bg-fill-success text-text-success",
+        class: "bg-su-fill-success text-su-fg-success",
         tone: "success",
         variant: "soft",
       },
       {
-        class: "bg-surface text-text-success",
+        class: "bg-su-surface text-su-fg-success",
         tone: "success",
         variant: "outline",
       },
       {
-        class: "bg-fill-success-strong text-ink",
+        class: "bg-su-fill-success-strong text-su-ink",
         tone: "success",
         variant: "solid",
       },
       {
-        class: "bg-fill-warning text-text-warning",
+        class: "bg-su-fill-warning text-su-fg-warning",
         tone: "warning",
         variant: "soft",
       },
       {
-        class: "bg-surface text-text-warning",
+        class: "bg-su-surface text-su-fg-warning",
         tone: "warning",
         variant: "outline",
       },
       {
-        class: "bg-fill-warning-strong text-ink",
+        class: "bg-su-fill-warning-strong text-su-ink",
         tone: "warning",
         variant: "solid",
       },

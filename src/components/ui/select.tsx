@@ -83,7 +83,7 @@ const selectVariants = ({
 }: SelectVariantOptions = {}) =>
   cn(
     inputVariants({ disabled, size, tone, variant }),
-    "cursor-pointer items-center justify-between gap-2 text-left data-[placeholder]:text-text-placeholder data-[state=open]:shadow-sticker-md data-[state=open]:ring-[2px] data-[state=open]:ring-ring/65 [&>span]:truncate",
+    "cursor-pointer items-center justify-between gap-2 text-left data-[placeholder]:text-su-fg-placeholder data-[state=open]:shadow-su-md data-[state=open]:ring-[2px] data-[state=open]:ring-su-ring/65 [&>span]:truncate",
     selectSizeClassNames[size].trigger,
     className,
   )
@@ -94,7 +94,7 @@ const selectItemVariants = ({
   size = "md",
 }: SelectItemVariantOptions = {}) =>
   cn(
-    "relative flex w-full cursor-default items-center rounded-sticker-md border border-transparent pr-9 pl-3 font-bold text-ink transition duration-150 outline-none select-none data-[highlighted]:bg-fill-default-soft data-[state=checked]:bg-fill-info data-[state=checked]:text-text-info",
+    "relative flex w-full cursor-default items-center rounded-su-md border border-transparent pr-9 pl-3 font-bold text-su-ink transition duration-150 outline-none select-none data-[highlighted]:bg-su-fill-default-soft data-[state=checked]:bg-su-fill-info data-[state=checked]:text-su-fg-info",
     disabled && "cursor-not-allowed opacity-55",
     selectSizeClassNames[size].item,
     className,
@@ -214,7 +214,7 @@ const SelectLabel = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <SelectPrimitive.Label
     className={cn(
-      "px-3 py-2 text-xs font-black text-text-muted uppercase",
+      "px-3 py-2 text-xs font-black text-su-fg-muted uppercase",
       className,
     )}
     data-slot="select-label"
@@ -259,7 +259,7 @@ const SelectTrigger = React.forwardRef<
         <ChevronDown
           aria-hidden="true"
           className={cn(
-            "relative shrink-0 text-ink/75 transition group-data-[state=open]:rotate-180",
+            "relative shrink-0 text-su-ink/75 transition group-data-[state=open]:rotate-180",
             selectSizeClassNames[context.size].icon,
           )}
           data-slot="select-indicator"
@@ -279,7 +279,7 @@ const SelectScrollUpButton = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <SelectPrimitive.ScrollUpButton
     className={cn(
-      "flex h-7 cursor-default items-center justify-center bg-fill-warning text-ink",
+      "flex h-7 cursor-default items-center justify-center bg-su-fill-warning text-su-ink",
       className,
     )}
     data-slot="select-scroll-up-button"
@@ -300,7 +300,7 @@ const SelectScrollDownButton = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <SelectPrimitive.ScrollDownButton
     className={cn(
-      "flex h-7 cursor-default items-center justify-center bg-fill-warning text-ink",
+      "flex h-7 cursor-default items-center justify-center bg-su-fill-warning text-su-ink",
       className,
     )}
     data-slot="select-scroll-down-button"
@@ -327,7 +327,7 @@ const SelectContent = React.forwardRef<
     <SelectPrimitive.Portal>
       <SelectPrimitive.Content
         className={cn(
-          "relative z-50 max-h-72 min-w-36 overflow-hidden rounded-sticker-xl border-2 border-ink bg-surface text-ink shadow-sticker-lg",
+          "relative z-50 max-h-72 min-w-36 overflow-hidden rounded-su-xl border-2 border-su-ink bg-su-surface text-su-ink shadow-su-lg",
           "data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1",
           position === "popper" &&
             "w-[var(--radix-select-trigger-width)] min-w-[var(--radix-select-trigger-width)]",
@@ -373,7 +373,7 @@ const SelectItem = React.forwardRef<
     >
       <SelectPrimitive.ItemText>{children}</SelectPrimitive.ItemText>
       <SelectPrimitive.ItemIndicator
-        className="absolute right-3 inline-flex size-4 items-center justify-center text-ink"
+        className="absolute right-3 inline-flex size-4 items-center justify-center text-su-ink"
         data-slot="select-item-indicator"
       >
         <Check aria-hidden="true" className="size-4 stroke-[3]" />
@@ -391,7 +391,7 @@ const SelectSeparator = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Separator>
 >(({ className, ...props }, ref) => (
   <SelectPrimitive.Separator
-    className={cn("my-1 h-px bg-ink/20", className)}
+    className={cn("my-1 h-px bg-su-ink/20", className)}
     data-slot="select-separator"
     ref={ref}
     {...props}

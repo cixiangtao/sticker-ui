@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils"
 /**
  * Builds the divider root className from orientation and label alignment.
  */
-const dividerVariants = cva("min-w-0 text-ink", {
+const dividerVariants = cva("min-w-0 text-su-ink", {
   defaultVariants: {
     align: "center",
     orientation: "horizontal",
@@ -27,27 +27,27 @@ const dividerVariants = cva("min-w-0 text-ink", {
 const dividerLineVariants = cva("shrink-0", {
   compoundVariants: [
     {
-      class: "border-text-danger",
+      class: "border-su-fg-danger",
       tone: "danger",
     },
     {
-      class: "border-ink",
+      class: "border-su-ink",
       tone: "default",
     },
     {
-      class: "border-text-info",
+      class: "border-su-fg-info",
       tone: "info",
     },
     {
-      class: "border-text-secondary",
+      class: "border-su-fg-secondary",
       tone: "secondary",
     },
     {
-      class: "border-text-success",
+      class: "border-su-fg-success",
       tone: "success",
     },
     {
-      class: "border-text-warning",
+      class: "border-su-fg-warning",
       tone: "warning",
     },
   ],
@@ -188,7 +188,7 @@ function Divider({
       {hasLabel ? (
         <span
           className={cn(
-            "shrink-0 rounded-sticker-md bg-surface px-2.5 py-1 text-xs leading-none font-black text-ink",
+            "shrink-0 rounded-su-md bg-su-surface px-2.5 py-1 text-xs leading-none font-black text-su-ink",
             orientation === "horizontal" ? "mx-3" : "my-2",
           )}
           data-slot="divider-label"

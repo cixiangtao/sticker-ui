@@ -12,7 +12,7 @@ import {
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
-  className: "bg-fill-warning",
+  className: "bg-su-fill-warning",
   order: 10,
   titleKey: "preview.components.basicComposition",
   descriptionKey:
@@ -33,7 +33,7 @@ function Demo() {
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <p className="m-0 text-sm leading-6 font-medium text-text-muted">
+        <p className="m-0 text-sm leading-6 font-medium text-su-fg-muted">
           The header owns the accent strip while the content keeps a quieter
           paper surface for longer copy.
         </p>

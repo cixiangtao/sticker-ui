@@ -19,7 +19,7 @@ import {
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
-  className: "bg-fill-warning",
+  className: "bg-su-fill-warning",
   order: 10,
   titleKey: "preview.components.basicLogin",
   descriptionKey:
@@ -150,7 +150,7 @@ function Demo() {
         </div>
         <Button type="submit">Submit Form</Button>
       </Form>
-      <div className="grid content-start gap-3 rounded-sticker-2xl border-2 border-ink bg-surface p-4 shadow-sticker-md">
+      <div className="grid content-start gap-3 rounded-su-2xl border-2 border-su-ink bg-su-surface p-4 shadow-su-md">
         <Tag color="success" dot>
           Latest Submit
         </Tag>

@@ -10,7 +10,7 @@ import {
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
-  className: "bg-fill-danger-soft",
+  className: "bg-su-fill-danger",
   order: 30,
   titleKey: "preview.components.states",
   descriptionKey:

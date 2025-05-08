@@ -3,7 +3,7 @@ import { Button } from "sticker-ui"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
-  className: "bg-fill-warning",
+  className: "bg-su-fill-warning",
   order: 20,
   descriptionKey:
     "preview.components.sizeChoicesAreConstrainedSoIconShortTextAndLongCommandsStillReadAsOneFamily",

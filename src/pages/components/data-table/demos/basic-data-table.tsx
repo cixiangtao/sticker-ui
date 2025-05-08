@@ -92,7 +92,7 @@ const columns: DataTableColumn<ComponentTask>[] = [
 ]
 
 const meta = defineMeta({
-  className: "bg-fill-info",
+  className: "bg-su-fill-info",
   order: 10,
   titleKey: "preview.components.basicDataTable",
   descriptionKey:
@@ -109,8 +109,10 @@ function Demo() {
       rowSelection
       toolbar={
         <div className="grid gap-1">
-          <span className="text-sm font-black text-ink">Component backlog</span>
-          <span className="text-xs font-bold text-text-muted">
+          <span className="text-sm font-black text-su-ink">
+            Component backlog
+          </span>
+          <span className="text-xs font-bold text-su-fg-muted">
             Sort, filter, paginate, and select rows from one data model.
           </span>
         </div>

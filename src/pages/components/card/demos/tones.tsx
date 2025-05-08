@@ -10,7 +10,7 @@ import {
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
-  className: "bg-fill-info",
+  className: "bg-su-fill-info",
   order: 40,
   titleKey: "preview.components.customColors",
   descriptionKey:
@@ -28,25 +28,25 @@ const cards = [
   },
   {
     badge: "Info",
-    cardClassName: "bg-fill-info",
+    cardClassName: "bg-su-fill-info",
     description: "Blue paper for previews, guides, and hints.",
-    headerClassName: "bg-accent-info",
+    headerClassName: "bg-su-accent-info",
     tagColor: "info",
     title: "Guide Card",
   },
   {
     badge: "Success",
-    cardClassName: "bg-fill-success",
+    cardClassName: "bg-su-fill-success",
     description: "Green paper for ready states and healthy checks.",
-    headerClassName: "bg-accent-success",
+    headerClassName: "bg-su-accent-success",
     tagColor: "success",
     title: "Ready Card",
   },
   {
     badge: "Warning",
-    cardClassName: "bg-fill-warning",
+    cardClassName: "bg-su-fill-warning",
     description: "Warm paper for setup notes and migration reminders.",
-    headerClassName: "bg-accent-warning",
+    headerClassName: "bg-su-accent-warning",
     tagColor: "warning",
     title: "Reminder Card",
   },
@@ -65,7 +65,7 @@ function Demo() {
             <CardDescription>{card.description}</CardDescription>
           </CardHeader>
           <CardContent>
-            <p className="m-0 text-sm leading-6 font-medium text-text-muted">
+            <p className="m-0 text-sm leading-6 font-medium text-su-fg-muted">
               Use root and slot className values to tune the visual context.
             </p>
           </CardContent>

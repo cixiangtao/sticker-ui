@@ -3,7 +3,7 @@ import { Tag } from "sticker-ui"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
-  className: "bg-fill-secondary",
+  className: "bg-su-fill-secondary",
   order: 60,
   titleKey: "preview.components.metadataRow",
   descriptionKey:
@@ -12,7 +12,7 @@ const meta = defineMeta({
 
 function Demo() {
   return (
-    <div className="rounded-sticker-xl border border-ink bg-white p-4">
+    <div className="rounded-su-xl border border-su-ink bg-white p-4">
       <div className="mb-3 font-extrabold">src/components/ui/tag.tsx</div>
       <div className="flex flex-wrap gap-2">
         <Tag size="sm" variant="outlined">

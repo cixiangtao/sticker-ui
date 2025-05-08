@@ -45,7 +45,7 @@ const TAG_VARIANTS = [
 ] as const
 
 const meta = defineMeta({
-  className: "bg-fill-warning",
+  className: "bg-su-fill-warning",
   order: 20,
   titleKey: "preview.components.colors",
   descriptionKey:
@@ -57,10 +57,10 @@ function Demo() {
     <div className="grid gap-3">
       {TAG_COLORS.map((item) => (
         <div
-          className="grid gap-2 rounded-sticker-xl border border-ink bg-white/80 p-3 sm:grid-cols-[7rem_1fr] sm:items-center"
+          className="grid gap-2 rounded-su-xl border border-su-ink bg-white/80 p-3 sm:grid-cols-[7rem_1fr] sm:items-center"
           key={item.color}
         >
-          <div className="text-sm font-extrabold text-ink">{item.label}</div>
+          <div className="text-sm font-extrabold text-su-ink">{item.label}</div>
           <div className="flex flex-wrap gap-2">
             {TAG_VARIANTS.map((variantItem) => (
               <Tag

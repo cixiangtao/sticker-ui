@@ -34,7 +34,7 @@ type HighlightState =
 const SHIKI_LANGUAGE = "tsx"
 const SHIKI_THEME = "github-light-default"
 const SOURCE_CODE_BLOCK_CLASS_NAME =
-  "overflow-x-auto rounded-sticker-lg border border-ink bg-paper p-4 font-mono text-[13px] leading-6 text-ink shadow-sticker-xs"
+  "overflow-x-auto rounded-su-lg border border-su-ink bg-su-paper p-4 font-mono text-[13px] leading-6 text-su-ink shadow-su-xs"
 const SOURCE_CODE_BLOCK_STYLE = {
   tabSize: 2,
 } satisfies CSSProperties

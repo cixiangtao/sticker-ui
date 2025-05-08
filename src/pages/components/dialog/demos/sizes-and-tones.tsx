@@ -13,7 +13,7 @@ import {
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
-  className: "bg-fill-warning",
+  className: "bg-su-fill-warning",
   order: 20,
   titleKey: "preview.components.sizesAndTones",
   descriptionKey:
@@ -57,7 +57,7 @@ function Demo() {
               the close button title and footer stay predictable.
             </DialogDescription>
           </DialogHeader>
-          <div className="grid gap-2 rounded-sticker-xl border border-ink bg-surface p-3 text-sm font-bold">
+          <div className="grid gap-2 rounded-su-xl border border-su-ink bg-su-surface p-3 text-sm font-bold">
             <span>Preview demos render on desktop and mobile.</span>
             <span>Registry json points at source files.</span>
             <span>Chinese preview strings are covered.</span>

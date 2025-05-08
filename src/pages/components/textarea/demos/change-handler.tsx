@@ -4,7 +4,7 @@ import { Field, Textarea } from "sticker-ui"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
-  className: "bg-fill-secondary",
+  className: "bg-su-fill-secondary",
   order: 40,
   titleKey: "preview.components.changeHandler",
   descriptionKey:

@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils"
  * Builds the spinner className from size and tone.
  */
 const spinnerVariants = cva(
-  "relative inline-flex shrink-0 items-center justify-center rounded-full text-ink",
+  "relative inline-flex shrink-0 items-center justify-center rounded-full text-su-ink",
   {
     defaultVariants: {
       size: "md",
@@ -20,12 +20,12 @@ const spinnerVariants = cva(
         sm: "size-5",
       },
       tone: {
-        danger: "text-text-danger",
-        default: "text-ink",
-        info: "text-text-info",
-        secondary: "text-text-secondary",
-        success: "text-text-success",
-        warning: "text-text-warning",
+        danger: "text-su-fg-danger",
+        default: "text-su-ink",
+        info: "text-su-fg-info",
+        secondary: "text-su-fg-secondary",
+        success: "text-su-fg-success",
+        warning: "text-su-fg-warning",
       },
     },
   },

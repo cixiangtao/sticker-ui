@@ -29,7 +29,7 @@ function PreviewLayout() {
   }, [location.pathname])
 
   return (
-    <main className="min-h-screen bg-canvas bg-[linear-gradient(90deg,rgb(46_48_56_/_0.04)_1px,transparent_1px),linear-gradient(0deg,rgb(46_48_56_/_0.04)_1px,transparent_1px)] bg-[length:28px_28px] px-4 py-4 text-ink sm:px-6 lg:h-screen lg:overflow-hidden lg:px-8">
+    <main className="min-h-screen bg-su-canvas bg-[linear-gradient(90deg,rgb(46_48_56_/_0.04)_1px,transparent_1px),linear-gradient(0deg,rgb(46_48_56_/_0.04)_1px,transparent_1px)] bg-[length:28px_28px] px-4 py-4 text-su-ink sm:px-6 lg:h-screen lg:overflow-hidden lg:px-8">
       <div className="mx-auto flex max-w-7xl flex-col gap-4 lg:h-full lg:min-h-0">
         <TopBar activeRoute={activeRoute} />
         <div className="grid gap-4 lg:min-h-0 lg:flex-1 lg:grid-cols-[280px_minmax(0,1fr)]">
@@ -42,13 +42,13 @@ function PreviewLayout() {
           >
             <CardHeader decoration divider="dashed" dividerInset="card">
               <div>
-                <div className="text-xs font-extrabold text-text-subtle uppercase">
+                <div className="text-xs font-extrabold text-su-fg-subtle uppercase">
                   {tm("preview.route.eyebrow")}
                 </div>
                 <h1 className="mt-1 text-5xl leading-none font-black">
                   {resolvePreviewLabel(activeRoute, td)}
                 </h1>
-                <p className="mt-3 max-w-2xl text-sm leading-6 font-medium text-text-muted">
+                <p className="mt-3 max-w-2xl text-sm leading-6 font-medium text-su-fg-muted">
                   {td(activeRoute.descriptionKey)}
                 </p>
               </div>
@@ -82,7 +82,7 @@ function Sidebar({ activePath }: { activePath: string }) {
         {NAV_GROUPS.map((group) => (
           <div className="min-w-[240px] lg:min-w-0" key={group.id}>
             <div className="mb-2 flex items-center justify-start gap-3">
-              <h3 className="text-text text-xl font-extrabold uppercase">
+              <h3 className="text-xl font-extrabold text-su-ink uppercase">
                 {td(group.labelKey)}
               </h3>
               {/* <Tag color="default" size="xs" variant="outlined">
@@ -97,7 +97,7 @@ function Sidebar({ activePath }: { activePath: string }) {
                       <Divider align="start" tone="warning" variant="dashed">
                         <span className="inline-flex items-center gap-2">
                           <span>{td(section.labelKey)}</span>
-                          {/* <span className="text-text-subtle">
+                          {/* <span className="text-su-fg-subtle">
                             {section.items.length}
                           </span> */}
                         </span>
@@ -108,10 +108,10 @@ function Sidebar({ activePath }: { activePath: string }) {
                     <Card
                       asChild
                       className={[
-                        "rounded-sticker-lg border-ink border-2 px-3 py-3 transition hover:-translate-y-0.5",
+                        "rounded-su-lg border-su-ink border-2 px-3 py-3 transition hover:-translate-y-0.5",
                         activePath === item.path
-                          ? "bg-fill-default shadow-sticker-md"
-                          : "bg-surface shadow-sticker-xs",
+                          ? "bg-su-fill-default shadow-su-md"
+                          : "bg-su-surface shadow-su-xs",
                       ].join(" ")}
                       interactive
                       key={item.path}
@@ -127,7 +127,7 @@ function Sidebar({ activePath }: { activePath: string }) {
                         <span className="font-extrabold">
                           {resolvePreviewLabel(item, td)}
                         </span>
-                        <span className="mt-1 block text-xs leading-5 font-medium text-text-subtle">
+                        <span className="mt-1 block text-xs leading-5 font-medium text-su-fg-subtle">
                           {td(item.descriptionKey)}
                         </span>
                       </Link>
@@ -153,16 +153,16 @@ function TopBar({
   return (
     <Card
       as="header"
-      className="flex flex-col gap-4 bg-fill-default lg:flex-row lg:items-center lg:justify-between"
+      className="flex flex-col gap-4 bg-su-fill-default lg:flex-row lg:items-center lg:justify-between"
       variant="panel"
     >
       <Link className="group flex items-center gap-3" to="/">
-        <span className="flex size-12 -rotate-3 items-center justify-center rounded-sticker-lg border-sticker-heavy border-ink bg-surface text-xl font-black shadow-sticker-lg transition group-hover:rotate-3">
+        <span className="flex size-12 -rotate-3 items-center justify-center rounded-su-lg border-[3px] border-su-ink bg-su-surface text-xl font-black shadow-su-lg transition group-hover:rotate-3">
           S
         </span>
         <div>
           <div className="text-2xl leading-none font-black">sticker-ui</div>
-          <div className="mt-1 text-sm font-bold text-text-muted">
+          <div className="mt-1 text-sm font-bold text-su-fg-muted">
             {tm("preview.route.previewing")}{" "}
             {resolvePreviewLabel(activeRoute, td)}
           </div>

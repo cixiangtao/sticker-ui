@@ -6,7 +6,7 @@ const SKELETON_SHAPES = ["line", "avatar", "block", "card"] as const
 const SKELETON_TONES = ["default", "info", "secondary", "warning"] as const
 
 const meta = defineMeta({
-  className: "bg-fill-warning",
+  className: "bg-su-fill-warning",
   order: 20,
   titleKey: "preview.components.shapesAndTones",
   descriptionKey:

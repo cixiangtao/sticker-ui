@@ -4,7 +4,7 @@ import { Checkbox, CheckboxGroup, Tag } from "sticker-ui"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
-  className: "bg-fill-secondary",
+  className: "bg-su-fill-secondary",
   order: 20,
   titleKey: "preview.components.groupedChoices",
   descriptionKey:
@@ -21,7 +21,7 @@ function Demo() {
   const [value, setValue] = React.useState(["release-notes", "security-alerts"])
 
   return (
-    <div className="grid max-w-xl gap-4 rounded-sticker-xl border border-ink bg-white/80 p-4">
+    <div className="grid max-w-xl gap-4 rounded-su-xl border border-su-ink bg-white/80 p-4">
       <CheckboxGroup
         description="Choose every update stream this workspace should receive."
         label="Notification Streams"

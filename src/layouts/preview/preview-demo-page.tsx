@@ -186,7 +186,7 @@ function PreviewDemoLoading() {
 
   return (
     <Card>
-      <CardContent className="text-sm font-extrabold text-ink/70">
+      <CardContent className="text-sm font-extrabold text-su-ink/70">
         {tm("preview.components.loadingDemos")}
       </CardContent>
     </Card>

@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils"
  * Builds the tag className from structure, color, and size variants.
  */
 const tagVariants = cva(
-  "inline-flex w-fit shrink-0 items-center justify-center gap-1.5 border-ink leading-none font-extrabold transition duration-150",
+  "inline-flex w-fit shrink-0 items-center justify-center gap-1.5 border-su-ink leading-none font-extrabold transition duration-150",
   {
     defaultVariants: {
       color: "default",
@@ -17,112 +17,112 @@ const tagVariants = cva(
     },
     compoundVariants: [
       {
-        class: "rounded-sticker-xs",
+        class: "rounded-su-xs",
         rounded: "rounded",
         size: "xs",
       },
       {
-        class: "rounded-sticker-xs",
+        class: "rounded-su-xs",
         rounded: "rounded",
         size: "sm",
       },
       {
-        class: "rounded-sticker-sm",
+        class: "rounded-su-sm",
         rounded: "rounded",
         size: "default",
       },
       {
-        class: "rounded-sticker-md",
+        class: "rounded-su-md",
         rounded: "rounded",
         size: "lg",
       },
       {
-        class: "bg-fill-danger text-text-danger",
+        class: "bg-su-fill-danger-strong text-su-fg-danger",
         color: "danger",
         variant: "filled",
       },
       {
-        class: "border-current bg-surface text-text-danger",
+        class: "border-current bg-su-surface text-su-fg-danger",
         color: "danger",
         variant: "outlined",
       },
       {
-        class: "border-ink bg-fill-danger text-ink",
+        class: "border-su-ink bg-su-fill-danger-strong text-su-ink",
         color: "danger",
         variant: "solid",
       },
       {
-        class: "bg-ink text-paper",
+        class: "bg-su-ink text-su-paper",
         color: "default",
         variant: "filled",
       },
       {
-        class: "border-current bg-surface text-ink",
+        class: "border-current bg-su-surface text-su-ink",
         color: "default",
         variant: "outlined",
       },
       {
-        class: "bg-fill-default text-ink",
+        class: "bg-su-fill-default text-su-ink",
         color: "default",
         variant: "solid",
       },
       {
-        class: "bg-fill-info-strong text-text-info",
+        class: "bg-su-fill-info-strong text-su-fg-info",
         color: "info",
         variant: "filled",
       },
       {
-        class: "border-current bg-surface text-text-info",
+        class: "border-current bg-su-surface text-su-fg-info",
         color: "info",
         variant: "outlined",
       },
       {
-        class: "border-ink bg-fill-info text-ink",
+        class: "border-su-ink bg-su-fill-info text-su-ink",
         color: "info",
         variant: "solid",
       },
       {
-        class: "bg-fill-secondary-strong text-text-secondary",
+        class: "bg-su-fill-secondary-strong text-su-fg-secondary",
         color: "secondary",
         variant: "filled",
       },
       {
-        class: "border-current bg-surface text-text-secondary",
+        class: "border-current bg-su-surface text-su-fg-secondary",
         color: "secondary",
         variant: "outlined",
       },
       {
-        class: "border-ink bg-fill-secondary text-ink",
+        class: "border-su-ink bg-su-fill-secondary text-su-ink",
         color: "secondary",
         variant: "solid",
       },
       {
-        class: "bg-fill-success-strong text-text-success",
+        class: "bg-su-fill-success-strong text-su-fg-success",
         color: "success",
         variant: "filled",
       },
       {
-        class: "border-current bg-surface text-text-success",
+        class: "border-current bg-su-surface text-su-fg-success",
         color: "success",
         variant: "outlined",
       },
       {
-        class: "border-ink bg-fill-success text-ink",
+        class: "border-su-ink bg-su-fill-success text-su-ink",
         color: "success",
         variant: "solid",
       },
       {
-        class: "bg-fill-warning-strong text-text-warning",
+        class: "bg-su-fill-warning-strong text-su-fg-warning",
         color: "warning",
         variant: "filled",
       },
       {
-        class: "border-current bg-surface text-text-warning",
+        class: "border-current bg-su-surface text-su-fg-warning",
         color: "warning",
         variant: "outlined",
       },
       {
-        class: "border-ink bg-fill-warning text-ink",
+        class: "border-su-ink bg-su-fill-warning text-su-ink",
         color: "warning",
         variant: "solid",
       },
@@ -147,9 +147,9 @@ const tagVariants = cva(
         xs: "h-5 gap-1 border px-1.5 text-[10px]",
       },
       variant: {
-        filled: "border-transparent shadow-sticker-sm",
+        filled: "border-transparent shadow-su-sm",
         outlined: "",
-        solid: "shadow-sticker-sm",
+        solid: "shadow-su-sm",
       },
     },
   },
@@ -213,7 +213,7 @@ function Tag({
       className={cn(
         tagVariants({ color, rounded, size, variant }),
         isInteractive &&
-          "cursor-pointer hover:-translate-y-0.5 hover:shadow-sticker-sm active:translate-x-0.5 active:translate-y-0.5 active:shadow-sticker-xs",
+          "cursor-pointer hover:-translate-y-0.5 hover:shadow-su-sm active:translate-x-0.5 active:translate-y-0.5 active:shadow-su-xs",
         className,
       )}
       data-slot="tag"

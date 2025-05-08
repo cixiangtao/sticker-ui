@@ -38,7 +38,7 @@ const inputPasswordSizeClassNames = {
 
 function getInputPasswordToggleClassName(disabled?: boolean) {
   return cn(
-    "inline-flex shrink-0 cursor-pointer items-center justify-center rounded-sticker-md bg-transparent text-ink/70 transition duration-150 outline-none hover:text-ink focus-visible:ring-2 focus-visible:ring-ring/65 active:text-ink",
+    "inline-flex shrink-0 cursor-pointer items-center justify-center rounded-su-md bg-transparent text-su-ink/70 transition duration-150 outline-none hover:text-su-ink focus-visible:ring-2 focus-visible:ring-su-ring/65 active:text-su-ink",
     disabled && "cursor-not-allowed opacity-55",
   )
 }
@@ -121,7 +121,7 @@ function InputPassword({
       aria-invalid={ariaInvalid}
       className={cn(
         inputVariants({ disabled, size, tone, variant }),
-        "items-center gap-2 py-0 focus-within:shadow-sticker-md focus-within:ring-2 focus-within:ring-ring/65",
+        "items-center gap-2 py-0 focus-within:shadow-su-md focus-within:ring-2 focus-within:ring-su-ring/65",
         inputPasswordSizeClassNames[size].root,
         className,
       )}
@@ -130,7 +130,7 @@ function InputPassword({
       <input
         aria-invalid={ariaInvalid}
         className={cn(
-          "h-full min-w-0 flex-1 bg-transparent font-bold text-inherit outline-none placeholder:text-text-placeholder",
+          "h-full min-w-0 flex-1 bg-transparent font-bold text-inherit outline-none placeholder:text-su-fg-placeholder",
         )}
         data-slot="input-password-control"
         disabled={disabled}

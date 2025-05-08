@@ -18,7 +18,7 @@ const BADGE_VARIANTS = [
 ] as const
 
 const meta = defineMeta({
-  className: "bg-fill-secondary",
+  className: "bg-su-fill-secondary",
   order: 30,
   titleKey: "preview.components.countsAndVisibility",
   descriptionKey:

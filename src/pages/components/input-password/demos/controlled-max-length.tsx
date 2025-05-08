@@ -6,7 +6,7 @@ import { defineMeta } from "@/layouts/preview"
 const MAX_PASSWORD_LENGTH = 8
 
 const meta = defineMeta({
-  className: "bg-fill-success",
+  className: "bg-su-fill-success",
   order: 30,
   titleKey: "preview.components.controlledMaxLength",
   descriptionKey:
@@ -32,7 +32,7 @@ function Demo() {
         label={
           <span className="flex w-full items-end justify-between gap-3">
             <span>Invite Secret</span>
-            <span className="rounded-sticker-sm border border-ink bg-surface px-2 py-1 text-xs font-extrabold text-text-muted">
+            <span className="rounded-su-sm border border-su-ink bg-su-surface px-2 py-1 text-xs font-extrabold text-su-fg-muted">
               {value.length}/{MAX_PASSWORD_LENGTH}
             </span>
           </span>

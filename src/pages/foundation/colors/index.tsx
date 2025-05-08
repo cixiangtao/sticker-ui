@@ -20,7 +20,7 @@ function ColorsPage() {
 
   return (
     <div className="grid gap-6">
-      <Card className="bg-fill-default-soft">
+      <Card className="bg-su-fill-default-soft">
         <CardHeader divider="none">
           <div className="flex flex-wrap items-start justify-between gap-4">
             <div className="grid gap-2">
@@ -31,7 +31,7 @@ function ColorsPage() {
                 )}
               </CardDescription>
             </div>
-            <div className="rounded-sticker-xl border-2 border-ink bg-surface px-4 py-2 text-sm font-black shadow-sticker-sm">
+            <div className="rounded-su-xl border-2 border-su-ink bg-su-surface px-4 py-2 text-sm font-black shadow-su-sm">
               {COLOR_TOKEN_COUNT} {tm("preview.components.tokens")}
             </div>
           </div>
@@ -39,14 +39,14 @@ function ColorsPage() {
       </Card>
 
       {COLOR_TOKEN_GROUPS.map((group) => (
-        <Card className="bg-surface" key={group.labelKey}>
+        <Card className="bg-su-surface" key={group.labelKey}>
           <CardHeader>
             <div className="flex flex-wrap items-center justify-between gap-3">
               <div className="grid gap-1">
                 <CardTitle>{td(group.labelKey)}</CardTitle>
                 <CardDescription>{td(group.descriptionKey)}</CardDescription>
               </div>
-              <Tag className="bg-fill-secondary text-xs font-extrabold">
+              <Tag className="bg-su-fill-secondary text-xs font-extrabold">
                 {group.tokens.length} {tm("preview.components.tokens")}
               </Tag>
             </div>
@@ -63,7 +63,7 @@ function ColorsPage() {
                 >
                   <div
                     aria-hidden="true"
-                    className="h-20 rounded-sticker-lg border-2 border-ink shadow-sticker-sm"
+                    className="h-20 rounded-su-lg border-2 border-su-ink shadow-su-sm"
                     style={{
                       background:
                         "preview" in token
@@ -72,13 +72,13 @@ function ColorsPage() {
                     }}
                   />
                   <div className="grid gap-1">
-                    <div className="text-sm font-black text-ink">
+                    <div className="text-sm font-black text-su-ink">
                       {td(token.labelKey)}
                     </div>
-                    <code className="w-fit rounded-sticker-sm bg-surface-muted px-2 py-1 text-xs font-extrabold text-text-muted">
+                    <code className="w-fit rounded-su-sm bg-su-surface-muted px-2 py-1 text-xs font-extrabold text-su-fg-muted">
                       {token.name}
                     </code>
-                    <div className="text-xs font-bold text-text-subtle">
+                    <div className="text-xs font-bold text-su-fg-subtle">
                       {token.value}
                     </div>
                   </div>

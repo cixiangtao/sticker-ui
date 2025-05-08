@@ -10,7 +10,7 @@ import {
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
-  className: "bg-fill-info",
+  className: "bg-su-fill-info",
   order: 60,
   titleKey: "preview.components.rootAndSpacingProps",
   descriptionKey:
@@ -53,7 +53,7 @@ function Demo() {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <span className="text-sm font-extrabold text-ink">
+            <span className="text-sm font-extrabold text-su-ink">
               Open Composed Surface
             </span>
           </CardContent>

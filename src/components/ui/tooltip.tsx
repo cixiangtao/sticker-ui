@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils"
  * Builds the sticker tooltip content className from tone and size options.
  */
 const tooltipContentVariants = cva(
-  "z-50 max-w-72 origin-(--radix-tooltip-content-transform-origin) rounded-sticker-lg border-2 border-ink text-ink shadow-sticker-md transition duration-150 outline-none data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1",
+  "z-50 max-w-72 origin-(--radix-tooltip-content-transform-origin) rounded-su-lg border-2 border-su-ink text-su-ink shadow-su-md transition duration-150 outline-none data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1",
   {
     defaultVariants: {
       size: "md",
@@ -21,11 +21,11 @@ const tooltipContentVariants = cva(
         sm: "px-2.5 py-1.5 text-xs leading-4 font-extrabold",
       },
       tone: {
-        default: "bg-fill-default-soft",
-        info: "bg-fill-info text-text-info",
-        secondary: "bg-fill-secondary text-text-secondary",
-        success: "bg-fill-success text-text-success",
-        warning: "bg-fill-warning text-text-warning",
+        default: "bg-su-fill-default-soft",
+        info: "bg-su-fill-info text-su-fg-info",
+        secondary: "bg-su-fill-secondary text-su-fg-secondary",
+        success: "bg-su-fill-success text-su-fg-success",
+        warning: "bg-su-fill-warning text-su-fg-warning",
       },
     },
   },
@@ -148,7 +148,7 @@ const TooltipContent = React.forwardRef<
         {showArrow ? (
           <TooltipPrimitive.Arrow
             aria-hidden="true"
-            className="fill-ink"
+            className="fill-su-ink"
             data-slot="tooltip-arrow"
           />
         ) : null}

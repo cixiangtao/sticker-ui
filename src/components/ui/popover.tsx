@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils"
  * Builds the sticker popover content className from tone and size options.
  */
 const popoverContentVariants = cva(
-  "z-50 origin-(--radix-popover-content-transform-origin) rounded-sticker-2xl border-2 border-ink text-ink shadow-sticker-lg transition duration-150 outline-none data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1",
+  "z-50 origin-(--radix-popover-content-transform-origin) rounded-su-2xl border-2 border-su-ink text-su-ink shadow-su-lg transition duration-150 outline-none data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1",
   {
     defaultVariants: {
       size: "md",
@@ -21,11 +21,11 @@ const popoverContentVariants = cva(
         sm: "w-64 p-3",
       },
       tone: {
-        default: "bg-paper",
-        info: "bg-fill-info",
-        secondary: "bg-fill-secondary",
-        success: "bg-fill-success",
-        warning: "bg-fill-warning",
+        default: "bg-su-paper",
+        info: "bg-su-fill-info",
+        secondary: "bg-su-fill-secondary",
+        success: "bg-su-fill-success",
+        warning: "bg-su-fill-warning",
       },
     },
   },
@@ -137,7 +137,7 @@ const PopoverContent = React.forwardRef<
         {showArrow ? (
           <PopoverPrimitive.Arrow
             aria-hidden="true"
-            className="fill-ink"
+            className="fill-su-ink"
             data-slot="popover-arrow"
           />
         ) : null}

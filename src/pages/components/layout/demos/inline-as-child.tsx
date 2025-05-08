@@ -3,7 +3,7 @@ import { Flex, Grid, Tag } from "sticker-ui"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
-  className: "bg-fill-success",
+  className: "bg-su-fill-success",
   order: 40,
   titleKey: "preview.components.inlineAndAsChild",
   descriptionKey:
@@ -29,14 +29,14 @@ function Demo() {
       </Grid>
 
       <Flex asChild direction="column" gap="xs">
-        <ul className="m-0 rounded-sticker-xl border-2 border-ink bg-surface p-4 shadow-sticker-md">
+        <ul className="m-0 rounded-su-xl border-2 border-su-ink bg-su-surface p-4 shadow-su-md">
           <li className="font-bold">Delegated Flex List</li>
           <li className="font-bold">No Wrapper Element Added</li>
         </ul>
       </Flex>
 
       <Grid asChild columns="2" gap="xs">
-        <ol className="m-0 rounded-sticker-xl border-2 border-ink bg-paper p-4 shadow-sticker-md">
+        <ol className="m-0 rounded-su-xl border-2 border-su-ink bg-su-paper p-4 shadow-su-md">
           <li className="font-bold">Delegated Grid List</li>
           <li className="font-bold">Columns land on the list.</li>
         </ol>

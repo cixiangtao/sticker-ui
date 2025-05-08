@@ -3,7 +3,7 @@ import { Form, Input } from "sticker-ui"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
-  className: "bg-fill-danger-soft",
+  className: "bg-su-fill-danger",
   order: 25,
   titleKey: "preview.components.requiredLayouts",
   descriptionKey:
@@ -13,12 +13,12 @@ const meta = defineMeta({
 function Demo() {
   return (
     <div className="grid gap-4 lg:grid-cols-2">
-      <section className="grid gap-4 rounded-sticker-2xl border-2 border-ink bg-surface p-4 shadow-sticker-md">
+      <section className="grid gap-4 rounded-su-2xl border-2 border-su-ink bg-su-surface p-4 shadow-su-md">
         <div className="grid gap-1">
           <h3 className="m-0 text-base leading-6 font-black">
             Vertical Layout
           </h3>
-          <p className="m-0 text-sm leading-6 font-medium text-text-muted">
+          <p className="m-0 text-sm leading-6 font-medium text-su-fg-muted">
             Roomy fields keep the full required badge.
           </p>
         </div>
@@ -49,12 +49,12 @@ function Demo() {
           </Form.Item>
         </Form>
       </section>
-      <section className="grid gap-4 rounded-sticker-2xl border-2 border-ink bg-surface p-4 shadow-sticker-md">
+      <section className="grid gap-4 rounded-su-2xl border-2 border-su-ink bg-su-surface p-4 shadow-su-md">
         <div className="grid gap-1">
           <h3 className="m-0 text-base leading-6 font-black">
             Horizontal Layout
           </h3>
-          <p className="m-0 text-sm leading-6 font-medium text-text-muted">
+          <p className="m-0 text-sm leading-6 font-medium text-su-fg-muted">
             Narrow label columns switch required fields to an asterisk.
           </p>
         </div>

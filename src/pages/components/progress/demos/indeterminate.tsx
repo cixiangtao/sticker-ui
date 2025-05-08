@@ -3,7 +3,7 @@ import { Progress } from "sticker-ui"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
-  className: "bg-fill-secondary",
+  className: "bg-su-fill-secondary",
   order: 30,
   titleKey: "preview.components.indeterminate",
   descriptionKey:
@@ -12,10 +12,10 @@ const meta = defineMeta({
 
 function Demo() {
   return (
-    <div className="grid gap-3 rounded-sticker-2xl border-2 border-ink bg-surface p-4 shadow-sticker-md">
+    <div className="grid gap-3 rounded-su-2xl border-2 border-su-ink bg-su-surface p-4 shadow-su-md">
       <div>
-        <div className="text-sm font-black text-ink">Syncing Registry</div>
-        <p className="text-sm leading-6 font-medium text-text-muted">
+        <div className="text-sm font-black text-su-ink">Syncing Registry</div>
+        <p className="text-sm leading-6 font-medium text-su-fg-muted">
           Waiting for generated files to settle.
         </p>
       </div>

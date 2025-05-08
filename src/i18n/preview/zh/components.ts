@@ -117,9 +117,6 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   "preview.components.accent": {
     zh: "强调色",
   },
-  "preview.components.aliases": {
-    zh: "别名",
-  },
   "preview.components.actions": {
     zh: "操作",
   },
@@ -130,9 +127,6 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
     {
       zh: "用于排序、筛选、分页和行选择的 Ant Design 风格数据表格。",
     },
-  "preview.components.background": {
-    zh: "背景",
-  },
   "preview.components.basicDataTable": {
     zh: "基础数据表格",
   },
@@ -144,9 +138,6 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   },
   "preview.components.base": {
     zh: "基础色",
-  },
-  "preview.components.border": {
-    zh: "边框",
   },
   "preview.components.buttonsAndDirectCommandSurfaces": {
     zh: "按钮和直接命令界面。",
@@ -161,8 +152,8 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   "preview.components.coreCanvasSurfaceAndInkColorsForStickerLayouts": {
     zh: "用于贴纸布局的核心画布、表面和墨色。",
   },
-  "preview.components.dangerSoft": {
-    zh: "危险柔和",
+  "preview.components.dangerStrong": {
+    zh: "危险强化",
   },
   "preview.components.defaultSoft": {
     zh: "默认柔和",
@@ -172,9 +163,6 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   },
   "preview.components.feedbackAndStatus": {
     zh: "反馈与状态",
-  },
-  "preview.components.foreground": {
-    zh: "前景",
   },
   "preview.components.formControls": {
     zh: "表单控件",
@@ -200,12 +188,6 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   "preview.components.placeholder": {
     zh: "占位符",
   },
-  "preview.components.primary": {
-    zh: "主要色",
-  },
-  "preview.components.primaryForeground": {
-    zh: "主要前景",
-  },
   "preview.components.readableTextColorsForStatusesHelperCopyAndLabels": {
     zh: "用于状态、辅助文案和标签的可读文本颜色。",
   },
@@ -220,9 +202,6 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   },
   "preview.components.secondaryStrong": {
     zh: "辅助强化",
-  },
-  "preview.components.successMuted": {
-    zh: "成功弱化",
   },
   "preview.components.successStrong": {
     zh: "成功强化",
@@ -239,20 +218,14 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   "preview.components.text": {
     zh: "文本色",
   },
-  "preview.components.themeAliasesConsumedByTailwindAndAppLevelSurfaces": {
-    zh: "供 Tailwind 和应用级表面使用的主题别名。",
-  },
   "preview.components.tokens": {
     zh: "个 token",
   },
   "preview.components.utility": {
     zh: "工具色",
   },
-  "preview.components.utilityColorForScrimsAndLayeredPreviewOverlays": {
-    zh: "用于遮罩和分层预览覆盖层的工具色。",
-  },
-  "preview.components.warningMuted": {
-    zh: "警告弱化",
+  "preview.components.utilityColorsForFocusRingsScrimsAndLayeredOverlays": {
+    zh: "用于焦点环、遮罩和分层覆盖层的工具色。",
   },
   "preview.components.warningStrong": {
     zh: "警告强化",

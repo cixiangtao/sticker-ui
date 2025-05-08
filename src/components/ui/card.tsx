@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils"
  * Builds the sticker card className from structure variants.
  */
 const cardVariants = cva(
-  "relative flex flex-col overflow-hidden text-ink transition duration-150",
+  "relative flex flex-col overflow-hidden text-su-ink transition duration-150",
   {
     defaultVariants: {
       padding: "md",
@@ -23,11 +23,11 @@ const cardVariants = cva(
       },
       variant: {
         elevated:
-          "rounded-sticker-3xl border-2 border-ink bg-paper shadow-sticker-lg data-[interactive=true]:hover:-translate-y-0.5 data-[interactive=true]:hover:shadow-sticker-xl data-[interactive=true]:active:translate-x-1 data-[interactive=true]:active:translate-y-1 data-[interactive=true]:active:shadow-sticker-xs",
+          "rounded-su-3xl border-2 border-su-ink bg-su-paper shadow-su-lg data-[interactive=true]:hover:-translate-y-0.5 data-[interactive=true]:hover:shadow-su-xl data-[interactive=true]:active:translate-x-1 data-[interactive=true]:active:translate-y-1 data-[interactive=true]:active:shadow-su-xs",
         minimal:
-          "rounded-sticker-2xl border border-ink/25 bg-surface shadow-none data-[interactive=true]:hover:border-ink/45 data-[interactive=true]:hover:bg-surface data-[interactive=true]:active:border-ink/60",
+          "rounded-su-2xl border border-su-ink/25 bg-su-surface shadow-none data-[interactive=true]:hover:border-su-ink/45 data-[interactive=true]:hover:bg-su-surface data-[interactive=true]:active:border-su-ink/60",
         panel:
-          "rounded-sticker-panel border-[3px] border-ink bg-surface shadow-sticker-2xl data-[interactive=true]:hover:-translate-y-0.5 data-[interactive=true]:active:translate-x-1 data-[interactive=true]:active:translate-y-1 data-[interactive=true]:active:shadow-sticker-lg",
+          "rounded-su-panel border-[3px] border-su-ink bg-su-surface shadow-su-2xl data-[interactive=true]:hover:-translate-y-0.5 data-[interactive=true]:active:translate-x-1 data-[interactive=true]:active:translate-y-1 data-[interactive=true]:active:shadow-su-lg",
       },
     },
   },
@@ -57,7 +57,7 @@ type CardHeaderDividerInset = "card" | CardPadding
 const cardHeaderVariants = cva(
   cn(
     cardSlotSpacingClassName,
-    "relative border-ink after:pointer-events-none after:absolute after:bottom-0 after:border-ink after:content-[''] first:-mt-(--card-padding-y)",
+    "relative border-su-ink after:pointer-events-none after:absolute after:bottom-0 after:border-su-ink after:content-[''] first:-mt-(--card-padding-y)",
   ),
   {
     defaultVariants: {
@@ -67,10 +67,10 @@ const cardHeaderVariants = cva(
     variants: {
       divider: {
         dashed:
-          "after:border-b-2 after:border-dashed in-data-[variant=minimal]:after:border-b in-data-[variant=minimal]:after:border-surface-muted",
+          "after:border-b-2 after:border-dashed in-data-[variant=minimal]:after:border-b in-data-[variant=minimal]:after:border-su-surface-muted",
         none: "after:hidden",
         solid:
-          "after:border-b-2 in-data-[variant=minimal]:after:border-b in-data-[variant=minimal]:after:border-surface-muted",
+          "after:border-b-2 in-data-[variant=minimal]:after:border-b in-data-[variant=minimal]:after:border-su-surface-muted",
       },
       dividerInset: {
         card: "after:right-(--card-padding-x) after:left-(--card-padding-x)",
@@ -169,15 +169,15 @@ function HeaderDots() {
       data-slot="panel-header-dots"
     >
       <span
-        className="size-3.5 rounded-full border-2 border-ink bg-[#EF476F]"
+        className="size-3.5 rounded-full border-2 border-su-ink bg-su-accent-danger"
         data-slot="panel-header-dot"
       />
       <span
-        className="size-3.5 rounded-full border-2 border-ink bg-[#FFCF56]"
+        className="size-3.5 rounded-full border-2 border-su-ink bg-su-fill-default"
         data-slot="panel-header-dot"
       />
       <span
-        className="size-3.5 rounded-full border-2 border-ink bg-[#00B894]"
+        className="size-3.5 rounded-full border-2 border-su-ink bg-su-accent-success"
         data-slot="panel-header-dot"
       />
     </div>
@@ -228,7 +228,7 @@ function CardHeader({
 function CardTitle({ className, ...props }: React.ComponentProps<"h3">) {
   return (
     <h3
-      className={cn("m-0 text-lg leading-6 font-black text-ink", className)}
+      className={cn("m-0 text-lg leading-6 font-black text-su-ink", className)}
       data-slot="card-title"
       {...props}
     />
@@ -239,7 +239,7 @@ function CardDescription({ className, ...props }: React.ComponentProps<"p">) {
   return (
     <p
       className={cn(
-        "m-0 text-sm leading-6 font-medium text-text-muted",
+        "m-0 text-sm leading-6 font-medium text-su-fg-muted",
         className,
       )}
       data-slot="card-description"
@@ -263,7 +263,7 @@ function CardFooter({ className, ...props }: React.ComponentProps<"footer">) {
     <footer
       className={cn(
         cardSlotSpacingClassName,
-        "mt-auto flex flex-wrap items-center gap-2 border-t-2 border-ink in-data-[variant=minimal]:border-t in-data-[variant=minimal]:border-surface-muted",
+        "mt-auto flex flex-wrap items-center gap-2 border-t-2 border-su-ink in-data-[variant=minimal]:border-t in-data-[variant=minimal]:border-su-surface-muted",
         className,
       )}
       data-slot="card-footer"

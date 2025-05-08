@@ -12,7 +12,7 @@ function RegistryPage() {
   const { tm } = usePreviewI18n()
   return (
     <div className="grid gap-5">
-      <Card className="bg-[#EAF7FF]">
+      <Card className="bg-su-fill-info">
         <CardHeader>
           <CardTitle>{tm("preview.components.installCommands")}</CardTitle>
           <CardDescription>
@@ -25,7 +25,7 @@ function RegistryPage() {
           <div className="grid gap-3">
             {COMPONENT_FILES.map((file) => (
               <code
-                className="block overflow-x-auto rounded-[16px] border border-[#2E3038] bg-white p-4 text-sm font-bold"
+                className="block overflow-x-auto rounded-su-lg border border-su-ink bg-su-surface p-4 text-sm font-bold"
                 key={file.name}
               >
                 {tm("preview.components.npxShadcnLatestAdd")}
@@ -36,7 +36,7 @@ function RegistryPage() {
         </CardContent>
       </Card>
 
-      <Card className="bg-[#FFF6DC]">
+      <Card className="bg-su-fill-warning">
         <CardHeader>
           <CardTitle>{tm("preview.components.buildFlow")}</CardTitle>
           <CardDescription>
@@ -53,10 +53,10 @@ function RegistryPage() {
               "public/r/*.json",
             ].map((step, index) => (
               <div
-                className="rounded-[18px] border-[2px] border-[#2E3038] bg-white p-4 shadow-[2px_2px_0_#2E3038]"
+                className="rounded-su-xl border-2 border-su-ink bg-su-surface p-4 shadow-su-sm"
                 key={step}
               >
-                <div className="mb-4 flex size-10 items-center justify-center rounded-[12px] border-[2px] border-[#2E3038] bg-fill-secondary font-black">
+                <div className="mb-4 flex size-10 items-center justify-center rounded-su-sm border-2 border-su-ink bg-su-fill-secondary font-black">
                   {index + 1}
                 </div>
                 <div className="font-extrabold">{step}</div>

@@ -89,7 +89,7 @@ const columns: DataTableColumn<ReleaseRow>[] = [
 ]
 
 const meta = defineMeta({
-  className: "bg-fill-warning",
+  className: "bg-su-fill-warning",
   order: 20,
   titleKey: "preview.components.selectionAndFilters",
   descriptionKey:

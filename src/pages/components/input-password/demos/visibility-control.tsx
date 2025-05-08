@@ -4,7 +4,7 @@ import { Button, Field, InputPassword, FieldDescription } from "sticker-ui"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
-  className: "bg-fill-warning",
+  className: "bg-su-fill-warning",
   order: 40,
   titleKey: "preview.components.visibilityControl",
   descriptionKey:
