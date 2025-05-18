@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils"
  * Builds the sticker popover content className from tone and size options.
  */
 const popoverContentVariants = cva(
-  "z-50 origin-(--radix-popover-content-transform-origin) rounded-su-2xl border-2 border-su-ink text-su-ink shadow-su-lg transition duration-150 outline-none data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1",
+  "z-50 origin-(--radix-popover-content-transform-origin) rounded-su-2xl border-2 border-su-ink text-su-ink shadow-su-lg transition duration-150 outline-none data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95 motion-reduce:data-[state=closed]:animate-none motion-reduce:data-[state=open]:animate-none",
   {
     defaultVariants: {
       size: "md",

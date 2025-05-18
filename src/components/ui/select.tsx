@@ -327,7 +327,8 @@ const SelectContent = React.forwardRef<
     <SelectPrimitive.Portal>
       <SelectPrimitive.Content
         className={cn(
-          "relative z-50 max-h-72 min-w-36 overflow-hidden rounded-su-xl border-2 border-su-ink bg-su-surface text-su-ink shadow-su-lg",
+          "relative z-50 max-h-72 min-w-36 origin-(--radix-select-content-transform-origin) overflow-hidden rounded-su-xl border-2 border-su-ink bg-su-surface text-su-ink shadow-su-lg",
+          "data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95 motion-reduce:data-[state=closed]:animate-none motion-reduce:data-[state=open]:animate-none",
           "data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1",
           position === "popper" &&
             "w-[var(--radix-select-trigger-width)] min-w-[var(--radix-select-trigger-width)]",

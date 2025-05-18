@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils"
  * Builds the sticker dialog content className from size and tone options.
  */
 const dialogContentVariants = cva(
-  "fixed top-1/2 left-1/2 z-50 grid max-h-[calc(100dvh-2rem)] w-[calc(100vw-2rem)] -translate-x-1/2 -translate-y-1/2 gap-4 overflow-y-auto rounded-su-panel border-[3px] border-su-ink text-su-ink shadow-su-2xl transition duration-150 outline-none",
+  "fixed top-1/2 left-1/2 z-50 grid max-h-[calc(100dvh-2rem)] w-[calc(100vw-2rem)] -translate-x-1/2 -translate-y-1/2 gap-4 overflow-y-auto rounded-su-panel border-[3px] border-su-ink text-su-ink shadow-su-2xl transition duration-150 outline-none data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95 motion-reduce:data-[state=closed]:animate-none motion-reduce:data-[state=open]:animate-none",
   {
     defaultVariants: {
       size: "md",
@@ -95,7 +95,7 @@ const DialogOverlay = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <DialogPrimitive.Overlay
     className={cn(
-      "fixed inset-0 z-50 bg-su-overlay transition duration-150",
+      "fixed inset-0 z-50 bg-su-overlay transition duration-150 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:animate-in data-[state=open]:fade-in-0 motion-reduce:data-[state=closed]:animate-none motion-reduce:data-[state=open]:animate-none",
       className,
     )}
     data-slot="dialog-overlay"

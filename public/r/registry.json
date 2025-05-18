@@ -282,7 +282,11 @@
       "type": "registry:ui",
       "title": "Sticker Select",
       "description": "A Radix-powered select with sticker trigger, menu, and item states.",
-      "dependencies": ["@radix-ui/react-select", "lucide-react"],
+      "dependencies": [
+        "@radix-ui/react-select",
+        "lucide-react",
+        "tailwindcss-animate"
+      ],
       "registryDependencies": ["utils", "input"],
       "files": [
         {
@@ -297,7 +301,11 @@
       "type": "registry:ui",
       "title": "Sticker Tooltip",
       "description": "A Radix-powered tooltip with a small handbook sticker bubble.",
-      "dependencies": ["@radix-ui/react-tooltip", "class-variance-authority"],
+      "dependencies": [
+        "@radix-ui/react-tooltip",
+        "class-variance-authority",
+        "tailwindcss-animate"
+      ],
       "registryDependencies": ["utils"],
       "files": [
         {
@@ -312,7 +320,11 @@
       "type": "registry:ui",
       "title": "Sticker Popover",
       "description": "A Radix-powered popover for compact interactive sticker panels.",
-      "dependencies": ["@radix-ui/react-popover", "class-variance-authority"],
+      "dependencies": [
+        "@radix-ui/react-popover",
+        "class-variance-authority",
+        "tailwindcss-animate"
+      ],
       "registryDependencies": ["utils"],
       "files": [
         {
@@ -330,7 +342,8 @@
       "dependencies": [
         "@radix-ui/react-dialog",
         "class-variance-authority",
-        "lucide-react"
+        "lucide-react",
+        "tailwindcss-animate"
       ],
       "registryDependencies": ["utils"],
       "files": [

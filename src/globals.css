@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "./tokens.css";
+@plugin "tailwindcss-animate";
 
 html {
   background: var(--color-su-canvas);

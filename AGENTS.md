@@ -19,6 +19,7 @@
 - Keep extra runtime dependencies minimal. Add non-baseline dependencies only when they provide clear component-level value, and declare them on the registry item that needs them.
 - Preserve the handbook sticker style: warm paper surfaces, chunky outlines, hard offset shadows, tactile states, and accessible semantics.
 - Prefer shared Tailwind tokens from `src/tokens.css` via `src/globals.css` before raw values or arbitrary shadows.
+- `tailwindcss-animate` is the approved Tailwind motion helper for floating registry components; declare it only on registry items that use it, wire it in preview through `src/globals.css`, and document package-user setup instead of adding it to `src/tokens.css`.
 - Document public registry component APIs with TSDoc-style `/** ... */` comments.
 - Keep demo example content in English literals; reserve preview i18n for metadata, page chrome, API docs, and prop descriptions.
 - Keep registry component display names as exported component-name literals in route metadata, not translated preview i18n keys.

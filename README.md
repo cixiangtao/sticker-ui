@@ -48,6 +48,17 @@ The package does not ship precompiled component CSS. It only exposes React
 components and Tailwind tokens, so consuming projects stay in control of their
 own generated CSS.
 
+If you use floating components such as Dialog, Popover, Select, or Tooltip,
+install `tailwindcss-animate` and add the plugin to the same CSS entry:
+
+```bash
+npm install tailwindcss-animate
+```
+
+```css
+@plugin "tailwindcss-animate";
+```
+
 Run the local Vite preview with:
 
 ```bash
