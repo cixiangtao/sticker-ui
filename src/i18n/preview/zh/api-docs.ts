@@ -2514,6 +2514,197 @@ const ZH_PREVIEW_API_DOC_MESSAGES = defineMessages({
     {
       zh: "受控的选中行 key。",
     },
+  "api.pagination.description": {
+    zh: "用于列表、表格和搜索结果的贴纸分页控制。",
+  },
+  "api.pagination.components.Pagination.description": {
+    zh: "用于分页列表、表格和搜索结果的贴纸分页控件。",
+  },
+  "api.pagination.components.Pagination.props.description": {
+    zh: "贴纸分页导航的 props。",
+  },
+  "api.pagination.components.Pagination.props.remarks": {
+    zh: "公开 API 使用从 1 开始的页码。传入 pageCount 或 total 描述结果集。",
+  },
+  "api.pagination.components.Pagination.props.members.classNames.description": {
+    zh: "分页各插槽的 className。",
+  },
+  "api.pagination.components.Pagination.props.members.defaultPage.description":
+    {
+      zh: "非受控用法的初始页码，从 1 开始。",
+    },
+  "api.pagination.components.Pagination.props.members.defaultPageSize.description":
+    {
+      zh: "非受控用法的初始每页数量。",
+    },
+  "api.pagination.components.Pagination.props.members.disabled.description": {
+    zh: "禁用全部分页控制。",
+  },
+  "api.pagination.components.Pagination.props.members.labels.description": {
+    zh: "自定义标签和页码摘要格式。",
+  },
+  "api.pagination.components.Pagination.props.members.onChange.description": {
+    zh: "当页码或每页数量变化时触发。",
+  },
+  "api.pagination.components.Pagination.props.members.onPageChange.description":
+    {
+      zh: "当从 1 开始的页码变化时触发。",
+    },
+  "api.pagination.components.Pagination.props.members.onPageSizeChange.description":
+    {
+      zh: "当每页数量变化时触发。",
+    },
+  "api.pagination.components.Pagination.props.members.page.description": {
+    zh: "受控页码，从 1 开始。",
+  },
+  "api.pagination.components.Pagination.props.members.pageCount.description": {
+    zh: "总页数。同时提供 total 时，pageCount 优先。",
+  },
+  "api.pagination.components.Pagination.props.members.pageSize.description": {
+    zh: "受控每页数量。",
+  },
+  "api.pagination.components.Pagination.props.members.pageSizeOptions.description":
+    {
+      zh: "每页数量选择器展示的选项。",
+    },
+  "api.pagination.components.Pagination.props.members.showFirstLast.description":
+    {
+      zh: "是否展示首页和末页跳转按钮。",
+    },
+  "api.pagination.components.Pagination.props.members.showSizeChanger.description":
+    {
+      zh: "是否展示每页数量选择器。",
+    },
+  "api.pagination.components.Pagination.props.members.total.description": {
+    zh: "用于在未提供 pageCount 时计算总页数的记录总数。",
+  },
+  "api.pagination.exports.Pagination.description": {
+    zh: "用于分页列表、表格和搜索结果的贴纸分页控件。",
+  },
+  "api.pagination.exports.PaginationChangeState.description": {
+    zh: "页码或每页数量变化时传出的状态载荷。",
+  },
+  "api.pagination.exports.PaginationClassNames.description": {
+    zh: "分页聚合界面的插槽 className。",
+  },
+  "api.pagination.exports.PaginationLabels.description": {
+    zh: "Pagination 的可访问标签和摘要格式配置。",
+  },
+  "api.pagination.exports.PaginationProps.description": {
+    zh: "贴纸分页导航的 props。",
+  },
+  "api.pagination.exports.PaginationProps.remarks": {
+    zh: "公开 API 使用从 1 开始的页码。传入 pageCount 或 total 描述结果集。",
+  },
+  "api.pagination.exports.PaginationSummaryState.description": {
+    zh: "用于渲染分页摘要的状态值。",
+  },
+  "api.pagination.types.PaginationChangeState.description": {
+    zh: "页码或每页数量变化时传出的状态载荷。",
+  },
+  "api.pagination.types.PaginationClassNames.description": {
+    zh: "分页聚合界面的插槽 className。",
+  },
+  "api.pagination.types.PaginationClassNames.members.controls.description": {
+    zh: "应用到图标按钮组的 className。",
+  },
+  "api.pagination.types.PaginationClassNames.members.sizeChanger.description": {
+    zh: "应用到每页数量标签和选择器组合的 className。",
+  },
+  "api.pagination.types.PaginationClassNames.members.summary.description": {
+    zh: "应用到可见页码摘要的 className。",
+  },
+  "api.pagination.types.PaginationLabels.description": {
+    zh: "Pagination 的可访问标签和摘要格式配置。",
+  },
+  "api.pagination.types.PaginationLabels.members.firstPage.description": {
+    zh: "首页按钮的可访问标签。",
+  },
+  "api.pagination.types.PaginationLabels.members.lastPage.description": {
+    zh: "末页按钮的可访问标签。",
+  },
+  "api.pagination.types.PaginationLabels.members.nextPage.description": {
+    zh: "下一页按钮的可访问标签。",
+  },
+  "api.pagination.types.PaginationLabels.members.pageSummary.description": {
+    zh: "格式化可见页码摘要。",
+  },
+  "api.pagination.types.PaginationLabels.members.previousPage.description": {
+    zh: "上一页按钮的可访问标签。",
+  },
+  "api.pagination.types.PaginationLabels.members.rowsPerPage.description": {
+    zh: "每页数量选择器的可见标签。",
+  },
+  "api.pagination.types.PaginationLabels.members.rowsPerPageSelect.description":
+    {
+      zh: "每页数量选择器触发器的可访问标签。",
+    },
+  "api.pagination.types.PaginationProps.description": {
+    zh: "贴纸分页导航的 props。",
+  },
+  "api.pagination.types.PaginationProps.remarks": {
+    zh: "公开 API 使用从 1 开始的页码。传入 pageCount 或 total 描述结果集。",
+  },
+  "api.pagination.types.PaginationProps.members.classNames.description": {
+    zh: "分页各插槽的 className。",
+  },
+  "api.pagination.types.PaginationProps.members.defaultPage.description": {
+    zh: "非受控用法的初始页码，从 1 开始。",
+  },
+  "api.pagination.types.PaginationProps.members.defaultPageSize.description": {
+    zh: "非受控用法的初始每页数量。",
+  },
+  "api.pagination.types.PaginationProps.members.disabled.description": {
+    zh: "禁用全部分页控制。",
+  },
+  "api.pagination.types.PaginationProps.members.labels.description": {
+    zh: "自定义标签和页码摘要格式。",
+  },
+  "api.pagination.types.PaginationProps.members.onChange.description": {
+    zh: "当页码或每页数量变化时触发。",
+  },
+  "api.pagination.types.PaginationProps.members.onPageChange.description": {
+    zh: "当从 1 开始的页码变化时触发。",
+  },
+  "api.pagination.types.PaginationProps.members.onPageSizeChange.description": {
+    zh: "当每页数量变化时触发。",
+  },
+  "api.pagination.types.PaginationProps.members.page.description": {
+    zh: "受控页码，从 1 开始。",
+  },
+  "api.pagination.types.PaginationProps.members.pageCount.description": {
+    zh: "总页数。同时提供 total 时，pageCount 优先。",
+  },
+  "api.pagination.types.PaginationProps.members.pageSize.description": {
+    zh: "受控每页数量。",
+  },
+  "api.pagination.types.PaginationProps.members.pageSizeOptions.description": {
+    zh: "每页数量选择器展示的选项。",
+  },
+  "api.pagination.types.PaginationProps.members.showFirstLast.description": {
+    zh: "是否展示首页和末页跳转按钮。",
+  },
+  "api.pagination.types.PaginationProps.members.showSizeChanger.description": {
+    zh: "是否展示每页数量选择器。",
+  },
+  "api.pagination.types.PaginationProps.members.total.description": {
+    zh: "用于在未提供 pageCount 时计算总页数的记录总数。",
+  },
+  "api.pagination.types.PaginationSummaryState.description": {
+    zh: "用于渲染分页摘要的状态值。",
+  },
+  "api.pagination.types.PaginationSummaryState.members.page.description": {
+    zh: "当前页码，从 1 开始。",
+  },
+  "api.pagination.types.PaginationSummaryState.members.pageCount.description": {
+    zh: "当前总页数。",
+  },
+  "api.pagination.types.PaginationSummaryState.members.pageSize.description": {
+    zh: "当前每页数量。",
+  },
+  "api.pagination.types.PaginationSummaryState.members.total.description": {
+    zh: "用于计算 pageCount 的可选记录总数。",
+  },
 })
 
 export { ZH_PREVIEW_API_DOC_MESSAGES }

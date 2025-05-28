@@ -106,15 +106,30 @@
       ]
     },
     {
+      "name": "pagination",
+      "type": "registry:ui",
+      "title": "Sticker Pagination",
+      "description": "A tactile pagination control for paged lists, tables, and search results.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["button", "select", "utils"],
+      "files": [
+        {
+          "path": "src/components/ui/pagination.tsx",
+          "target": "@ui/pagination.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "data-table",
       "type": "registry:ui",
       "title": "Sticker DataTable",
       "description": "An antd-like data table with sorting, filtering, pagination, and row selection.",
       "dependencies": ["@tanstack/react-table", "lucide-react"],
       "registryDependencies": [
-        "button",
         "checkbox",
         "input",
+        "pagination",
         "select",
         "spinner",
         "table",

@@ -108,6 +108,14 @@ export {
   popoverContentVariants,
 } from "./components/ui/popover"
 export type { PopoverContentProps } from "./components/ui/popover"
+export { Pagination } from "./components/ui/pagination"
+export type {
+  PaginationChangeState,
+  PaginationClassNames,
+  PaginationLabels,
+  PaginationProps,
+  PaginationSummaryState,
+} from "./components/ui/pagination"
 export {
   Select,
   SelectContent,

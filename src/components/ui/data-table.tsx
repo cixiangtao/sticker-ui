@@ -14,20 +14,12 @@ import {
   type Updater,
   useReactTable,
 } from "@tanstack/react-table"
-import {
-  ArrowDown,
-  ArrowUp,
-  ArrowUpDown,
-  ChevronsLeft,
-  ChevronsRight,
-  ChevronLeft,
-  ChevronRight,
-} from "lucide-react"
+import { ArrowDown, ArrowUp, ArrowUpDown } from "lucide-react"
 import * as React from "react"
 
-import { Button } from "@/components/ui/button"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Input } from "@/components/ui/input"
+import { Pagination } from "@/components/ui/pagination"
 import {
   Select,
   SelectContent,
@@ -324,7 +316,6 @@ interface DataTableProps<TData extends object> extends Omit<
 }
 
 const SELECT_ALL_FILTER_VALUE = "__sticker_data_table_all__"
-const DEFAULT_PAGE_SIZE_OPTIONS = [5, 10, 20, 50]
 const EMPTY_ROW_HEIGHT_CLASS = "h-24"
 
 /**
@@ -487,9 +478,7 @@ function DataTable<TData extends object>({
   const hasToolbar = toolbar || isRowSelectionEnabled || loading
   const rows = table.getRowModel().rows
   const visibleColumnCount = table.getVisibleLeafColumns().length
-  const pageCount = Math.max(table.getPageCount(), 1)
-  const pageSizeOptions =
-    paginationConfig?.pageSizeOptions ?? DEFAULT_PAGE_SIZE_OPTIONS
+  const filteredRowCount = table.getFilteredRowModel().rows.length
 
   return (
     <div
@@ -640,94 +629,21 @@ function DataTable<TData extends object>({
       </Table>
 
       {isPaginationEnabled ? (
-        <div
-          className={cn(
-            "flex min-w-0 flex-wrap items-center justify-between gap-3 rounded-su-xl border-2 border-su-ink bg-su-paper px-3 py-2 shadow-su-sm",
-            classNames?.pagination,
-          )}
+        <Pagination
+          className={classNames?.pagination}
           data-slot="data-table-pagination"
-        >
-          {paginationConfig?.showSizeChanger !== false ? (
-            <label className="flex items-center gap-2 text-xs font-black text-su-ink">
-              Rows per page
-              <Select
-                onValueChange={(value) => {
-                  table.setPageSize(Number(value))
-                }}
-                size="sm"
-                value={String(table.getState().pagination.pageSize)}
-              >
-                <SelectTrigger className="w-20" aria-label="Rows per page">
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent>
-                  {pageSizeOptions.map((pageSize) => (
-                    <SelectItem key={pageSize} value={String(pageSize)}>
-                      {pageSize}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            </label>
-          ) : (
-            <span />
-          )}
-
-          <div className="flex items-center gap-2">
-            <span
-              className="text-xs font-black text-su-fg-muted"
-              data-slot="data-table-page-summary"
-            >
-              Page {table.getState().pagination.pageIndex + 1} of {pageCount}
-            </span>
-            <div className="flex items-center gap-1">
-              <Button
-                aria-label="First page"
-                disabled={!table.getCanPreviousPage()}
-                onClick={() => {
-                  table.firstPage()
-                }}
-                size="icon"
-                variant="outlined"
-              >
-                <ChevronsLeft aria-hidden="true" className="size-4" />
-              </Button>
-              <Button
-                aria-label="Previous page"
-                disabled={!table.getCanPreviousPage()}
-                onClick={() => {
-                  table.previousPage()
-                }}
-                size="icon"
-                variant="outlined"
-              >
-                <ChevronLeft aria-hidden="true" className="size-4" />
-              </Button>
-              <Button
-                aria-label="Next page"
-                disabled={!table.getCanNextPage()}
-                onClick={() => {
-                  table.nextPage()
-                }}
-                size="icon"
-                variant="outlined"
-              >
-                <ChevronRight aria-hidden="true" className="size-4" />
-              </Button>
-              <Button
-                aria-label="Last page"
-                disabled={!table.getCanNextPage()}
-                onClick={() => {
-                  table.lastPage()
-                }}
-                size="icon"
-                variant="outlined"
-              >
-                <ChevronsRight aria-hidden="true" className="size-4" />
-              </Button>
-            </div>
-          </div>
-        </div>
+          onPageChange={(page) => {
+            table.setPageIndex(page - 1)
+          }}
+          onPageSizeChange={(pageSize) => {
+            table.setPageSize(pageSize)
+          }}
+          page={table.getState().pagination.pageIndex + 1}
+          pageSize={table.getState().pagination.pageSize}
+          pageSizeOptions={paginationConfig?.pageSizeOptions}
+          showSizeChanger={paginationConfig?.showSizeChanger !== false}
+          total={filteredRowCount}
+        />
       ) : null}
     </div>
   )

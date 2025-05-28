@@ -50,6 +50,7 @@ const InputPage = createRegistryComponentPage("input")
 const InputPasswordPage = createRegistryComponentPage("input-password")
 const JsxJoinPage = createRegistryComponentPage("jsx-join")
 const LayoutPage = createRegistryComponentPage("layout")
+const PaginationPage = createRegistryComponentPage("pagination")
 const PopoverPage = createRegistryComponentPage("popover")
 const ProgressPage = createRegistryComponentPage("progress")
 const RadioPage = createRegistryComponentPage("radio")
@@ -77,6 +78,7 @@ export {
   InputPasswordPage,
   JsxJoinPage,
   LayoutPage,
+  PaginationPage,
   PopoverPage,
   ProgressPage,
   RadioPage,

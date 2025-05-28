@@ -127,6 +127,9 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
     {
       zh: "用于排序、筛选、分页和行选择的 Ant Design 风格数据表格。",
     },
+  "preview.components.basicPagination": {
+    zh: "基础分页",
+  },
   "preview.components.basicDataTable": {
     zh: "基础数据表格",
   },
@@ -268,6 +271,9 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   "preview.components.compactStickerLabelsForStatusAndMetadata": {
     zh: "用于状态和元数据的紧凑贴纸标签。",
   },
+  "preview.components.compactAndDisabled": {
+    zh: "紧凑与禁用",
+  },
   "preview.components.components": {
     zh: "组件",
   },
@@ -367,12 +373,30 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
     {
       zh: "简约卡片移除阴影，只保留细边框，用于更安静的内容分组。",
     },
+  "preview.components.minimalControlsCanHideTheSizeChangerOrFirstLastJumpsWhenSpaceIsTight":
+    {
+      zh: "空间紧凑时，可隐藏每页数量选择器或首页/末页跳转按钮。",
+    },
   "preview.components.nativeInputControlsWithChunkyStickerFrames": {
     zh: "带有厚实贴纸边框的原生输入控件。",
   },
   "preview.components.passwordFieldsWithShowHideStickerToggles": {
     zh: "带显示隐藏贴纸切换按钮的密码字段。",
   },
+  "preview.components.pagedNavigationForListsTablesAndSearchResults": {
+    zh: "用于列表、表格和搜索结果的分页导航。",
+  },
+  "preview.components.pageSizeOptions": {
+    zh: "每页数量选项",
+  },
+  "preview.components.pageSizeOptionsKeepLargeListsScannableWithoutChangingThePaginationContract":
+    {
+      zh: "每页数量选项让大型列表更易浏览，同时不改变分页组件的交互契约。",
+    },
+  "preview.components.paginationCanRunControlledForServerBackedListsOrLocalResultSets":
+    {
+      zh: "Pagination 可用于服务端列表或本地结果集的受控分页。",
+    },
   "preview.components.offsetLevel": {
     zh: "偏移层级",
   },

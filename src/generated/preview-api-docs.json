@@ -2399,6 +2399,573 @@
     ],
     "variants": []
   },
+  "pagination": {
+    "components": [
+      {
+        "descriptionKey": "api.pagination.components.Pagination.description",
+        "name": "Pagination",
+        "props": {
+          "descriptionKey": "api.pagination.components.Pagination.props.description",
+          "remarksKey": "api.pagination.components.Pagination.props.remarks",
+          "inherits": ["Omit< React.HTMLAttributes<HTMLElement>, \"onChange\" >"],
+          "inheritedMembers": [
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-describedby.description",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-invalid.description",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"false\" | \"true\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-label.description",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-labelledby.description",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.autoFocus.description",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.children.description",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.className.description",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultChecked.description",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultValue.description",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.id.description",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onBlur.description",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onClick.description",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onFocus.description",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyDown.description",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyUp.description",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseEnter.description",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseLeave.description",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.role.description",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.style.description",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.title.description",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "members": [
+            {
+              "descriptionKey": "api.pagination.components.Pagination.props.members.classNames.description",
+              "name": "classNames",
+              "optional": true,
+              "required": false,
+              "type": "PaginationClassNames"
+            },
+            {
+              "defaultValue": "1",
+              "descriptionKey": "api.pagination.components.Pagination.props.members.defaultPage.description",
+              "name": "defaultPage",
+              "optional": true,
+              "required": false,
+              "type": "number"
+            },
+            {
+              "defaultValue": "10",
+              "descriptionKey": "api.pagination.components.Pagination.props.members.defaultPageSize.description",
+              "name": "defaultPageSize",
+              "optional": true,
+              "required": false,
+              "type": "number"
+            },
+            {
+              "defaultValue": "false",
+              "descriptionKey": "api.pagination.components.Pagination.props.members.disabled.description",
+              "name": "disabled",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.pagination.components.Pagination.props.members.labels.description",
+              "name": "labels",
+              "optional": true,
+              "required": false,
+              "type": "PaginationLabels"
+            },
+            {
+              "descriptionKey": "api.pagination.components.Pagination.props.members.onChange.description",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "(state: PaginationChangeState) => void"
+            },
+            {
+              "descriptionKey": "api.pagination.components.Pagination.props.members.onPageChange.description",
+              "name": "onPageChange",
+              "optional": true,
+              "required": false,
+              "type": "(page: number) => void"
+            },
+            {
+              "descriptionKey": "api.pagination.components.Pagination.props.members.onPageSizeChange.description",
+              "name": "onPageSizeChange",
+              "optional": true,
+              "required": false,
+              "type": "(pageSize: number) => void"
+            },
+            {
+              "descriptionKey": "api.pagination.components.Pagination.props.members.page.description",
+              "name": "page",
+              "optional": true,
+              "required": false,
+              "type": "number"
+            },
+            {
+              "defaultValue": "1",
+              "descriptionKey": "api.pagination.components.Pagination.props.members.pageCount.description",
+              "name": "pageCount",
+              "optional": true,
+              "required": false,
+              "type": "number"
+            },
+            {
+              "descriptionKey": "api.pagination.components.Pagination.props.members.pageSize.description",
+              "name": "pageSize",
+              "optional": true,
+              "required": false,
+              "type": "number"
+            },
+            {
+              "defaultValue": "[5, 10, 20, 50]",
+              "descriptionKey": "api.pagination.components.Pagination.props.members.pageSizeOptions.description",
+              "name": "pageSizeOptions",
+              "optional": true,
+              "required": false,
+              "type": "number[]"
+            },
+            {
+              "defaultValue": "true",
+              "descriptionKey": "api.pagination.components.Pagination.props.members.showFirstLast.description",
+              "name": "showFirstLast",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "defaultValue": "true",
+              "descriptionKey": "api.pagination.components.Pagination.props.members.showSizeChanger.description",
+              "name": "showSizeChanger",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.pagination.components.Pagination.props.members.total.description",
+              "name": "total",
+              "optional": true,
+              "required": false,
+              "type": "number"
+            }
+          ],
+          "type": "PaginationProps"
+        }
+      }
+    ],
+    "descriptionKey": "api.pagination.description",
+    "exports": [
+      {
+        "descriptionKey": "api.pagination.exports.Pagination.description",
+        "kind": "component",
+        "name": "Pagination"
+      },
+      {
+        "descriptionKey": "api.pagination.exports.PaginationChangeState.description",
+        "kind": "interface",
+        "name": "PaginationChangeState"
+      },
+      {
+        "descriptionKey": "api.pagination.exports.PaginationClassNames.description",
+        "kind": "interface",
+        "name": "PaginationClassNames"
+      },
+      {
+        "descriptionKey": "api.pagination.exports.PaginationLabels.description",
+        "kind": "interface",
+        "name": "PaginationLabels"
+      },
+      {
+        "descriptionKey": "api.pagination.exports.PaginationProps.description",
+        "remarksKey": "api.pagination.exports.PaginationProps.remarks",
+        "kind": "interface",
+        "name": "PaginationProps"
+      },
+      {
+        "descriptionKey": "api.pagination.exports.PaginationSummaryState.description",
+        "kind": "interface",
+        "name": "PaginationSummaryState"
+      }
+    ],
+    "name": "pagination",
+    "sourcePath": "src/components/ui/pagination.tsx",
+    "title": "Sticker Pagination",
+    "types": [
+      {
+        "descriptionKey": "api.pagination.types.PaginationChangeState.description",
+        "inherits": ["PaginationSummaryState"],
+        "kind": "interface",
+        "members": [],
+        "name": "PaginationChangeState"
+      },
+      {
+        "descriptionKey": "api.pagination.types.PaginationClassNames.description",
+        "inherits": [],
+        "kind": "interface",
+        "members": [
+          {
+            "descriptionKey": "api.pagination.types.PaginationClassNames.members.controls.description",
+            "name": "controls",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "descriptionKey": "api.pagination.types.PaginationClassNames.members.sizeChanger.description",
+            "name": "sizeChanger",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "descriptionKey": "api.pagination.types.PaginationClassNames.members.summary.description",
+            "name": "summary",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "name": "PaginationClassNames"
+      },
+      {
+        "descriptionKey": "api.pagination.types.PaginationLabels.description",
+        "inherits": [],
+        "kind": "interface",
+        "members": [
+          {
+            "defaultValue": "\"First page\"",
+            "descriptionKey": "api.pagination.types.PaginationLabels.members.firstPage.description",
+            "name": "firstPage",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "defaultValue": "\"Last page\"",
+            "descriptionKey": "api.pagination.types.PaginationLabels.members.lastPage.description",
+            "name": "lastPage",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "defaultValue": "\"Next page\"",
+            "descriptionKey": "api.pagination.types.PaginationLabels.members.nextPage.description",
+            "name": "nextPage",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "defaultValue": "\"Page {page} of {pageCount}\"",
+            "descriptionKey": "api.pagination.types.PaginationLabels.members.pageSummary.description",
+            "name": "pageSummary",
+            "optional": true,
+            "required": false,
+            "type": "(state: PaginationSummaryState) => React.ReactNode"
+          },
+          {
+            "defaultValue": "\"Previous page\"",
+            "descriptionKey": "api.pagination.types.PaginationLabels.members.previousPage.description",
+            "name": "previousPage",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "defaultValue": "\"Rows per page\"",
+            "descriptionKey": "api.pagination.types.PaginationLabels.members.rowsPerPage.description",
+            "name": "rowsPerPage",
+            "optional": true,
+            "required": false,
+            "type": "React.ReactNode"
+          },
+          {
+            "defaultValue": "\"Rows per page\"",
+            "descriptionKey": "api.pagination.types.PaginationLabels.members.rowsPerPageSelect.description",
+            "name": "rowsPerPageSelect",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "name": "PaginationLabels"
+      },
+      {
+        "descriptionKey": "api.pagination.types.PaginationProps.description",
+        "remarksKey": "api.pagination.types.PaginationProps.remarks",
+        "inherits": ["Omit< React.HTMLAttributes<HTMLElement>, \"onChange\" >"],
+        "kind": "interface",
+        "members": [
+          {
+            "descriptionKey": "api.pagination.types.PaginationProps.members.classNames.description",
+            "name": "classNames",
+            "optional": true,
+            "required": false,
+            "type": "PaginationClassNames"
+          },
+          {
+            "defaultValue": "1",
+            "descriptionKey": "api.pagination.types.PaginationProps.members.defaultPage.description",
+            "name": "defaultPage",
+            "optional": true,
+            "required": false,
+            "type": "number"
+          },
+          {
+            "defaultValue": "10",
+            "descriptionKey": "api.pagination.types.PaginationProps.members.defaultPageSize.description",
+            "name": "defaultPageSize",
+            "optional": true,
+            "required": false,
+            "type": "number"
+          },
+          {
+            "defaultValue": "false",
+            "descriptionKey": "api.pagination.types.PaginationProps.members.disabled.description",
+            "name": "disabled",
+            "optional": true,
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "descriptionKey": "api.pagination.types.PaginationProps.members.labels.description",
+            "name": "labels",
+            "optional": true,
+            "required": false,
+            "type": "PaginationLabels"
+          },
+          {
+            "descriptionKey": "api.pagination.types.PaginationProps.members.onChange.description",
+            "name": "onChange",
+            "optional": true,
+            "required": false,
+            "type": "(state: PaginationChangeState) => void"
+          },
+          {
+            "descriptionKey": "api.pagination.types.PaginationProps.members.onPageChange.description",
+            "name": "onPageChange",
+            "optional": true,
+            "required": false,
+            "type": "(page: number) => void"
+          },
+          {
+            "descriptionKey": "api.pagination.types.PaginationProps.members.onPageSizeChange.description",
+            "name": "onPageSizeChange",
+            "optional": true,
+            "required": false,
+            "type": "(pageSize: number) => void"
+          },
+          {
+            "descriptionKey": "api.pagination.types.PaginationProps.members.page.description",
+            "name": "page",
+            "optional": true,
+            "required": false,
+            "type": "number"
+          },
+          {
+            "defaultValue": "1",
+            "descriptionKey": "api.pagination.types.PaginationProps.members.pageCount.description",
+            "name": "pageCount",
+            "optional": true,
+            "required": false,
+            "type": "number"
+          },
+          {
+            "descriptionKey": "api.pagination.types.PaginationProps.members.pageSize.description",
+            "name": "pageSize",
+            "optional": true,
+            "required": false,
+            "type": "number"
+          },
+          {
+            "defaultValue": "[5, 10, 20, 50]",
+            "descriptionKey": "api.pagination.types.PaginationProps.members.pageSizeOptions.description",
+            "name": "pageSizeOptions",
+            "optional": true,
+            "required": false,
+            "type": "number[]"
+          },
+          {
+            "defaultValue": "true",
+            "descriptionKey": "api.pagination.types.PaginationProps.members.showFirstLast.description",
+            "name": "showFirstLast",
+            "optional": true,
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "defaultValue": "true",
+            "descriptionKey": "api.pagination.types.PaginationProps.members.showSizeChanger.description",
+            "name": "showSizeChanger",
+            "optional": true,
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "descriptionKey": "api.pagination.types.PaginationProps.members.total.description",
+            "name": "total",
+            "optional": true,
+            "required": false,
+            "type": "number"
+          }
+        ],
+        "name": "PaginationProps"
+      },
+      {
+        "descriptionKey": "api.pagination.types.PaginationSummaryState.description",
+        "inherits": [],
+        "kind": "interface",
+        "members": [
+          {
+            "descriptionKey": "api.pagination.types.PaginationSummaryState.members.page.description",
+            "name": "page",
+            "optional": false,
+            "required": true,
+            "type": "number"
+          },
+          {
+            "descriptionKey": "api.pagination.types.PaginationSummaryState.members.pageCount.description",
+            "name": "pageCount",
+            "optional": false,
+            "required": true,
+            "type": "number"
+          },
+          {
+            "descriptionKey": "api.pagination.types.PaginationSummaryState.members.pageSize.description",
+            "name": "pageSize",
+            "optional": false,
+            "required": true,
+            "type": "number"
+          },
+          {
+            "descriptionKey": "api.pagination.types.PaginationSummaryState.members.total.description",
+            "name": "total",
+            "optional": true,
+            "required": false,
+            "type": "number"
+          }
+        ],
+        "name": "PaginationSummaryState"
+      }
+    ],
+    "variants": []
+  },
   "data-table": {
     "components": [
       {

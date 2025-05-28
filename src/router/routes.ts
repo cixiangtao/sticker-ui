@@ -129,6 +129,19 @@ const routes = defineRoutes([
   },
   {
     component: () =>
+      import("@/pages/components").then((module) => module.PaginationPage),
+    meta: {
+      emoji: "P",
+      navSection: "surfaces-data",
+      order: 54,
+      title: "Pagination",
+      descriptionKey:
+        "preview.components.pagedNavigationForListsTablesAndSearchResults",
+    },
+    path: "/components/pagination",
+  },
+  {
+    component: () =>
       import("@/pages/components").then((module) => module.TagPage),
     meta: {
       emoji: "T",
