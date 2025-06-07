@@ -887,6 +887,10 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   "preview.components.previewArchitecture": {
     zh: "预览架构",
   },
+  "preview.components.runTheFinalAddCommandWithoutOverwriteSoShadcnAsksBeforeReplacingLocalFiles":
+    {
+      zh: "最后执行不带 --overwrite 的 add 命令，这样 shadcn 会在替换本地同名文件前询问你。",
+    },
   "preview.components.thePreviewIsGroupedByDocumentationJobsStartFoundationsComponentsAndRegistryDelivery":
     {
       zh: "预览按文档任务分组：起点、基础、组件和 registry 交付。",

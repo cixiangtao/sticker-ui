@@ -15,14 +15,20 @@ A source-first React + Tailwind component library with a handbook sticker visual
 Recommended source-first registry install:
 
 ```bash
+npx shadcn@latest add https://your-domain.com/r/button.json --dry-run
 npx shadcn@latest add https://your-domain.com/r/button.json
 ```
 
 Or with a namespace registry:
 
 ```bash
+npx shadcn@latest add @handdrawn/button --dry-run
 npx shadcn@latest add @handdrawn/button
 ```
+
+Run the final `add` command without `--overwrite` so shadcn asks before
+replacing any local files with the same names. Use `--diff` for a closer look
+at a conflict before choosing whether to overwrite it.
 
 Local registry builds are generated with:
 

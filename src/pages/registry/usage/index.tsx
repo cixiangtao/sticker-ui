@@ -24,15 +24,24 @@ function RegistryPage() {
         <CardContent>
           <div className="grid gap-3">
             {COMPONENT_FILES.map((file) => (
-              <code
-                className="block overflow-x-auto rounded-su-lg border border-su-ink bg-su-surface p-4 text-sm font-bold"
+              <pre
+                className="overflow-x-auto rounded-su-lg border border-su-ink bg-su-surface p-4 text-sm font-bold"
                 key={file.name}
               >
-                {tm("preview.components.npxShadcnLatestAdd")}
-                {file.registry}
-              </code>
+                <code>
+                  {tm("preview.components.npxShadcnLatestAdd")}
+                  {file.registry} --dry-run{"\n"}
+                  {tm("preview.components.npxShadcnLatestAdd")}
+                  {file.registry}
+                </code>
+              </pre>
             ))}
           </div>
+          <p className="mt-4 text-sm font-bold text-su-ink">
+            {tm(
+              "preview.components.runTheFinalAddCommandWithoutOverwriteSoShadcnAsksBeforeReplacingLocalFiles",
+            )}
+          </p>
         </CardContent>
       </Card>
 
