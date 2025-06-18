@@ -169,3 +169,22 @@ export type {
   TooltipContentProps,
   TooltipProviderProps,
 } from "./components/ui/tooltip"
+export {
+  Toaster,
+  toast,
+  toastVariants,
+  toastViewportVariants,
+} from "./components/ui/toast"
+export type {
+  ToastAction,
+  ToastId,
+  ToastOptions,
+  ToastPlacement,
+  ToastPromiseOptions,
+  ToastSize,
+  ToastTone,
+  ToastUpdateOptions,
+  ToasterId,
+  ToasterProps,
+  ToasterToastOptions,
+} from "./components/ui/toast"

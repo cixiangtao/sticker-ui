@@ -62,6 +62,7 @@ const TablePage = createRegistryComponentPage("table")
 const TagPage = createRegistryComponentPage("tag")
 const TextareaPage = createRegistryComponentPage("textarea")
 const TooltipPage = createRegistryComponentPage("tooltip")
+const ToastPage = createRegistryComponentPage("toast")
 
 export {
   AlertPage,
@@ -90,4 +91,5 @@ export {
   TagPage,
   TextareaPage,
   TooltipPage,
+  ToastPage,
 }

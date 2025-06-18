@@ -2027,6 +2027,175 @@ const ZH_PREVIEW_API_DOC_MESSAGES = defineMessages({
   "api.dialog.variants.dialogContentVariants.description": {
     zh: "根据尺寸和色调选项生成贴纸 Dialog 内容 className。",
   },
+  "api.toast.description": {
+    zh: "基于 Sonner 的命令式贴纸 Toast，用于通过 toast() 触发一句短反馈。",
+  },
+  "api.toast.components.Toaster.description": {
+    zh: "贴纸风格的 Sonner Toaster 宿主。",
+  },
+  "api.toast.components.Toaster.props.description": {
+    zh: "贴纸风格 Sonner Toaster 的 props。",
+  },
+  "api.toast.components.Toaster.props.members.expand.description": {
+    zh: "默认使用 Sonner 的收齐栈，并用父级 hover 区域包住可见 Toast；设为 true 时保持多条 Toast 展开。",
+  },
+  "api.toast.components.Toaster.props.members.gap.description": {
+    zh: "展开后的 Toast 之间的间距。",
+  },
+  "api.toast.components.Toaster.props.members.placement.description": {
+    zh: "Toast 栈的窗口边缘位置。",
+  },
+  "api.toast.components.Toaster.props.members.toasterId.description": {
+    zh: "用于把 toast 命令路由到这个宿主的作用域 id。",
+  },
+  "api.toast.components.Toaster.props.members.toastOptions.description": {
+    zh: "应用到这个宿主渲染的所有 Toast 的默认选项。",
+  },
+  "api.toast.exports.toast.description": {
+    zh: "由 Sonner 驱动、带 sticker-ui 色调别名的命令式 Toast API。",
+  },
+  "api.toast.exports.ToastAction.description": {
+    zh: "命令创建的 Toast 内部渲染的操作按钮。",
+  },
+  "api.toast.exports.Toaster.description": {
+    zh: "贴纸风格的 Sonner Toaster 宿主。",
+  },
+  "api.toast.exports.ToasterId.description": {
+    zh: "用于把 toast 命令与特定 Toaster 配对的作用域 id。",
+  },
+  "api.toast.exports.ToasterProps.description": {
+    zh: "贴纸风格 Sonner Toaster 的 props。",
+  },
+  "api.toast.exports.ToasterToastOptions.description": {
+    zh: "Toaster 应用到每条 Toast 的默认选项。",
+  },
+  "api.toast.exports.ToastId.description": {
+    zh: "toast 命令返回的稳定 id。",
+  },
+  "api.toast.exports.ToastOptions.description": {
+    zh: "Toast 命令接收的选项。",
+  },
+  "api.toast.exports.ToastPlacement.description": {
+    zh: "Toast 栈可使用的窗口边缘位置。",
+  },
+  "api.toast.exports.ToastSize.description": {
+    zh: "Toast 内边距和圆角尺寸选项。",
+  },
+  "api.toast.exports.ToastTone.description": {
+    zh: "命令创建的 Toast 可使用的语义色调。",
+  },
+  "api.toast.exports.ToastUpdateOptions.description": {
+    zh: "toast.update 使用的选项。",
+  },
+  "api.toast.exports.toastVariants.description": {
+    zh: "根据色调和尺寸选项生成贴纸 Toast 条目 className。",
+  },
+  "api.toast.exports.toastViewportVariants.description": {
+    zh: "根据位置选项生成固定贴纸 Toast 视口 className。",
+  },
+  "api.toast.types.ToastAction.description": {
+    zh: "命令创建的 Toast 内部渲染的操作按钮。",
+  },
+  "api.toast.types.ToastAction.members.label.description": {
+    zh: "可见操作标签。",
+  },
+  "api.toast.types.ToastAction.members.onClick.description": {
+    zh: "点击操作时调用。",
+  },
+  "api.toast.types.ToastAction.members.style.description": {
+    zh: "这个操作按钮的内联样式。",
+  },
+  "api.toast.types.ToasterId.description": {
+    zh: "用于把 toast 命令与特定 Toaster 配对的作用域 id。",
+  },
+  "api.toast.types.ToasterProps.description": {
+    zh: "贴纸风格 Sonner Toaster 的 props。",
+  },
+  "api.toast.types.ToasterProps.members.expand.description": {
+    zh: "默认使用 Sonner 的收齐栈，并用父级 hover 区域包住可见 Toast；设为 true 时保持多条 Toast 展开。",
+  },
+  "api.toast.types.ToasterProps.members.gap.description": {
+    zh: "展开后的 Toast 之间的间距。",
+  },
+  "api.toast.types.ToasterProps.members.placement.description": {
+    zh: "Toast 栈的窗口边缘位置。",
+  },
+  "api.toast.types.ToasterProps.members.toasterId.description": {
+    zh: "用于把 toast 命令路由到这个宿主的作用域 id。",
+  },
+  "api.toast.types.ToasterProps.members.toastOptions.description": {
+    zh: "应用到这个宿主渲染的所有 Toast 的默认选项。",
+  },
+  "api.toast.types.ToasterToastOptions.description": {
+    zh: "Toaster 应用到每条 Toast 的默认选项。",
+  },
+  "api.toast.types.ToasterToastOptions.members.className.description": {
+    zh: "应用到每条 Toast 条目的自定义 className。",
+  },
+  "api.toast.types.ToasterToastOptions.members.classNames.description": {
+    zh: "传给 Sonner 各个 slot 的自定义 className。",
+  },
+  "api.toast.types.ToasterToastOptions.members.descriptionClassName.description":
+    {
+      zh: "应用到每条 Toast 描述的自定义 className。",
+    },
+  "api.toast.types.ToasterToastOptions.members.showClose.description": {
+    zh: "是否为每条 Toast 渲染关闭按钮。",
+  },
+  "api.toast.types.ToasterToastOptions.members.size.description": {
+    zh: "默认 Toast 尺寸。",
+  },
+  "api.toast.types.ToasterToastOptions.members.tone.description": {
+    zh: "中性 Toast 的默认色调。",
+  },
+  "api.toast.types.ToastId.description": {
+    zh: "toast 命令返回的稳定 id。",
+  },
+  "api.toast.types.ToastOptions.description": {
+    zh: "Toast 命令接收的选项。",
+  },
+  "api.toast.types.ToastOptions.members.action.description": {
+    zh: "可选主操作按钮。",
+  },
+  "api.toast.types.ToastOptions.members.cancel.description": {
+    zh: "可选次级取消操作。",
+  },
+  "api.toast.types.ToastOptions.members.classNames.description": {
+    zh: "传给这条 Toast 的 Sonner slot classNames。",
+  },
+  "api.toast.types.ToastOptions.members.placement.description": {
+    zh: "这条 Toast 的窗口边缘位置。",
+  },
+  "api.toast.types.ToastOptions.members.showClose.description": {
+    zh: "是否渲染关闭按钮。",
+  },
+  "api.toast.types.ToastOptions.members.size.description": {
+    zh: "单条 Toast 的尺寸覆盖。",
+  },
+  "api.toast.types.ToastOptions.members.tone.description": {
+    zh: "单条 Toast 的色调覆盖。",
+  },
+  "api.toast.types.ToastPlacement.description": {
+    zh: "Toast 栈可使用的窗口边缘位置。",
+  },
+  "api.toast.types.ToastSize.description": {
+    zh: "Toast 内边距和圆角尺寸选项。",
+  },
+  "api.toast.types.ToastTone.description": {
+    zh: "命令创建的 Toast 可使用的语义色调。",
+  },
+  "api.toast.types.ToastUpdateOptions.description": {
+    zh: "toast.update 使用的选项。",
+  },
+  "api.toast.types.ToastUpdateOptions.members.title.description": {
+    zh: "替换现有 Toast 的标题。",
+  },
+  "api.toast.variants.toastVariants.description": {
+    zh: "根据色调和尺寸选项生成贴纸 Toast 条目 className。",
+  },
+  "api.toast.variants.toastViewportVariants.description": {
+    zh: "根据位置选项生成固定贴纸 Toast 视口 className。",
+  },
   "api.badge.description": {
     zh: "用于把计数和状态点附着到任意元素角上的贴纸角标。",
   },

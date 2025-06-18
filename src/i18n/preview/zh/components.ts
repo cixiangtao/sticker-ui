@@ -726,6 +726,15 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   "preview.components.basicModal": {
     zh: "基础弹窗",
   },
+  "preview.components.basicToast": {
+    zh: "基础 Toast",
+  },
+  "preview.components.persistentLoading": {
+    zh: "持续 Loading",
+  },
+  "preview.components.asyncLifecycle": {
+    zh: "异步生命周期",
+  },
   "preview.components.closeCanWrapAStickerButtonSoShortPopoverWorkflowsCanFinishFromInsideThePanel":
     {
       zh: "Close 可以包裹贴纸按钮，让简短的 Popover 流程在面板内完成。",
@@ -749,9 +758,34 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   "preview.components.radixHelpBubblesWithCompactStickerPaperStyling": {
     zh: "带有紧凑贴纸纸张样式的 Radix 帮助气泡。",
   },
+  "preview.components.commandDrivenSonnerToastsForShortStickerFeedback": {
+    zh: "通过 toast() 命令触发的短反馈，底层由 Sonner 承载并保留贴纸纸面风格。",
+  },
+  "preview.components.semanticTonesPairWithOptionalActionsForUndoRetryAndFollowUpWorkflows":
+    {
+      zh: "toast.info、toast.success 等语义命令可搭配可选操作，用于撤销、重试和后续处理流程。",
+    },
   "preview.components.sizesAndTonesKeepModalSurfacesAlignedWithTheAmountOfContentAndTheKindOfDecision":
     {
       zh: "尺寸和色调让模态表面匹配内容量和决策类型。",
+    },
+  "preview.components.toastShowsAShortAnnouncedMessageForImmediateFeedback": {
+    zh: "Toast 用于展示一句短反馈，并在短时间后自动消退。",
+  },
+  "preview.components.loadingToastsCanBeUpdatedOrDismissedAsAsyncWorkSettles": {
+    zh: "loading Toast 可以在异步任务完成后更新为成功或错误状态，也可以被主动关闭。",
+  },
+  "preview.components.loadingToastsCanStayOpenUntilDismissedForLongRunningWorkflows":
+    {
+      zh: "长耗时流程可以让 loading Toast 保持显示，直到用户或任务主动关闭它。",
+    },
+  "preview.components.toastSizesAndTonesTuneDensityAndSemanticEmphasisPerMessage":
+    {
+      zh: "size 和 tone 可以按单条消息调整密度与语义强调程度。",
+    },
+  "preview.components.toastViewportPlacementKeepsShortFeedbackClearOfPrimaryPageControls":
+    {
+      zh: "Toaster placement 可以让短反馈避开页面主要控件。",
     },
   "preview.components.tooltipAddsACompactPaperHintForControlsThatNeedExtraContextWithoutTakingOverThePage":
     {
@@ -763,6 +797,12 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
     },
   "preview.components.tonesAndSides": {
     zh: "色调与方向",
+  },
+  "preview.components.tonesAndActions": {
+    zh: "色调与操作",
+  },
+  "preview.components.viewportPlacement": {
+    zh: "视口位置",
   },
   "preview.components.a11yAndChange": {
     zh: "可访问性与变更",

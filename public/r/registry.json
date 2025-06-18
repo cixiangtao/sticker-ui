@@ -370,6 +370,21 @@
       ]
     },
     {
+      "name": "toast",
+      "type": "registry:ui",
+      "title": "Sticker Toast",
+      "description": "A command-driven sticker toast system built on Sonner for short feedback.",
+      "dependencies": ["class-variance-authority", "sonner"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "src/components/ui/toast.tsx",
+          "target": "@ui/toast.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "checkbox",
       "type": "registry:ui",
       "title": "Sticker Checkbox",

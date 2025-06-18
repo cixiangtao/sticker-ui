@@ -9189,6 +9189,438 @@
       }
     ]
   },
+  "toast": {
+    "components": [
+      {
+        "descriptionKey": "api.toast.components.Toaster.description",
+        "name": "Toaster",
+        "props": {
+          "descriptionKey": "api.toast.components.Toaster.props.description",
+          "inherits": [
+            "Omit< SonnerToasterProps, \"expand\" | \"gap\" | \"id\" | \"position\" | \"toastOptions\" >"
+          ],
+          "inheritedMembers": [
+            {
+              "descriptionKey": "api.common.inheritedProps.className.description",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.style.description",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            }
+          ],
+          "members": [
+            {
+              "defaultValue": "false",
+              "descriptionKey": "api.toast.components.Toaster.props.members.expand.description",
+              "name": "expand",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "defaultValue": "6",
+              "descriptionKey": "api.toast.components.Toaster.props.members.gap.description",
+              "name": "gap",
+              "optional": true,
+              "required": false,
+              "type": "number"
+            },
+            {
+              "defaultValue": "\"top-right\"",
+              "descriptionKey": "api.toast.components.Toaster.props.members.placement.description",
+              "name": "placement",
+              "optional": true,
+              "required": false,
+              "type": "ToastPlacement"
+            },
+            {
+              "descriptionKey": "api.toast.components.Toaster.props.members.toasterId.description",
+              "name": "toasterId",
+              "optional": true,
+              "required": false,
+              "type": "ToasterId"
+            },
+            {
+              "descriptionKey": "api.toast.components.Toaster.props.members.toastOptions.description",
+              "name": "toastOptions",
+              "optional": true,
+              "required": false,
+              "type": "ToasterToastOptions"
+            }
+          ],
+          "type": "ToasterProps"
+        }
+      }
+    ],
+    "descriptionKey": "api.toast.description",
+    "exports": [
+      { "descriptionKey": "api.toast.exports.toast.description", "kind": "value", "name": "toast" },
+      {
+        "descriptionKey": "api.toast.exports.ToastAction.description",
+        "kind": "interface",
+        "name": "ToastAction"
+      },
+      {
+        "descriptionKey": "api.toast.exports.Toaster.description",
+        "kind": "component",
+        "name": "Toaster"
+      },
+      {
+        "descriptionKey": "api.toast.exports.ToasterId.description",
+        "kind": "type",
+        "name": "ToasterId"
+      },
+      {
+        "descriptionKey": "api.toast.exports.ToasterProps.description",
+        "kind": "interface",
+        "name": "ToasterProps"
+      },
+      {
+        "descriptionKey": "api.toast.exports.ToasterToastOptions.description",
+        "kind": "interface",
+        "name": "ToasterToastOptions"
+      },
+      {
+        "descriptionKey": "api.toast.exports.ToastId.description",
+        "kind": "type",
+        "name": "ToastId"
+      },
+      {
+        "descriptionKey": "api.toast.exports.ToastOptions.description",
+        "kind": "interface",
+        "name": "ToastOptions"
+      },
+      {
+        "descriptionKey": "api.toast.exports.ToastPlacement.description",
+        "kind": "type",
+        "name": "ToastPlacement"
+      },
+      { "kind": "type", "name": "ToastPromiseOptions" },
+      {
+        "descriptionKey": "api.toast.exports.ToastSize.description",
+        "kind": "type",
+        "name": "ToastSize"
+      },
+      {
+        "descriptionKey": "api.toast.exports.ToastTone.description",
+        "kind": "type",
+        "name": "ToastTone"
+      },
+      {
+        "descriptionKey": "api.toast.exports.ToastUpdateOptions.description",
+        "kind": "interface",
+        "name": "ToastUpdateOptions"
+      },
+      {
+        "descriptionKey": "api.toast.exports.toastVariants.description",
+        "kind": "variant",
+        "name": "toastVariants"
+      },
+      {
+        "descriptionKey": "api.toast.exports.toastViewportVariants.description",
+        "kind": "variant",
+        "name": "toastViewportVariants"
+      }
+    ],
+    "name": "toast",
+    "sourcePath": "src/components/ui/toast.tsx",
+    "title": "Sticker Toast",
+    "types": [
+      {
+        "descriptionKey": "api.toast.types.ToastAction.description",
+        "inherits": [],
+        "kind": "interface",
+        "members": [
+          {
+            "descriptionKey": "api.toast.types.ToastAction.members.label.description",
+            "name": "label",
+            "optional": false,
+            "required": true,
+            "type": "React.ReactNode"
+          },
+          {
+            "descriptionKey": "api.toast.types.ToastAction.members.onClick.description",
+            "name": "onClick",
+            "optional": true,
+            "required": false,
+            "type": "(event: React.MouseEvent<HTMLButtonElement>) => void"
+          },
+          {
+            "descriptionKey": "api.toast.types.ToastAction.members.style.description",
+            "name": "style",
+            "optional": true,
+            "required": false,
+            "type": "React.CSSProperties"
+          }
+        ],
+        "name": "ToastAction"
+      },
+      {
+        "descriptionKey": "api.toast.types.ToasterId.description",
+        "inherits": [],
+        "kind": "type",
+        "members": [],
+        "name": "ToasterId",
+        "type": "string"
+      },
+      {
+        "descriptionKey": "api.toast.types.ToasterProps.description",
+        "inherits": [
+          "Omit< SonnerToasterProps, \"expand\" | \"gap\" | \"id\" | \"position\" | \"toastOptions\" >"
+        ],
+        "kind": "interface",
+        "members": [
+          {
+            "defaultValue": "false",
+            "descriptionKey": "api.toast.types.ToasterProps.members.expand.description",
+            "name": "expand",
+            "optional": true,
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "defaultValue": "6",
+            "descriptionKey": "api.toast.types.ToasterProps.members.gap.description",
+            "name": "gap",
+            "optional": true,
+            "required": false,
+            "type": "number"
+          },
+          {
+            "defaultValue": "\"top-right\"",
+            "descriptionKey": "api.toast.types.ToasterProps.members.placement.description",
+            "name": "placement",
+            "optional": true,
+            "required": false,
+            "type": "ToastPlacement"
+          },
+          {
+            "descriptionKey": "api.toast.types.ToasterProps.members.toasterId.description",
+            "name": "toasterId",
+            "optional": true,
+            "required": false,
+            "type": "ToasterId"
+          },
+          {
+            "descriptionKey": "api.toast.types.ToasterProps.members.toastOptions.description",
+            "name": "toastOptions",
+            "optional": true,
+            "required": false,
+            "type": "ToasterToastOptions"
+          }
+        ],
+        "name": "ToasterProps"
+      },
+      {
+        "descriptionKey": "api.toast.types.ToasterToastOptions.description",
+        "inherits": [
+          "Omit< SonnerToastOptions, \"className\" | \"classNames\" | \"closeButton\" | \"descriptionClassName\" >"
+        ],
+        "kind": "interface",
+        "members": [
+          {
+            "descriptionKey": "api.toast.types.ToasterToastOptions.members.className.description",
+            "name": "className",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "descriptionKey": "api.toast.types.ToasterToastOptions.members.classNames.description",
+            "name": "classNames",
+            "optional": true,
+            "required": false,
+            "type": "Partial<ToastClassnames>"
+          },
+          {
+            "descriptionKey": "api.toast.types.ToasterToastOptions.members.descriptionClassName.description",
+            "name": "descriptionClassName",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "defaultValue": "false",
+            "descriptionKey": "api.toast.types.ToasterToastOptions.members.showClose.description",
+            "name": "showClose",
+            "optional": true,
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "defaultValue": "\"md\"",
+            "descriptionKey": "api.toast.types.ToasterToastOptions.members.size.description",
+            "name": "size",
+            "optional": true,
+            "required": false,
+            "type": "ToastSize"
+          },
+          {
+            "defaultValue": "\"default\"",
+            "descriptionKey": "api.toast.types.ToasterToastOptions.members.tone.description",
+            "name": "tone",
+            "optional": true,
+            "required": false,
+            "type": "ToastTone"
+          }
+        ],
+        "name": "ToasterToastOptions"
+      },
+      {
+        "descriptionKey": "api.toast.types.ToastId.description",
+        "inherits": [],
+        "kind": "type",
+        "members": [],
+        "name": "ToastId",
+        "type": "number | string"
+      },
+      {
+        "descriptionKey": "api.toast.types.ToastOptions.description",
+        "inherits": [
+          "Omit< ExternalToast, \"action\" | \"cancel\" | \"classNames\" | \"closeButton\" | \"position\" >"
+        ],
+        "kind": "interface",
+        "members": [
+          {
+            "descriptionKey": "api.toast.types.ToastOptions.members.action.description",
+            "name": "action",
+            "optional": true,
+            "required": false,
+            "type": "React.ReactNode | ToastAction"
+          },
+          {
+            "descriptionKey": "api.toast.types.ToastOptions.members.cancel.description",
+            "name": "cancel",
+            "optional": true,
+            "required": false,
+            "type": "React.ReactNode | ToastAction"
+          },
+          {
+            "descriptionKey": "api.toast.types.ToastOptions.members.classNames.description",
+            "name": "classNames",
+            "optional": true,
+            "required": false,
+            "type": "Partial<ToastClassnames>"
+          },
+          {
+            "descriptionKey": "api.toast.types.ToastOptions.members.placement.description",
+            "name": "placement",
+            "optional": true,
+            "required": false,
+            "type": "ToastPlacement"
+          },
+          {
+            "defaultValue": "false",
+            "descriptionKey": "api.toast.types.ToastOptions.members.showClose.description",
+            "name": "showClose",
+            "optional": true,
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "descriptionKey": "api.toast.types.ToastOptions.members.size.description",
+            "name": "size",
+            "optional": true,
+            "required": false,
+            "type": "ToastSize"
+          },
+          {
+            "descriptionKey": "api.toast.types.ToastOptions.members.tone.description",
+            "name": "tone",
+            "optional": true,
+            "required": false,
+            "type": "ToastTone"
+          }
+        ],
+        "name": "ToastOptions"
+      },
+      {
+        "descriptionKey": "api.toast.types.ToastPlacement.description",
+        "inherits": [],
+        "kind": "type",
+        "members": [],
+        "name": "ToastPlacement",
+        "type": "| \"bottom-center\" | \"bottom-left\" | \"bottom-right\" | \"top-center\" | \"top-left\" | \"top-right\""
+      },
+      {
+        "inherits": [],
+        "kind": "type",
+        "members": [],
+        "name": "ToastPromiseOptions",
+        "type": "Parameters< typeof sonnerToast.promise<Data> >[1]"
+      },
+      {
+        "descriptionKey": "api.toast.types.ToastSize.description",
+        "inherits": [],
+        "kind": "type",
+        "members": [],
+        "name": "ToastSize",
+        "type": "\"lg\" | \"md\" | \"sm\""
+      },
+      {
+        "descriptionKey": "api.toast.types.ToastTone.description",
+        "inherits": [],
+        "kind": "type",
+        "members": [],
+        "name": "ToastTone",
+        "type": "\"default\" | \"error\" | \"info\" | \"success\" | \"warning\""
+      },
+      {
+        "descriptionKey": "api.toast.types.ToastUpdateOptions.description",
+        "inherits": ["Omit<ToastOptions, \"id\">"],
+        "kind": "interface",
+        "members": [
+          {
+            "descriptionKey": "api.toast.types.ToastUpdateOptions.members.title.description",
+            "name": "title",
+            "optional": true,
+            "required": false,
+            "type": "React.ReactNode"
+          }
+        ],
+        "name": "ToastUpdateOptions"
+      }
+    ],
+    "variants": [
+      {
+        "descriptionKey": "api.toast.variants.toastVariants.description",
+        "groups": [
+          { "defaultValue": "md", "name": "size", "values": [] },
+          {
+            "defaultValue": "default",
+            "name": "tone",
+            "values": ["default", "error", "info", "success", "warning"]
+          }
+        ],
+        "name": "toastVariants"
+      },
+      {
+        "descriptionKey": "api.toast.variants.toastViewportVariants.description",
+        "groups": [
+          {
+            "defaultValue": "top-right",
+            "name": "placement",
+            "values": [
+              "bottom-center",
+              "bottom-left",
+              "bottom-right",
+              "top-center",
+              "top-left",
+              "top-right"
+            ]
+          }
+        ],
+        "name": "toastViewportVariants"
+      }
+    ]
+  },
   "checkbox": {
     "components": [
       {

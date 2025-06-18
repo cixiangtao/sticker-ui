@@ -323,6 +323,19 @@ const routes = defineRoutes([
   },
   {
     component: () =>
+      import("@/pages/components").then((module) => module.ToastPage),
+    meta: {
+      emoji: "T",
+      navSection: "feedback-status",
+      order: 70,
+      title: "Toast",
+      descriptionKey:
+        "preview.components.commandDrivenSonnerToastsForShortStickerFeedback",
+    },
+    path: "/components/toast",
+  },
+  {
+    component: () =>
       import("@/pages/components").then((module) => module.CheckboxPage),
     meta: {
       emoji: "C",
