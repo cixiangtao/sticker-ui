@@ -81,8 +81,9 @@ Any component development work must update preview i18n in the same change.
 - After changing `registry.json` or component source, run `pnpm build:registry` so `public/r/*.json` stays aligned with the preview.
 - After changing preview page, demo, route, or API doc generation behavior, run `pnpm build:preview` when the change could affect the full preview delivery chain.
 - Keep registry components source-only and easy to copy through shadcn.
-- React, Tailwind, and Radix primitives are the baseline UI stack for registry components.
-- Keep extra runtime dependencies minimal. Add non-baseline dependencies only when they provide clear component-level value, and declare them on the specific registry item that needs them.
+- React, Tailwind, and Radix primitives are the baseline UI stack for registry components, but component completeness comes first.
+- Add focused runtime dependencies when they materially improve the component's behavior, accessibility, API ergonomics, or maintenance cost. Avoid dependency sprawl, but do not reject a well-fit package just to keep the dependency list smaller.
+- Declare non-baseline dependencies on the specific registry item that needs them, and keep the copied source understandable for shadcn users.
 
 ## Final Check
 

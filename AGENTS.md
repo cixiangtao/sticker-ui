@@ -16,7 +16,7 @@
 - Keep registry components source-only and easy to copy through shadcn.
 - Use `src/components/ui/<name>.tsx` as the canonical component source. Do not add component source under `registry/default`.
 - Prefer named exports throughout project source. Add default exports only when external tooling or generated modules require them.
-- Keep extra runtime dependencies minimal. Add non-baseline dependencies only when they provide clear component-level value, and declare them on the registry item that needs them.
+- Prioritize component completeness, ergonomics, and maintainability. Add focused runtime dependencies when they materially improve component quality or avoid brittle in-house infrastructure, and declare them on the registry item that needs them.
 - Preserve the handbook sticker style: warm paper surfaces, chunky outlines, hard offset shadows, tactile states, and accessible semantics.
 - Prefer shared Tailwind tokens from `src/tokens.css` via `src/globals.css` before raw values or arbitrary shadows.
 - `tailwindcss-animate` is the approved Tailwind motion helper for floating registry components; declare it only on registry items that use it, wire it in preview through `src/globals.css`, and document package-user setup instead of adding it to `src/tokens.css`.
