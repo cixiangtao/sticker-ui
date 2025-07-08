@@ -59,7 +59,7 @@ function getPreviewDemoExamples({
       }
 
       return {
-        code,
+        code: formatPreviewDemoSource(code),
         module: demoModule,
         path,
       }
@@ -87,7 +87,7 @@ async function loadPreviewDemoExamples({
       ])
 
       return {
-        code,
+        code: formatPreviewDemoSource(code),
         module: demoModule,
         path,
       }
@@ -120,6 +120,73 @@ function comparePreviewDemoExamples(
   }
 
   return firstExample.path.localeCompare(secondExample.path)
+}
+
+function formatPreviewDemoSource(code: string) {
+  return stripMetaExport(stripMetaDeclaration(stripDefineMetaImport(code)))
+    .replace(/\n{3,}/g, "\n\n")
+    .trim()
+}
+
+function stripDefineMetaImport(code: string) {
+  return code.replace(
+    /^[ \t]*import\s*\{\s*defineMeta\s*\}\s*from\s*["']@\/layouts\/preview["']\s*\n/m,
+    "",
+  )
+}
+
+function stripMetaDeclaration(code: string) {
+  const declarationStart = code.search(/\bconst\s+meta\s*=\s*defineMeta\s*\(/)
+
+  if (declarationStart === -1) {
+    return code
+  }
+
+  const callStart = code.indexOf("(", declarationStart)
+  const declarationEnd = findMatchingCharacter(code, callStart, "(", ")")
+
+  if (declarationEnd === -1) {
+    return code
+  }
+
+  let end = declarationEnd + 1
+
+  while (code[end] === ";" || code[end] === "\r" || code[end] === "\n") {
+    end += 1
+  }
+
+  return `${code.slice(0, declarationStart)}${code.slice(end)}`
+}
+
+function stripMetaExport(code: string) {
+  return code.replace(/\bexport\s*\{\s*Demo\s*,\s*meta\s*\}/, "export { Demo }")
+}
+
+function findMatchingCharacter(
+  code: string,
+  start: number,
+  openCharacter: string,
+  closeCharacter: string,
+) {
+  let depth = 0
+
+  for (let index = start; index < code.length; index += 1) {
+    const character = code[index]
+
+    if (character === openCharacter) {
+      depth += 1
+    }
+
+    if (character === closeCharacter) {
+      depth -= 1
+    }
+
+    if (depth === 0) {
+      return index
+    }
+  }
+
+  return -1
 }
 
 function PreviewDemoPage({
