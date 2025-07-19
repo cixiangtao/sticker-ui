@@ -66,6 +66,21 @@ export type {
 } from "./components/ui/dialog"
 export { Divider, dividerVariants } from "./components/ui/divider"
 export type { DividerProps } from "./components/ui/divider"
+export {
+  Empty,
+  EmptyActions,
+  EmptyDescription,
+  EmptyIcon,
+  EmptyTitle,
+  emptyVariants,
+} from "./components/ui/empty"
+export type {
+  EmptyActionsProps,
+  EmptyDescriptionProps,
+  EmptyIconProps,
+  EmptyProps,
+  EmptyTitleProps,
+} from "./components/ui/empty"
 export { Form, useForm } from "./components/ui/form"
 export type {
   FieldData,

@@ -37,8 +37,29 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   "preview.components.cornerBadgesForCountsAndStatusDots": {
     zh: "用于计数和状态点的角标贴纸。",
   },
+  "preview.components.actionsAndRecovery": {
+    zh: "操作与恢复",
+  },
+  "preview.components.basicEmptyState": {
+    zh: "基础空状态",
+  },
   "preview.components.countsAndVisibility": {
     zh: "计数与可见性",
+  },
+  "preview.components.emptyActionsGivePeopleClearRecoveryPathsWithoutLeavingTheBlankState":
+    {
+      zh: "Empty actions 可以在空状态内提供清晰的恢复路径。",
+    },
+  "preview.components.emptyCentersBlankContentWithAnIconTitleAndConciseHelperCopy":
+    {
+      zh: "Empty 会用图标、标题和简洁辅助文案居中呈现空内容。",
+    },
+  "preview.components.emptySizesAndTonesFitDensePanelsSearchResultsAndRoomierOnboardingSpaces":
+    {
+      zh: "Empty 的尺寸和色调可适配密集面板、搜索结果和更宽松的引导区域。",
+    },
+  "preview.components.emptyStatesForBlankResultsAndNextStepGuidance": {
+    zh: "用于空结果和下一步引导的贴纸空状态。",
   },
   "preview.components.invalidDisabledAndSemanticToneStatesStayVisibleOnMultilineFieldsThroughNativeAttributesAndFormItemValidation":
     {

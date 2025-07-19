@@ -44,6 +44,7 @@ const CheckboxPage = createRegistryComponentPage("checkbox")
 const DataTablePage = createRegistryComponentPage("data-table")
 const DialogPage = createRegistryComponentPage("dialog")
 const DividerPage = createRegistryComponentPage("divider")
+const EmptyPage = createRegistryComponentPage("empty")
 const FieldPage = createRegistryComponentPage("field")
 const FormPage = createRegistryComponentPage("form")
 const InputPage = createRegistryComponentPage("input")
@@ -73,6 +74,7 @@ export {
   DataTablePage,
   DialogPage,
   DividerPage,
+  EmptyPage,
   FieldPage,
   FormPage,
   InputPage,

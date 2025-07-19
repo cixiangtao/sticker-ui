@@ -180,6 +180,19 @@ const routes = defineRoutes([
   },
   {
     component: () =>
+      import("@/pages/components").then((module) => module.EmptyPage),
+    meta: {
+      emoji: "E",
+      navSection: "feedback-status",
+      order: 66.5,
+      title: "Empty",
+      descriptionKey:
+        "preview.components.emptyStatesForBlankResultsAndNextStepGuidance",
+    },
+    path: "/components/empty",
+  },
+  {
+    component: () =>
       import("@/pages/components").then((module) => module.ProgressPage),
     meta: {
       emoji: "P",

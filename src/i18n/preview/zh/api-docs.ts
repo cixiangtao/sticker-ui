@@ -1679,6 +1679,93 @@ const ZH_PREVIEW_API_DOC_MESSAGES = defineMessages({
   "api.divider.variants.dividerVariants.description": {
     zh: "根据方向和标签对齐生成分隔线根元素 className。",
   },
+  "api.empty.description": {
+    zh: "用于空列表、筛选结果和引导占位的可组合贴纸空状态。",
+  },
+  "api.empty.components.Empty.description": {
+    zh: "用于空列表、筛选结果和引导占位的贴纸空状态。",
+  },
+  "api.empty.components.Empty.props.description": {
+    zh: "贴纸空状态根元素的 props。",
+  },
+  "api.empty.components.Empty.props.members.as.description": {
+    zh: "控制空状态渲染的语义根元素。",
+  },
+  "api.empty.components.Empty.props.members.size.description": {
+    zh: "控制间距、圆角和内部图标比例。",
+  },
+  "api.empty.components.Empty.props.members.tone.description": {
+    zh: "控制语义纸张色调。",
+  },
+  "api.empty.components.Empty.props.members.variant.description": {
+    zh: "控制空状态表面结构和强调程度。",
+  },
+  "api.empty.components.Empty.props.remarks": {
+    zh: "继承原生 HTML 属性，并加入语义元素、尺寸、色调和结构变体。",
+  },
+  "api.empty.components.EmptyActions.description": {
+    zh: "贴纸空状态操作行。",
+  },
+  "api.empty.components.EmptyDescription.description": {
+    zh: "贴纸空状态正文。",
+  },
+  "api.empty.components.EmptyIcon.description": {
+    zh: "贴纸空状态图标徽章。",
+  },
+  "api.empty.components.EmptyIcon.props.members.decorative.description": {
+    zh: "当图标仅作装饰时，将其从辅助技术中隐藏。",
+  },
+  "api.empty.components.EmptyTitle.description": {
+    zh: "贴纸空状态标题。",
+  },
+  "api.empty.exports.Empty.description": {
+    zh: "用于空列表、筛选结果和引导占位的贴纸空状态。",
+  },
+  "api.empty.exports.EmptyActions.description": {
+    zh: "贴纸空状态操作行。",
+  },
+  "api.empty.exports.EmptyDescription.description": {
+    zh: "贴纸空状态正文。",
+  },
+  "api.empty.exports.EmptyIcon.description": {
+    zh: "贴纸空状态图标徽章。",
+  },
+  "api.empty.exports.EmptyProps.description": {
+    zh: "贴纸空状态根元素的 props。",
+  },
+  "api.empty.exports.EmptyProps.remarks": {
+    zh: "继承原生 HTML 属性，并加入语义元素、尺寸、色调和结构变体。",
+  },
+  "api.empty.exports.EmptyTitle.description": {
+    zh: "贴纸空状态标题。",
+  },
+  "api.empty.exports.emptyVariants.description": {
+    zh: "根据尺寸、色调和结构变体生成贴纸空状态根元素 className。",
+  },
+  "api.empty.types.EmptyIconProps.members.decorative.description": {
+    zh: "当图标仅作装饰时，将其从辅助技术中隐藏。",
+  },
+  "api.empty.types.EmptyProps.description": {
+    zh: "贴纸空状态根元素的 props。",
+  },
+  "api.empty.types.EmptyProps.members.as.description": {
+    zh: "控制空状态渲染的语义根元素。",
+  },
+  "api.empty.types.EmptyProps.members.size.description": {
+    zh: "控制间距、圆角和内部图标比例。",
+  },
+  "api.empty.types.EmptyProps.members.tone.description": {
+    zh: "控制语义纸张色调。",
+  },
+  "api.empty.types.EmptyProps.members.variant.description": {
+    zh: "控制空状态表面结构和强调程度。",
+  },
+  "api.empty.types.EmptyProps.remarks": {
+    zh: "继承原生 HTML 属性，并加入语义元素、尺寸、色调和结构变体。",
+  },
+  "api.empty.variants.emptyVariants.description": {
+    zh: "根据尺寸、色调和结构变体生成贴纸空状态根元素 className。",
+  },
   "api.jsx-join.description": {
     zh: "一个在子节点之间插入分隔符的小型 React 工具。",
   },

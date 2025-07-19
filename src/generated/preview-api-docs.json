@@ -4736,6 +4736,984 @@
       }
     ]
   },
+  "empty": {
+    "components": [
+      {
+        "descriptionKey": "api.empty.components.Empty.description",
+        "name": "Empty",
+        "props": {
+          "descriptionKey": "api.empty.components.Empty.props.description",
+          "remarksKey": "api.empty.components.Empty.props.remarks",
+          "inherits": ["React.HTMLAttributes<HTMLElement>", "VariantProps<typeof emptyVariants>"],
+          "inheritedMembers": [
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-describedby.description",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-invalid.description",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-label.description",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-labelledby.description",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.autoFocus.description",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.children.description",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.className.description",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultChecked.description",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultValue.description",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.id.description",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onBlur.description",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onChange.description",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "React.ChangeEventHandler<HTMLElement, Element>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onClick.description",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onFocus.description",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyDown.description",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyUp.description",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseEnter.description",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseLeave.description",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.role.description",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.style.description",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.title.description",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "members": [
+            {
+              "defaultValue": "\"section\"",
+              "descriptionKey": "api.empty.components.Empty.props.members.as.description",
+              "name": "as",
+              "optional": true,
+              "required": false,
+              "type": "EmptyElement"
+            },
+            {
+              "defaultValue": "\"md\"",
+              "descriptionKey": "api.empty.components.Empty.props.members.size.description",
+              "name": "size",
+              "optional": true,
+              "required": false,
+              "type": "\"lg\" | \"md\" | \"sm\""
+            },
+            {
+              "defaultValue": "\"default\"",
+              "descriptionKey": "api.empty.components.Empty.props.members.tone.description",
+              "name": "tone",
+              "optional": true,
+              "required": false,
+              "type": "\"danger\" | \"default\" | \"info\" | \"secondary\" | \"success\" | \"warning\""
+            },
+            {
+              "defaultValue": "\"panel\"",
+              "descriptionKey": "api.empty.components.Empty.props.members.variant.description",
+              "name": "variant",
+              "optional": true,
+              "required": false,
+              "type": "\"outlined\" | \"panel\" | \"plain\""
+            }
+          ],
+          "type": "EmptyProps"
+        }
+      },
+      {
+        "descriptionKey": "api.empty.components.EmptyActions.description",
+        "name": "EmptyActions",
+        "props": {
+          "inherits": [],
+          "inheritedMembers": [
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-describedby.description",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-invalid.description",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-label.description",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-labelledby.description",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.autoFocus.description",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.children.description",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "string | number | bigint | boolean | React.ReactElement<unknown, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<string | number | bigint | boolean | React.ReactPortal | React.ReactElement<unknown, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | null> | null"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.className.description",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultChecked.description",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultValue.description",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.id.description",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onBlur.description",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onChange.description",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "React.ChangeEventHandler<HTMLDivElement, Element>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onClick.description",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onFocus.description",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyDown.description",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyUp.description",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseEnter.description",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseLeave.description",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.role.description",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.style.description",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.title.description",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "members": [],
+          "type": "EmptyActionsProps"
+        }
+      },
+      {
+        "descriptionKey": "api.empty.components.EmptyDescription.description",
+        "name": "EmptyDescription",
+        "props": {
+          "inherits": [],
+          "inheritedMembers": [
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-describedby.description",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-invalid.description",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-label.description",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-labelledby.description",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.autoFocus.description",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.children.description",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "string | number | bigint | boolean | React.ReactElement<unknown, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<string | number | bigint | boolean | React.ReactPortal | React.ReactElement<unknown, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | null> | null"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.className.description",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultChecked.description",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultValue.description",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.id.description",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onBlur.description",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLParagraphElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onChange.description",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "React.ChangeEventHandler<HTMLParagraphElement, Element>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onClick.description",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLParagraphElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onFocus.description",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLParagraphElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyDown.description",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLParagraphElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyUp.description",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLParagraphElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseEnter.description",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLParagraphElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseLeave.description",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLParagraphElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.role.description",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.style.description",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.title.description",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "members": [],
+          "type": "EmptyDescriptionProps"
+        }
+      },
+      {
+        "descriptionKey": "api.empty.components.EmptyIcon.description",
+        "name": "EmptyIcon",
+        "props": {
+          "inherits": ["React.HTMLAttributes<HTMLDivElement>"],
+          "inheritedMembers": [
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-describedby.description",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-invalid.description",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-label.description",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-labelledby.description",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.autoFocus.description",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.children.description",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.className.description",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultChecked.description",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultValue.description",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.id.description",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onBlur.description",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onChange.description",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "React.ChangeEventHandler<HTMLDivElement, Element>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onClick.description",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onFocus.description",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyDown.description",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyUp.description",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseEnter.description",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseLeave.description",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.role.description",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.style.description",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.title.description",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "members": [
+            {
+              "defaultValue": "true",
+              "descriptionKey": "api.empty.components.EmptyIcon.props.members.decorative.description",
+              "name": "decorative",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            }
+          ],
+          "type": "EmptyIconProps"
+        }
+      },
+      {
+        "descriptionKey": "api.empty.components.EmptyTitle.description",
+        "name": "EmptyTitle",
+        "props": {
+          "inherits": [],
+          "inheritedMembers": [
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-describedby.description",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-invalid.description",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-label.description",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-labelledby.description",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.autoFocus.description",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.children.description",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "string | number | bigint | boolean | React.ReactElement<unknown, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<string | number | bigint | boolean | React.ReactPortal | React.ReactElement<unknown, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | null> | null"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.className.description",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultChecked.description",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultValue.description",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.id.description",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onBlur.description",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLHeadingElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onChange.description",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "React.ChangeEventHandler<HTMLHeadingElement, Element>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onClick.description",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLHeadingElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onFocus.description",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLHeadingElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyDown.description",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLHeadingElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyUp.description",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLHeadingElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseEnter.description",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLHeadingElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseLeave.description",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLHeadingElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.role.description",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.style.description",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.title.description",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "members": [],
+          "type": "EmptyTitleProps"
+        }
+      }
+    ],
+    "descriptionKey": "api.empty.description",
+    "exports": [
+      {
+        "descriptionKey": "api.empty.exports.Empty.description",
+        "kind": "component",
+        "name": "Empty"
+      },
+      {
+        "descriptionKey": "api.empty.exports.EmptyActions.description",
+        "kind": "component",
+        "name": "EmptyActions"
+      },
+      { "kind": "type", "name": "EmptyActionsProps" },
+      {
+        "descriptionKey": "api.empty.exports.EmptyDescription.description",
+        "kind": "component",
+        "name": "EmptyDescription"
+      },
+      { "kind": "type", "name": "EmptyDescriptionProps" },
+      {
+        "descriptionKey": "api.empty.exports.EmptyIcon.description",
+        "kind": "component",
+        "name": "EmptyIcon"
+      },
+      { "kind": "interface", "name": "EmptyIconProps" },
+      {
+        "descriptionKey": "api.empty.exports.EmptyProps.description",
+        "remarksKey": "api.empty.exports.EmptyProps.remarks",
+        "kind": "interface",
+        "name": "EmptyProps"
+      },
+      {
+        "descriptionKey": "api.empty.exports.EmptyTitle.description",
+        "kind": "component",
+        "name": "EmptyTitle"
+      },
+      { "kind": "type", "name": "EmptyTitleProps" },
+      {
+        "descriptionKey": "api.empty.exports.emptyVariants.description",
+        "kind": "variant",
+        "name": "emptyVariants"
+      }
+    ],
+    "name": "empty",
+    "sourcePath": "src/components/ui/empty.tsx",
+    "title": "Sticker Empty",
+    "types": [
+      {
+        "inherits": [],
+        "kind": "type",
+        "members": [],
+        "name": "EmptyActionsProps",
+        "type": "React.HTMLAttributes<HTMLDivElement>"
+      },
+      {
+        "inherits": [],
+        "kind": "type",
+        "members": [],
+        "name": "EmptyDescriptionProps",
+        "type": "React.HTMLAttributes<HTMLParagraphElement>"
+      },
+      {
+        "inherits": ["React.HTMLAttributes<HTMLDivElement>"],
+        "kind": "interface",
+        "members": [
+          {
+            "defaultValue": "true",
+            "descriptionKey": "api.empty.types.EmptyIconProps.members.decorative.description",
+            "name": "decorative",
+            "optional": true,
+            "required": false,
+            "type": "boolean"
+          }
+        ],
+        "name": "EmptyIconProps"
+      },
+      {
+        "descriptionKey": "api.empty.types.EmptyProps.description",
+        "remarksKey": "api.empty.types.EmptyProps.remarks",
+        "inherits": ["React.HTMLAttributes<HTMLElement>", "VariantProps<typeof emptyVariants>"],
+        "kind": "interface",
+        "members": [
+          {
+            "defaultValue": "\"section\"",
+            "descriptionKey": "api.empty.types.EmptyProps.members.as.description",
+            "name": "as",
+            "optional": true,
+            "required": false,
+            "type": "EmptyElement"
+          },
+          {
+            "defaultValue": "\"md\"",
+            "descriptionKey": "api.empty.types.EmptyProps.members.size.description",
+            "name": "size",
+            "optional": true,
+            "required": false,
+            "type": "\"lg\" | \"md\" | \"sm\""
+          },
+          {
+            "defaultValue": "\"default\"",
+            "descriptionKey": "api.empty.types.EmptyProps.members.tone.description",
+            "name": "tone",
+            "optional": true,
+            "required": false,
+            "type": "\"danger\" | \"default\" | \"info\" | \"secondary\" | \"success\" | \"warning\""
+          },
+          {
+            "defaultValue": "\"panel\"",
+            "descriptionKey": "api.empty.types.EmptyProps.members.variant.description",
+            "name": "variant",
+            "optional": true,
+            "required": false,
+            "type": "\"outlined\" | \"panel\" | \"plain\""
+          }
+        ],
+        "name": "EmptyProps"
+      },
+      {
+        "inherits": [],
+        "kind": "type",
+        "members": [],
+        "name": "EmptyTitleProps",
+        "type": "React.HTMLAttributes<HTMLHeadingElement>"
+      }
+    ],
+    "variants": [
+      {
+        "descriptionKey": "api.empty.variants.emptyVariants.description",
+        "groups": [
+          { "defaultValue": "md", "name": "size", "values": ["lg", "md", "sm"] },
+          {
+            "defaultValue": "default",
+            "name": "tone",
+            "values": ["danger", "default", "info", "secondary", "success", "warning"]
+          },
+          { "defaultValue": "panel", "name": "variant", "values": ["outlined", "panel", "plain"] }
+        ],
+        "name": "emptyVariants"
+      }
+    ]
+  },
   "progress": {
     "components": [
       {
