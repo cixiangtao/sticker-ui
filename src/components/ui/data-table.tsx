@@ -18,6 +18,7 @@ import { ArrowDown, ArrowUp, ArrowUpDown } from "lucide-react"
 import * as React from "react"
 
 import { Checkbox } from "@/components/ui/checkbox"
+import { Empty } from "@/components/ui/empty"
 import { Input } from "@/components/ui/input"
 import { Pagination } from "@/components/ui/pagination"
 import {
@@ -620,7 +621,7 @@ function DataTable<TData extends object>({
                     Loading
                   </span>
                 ) : (
-                  emptyText
+                  <DataTableEmptyState emptyText={emptyText} />
                 )}
               </TableCell>
             </TableRow>
@@ -646,6 +647,24 @@ function DataTable<TData extends object>({
         />
       ) : null}
     </div>
+  )
+}
+
+function DataTableEmptyState({ emptyText }: { emptyText: React.ReactNode }) {
+  if (typeof emptyText !== "number" && typeof emptyText !== "string") {
+    return emptyText
+  }
+
+  return (
+    <Empty
+      as="div"
+      className="mx-auto max-w-sm py-4"
+      description="Rows will appear here once the table has matching data."
+      heading={emptyText}
+      size="sm"
+      tone="secondary"
+      variant="plain"
+    />
   )
 }
 

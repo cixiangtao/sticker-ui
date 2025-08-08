@@ -1,4 +1,5 @@
 import { cva, type VariantProps } from "class-variance-authority"
+import { Inbox } from "lucide-react"
 import * as React from "react"
 
 import { cn } from "@/lib/utils"
@@ -67,10 +68,29 @@ interface EmptyProps
     React.HTMLAttributes<HTMLElement>,
     VariantProps<typeof emptyVariants> {
   /**
+   * Convenience actions shown when `children` are not provided.
+   */
+  actions?: React.ReactNode
+  /**
    * Controls the semantic root element rendered by the empty state.
    * @default "section"
    */
   as?: EmptyElement
+  /**
+   * Convenience body copy shown when `children` are not provided.
+   * @default "There is nothing to show yet."
+   */
+  description?: React.ReactNode
+  /**
+   * Convenience heading shown when `children` are not provided.
+   * @default "No data"
+   */
+  heading?: React.ReactNode
+  /**
+   * Convenience icon shown when `children` are not provided.
+   * @default <Inbox />
+   */
+  icon?: React.ReactNode
   /**
    * Controls spacing, radius, and inner icon scale.
    * @default "md"
@@ -92,8 +112,13 @@ interface EmptyProps
  * Sticker empty state for blank lists, filtered results, and onboarding placeholders.
  */
 function Empty({
+  actions,
   as: Component = "section",
+  children,
   className,
+  description = "There is nothing to show yet.",
+  heading = "No data",
+  icon = <Inbox />,
   size = "md",
   tone = "default",
   variant = "panel",
@@ -107,7 +132,18 @@ function Empty({
       data-tone={tone}
       data-variant={variant}
       {...props}
-    />
+    >
+      {children ?? (
+        <>
+          {icon ? <EmptyIcon>{icon}</EmptyIcon> : null}
+          {heading ? <EmptyTitle>{heading}</EmptyTitle> : null}
+          {description ? (
+            <EmptyDescription>{description}</EmptyDescription>
+          ) : null}
+          {actions ? <EmptyActions>{actions}</EmptyActions> : null}
+        </>
+      )}
+    </Component>
   )
 }
 

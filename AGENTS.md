@@ -18,6 +18,7 @@
 - Prefer named exports throughout project source. Add default exports only when external tooling or generated modules require them.
 - Prioritize component completeness, ergonomics, and maintainability. Add focused runtime dependencies when they materially improve component quality or avoid brittle in-house infrastructure, and declare them on the registry item that needs them.
 - Preserve the handbook sticker style: warm paper surfaces, chunky outlines, hard offset shadows, tactile states, and accessible semantics.
+- Use `Empty` as the default display for component-owned empty states; declare the `empty` registry dependency for any registry item that renders it internally.
 - Prefer shared Tailwind tokens from `src/tokens.css` via `src/globals.css` before raw values or arbitrary shadows.
 - `tailwindcss-animate` is the approved Tailwind motion helper for floating registry components; declare it only on registry items that use it, wire it in preview through `src/globals.css`, and document package-user setup instead of adding it to `src/tokens.css`.
 - Document public registry component APIs with TSDoc-style `/** ... */` comments.

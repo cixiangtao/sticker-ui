@@ -1688,8 +1688,20 @@ const ZH_PREVIEW_API_DOC_MESSAGES = defineMessages({
   "api.empty.components.Empty.props.description": {
     zh: "贴纸空状态根元素的 props。",
   },
+  "api.empty.components.Empty.props.members.actions.description": {
+    zh: "未传入 children 时展示的便捷操作区。",
+  },
   "api.empty.components.Empty.props.members.as.description": {
     zh: "控制空状态渲染的语义根元素。",
+  },
+  "api.empty.components.Empty.props.members.description.description": {
+    zh: "未传入 children 时展示的便捷正文。",
+  },
+  "api.empty.components.Empty.props.members.heading.description": {
+    zh: "未传入 children 时展示的便捷标题。",
+  },
+  "api.empty.components.Empty.props.members.icon.description": {
+    zh: "未传入 children 时展示的便捷图标。",
   },
   "api.empty.components.Empty.props.members.size.description": {
     zh: "控制间距、圆角和内部图标比例。",
@@ -1748,8 +1760,20 @@ const ZH_PREVIEW_API_DOC_MESSAGES = defineMessages({
   "api.empty.types.EmptyProps.description": {
     zh: "贴纸空状态根元素的 props。",
   },
+  "api.empty.types.EmptyProps.members.actions.description": {
+    zh: "未传入 children 时展示的便捷操作区。",
+  },
   "api.empty.types.EmptyProps.members.as.description": {
     zh: "控制空状态渲染的语义根元素。",
+  },
+  "api.empty.types.EmptyProps.members.description.description": {
+    zh: "未传入 children 时展示的便捷正文。",
+  },
+  "api.empty.types.EmptyProps.members.heading.description": {
+    zh: "未传入 children 时展示的便捷标题。",
+  },
+  "api.empty.types.EmptyProps.members.icon.description": {
+    zh: "未传入 children 时展示的便捷图标。",
   },
   "api.empty.types.EmptyProps.members.size.description": {
     zh: "控制间距、圆角和内部图标比例。",

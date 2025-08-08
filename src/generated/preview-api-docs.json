@@ -4896,12 +4896,43 @@
           ],
           "members": [
             {
+              "descriptionKey": "api.empty.components.Empty.props.members.actions.description",
+              "name": "actions",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
               "defaultValue": "\"section\"",
               "descriptionKey": "api.empty.components.Empty.props.members.as.description",
               "name": "as",
               "optional": true,
               "required": false,
               "type": "EmptyElement"
+            },
+            {
+              "defaultValue": "\"There is nothing to show yet.\"",
+              "descriptionKey": "api.empty.components.Empty.props.members.description.description",
+              "name": "description",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "defaultValue": "\"No data\"",
+              "descriptionKey": "api.empty.components.Empty.props.members.heading.description",
+              "name": "heading",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "defaultValue": "<Inbox />",
+              "descriptionKey": "api.empty.components.Empty.props.members.icon.description",
+              "name": "icon",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
             },
             {
               "defaultValue": "\"md\"",
@@ -5656,12 +5687,43 @@
         "kind": "interface",
         "members": [
           {
+            "descriptionKey": "api.empty.types.EmptyProps.members.actions.description",
+            "name": "actions",
+            "optional": true,
+            "required": false,
+            "type": "React.ReactNode"
+          },
+          {
             "defaultValue": "\"section\"",
             "descriptionKey": "api.empty.types.EmptyProps.members.as.description",
             "name": "as",
             "optional": true,
             "required": false,
             "type": "EmptyElement"
+          },
+          {
+            "defaultValue": "\"There is nothing to show yet.\"",
+            "descriptionKey": "api.empty.types.EmptyProps.members.description.description",
+            "name": "description",
+            "optional": true,
+            "required": false,
+            "type": "React.ReactNode"
+          },
+          {
+            "defaultValue": "\"No data\"",
+            "descriptionKey": "api.empty.types.EmptyProps.members.heading.description",
+            "name": "heading",
+            "optional": true,
+            "required": false,
+            "type": "React.ReactNode"
+          },
+          {
+            "defaultValue": "<Inbox />",
+            "descriptionKey": "api.empty.types.EmptyProps.members.icon.description",
+            "name": "icon",
+            "optional": true,
+            "required": false,
+            "type": "React.ReactNode"
           },
           {
             "defaultValue": "\"md\"",
