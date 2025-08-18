@@ -162,6 +162,21 @@ export type { SpinnerProps } from "./components/ui/spinner"
 export { Switch, switchVariants } from "./components/ui/switch"
 export type { SwitchProps } from "./components/ui/switch"
 export {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+  tabsContentVariants,
+  tabsListVariants,
+  tabsTriggerVariants,
+} from "./components/ui/tabs"
+export type {
+  TabsContentProps,
+  TabsListProps,
+  TabsProps,
+  TabsTriggerProps,
+} from "./components/ui/tabs"
+export {
   Table,
   TableBody,
   TableCaption,

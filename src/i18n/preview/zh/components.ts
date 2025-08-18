@@ -302,6 +302,9 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
     {
       zh: "将表格单元格与标签、代码块组合，由外层框架负责滚动和墨色边框。",
     },
+  "preview.components.controlledVertical": {
+    zh: "受控竖向",
+  },
   "preview.components.controlledMaxLength": {
     zh: "受控最大长度",
   },
@@ -597,6 +600,10 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   "preview.components.radixOptionControlsWithChunkyStickerFrames": {
     zh: "带有厚实贴纸边框的 Radix 选项控件。",
   },
+  "preview.components.radixTabsForSectionedStickerPanelsAndKeyboardNavigation":
+    {
+      zh: "用于分区贴纸面板和键盘导航的 Radix Tabs。",
+    },
   "preview.components.selectKeepsAccessibleKeyboardBehaviorWhileAddingAChunkyStickerMenuAndAClearPaperIndicator":
     {
       zh: "Select 保留可访问键盘行为，同时加入厚实贴纸菜单和清晰的纸张指示器。",
@@ -671,6 +678,10 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   "preview.components.switchKeepsRadixPressedStateBehaviorWhileAddingATactileStickerTrackAndPaperThumb":
     {
       zh: "Switch 保留 Radix 按下状态行为，同时加入触感贴纸轨道和纸张滑块。",
+    },
+  "preview.components.tabsKeepRadixKeyboardNavigationWhileAddingChunkyStickerTriggersAndPaperPanels":
+    {
+      zh: "Tabs 保留 Radix 键盘导航，同时加入厚实贴纸触发器和纸张面板。",
     },
   "preview.components.flexToolbar": {
     zh: "Flex 工具栏",
@@ -747,6 +758,9 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   "preview.components.basicModal": {
     zh: "基础弹窗",
   },
+  "preview.components.basicTabs": {
+    zh: "基础 Tabs",
+  },
   "preview.components.basicToast": {
     zh: "基础 Toast",
   },
@@ -811,6 +825,14 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   "preview.components.tooltipAddsACompactPaperHintForControlsThatNeedExtraContextWithoutTakingOverThePage":
     {
       zh: "Tooltip 为需要额外上下文的控件添加紧凑纸张提示，同时不占据页面。",
+    },
+  "preview.components.controlledVerticalTabsCanPairASideListWithDisabledStepsAndFormFriendlyChangeHandlers":
+    {
+      zh: "受控竖向 Tabs 可以把侧边列表、禁用步骤和表单友好的变更回调组合在一起。",
+    },
+  "preview.components.sizeToneAndVariantTuneTabsForCompactToolbarsSoftFiltersAndPanelNavigation":
+    {
+      zh: "size、tone 和 variant 可调整 Tabs，用于紧凑工具栏、轻量筛选和面板导航。",
     },
   "preview.components.toneAndSideOptionsKeepHintBubblesUsefulInDenseToolbarsAndStatusRows":
     {

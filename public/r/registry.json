@@ -347,6 +347,21 @@
       ]
     },
     {
+      "name": "tabs",
+      "type": "registry:ui",
+      "title": "Sticker Tabs",
+      "description": "A Radix-powered tabs primitive with sticker triggers and paper panels.",
+      "dependencies": ["@radix-ui/react-tabs", "class-variance-authority"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "src/components/ui/tabs.tsx",
+          "target": "@ui/tabs.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "popover",
       "type": "registry:ui",
       "title": "Sticker Popover",

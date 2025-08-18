@@ -59,6 +59,7 @@ const SelectPage = createRegistryComponentPage("select")
 const SkeletonPage = createRegistryComponentPage("skeleton")
 const SpinnerPage = createRegistryComponentPage("spinner")
 const SwitchPage = createRegistryComponentPage("switch")
+const TabsPage = createRegistryComponentPage("tabs")
 const TablePage = createRegistryComponentPage("table")
 const TagPage = createRegistryComponentPage("tag")
 const TextareaPage = createRegistryComponentPage("textarea")
@@ -89,6 +90,7 @@ export {
   SkeletonPage,
   SpinnerPage,
   SwitchPage,
+  TabsPage,
   TablePage,
   TagPage,
   TextareaPage,

@@ -310,6 +310,19 @@ const routes = defineRoutes([
   },
   {
     component: () =>
+      import("@/pages/components").then((module) => module.TabsPage),
+    meta: {
+      emoji: "T",
+      navSection: "surfaces-data",
+      order: 56,
+      title: "Tabs",
+      descriptionKey:
+        "preview.components.radixTabsForSectionedStickerPanelsAndKeyboardNavigation",
+    },
+    path: "/components/tabs",
+  },
+  {
+    component: () =>
       import("@/pages/components").then((module) => module.PopoverPage),
     meta: {
       emoji: "P",

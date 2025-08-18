@@ -9344,6 +9344,1049 @@
       }
     ]
   },
+  "tabs": {
+    "components": [
+      {
+        "descriptionKey": "api.tabs.components.Tabs.description",
+        "name": "Tabs",
+        "props": {
+          "descriptionKey": "api.tabs.components.Tabs.props.description",
+          "remarksKey": "api.tabs.components.Tabs.props.remarks",
+          "inherits": [
+            "Omit< React.ComponentPropsWithoutRef<typeof TabsPrimitive.Root>, \"className\" | \"onChange\" | \"onValueChange\" >"
+          ],
+          "inheritedMembers": [
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-describedby.description",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-invalid.description",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-label.description",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-labelledby.description",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.autoFocus.description",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.children.description",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultChecked.description",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultValue.description",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.id.description",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onBlur.description",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onClick.description",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onFocus.description",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyDown.description",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyUp.description",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseEnter.description",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseLeave.description",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.role.description",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.style.description",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.title.description",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.value.description",
+              "name": "value",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "members": [
+            {
+              "descriptionKey": "api.tabs.components.Tabs.props.members.className.description",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.tabs.components.Tabs.props.members.onChange.description",
+              "remarksKey": "api.tabs.components.Tabs.props.members.onChange.remarks",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "TabsChangeHandler"
+            },
+            {
+              "descriptionKey": "api.tabs.components.Tabs.props.members.onValueChange.description",
+              "name": "onValueChange",
+              "optional": true,
+              "required": false,
+              "type": "TabsChangeHandler"
+            },
+            {
+              "defaultValue": "\"md\"",
+              "descriptionKey": "api.tabs.components.Tabs.props.members.size.description",
+              "name": "size",
+              "optional": true,
+              "required": false,
+              "type": "\"lg\" | \"md\" | \"sm\""
+            },
+            {
+              "defaultValue": "\"default\"",
+              "descriptionKey": "api.tabs.components.Tabs.props.members.tone.description",
+              "name": "tone",
+              "optional": true,
+              "required": false,
+              "type": "\"danger\" | \"default\" | \"info\" | \"secondary\" | \"success\" | \"warning\""
+            },
+            {
+              "defaultValue": "\"solid\"",
+              "descriptionKey": "api.tabs.components.Tabs.props.members.variant.description",
+              "name": "variant",
+              "optional": true,
+              "required": false,
+              "type": "\"quiet\" | \"solid\" | \"underline\""
+            }
+          ],
+          "type": "TabsProps"
+        }
+      },
+      {
+        "descriptionKey": "api.tabs.components.TabsContent.description",
+        "name": "TabsContent",
+        "props": {
+          "descriptionKey": "api.tabs.components.TabsContent.props.description",
+          "inherits": [
+            "Omit< React.ComponentPropsWithoutRef<typeof TabsPrimitive.Content>, \"className\" >",
+            "VariantProps<typeof tabsContentVariants>"
+          ],
+          "inheritedMembers": [
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-describedby.description",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-invalid.description",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-label.description",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-labelledby.description",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.autoFocus.description",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.children.description",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultChecked.description",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultValue.description",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.id.description",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onBlur.description",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onChange.description",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "React.ChangeEventHandler<HTMLDivElement, Element>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onClick.description",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onFocus.description",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyDown.description",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyUp.description",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseEnter.description",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseLeave.description",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.role.description",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.style.description",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.title.description",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.value.description",
+              "name": "value",
+              "optional": false,
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "members": [
+            {
+              "descriptionKey": "api.tabs.components.TabsContent.props.members.className.description",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.tabs.components.TabsContent.props.members.size.description",
+              "name": "size",
+              "optional": true,
+              "required": false,
+              "type": "\"lg\" | \"md\" | \"sm\""
+            },
+            {
+              "descriptionKey": "api.tabs.components.TabsContent.props.members.tone.description",
+              "name": "tone",
+              "optional": true,
+              "required": false,
+              "type": "\"danger\" | \"default\" | \"info\" | \"secondary\" | \"success\" | \"warning\""
+            }
+          ],
+          "type": "TabsContentProps"
+        }
+      },
+      {
+        "descriptionKey": "api.tabs.components.TabsList.description",
+        "name": "TabsList",
+        "props": {
+          "descriptionKey": "api.tabs.components.TabsList.props.description",
+          "inherits": [
+            "Omit< React.ComponentPropsWithoutRef<typeof TabsPrimitive.List>, \"className\" >",
+            "Pick<VariantProps<typeof tabsListVariants>, \"size\" | \"variant\">"
+          ],
+          "inheritedMembers": [
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-describedby.description",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-invalid.description",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-label.description",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-labelledby.description",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.autoFocus.description",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.children.description",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultChecked.description",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultValue.description",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.id.description",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onBlur.description",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onChange.description",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "React.ChangeEventHandler<HTMLDivElement, Element>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onClick.description",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onFocus.description",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyDown.description",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyUp.description",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseEnter.description",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseLeave.description",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.role.description",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.style.description",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.title.description",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "members": [
+            {
+              "descriptionKey": "api.tabs.components.TabsList.props.members.className.description",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.tabs.components.TabsList.props.members.size.description",
+              "name": "size",
+              "optional": true,
+              "required": false,
+              "type": "\"lg\" | \"md\" | \"sm\""
+            },
+            {
+              "descriptionKey": "api.tabs.components.TabsList.props.members.variant.description",
+              "name": "variant",
+              "optional": true,
+              "required": false,
+              "type": "\"quiet\" | \"solid\" | \"underline\""
+            }
+          ],
+          "type": "TabsListProps"
+        }
+      },
+      {
+        "descriptionKey": "api.tabs.components.TabsTrigger.description",
+        "name": "TabsTrigger",
+        "props": {
+          "descriptionKey": "api.tabs.components.TabsTrigger.props.description",
+          "inherits": [
+            "Omit< React.ComponentPropsWithoutRef<typeof TabsPrimitive.Trigger>, \"className\" >"
+          ],
+          "inheritedMembers": [
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-describedby.description",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-invalid.description",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-label.description",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-labelledby.description",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.autoFocus.description",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.children.description",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultChecked.description",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultValue.description",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.disabled.description",
+              "name": "disabled",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.form.description",
+              "name": "form",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.id.description",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.name.description",
+              "name": "name",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onBlur.description",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLButtonElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onChange.description",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "React.ChangeEventHandler<HTMLButtonElement, Element>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onClick.description",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLButtonElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onFocus.description",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLButtonElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyDown.description",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLButtonElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyUp.description",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLButtonElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseEnter.description",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLButtonElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseLeave.description",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLButtonElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.role.description",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.style.description",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.title.description",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.type.description",
+              "name": "type",
+              "optional": true,
+              "required": false,
+              "type": "\"button\" | \"submit\" | \"reset\""
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.value.description",
+              "name": "value",
+              "optional": false,
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "members": [
+            {
+              "descriptionKey": "api.tabs.components.TabsTrigger.props.members.className.description",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.tabs.components.TabsTrigger.props.members.size.description",
+              "name": "size",
+              "optional": true,
+              "required": false,
+              "type": "\"lg\" | \"md\" | \"sm\""
+            },
+            {
+              "descriptionKey": "api.tabs.components.TabsTrigger.props.members.tone.description",
+              "name": "tone",
+              "optional": true,
+              "required": false,
+              "type": "\"danger\" | \"default\" | \"info\" | \"secondary\" | \"success\" | \"warning\""
+            },
+            {
+              "descriptionKey": "api.tabs.components.TabsTrigger.props.members.variant.description",
+              "name": "variant",
+              "optional": true,
+              "required": false,
+              "type": "\"quiet\" | \"solid\" | \"underline\""
+            }
+          ],
+          "type": "TabsTriggerProps"
+        }
+      }
+    ],
+    "descriptionKey": "api.tabs.description",
+    "exports": [
+      {
+        "descriptionKey": "api.tabs.exports.Tabs.description",
+        "kind": "component",
+        "name": "Tabs"
+      },
+      {
+        "descriptionKey": "api.tabs.exports.TabsContent.description",
+        "kind": "component",
+        "name": "TabsContent"
+      },
+      {
+        "descriptionKey": "api.tabs.exports.TabsContentProps.description",
+        "kind": "interface",
+        "name": "TabsContentProps"
+      },
+      {
+        "descriptionKey": "api.tabs.exports.tabsContentVariants.description",
+        "kind": "variant",
+        "name": "tabsContentVariants"
+      },
+      {
+        "descriptionKey": "api.tabs.exports.TabsList.description",
+        "kind": "component",
+        "name": "TabsList"
+      },
+      {
+        "descriptionKey": "api.tabs.exports.TabsListProps.description",
+        "kind": "interface",
+        "name": "TabsListProps"
+      },
+      {
+        "descriptionKey": "api.tabs.exports.tabsListVariants.description",
+        "kind": "variant",
+        "name": "tabsListVariants"
+      },
+      {
+        "descriptionKey": "api.tabs.exports.TabsProps.description",
+        "remarksKey": "api.tabs.exports.TabsProps.remarks",
+        "kind": "interface",
+        "name": "TabsProps"
+      },
+      {
+        "descriptionKey": "api.tabs.exports.TabsTrigger.description",
+        "kind": "component",
+        "name": "TabsTrigger"
+      },
+      {
+        "descriptionKey": "api.tabs.exports.TabsTriggerProps.description",
+        "kind": "interface",
+        "name": "TabsTriggerProps"
+      },
+      {
+        "descriptionKey": "api.tabs.exports.tabsTriggerVariants.description",
+        "kind": "variant",
+        "name": "tabsTriggerVariants"
+      }
+    ],
+    "name": "tabs",
+    "sourcePath": "src/components/ui/tabs.tsx",
+    "title": "Sticker Tabs",
+    "types": [
+      {
+        "descriptionKey": "api.tabs.types.TabsContentProps.description",
+        "inherits": [
+          "Omit< React.ComponentPropsWithoutRef<typeof TabsPrimitive.Content>, \"className\" >",
+          "VariantProps<typeof tabsContentVariants>"
+        ],
+        "kind": "interface",
+        "members": [
+          {
+            "descriptionKey": "api.tabs.types.TabsContentProps.members.className.description",
+            "name": "className",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "descriptionKey": "api.tabs.types.TabsContentProps.members.size.description",
+            "name": "size",
+            "optional": true,
+            "required": false,
+            "type": "\"lg\" | \"md\" | \"sm\""
+          },
+          {
+            "descriptionKey": "api.tabs.types.TabsContentProps.members.tone.description",
+            "name": "tone",
+            "optional": true,
+            "required": false,
+            "type": "\"danger\" | \"default\" | \"info\" | \"secondary\" | \"success\" | \"warning\""
+          }
+        ],
+        "name": "TabsContentProps"
+      },
+      {
+        "descriptionKey": "api.tabs.types.TabsListProps.description",
+        "inherits": [
+          "Omit< React.ComponentPropsWithoutRef<typeof TabsPrimitive.List>, \"className\" >",
+          "Pick<VariantProps<typeof tabsListVariants>, \"size\" | \"variant\">"
+        ],
+        "kind": "interface",
+        "members": [
+          {
+            "descriptionKey": "api.tabs.types.TabsListProps.members.className.description",
+            "name": "className",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "descriptionKey": "api.tabs.types.TabsListProps.members.size.description",
+            "name": "size",
+            "optional": true,
+            "required": false,
+            "type": "\"lg\" | \"md\" | \"sm\""
+          },
+          {
+            "descriptionKey": "api.tabs.types.TabsListProps.members.variant.description",
+            "name": "variant",
+            "optional": true,
+            "required": false,
+            "type": "\"quiet\" | \"solid\" | \"underline\""
+          }
+        ],
+        "name": "TabsListProps"
+      },
+      {
+        "descriptionKey": "api.tabs.types.TabsProps.description",
+        "remarksKey": "api.tabs.types.TabsProps.remarks",
+        "inherits": [
+          "Omit< React.ComponentPropsWithoutRef<typeof TabsPrimitive.Root>, \"className\" | \"onChange\" | \"onValueChange\" >"
+        ],
+        "kind": "interface",
+        "members": [
+          {
+            "descriptionKey": "api.tabs.types.TabsProps.members.className.description",
+            "name": "className",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "descriptionKey": "api.tabs.types.TabsProps.members.onChange.description",
+            "remarksKey": "api.tabs.types.TabsProps.members.onChange.remarks",
+            "name": "onChange",
+            "optional": true,
+            "required": false,
+            "type": "TabsChangeHandler"
+          },
+          {
+            "descriptionKey": "api.tabs.types.TabsProps.members.onValueChange.description",
+            "name": "onValueChange",
+            "optional": true,
+            "required": false,
+            "type": "TabsChangeHandler"
+          },
+          {
+            "defaultValue": "\"md\"",
+            "descriptionKey": "api.tabs.types.TabsProps.members.size.description",
+            "name": "size",
+            "optional": true,
+            "required": false,
+            "type": "\"lg\" | \"md\" | \"sm\""
+          },
+          {
+            "defaultValue": "\"default\"",
+            "descriptionKey": "api.tabs.types.TabsProps.members.tone.description",
+            "name": "tone",
+            "optional": true,
+            "required": false,
+            "type": "\"danger\" | \"default\" | \"info\" | \"secondary\" | \"success\" | \"warning\""
+          },
+          {
+            "defaultValue": "\"solid\"",
+            "descriptionKey": "api.tabs.types.TabsProps.members.variant.description",
+            "name": "variant",
+            "optional": true,
+            "required": false,
+            "type": "\"quiet\" | \"solid\" | \"underline\""
+          }
+        ],
+        "name": "TabsProps"
+      },
+      {
+        "descriptionKey": "api.tabs.types.TabsTriggerProps.description",
+        "inherits": [
+          "Omit< React.ComponentPropsWithoutRef<typeof TabsPrimitive.Trigger>, \"className\" >"
+        ],
+        "kind": "interface",
+        "members": [
+          {
+            "descriptionKey": "api.tabs.types.TabsTriggerProps.members.className.description",
+            "name": "className",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "descriptionKey": "api.tabs.types.TabsTriggerProps.members.size.description",
+            "name": "size",
+            "optional": true,
+            "required": false,
+            "type": "\"lg\" | \"md\" | \"sm\""
+          },
+          {
+            "descriptionKey": "api.tabs.types.TabsTriggerProps.members.tone.description",
+            "name": "tone",
+            "optional": true,
+            "required": false,
+            "type": "\"danger\" | \"default\" | \"info\" | \"secondary\" | \"success\" | \"warning\""
+          },
+          {
+            "descriptionKey": "api.tabs.types.TabsTriggerProps.members.variant.description",
+            "name": "variant",
+            "optional": true,
+            "required": false,
+            "type": "\"quiet\" | \"solid\" | \"underline\""
+          }
+        ],
+        "name": "TabsTriggerProps"
+      }
+    ],
+    "variants": [
+      {
+        "descriptionKey": "api.tabs.variants.tabsContentVariants.description",
+        "groups": [
+          { "defaultValue": "md", "name": "size", "values": ["lg", "md", "sm"] },
+          {
+            "defaultValue": "default",
+            "name": "tone",
+            "values": ["danger", "default", "info", "secondary", "success", "warning"]
+          }
+        ],
+        "name": "tabsContentVariants"
+      },
+      {
+        "descriptionKey": "api.tabs.variants.tabsListVariants.description",
+        "groups": [
+          { "defaultValue": "md", "name": "size", "values": ["lg", "md", "sm"] },
+          { "defaultValue": "solid", "name": "variant", "values": ["quiet", "solid", "underline"] }
+        ],
+        "name": "tabsListVariants"
+      },
+      {
+        "descriptionKey": "api.tabs.variants.tabsTriggerVariants.description",
+        "groups": [
+          { "defaultValue": "md", "name": "size", "values": ["lg", "md", "sm"] },
+          {
+            "defaultValue": "default",
+            "name": "tone",
+            "values": ["danger", "default", "info", "secondary", "success", "warning"]
+          },
+          { "defaultValue": "solid", "name": "variant", "values": ["quiet", "solid", "underline"] }
+        ],
+        "name": "tabsTriggerVariants"
+      }
+    ]
+  },
   "popover": {
     "components": [
       {

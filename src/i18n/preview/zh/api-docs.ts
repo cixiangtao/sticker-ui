@@ -2985,6 +2985,198 @@ const ZH_PREVIEW_API_DOC_MESSAGES = defineMessages({
   "api.pagination.types.PaginationSummaryState.members.total.description": {
     zh: "用于计算 pageCount 的可选记录总数。",
   },
+  "api.tabs.description": {
+    zh: "带贴纸触发器和纸张面板的 Radix Tabs 原语。",
+  },
+  "api.tabs.components.Tabs.description": {
+    zh: "由 Radix Tabs 驱动的贴纸 Tabs 根组件。",
+  },
+  "api.tabs.components.Tabs.props.description": {
+    zh: "贴纸 Tabs 根组件的 props。",
+  },
+  "api.tabs.components.Tabs.props.remarks": {
+    zh: "封装 Radix Tabs.Root，并保留 `onChange(value)` 作为 `onValueChange` 的友好别名。",
+  },
+  "api.tabs.components.Tabs.props.members.className.description": {
+    zh: "应用到 Tabs 根容器的 className。",
+  },
+  "api.tabs.components.Tabs.props.members.onChange.description": {
+    zh: "当前激活 tab value 变化时触发。",
+  },
+  "api.tabs.components.Tabs.props.members.onChange.remarks": {
+    zh: "接收下一个字符串 value。",
+  },
+  "api.tabs.components.Tabs.props.members.onValueChange.description": {
+    zh: "当前激活 tab value 变化时触发。",
+  },
+  "api.tabs.components.Tabs.props.members.size.description": {
+    zh: "控制列表和触发器密度。",
+  },
+  "api.tabs.components.Tabs.props.members.tone.description": {
+    zh: "控制激活触发器和内容面板的语义纸张色调。",
+  },
+  "api.tabs.components.Tabs.props.members.variant.description": {
+    zh: "控制触发器结构和列表强调程度。",
+  },
+  "api.tabs.components.TabsContent.description": {
+    zh: "展示当前激活 tab 的内容面板。",
+  },
+  "api.tabs.components.TabsContent.props.description": {
+    zh: "贴纸 tab 内容面板的 props。",
+  },
+  "api.tabs.components.TabsContent.props.members.className.description": {
+    zh: "应用到 tab 内容面板的 className。",
+  },
+  "api.tabs.components.TabsContent.props.members.size.description": {
+    zh: "独立控制面板内边距。",
+  },
+  "api.tabs.components.TabsContent.props.members.tone.description": {
+    zh: "独立控制面板纸张色调。",
+  },
+  "api.tabs.components.TabsList.description": {
+    zh: "用于分组 tab 触发器。",
+  },
+  "api.tabs.components.TabsList.props.description": {
+    zh: "贴纸 Tabs list 的 props。",
+  },
+  "api.tabs.components.TabsList.props.members.className.description": {
+    zh: "应用到 tabs list 的 className。",
+  },
+  "api.tabs.components.TabsList.props.members.size.description": {
+    zh: "独立控制列表密度。",
+  },
+  "api.tabs.components.TabsList.props.members.variant.description": {
+    zh: "独立控制列表外框强调程度。",
+  },
+  "api.tabs.components.TabsTrigger.description": {
+    zh: "用于选择一个 tab 面板。",
+  },
+  "api.tabs.components.TabsTrigger.props.description": {
+    zh: "贴纸 tab 触发器的 props。",
+  },
+  "api.tabs.components.TabsTrigger.props.members.className.description": {
+    zh: "应用到 tab 触发器的 className。",
+  },
+  "api.tabs.components.TabsTrigger.props.members.size.description": {
+    zh: "独立控制触发器密度。",
+  },
+  "api.tabs.components.TabsTrigger.props.members.tone.description": {
+    zh: "独立控制激活触发器色调。",
+  },
+  "api.tabs.components.TabsTrigger.props.members.variant.description": {
+    zh: "独立控制触发器结构。",
+  },
+  "api.tabs.exports.Tabs.description": {
+    zh: "由 Radix Tabs 驱动的贴纸 Tabs 根组件。",
+  },
+  "api.tabs.exports.TabsContent.description": {
+    zh: "展示当前激活 tab 的内容面板。",
+  },
+  "api.tabs.exports.TabsContentProps.description": {
+    zh: "贴纸 tab 内容面板的 props。",
+  },
+  "api.tabs.exports.TabsList.description": {
+    zh: "用于分组 tab 触发器。",
+  },
+  "api.tabs.exports.TabsListProps.description": {
+    zh: "贴纸 Tabs list 的 props。",
+  },
+  "api.tabs.exports.TabsProps.description": {
+    zh: "贴纸 Tabs 根组件的 props。",
+  },
+  "api.tabs.exports.TabsProps.remarks": {
+    zh: "封装 Radix Tabs.Root，并保留 `onChange(value)` 作为 `onValueChange` 的友好别名。",
+  },
+  "api.tabs.exports.TabsTrigger.description": {
+    zh: "用于选择一个 tab 面板。",
+  },
+  "api.tabs.exports.TabsTriggerProps.description": {
+    zh: "贴纸 tab 触发器的 props。",
+  },
+  "api.tabs.exports.tabsContentVariants.description": {
+    zh: "根据尺寸和色调选项生成贴纸 tab 内容面板 className。",
+  },
+  "api.tabs.exports.tabsListVariants.description": {
+    zh: "根据尺寸和变体选项生成贴纸 tabs list className。",
+  },
+  "api.tabs.exports.tabsTriggerVariants.description": {
+    zh: "根据尺寸、色调和变体选项生成贴纸 tab 触发器 className。",
+  },
+  "api.tabs.types.TabsContentProps.description": {
+    zh: "贴纸 tab 内容面板的 props。",
+  },
+  "api.tabs.types.TabsContentProps.members.className.description": {
+    zh: "应用到 tab 内容面板的 className。",
+  },
+  "api.tabs.types.TabsContentProps.members.size.description": {
+    zh: "独立控制面板内边距。",
+  },
+  "api.tabs.types.TabsContentProps.members.tone.description": {
+    zh: "独立控制面板纸张色调。",
+  },
+  "api.tabs.types.TabsListProps.description": {
+    zh: "贴纸 Tabs list 的 props。",
+  },
+  "api.tabs.types.TabsListProps.members.className.description": {
+    zh: "应用到 tabs list 的 className。",
+  },
+  "api.tabs.types.TabsListProps.members.size.description": {
+    zh: "独立控制列表密度。",
+  },
+  "api.tabs.types.TabsListProps.members.variant.description": {
+    zh: "独立控制列表外框强调程度。",
+  },
+  "api.tabs.types.TabsProps.description": {
+    zh: "贴纸 Tabs 根组件的 props。",
+  },
+  "api.tabs.types.TabsProps.remarks": {
+    zh: "封装 Radix Tabs.Root，并保留 `onChange(value)` 作为 `onValueChange` 的友好别名。",
+  },
+  "api.tabs.types.TabsProps.members.className.description": {
+    zh: "应用到 Tabs 根容器的 className。",
+  },
+  "api.tabs.types.TabsProps.members.onChange.description": {
+    zh: "当前激活 tab value 变化时触发。",
+  },
+  "api.tabs.types.TabsProps.members.onChange.remarks": {
+    zh: "接收下一个字符串 value。",
+  },
+  "api.tabs.types.TabsProps.members.onValueChange.description": {
+    zh: "当前激活 tab value 变化时触发。",
+  },
+  "api.tabs.types.TabsProps.members.size.description": {
+    zh: "控制列表和触发器密度。",
+  },
+  "api.tabs.types.TabsProps.members.tone.description": {
+    zh: "控制激活触发器和内容面板的语义纸张色调。",
+  },
+  "api.tabs.types.TabsProps.members.variant.description": {
+    zh: "控制触发器结构和列表强调程度。",
+  },
+  "api.tabs.types.TabsTriggerProps.description": {
+    zh: "贴纸 tab 触发器的 props。",
+  },
+  "api.tabs.types.TabsTriggerProps.members.className.description": {
+    zh: "应用到 tab 触发器的 className。",
+  },
+  "api.tabs.types.TabsTriggerProps.members.size.description": {
+    zh: "独立控制触发器密度。",
+  },
+  "api.tabs.types.TabsTriggerProps.members.tone.description": {
+    zh: "独立控制激活触发器色调。",
+  },
+  "api.tabs.types.TabsTriggerProps.members.variant.description": {
+    zh: "独立控制触发器结构。",
+  },
+  "api.tabs.variants.tabsContentVariants.description": {
+    zh: "根据尺寸和色调选项生成贴纸 tab 内容面板 className。",
+  },
+  "api.tabs.variants.tabsListVariants.description": {
+    zh: "根据尺寸和变体选项生成贴纸 tabs list className。",
+  },
+  "api.tabs.variants.tabsTriggerVariants.description": {
+    zh: "根据尺寸、色调和变体选项生成贴纸 tab 触发器 className。",
+  },
 })
 
 export { ZH_PREVIEW_API_DOC_MESSAGES }
