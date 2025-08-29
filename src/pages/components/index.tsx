@@ -37,13 +37,16 @@ function createRegistryComponentPage(name: ComponentPreviewName) {
 }
 
 const AlertPage = createRegistryComponentPage("alert")
+const AlertDialogPage = createRegistryComponentPage("alert-dialog")
 const BadgePage = createRegistryComponentPage("badge")
 const ButtonPage = createRegistryComponentPage("button")
 const CardPage = createRegistryComponentPage("card")
 const CheckboxPage = createRegistryComponentPage("checkbox")
+const ContextMenuPage = createRegistryComponentPage("context-menu")
 const DataTablePage = createRegistryComponentPage("data-table")
 const DialogPage = createRegistryComponentPage("dialog")
 const DividerPage = createRegistryComponentPage("divider")
+const DropdownMenuPage = createRegistryComponentPage("dropdown-menu")
 const EmptyPage = createRegistryComponentPage("empty")
 const FieldPage = createRegistryComponentPage("field")
 const FormPage = createRegistryComponentPage("form")
@@ -67,14 +70,17 @@ const TooltipPage = createRegistryComponentPage("tooltip")
 const ToastPage = createRegistryComponentPage("toast")
 
 export {
+  AlertDialogPage,
   AlertPage,
   BadgePage,
   ButtonPage,
   CardPage,
   CheckboxPage,
+  ContextMenuPage,
   DataTablePage,
   DialogPage,
   DividerPage,
+  DropdownMenuPage,
   EmptyPage,
   FieldPage,
   FormPage,

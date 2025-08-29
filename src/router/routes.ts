@@ -168,6 +168,19 @@ const routes = defineRoutes([
   },
   {
     component: () =>
+      import("@/pages/components").then((module) => module.AlertDialogPage),
+    meta: {
+      emoji: "A",
+      navSection: "overlays",
+      order: 92,
+      title: "AlertDialog",
+      descriptionKey:
+        "preview.components.confirmationModalsForDestructiveAndHighStakesDecisions",
+    },
+    path: "/components/alert-dialog",
+  },
+  {
+    component: () =>
       import("@/pages/components").then((module) => module.BadgePage),
     meta: {
       emoji: "B",
@@ -307,6 +320,32 @@ const routes = defineRoutes([
         "preview.components.radixHelpBubblesWithCompactStickerPaperStyling",
     },
     path: "/components/tooltip",
+  },
+  {
+    component: () =>
+      import("@/pages/components").then((module) => module.DropdownMenuPage),
+    meta: {
+      emoji: "D",
+      navSection: "overlays",
+      order: 88.5,
+      title: "DropdownMenu",
+      descriptionKey:
+        "preview.components.desktopCommandMenusForToolbarsRowsAndAccountActions",
+    },
+    path: "/components/dropdown-menu",
+  },
+  {
+    component: () =>
+      import("@/pages/components").then((module) => module.ContextMenuPage),
+    meta: {
+      emoji: "C",
+      navSection: "overlays",
+      order: 88.75,
+      title: "ContextMenu",
+      descriptionKey:
+        "preview.components.rightClickMenusForDesktopWorkflowsAndDenseSurfaces",
+    },
+    path: "/components/context-menu",
   },
   {
     component: () =>

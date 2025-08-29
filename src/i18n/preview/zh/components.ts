@@ -986,6 +986,68 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
     {
       zh: "Vite 和 React DOM 仅用于预览。安装后的 registry 组件保持源码优先且轻量。",
     },
+  "preview.components.alertDialogCanBeControlledWhenAWorkflowNeedsToReflectTheLastDecision":
+    {
+      zh: "当工作流需要反映上一次决策时，AlertDialog 可以进入受控模式。",
+    },
+  "preview.components.alertDialogKeepsDestructiveDecisionsExplicitWithTitleDescriptionAndSeparateCancelAction":
+    {
+      zh: "AlertDialog 通过标题、描述和独立取消操作，让破坏性决策保持明确。",
+    },
+  "preview.components.alertDialogSizesAndTonesFitRoutineChecksWarningsAndRoomierApprovalPrompts":
+    {
+      zh: "AlertDialog 的尺寸和色调可适配日常检查、警告和更宽松的审批提示。",
+    },
+  "preview.components.basicActions": {
+    zh: "基础操作",
+  },
+  "preview.components.basicSurface": {
+    zh: "基础表面",
+  },
+  "preview.components.checkableAndSubmenus": {
+    zh: "可选项与子菜单",
+  },
+  "preview.components.checkboxRadioAndNestedItemsKeepDesktopMenusDenseButKeyboardReachable":
+    {
+      zh: "复选、单选和嵌套项让桌面菜单保持密集，同时仍可通过键盘访问。",
+    },
+  "preview.components.confirmationModalsForDestructiveAndHighStakesDecisions": {
+    zh: "用于破坏性和高风险决策的确认模态框。",
+  },
+  "preview.components.contextMenuCheckboxRadioAndSubmenusSupportDenseDesktopEditingFlows":
+    {
+      zh: "ContextMenu 的复选、单选和子菜单可支撑密集桌面编辑流程。",
+    },
+  "preview.components.contextMenusExposeRightClickActionsWithoutAddingMoreVisibleChrome":
+    {
+      zh: "ContextMenu 通过右键暴露操作，而不增加更多可见界面负担。",
+    },
+  "preview.components.controlledState": {
+    zh: "受控状态",
+  },
+  "preview.components.desktopCommandMenusForToolbarsRowsAndAccountActions": {
+    zh: "用于工具栏、表格行和账号操作的桌面命令菜单。",
+  },
+  "preview.components.destructiveConfirmation": {
+    zh: "破坏性确认",
+  },
+  "preview.components.dropdownMenusCollectSecondaryActionsWithoutOverloadingThePrimaryButton":
+    {
+      zh: "DropdownMenu 收纳次级操作，避免主按钮承载过多命令。",
+    },
+  "preview.components.menuContentSizesAndPaperTonesFitToolbarsCardsAndRoomierCommandPanels":
+    {
+      zh: "菜单内容尺寸和纸张色调可适配工具栏、卡片和更宽松的命令面板。",
+    },
+  "preview.components.rightClickMenusForDesktopWorkflowsAndDenseSurfaces": {
+    zh: "用于桌面工作流和密集表面的右键菜单。",
+  },
+  "preview.components.selectionAndSubmenus": {
+    zh: "选择与子菜单",
+  },
+  "preview.components.tonesAndSizes": {
+    zh: "色调与尺寸",
+  },
 })
 
 export { ZH_PREVIEW_COMPONENT_MESSAGES }

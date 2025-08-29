@@ -17,6 +17,26 @@ export type {
   AlertProps,
   AlertTitleProps,
 } from "./components/ui/alert"
+export {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogOverlay,
+  AlertDialogPortal,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+  alertDialogContentVariants,
+} from "./components/ui/alert-dialog"
+export type {
+  AlertDialogActionProps,
+  AlertDialogCancelProps,
+  AlertDialogContentProps,
+  AlertDialogOverlayProps,
+} from "./components/ui/alert-dialog"
 export { Badge, badgeVariants } from "./components/ui/badge"
 export type { BadgeProps } from "./components/ui/badge"
 export {
@@ -37,6 +57,32 @@ export type {
   CheckboxGroupProps,
   CheckboxProps,
 } from "./components/ui/checkbox"
+export {
+  ContextMenu,
+  ContextMenuCheckboxItem,
+  ContextMenuContent,
+  ContextMenuGroup,
+  ContextMenuItem,
+  ContextMenuLabel,
+  ContextMenuPortal,
+  ContextMenuRadioGroup,
+  ContextMenuRadioItem,
+  ContextMenuSeparator,
+  ContextMenuShortcut,
+  ContextMenuSub,
+  ContextMenuSubContent,
+  ContextMenuSubTrigger,
+  ContextMenuTrigger,
+  contextMenuContentVariants,
+  contextMenuItemVariants,
+} from "./components/ui/context-menu"
+export type {
+  ContextMenuCheckboxItemProps,
+  ContextMenuContentProps,
+  ContextMenuItemProps,
+  ContextMenuSubContentProps,
+  ContextMenuSubTriggerProps,
+} from "./components/ui/context-menu"
 export { DataTable } from "./components/ui/data-table"
 export type {
   DataTableChangeState,
@@ -66,6 +112,32 @@ export type {
 } from "./components/ui/dialog"
 export { Divider, dividerVariants } from "./components/ui/divider"
 export type { DividerProps } from "./components/ui/divider"
+export {
+  DropdownMenu,
+  DropdownMenuCheckboxItem,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuPortal,
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem,
+  DropdownMenuSeparator,
+  DropdownMenuShortcut,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
+  DropdownMenuTrigger,
+  dropdownMenuContentVariants,
+  dropdownMenuItemVariants,
+} from "./components/ui/dropdown-menu"
+export type {
+  DropdownMenuCheckboxItemProps,
+  DropdownMenuContentProps,
+  DropdownMenuItemProps,
+  DropdownMenuSubContentProps,
+  DropdownMenuSubTriggerProps,
+} from "./components/ui/dropdown-menu"
 export {
   Empty,
   EmptyActions,

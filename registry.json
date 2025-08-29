@@ -175,6 +175,25 @@
       ]
     },
     {
+      "name": "alert-dialog",
+      "type": "registry:ui",
+      "title": "Sticker AlertDialog",
+      "description": "A Radix-powered confirmation dialog for destructive and high-stakes decisions.",
+      "dependencies": [
+        "@radix-ui/react-alert-dialog",
+        "class-variance-authority",
+        "tailwindcss-animate"
+      ],
+      "registryDependencies": ["button", "utils"],
+      "files": [
+        {
+          "path": "src/components/ui/alert-dialog.tsx",
+          "target": "@ui/alert-dialog.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "badge",
       "type": "registry:ui",
       "title": "Sticker Badge",
@@ -323,6 +342,46 @@
         {
           "path": "src/components/ui/select.tsx",
           "target": "@ui/select.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu",
+      "type": "registry:ui",
+      "title": "Sticker DropdownMenu",
+      "description": "A Radix-powered command menu for desktop toolbars, rows, and account actions.",
+      "dependencies": [
+        "@radix-ui/react-dropdown-menu",
+        "class-variance-authority",
+        "lucide-react",
+        "tailwindcss-animate"
+      ],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "src/components/ui/dropdown-menu.tsx",
+          "target": "@ui/dropdown-menu.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "context-menu",
+      "type": "registry:ui",
+      "title": "Sticker ContextMenu",
+      "description": "A Radix-powered right-click menu for desktop workflows and dense surfaces.",
+      "dependencies": [
+        "@radix-ui/react-context-menu",
+        "class-variance-authority",
+        "lucide-react",
+        "tailwindcss-animate"
+      ],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "src/components/ui/context-menu.tsx",
+          "target": "@ui/context-menu.tsx",
           "type": "registry:ui"
         }
       ]

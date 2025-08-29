@@ -3177,6 +3177,447 @@ const ZH_PREVIEW_API_DOC_MESSAGES = defineMessages({
   "api.tabs.variants.tabsTriggerVariants.description": {
     zh: "根据尺寸、色调和变体选项生成贴纸 tab 触发器 className。",
   },
+  "api.alert-dialog.description": {
+    zh: "用于破坏性和高风险决策的 Radix 确认弹窗。",
+  },
+  "api.alert-dialog.components.AlertDialog.description": {
+    zh: "由 Radix AlertDialog 驱动的贴纸确认弹窗根组件。",
+  },
+  "api.alert-dialog.components.AlertDialogTrigger.description": {
+    zh: "打开确认弹窗的触发器。",
+  },
+  "api.alert-dialog.components.AlertDialogPortal.description": {
+    zh: "将确认弹窗遮罩和内容传送到 document body。",
+  },
+  "api.alert-dialog.components.AlertDialogOverlay.description": {
+    zh: "确认弹窗遮罩层。",
+  },
+  "api.alert-dialog.components.AlertDialogOverlay.props.description": {
+    zh: "确认弹窗遮罩层的 props。",
+  },
+  "api.alert-dialog.components.AlertDialogContent.description": {
+    zh: "用于高风险决策的传送式贴纸确认弹窗面板。",
+  },
+  "api.alert-dialog.components.AlertDialogContent.props.description": {
+    zh: "贴纸确认弹窗内容的 props。",
+  },
+  "api.alert-dialog.components.AlertDialogContent.props.members.size.description":
+    {
+      zh: "控制确认弹窗宽度和内边距。",
+    },
+  "api.alert-dialog.components.AlertDialogContent.props.members.tone.description":
+    {
+      zh: "控制确认弹窗纸张色调。",
+    },
+  "api.alert-dialog.components.AlertDialogContent.props.remarks": {
+    zh: "包裹 Radix AlertDialog.Content，并加入贴纸尺寸和色调样式。",
+  },
+  "api.alert-dialog.components.AlertDialogHeader.description": {
+    zh: "确认弹窗标题和描述区域。",
+  },
+  "api.alert-dialog.components.AlertDialogFooter.description": {
+    zh: "确认弹窗操作按钮区域。",
+  },
+  "api.alert-dialog.components.AlertDialogTitle.description": {
+    zh: "贴纸确认弹窗标题。",
+  },
+  "api.alert-dialog.components.AlertDialogDescription.description": {
+    zh: "贴纸确认弹窗描述。",
+  },
+  "api.alert-dialog.components.AlertDialogAction.description": {
+    zh: "确认弹窗决策确认按钮。",
+  },
+  "api.alert-dialog.components.AlertDialogAction.props.description": {
+    zh: "贴纸确认按钮的 props。",
+  },
+  "api.alert-dialog.components.AlertDialogAction.props.members.color.description":
+    {
+      zh: "控制按钮语义颜色。",
+    },
+  "api.alert-dialog.components.AlertDialogAction.props.members.size.description":
+    {
+      zh: "控制按钮尺寸。",
+    },
+  "api.alert-dialog.components.AlertDialogAction.props.members.variant.description":
+    {
+      zh: "控制按钮视觉结构和强调程度。",
+    },
+  "api.alert-dialog.components.AlertDialogCancel.description": {
+    zh: "取消确认弹窗决策的按钮。",
+  },
+  "api.alert-dialog.components.AlertDialogCancel.props.description": {
+    zh: "贴纸取消按钮的 props。",
+  },
+  "api.alert-dialog.components.AlertDialogCancel.props.members.color.description":
+    {
+      zh: "控制按钮语义颜色。",
+    },
+  "api.alert-dialog.components.AlertDialogCancel.props.members.size.description":
+    {
+      zh: "控制按钮尺寸。",
+    },
+  "api.alert-dialog.components.AlertDialogCancel.props.members.variant.description":
+    {
+      zh: "控制按钮视觉结构和强调程度。",
+    },
+  "api.alert-dialog.types.AlertDialogOverlayProps.description": {
+    zh: "确认弹窗遮罩层的 props。",
+  },
+  "api.alert-dialog.types.AlertDialogContentProps.description": {
+    zh: "贴纸确认弹窗内容的 props。",
+  },
+  "api.alert-dialog.types.AlertDialogContentProps.members.size.description": {
+    zh: "控制确认弹窗宽度和内边距。",
+  },
+  "api.alert-dialog.types.AlertDialogContentProps.members.tone.description": {
+    zh: "控制确认弹窗纸张色调。",
+  },
+  "api.alert-dialog.types.AlertDialogContentProps.remarks": {
+    zh: "包裹 Radix AlertDialog.Content，并加入贴纸尺寸和色调样式。",
+  },
+  "api.alert-dialog.types.AlertDialogActionProps.description": {
+    zh: "贴纸确认按钮的 props。",
+  },
+  "api.alert-dialog.types.AlertDialogActionProps.members.color.description": {
+    zh: "控制按钮语义颜色。",
+  },
+  "api.alert-dialog.types.AlertDialogActionProps.members.size.description": {
+    zh: "控制按钮尺寸。",
+  },
+  "api.alert-dialog.types.AlertDialogActionProps.members.variant.description": {
+    zh: "控制按钮视觉结构和强调程度。",
+  },
+  "api.alert-dialog.types.AlertDialogCancelProps.description": {
+    zh: "贴纸取消按钮的 props。",
+  },
+  "api.alert-dialog.types.AlertDialogCancelProps.members.color.description": {
+    zh: "控制按钮语义颜色。",
+  },
+  "api.alert-dialog.types.AlertDialogCancelProps.members.size.description": {
+    zh: "控制按钮尺寸。",
+  },
+  "api.alert-dialog.types.AlertDialogCancelProps.members.variant.description": {
+    zh: "控制按钮视觉结构和强调程度。",
+  },
+  "api.alert-dialog.variants.alertDialogContentVariants.description": {
+    zh: "根据尺寸和色调选项生成贴纸确认弹窗内容 className。",
+  },
+  "api.dropdown-menu.description": {
+    zh: "用于桌面工具栏、表格行和账号操作的 Radix 命令菜单。",
+  },
+  "api.dropdown-menu.components.DropdownMenu.description": {
+    zh: "由 Radix DropdownMenu 驱动的贴纸下拉菜单根组件。",
+  },
+  "api.dropdown-menu.components.DropdownMenuTrigger.description": {
+    zh: "打开下拉菜单的触发器。",
+  },
+  "api.dropdown-menu.components.DropdownMenuGroup.description": {
+    zh: "为相关下拉菜单项分组。",
+  },
+  "api.dropdown-menu.components.DropdownMenuPortal.description": {
+    zh: "将下拉菜单内容传送到 document body。",
+  },
+  "api.dropdown-menu.components.DropdownMenuSub.description": {
+    zh: "创建嵌套下拉菜单。",
+  },
+  "api.dropdown-menu.components.DropdownMenuRadioGroup.description": {
+    zh: "为相关单选菜单项分组。",
+  },
+  "api.dropdown-menu.components.DropdownMenuContent.description": {
+    zh: "传送式贴纸下拉菜单面板。",
+  },
+  "api.dropdown-menu.components.DropdownMenuContent.props.description": {
+    zh: "贴纸下拉菜单内容的 props。",
+  },
+  "api.dropdown-menu.components.DropdownMenuContent.props.members.size.description":
+    {
+      zh: "控制下拉菜单宽度和内边距。",
+    },
+  "api.dropdown-menu.components.DropdownMenuContent.props.members.tone.description":
+    {
+      zh: "控制下拉菜单纸张色调。",
+    },
+  "api.dropdown-menu.components.DropdownMenuContent.props.remarks": {
+    zh: "包裹 Radix DropdownMenu.Content，并加入贴纸色调、尺寸和偏移样式。",
+  },
+  "api.dropdown-menu.components.DropdownMenuItem.description": {
+    zh: "可选择的下拉菜单项。",
+  },
+  "api.dropdown-menu.components.DropdownMenuItem.props.description": {
+    zh: "贴纸下拉菜单项的 props。",
+  },
+  "api.dropdown-menu.components.DropdownMenuItem.props.members.inset.description":
+    {
+      zh: "添加前置留白，让菜单项与复选、单选或图标行对齐。",
+    },
+  "api.dropdown-menu.components.DropdownMenuItem.props.members.tone.description":
+    {
+      zh: "控制文本和高亮菜单项的语义色调。",
+    },
+  "api.dropdown-menu.components.DropdownMenuSubTrigger.description": {
+    zh: "打开嵌套下拉菜单。",
+  },
+  "api.dropdown-menu.components.DropdownMenuSubTrigger.props.description": {
+    zh: "贴纸下拉子菜单触发器的 props。",
+  },
+  "api.dropdown-menu.components.DropdownMenuSubTrigger.props.members.inset.description":
+    {
+      zh: "添加前置留白，让菜单项与复选、单选或图标行对齐。",
+    },
+  "api.dropdown-menu.components.DropdownMenuSubTrigger.props.members.tone.description":
+    {
+      zh: "控制文本和高亮菜单项的语义色调。",
+    },
+  "api.dropdown-menu.components.DropdownMenuSubContent.description": {
+    zh: "嵌套贴纸下拉菜单面板。",
+  },
+  "api.dropdown-menu.components.DropdownMenuSubContent.props.description": {
+    zh: "嵌套贴纸下拉菜单内容的 props。",
+  },
+  "api.dropdown-menu.components.DropdownMenuSubContent.props.members.size.description":
+    {
+      zh: "控制嵌套下拉菜单宽度和内边距。",
+    },
+  "api.dropdown-menu.components.DropdownMenuSubContent.props.members.tone.description":
+    {
+      zh: "控制嵌套下拉菜单纸张色调。",
+    },
+  "api.dropdown-menu.components.DropdownMenuCheckboxItem.description": {
+    zh: "复选下拉菜单项。",
+  },
+  "api.dropdown-menu.components.DropdownMenuCheckboxItem.props.description": {
+    zh: "贴纸复选下拉菜单项的 props。",
+  },
+  "api.dropdown-menu.components.DropdownMenuCheckboxItem.props.members.hideIndicator.description":
+    {
+      zh: "隐藏勾选指示器，同时保留选中状态语义。",
+    },
+  "api.dropdown-menu.components.DropdownMenuRadioItem.description": {
+    zh: "单选下拉菜单项。",
+  },
+  "api.dropdown-menu.components.DropdownMenuLabel.description": {
+    zh: "下拉菜单分组标题。",
+  },
+  "api.dropdown-menu.components.DropdownMenuSeparator.description": {
+    zh: "分隔下拉菜单项分组。",
+  },
+  "api.dropdown-menu.components.DropdownMenuShortcut.description": {
+    zh: "用于快捷键或次级元信息的右对齐辅助文本。",
+  },
+  "api.dropdown-menu.types.DropdownMenuContentProps.description": {
+    zh: "贴纸下拉菜单内容的 props。",
+  },
+  "api.dropdown-menu.types.DropdownMenuContentProps.members.size.description": {
+    zh: "控制下拉菜单宽度和内边距。",
+  },
+  "api.dropdown-menu.types.DropdownMenuContentProps.members.tone.description": {
+    zh: "控制下拉菜单纸张色调。",
+  },
+  "api.dropdown-menu.types.DropdownMenuContentProps.remarks": {
+    zh: "包裹 Radix DropdownMenu.Content，并加入贴纸色调、尺寸和偏移样式。",
+  },
+  "api.dropdown-menu.types.DropdownMenuItemProps.description": {
+    zh: "贴纸下拉菜单项的 props。",
+  },
+  "api.dropdown-menu.types.DropdownMenuItemProps.members.inset.description": {
+    zh: "添加前置留白，让菜单项与复选、单选或图标行对齐。",
+  },
+  "api.dropdown-menu.types.DropdownMenuItemProps.members.tone.description": {
+    zh: "控制文本和高亮菜单项的语义色调。",
+  },
+  "api.dropdown-menu.types.DropdownMenuSubContentProps.description": {
+    zh: "嵌套贴纸下拉菜单内容的 props。",
+  },
+  "api.dropdown-menu.types.DropdownMenuSubContentProps.members.size.description":
+    {
+      zh: "控制嵌套下拉菜单宽度和内边距。",
+    },
+  "api.dropdown-menu.types.DropdownMenuSubContentProps.members.tone.description":
+    {
+      zh: "控制嵌套下拉菜单纸张色调。",
+    },
+  "api.dropdown-menu.types.DropdownMenuSubTriggerProps.description": {
+    zh: "贴纸下拉子菜单触发器的 props。",
+  },
+  "api.dropdown-menu.types.DropdownMenuSubTriggerProps.members.inset.description":
+    {
+      zh: "添加前置留白，让菜单项与复选、单选或图标行对齐。",
+    },
+  "api.dropdown-menu.types.DropdownMenuSubTriggerProps.members.tone.description":
+    {
+      zh: "控制文本和高亮菜单项的语义色调。",
+    },
+  "api.dropdown-menu.types.DropdownMenuCheckboxItemProps.description": {
+    zh: "贴纸复选下拉菜单项的 props。",
+  },
+  "api.dropdown-menu.types.DropdownMenuCheckboxItemProps.members.hideIndicator.description":
+    {
+      zh: "隐藏勾选指示器，同时保留选中状态语义。",
+    },
+  "api.dropdown-menu.variants.dropdownMenuContentVariants.description": {
+    zh: "根据尺寸和色调选项生成贴纸下拉菜单内容 className。",
+  },
+  "api.dropdown-menu.variants.dropdownMenuItemVariants.description": {
+    zh: "生成贴纸下拉菜单项 className。",
+  },
+  "api.context-menu.description": {
+    zh: "用于桌面工作流和密集表面的 Radix 右键菜单。",
+  },
+  "api.context-menu.components.ContextMenu.description": {
+    zh: "由 Radix ContextMenu 驱动的贴纸右键菜单根组件。",
+  },
+  "api.context-menu.components.ContextMenuTrigger.description": {
+    zh: "通过次级点击打开右键菜单的区域。",
+  },
+  "api.context-menu.components.ContextMenuGroup.description": {
+    zh: "为相关右键菜单项分组。",
+  },
+  "api.context-menu.components.ContextMenuPortal.description": {
+    zh: "将右键菜单内容传送到 document body。",
+  },
+  "api.context-menu.components.ContextMenuSub.description": {
+    zh: "创建嵌套右键菜单。",
+  },
+  "api.context-menu.components.ContextMenuRadioGroup.description": {
+    zh: "为相关单选菜单项分组。",
+  },
+  "api.context-menu.components.ContextMenuContent.description": {
+    zh: "传送式贴纸右键菜单面板。",
+  },
+  "api.context-menu.components.ContextMenuContent.props.description": {
+    zh: "贴纸右键菜单内容的 props。",
+  },
+  "api.context-menu.components.ContextMenuContent.props.members.size.description":
+    {
+      zh: "控制右键菜单宽度和内边距。",
+    },
+  "api.context-menu.components.ContextMenuContent.props.members.tone.description":
+    {
+      zh: "控制右键菜单纸张色调。",
+    },
+  "api.context-menu.components.ContextMenuContent.props.remarks": {
+    zh: "包裹 Radix ContextMenu.Content，并加入贴纸色调和尺寸样式。",
+  },
+  "api.context-menu.components.ContextMenuItem.description": {
+    zh: "可选择的右键菜单项。",
+  },
+  "api.context-menu.components.ContextMenuItem.props.description": {
+    zh: "贴纸右键菜单项的 props。",
+  },
+  "api.context-menu.components.ContextMenuItem.props.members.inset.description":
+    {
+      zh: "添加前置留白，让菜单项与复选、单选或图标行对齐。",
+    },
+  "api.context-menu.components.ContextMenuItem.props.members.tone.description":
+    {
+      zh: "控制文本和高亮菜单项的语义色调。",
+    },
+  "api.context-menu.components.ContextMenuSubTrigger.description": {
+    zh: "打开嵌套右键菜单。",
+  },
+  "api.context-menu.components.ContextMenuSubTrigger.props.description": {
+    zh: "贴纸右键子菜单触发器的 props。",
+  },
+  "api.context-menu.components.ContextMenuSubTrigger.props.members.inset.description":
+    {
+      zh: "添加前置留白，让菜单项与复选、单选或图标行对齐。",
+    },
+  "api.context-menu.components.ContextMenuSubTrigger.props.members.tone.description":
+    {
+      zh: "控制文本和高亮菜单项的语义色调。",
+    },
+  "api.context-menu.components.ContextMenuSubContent.description": {
+    zh: "嵌套贴纸右键菜单面板。",
+  },
+  "api.context-menu.components.ContextMenuSubContent.props.description": {
+    zh: "嵌套贴纸右键菜单内容的 props。",
+  },
+  "api.context-menu.components.ContextMenuSubContent.props.members.size.description":
+    {
+      zh: "控制嵌套右键菜单宽度和内边距。",
+    },
+  "api.context-menu.components.ContextMenuSubContent.props.members.tone.description":
+    {
+      zh: "控制嵌套右键菜单纸张色调。",
+    },
+  "api.context-menu.components.ContextMenuCheckboxItem.description": {
+    zh: "复选右键菜单项。",
+  },
+  "api.context-menu.components.ContextMenuCheckboxItem.props.description": {
+    zh: "贴纸复选右键菜单项的 props。",
+  },
+  "api.context-menu.components.ContextMenuCheckboxItem.props.members.hideIndicator.description":
+    {
+      zh: "隐藏勾选指示器，同时保留选中状态语义。",
+    },
+  "api.context-menu.components.ContextMenuRadioItem.description": {
+    zh: "单选右键菜单项。",
+  },
+  "api.context-menu.components.ContextMenuLabel.description": {
+    zh: "右键菜单分组标题。",
+  },
+  "api.context-menu.components.ContextMenuSeparator.description": {
+    zh: "分隔右键菜单项分组。",
+  },
+  "api.context-menu.components.ContextMenuShortcut.description": {
+    zh: "用于快捷键或次级元信息的右对齐辅助文本。",
+  },
+  "api.context-menu.types.ContextMenuContentProps.description": {
+    zh: "贴纸右键菜单内容的 props。",
+  },
+  "api.context-menu.types.ContextMenuContentProps.members.size.description": {
+    zh: "控制右键菜单宽度和内边距。",
+  },
+  "api.context-menu.types.ContextMenuContentProps.members.tone.description": {
+    zh: "控制右键菜单纸张色调。",
+  },
+  "api.context-menu.types.ContextMenuContentProps.remarks": {
+    zh: "包裹 Radix ContextMenu.Content，并加入贴纸色调和尺寸样式。",
+  },
+  "api.context-menu.types.ContextMenuItemProps.description": {
+    zh: "贴纸右键菜单项的 props。",
+  },
+  "api.context-menu.types.ContextMenuItemProps.members.inset.description": {
+    zh: "添加前置留白，让菜单项与复选、单选或图标行对齐。",
+  },
+  "api.context-menu.types.ContextMenuItemProps.members.tone.description": {
+    zh: "控制文本和高亮菜单项的语义色调。",
+  },
+  "api.context-menu.types.ContextMenuSubContentProps.description": {
+    zh: "嵌套贴纸右键菜单内容的 props。",
+  },
+  "api.context-menu.types.ContextMenuSubContentProps.members.size.description":
+    {
+      zh: "控制嵌套右键菜单宽度和内边距。",
+    },
+  "api.context-menu.types.ContextMenuSubContentProps.members.tone.description":
+    {
+      zh: "控制嵌套右键菜单纸张色调。",
+    },
+  "api.context-menu.types.ContextMenuSubTriggerProps.description": {
+    zh: "贴纸右键子菜单触发器的 props。",
+  },
+  "api.context-menu.types.ContextMenuSubTriggerProps.members.inset.description":
+    {
+      zh: "添加前置留白，让菜单项与复选、单选或图标行对齐。",
+    },
+  "api.context-menu.types.ContextMenuSubTriggerProps.members.tone.description":
+    {
+      zh: "控制文本和高亮菜单项的语义色调。",
+    },
+  "api.context-menu.types.ContextMenuCheckboxItemProps.description": {
+    zh: "贴纸复选右键菜单项的 props。",
+  },
+  "api.context-menu.types.ContextMenuCheckboxItemProps.members.hideIndicator.description":
+    {
+      zh: "隐藏勾选指示器，同时保留选中状态语义。",
+    },
+  "api.context-menu.variants.contextMenuContentVariants.description": {
+    zh: "根据尺寸和色调选项生成贴纸右键菜单内容 className。",
+  },
+  "api.context-menu.variants.contextMenuItemVariants.description": {
+    zh: "生成贴纸右键菜单项 className。",
+  },
 })
 
 export { ZH_PREVIEW_API_DOC_MESSAGES }
