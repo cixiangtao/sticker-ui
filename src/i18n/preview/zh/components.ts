@@ -1048,6 +1048,60 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   "preview.components.tonesAndSizes": {
     zh: "色调与尺寸",
   },
+  "preview.components.appShell": {
+    zh: "应用外壳",
+  },
+  "preview.components.basicTrail": {
+    zh: "基础路径",
+  },
+  "preview.components.breadcrumbKeepsDesktopPageHierarchyVisibleWithoutTakingOverTheToolbar":
+    {
+      zh: "Breadcrumb 让桌面页面层级保持可见，同时不占满工具栏。",
+    },
+  "preview.components.collapsedSidebarKeepsIconNavigationAvailableForDensePcTools":
+    {
+      zh: "折叠侧栏会保留图标导航，适合密集 PC 工具。",
+    },
+  "preview.components.collapsedState": {
+    zh: "折叠状态",
+  },
+  "preview.components.collapsedTrail": {
+    zh: "折叠路径",
+  },
+  "preview.components.desktopNavigationPatternsForAppShellsAndPageHierarchy": {
+    zh: "用于应用外壳和页面层级的桌面导航模式。",
+  },
+  "preview.components.ellipsisCanHideMiddleLevelsWhileKeepingTheCurrentPageExplicit":
+    {
+      zh: "省略号可以隐藏中间层级，同时让当前页面保持明确。",
+    },
+  "preview.components.navigation": {
+    zh: "导航",
+  },
+  "preview.components.navigationMenuGroupsTopLevelProductAreasWithKeyboardReachablePanels":
+    {
+      zh: "NavigationMenu 将顶级产品区域分组，并提供可键盘访问的面板。",
+    },
+  "preview.components.navigationMenuSizesAndTonesAdaptHeaderDensityWithoutChangingRadixBehavior":
+    {
+      zh: "NavigationMenu 的尺寸和色调可以适配不同 header 密度，同时不改变 Radix 行为。",
+    },
+  "preview.components.pageHierarchyNavigationForDesktopAppShells": {
+    zh: "用于桌面应用外壳的页面层级导航。",
+  },
+  "preview.components.pcFirstApplicationSidebarsForPersistentNavigation": {
+    zh: "用于持久导航的 PC 优先应用侧栏。",
+  },
+  "preview.components.productNavigation": {
+    zh: "产品导航",
+  },
+  "preview.components.radixTopNavigationForProductAreasAndDeepLinks": {
+    zh: "用于产品区域和深层链接的 Radix 顶部导航。",
+  },
+  "preview.components.sidebarCreatesPersistentPcNavigationWithHeaderContentAndFooterRegions":
+    {
+      zh: "Sidebar 通过 header、content 和 footer 区域创建持久 PC 导航。",
+    },
 })
 
 export { ZH_PREVIEW_COMPONENT_MESSAGES }

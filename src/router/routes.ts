@@ -142,6 +142,45 @@ const routes = defineRoutes([
   },
   {
     component: () =>
+      import("@/pages/components").then((module) => module.BreadcrumbPage),
+    meta: {
+      emoji: "B",
+      navSection: "navigation",
+      order: 57,
+      title: "Breadcrumb",
+      descriptionKey:
+        "preview.components.pageHierarchyNavigationForDesktopAppShells",
+    },
+    path: "/components/breadcrumb",
+  },
+  {
+    component: () =>
+      import("@/pages/components").then((module) => module.NavigationMenuPage),
+    meta: {
+      emoji: "N",
+      navSection: "navigation",
+      order: 58,
+      title: "NavigationMenu",
+      descriptionKey:
+        "preview.components.radixTopNavigationForProductAreasAndDeepLinks",
+    },
+    path: "/components/navigation-menu",
+  },
+  {
+    component: () =>
+      import("@/pages/components").then((module) => module.SidebarPage),
+    meta: {
+      emoji: "S",
+      navSection: "navigation",
+      order: 59,
+      title: "Sidebar",
+      descriptionKey:
+        "preview.components.pcFirstApplicationSidebarsForPersistentNavigation",
+    },
+    path: "/components/sidebar",
+  },
+  {
+    component: () =>
       import("@/pages/components").then((module) => module.TagPage),
     meta: {
       emoji: "T",

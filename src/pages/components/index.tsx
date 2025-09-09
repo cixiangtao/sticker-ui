@@ -39,6 +39,7 @@ function createRegistryComponentPage(name: ComponentPreviewName) {
 const AlertPage = createRegistryComponentPage("alert")
 const AlertDialogPage = createRegistryComponentPage("alert-dialog")
 const BadgePage = createRegistryComponentPage("badge")
+const BreadcrumbPage = createRegistryComponentPage("breadcrumb")
 const ButtonPage = createRegistryComponentPage("button")
 const CardPage = createRegistryComponentPage("card")
 const CheckboxPage = createRegistryComponentPage("checkbox")
@@ -54,11 +55,13 @@ const InputPage = createRegistryComponentPage("input")
 const InputPasswordPage = createRegistryComponentPage("input-password")
 const JsxJoinPage = createRegistryComponentPage("jsx-join")
 const LayoutPage = createRegistryComponentPage("layout")
+const NavigationMenuPage = createRegistryComponentPage("navigation-menu")
 const PaginationPage = createRegistryComponentPage("pagination")
 const PopoverPage = createRegistryComponentPage("popover")
 const ProgressPage = createRegistryComponentPage("progress")
 const RadioPage = createRegistryComponentPage("radio")
 const SelectPage = createRegistryComponentPage("select")
+const SidebarPage = createRegistryComponentPage("sidebar")
 const SkeletonPage = createRegistryComponentPage("skeleton")
 const SpinnerPage = createRegistryComponentPage("spinner")
 const SwitchPage = createRegistryComponentPage("switch")
@@ -73,6 +76,7 @@ export {
   AlertDialogPage,
   AlertPage,
   BadgePage,
+  BreadcrumbPage,
   ButtonPage,
   CardPage,
   CheckboxPage,
@@ -88,11 +92,13 @@ export {
   InputPasswordPage,
   JsxJoinPage,
   LayoutPage,
+  NavigationMenuPage,
   PaginationPage,
   PopoverPage,
   ProgressPage,
   RadioPage,
   SelectPage,
+  SidebarPage,
   SkeletonPage,
   SpinnerPage,
   SwitchPage,

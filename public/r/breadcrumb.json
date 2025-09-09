@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "breadcrumb",
+  "title": "Sticker Breadcrumb",
+  "description": "A semantic breadcrumb trail for desktop page hierarchy.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/breadcrumb.tsx",
+      "content": "import { ChevronRight, MoreHorizontal } from \"lucide-react\"\nimport * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\n/**\n * Sticker breadcrumb navigation landmark.\n */\nconst Breadcrumb = React.forwardRef<\n  HTMLElement,\n  React.ComponentPropsWithoutRef<\"nav\">\n>(({ className, ...props }, ref) => (\n  <nav\n    aria-label={props[\"aria-label\"] ?? \"Breadcrumb\"}\n    className={cn(\"text-su-ink\", className)}\n    data-slot=\"breadcrumb\"\n    ref={ref}\n    {...props}\n  />\n))\nBreadcrumb.displayName = \"Breadcrumb\"\n\n/**\n * Ordered breadcrumb list.\n */\nconst BreadcrumbList = React.forwardRef<\n  HTMLOListElement,\n  React.ComponentPropsWithoutRef<\"ol\">\n>(({ className, ...props }, ref) => (\n  <ol\n    className={cn(\n      \"flex flex-wrap items-center gap-1.5 rounded-su-xl border-2 border-su-ink bg-su-surface px-3 py-2 text-sm font-bold shadow-su-sm\",\n      className,\n    )}\n    data-slot=\"breadcrumb-list\"\n    ref={ref}\n    {...props}\n  />\n))\nBreadcrumbList.displayName = \"BreadcrumbList\"\n\n/**\n * Breadcrumb list item.\n */\nconst BreadcrumbItem = React.forwardRef<\n  HTMLLIElement,\n  React.ComponentPropsWithoutRef<\"li\">\n>(({ className, ...props }, ref) => (\n  <li\n    className={cn(\"inline-flex items-center gap-1.5\", className)}\n    data-slot=\"breadcrumb-item\"\n    ref={ref}\n    {...props}\n  />\n))\nBreadcrumbItem.displayName = \"BreadcrumbItem\"\n\n/**\n * Clickable breadcrumb link.\n */\nconst BreadcrumbLink = React.forwardRef<\n  HTMLAnchorElement,\n  React.ComponentPropsWithoutRef<\"a\">\n>(({ className, ...props }, ref) => (\n  <a\n    className={cn(\n      \"rounded-su-sm text-su-fg-muted underline-offset-4 transition duration-150 hover:text-su-ink hover:underline focus-visible:ring-[2px] focus-visible:ring-su-ring/65 focus-visible:outline-none\",\n      className,\n    )}\n    data-slot=\"breadcrumb-link\"\n    ref={ref}\n    {...props}\n  />\n))\nBreadcrumbLink.displayName = \"BreadcrumbLink\"\n\n/**\n * Current breadcrumb page label.\n */\nconst BreadcrumbPage = React.forwardRef<\n  HTMLSpanElement,\n  React.ComponentPropsWithoutRef<\"span\">\n>(({ className, ...props }, ref) => (\n  <span\n    aria-current=\"page\"\n    className={cn(\n      \"rounded-su-sm bg-su-fill-default px-2 py-1 font-black text-su-ink\",\n      className,\n    )}\n    data-slot=\"breadcrumb-page\"\n    ref={ref}\n    {...props}\n  />\n))\nBreadcrumbPage.displayName = \"BreadcrumbPage\"\n\n/**\n * Separator between breadcrumb items.\n */\nfunction BreadcrumbSeparator({\n  children,\n  className,\n  ...props\n}: React.ComponentProps<\"li\">) {\n  return (\n    <li\n      aria-hidden=\"true\"\n      className={cn(\"inline-flex items-center text-su-ink/55\", className)}\n      data-slot=\"breadcrumb-separator\"\n      role=\"presentation\"\n      {...props}\n    >\n      {children ?? <ChevronRight aria-hidden=\"true\" className=\"size-4\" />}\n    </li>\n  )\n}\n\n/**\n * Collapsed breadcrumb marker for hidden middle levels.\n */\nfunction BreadcrumbEllipsis({\n  className,\n  ...props\n}: React.ComponentProps<\"span\">) {\n  return (\n    <span\n      aria-label={props[\"aria-label\"] ?? \"More breadcrumb levels\"}\n      className={cn(\n        \"inline-flex size-7 items-center justify-center rounded-su-sm border border-su-ink bg-su-paper text-su-ink\",\n        className,\n      )}\n      data-slot=\"breadcrumb-ellipsis\"\n      role=\"img\"\n      {...props}\n    >\n      <MoreHorizontal aria-hidden=\"true\" className=\"size-4\" />\n    </span>\n  )\n}\n\nexport {\n  Breadcrumb,\n  BreadcrumbEllipsis,\n  BreadcrumbItem,\n  BreadcrumbLink,\n  BreadcrumbList,\n  BreadcrumbPage,\n  BreadcrumbSeparator,\n}\n",
+      "type": "registry:ui",
+      "target": "@ui/breadcrumb.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

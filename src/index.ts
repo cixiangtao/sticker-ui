@@ -40,6 +40,15 @@ export type {
 export { Badge, badgeVariants } from "./components/ui/badge"
 export type { BadgeProps } from "./components/ui/badge"
 export {
+  Breadcrumb,
+  BreadcrumbEllipsis,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "./components/ui/breadcrumb"
+export {
   Card,
   CardContent,
   CardDescription,
@@ -175,6 +184,23 @@ export type {
 export { Flex, Grid, flexVariants, gridVariants } from "./components/ui/layout"
 export type { FlexProps, GridProps } from "./components/ui/layout"
 export {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuIndicator,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  NavigationMenuViewport,
+  navigationMenuContentVariants,
+  navigationMenuTriggerVariants,
+} from "./components/ui/navigation-menu"
+export type {
+  NavigationMenuContentProps,
+  NavigationMenuProps,
+  NavigationMenuTriggerProps,
+} from "./components/ui/navigation-menu"
+export {
   Field,
   FieldDescription,
   FieldLabel,
@@ -229,6 +255,26 @@ export { Progress, progressVariants } from "./components/ui/progress"
 export type { ProgressProps } from "./components/ui/progress"
 export { Skeleton, skeletonVariants } from "./components/ui/skeleton"
 export type { SkeletonProps } from "./components/ui/skeleton"
+export {
+  Sidebar,
+  SidebarContent,
+  SidebarFooter,
+  SidebarGroup,
+  SidebarGroupLabel,
+  SidebarHeader,
+  SidebarMenu,
+  SidebarMenuBadge,
+  SidebarMenuButton,
+  SidebarMenuItem,
+  SidebarMenuLabel,
+  SidebarSeparator,
+  sidebarMenuButtonVariants,
+  sidebarVariants,
+} from "./components/ui/sidebar"
+export type {
+  SidebarMenuButtonProps,
+  SidebarProps,
+} from "./components/ui/sidebar"
 export { Spinner, spinnerVariants } from "./components/ui/spinner"
 export type { SpinnerProps } from "./components/ui/spinner"
 export { Switch, switchVariants } from "./components/ui/switch"

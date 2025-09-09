@@ -65,6 +65,12 @@ const COMPONENT_NAV_SECTIONS: NavSectionConfig[] = [
     labelKey: "preview.components.surfacesAndData",
   },
   {
+    id: "navigation",
+    descriptionKey:
+      "preview.components.desktopNavigationPatternsForAppShellsAndPageHierarchy",
+    labelKey: "preview.components.navigation",
+  },
+  {
     id: "feedback-status",
     descriptionKey: "preview.components.readableNotesLabelsAndStatusSignals",
     labelKey: "preview.components.feedbackAndStatus",

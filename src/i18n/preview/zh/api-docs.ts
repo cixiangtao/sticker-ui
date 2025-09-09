@@ -3618,6 +3618,231 @@ const ZH_PREVIEW_API_DOC_MESSAGES = defineMessages({
   "api.context-menu.variants.contextMenuItemVariants.description": {
     zh: "生成贴纸右键菜单项 className。",
   },
+  "api.breadcrumb.description": {
+    zh: "用于桌面页面层级的语义面包屑路径。",
+  },
+  "api.breadcrumb.components.Breadcrumb.description": {
+    zh: "贴纸面包屑导航 landmark。",
+  },
+  "api.breadcrumb.components.BreadcrumbList.description": {
+    zh: "有序面包屑列表。",
+  },
+  "api.breadcrumb.components.BreadcrumbItem.description": {
+    zh: "面包屑列表项。",
+  },
+  "api.breadcrumb.components.BreadcrumbLink.description": {
+    zh: "可点击的面包屑链接。",
+  },
+  "api.breadcrumb.components.BreadcrumbPage.description": {
+    zh: "当前面包屑页面标签。",
+  },
+  "api.breadcrumb.components.BreadcrumbSeparator.description": {
+    zh: "面包屑项目之间的分隔符。",
+  },
+  "api.breadcrumb.components.BreadcrumbEllipsis.description": {
+    zh: "用于隐藏中间层级的折叠面包屑标记。",
+  },
+  "api.navigation-menu.description": {
+    zh: "用于产品区域和深层链接的 Radix 顶部导航菜单。",
+  },
+  "api.navigation-menu.components.NavigationMenu.description": {
+    zh: "由 Radix NavigationMenu 驱动的贴纸导航菜单根组件。",
+  },
+  "api.navigation-menu.components.NavigationMenu.props.description": {
+    zh: "贴纸导航菜单根组件的 props。",
+  },
+  "api.navigation-menu.components.NavigationMenu.props.members.size.description":
+    {
+      zh: "控制触发器密度。",
+    },
+  "api.navigation-menu.components.NavigationMenu.props.members.tone.description":
+    {
+      zh: "控制激活触发器和菜单内容的纸张色调。",
+    },
+  "api.navigation-menu.components.NavigationMenu.props.remarks": {
+    zh: "包裹 Radix NavigationMenu.Root，并把尺寸和色调共享给子触发器和内容。",
+  },
+  "api.navigation-menu.components.NavigationMenuList.description": {
+    zh: "包含顶级项目的导航菜单列表。",
+  },
+  "api.navigation-menu.components.NavigationMenuItem.description": {
+    zh: "顶级导航菜单项。",
+  },
+  "api.navigation-menu.components.NavigationMenuTrigger.description": {
+    zh: "打开导航菜单内容的触发器。",
+  },
+  "api.navigation-menu.components.NavigationMenuTrigger.props.description": {
+    zh: "贴纸导航菜单触发器的 props。",
+  },
+  "api.navigation-menu.components.NavigationMenuTrigger.props.members.size.description":
+    {
+      zh: "独立控制触发器密度。",
+    },
+  "api.navigation-menu.components.NavigationMenuTrigger.props.members.tone.description":
+    {
+      zh: "独立控制激活触发器色调。",
+    },
+  "api.navigation-menu.components.NavigationMenuContent.description": {
+    zh: "浮动导航菜单内容面板。",
+  },
+  "api.navigation-menu.components.NavigationMenuContent.props.description": {
+    zh: "贴纸导航菜单内容的 props。",
+  },
+  "api.navigation-menu.components.NavigationMenuContent.props.members.tone.description":
+    {
+      zh: "独立控制菜单内容纸张色调。",
+    },
+  "api.navigation-menu.components.NavigationMenuLink.description": {
+    zh: "可点击的导航菜单链接。",
+  },
+  "api.navigation-menu.components.NavigationMenuViewport.description": {
+    zh: "会根据打开面板尺寸变化的动画 viewport。",
+  },
+  "api.navigation-menu.components.NavigationMenuIndicator.description": {
+    zh: "显示在激活导航触发器下方的小标记。",
+  },
+  "api.navigation-menu.types.NavigationMenuProps.description": {
+    zh: "贴纸导航菜单根组件的 props。",
+  },
+  "api.navigation-menu.types.NavigationMenuProps.members.size.description": {
+    zh: "控制触发器密度。",
+  },
+  "api.navigation-menu.types.NavigationMenuProps.members.tone.description": {
+    zh: "控制激活触发器和菜单内容的纸张色调。",
+  },
+  "api.navigation-menu.types.NavigationMenuProps.remarks": {
+    zh: "包裹 Radix NavigationMenu.Root，并把尺寸和色调共享给子触发器和内容。",
+  },
+  "api.navigation-menu.types.NavigationMenuTriggerProps.description": {
+    zh: "贴纸导航菜单触发器的 props。",
+  },
+  "api.navigation-menu.types.NavigationMenuTriggerProps.members.size.description":
+    {
+      zh: "独立控制触发器密度。",
+    },
+  "api.navigation-menu.types.NavigationMenuTriggerProps.members.tone.description":
+    {
+      zh: "独立控制激活触发器色调。",
+    },
+  "api.navigation-menu.types.NavigationMenuContentProps.description": {
+    zh: "贴纸导航菜单内容的 props。",
+  },
+  "api.navigation-menu.types.NavigationMenuContentProps.members.tone.description":
+    {
+      zh: "独立控制菜单内容纸张色调。",
+    },
+  "api.navigation-menu.variants.navigationMenuTriggerVariants.description": {
+    zh: "生成贴纸导航菜单触发器 className。",
+  },
+  "api.navigation-menu.variants.navigationMenuContentVariants.description": {
+    zh: "生成贴纸导航菜单内容 className。",
+  },
+  "api.sidebar.description": {
+    zh: "用于持久导航的 PC 优先应用侧栏外壳。",
+  },
+  "api.sidebar.components.Sidebar.description": {
+    zh: "用于应用导航的 PC 优先贴纸侧栏外壳。",
+  },
+  "api.sidebar.components.Sidebar.props.description": {
+    zh: "贴纸侧栏根组件的 props。",
+  },
+  "api.sidebar.components.Sidebar.props.members.collapsed.description": {
+    zh: "折叠标签，同时保留菜单图标可见。",
+  },
+  "api.sidebar.components.Sidebar.props.members.size.description": {
+    zh: "控制侧栏宽度和继承的菜单密度。",
+  },
+  "api.sidebar.components.Sidebar.props.members.variant.description": {
+    zh: "控制侧栏框架强调程度。",
+  },
+  "api.sidebar.components.Sidebar.props.remarks": {
+    zh: "一个 PC 优先的应用侧栏外壳，支持可选折叠模式。",
+  },
+  "api.sidebar.components.SidebarHeader.description": {
+    zh: "用于品牌、搜索或工作区控件的侧栏头部。",
+  },
+  "api.sidebar.components.SidebarContent.description": {
+    zh: "可滚动的侧栏内容区域。",
+  },
+  "api.sidebar.components.SidebarFooter.description": {
+    zh: "用于账号或次级操作的侧栏底部。",
+  },
+  "api.sidebar.components.SidebarGroup.description": {
+    zh: "用于相关导航项的侧栏分组。",
+  },
+  "api.sidebar.components.SidebarGroupLabel.description": {
+    zh: "侧栏分组标题。",
+  },
+  "api.sidebar.components.SidebarMenu.description": {
+    zh: "侧栏菜单列表。",
+  },
+  "api.sidebar.components.SidebarMenuItem.description": {
+    zh: "侧栏菜单项。",
+  },
+  "api.sidebar.components.SidebarMenuButton.description": {
+    zh: "有触感的侧栏导航项目按钮。",
+  },
+  "api.sidebar.components.SidebarMenuButton.props.description": {
+    zh: "贴纸侧栏菜单按钮的 props。",
+  },
+  "api.sidebar.components.SidebarMenuButton.props.members.active.description": {
+    zh: "将项目标记为当前导航目标。",
+  },
+  "api.sidebar.components.SidebarMenuButton.props.members.asChild.description":
+    {
+      zh: "将按钮样式和状态 props 渲染到唯一子元素上。",
+    },
+  "api.sidebar.components.SidebarMenuButton.props.members.size.description": {
+    zh: "独立控制菜单项密度。",
+  },
+  "api.sidebar.components.SidebarMenuButton.props.members.tone.description": {
+    zh: "控制激活项目的语义色调。",
+  },
+  "api.sidebar.components.SidebarMenuLabel.description": {
+    zh: "折叠模式下会自动隐藏的侧栏标签文本。",
+  },
+  "api.sidebar.components.SidebarMenuBadge.description": {
+    zh: "右对齐的侧栏徽标或快捷键。",
+  },
+  "api.sidebar.components.SidebarSeparator.description": {
+    zh: "侧栏分组之间的分隔符。",
+  },
+  "api.sidebar.types.SidebarProps.description": {
+    zh: "贴纸侧栏根组件的 props。",
+  },
+  "api.sidebar.types.SidebarProps.members.collapsed.description": {
+    zh: "折叠标签，同时保留菜单图标可见。",
+  },
+  "api.sidebar.types.SidebarProps.members.size.description": {
+    zh: "控制侧栏宽度和继承的菜单密度。",
+  },
+  "api.sidebar.types.SidebarProps.members.variant.description": {
+    zh: "控制侧栏框架强调程度。",
+  },
+  "api.sidebar.types.SidebarProps.remarks": {
+    zh: "一个 PC 优先的应用侧栏外壳，支持可选折叠模式。",
+  },
+  "api.sidebar.types.SidebarMenuButtonProps.description": {
+    zh: "贴纸侧栏菜单按钮的 props。",
+  },
+  "api.sidebar.types.SidebarMenuButtonProps.members.active.description": {
+    zh: "将项目标记为当前导航目标。",
+  },
+  "api.sidebar.types.SidebarMenuButtonProps.members.asChild.description": {
+    zh: "将按钮样式和状态 props 渲染到唯一子元素上。",
+  },
+  "api.sidebar.types.SidebarMenuButtonProps.members.size.description": {
+    zh: "独立控制菜单项密度。",
+  },
+  "api.sidebar.types.SidebarMenuButtonProps.members.tone.description": {
+    zh: "控制激活项目的语义色调。",
+  },
+  "api.sidebar.variants.sidebarVariants.description": {
+    zh: "根据尺寸和结构变体生成贴纸侧栏根元素 className。",
+  },
+  "api.sidebar.variants.sidebarMenuButtonVariants.description": {
+    zh: "生成贴纸侧栏菜单按钮 className。",
+  },
 })
 
 export { ZH_PREVIEW_API_DOC_MESSAGES }

@@ -145,6 +145,56 @@
       ]
     },
     {
+      "name": "breadcrumb",
+      "type": "registry:ui",
+      "title": "Sticker Breadcrumb",
+      "description": "A semantic breadcrumb trail for desktop page hierarchy.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "src/components/ui/breadcrumb.tsx",
+          "target": "@ui/breadcrumb.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "navigation-menu",
+      "type": "registry:ui",
+      "title": "Sticker NavigationMenu",
+      "description": "A Radix-powered top navigation menu for product areas and deep links.",
+      "dependencies": [
+        "@radix-ui/react-navigation-menu",
+        "class-variance-authority",
+        "lucide-react",
+        "tailwindcss-animate"
+      ],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "src/components/ui/navigation-menu.tsx",
+          "target": "@ui/navigation-menu.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sidebar",
+      "type": "registry:ui",
+      "title": "Sticker Sidebar",
+      "description": "A PC-first application sidebar shell for persistent navigation.",
+      "dependencies": ["@radix-ui/react-slot", "class-variance-authority"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "src/components/ui/sidebar.tsx",
+          "target": "@ui/sidebar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "tag",
       "type": "registry:ui",
       "title": "Sticker Tag",

@@ -3445,6 +3445,1538 @@
     ],
     "variants": []
   },
+  "breadcrumb": {
+    "components": [
+      {
+        "descriptionKey": "api.breadcrumb.components.Breadcrumb.description",
+        "name": "Breadcrumb",
+        "props": {
+          "inherits": [],
+          "members": [],
+          "type": "React.ComponentPropsWithoutRef<\"nav\">"
+        }
+      },
+      {
+        "descriptionKey": "api.breadcrumb.components.BreadcrumbEllipsis.description",
+        "name": "BreadcrumbEllipsis",
+        "props": { "inherits": [], "members": [], "type": "React.ComponentProps<\"span\">" }
+      },
+      {
+        "descriptionKey": "api.breadcrumb.components.BreadcrumbItem.description",
+        "name": "BreadcrumbItem",
+        "props": { "inherits": [], "members": [], "type": "React.ComponentPropsWithoutRef<\"li\">" }
+      },
+      {
+        "descriptionKey": "api.breadcrumb.components.BreadcrumbLink.description",
+        "name": "BreadcrumbLink",
+        "props": { "inherits": [], "members": [], "type": "React.ComponentPropsWithoutRef<\"a\">" }
+      },
+      {
+        "descriptionKey": "api.breadcrumb.components.BreadcrumbList.description",
+        "name": "BreadcrumbList",
+        "props": { "inherits": [], "members": [], "type": "React.ComponentPropsWithoutRef<\"ol\">" }
+      },
+      {
+        "descriptionKey": "api.breadcrumb.components.BreadcrumbPage.description",
+        "name": "BreadcrumbPage",
+        "props": {
+          "inherits": [],
+          "members": [],
+          "type": "React.ComponentPropsWithoutRef<\"span\">"
+        }
+      },
+      {
+        "descriptionKey": "api.breadcrumb.components.BreadcrumbSeparator.description",
+        "name": "BreadcrumbSeparator",
+        "props": { "inherits": [], "members": [], "type": "React.ComponentProps<\"li\">" }
+      }
+    ],
+    "descriptionKey": "api.breadcrumb.description",
+    "exports": [
+      {
+        "descriptionKey": "api.breadcrumb.exports.Breadcrumb.description",
+        "kind": "component",
+        "name": "Breadcrumb"
+      },
+      {
+        "descriptionKey": "api.breadcrumb.exports.BreadcrumbEllipsis.description",
+        "kind": "component",
+        "name": "BreadcrumbEllipsis"
+      },
+      {
+        "descriptionKey": "api.breadcrumb.exports.BreadcrumbItem.description",
+        "kind": "component",
+        "name": "BreadcrumbItem"
+      },
+      {
+        "descriptionKey": "api.breadcrumb.exports.BreadcrumbLink.description",
+        "kind": "component",
+        "name": "BreadcrumbLink"
+      },
+      {
+        "descriptionKey": "api.breadcrumb.exports.BreadcrumbList.description",
+        "kind": "component",
+        "name": "BreadcrumbList"
+      },
+      {
+        "descriptionKey": "api.breadcrumb.exports.BreadcrumbPage.description",
+        "kind": "component",
+        "name": "BreadcrumbPage"
+      },
+      {
+        "descriptionKey": "api.breadcrumb.exports.BreadcrumbSeparator.description",
+        "kind": "component",
+        "name": "BreadcrumbSeparator"
+      }
+    ],
+    "name": "breadcrumb",
+    "sourcePath": "src/components/ui/breadcrumb.tsx",
+    "title": "Sticker Breadcrumb",
+    "types": [],
+    "variants": []
+  },
+  "navigation-menu": {
+    "components": [
+      {
+        "descriptionKey": "api.navigation-menu.components.NavigationMenu.description",
+        "name": "NavigationMenu",
+        "props": {
+          "descriptionKey": "api.navigation-menu.components.NavigationMenu.props.description",
+          "remarksKey": "api.navigation-menu.components.NavigationMenu.props.remarks",
+          "inherits": ["React.ComponentPropsWithoutRef< typeof NavigationMenuPrimitive.Root >"],
+          "inheritedMembers": [
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-describedby.description",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-invalid.description",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-label.description",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-labelledby.description",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.autoFocus.description",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.children.description",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.className.description",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultChecked.description",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultValue.description",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.id.description",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onBlur.description",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onChange.description",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "React.ChangeEventHandler<HTMLElement, Element>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onClick.description",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onFocus.description",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyDown.description",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyUp.description",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseEnter.description",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseLeave.description",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.role.description",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.style.description",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.title.description",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.value.description",
+              "name": "value",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "members": [
+            {
+              "defaultValue": "\"md\"",
+              "descriptionKey": "api.navigation-menu.components.NavigationMenu.props.members.size.description",
+              "name": "size",
+              "optional": true,
+              "required": false,
+              "type": "\"lg\" | \"md\" | \"sm\""
+            },
+            {
+              "defaultValue": "\"default\"",
+              "descriptionKey": "api.navigation-menu.components.NavigationMenu.props.members.tone.description",
+              "name": "tone",
+              "optional": true,
+              "required": false,
+              "type": "\"default\" | \"info\" | \"secondary\" | \"warning\""
+            }
+          ],
+          "type": "NavigationMenuProps"
+        }
+      },
+      {
+        "descriptionKey": "api.navigation-menu.components.NavigationMenuContent.description",
+        "name": "NavigationMenuContent",
+        "props": {
+          "descriptionKey": "api.navigation-menu.components.NavigationMenuContent.props.description",
+          "inherits": [
+            "React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Content>",
+            "VariantProps<typeof navigationMenuContentVariants>"
+          ],
+          "inheritedMembers": [
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-describedby.description",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-invalid.description",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-label.description",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-labelledby.description",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.autoFocus.description",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.children.description",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.className.description",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultChecked.description",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultValue.description",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.id.description",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onBlur.description",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onChange.description",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "React.ChangeEventHandler<HTMLDivElement, Element>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onClick.description",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onFocus.description",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyDown.description",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyUp.description",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseEnter.description",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseLeave.description",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.role.description",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.style.description",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.title.description",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "members": [
+            {
+              "descriptionKey": "api.navigation-menu.components.NavigationMenuContent.props.members.tone.description",
+              "name": "tone",
+              "optional": true,
+              "required": false,
+              "type": "\"default\" | \"info\" | \"secondary\" | \"warning\""
+            }
+          ],
+          "type": "NavigationMenuContentProps"
+        }
+      },
+      {
+        "descriptionKey": "api.navigation-menu.components.NavigationMenuIndicator.description",
+        "name": "NavigationMenuIndicator",
+        "props": {
+          "inherits": [],
+          "members": [],
+          "type": "React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Indicator>"
+        }
+      },
+      {
+        "descriptionKey": "api.navigation-menu.components.NavigationMenuItem.description",
+        "name": "NavigationMenuItem",
+        "props": {
+          "inherits": [],
+          "members": [],
+          "type": "React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Item>"
+        }
+      },
+      {
+        "descriptionKey": "api.navigation-menu.components.NavigationMenuLink.description",
+        "name": "NavigationMenuLink",
+        "props": {
+          "inherits": [],
+          "members": [],
+          "type": "React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Link>"
+        }
+      },
+      {
+        "descriptionKey": "api.navigation-menu.components.NavigationMenuList.description",
+        "name": "NavigationMenuList",
+        "props": {
+          "inherits": [],
+          "members": [],
+          "type": "React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.List>"
+        }
+      },
+      {
+        "descriptionKey": "api.navigation-menu.components.NavigationMenuTrigger.description",
+        "name": "NavigationMenuTrigger",
+        "props": {
+          "descriptionKey": "api.navigation-menu.components.NavigationMenuTrigger.props.description",
+          "inherits": [
+            "React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Trigger>",
+            "VariantProps<typeof navigationMenuTriggerVariants>"
+          ],
+          "inheritedMembers": [
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-describedby.description",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-invalid.description",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-label.description",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-labelledby.description",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.autoFocus.description",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.children.description",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.className.description",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultChecked.description",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultValue.description",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.disabled.description",
+              "name": "disabled",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.form.description",
+              "name": "form",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.id.description",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.name.description",
+              "name": "name",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onBlur.description",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLButtonElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onChange.description",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "React.ChangeEventHandler<HTMLButtonElement, Element>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onClick.description",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLButtonElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onFocus.description",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLButtonElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyDown.description",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLButtonElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyUp.description",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLButtonElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseEnter.description",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLButtonElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseLeave.description",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLButtonElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.role.description",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.style.description",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.title.description",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.type.description",
+              "name": "type",
+              "optional": true,
+              "required": false,
+              "type": "\"button\" | \"submit\" | \"reset\""
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.value.description",
+              "name": "value",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            }
+          ],
+          "members": [
+            {
+              "descriptionKey": "api.navigation-menu.components.NavigationMenuTrigger.props.members.size.description",
+              "name": "size",
+              "optional": true,
+              "required": false,
+              "type": "\"lg\" | \"md\" | \"sm\""
+            },
+            {
+              "descriptionKey": "api.navigation-menu.components.NavigationMenuTrigger.props.members.tone.description",
+              "name": "tone",
+              "optional": true,
+              "required": false,
+              "type": "\"default\" | \"info\" | \"secondary\" | \"warning\""
+            }
+          ],
+          "type": "NavigationMenuTriggerProps"
+        }
+      },
+      {
+        "descriptionKey": "api.navigation-menu.components.NavigationMenuViewport.description",
+        "name": "NavigationMenuViewport",
+        "props": {
+          "inherits": [],
+          "members": [],
+          "type": "React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Viewport>"
+        }
+      }
+    ],
+    "descriptionKey": "api.navigation-menu.description",
+    "exports": [
+      {
+        "descriptionKey": "api.navigation-menu.exports.NavigationMenu.description",
+        "kind": "component",
+        "name": "NavigationMenu"
+      },
+      {
+        "descriptionKey": "api.navigation-menu.exports.NavigationMenuContent.description",
+        "kind": "component",
+        "name": "NavigationMenuContent"
+      },
+      {
+        "descriptionKey": "api.navigation-menu.exports.NavigationMenuContentProps.description",
+        "kind": "interface",
+        "name": "NavigationMenuContentProps"
+      },
+      {
+        "descriptionKey": "api.navigation-menu.exports.navigationMenuContentVariants.description",
+        "kind": "variant",
+        "name": "navigationMenuContentVariants"
+      },
+      {
+        "descriptionKey": "api.navigation-menu.exports.NavigationMenuIndicator.description",
+        "kind": "component",
+        "name": "NavigationMenuIndicator"
+      },
+      {
+        "descriptionKey": "api.navigation-menu.exports.NavigationMenuItem.description",
+        "kind": "component",
+        "name": "NavigationMenuItem"
+      },
+      {
+        "descriptionKey": "api.navigation-menu.exports.NavigationMenuLink.description",
+        "kind": "component",
+        "name": "NavigationMenuLink"
+      },
+      {
+        "descriptionKey": "api.navigation-menu.exports.NavigationMenuList.description",
+        "kind": "component",
+        "name": "NavigationMenuList"
+      },
+      {
+        "descriptionKey": "api.navigation-menu.exports.NavigationMenuProps.description",
+        "remarksKey": "api.navigation-menu.exports.NavigationMenuProps.remarks",
+        "kind": "interface",
+        "name": "NavigationMenuProps"
+      },
+      {
+        "descriptionKey": "api.navigation-menu.exports.NavigationMenuTrigger.description",
+        "kind": "component",
+        "name": "NavigationMenuTrigger"
+      },
+      {
+        "descriptionKey": "api.navigation-menu.exports.NavigationMenuTriggerProps.description",
+        "kind": "interface",
+        "name": "NavigationMenuTriggerProps"
+      },
+      {
+        "descriptionKey": "api.navigation-menu.exports.navigationMenuTriggerVariants.description",
+        "kind": "variant",
+        "name": "navigationMenuTriggerVariants"
+      },
+      {
+        "descriptionKey": "api.navigation-menu.exports.NavigationMenuViewport.description",
+        "kind": "component",
+        "name": "NavigationMenuViewport"
+      }
+    ],
+    "name": "navigation-menu",
+    "sourcePath": "src/components/ui/navigation-menu.tsx",
+    "title": "Sticker NavigationMenu",
+    "types": [
+      {
+        "descriptionKey": "api.navigation-menu.types.NavigationMenuContentProps.description",
+        "inherits": [
+          "React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Content>",
+          "VariantProps<typeof navigationMenuContentVariants>"
+        ],
+        "kind": "interface",
+        "members": [
+          {
+            "descriptionKey": "api.navigation-menu.types.NavigationMenuContentProps.members.tone.description",
+            "name": "tone",
+            "optional": true,
+            "required": false,
+            "type": "\"default\" | \"info\" | \"secondary\" | \"warning\""
+          }
+        ],
+        "name": "NavigationMenuContentProps"
+      },
+      {
+        "descriptionKey": "api.navigation-menu.types.NavigationMenuProps.description",
+        "remarksKey": "api.navigation-menu.types.NavigationMenuProps.remarks",
+        "inherits": ["React.ComponentPropsWithoutRef< typeof NavigationMenuPrimitive.Root >"],
+        "kind": "interface",
+        "members": [
+          {
+            "defaultValue": "\"md\"",
+            "descriptionKey": "api.navigation-menu.types.NavigationMenuProps.members.size.description",
+            "name": "size",
+            "optional": true,
+            "required": false,
+            "type": "\"lg\" | \"md\" | \"sm\""
+          },
+          {
+            "defaultValue": "\"default\"",
+            "descriptionKey": "api.navigation-menu.types.NavigationMenuProps.members.tone.description",
+            "name": "tone",
+            "optional": true,
+            "required": false,
+            "type": "\"default\" | \"info\" | \"secondary\" | \"warning\""
+          }
+        ],
+        "name": "NavigationMenuProps"
+      },
+      {
+        "descriptionKey": "api.navigation-menu.types.NavigationMenuTriggerProps.description",
+        "inherits": [
+          "React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Trigger>",
+          "VariantProps<typeof navigationMenuTriggerVariants>"
+        ],
+        "kind": "interface",
+        "members": [
+          {
+            "descriptionKey": "api.navigation-menu.types.NavigationMenuTriggerProps.members.size.description",
+            "name": "size",
+            "optional": true,
+            "required": false,
+            "type": "\"lg\" | \"md\" | \"sm\""
+          },
+          {
+            "descriptionKey": "api.navigation-menu.types.NavigationMenuTriggerProps.members.tone.description",
+            "name": "tone",
+            "optional": true,
+            "required": false,
+            "type": "\"default\" | \"info\" | \"secondary\" | \"warning\""
+          }
+        ],
+        "name": "NavigationMenuTriggerProps"
+      }
+    ],
+    "variants": [
+      {
+        "descriptionKey": "api.navigation-menu.variants.navigationMenuContentVariants.description",
+        "groups": [
+          {
+            "defaultValue": "default",
+            "name": "tone",
+            "values": ["default", "info", "secondary", "warning"]
+          }
+        ],
+        "name": "navigationMenuContentVariants"
+      },
+      {
+        "descriptionKey": "api.navigation-menu.variants.navigationMenuTriggerVariants.description",
+        "groups": [
+          { "defaultValue": "md", "name": "size", "values": ["lg", "md", "sm"] },
+          {
+            "defaultValue": "default",
+            "name": "tone",
+            "values": ["default", "info", "secondary", "warning"]
+          }
+        ],
+        "name": "navigationMenuTriggerVariants"
+      }
+    ]
+  },
+  "sidebar": {
+    "components": [
+      {
+        "descriptionKey": "api.sidebar.components.Sidebar.description",
+        "name": "Sidebar",
+        "props": {
+          "descriptionKey": "api.sidebar.components.Sidebar.props.description",
+          "remarksKey": "api.sidebar.components.Sidebar.props.remarks",
+          "inherits": [
+            "React.ComponentPropsWithoutRef<\"aside\">",
+            "VariantProps<typeof sidebarVariants>"
+          ],
+          "inheritedMembers": [
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-describedby.description",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-invalid.description",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-label.description",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-labelledby.description",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.autoFocus.description",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.children.description",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.className.description",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultChecked.description",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultValue.description",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.id.description",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onBlur.description",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onChange.description",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "React.ChangeEventHandler<HTMLElement, Element>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onClick.description",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onFocus.description",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyDown.description",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyUp.description",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseEnter.description",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseLeave.description",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.role.description",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.style.description",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.title.description",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "members": [
+            {
+              "defaultValue": "false",
+              "descriptionKey": "api.sidebar.components.Sidebar.props.members.collapsed.description",
+              "name": "collapsed",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "defaultValue": "\"md\"",
+              "descriptionKey": "api.sidebar.components.Sidebar.props.members.size.description",
+              "name": "size",
+              "optional": true,
+              "required": false,
+              "type": "\"lg\" | \"md\" | \"sm\""
+            },
+            {
+              "defaultValue": "\"panel\"",
+              "descriptionKey": "api.sidebar.components.Sidebar.props.members.variant.description",
+              "name": "variant",
+              "optional": true,
+              "required": false,
+              "type": "\"flat\" | \"panel\""
+            }
+          ],
+          "type": "SidebarProps"
+        }
+      },
+      {
+        "descriptionKey": "api.sidebar.components.SidebarContent.description",
+        "name": "SidebarContent",
+        "props": { "inherits": [], "members": [], "type": "React.ComponentProps<\"div\">" }
+      },
+      {
+        "descriptionKey": "api.sidebar.components.SidebarFooter.description",
+        "name": "SidebarFooter",
+        "props": { "inherits": [], "members": [], "type": "React.ComponentProps<\"footer\">" }
+      },
+      {
+        "descriptionKey": "api.sidebar.components.SidebarGroup.description",
+        "name": "SidebarGroup",
+        "props": { "inherits": [], "members": [], "type": "React.ComponentProps<\"section\">" }
+      },
+      {
+        "descriptionKey": "api.sidebar.components.SidebarGroupLabel.description",
+        "name": "SidebarGroupLabel",
+        "props": { "inherits": [], "members": [], "type": "React.ComponentProps<\"h3\">" }
+      },
+      {
+        "descriptionKey": "api.sidebar.components.SidebarHeader.description",
+        "name": "SidebarHeader",
+        "props": { "inherits": [], "members": [], "type": "React.ComponentProps<\"header\">" }
+      },
+      {
+        "descriptionKey": "api.sidebar.components.SidebarMenu.description",
+        "name": "SidebarMenu",
+        "props": { "inherits": [], "members": [], "type": "React.ComponentProps<\"ul\">" }
+      },
+      {
+        "descriptionKey": "api.sidebar.components.SidebarMenuBadge.description",
+        "name": "SidebarMenuBadge",
+        "props": { "inherits": [], "members": [], "type": "React.ComponentProps<\"span\">" }
+      },
+      {
+        "descriptionKey": "api.sidebar.components.SidebarMenuButton.description",
+        "name": "SidebarMenuButton",
+        "props": {
+          "descriptionKey": "api.sidebar.components.SidebarMenuButton.props.description",
+          "inherits": [
+            "React.ButtonHTMLAttributes<HTMLButtonElement>",
+            "VariantProps<typeof sidebarMenuButtonVariants>"
+          ],
+          "inheritedMembers": [
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-describedby.description",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-invalid.description",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-label.description",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-labelledby.description",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.autoFocus.description",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.children.description",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.className.description",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultChecked.description",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultValue.description",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.disabled.description",
+              "name": "disabled",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.form.description",
+              "name": "form",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.id.description",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.name.description",
+              "name": "name",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onBlur.description",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLButtonElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onChange.description",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "React.ChangeEventHandler<HTMLButtonElement, Element>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onClick.description",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLButtonElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onFocus.description",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLButtonElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyDown.description",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLButtonElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyUp.description",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLButtonElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseEnter.description",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLButtonElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseLeave.description",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLButtonElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.role.description",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.style.description",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.title.description",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.type.description",
+              "name": "type",
+              "optional": true,
+              "required": false,
+              "type": "\"button\" | \"submit\" | \"reset\""
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.value.description",
+              "name": "value",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            }
+          ],
+          "members": [
+            {
+              "defaultValue": "false",
+              "descriptionKey": "api.sidebar.components.SidebarMenuButton.props.members.active.description",
+              "name": "active",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "defaultValue": "false",
+              "descriptionKey": "api.sidebar.components.SidebarMenuButton.props.members.asChild.description",
+              "name": "asChild",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.sidebar.components.SidebarMenuButton.props.members.size.description",
+              "name": "size",
+              "optional": true,
+              "required": false,
+              "type": "\"lg\" | \"md\" | \"sm\""
+            },
+            {
+              "defaultValue": "\"default\"",
+              "descriptionKey": "api.sidebar.components.SidebarMenuButton.props.members.tone.description",
+              "name": "tone",
+              "optional": true,
+              "required": false,
+              "type": "\"default\" | \"info\" | \"secondary\" | \"success\" | \"warning\""
+            }
+          ],
+          "type": "SidebarMenuButtonProps"
+        }
+      },
+      {
+        "descriptionKey": "api.sidebar.components.SidebarMenuItem.description",
+        "name": "SidebarMenuItem",
+        "props": { "inherits": [], "members": [], "type": "React.ComponentProps<\"li\">" }
+      },
+      {
+        "descriptionKey": "api.sidebar.components.SidebarMenuLabel.description",
+        "name": "SidebarMenuLabel",
+        "props": { "inherits": [], "members": [], "type": "React.ComponentProps<\"span\">" }
+      },
+      {
+        "descriptionKey": "api.sidebar.components.SidebarSeparator.description",
+        "name": "SidebarSeparator",
+        "props": { "inherits": [], "members": [], "type": "React.ComponentProps<\"div\">" }
+      }
+    ],
+    "descriptionKey": "api.sidebar.description",
+    "exports": [
+      {
+        "descriptionKey": "api.sidebar.exports.Sidebar.description",
+        "kind": "component",
+        "name": "Sidebar"
+      },
+      {
+        "descriptionKey": "api.sidebar.exports.SidebarContent.description",
+        "kind": "component",
+        "name": "SidebarContent"
+      },
+      {
+        "descriptionKey": "api.sidebar.exports.SidebarFooter.description",
+        "kind": "component",
+        "name": "SidebarFooter"
+      },
+      {
+        "descriptionKey": "api.sidebar.exports.SidebarGroup.description",
+        "kind": "component",
+        "name": "SidebarGroup"
+      },
+      {
+        "descriptionKey": "api.sidebar.exports.SidebarGroupLabel.description",
+        "kind": "component",
+        "name": "SidebarGroupLabel"
+      },
+      {
+        "descriptionKey": "api.sidebar.exports.SidebarHeader.description",
+        "kind": "component",
+        "name": "SidebarHeader"
+      },
+      {
+        "descriptionKey": "api.sidebar.exports.SidebarMenu.description",
+        "kind": "component",
+        "name": "SidebarMenu"
+      },
+      {
+        "descriptionKey": "api.sidebar.exports.SidebarMenuBadge.description",
+        "kind": "component",
+        "name": "SidebarMenuBadge"
+      },
+      {
+        "descriptionKey": "api.sidebar.exports.SidebarMenuButton.description",
+        "kind": "component",
+        "name": "SidebarMenuButton"
+      },
+      {
+        "descriptionKey": "api.sidebar.exports.SidebarMenuButtonProps.description",
+        "kind": "interface",
+        "name": "SidebarMenuButtonProps"
+      },
+      {
+        "descriptionKey": "api.sidebar.exports.sidebarMenuButtonVariants.description",
+        "kind": "variant",
+        "name": "sidebarMenuButtonVariants"
+      },
+      {
+        "descriptionKey": "api.sidebar.exports.SidebarMenuItem.description",
+        "kind": "component",
+        "name": "SidebarMenuItem"
+      },
+      {
+        "descriptionKey": "api.sidebar.exports.SidebarMenuLabel.description",
+        "kind": "component",
+        "name": "SidebarMenuLabel"
+      },
+      {
+        "descriptionKey": "api.sidebar.exports.SidebarProps.description",
+        "remarksKey": "api.sidebar.exports.SidebarProps.remarks",
+        "kind": "interface",
+        "name": "SidebarProps"
+      },
+      {
+        "descriptionKey": "api.sidebar.exports.SidebarSeparator.description",
+        "kind": "component",
+        "name": "SidebarSeparator"
+      },
+      {
+        "descriptionKey": "api.sidebar.exports.sidebarVariants.description",
+        "kind": "variant",
+        "name": "sidebarVariants"
+      }
+    ],
+    "name": "sidebar",
+    "sourcePath": "src/components/ui/sidebar.tsx",
+    "title": "Sticker Sidebar",
+    "types": [
+      {
+        "descriptionKey": "api.sidebar.types.SidebarMenuButtonProps.description",
+        "inherits": [
+          "React.ButtonHTMLAttributes<HTMLButtonElement>",
+          "VariantProps<typeof sidebarMenuButtonVariants>"
+        ],
+        "kind": "interface",
+        "members": [
+          {
+            "defaultValue": "false",
+            "descriptionKey": "api.sidebar.types.SidebarMenuButtonProps.members.active.description",
+            "name": "active",
+            "optional": true,
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "defaultValue": "false",
+            "descriptionKey": "api.sidebar.types.SidebarMenuButtonProps.members.asChild.description",
+            "name": "asChild",
+            "optional": true,
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "descriptionKey": "api.sidebar.types.SidebarMenuButtonProps.members.size.description",
+            "name": "size",
+            "optional": true,
+            "required": false,
+            "type": "\"lg\" | \"md\" | \"sm\""
+          },
+          {
+            "defaultValue": "\"default\"",
+            "descriptionKey": "api.sidebar.types.SidebarMenuButtonProps.members.tone.description",
+            "name": "tone",
+            "optional": true,
+            "required": false,
+            "type": "\"default\" | \"info\" | \"secondary\" | \"success\" | \"warning\""
+          }
+        ],
+        "name": "SidebarMenuButtonProps"
+      },
+      {
+        "descriptionKey": "api.sidebar.types.SidebarProps.description",
+        "remarksKey": "api.sidebar.types.SidebarProps.remarks",
+        "inherits": [
+          "React.ComponentPropsWithoutRef<\"aside\">",
+          "VariantProps<typeof sidebarVariants>"
+        ],
+        "kind": "interface",
+        "members": [
+          {
+            "defaultValue": "false",
+            "descriptionKey": "api.sidebar.types.SidebarProps.members.collapsed.description",
+            "name": "collapsed",
+            "optional": true,
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "defaultValue": "\"md\"",
+            "descriptionKey": "api.sidebar.types.SidebarProps.members.size.description",
+            "name": "size",
+            "optional": true,
+            "required": false,
+            "type": "\"lg\" | \"md\" | \"sm\""
+          },
+          {
+            "defaultValue": "\"panel\"",
+            "descriptionKey": "api.sidebar.types.SidebarProps.members.variant.description",
+            "name": "variant",
+            "optional": true,
+            "required": false,
+            "type": "\"flat\" | \"panel\""
+          }
+        ],
+        "name": "SidebarProps"
+      }
+    ],
+    "variants": [
+      {
+        "descriptionKey": "api.sidebar.variants.sidebarMenuButtonVariants.description",
+        "groups": [
+          { "defaultValue": "md", "name": "size", "values": ["lg", "md", "sm"] },
+          {
+            "defaultValue": "default",
+            "name": "tone",
+            "values": ["default", "info", "secondary", "success", "warning"]
+          }
+        ],
+        "name": "sidebarMenuButtonVariants"
+      },
+      {
+        "descriptionKey": "api.sidebar.variants.sidebarVariants.description",
+        "groups": [
+          { "defaultValue": "md", "name": "size", "values": ["lg", "md", "sm"] },
+          { "defaultValue": "panel", "name": "variant", "values": ["flat", "panel"] }
+        ],
+        "name": "sidebarVariants"
+      }
+    ]
+  },
   "tag": {
     "components": [
       {
