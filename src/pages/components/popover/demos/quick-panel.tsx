@@ -1,10 +1,4 @@
-import {
-  Button,
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-  Switch,
-} from "sticker-ui"
+import { Button, Popover, Switch } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
@@ -19,10 +13,10 @@ const meta = defineMeta({
 function Demo() {
   return (
     <Popover>
-      <PopoverTrigger asChild>
+      <Popover.Trigger asChild>
         <Button color="secondary">Open Settings</Button>
-      </PopoverTrigger>
-      <PopoverContent align="start">
+      </Popover.Trigger>
+      <Popover.Content align="start">
         <div className="grid gap-4">
           <div className="grid gap-1">
             <h3 className="m-0 text-base leading-6 font-black">
@@ -37,7 +31,7 @@ function Demo() {
             <Switch defaultChecked size="sm" />
           </label>
         </div>
-      </PopoverContent>
+      </Popover.Content>
     </Popover>
   )
 }

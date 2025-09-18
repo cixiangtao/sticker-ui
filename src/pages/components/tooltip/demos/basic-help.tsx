@@ -1,10 +1,4 @@
-import {
-  Button,
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "sticker-ui"
+import { Button, Tooltip } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
@@ -18,19 +12,19 @@ const meta = defineMeta({
 
 function Demo() {
   return (
-    <TooltipProvider>
+    <Tooltip.Provider>
       <div className="w-fit">
         <Tooltip>
-          <TooltipTrigger asChild>
+          <Tooltip.Trigger asChild>
             <Button variant="outlined">Hover For Note</Button>
-          </TooltipTrigger>
-          <TooltipContent>
+          </Tooltip.Trigger>
+          <Tooltip.Content>
             Keep tooltip copy short specific and connected to one visible
             control.
-          </TooltipContent>
+          </Tooltip.Content>
         </Tooltip>
       </div>
-    </TooltipProvider>
+    </Tooltip.Provider>
   )
 }
 

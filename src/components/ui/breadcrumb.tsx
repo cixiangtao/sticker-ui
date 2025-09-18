@@ -3,10 +3,7 @@ import * as React from "react"
 
 import { cn } from "@/lib/utils"
 
-/**
- * Sticker breadcrumb navigation landmark.
- */
-const Breadcrumb = React.forwardRef<
+const BreadcrumbRoot = React.forwardRef<
   HTMLElement,
   React.ComponentPropsWithoutRef<"nav">
 >(({ className, ...props }, ref) => (
@@ -18,7 +15,7 @@ const Breadcrumb = React.forwardRef<
     {...props}
   />
 ))
-Breadcrumb.displayName = "Breadcrumb"
+BreadcrumbRoot.displayName = "Breadcrumb"
 
 /**
  * Ordered breadcrumb list.
@@ -137,6 +134,18 @@ function BreadcrumbEllipsis({
     </span>
   )
 }
+
+/**
+ * Sticker breadcrumb navigation landmark.
+ */
+const Breadcrumb = Object.assign(BreadcrumbRoot, {
+  Ellipsis: BreadcrumbEllipsis,
+  Item: BreadcrumbItem,
+  Link: BreadcrumbLink,
+  List: BreadcrumbList,
+  Page: BreadcrumbPage,
+  Separator: BreadcrumbSeparator,
+})
 
 export {
   Breadcrumb,

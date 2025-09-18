@@ -1,15 +1,6 @@
 import { Copy, ExternalLink, FolderOpen, Trash2 } from "lucide-react"
+import { Card, ContextMenu } from "sticker-ui"
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import {
-  ContextMenu,
-  ContextMenuContent,
-  ContextMenuItem,
-  ContextMenuLabel,
-  ContextMenuSeparator,
-  ContextMenuShortcut,
-  ContextMenuTrigger,
-} from "@/components/ui/context-menu"
 import { Tag } from "@/components/ui/tag"
 import { defineMeta } from "@/layouts/preview"
 
@@ -23,40 +14,40 @@ const meta = defineMeta({
 function Demo() {
   return (
     <ContextMenu>
-      <ContextMenuTrigger>
+      <ContextMenu.Trigger>
         <Card className="w-full max-w-md border-l-[8px] border-l-su-accent-info">
-          <CardHeader>
-            <CardTitle>Quarterly planning board</CardTitle>
-          </CardHeader>
-          <CardContent className="flex items-center justify-between gap-3">
+          <Card.Header>
+            <Card.Title>Quarterly planning board</Card.Title>
+          </Card.Header>
+          <Card.Content className="flex items-center justify-between gap-3">
             <p className="text-sm leading-6 font-medium text-su-fg-muted">
               Right-click this card to open desktop actions.
             </p>
             <Tag color="info">Draft</Tag>
-          </CardContent>
+          </Card.Content>
         </Card>
-      </ContextMenuTrigger>
-      <ContextMenuContent>
-        <ContextMenuLabel>Board actions</ContextMenuLabel>
-        <ContextMenuItem>
+      </ContextMenu.Trigger>
+      <ContextMenu.Content>
+        <ContextMenu.Label>Board actions</ContextMenu.Label>
+        <ContextMenu.Item>
           <FolderOpen aria-hidden="true" className="size-4 stroke-[3]" />
           Open
-          <ContextMenuShortcut>Enter</ContextMenuShortcut>
-        </ContextMenuItem>
-        <ContextMenuItem>
+          <ContextMenu.Shortcut>Enter</ContextMenu.Shortcut>
+        </ContextMenu.Item>
+        <ContextMenu.Item>
           <Copy aria-hidden="true" className="size-4 stroke-[3]" />
           Duplicate
-        </ContextMenuItem>
-        <ContextMenuItem>
+        </ContextMenu.Item>
+        <ContextMenu.Item>
           <ExternalLink aria-hidden="true" className="size-4 stroke-[3]" />
           Open in new tab
-        </ContextMenuItem>
-        <ContextMenuSeparator />
-        <ContextMenuItem tone="danger">
+        </ContextMenu.Item>
+        <ContextMenu.Separator />
+        <ContextMenu.Item tone="danger">
           <Trash2 aria-hidden="true" className="size-4 stroke-[3]" />
           Delete
-        </ContextMenuItem>
-      </ContextMenuContent>
+        </ContextMenu.Item>
+      </ContextMenu.Content>
     </ContextMenu>
   )
 }

@@ -1,9 +1,4 @@
-import {
-  FieldDescription,
-  FieldLabel,
-  RadioGroup,
-  RadioGroupItem,
-} from "sticker-ui"
+import { RadioGroup, Field } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
@@ -20,15 +15,15 @@ function Demo() {
     <div className="grid max-w-xl gap-3">
       <div className="grid gap-3 rounded-su-xl border border-su-ink bg-white/80 p-4">
         <div className="grid gap-1">
-          <FieldLabel id="radio-launch-rhythm">Launch Rhythm</FieldLabel>
-          <FieldDescription>
+          <Field.Label id="radio-launch-rhythm">Launch Rhythm</Field.Label>
+          <Field.Description>
             Pair radiogroup with a field label when one option must be selected
             from a short list.
-          </FieldDescription>
+          </Field.Description>
         </div>
         <RadioGroup aria-labelledby="radio-launch-rhythm" defaultValue="weekly">
-          <RadioGroupItem label="Weekly Review" value="weekly" />
-          <RadioGroupItem label="Monthly Map" value="monthly" />
+          <RadioGroup.Item label="Weekly Review" value="weekly" />
+          <RadioGroup.Item label="Monthly Map" value="monthly" />
         </RadioGroup>
       </div>
     </div>

@@ -1,12 +1,5 @@
 import * as React from "react"
-import {
-  Field,
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "sticker-ui"
+import { Field, Select } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
@@ -30,14 +23,14 @@ function Demo() {
           onValueChange={setValue}
           value={value}
         >
-          <SelectTrigger>
-            <SelectValue placeholder="Choose An Area" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="preview">Preview Demos</SelectItem>
-            <SelectItem value="docs">API Docs</SelectItem>
-            <SelectItem value="blocked">Blocked State</SelectItem>
-          </SelectContent>
+          <Select.Trigger>
+            <Select.Value placeholder="Choose An Area" />
+          </Select.Trigger>
+          <Select.Content>
+            <Select.Item value="preview">Preview Demos</Select.Item>
+            <Select.Item value="docs">API Docs</Select.Item>
+            <Select.Item value="blocked">Blocked State</Select.Item>
+          </Select.Content>
         </Select>
       </Field>
     </div>

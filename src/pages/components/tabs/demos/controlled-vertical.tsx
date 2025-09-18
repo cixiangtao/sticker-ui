@@ -1,12 +1,5 @@
 import * as React from "react"
-import {
-  Button,
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-  Tag,
-} from "sticker-ui"
+import { Button, Tabs, Tag } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
@@ -50,20 +43,20 @@ function Demo() {
       value={value}
       variant="solid"
     >
-      <TabsList aria-label="Release checklist" className="md:w-full">
+      <Tabs.List aria-label="Release checklist" className="md:w-full">
         {tabs.map((tab) => (
-          <TabsTrigger
+          <Tabs.Trigger
             disabled={tab.disabled}
             key={tab.value}
             value={tab.value}
           >
             {tab.label}
-          </TabsTrigger>
+          </Tabs.Trigger>
         ))}
-      </TabsList>
+      </Tabs.List>
 
       {tabs.map((tab) => (
-        <TabsContent key={tab.value} value={tab.value}>
+        <Tabs.Content key={tab.value} value={tab.value}>
           <div className="grid gap-3">
             <Tag color={tab.disabled ? "warning" : "info"} rounded="pill">
               {tab.label}
@@ -80,7 +73,7 @@ function Demo() {
               Jump To Build
             </Button>
           </div>
-        </TabsContent>
+        </Tabs.Content>
       ))}
     </Tabs>
   )

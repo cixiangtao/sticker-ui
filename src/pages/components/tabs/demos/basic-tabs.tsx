@@ -1,14 +1,4 @@
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-  Tag,
-} from "sticker-ui"
+import { Card, Tabs, Tag } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
@@ -23,38 +13,38 @@ const meta = defineMeta({
 function Demo() {
   return (
     <Tabs className="max-w-2xl" defaultValue="overview">
-      <TabsList aria-label="Project sections">
-        <TabsTrigger value="overview">Overview</TabsTrigger>
-        <TabsTrigger value="schedule">Schedule</TabsTrigger>
-        <TabsTrigger value="notes">Notes</TabsTrigger>
-      </TabsList>
-      <TabsContent value="overview">
+      <Tabs.List aria-label="Project sections">
+        <Tabs.Trigger value="overview">Overview</Tabs.Trigger>
+        <Tabs.Trigger value="schedule">Schedule</Tabs.Trigger>
+        <Tabs.Trigger value="notes">Notes</Tabs.Trigger>
+      </Tabs.List>
+      <Tabs.Content value="overview">
         <Card className="border-0 bg-transparent shadow-none">
-          <CardHeader className="px-0 pt-0">
+          <Card.Header className="px-0 pt-0">
             <Tag rounded="pill" size="sm">
               Active Sprint
             </Tag>
-            <CardTitle>Design System Pass</CardTitle>
-          </CardHeader>
-          <CardContent className="px-0 pb-0">
+            <Card.Title>Design System Pass</Card.Title>
+          </Card.Header>
+          <Card.Content className="px-0 pb-0">
             <p className="m-0 text-sm leading-6 font-medium text-su-fg-muted">
               Use tabs to keep related views close without sending the reader
               through a full route change.
             </p>
-          </CardContent>
+          </Card.Content>
         </Card>
-      </TabsContent>
-      <TabsContent value="schedule">
+      </Tabs.Content>
+      <Tabs.Content value="schedule">
         <p className="m-0 text-sm leading-6 font-medium">
           Monday review, Wednesday polish, Friday registry handoff.
         </p>
-      </TabsContent>
-      <TabsContent value="notes">
+      </Tabs.Content>
+      <Tabs.Content value="notes">
         <p className="m-0 text-sm leading-6 font-medium">
           Keyboard navigation, focus rings, and disabled triggers are owned by
           Radix Tabs.
         </p>
-      </TabsContent>
+      </Tabs.Content>
     </Tabs>
   )
 }

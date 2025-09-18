@@ -1,14 +1,4 @@
-import {
-  Button,
-  Dialog,
-  DialogClose,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "sticker-ui"
+import { Button, Dialog } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
@@ -24,53 +14,53 @@ function Demo() {
   return (
     <div className="flex flex-wrap gap-3">
       <Dialog>
-        <DialogTrigger asChild>
+        <Dialog.Trigger asChild>
           <Button color="info" variant="outlined">
             Small Info
           </Button>
-        </DialogTrigger>
-        <DialogContent size="sm" tone="info">
-          <DialogHeader>
-            <DialogTitle>Shortcut Saved</DialogTitle>
-            <DialogDescription>
+        </Dialog.Trigger>
+        <Dialog.Content size="sm" tone="info">
+          <Dialog.Header>
+            <Dialog.Title>Shortcut Saved</Dialog.Title>
+            <Dialog.Description>
               Small dialogs work well for one decision and one follow up action.
-            </DialogDescription>
-          </DialogHeader>
-          <DialogFooter>
-            <DialogClose asChild>
+            </Dialog.Description>
+          </Dialog.Header>
+          <Dialog.Footer>
+            <Dialog.Close asChild>
               <Button color="info">Done</Button>
-            </DialogClose>
-          </DialogFooter>
-        </DialogContent>
+            </Dialog.Close>
+          </Dialog.Footer>
+        </Dialog.Content>
       </Dialog>
       <Dialog>
-        <DialogTrigger asChild>
+        <Dialog.Trigger asChild>
           <Button color="warning" variant="outlined">
             Large Review
           </Button>
-        </DialogTrigger>
-        <DialogContent size="lg" tone="warning">
-          <DialogHeader>
-            <DialogTitle>Review Before Shipping</DialogTitle>
-            <DialogDescription>
+        </Dialog.Trigger>
+        <Dialog.Content size="lg" tone="warning">
+          <Dialog.Header>
+            <Dialog.Title>Review Before Shipping</Dialog.Title>
+            <Dialog.Description>
               Large dialogs give longer checklists and forms enough room while
               the close button title and footer stay predictable.
-            </DialogDescription>
-          </DialogHeader>
+            </Dialog.Description>
+          </Dialog.Header>
           <div className="grid gap-2 rounded-su-xl border border-su-ink bg-su-surface p-3 text-sm font-bold">
             <span>Preview demos render on desktop and mobile.</span>
             <span>Registry json points at source files.</span>
             <span>Chinese preview strings are covered.</span>
           </div>
-          <DialogFooter>
-            <DialogClose asChild>
+          <Dialog.Footer>
+            <Dialog.Close asChild>
               <Button variant="outlined">Keep Editing</Button>
-            </DialogClose>
-            <DialogClose asChild>
+            </Dialog.Close>
+            <Dialog.Close asChild>
               <Button color="warning">Ship It</Button>
-            </DialogClose>
-          </DialogFooter>
-        </DialogContent>
+            </Dialog.Close>
+          </Dialog.Footer>
+        </Dialog.Content>
       </Dialog>
     </div>
   )

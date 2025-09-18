@@ -1,4 +1,4 @@
-import { Alert, AlertDescription, AlertTitle } from "sticker-ui"
+import { Alert } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
@@ -13,11 +13,11 @@ const meta = defineMeta({
 function Demo() {
   return (
     <Alert className="max-w-xl" tone="info">
-      <AlertTitle>Preview Updated</AlertTitle>
-      <AlertDescription>
+      <Alert.Title>Preview Updated</Alert.Title>
+      <Alert.Description>
         The registry output is ready to inspect before publishing the component
         page.
-      </AlertDescription>
+      </Alert.Description>
     </Alert>
   )
 }

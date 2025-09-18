@@ -164,7 +164,7 @@ interface RadioGroupProps extends Omit<
 /**
  * Sticker radio group powered by Radix Radio Group.
  */
-function RadioGroup({
+function RadioGroupRoot({
   children,
   className,
   disabled,
@@ -306,6 +306,13 @@ const RadioGroupItem = React.forwardRef<
   )
 })
 RadioGroupItem.displayName = RadioGroupPrimitive.Item.displayName
+
+/**
+ * Sticker radio group with item namespace.
+ */
+const RadioGroup = Object.assign(RadioGroupRoot, {
+  Item: RadioGroupItem,
+})
 
 export { RadioGroup, RadioGroupItem, radioVariants }
 export type { RadioGroupItemProps, RadioGroupProps }

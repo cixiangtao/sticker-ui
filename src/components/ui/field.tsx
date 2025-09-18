@@ -264,7 +264,7 @@ function FieldDescription({ className, ...props }: React.ComponentProps<"p">) {
   )
 }
 
-function Field({
+function FieldRoot({
   children,
   className,
   classNames,
@@ -434,6 +434,15 @@ function mergeFieldIds(...ids: unknown[]) {
 
   return uniqueTokens.length > 0 ? uniqueTokens.join(" ") : undefined
 }
+
+/**
+ * Field shell that binds labels, descriptions, ids, and accessible helper copy.
+ */
+const Field = Object.assign(FieldRoot, {
+  Description: FieldDescription,
+  Label: FieldLabel,
+  Marker: FieldMarker,
+})
 
 export { Field, FieldDescription, FieldLabel, FieldMarker, fieldLabelVariants }
 export type { FieldClassNames, FieldLabelProps, FieldProps }

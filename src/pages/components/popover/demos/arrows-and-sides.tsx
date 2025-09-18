@@ -1,4 +1,4 @@
-import { Button, Popover, PopoverContent, PopoverTrigger } from "sticker-ui"
+import { Button, Popover } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
@@ -14,25 +14,25 @@ function Demo() {
   return (
     <div className="flex flex-wrap gap-3">
       <Popover>
-        <PopoverTrigger asChild>
+        <Popover.Trigger asChild>
           <Button color="info" variant="outlined">
             With Arrow
           </Button>
-        </PopoverTrigger>
-        <PopoverContent align="start" showArrow={true} side="bottom">
+        </Popover.Trigger>
+        <Popover.Content align="start" showArrow={true} side="bottom">
           <p className="m-0 text-sm leading-6 font-bold">
             The arrow points back to the trigger when the relationship needs to
             be visually explicit.
           </p>
-        </PopoverContent>
+        </Popover.Content>
       </Popover>
       <Popover>
-        <PopoverTrigger asChild>
+        <Popover.Trigger asChild>
           <Button color="warning" variant="outlined">
             Offset Right
           </Button>
-        </PopoverTrigger>
-        <PopoverContent
+        </Popover.Trigger>
+        <Popover.Content
           align="end"
           showArrow={true}
           side="right"
@@ -43,7 +43,7 @@ function Demo() {
             Offset and alignment keep dense command bars from covering the
             trigger.
           </p>
-        </PopoverContent>
+        </Popover.Content>
       </Popover>
     </div>
   )

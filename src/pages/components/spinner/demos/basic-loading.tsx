@@ -1,11 +1,4 @@
-import {
-  Button,
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  Spinner,
-} from "sticker-ui"
+import { Button, Card, Spinner } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
@@ -20,10 +13,10 @@ const meta = defineMeta({
 function Demo() {
   return (
     <Card>
-      <CardHeader>
-        <CardTitle>Publishing Preview</CardTitle>
-      </CardHeader>
-      <CardContent className="flex flex-wrap items-center gap-3">
+      <Card.Header>
+        <Card.Title>Publishing Preview</Card.Title>
+      </Card.Header>
+      <Card.Content className="flex flex-wrap items-center gap-3">
         <Spinner label="Publishing preview" tone="info" />
         <span className="text-sm font-extrabold text-su-ink">
           Publishing preview...
@@ -32,7 +25,7 @@ function Demo() {
           <Spinner decorative size="sm" />
           Saving
         </Button>
-      </CardContent>
+      </Card.Content>
     </Card>
   )
 }

@@ -1,11 +1,4 @@
-import {
-  Badge,
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  Progress,
-} from "sticker-ui"
+import { Badge, Card, Progress } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
@@ -20,11 +13,11 @@ const meta = defineMeta({
 function Demo() {
   return (
     <Card>
-      <CardHeader className="flex-row items-center justify-between gap-3">
-        <CardTitle>Demo Coverage</CardTitle>
+      <Card.Header className="flex-row items-center justify-between gap-3">
+        <Card.Title>Demo Coverage</Card.Title>
         <Badge content="72%" tone="success" />
-      </CardHeader>
-      <CardContent className="grid gap-3">
+      </Card.Header>
+      <Card.Content className="grid gap-3">
         <Progress
           aria-label="Demo coverage"
           showValue
@@ -34,7 +27,7 @@ function Demo() {
         <p className="text-sm leading-6 font-medium text-su-fg-muted">
           Three new examples are ready, with one accessibility pass remaining.
         </p>
-      </CardContent>
+      </Card.Content>
     </Card>
   )
 }

@@ -1,20 +1,7 @@
 import * as React from "react"
+import { DropdownMenu } from "sticker-ui"
 
 import { Button } from "@/components/ui/button"
-import {
-  DropdownMenu,
-  DropdownMenuCheckboxItem,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuRadioGroup,
-  DropdownMenuRadioItem,
-  DropdownMenuSeparator,
-  DropdownMenuSub,
-  DropdownMenuSubContent,
-  DropdownMenuSubTrigger,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
 import { Tag } from "@/components/ui/tag"
 import { defineMeta } from "@/layouts/preview"
 
@@ -34,46 +21,46 @@ function Demo() {
   return (
     <div className="flex flex-col items-start gap-3">
       <DropdownMenu>
-        <DropdownMenuTrigger asChild>
+        <DropdownMenu.Trigger asChild>
           <Button variant="solid">View options</Button>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent>
-          <DropdownMenuLabel>Visible columns</DropdownMenuLabel>
-          <DropdownMenuCheckboxItem
+        </DropdownMenu.Trigger>
+        <DropdownMenu.Content>
+          <DropdownMenu.Label>Visible columns</DropdownMenu.Label>
+          <DropdownMenu.CheckboxItem
             checked={showDrafts}
             onCheckedChange={(checked) => setShowDrafts(checked === true)}
           >
             Drafts
-          </DropdownMenuCheckboxItem>
-          <DropdownMenuCheckboxItem
+          </DropdownMenu.CheckboxItem>
+          <DropdownMenu.CheckboxItem
             checked={showArchived}
             onCheckedChange={(checked) => setShowArchived(checked === true)}
           >
             Archived
-          </DropdownMenuCheckboxItem>
-          <DropdownMenuSeparator />
-          <DropdownMenuLabel>Density</DropdownMenuLabel>
-          <DropdownMenuRadioGroup value={density} onValueChange={setDensity}>
-            <DropdownMenuRadioItem value="compact">
+          </DropdownMenu.CheckboxItem>
+          <DropdownMenu.Separator />
+          <DropdownMenu.Label>Density</DropdownMenu.Label>
+          <DropdownMenu.RadioGroup value={density} onValueChange={setDensity}>
+            <DropdownMenu.RadioItem value="compact">
               Compact
-            </DropdownMenuRadioItem>
-            <DropdownMenuRadioItem value="comfortable">
+            </DropdownMenu.RadioItem>
+            <DropdownMenu.RadioItem value="comfortable">
               Comfortable
-            </DropdownMenuRadioItem>
-            <DropdownMenuRadioItem value="spacious">
+            </DropdownMenu.RadioItem>
+            <DropdownMenu.RadioItem value="spacious">
               Spacious
-            </DropdownMenuRadioItem>
-          </DropdownMenuRadioGroup>
-          <DropdownMenuSeparator />
-          <DropdownMenuSub>
-            <DropdownMenuSubTrigger inset>Export as</DropdownMenuSubTrigger>
-            <DropdownMenuSubContent>
-              <DropdownMenuItem>CSV file</DropdownMenuItem>
-              <DropdownMenuItem>PDF summary</DropdownMenuItem>
-              <DropdownMenuItem>Share link</DropdownMenuItem>
-            </DropdownMenuSubContent>
-          </DropdownMenuSub>
-        </DropdownMenuContent>
+            </DropdownMenu.RadioItem>
+          </DropdownMenu.RadioGroup>
+          <DropdownMenu.Separator />
+          <DropdownMenu.Sub>
+            <DropdownMenu.SubTrigger inset>Export as</DropdownMenu.SubTrigger>
+            <DropdownMenu.SubContent>
+              <DropdownMenu.Item>CSV file</DropdownMenu.Item>
+              <DropdownMenu.Item>PDF summary</DropdownMenu.Item>
+              <DropdownMenu.Item>Share link</DropdownMenu.Item>
+            </DropdownMenu.SubContent>
+          </DropdownMenu.Sub>
+        </DropdownMenu.Content>
       </DropdownMenu>
 
       <div className="flex flex-wrap gap-2">

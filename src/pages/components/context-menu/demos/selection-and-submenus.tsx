@@ -1,20 +1,7 @@
 import * as React from "react"
+import { ContextMenu } from "sticker-ui"
 
 import { Button } from "@/components/ui/button"
-import {
-  ContextMenu,
-  ContextMenuCheckboxItem,
-  ContextMenuContent,
-  ContextMenuItem,
-  ContextMenuLabel,
-  ContextMenuRadioGroup,
-  ContextMenuRadioItem,
-  ContextMenuSeparator,
-  ContextMenuSub,
-  ContextMenuSubContent,
-  ContextMenuSubTrigger,
-  ContextMenuTrigger,
-} from "@/components/ui/context-menu"
 import { Tag } from "@/components/ui/tag"
 import { defineMeta } from "@/layouts/preview"
 
@@ -34,42 +21,42 @@ function Demo() {
   return (
     <div className="flex flex-col items-start gap-3">
       <ContextMenu>
-        <ContextMenuTrigger asChild>
+        <ContextMenu.Trigger asChild>
           <Button variant="outlined">Right-click workspace</Button>
-        </ContextMenuTrigger>
-        <ContextMenuContent tone="secondary">
-          <ContextMenuLabel>Columns</ContextMenuLabel>
-          <ContextMenuCheckboxItem
+        </ContextMenu.Trigger>
+        <ContextMenu.Content tone="secondary">
+          <ContextMenu.Label>Columns</ContextMenu.Label>
+          <ContextMenu.CheckboxItem
             checked={showOwner}
             onCheckedChange={(checked) => setShowOwner(checked === true)}
           >
             Owner
-          </ContextMenuCheckboxItem>
-          <ContextMenuCheckboxItem
+          </ContextMenu.CheckboxItem>
+          <ContextMenu.CheckboxItem
             checked={showStatus}
             onCheckedChange={(checked) => setShowStatus(checked === true)}
           >
             Status
-          </ContextMenuCheckboxItem>
-          <ContextMenuSeparator />
-          <ContextMenuLabel>Layout</ContextMenuLabel>
-          <ContextMenuRadioGroup value={layout} onValueChange={setLayout}>
-            <ContextMenuRadioItem value="table">Table</ContextMenuRadioItem>
-            <ContextMenuRadioItem value="kanban">Kanban</ContextMenuRadioItem>
-            <ContextMenuRadioItem value="timeline">
+          </ContextMenu.CheckboxItem>
+          <ContextMenu.Separator />
+          <ContextMenu.Label>Layout</ContextMenu.Label>
+          <ContextMenu.RadioGroup value={layout} onValueChange={setLayout}>
+            <ContextMenu.RadioItem value="table">Table</ContextMenu.RadioItem>
+            <ContextMenu.RadioItem value="kanban">Kanban</ContextMenu.RadioItem>
+            <ContextMenu.RadioItem value="timeline">
               Timeline
-            </ContextMenuRadioItem>
-          </ContextMenuRadioGroup>
-          <ContextMenuSeparator />
-          <ContextMenuSub>
-            <ContextMenuSubTrigger inset>Move to</ContextMenuSubTrigger>
-            <ContextMenuSubContent>
-              <ContextMenuItem>Backlog</ContextMenuItem>
-              <ContextMenuItem>In review</ContextMenuItem>
-              <ContextMenuItem>Done</ContextMenuItem>
-            </ContextMenuSubContent>
-          </ContextMenuSub>
-        </ContextMenuContent>
+            </ContextMenu.RadioItem>
+          </ContextMenu.RadioGroup>
+          <ContextMenu.Separator />
+          <ContextMenu.Sub>
+            <ContextMenu.SubTrigger inset>Move to</ContextMenu.SubTrigger>
+            <ContextMenu.SubContent>
+              <ContextMenu.Item>Backlog</ContextMenu.Item>
+              <ContextMenu.Item>In review</ContextMenu.Item>
+              <ContextMenu.Item>Done</ContextMenu.Item>
+            </ContextMenu.SubContent>
+          </ContextMenu.Sub>
+        </ContextMenu.Content>
       </ContextMenu>
 
       <div className="flex flex-wrap gap-2">

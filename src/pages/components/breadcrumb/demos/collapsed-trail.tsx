@@ -1,18 +1,5 @@
-import {
-  Breadcrumb,
-  BreadcrumbEllipsis,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb"
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+import { Breadcrumb, DropdownMenu } from "sticker-ui"
+
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -26,32 +13,32 @@ const meta = defineMeta({
 function Demo() {
   return (
     <Breadcrumb>
-      <BreadcrumbList>
-        <BreadcrumbItem>
-          <BreadcrumbLink href="#/workspaces">Workspaces</BreadcrumbLink>
-        </BreadcrumbItem>
-        <BreadcrumbSeparator />
-        <BreadcrumbItem>
+      <Breadcrumb.List>
+        <Breadcrumb.Item>
+          <Breadcrumb.Link href="#/workspaces">Workspaces</Breadcrumb.Link>
+        </Breadcrumb.Item>
+        <Breadcrumb.Separator />
+        <Breadcrumb.Item>
           <DropdownMenu>
-            <DropdownMenuTrigger className="rounded-su-sm outline-none focus-visible:ring-[2px] focus-visible:ring-su-ring/65">
-              <BreadcrumbEllipsis />
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="start">
-              <DropdownMenuItem>North America</DropdownMenuItem>
-              <DropdownMenuItem>Planning</DropdownMenuItem>
-              <DropdownMenuItem>Quarterly review</DropdownMenuItem>
-            </DropdownMenuContent>
+            <DropdownMenu.Trigger className="rounded-su-sm outline-none focus-visible:ring-[2px] focus-visible:ring-su-ring/65">
+              <Breadcrumb.Ellipsis />
+            </DropdownMenu.Trigger>
+            <DropdownMenu.Content align="start">
+              <DropdownMenu.Item>North America</DropdownMenu.Item>
+              <DropdownMenu.Item>Planning</DropdownMenu.Item>
+              <DropdownMenu.Item>Quarterly review</DropdownMenu.Item>
+            </DropdownMenu.Content>
           </DropdownMenu>
-        </BreadcrumbItem>
-        <BreadcrumbSeparator />
-        <BreadcrumbItem>
-          <BreadcrumbLink href="#/reports">Reports</BreadcrumbLink>
-        </BreadcrumbItem>
-        <BreadcrumbSeparator />
-        <BreadcrumbItem>
-          <BreadcrumbPage>Pipeline health</BreadcrumbPage>
-        </BreadcrumbItem>
-      </BreadcrumbList>
+        </Breadcrumb.Item>
+        <Breadcrumb.Separator />
+        <Breadcrumb.Item>
+          <Breadcrumb.Link href="#/reports">Reports</Breadcrumb.Link>
+        </Breadcrumb.Item>
+        <Breadcrumb.Separator />
+        <Breadcrumb.Item>
+          <Breadcrumb.Page>Pipeline health</Breadcrumb.Page>
+        </Breadcrumb.Item>
+      </Breadcrumb.List>
     </Breadcrumb>
   )
 }

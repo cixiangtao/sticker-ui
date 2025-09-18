@@ -1,11 +1,4 @@
-import {
-  Badge,
-  Button,
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "sticker-ui"
+import { Badge, Button, Card } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
@@ -20,10 +13,10 @@ const meta = defineMeta({
 function Demo() {
   return (
     <Card className="max-w-md">
-      <CardHeader>
-        <CardTitle>Notification shortcuts</CardTitle>
-      </CardHeader>
-      <CardContent className="flex flex-wrap items-center gap-5">
+      <Card.Header>
+        <Card.Title>Notification shortcuts</Card.Title>
+      </Card.Header>
+      <Card.Content className="flex flex-wrap items-center gap-5">
         <Badge content={6} tone="danger">
           <Button aria-label="Inbox, 6 unread messages">Inbox</Button>
         </Badge>
@@ -37,7 +30,7 @@ function Demo() {
             Sync
           </Button>
         </Badge>
-      </CardContent>
+      </Card.Content>
     </Card>
   )
 }

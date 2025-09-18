@@ -460,5 +460,12 @@ const Checkbox = React.forwardRef<
 )
 Checkbox.displayName = CheckboxPrimitive.Root.displayName
 
-export { Checkbox, CheckboxGroup, checkboxVariants }
+/**
+ * Sticker checkbox input with an optional grouped multi-select namespace.
+ */
+const CheckboxWithGroup = Object.assign(Checkbox, {
+  Group: CheckboxGroup,
+})
+
+export { CheckboxWithGroup as Checkbox, CheckboxGroup, checkboxVariants }
 export type { CheckboxGroupProps, CheckboxProps }

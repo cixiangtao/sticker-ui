@@ -53,10 +53,7 @@ const dropdownMenuItemVariants = cva(
   },
 )
 
-/**
- * Sticker dropdown menu root powered by Radix DropdownMenu.
- */
-const DropdownMenu = DropdownMenuPrimitive.Root
+const DropdownMenuRoot = DropdownMenuPrimitive.Root
 
 /**
  * Opens the dropdown menu.
@@ -369,6 +366,26 @@ function DropdownMenuShortcut({
     />
   )
 }
+
+/**
+ * Sticker dropdown menu root powered by Radix DropdownMenu.
+ */
+const DropdownMenu = Object.assign(DropdownMenuRoot, {
+  CheckboxItem: DropdownMenuCheckboxItem,
+  Content: DropdownMenuContent,
+  Group: DropdownMenuGroup,
+  Item: DropdownMenuItem,
+  Label: DropdownMenuLabel,
+  Portal: DropdownMenuPortal,
+  RadioGroup: DropdownMenuRadioGroup,
+  RadioItem: DropdownMenuRadioItem,
+  Separator: DropdownMenuSeparator,
+  Shortcut: DropdownMenuShortcut,
+  Sub: DropdownMenuSub,
+  SubContent: DropdownMenuSubContent,
+  SubTrigger: DropdownMenuSubTrigger,
+  Trigger: DropdownMenuTrigger,
+})
 
 export {
   DropdownMenu,

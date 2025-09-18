@@ -104,7 +104,7 @@ interface NavigationMenuProps extends React.ComponentPropsWithoutRef<
 /**
  * Sticker navigation menu root powered by Radix NavigationMenu.
  */
-function NavigationMenu({
+function NavigationMenuRoot({
   children,
   className,
   size = "md",
@@ -306,6 +306,19 @@ const NavigationMenuIndicator = React.forwardRef<
 ))
 NavigationMenuIndicator.displayName =
   NavigationMenuPrimitive.Indicator.displayName
+
+/**
+ * Sticker navigation menu root powered by Radix NavigationMenu.
+ */
+const NavigationMenu = Object.assign(NavigationMenuRoot, {
+  Content: NavigationMenuContent,
+  Indicator: NavigationMenuIndicator,
+  Item: NavigationMenuItem,
+  Link: NavigationMenuLink,
+  List: NavigationMenuList,
+  Trigger: NavigationMenuTrigger,
+  Viewport: NavigationMenuViewport,
+})
 
 export {
   NavigationMenu,

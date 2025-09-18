@@ -1,11 +1,4 @@
-import {
-  Button,
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  Tag,
-} from "sticker-ui"
+import { Button, Card, Tag } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
@@ -44,14 +37,14 @@ function Demo() {
   return (
     <div className="grid gap-4 md:grid-cols-2">
       <Card variant="panel">
-        <CardHeader
+        <Card.Header
           decoration={<HeaderDots />}
           divider="dashed"
           dividerInset="md"
         >
           <Tag color="danger">Panel</Tag>
-          <CardTitle className="mt-3">Preview Window</CardTitle>
-        </CardHeader>
+          <Card.Title className="mt-3">Preview Window</Card.Title>
+        </Card.Header>
         <div className="grid gap-3 py-5">
           <p className="m-0 text-sm leading-6 font-medium text-su-fg-muted">
             Use this pattern when the surface frames navigation filters or a
@@ -62,16 +55,16 @@ function Demo() {
       </Card>
 
       <Card variant="minimal">
-        <CardHeader divider="dashed" dividerInset="card">
-          <CardTitle>Toolbar Shell</CardTitle>
-        </CardHeader>
-        <CardContent className="grid gap-3">
+        <Card.Header divider="dashed" dividerInset="card">
+          <Card.Title>Toolbar Shell</Card.Title>
+        </Card.Header>
+        <Card.Content className="grid gap-3">
           <p className="m-0 text-sm leading-6 font-medium text-su-fg-muted">
             Use minimal panel cards for quiet shells that should sit below
             content cards in the visual hierarchy.
           </p>
           <Tag color="info">Dashed Divider</Tag>
-        </CardContent>
+        </Card.Content>
       </Card>
     </div>
   )

@@ -1,11 +1,4 @@
-import {
-  Field,
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "sticker-ui"
+import { Field, Select } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
@@ -26,14 +19,14 @@ function Demo() {
         required
       >
         <Select defaultValue="designer">
-          <SelectTrigger>
-            <SelectValue placeholder="Choose A Role" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="designer">Design Captain</SelectItem>
-            <SelectItem value="engineer">Build Lead</SelectItem>
-            <SelectItem value="researcher">Research Scout</SelectItem>
-          </SelectContent>
+          <Select.Trigger>
+            <Select.Value placeholder="Choose A Role" />
+          </Select.Trigger>
+          <Select.Content>
+            <Select.Item value="designer">Design Captain</Select.Item>
+            <Select.Item value="engineer">Build Lead</Select.Item>
+            <Select.Item value="researcher">Research Scout</Select.Item>
+          </Select.Content>
         </Select>
       </Field>
     </div>

@@ -111,7 +111,7 @@ interface EmptyProps
 /**
  * Sticker empty state for blank lists, filtered results, and onboarding placeholders.
  */
-function Empty({
+function EmptyRoot({
   actions,
   as: Component = "section",
   children,
@@ -233,6 +233,16 @@ function EmptyActions({ className, ...props }: EmptyActionsProps) {
     />
   )
 }
+
+/**
+ * Sticker empty-state panel with composable icon, title, description, and action slots.
+ */
+const Empty = Object.assign(EmptyRoot, {
+  Actions: EmptyActions,
+  Description: EmptyDescription,
+  Icon: EmptyIcon,
+  Title: EmptyTitle,
+})
 
 export {
   Empty,

@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Card, CardContent, Pagination, Tag } from "sticker-ui"
+import { Card, Pagination, Tag } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
@@ -23,7 +23,7 @@ function Demo() {
 
   return (
     <Card className="max-w-2xl" variant="panel">
-      <CardContent className="grid gap-4">
+      <Card.Content className="grid gap-4">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div className="grid gap-1">
             <h3 className="text-lg font-black text-su-ink">Search Results</h3>
@@ -47,7 +47,7 @@ function Demo() {
           pageSizeOptions={[5, 8, 12, 20]}
           total={totalItems}
         />
-      </CardContent>
+      </Card.Content>
     </Card>
   )
 }

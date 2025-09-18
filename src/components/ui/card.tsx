@@ -138,7 +138,7 @@ interface CardHeaderProps extends React.ComponentProps<"header"> {
   dividerInset?: CardHeaderDividerInset
 }
 
-function Card({
+function CardRoot({
   as: Component = "article",
   asChild = false,
   className,
@@ -271,6 +271,17 @@ function CardFooter({ className, ...props }: React.ComponentProps<"footer">) {
     />
   )
 }
+
+/**
+ * Sticker card surface with composable header, content, and footer slots.
+ */
+const Card = Object.assign(CardRoot, {
+  Content: CardContent,
+  Description: CardDescription,
+  Footer: CardFooter,
+  Header: CardHeader,
+  Title: CardTitle,
+})
 
 export {
   Card,

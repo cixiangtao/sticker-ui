@@ -6,12 +6,7 @@ const Input = Object.assign(InputRoot, {
 })
 
 export { Button, buttonVariants } from "./components/ui/button"
-export {
-  Alert,
-  AlertDescription,
-  AlertTitle,
-  alertVariants,
-} from "./components/ui/alert"
+export { Alert, alertVariants } from "./components/ui/alert"
 export type {
   AlertDescriptionProps,
   AlertProps,
@@ -19,16 +14,6 @@ export type {
 } from "./components/ui/alert"
 export {
   AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogOverlay,
-  AlertDialogPortal,
-  AlertDialogTitle,
-  AlertDialogTrigger,
   alertDialogContentVariants,
 } from "./components/ui/alert-dialog"
 export type {
@@ -39,49 +24,15 @@ export type {
 } from "./components/ui/alert-dialog"
 export { Badge, badgeVariants } from "./components/ui/badge"
 export type { BadgeProps } from "./components/ui/badge"
-export {
-  Breadcrumb,
-  BreadcrumbEllipsis,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "./components/ui/breadcrumb"
-export {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-  cardVariants,
-} from "./components/ui/card"
-export {
-  Checkbox,
-  CheckboxGroup,
-  checkboxVariants,
-} from "./components/ui/checkbox"
+export { Breadcrumb } from "./components/ui/breadcrumb"
+export { Card, cardVariants } from "./components/ui/card"
+export { Checkbox, checkboxVariants } from "./components/ui/checkbox"
 export type {
   CheckboxGroupProps,
   CheckboxProps,
 } from "./components/ui/checkbox"
 export {
   ContextMenu,
-  ContextMenuCheckboxItem,
-  ContextMenuContent,
-  ContextMenuGroup,
-  ContextMenuItem,
-  ContextMenuLabel,
-  ContextMenuPortal,
-  ContextMenuRadioGroup,
-  ContextMenuRadioItem,
-  ContextMenuSeparator,
-  ContextMenuShortcut,
-  ContextMenuSub,
-  ContextMenuSubContent,
-  ContextMenuSubTrigger,
-  ContextMenuTrigger,
   contextMenuContentVariants,
   contextMenuItemVariants,
 } from "./components/ui/context-menu"
@@ -102,19 +53,7 @@ export type {
   DataTableProps,
   DataTableRowSelection,
 } from "./components/ui/data-table"
-export {
-  Dialog,
-  DialogClose,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogOverlay,
-  DialogPortal,
-  DialogTitle,
-  DialogTrigger,
-  dialogContentVariants,
-} from "./components/ui/dialog"
+export { Dialog, dialogContentVariants } from "./components/ui/dialog"
 export type {
   DialogContentProps,
   DialogOverlayProps,
@@ -123,20 +62,6 @@ export { Divider, dividerVariants } from "./components/ui/divider"
 export type { DividerProps } from "./components/ui/divider"
 export {
   DropdownMenu,
-  DropdownMenuCheckboxItem,
-  DropdownMenuContent,
-  DropdownMenuGroup,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuPortal,
-  DropdownMenuRadioGroup,
-  DropdownMenuRadioItem,
-  DropdownMenuSeparator,
-  DropdownMenuShortcut,
-  DropdownMenuSub,
-  DropdownMenuSubContent,
-  DropdownMenuSubTrigger,
-  DropdownMenuTrigger,
   dropdownMenuContentVariants,
   dropdownMenuItemVariants,
 } from "./components/ui/dropdown-menu"
@@ -147,14 +72,7 @@ export type {
   DropdownMenuSubContentProps,
   DropdownMenuSubTriggerProps,
 } from "./components/ui/dropdown-menu"
-export {
-  Empty,
-  EmptyActions,
-  EmptyDescription,
-  EmptyIcon,
-  EmptyTitle,
-  emptyVariants,
-} from "./components/ui/empty"
+export { Empty, emptyVariants } from "./components/ui/empty"
 export type {
   EmptyActionsProps,
   EmptyDescriptionProps,
@@ -162,7 +80,7 @@ export type {
   EmptyProps,
   EmptyTitleProps,
 } from "./components/ui/empty"
-export { Form, useForm } from "./components/ui/form"
+export { Form } from "./components/ui/form"
 export type {
   FieldData,
   FormInstance,
@@ -174,7 +92,7 @@ export type {
   ValidateStatus,
   ValidateTrigger,
 } from "./components/ui/form"
-export { Input, InputPassword, inputVariants }
+export { Input, inputVariants }
 export { JsxJoin } from "./components/ui/jsx-join"
 export type {
   JsxJoinProps,
@@ -185,13 +103,6 @@ export { Flex, Grid, flexVariants, gridVariants } from "./components/ui/layout"
 export type { FlexProps, GridProps } from "./components/ui/layout"
 export {
   NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
   navigationMenuContentVariants,
   navigationMenuTriggerVariants,
 } from "./components/ui/navigation-menu"
@@ -200,26 +111,13 @@ export type {
   NavigationMenuProps,
   NavigationMenuTriggerProps,
 } from "./components/ui/navigation-menu"
-export {
-  Field,
-  FieldDescription,
-  FieldLabel,
-  FieldMarker,
-  fieldLabelVariants,
-} from "./components/ui/field"
+export { Field, fieldLabelVariants } from "./components/ui/field"
 export type {
   FieldClassNames,
   FieldLabelProps,
   FieldProps,
 } from "./components/ui/field"
-export {
-  Popover,
-  PopoverAnchor,
-  PopoverClose,
-  PopoverContent,
-  PopoverTrigger,
-  popoverContentVariants,
-} from "./components/ui/popover"
+export { Popover, popoverContentVariants } from "./components/ui/popover"
 export type { PopoverContentProps } from "./components/ui/popover"
 export { Pagination } from "./components/ui/pagination"
 export type {
@@ -229,24 +127,8 @@ export type {
   PaginationProps,
   PaginationSummaryState,
 } from "./components/ui/pagination"
-export {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectScrollDownButton,
-  SelectScrollUpButton,
-  SelectSeparator,
-  SelectTrigger,
-  SelectValue,
-  selectVariants,
-} from "./components/ui/select"
-export {
-  RadioGroup,
-  RadioGroupItem,
-  radioVariants,
-} from "./components/ui/radio"
+export { Select, selectVariants } from "./components/ui/select"
+export { RadioGroup, radioVariants } from "./components/ui/radio"
 export type {
   RadioGroupItemProps,
   RadioGroupProps,
@@ -257,17 +139,6 @@ export { Skeleton, skeletonVariants } from "./components/ui/skeleton"
 export type { SkeletonProps } from "./components/ui/skeleton"
 export {
   Sidebar,
-  SidebarContent,
-  SidebarFooter,
-  SidebarGroup,
-  SidebarGroupLabel,
-  SidebarHeader,
-  SidebarMenu,
-  SidebarMenuBadge,
-  SidebarMenuButton,
-  SidebarMenuItem,
-  SidebarMenuLabel,
-  SidebarSeparator,
   sidebarMenuButtonVariants,
   sidebarVariants,
 } from "./components/ui/sidebar"
@@ -281,9 +152,6 @@ export { Switch, switchVariants } from "./components/ui/switch"
 export type { SwitchProps } from "./components/ui/switch"
 export {
   Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
   tabsContentVariants,
   tabsListVariants,
   tabsTriggerVariants,
@@ -294,25 +162,10 @@ export type {
   TabsProps,
   TabsTriggerProps,
 } from "./components/ui/tabs"
-export {
-  Table,
-  TableBody,
-  TableCaption,
-  TableCell,
-  TableFooter,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "./components/ui/table"
+export { Table } from "./components/ui/table"
 export { Tag, tagVariants } from "./components/ui/tag"
 export { Textarea, textareaVariants } from "./components/ui/textarea"
-export {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-  tooltipContentVariants,
-} from "./components/ui/tooltip"
+export { Tooltip, tooltipContentVariants } from "./components/ui/tooltip"
 export type {
   TooltipContentProps,
   TooltipProviderProps,

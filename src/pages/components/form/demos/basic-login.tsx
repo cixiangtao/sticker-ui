@@ -5,12 +5,7 @@ import {
   Form,
   Input,
   RadioGroup,
-  RadioGroupItem,
   Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
   Switch,
   Tag,
   Textarea,
@@ -100,14 +95,14 @@ function Demo() {
           ]}
         >
           <Select>
-            <SelectTrigger>
-              <SelectValue placeholder="Choose A Plan" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="starter">Starter</SelectItem>
-              <SelectItem value="team">Team</SelectItem>
-              <SelectItem value="studio">Studio</SelectItem>
-            </SelectContent>
+            <Select.Trigger>
+              <Select.Value placeholder="Choose A Plan" />
+            </Select.Trigger>
+            <Select.Content>
+              <Select.Item value="starter">Starter</Select.Item>
+              <Select.Item value="team">Team</Select.Item>
+              <Select.Item value="studio">Studio</Select.Item>
+            </Select.Content>
           </Select>
         </Form.Item>
         <Form.Item
@@ -116,9 +111,9 @@ function Demo() {
           name="role"
         >
           <RadioGroup className="grid gap-3 sm:grid-cols-3">
-            <RadioGroupItem label="Owner" value="owner" />
-            <RadioGroupItem label="Maintainer" value="maintainer" />
-            <RadioGroupItem label="Viewer" value="viewer" />
+            <RadioGroup.Item label="Owner" value="owner" />
+            <RadioGroup.Item label="Maintainer" value="maintainer" />
+            <RadioGroup.Item label="Viewer" value="viewer" />
           </RadioGroup>
         </Form.Item>
         <Form.Item

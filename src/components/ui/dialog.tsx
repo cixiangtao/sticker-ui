@@ -35,10 +35,7 @@ function getDialogActionClassName(disabled?: boolean) {
   return cn("cursor-pointer", disabled && "cursor-not-allowed opacity-55")
 }
 
-/**
- * Sticker dialog root powered by Radix Dialog.
- */
-const Dialog = DialogPrimitive.Root
+const DialogRoot = DialogPrimitive.Root
 
 /**
  * Opens the dialog.
@@ -240,6 +237,21 @@ const DialogDescription = React.forwardRef<
   />
 ))
 DialogDescription.displayName = DialogPrimitive.Description.displayName
+
+/**
+ * Sticker dialog root powered by Radix Dialog.
+ */
+const Dialog = Object.assign(DialogRoot, {
+  Close: DialogClose,
+  Content: DialogContent,
+  Description: DialogDescription,
+  Footer: DialogFooter,
+  Header: DialogHeader,
+  Overlay: DialogOverlay,
+  Portal: DialogPortal,
+  Title: DialogTitle,
+  Trigger: DialogTrigger,
+})
 
 export {
   Dialog,

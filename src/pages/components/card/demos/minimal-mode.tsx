@@ -1,11 +1,4 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-  Tag,
-} from "sticker-ui"
+import { Card, Tag } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
@@ -21,37 +14,37 @@ function Demo() {
   return (
     <div className="grid gap-4 md:grid-cols-2">
       <Card>
-        <CardHeader>
+        <Card.Header>
           <Tag rounded="pill" size="sm">
             Elevated
           </Tag>
-          <CardTitle>Sticker Surface</CardTitle>
-          <CardDescription>
+          <Card.Title>Sticker Surface</Card.Title>
+          <Card.Description>
             The default card keeps a chunky outline and hard offset shadow.
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
+          </Card.Description>
+        </Card.Header>
+        <Card.Content>
           <p className="m-0 text-sm leading-6 font-medium text-su-fg-muted">
             Use this for prominent previews route cards and action groups.
           </p>
-        </CardContent>
+        </Card.Content>
       </Card>
 
       <Card variant="minimal">
-        <CardHeader>
+        <Card.Header>
           <Tag rounded="pill" size="sm">
             Minimal
           </Tag>
-          <CardTitle>Quiet Surface</CardTitle>
-          <CardDescription>
+          <Card.Title>Quiet Surface</Card.Title>
+          <Card.Description>
             Minimal cards remove the shadow and use a thin border.
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
+          </Card.Description>
+        </Card.Header>
+        <Card.Content>
           <p className="m-0 text-sm leading-6 font-medium text-su-fg-muted">
             Use this inside dense pages side panels and repeated content lists.
           </p>
-        </CardContent>
+        </Card.Content>
       </Card>
     </div>
   )

@@ -149,7 +149,7 @@ interface SelectProps extends Omit<
 /**
  * Sticker select root powered by Radix Select.
  */
-function Select({
+function SelectRoot({
   "aria-describedby": describedBy,
   "aria-invalid": invalid,
   children,
@@ -399,6 +399,21 @@ const SelectSeparator = React.forwardRef<
   />
 ))
 SelectSeparator.displayName = SelectPrimitive.Separator.displayName
+
+/**
+ * Sticker select root powered by Radix Select.
+ */
+const Select = Object.assign(SelectRoot, {
+  Content: SelectContent,
+  Group: SelectGroup,
+  Item: SelectItem,
+  Label: SelectLabel,
+  ScrollDownButton: SelectScrollDownButton,
+  ScrollUpButton: SelectScrollUpButton,
+  Separator: SelectSeparator,
+  Trigger: SelectTrigger,
+  Value: SelectValue,
+})
 
 export {
   Select,

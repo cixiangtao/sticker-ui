@@ -1,11 +1,4 @@
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "sticker-ui"
+import { Table } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
@@ -23,44 +16,44 @@ function Demo() {
       className="min-w-[640px]"
       containerClassName="bg-su-fill-info shadow-su-lg"
     >
-      <TableHeader>
-        <TableRow>
-          <TableHead>Prop</TableHead>
-          <TableHead>Type</TableHead>
-          <TableHead>Default</TableHead>
-          <TableHead>Description</TableHead>
-        </TableRow>
-      </TableHeader>
-      <TableBody>
-        <TableRow>
-          <TableCell>
+      <Table.Header>
+        <Table.Row>
+          <Table.Head>Prop</Table.Head>
+          <Table.Head>Type</Table.Head>
+          <Table.Head>Default</Table.Head>
+          <Table.Head>Description</Table.Head>
+        </Table.Row>
+      </Table.Header>
+      <Table.Body>
+        <Table.Row>
+          <Table.Cell>
             <code className="font-black">className</code>
-          </TableCell>
-          <TableCell>
+          </Table.Cell>
+          <Table.Cell>
             <code className="text-xs font-bold">string</code>
-          </TableCell>
-          <TableCell>
+          </Table.Cell>
+          <Table.Cell>
             <span className="text-xs font-bold text-su-fg-placeholder">-</span>
-          </TableCell>
-          <TableCell className="leading-6 font-medium text-su-fg-muted">
+          </Table.Cell>
+          <Table.Cell className="leading-6 font-medium text-su-fg-muted">
             Applies classes to the native table element.
-          </TableCell>
-        </TableRow>
-        <TableRow>
-          <TableCell>
+          </Table.Cell>
+        </Table.Row>
+        <Table.Row>
+          <Table.Cell>
             <code className="font-black">containerClassName</code>
-          </TableCell>
-          <TableCell>
+          </Table.Cell>
+          <Table.Cell>
             <code className="text-xs font-bold">string</code>
-          </TableCell>
-          <TableCell>
+          </Table.Cell>
+          <Table.Cell>
             <span className="text-xs font-bold text-su-fg-placeholder">-</span>
-          </TableCell>
-          <TableCell className="leading-6 font-medium text-su-fg-muted">
+          </Table.Cell>
+          <Table.Cell className="leading-6 font-medium text-su-fg-muted">
             Applies classes to the scrollable frame around the table.
-          </TableCell>
-        </TableRow>
-      </TableBody>
+          </Table.Cell>
+        </Table.Row>
+      </Table.Body>
     </Table>
   )
 }

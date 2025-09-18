@@ -157,7 +157,7 @@ interface AlertProps
 /**
  * Sticker alert surface for status messages, validation summaries, and helpful notes.
  */
-function Alert({
+function AlertRoot({
   className,
   role = "status",
   size = "md",
@@ -207,6 +207,14 @@ function AlertDescription({ className, ...props }: AlertDescriptionProps) {
     />
   )
 }
+
+/**
+ * Sticker alert surface for status messages, validation summaries, and helpful notes.
+ */
+const Alert = Object.assign(AlertRoot, {
+  Description: AlertDescription,
+  Title: AlertTitle,
+})
 
 export {
   Alert,

@@ -1,12 +1,5 @@
 import type { ComponentProps } from "react"
-import {
-  Card as StickerCard,
-  CardContent as StickerCardContent,
-  CardDescription as StickerCardDescription,
-  CardFooter as StickerCardFooter,
-  CardHeader as StickerCardHeader,
-  CardTitle as StickerCardTitle,
-} from "sticker-ui"
+import { Card as StickerCard } from "sticker-ui"
 
 import { cn } from "../../lib/utils"
 
@@ -30,9 +23,9 @@ function Card({
 function CardContent({
   className,
   ...props
-}: ComponentProps<typeof StickerCardContent>) {
+}: ComponentProps<typeof StickerCard.Content>) {
   return (
-    <StickerCardContent
+    <StickerCard.Content
       className={cn("p-5", className)}
       data-slot="preview-card-content"
       {...props}
@@ -43,9 +36,9 @@ function CardContent({
 function CardDescription({
   className,
   ...props
-}: ComponentProps<typeof StickerCardDescription>) {
+}: ComponentProps<typeof StickerCard.Description>) {
   return (
-    <StickerCardDescription
+    <StickerCard.Description
       className={cn("text-su-ink/70", className)}
       data-slot="preview-card-description"
       {...props}
@@ -56,9 +49,9 @@ function CardDescription({
 function CardFooter({
   className,
   ...props
-}: ComponentProps<typeof StickerCardFooter>) {
+}: ComponentProps<typeof StickerCard.Footer>) {
   return (
-    <StickerCardFooter
+    <StickerCard.Footer
       className={cn("items-center gap-3", className)}
       data-slot="preview-card-footer"
       {...props}
@@ -69,9 +62,9 @@ function CardFooter({
 function CardHeader({
   className,
   ...props
-}: ComponentProps<typeof StickerCardHeader>) {
+}: ComponentProps<typeof StickerCard.Header>) {
   return (
-    <StickerCardHeader
+    <StickerCard.Header
       className={cn("bg-transparent", className)}
       data-slot="preview-card-header"
       {...props}
@@ -82,9 +75,9 @@ function CardHeader({
 function CardTitle({
   className,
   ...props
-}: ComponentProps<typeof StickerCardTitle>) {
+}: ComponentProps<typeof StickerCard.Title>) {
   return (
-    <StickerCardTitle
+    <StickerCard.Title
       className={cn("font-display", className)}
       data-slot="preview-card-title"
       {...props}

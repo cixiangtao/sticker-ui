@@ -1,14 +1,5 @@
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogTrigger,
-} from "@/components/ui/alert-dialog"
+import { AlertDialog } from "sticker-ui"
+
 import { Button } from "@/components/ui/button"
 import { defineMeta } from "@/layouts/preview"
 
@@ -23,62 +14,62 @@ function Demo() {
   return (
     <div className="flex flex-wrap gap-3">
       <AlertDialog>
-        <AlertDialogTrigger asChild>
+        <AlertDialog.Trigger asChild>
           <Button size="sm" variant="outlined">
             Small check
           </Button>
-        </AlertDialogTrigger>
-        <AlertDialogContent size="sm">
-          <AlertDialogHeader>
-            <AlertDialogTitle>Reset filters?</AlertDialogTitle>
-            <AlertDialogDescription>
+        </AlertDialog.Trigger>
+        <AlertDialog.Content size="sm">
+          <AlertDialog.Header>
+            <AlertDialog.Title>Reset filters?</AlertDialog.Title>
+            <AlertDialog.Description>
               Saved column visibility will stay unchanged.
-            </AlertDialogDescription>
-          </AlertDialogHeader>
-          <AlertDialogFooter>
-            <AlertDialogCancel>Cancel</AlertDialogCancel>
-            <AlertDialogAction color="default">Reset</AlertDialogAction>
-          </AlertDialogFooter>
-        </AlertDialogContent>
+            </AlertDialog.Description>
+          </AlertDialog.Header>
+          <AlertDialog.Footer>
+            <AlertDialog.Cancel>Cancel</AlertDialog.Cancel>
+            <AlertDialog.Action color="default">Reset</AlertDialog.Action>
+          </AlertDialog.Footer>
+        </AlertDialog.Content>
       </AlertDialog>
 
       <AlertDialog>
-        <AlertDialogTrigger asChild>
+        <AlertDialog.Trigger asChild>
           <Button variant="solid">Info review</Button>
-        </AlertDialogTrigger>
-        <AlertDialogContent tone="info">
-          <AlertDialogHeader>
-            <AlertDialogTitle>Send review request?</AlertDialogTitle>
-            <AlertDialogDescription>
+        </AlertDialog.Trigger>
+        <AlertDialog.Content tone="info">
+          <AlertDialog.Header>
+            <AlertDialog.Title>Send review request?</AlertDialog.Title>
+            <AlertDialog.Description>
               Three reviewers will receive a dashboard notification.
-            </AlertDialogDescription>
-          </AlertDialogHeader>
-          <AlertDialogFooter>
-            <AlertDialogCancel>Not now</AlertDialogCancel>
-            <AlertDialogAction color="info">Send request</AlertDialogAction>
-          </AlertDialogFooter>
-        </AlertDialogContent>
+            </AlertDialog.Description>
+          </AlertDialog.Header>
+          <AlertDialog.Footer>
+            <AlertDialog.Cancel>Not now</AlertDialog.Cancel>
+            <AlertDialog.Action color="info">Send request</AlertDialog.Action>
+          </AlertDialog.Footer>
+        </AlertDialog.Content>
       </AlertDialog>
 
       <AlertDialog>
-        <AlertDialogTrigger asChild>
+        <AlertDialog.Trigger asChild>
           <Button size="lg" variant="outlined">
             Large approval
           </Button>
-        </AlertDialogTrigger>
-        <AlertDialogContent size="lg" tone="warning">
-          <AlertDialogHeader>
-            <AlertDialogTitle>Approve quarterly changes?</AlertDialogTitle>
-            <AlertDialogDescription>
+        </AlertDialog.Trigger>
+        <AlertDialog.Content size="lg" tone="warning">
+          <AlertDialog.Header>
+            <AlertDialog.Title>Approve quarterly changes?</AlertDialog.Title>
+            <AlertDialog.Description>
               Approval will unlock the next planning stage for every project
               lead in this workspace.
-            </AlertDialogDescription>
-          </AlertDialogHeader>
-          <AlertDialogFooter>
-            <AlertDialogCancel>Keep reviewing</AlertDialogCancel>
-            <AlertDialogAction color="warning">Approve</AlertDialogAction>
-          </AlertDialogFooter>
-        </AlertDialogContent>
+            </AlertDialog.Description>
+          </AlertDialog.Header>
+          <AlertDialog.Footer>
+            <AlertDialog.Cancel>Keep reviewing</AlertDialog.Cancel>
+            <AlertDialog.Action color="warning">Approve</AlertDialog.Action>
+          </AlertDialog.Footer>
+        </AlertDialog.Content>
       </AlertDialog>
     </div>
   )

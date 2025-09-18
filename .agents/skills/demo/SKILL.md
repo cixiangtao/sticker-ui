@@ -67,6 +67,7 @@ export { Demo, meta }
 - Prefer shared Tailwind tokens exposed through `src/tokens.css` and `src/globals.css` for colors, surfaces, borders, shadows, spacing, and radius before raw values, one-off hex colors, or arbitrary Tailwind classes.
 - Prefer local preview helpers before adding new dependencies.
 - Keep examples copyable through shadcn: do not rely on app-specific stores, routes, network calls, or hidden preview-only state unless the demo is explicitly about that integration.
+- For compound components imported from `sticker-ui`, demonstrate the namespace API only: use `Card.Header`, `Dialog.Content`, `Select.Item`, `Table.Row`, `Checkbox.Group`, and similar `Main.Sub` forms instead of importing subcomponents from the package entry.
 - Keep rendered demo example content in English literals so source previews stay copyable and do not depend on preview-only i18n helpers.
 - Preserve the handbook sticker visual language with warm paper surfaces, ink outlines, hard shadows, tactile states, and clear semantic structure.
 - Use semantic HTML and accessible names for interactive examples. Demonstrate keyboard and ARIA behavior when that is part of the component contract.

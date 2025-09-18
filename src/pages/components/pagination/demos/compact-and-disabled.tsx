@@ -1,10 +1,4 @@
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  Pagination,
-} from "sticker-ui"
+import { Card, Pagination } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
@@ -20,10 +14,10 @@ function Demo() {
   return (
     <div className="grid max-w-2xl gap-4">
       <Card>
-        <CardHeader>
-          <CardTitle>Compact Toolbar</CardTitle>
-        </CardHeader>
-        <CardContent>
+        <Card.Header>
+          <Card.Title>Compact Toolbar</Card.Title>
+        </Card.Header>
+        <Card.Content>
           <Pagination
             defaultPage={2}
             labels={{
@@ -33,15 +27,15 @@ function Demo() {
             showFirstLast={false}
             showSizeChanger={false}
           />
-        </CardContent>
+        </Card.Content>
       </Card>
       <Card variant="minimal">
-        <CardContent className="grid gap-3">
+        <Card.Content className="grid gap-3">
           <p className="text-sm leading-6 font-medium text-su-fg-muted">
             Disabled controls keep their layout for pending list refreshes.
           </p>
           <Pagination disabled pageCount={3} showSizeChanger={false} />
-        </CardContent>
+        </Card.Content>
       </Card>
     </div>
   )

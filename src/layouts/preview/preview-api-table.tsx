@@ -1,12 +1,4 @@
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-  Tag,
-} from "sticker-ui"
+import { Table, Tag } from "sticker-ui"
 
 import { type PreviewMessageKey, usePreviewI18n } from "../../i18n/preview"
 import {
@@ -334,18 +326,18 @@ function MemberTable({ members }: { members: PreviewApiMember[] }) {
 
   return (
     <Table className="min-w-[720px]" containerClassName="shadow-none">
-      <TableHeader>
-        <TableRow>
-          <TableHead>{tm("preview.common.prop")}</TableHead>
-          <TableHead>{tm("preview.components.type")}</TableHead>
-          <TableHead>{tm("preview.components.default")}</TableHead>
-          <TableHead>{tm("preview.components.description")}</TableHead>
-        </TableRow>
-      </TableHeader>
-      <TableBody>
+      <Table.Header>
+        <Table.Row>
+          <Table.Head>{tm("preview.common.prop")}</Table.Head>
+          <Table.Head>{tm("preview.components.type")}</Table.Head>
+          <Table.Head>{tm("preview.components.default")}</Table.Head>
+          <Table.Head>{tm("preview.components.description")}</Table.Head>
+        </Table.Row>
+      </Table.Header>
+      <Table.Body>
         {members.map((member) => (
-          <TableRow key={member.name}>
-            <TableCell>
+          <Table.Row key={member.name}>
+            <Table.Cell>
               <div className="flex items-center gap-1">
                 <code className="font-black">{member.name}</code>
                 {member.required ? (
@@ -360,11 +352,11 @@ function MemberTable({ members }: { members: PreviewApiMember[] }) {
                   </Tag>
                 ) : null}
               </div>
-            </TableCell>
-            <TableCell>
+            </Table.Cell>
+            <Table.Cell>
               <code className="text-xs font-bold">{member.type}</code>
-            </TableCell>
-            <TableCell>
+            </Table.Cell>
+            <Table.Cell>
               {member.defaultValue ? (
                 <Tag
                   as="code"
@@ -380,8 +372,8 @@ function MemberTable({ members }: { members: PreviewApiMember[] }) {
                   -
                 </span>
               )}
-            </TableCell>
-            <TableCell>
+            </Table.Cell>
+            <Table.Cell>
               <div className="grid gap-1">
                 {member.descriptionKey ? (
                   <span className="leading-6 font-medium text-su-fg-muted">
@@ -404,10 +396,10 @@ function MemberTable({ members }: { members: PreviewApiMember[] }) {
                   </span>
                 ) : null}
               </div>
-            </TableCell>
-          </TableRow>
+            </Table.Cell>
+          </Table.Row>
         ))}
-      </TableBody>
+      </Table.Body>
     </Table>
   )
 }

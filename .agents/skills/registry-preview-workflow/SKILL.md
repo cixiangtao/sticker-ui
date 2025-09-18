@@ -33,6 +33,8 @@ For route details, also use the `route-configuration` skill.
 ## Component API Docs
 
 - Document public registry component APIs with TSDoc-style `/** ... */` comments that TypeScript can expose through JSDoc AST APIs.
+- For compound components, keep the canonical source file's named subcomponent exports for API generation and shadcn copy ergonomics, then expose only the main namespace component from `src/index.ts`.
+- Attach compound subcomponents to the main component with short static names such as `Dialog.Content`, `Card.Header`, `Select.Item`, `Checkbox.Group`, and `RadioGroup.Item`.
 - Let TypeScript carry prop types; do not duplicate types with JSDoc `{type}` annotations.
 - Prefer a short prop description plus `@default`, `@remarks`, `@deprecated`, or `@example` only when they add useful generated API content.
 - Keep code identifiers, prop names, paths, and literal type examples untranslated.
@@ -66,6 +68,7 @@ Demo files should:
 - Export a named `Demo` component.
 - Export named bindings with `export { Demo, meta }`.
 - Avoid default exports.
+- Use the package namespace form for compound components in examples, such as `Dialog.Content` instead of importing `DialogContent` from `sticker-ui`.
 
 ## Preview I18n
 

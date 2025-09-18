@@ -1,4 +1,4 @@
-import { Field, Input, FieldMarker } from "sticker-ui"
+import { Field, Input } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
@@ -22,7 +22,7 @@ function Demo() {
         <Field
           label={
             <>
-              Default Caption<FieldMarker>New</FieldMarker>
+              Default Caption<Field.Marker>New</Field.Marker>
             </>
           }
         >

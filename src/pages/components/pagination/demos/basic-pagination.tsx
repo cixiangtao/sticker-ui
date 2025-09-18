@@ -1,12 +1,5 @@
 import * as React from "react"
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  Pagination,
-  Tag,
-} from "sticker-ui"
+import { Card, Pagination, Tag } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
@@ -41,13 +34,13 @@ function Demo() {
 
   return (
     <Card className="max-w-2xl">
-      <CardHeader className="grid-cols-[1fr_auto] items-center gap-3">
-        <CardTitle>Release Queue</CardTitle>
+      <Card.Header className="grid-cols-[1fr_auto] items-center gap-3">
+        <Card.Title>Release Queue</Card.Title>
         <Tag color="info" variant="outlined">
           Page {page}
         </Tag>
-      </CardHeader>
-      <CardContent className="grid gap-3">
+      </Card.Header>
+      <Card.Content className="grid gap-3">
         <ul className="grid gap-2">
           {visibleItems.map((item) => (
             <li
@@ -65,7 +58,7 @@ function Demo() {
           showSizeChanger={false}
           total={queueItems.length}
         />
-      </CardContent>
+      </Card.Content>
     </Card>
   )
 }

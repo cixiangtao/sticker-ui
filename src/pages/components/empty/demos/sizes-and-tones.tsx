@@ -1,5 +1,5 @@
 import { FileQuestion, FolderOpen, Sparkles } from "lucide-react"
-import { Empty, EmptyDescription, EmptyIcon, EmptyTitle } from "sticker-ui"
+import { Empty } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
@@ -48,9 +48,9 @@ function Demo() {
           tone={example.tone}
           variant={example.variant}
         >
-          <EmptyIcon>{example.icon}</EmptyIcon>
-          <EmptyTitle>{example.title}</EmptyTitle>
-          <EmptyDescription>{example.description}</EmptyDescription>
+          <Empty.Icon>{example.icon}</Empty.Icon>
+          <Empty.Title>{example.title}</Empty.Title>
+          <Empty.Description>{example.description}</Empty.Description>
         </Empty>
       ))}
     </div>

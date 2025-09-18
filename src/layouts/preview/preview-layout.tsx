@@ -1,6 +1,6 @@
 import { Link, Outlet, useLocation } from "@tanstack/react-router"
 import { useLayoutEffect } from "react"
-import { Card, CardContent, CardHeader, Divider, Tag } from "sticker-ui"
+import { Card, Divider, Tag } from "sticker-ui"
 
 import { usePreviewI18n } from "../../i18n/preview"
 import { NAV_GROUPS, resolvePreviewLabel } from "../../preview-data"
@@ -40,7 +40,7 @@ function PreviewLayout() {
             data-preview-content-scroll
             variant="panel"
           >
-            <CardHeader decoration divider="dashed" dividerInset="card">
+            <Card.Header decoration divider="dashed" dividerInset="card">
               <div>
                 <div className="text-xs font-extrabold text-su-fg-subtle uppercase">
                   {tm("preview.route.eyebrow")}
@@ -55,10 +55,10 @@ function PreviewLayout() {
               <Tag as="code" color="warning" variant="solid">
                 #{activeRoute.path}
               </Tag>
-            </CardHeader>
-            <CardContent>
+            </Card.Header>
+            <Card.Content>
               <Outlet />
-            </CardContent>
+            </Card.Content>
           </Card>
         </div>
       </div>

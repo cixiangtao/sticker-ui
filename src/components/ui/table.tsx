@@ -16,7 +16,7 @@ interface TableProps extends React.ComponentProps<"table"> {
 /**
  * A scrollable handbook-style table frame for dense, structured data.
  */
-function Table({ className, containerClassName, ...props }: TableProps) {
+function TableRoot({ className, containerClassName, ...props }: TableProps) {
   return (
     <div
       className={cn(
@@ -118,6 +118,19 @@ function TableRow({ className, ...props }: React.ComponentProps<"tr">) {
     />
   )
 }
+
+/**
+ * Scrollable handbook-style table frame with composable semantic table slots.
+ */
+const Table = Object.assign(TableRoot, {
+  Body: TableBody,
+  Caption: TableCaption,
+  Cell: TableCell,
+  Footer: TableFooter,
+  Head: TableHead,
+  Header: TableHeader,
+  Row: TableRow,
+})
 
 export {
   Table,

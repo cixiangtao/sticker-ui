@@ -1,5 +1,5 @@
 import * as React from "react"
-import { RadioGroup, RadioGroupItem } from "sticker-ui"
+import { RadioGroup } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
@@ -29,7 +29,7 @@ function Demo() {
           ["docs", "API docs"],
           ["registry", "Registry JSON"],
         ].map(([itemValue, label]) => (
-          <RadioGroupItem key={itemValue} label={label} value={itemValue} />
+          <RadioGroup.Item key={itemValue} label={label} value={itemValue} />
         ))}
       </RadioGroup>
       <div className="rounded-su-lg border border-su-ink bg-su-surface px-3 py-2 text-sm font-extrabold">

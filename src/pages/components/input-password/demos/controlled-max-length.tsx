@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Button, Field, InputPassword } from "sticker-ui"
+import { Button, Field, Input } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
@@ -38,7 +38,7 @@ function Demo() {
           </span>
         }
       >
-        <InputPassword
+        <Input.Password
           autoComplete="new-password"
           hideLabel="Hide"
           maxLength={MAX_PASSWORD_LENGTH}

@@ -1,16 +1,6 @@
 import * as React from "react"
+import { AlertDialog } from "sticker-ui"
 
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogTrigger,
-} from "@/components/ui/alert-dialog"
 import { Button } from "@/components/ui/button"
 import { Tag } from "@/components/ui/tag"
 import { defineMeta } from "@/layouts/preview"
@@ -30,28 +20,28 @@ function Demo() {
   return (
     <div className="flex flex-col items-start gap-3">
       <AlertDialog open={open} onOpenChange={setOpen}>
-        <AlertDialogTrigger asChild>
+        <AlertDialog.Trigger asChild>
           <Button variant="solid">Publish changes</Button>
-        </AlertDialogTrigger>
-        <AlertDialogContent tone="warning">
-          <AlertDialogHeader>
-            <AlertDialogTitle>Publish these settings?</AlertDialogTitle>
-            <AlertDialogDescription>
+        </AlertDialog.Trigger>
+        <AlertDialog.Content tone="warning">
+          <AlertDialog.Header>
+            <AlertDialog.Title>Publish these settings?</AlertDialog.Title>
+            <AlertDialog.Description>
               The current team will see the new navigation order immediately.
-            </AlertDialogDescription>
-          </AlertDialogHeader>
-          <AlertDialogFooter>
-            <AlertDialogCancel onClick={() => setLastDecision("Canceled")}>
+            </AlertDialog.Description>
+          </AlertDialog.Header>
+          <AlertDialog.Footer>
+            <AlertDialog.Cancel onClick={() => setLastDecision("Canceled")}>
               Review again
-            </AlertDialogCancel>
-            <AlertDialogAction
+            </AlertDialog.Cancel>
+            <AlertDialog.Action
               color="warning"
               onClick={() => setLastDecision("Published")}
             >
               Publish
-            </AlertDialogAction>
-          </AlertDialogFooter>
-        </AlertDialogContent>
+            </AlertDialog.Action>
+          </AlertDialog.Footer>
+        </AlertDialog.Content>
       </AlertDialog>
       <Tag color="warning">{lastDecision}</Tag>
     </div>

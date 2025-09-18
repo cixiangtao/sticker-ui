@@ -331,6 +331,7 @@
   "card": {
     "components": [
       {
+        "descriptionKey": "api.card.components.Card.description",
         "name": "Card",
         "props": {
           "descriptionKey": "api.card.components.Card.props.description",
@@ -733,7 +734,11 @@
     ],
     "descriptionKey": "api.card.description",
     "exports": [
-      { "kind": "component", "name": "Card" },
+      {
+        "descriptionKey": "api.card.exports.Card.description",
+        "kind": "component",
+        "name": "Card"
+      },
       { "kind": "component", "name": "CardContent" },
       { "kind": "component", "name": "CardDescription" },
       { "kind": "component", "name": "CardFooter" },
@@ -9201,6 +9206,7 @@
   "field": {
     "components": [
       {
+        "descriptionKey": "api.field.components.Field.description",
         "name": "Field",
         "props": {
           "descriptionKey": "api.field.components.Field.props.description",
@@ -9845,7 +9851,11 @@
     ],
     "descriptionKey": "api.field.description",
     "exports": [
-      { "kind": "component", "name": "Field" },
+      {
+        "descriptionKey": "api.field.exports.Field.description",
+        "kind": "component",
+        "name": "Field"
+      },
       { "kind": "type", "name": "FieldClassNames" },
       { "kind": "component", "name": "FieldDescription" },
       { "kind": "component", "name": "FieldLabel" },

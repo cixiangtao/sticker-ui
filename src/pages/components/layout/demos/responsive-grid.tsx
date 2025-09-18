@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader, CardTitle, Grid, Tag } from "sticker-ui"
+import { Card, Grid, Tag } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
@@ -41,18 +41,18 @@ function Demo() {
           key={item.label}
           padding="sm"
         >
-          <CardHeader divider="dashed">
+          <Card.Header divider="dashed">
             <Tag size="sm" variant="outlined">
               {item.status}
             </Tag>
-            <CardTitle>{item.label}</CardTitle>
-          </CardHeader>
-          <CardContent>
+            <Card.Title>{item.label}</Card.Title>
+          </Card.Header>
+          <Card.Content>
             <p className="m-0 text-sm leading-6 font-medium text-su-fg-muted">
               The grid owns flow and gaps while each card keeps its own sticker
               surface.
             </p>
-          </CardContent>
+          </Card.Content>
         </Card>
       ))}
     </Grid>

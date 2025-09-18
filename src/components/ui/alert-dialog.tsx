@@ -31,10 +31,7 @@ const alertDialogContentVariants = cva(
   },
 )
 
-/**
- * Sticker alert dialog root powered by Radix AlertDialog.
- */
-const AlertDialog = AlertDialogPrimitive.Root
+const AlertDialogRoot = AlertDialogPrimitive.Root
 
 /**
  * Opens the alert dialog.
@@ -284,6 +281,22 @@ const AlertDialogCancel = React.forwardRef<
   ),
 )
 AlertDialogCancel.displayName = AlertDialogPrimitive.Cancel.displayName
+
+/**
+ * Sticker alert dialog root powered by Radix AlertDialog.
+ */
+const AlertDialog = Object.assign(AlertDialogRoot, {
+  Action: AlertDialogAction,
+  Cancel: AlertDialogCancel,
+  Content: AlertDialogContent,
+  Description: AlertDialogDescription,
+  Footer: AlertDialogFooter,
+  Header: AlertDialogHeader,
+  Overlay: AlertDialogOverlay,
+  Portal: AlertDialogPortal,
+  Title: AlertDialogTitle,
+  Trigger: AlertDialogTrigger,
+})
 
 export {
   AlertDialog,

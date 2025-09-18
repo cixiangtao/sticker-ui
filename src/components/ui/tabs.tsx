@@ -180,7 +180,7 @@ interface TabsProps extends Omit<
 /**
  * Sticker tabs root powered by Radix Tabs.
  */
-function Tabs({
+function TabsRoot({
   children,
   className,
   onChange,
@@ -367,6 +367,15 @@ const TabsContent = React.forwardRef<
   )
 })
 TabsContent.displayName = TabsPrimitive.Content.displayName
+
+/**
+ * Sticker tabs root powered by Radix Tabs.
+ */
+const Tabs = Object.assign(TabsRoot, {
+  Content: TabsContent,
+  List: TabsList,
+  Trigger: TabsTrigger,
+})
 
 export {
   Tabs,

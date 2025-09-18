@@ -229,6 +229,9 @@ const ZH_PREVIEW_API_DOC_MESSAGES = defineMessages({
   "api.card.description": {
     zh: "用于卡片、面板和内容分组的可组合 handbook 贴纸表面。",
   },
+  "api.card.components.Card.description": {
+    zh: "带有可组合标题栏、内容区和底部插槽的贴纸卡片表面。",
+  },
   "api.card.components.Card.props.description": {
     zh: "贴纸卡片根元素的 props。",
   },
@@ -264,6 +267,9 @@ const ZH_PREVIEW_API_DOC_MESSAGES = defineMessages({
   },
   "api.card.components.CardHeader.props.members.dividerInset.description": {
     zh: "控制标题栏分隔线的左右缩进。",
+  },
+  "api.card.exports.Card.description": {
+    zh: "带有可组合标题栏、内容区和底部插槽的贴纸卡片表面。",
   },
   "api.card.exports.cardVariants.description": {
     zh: "根据结构变体生成贴纸卡片的 className。",
@@ -478,6 +484,9 @@ const ZH_PREVIEW_API_DOC_MESSAGES = defineMessages({
   "api.field.description": {
     zh: "可自动绑定控件的贴纸字段外壳，以及低层 FieldLabel 标题组件。",
   },
+  "api.field.components.Field.description": {
+    zh: "绑定标题、描述、id 和无障碍辅助文案的字段外壳。",
+  },
   "api.field.components.Field.props.description": {
     zh: "贴纸字段外壳的 props。",
   },
@@ -558,6 +567,9 @@ const ZH_PREVIEW_API_DOC_MESSAGES = defineMessages({
   },
   "api.field.components.FieldMarker.props.remarks": {
     zh: "继承原生 span 属性，并加入贴纸色调变体。",
+  },
+  "api.field.exports.Field.description": {
+    zh: "绑定标题、描述、id 和无障碍辅助文案的字段外壳。",
   },
   "api.field.exports.FieldProps.description": {
     zh: "贴纸字段外壳的 props。",

@@ -1,11 +1,4 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-  Tag,
-} from "sticker-ui"
+import { Card, Tag } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
@@ -57,18 +50,18 @@ function Demo() {
     <div className="grid gap-4 md:grid-cols-2">
       {cards.map((card) => (
         <Card className={card.cardClassName} key={card.title}>
-          <CardHeader className={card.headerClassName}>
+          <Card.Header className={card.headerClassName}>
             <Tag color={card.tagColor} rounded="pill" size="sm">
               {card.badge}
             </Tag>
-            <CardTitle>{card.title}</CardTitle>
-            <CardDescription>{card.description}</CardDescription>
-          </CardHeader>
-          <CardContent>
+            <Card.Title>{card.title}</Card.Title>
+            <Card.Description>{card.description}</Card.Description>
+          </Card.Header>
+          <Card.Content>
             <p className="m-0 text-sm leading-6 font-medium text-su-fg-muted">
               Use root and slot className values to tune the visual context.
             </p>
-          </CardContent>
+          </Card.Content>
         </Card>
       ))}
     </div>

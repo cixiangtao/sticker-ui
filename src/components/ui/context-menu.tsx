@@ -53,10 +53,7 @@ const contextMenuItemVariants = cva(
   },
 )
 
-/**
- * Sticker context menu root powered by Radix ContextMenu.
- */
-const ContextMenu = ContextMenuPrimitive.Root
+const ContextMenuRoot = ContextMenuPrimitive.Root
 
 /**
  * Area that opens the context menu on secondary click.
@@ -360,6 +357,26 @@ function ContextMenuShortcut({
     />
   )
 }
+
+/**
+ * Sticker context menu root powered by Radix ContextMenu.
+ */
+const ContextMenu = Object.assign(ContextMenuRoot, {
+  CheckboxItem: ContextMenuCheckboxItem,
+  Content: ContextMenuContent,
+  Group: ContextMenuGroup,
+  Item: ContextMenuItem,
+  Label: ContextMenuLabel,
+  Portal: ContextMenuPortal,
+  RadioGroup: ContextMenuRadioGroup,
+  RadioItem: ContextMenuRadioItem,
+  Separator: ContextMenuSeparator,
+  Shortcut: ContextMenuShortcut,
+  Sub: ContextMenuSub,
+  SubContent: ContextMenuSubContent,
+  SubTrigger: ContextMenuSubTrigger,
+  Trigger: ContextMenuTrigger,
+})
 
 export {
   ContextMenu,

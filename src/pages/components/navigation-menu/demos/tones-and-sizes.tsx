@@ -1,13 +1,5 @@
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
-} from "@/components/ui/navigation-menu"
+import { NavigationMenu } from "sticker-ui"
+
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -22,43 +14,43 @@ function Demo() {
   return (
     <div className="grid gap-5">
       <NavigationMenu size="sm" tone="info">
-        <NavigationMenuList>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>Compact</NavigationMenuTrigger>
-            <NavigationMenuContent>
+        <NavigationMenu.List>
+          <NavigationMenu.Item>
+            <NavigationMenu.Trigger>Compact</NavigationMenu.Trigger>
+            <NavigationMenu.Content>
               <div className="grid w-72 gap-1 p-2">
-                <NavigationMenuLink href="#/compact/overview">
+                <NavigationMenu.Link href="#/compact/overview">
                   Overview
-                </NavigationMenuLink>
-                <NavigationMenuLink href="#/compact/settings">
+                </NavigationMenu.Link>
+                <NavigationMenu.Link href="#/compact/settings">
                   Settings
-                </NavigationMenuLink>
+                </NavigationMenu.Link>
               </div>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-        </NavigationMenuList>
-        <NavigationMenuIndicator />
-        <NavigationMenuViewport />
+            </NavigationMenu.Content>
+          </NavigationMenu.Item>
+        </NavigationMenu.List>
+        <NavigationMenu.Indicator />
+        <NavigationMenu.Viewport />
       </NavigationMenu>
 
       <NavigationMenu size="lg" tone="warning">
-        <NavigationMenuList>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>Roomy</NavigationMenuTrigger>
-            <NavigationMenuContent>
+        <NavigationMenu.List>
+          <NavigationMenu.Item>
+            <NavigationMenu.Trigger>Roomy</NavigationMenu.Trigger>
+            <NavigationMenu.Content>
               <div className="grid w-80 gap-1 p-3">
-                <NavigationMenuLink href="#/roomy/approvals">
+                <NavigationMenu.Link href="#/roomy/approvals">
                   Approval center
-                </NavigationMenuLink>
-                <NavigationMenuLink href="#/roomy/audit">
+                </NavigationMenu.Link>
+                <NavigationMenu.Link href="#/roomy/audit">
                   Audit timeline
-                </NavigationMenuLink>
+                </NavigationMenu.Link>
               </div>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-        </NavigationMenuList>
-        <NavigationMenuIndicator />
-        <NavigationMenuViewport />
+            </NavigationMenu.Content>
+          </NavigationMenu.Item>
+        </NavigationMenu.List>
+        <NavigationMenu.Indicator />
+        <NavigationMenu.Viewport />
       </NavigationMenu>
     </div>
   )

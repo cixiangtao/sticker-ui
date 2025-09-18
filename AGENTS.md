@@ -16,6 +16,7 @@
 - Keep registry components source-only and easy to copy through shadcn.
 - Use `src/components/ui/<name>.tsx` as the canonical component source. Do not add component source under `registry/default`.
 - Prefer named exports throughout project source. Add default exports only when external tooling or generated modules require them.
+- For compound registry components, keep named subcomponent exports in the canonical source file for TSDoc, API docs, and shadcn copy usage, but expose only the main namespace component from `src/index.ts`. Demos and package docs should use `Main.Sub` syntax.
 - Prioritize component completeness, ergonomics, and maintainability. Add focused runtime dependencies when they materially improve component quality or avoid brittle in-house infrastructure, and declare them on the registry item that needs them.
 - Preserve the handbook sticker style: warm paper surfaces, chunky outlines, hard offset shadows, tactile states, and accessible semantics.
 - Use `Empty` as the default display for component-owned empty states; declare the `empty` registry dependency for any registry item that renders it internally.

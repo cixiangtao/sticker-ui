@@ -115,7 +115,7 @@ interface SidebarProps
 /**
  * PC-first sticker sidebar shell for app navigation.
  */
-function Sidebar({
+function SidebarRoot({
   children,
   className,
   collapsed = false,
@@ -384,6 +384,23 @@ function SidebarSeparator({
     />
   )
 }
+
+/**
+ * Sticker sidebar shell with composable navigation slots.
+ */
+const Sidebar = Object.assign(SidebarRoot, {
+  Content: SidebarContent,
+  Footer: SidebarFooter,
+  Group: SidebarGroup,
+  GroupLabel: SidebarGroupLabel,
+  Header: SidebarHeader,
+  Menu: SidebarMenu,
+  MenuBadge: SidebarMenuBadge,
+  MenuButton: SidebarMenuButton,
+  MenuItem: SidebarMenuItem,
+  MenuLabel: SidebarMenuLabel,
+  Separator: SidebarSeparator,
+})
 
 export {
   Sidebar,

@@ -1,4 +1,4 @@
-import { Badge, Card, CardContent, CardHeader, CardTitle } from "sticker-ui"
+import { Badge, Card } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
@@ -35,14 +35,14 @@ function Demo() {
           tone="warning"
         >
           <Card className="min-w-40" padding="sm" variant="minimal">
-            <CardHeader decoration={null}>
-              <CardTitle className="text-sm capitalize">
+            <Card.Header decoration={null}>
+              <Card.Title className="text-sm capitalize">
                 {placement.replace("-", " ")}
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="text-sm font-medium text-su-fg-muted">
+              </Card.Title>
+            </Card.Header>
+            <Card.Content className="text-sm font-medium text-su-fg-muted">
               {BADGE_SIZES[index % BADGE_SIZES.length][1]} updates
-            </CardContent>
+            </Card.Content>
           </Card>
         </Badge>
       ))}

@@ -1,4 +1,4 @@
-import { Field, Input, FieldMarker } from "sticker-ui"
+import { Field, Input } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
@@ -32,10 +32,10 @@ function Demo() {
       </Field>
       <Field
         className="rounded-su-lg border border-su-ink bg-white p-4"
-        description="FieldMarker is for extra status text not required semantics."
+        description="Field.Marker is for extra status text not required semantics."
         label={
           <>
-            Custom Marker<FieldMarker tone="success">New</FieldMarker>
+            Custom Marker<Field.Marker tone="success">New</Field.Marker>
           </>
         }
       >

@@ -1,4 +1,4 @@
-import { Field, InputPassword } from "sticker-ui"
+import { Field, Input } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
@@ -18,7 +18,7 @@ function Demo() {
         label="Password"
         required
       >
-        <InputPassword
+        <Input.Password
           autoComplete="current-password"
           hideLabel="Hide"
           placeholder="Enter Password"

@@ -1,4 +1,4 @@
-import { RadioGroup, RadioGroupItem } from "sticker-ui"
+import { RadioGroup } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
@@ -18,17 +18,17 @@ function Demo() {
       tone="secondary"
     >
       <div className="rounded-su-xl border border-su-ink bg-white/80 p-4">
-        <RadioGroupItem label="Small Option" size="sm" value="small" />
+        <RadioGroup.Item label="Small Option" size="sm" value="small" />
       </div>
       <div className="rounded-su-xl border border-su-ink bg-white/80 p-4">
-        <RadioGroupItem
+        <RadioGroup.Item
           label="Standard Choice"
           value="standard"
           variant="filled"
         />
       </div>
       <div className="rounded-su-xl border border-su-ink bg-white/80 p-4">
-        <RadioGroupItem
+        <RadioGroup.Item
           label="Roomy Route"
           size="lg"
           tone="warning"

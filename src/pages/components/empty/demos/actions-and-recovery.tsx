@@ -1,12 +1,5 @@
 import { RefreshCcw, SearchX } from "lucide-react"
-import {
-  Button,
-  Empty,
-  EmptyActions,
-  EmptyDescription,
-  EmptyIcon,
-  EmptyTitle,
-} from "sticker-ui"
+import { Button, Empty } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
@@ -21,21 +14,21 @@ const meta = defineMeta({
 function Demo() {
   return (
     <Empty className="max-w-2xl" tone="warning">
-      <EmptyIcon>
+      <Empty.Icon>
         <SearchX />
-      </EmptyIcon>
-      <EmptyTitle>No matching components</EmptyTitle>
-      <EmptyDescription>
+      </Empty.Icon>
+      <Empty.Title>No matching components</Empty.Title>
+      <Empty.Description>
         Try clearing the active filters or refresh the registry after adding new
         source files.
-      </EmptyDescription>
-      <EmptyActions>
+      </Empty.Description>
+      <Empty.Actions>
         <Button size="sm">Clear Filters</Button>
         <Button size="sm" variant="outlined">
           <RefreshCcw />
           Refresh
         </Button>
-      </EmptyActions>
+      </Empty.Actions>
     </Empty>
   )
 }

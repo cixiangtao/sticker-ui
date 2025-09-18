@@ -1,10 +1,4 @@
-import {
-  Button,
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "sticker-ui"
+import { Button, Tooltip } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
@@ -18,30 +12,30 @@ const meta = defineMeta({
 
 function Demo() {
   return (
-    <TooltipProvider delayDuration={500} skipDelayDuration={0}>
+    <Tooltip.Provider delayDuration={500} skipDelayDuration={0}>
       <div className="flex flex-wrap gap-3">
         <Tooltip>
-          <TooltipTrigger asChild>
+          <Tooltip.Trigger asChild>
             <Button color="success" variant="outlined">
               Slow Hint
             </Button>
-          </TooltipTrigger>
-          <TooltipContent size="lg" tone="success">
+          </Tooltip.Trigger>
+          <Tooltip.Content size="lg" tone="success">
             Opens after a longer provider delay.
-          </TooltipContent>
+          </Tooltip.Content>
         </Tooltip>
         <Tooltip>
-          <TooltipTrigger asChild>
+          <Tooltip.Trigger asChild>
             <Button color="secondary" variant="outlined">
               No Arrow
             </Button>
-          </TooltipTrigger>
-          <TooltipContent showArrow={false} size="sm" tone="secondary">
+          </Tooltip.Trigger>
+          <Tooltip.Content showArrow={false} size="sm" tone="secondary">
             Compact hint without the pointer arrow.
-          </TooltipContent>
+          </Tooltip.Content>
         </Tooltip>
       </div>
-    </TooltipProvider>
+    </Tooltip.Provider>
   )
 }
 

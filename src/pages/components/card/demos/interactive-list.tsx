@@ -1,11 +1,4 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-  Tag,
-} from "sticker-ui"
+import { Card, Tag } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 import { cn } from "@/lib/utils"
@@ -55,7 +48,7 @@ function Demo() {
           interactive
           key={task.title}
         >
-          <CardHeader
+          <Card.Header
             className={cn(
               "grid-cols-[1fr_auto] items-start gap-3",
               task.headerClassName,
@@ -65,19 +58,19 @@ function Demo() {
               <Tag color={task.tagColor} rounded="pill" size="sm">
                 {task.status}
               </Tag>
-              <CardTitle>{task.title}</CardTitle>
-              <CardDescription>{task.description}</CardDescription>
+              <Card.Title>{task.title}</Card.Title>
+              <Card.Description>{task.description}</Card.Description>
             </div>
             <Tag size="sm" variant="outlined">
               Open
             </Tag>
-          </CardHeader>
-          <CardContent>
+          </Card.Header>
+          <Card.Content>
             <p className="m-0 text-sm leading-6 font-medium text-su-fg-muted">
               Add handlers at the card root when the whole surface behaves like
               one action.
             </p>
-          </CardContent>
+          </Card.Content>
         </Card>
       ))}
     </div>

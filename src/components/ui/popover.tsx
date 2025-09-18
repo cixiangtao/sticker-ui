@@ -35,10 +35,7 @@ function getPopoverActionClassName(disabled?: boolean) {
   return cn("cursor-pointer", disabled && "cursor-not-allowed opacity-55")
 }
 
-/**
- * Sticker popover root powered by Radix Popover.
- */
-const Popover = PopoverPrimitive.Root
+const PopoverRoot = PopoverPrimitive.Root
 
 /**
  * Opens the popover.
@@ -146,6 +143,16 @@ const PopoverContent = React.forwardRef<
   ),
 )
 PopoverContent.displayName = PopoverPrimitive.Content.displayName
+
+/**
+ * Sticker popover root powered by Radix Popover.
+ */
+const Popover = Object.assign(PopoverRoot, {
+  Anchor: PopoverAnchor,
+  Close: PopoverClose,
+  Content: PopoverContent,
+  Trigger: PopoverTrigger,
+})
 
 export {
   Popover,

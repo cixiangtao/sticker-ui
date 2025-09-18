@@ -1,4 +1,4 @@
-import { Alert, AlertDescription, AlertTitle } from "sticker-ui"
+import { Alert } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
@@ -14,18 +14,20 @@ function Demo() {
   return (
     <div className="grid gap-3 md:grid-cols-3">
       <Alert size="sm" tone="info" variant="filled">
-        <AlertTitle>Filled</AlertTitle>
-        <AlertDescription>Use for prominent inline feedback.</AlertDescription>
+        <Alert.Title>Filled</Alert.Title>
+        <Alert.Description>
+          Use for prominent inline feedback.
+        </Alert.Description>
       </Alert>
       <Alert size="sm" tone="success" variant="outlined">
-        <AlertTitle>Outlined</AlertTitle>
-        <AlertDescription>Use for calmer status notes.</AlertDescription>
+        <Alert.Title>Outlined</Alert.Title>
+        <Alert.Description>Use for calmer status notes.</Alert.Description>
       </Alert>
       <Alert size="sm" tone="warning" variant="stripe">
-        <AlertTitle>Stripe</AlertTitle>
-        <AlertDescription>
+        <Alert.Title>Stripe</Alert.Title>
+        <Alert.Description>
           Use for compact documentation hints.
-        </AlertDescription>
+        </Alert.Description>
       </Alert>
     </div>
   )

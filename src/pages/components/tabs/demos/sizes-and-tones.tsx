@@ -1,4 +1,4 @@
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "sticker-ui"
+import { Tabs } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
@@ -14,43 +14,43 @@ function Demo() {
   return (
     <div className="grid gap-4 lg:grid-cols-3">
       <Tabs defaultValue="today" size="sm" tone="success">
-        <TabsList aria-label="Small status tabs">
-          <TabsTrigger value="today">Today</TabsTrigger>
-          <TabsTrigger value="week">Week</TabsTrigger>
-        </TabsList>
-        <TabsContent value="today">
+        <Tabs.List aria-label="Small status tabs">
+          <Tabs.Trigger value="today">Today</Tabs.Trigger>
+          <Tabs.Trigger value="week">Week</Tabs.Trigger>
+        </Tabs.List>
+        <Tabs.Content value="today">
           <p className="m-0 text-xs leading-5 font-bold">
             Compact tabs fit small status modules.
           </p>
-        </TabsContent>
-        <TabsContent value="week">Weekly view is ready.</TabsContent>
+        </Tabs.Content>
+        <Tabs.Content value="week">Weekly view is ready.</Tabs.Content>
       </Tabs>
 
       <Tabs defaultValue="draft" tone="secondary" variant="quiet">
-        <TabsList aria-label="Quiet filter tabs">
-          <TabsTrigger value="draft">Draft</TabsTrigger>
-          <TabsTrigger value="live">Live</TabsTrigger>
-        </TabsList>
-        <TabsContent value="draft">
+        <Tabs.List aria-label="Quiet filter tabs">
+          <Tabs.Trigger value="draft">Draft</Tabs.Trigger>
+          <Tabs.Trigger value="live">Live</Tabs.Trigger>
+        </Tabs.List>
+        <Tabs.Content value="draft">
           <p className="m-0 text-sm leading-6 font-medium">
             Quiet tabs keep filter groups light inside larger panels.
           </p>
-        </TabsContent>
-        <TabsContent value="live">Published work appears here.</TabsContent>
+        </Tabs.Content>
+        <Tabs.Content value="live">Published work appears here.</Tabs.Content>
       </Tabs>
 
       <Tabs defaultValue="docs" size="lg" tone="info" variant="underline">
-        <TabsList aria-label="Underline tabs">
-          <TabsTrigger value="docs">Docs</TabsTrigger>
-          <TabsTrigger value="api">API</TabsTrigger>
-        </TabsList>
-        <TabsContent value="docs">
+        <Tabs.List aria-label="Underline tabs">
+          <Tabs.Trigger value="docs">Docs</Tabs.Trigger>
+          <Tabs.Trigger value="api">API</Tabs.Trigger>
+        </Tabs.List>
+        <Tabs.Content value="docs">
           <p className="m-0 text-base leading-7 font-medium">
             Underline tabs feel lighter when the surrounding panel already owns
             the sticker frame.
           </p>
-        </TabsContent>
-        <TabsContent value="api">API examples appear here.</TabsContent>
+        </Tabs.Content>
+        <Tabs.Content value="api">API examples appear here.</Tabs.Content>
       </Tabs>
     </div>
   )

@@ -70,10 +70,7 @@ function TooltipProvider({
   )
 }
 
-/**
- * Sticker tooltip root powered by Radix Tooltip.
- */
-const Tooltip = TooltipPrimitive.Root
+const TooltipRoot = TooltipPrimitive.Root
 
 /**
  * Opens the tooltip on hover or focus.
@@ -157,6 +154,15 @@ const TooltipContent = React.forwardRef<
   ),
 )
 TooltipContent.displayName = TooltipPrimitive.Content.displayName
+
+/**
+ * Sticker tooltip root powered by Radix Tooltip.
+ */
+const Tooltip = Object.assign(TooltipRoot, {
+  Content: TooltipContent,
+  Provider: TooltipProvider,
+  Trigger: TooltipTrigger,
+})
 
 export {
   Tooltip,

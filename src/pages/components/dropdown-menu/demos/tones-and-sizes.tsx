@@ -1,11 +1,6 @@
+import { DropdownMenu } from "sticker-ui"
+
 import { Button } from "@/components/ui/button"
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
@@ -19,41 +14,41 @@ function Demo() {
   return (
     <div className="flex flex-wrap gap-3">
       <DropdownMenu>
-        <DropdownMenuTrigger asChild>
+        <DropdownMenu.Trigger asChild>
           <Button size="sm" variant="outlined">
             Small
           </Button>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent size="sm">
-          <DropdownMenuLabel>Compact menu</DropdownMenuLabel>
-          <DropdownMenuItem>Pin row</DropdownMenuItem>
-          <DropdownMenuItem>Copy ID</DropdownMenuItem>
-        </DropdownMenuContent>
+        </DropdownMenu.Trigger>
+        <DropdownMenu.Content size="sm">
+          <DropdownMenu.Label>Compact menu</DropdownMenu.Label>
+          <DropdownMenu.Item>Pin row</DropdownMenu.Item>
+          <DropdownMenu.Item>Copy ID</DropdownMenu.Item>
+        </DropdownMenu.Content>
       </DropdownMenu>
 
       <DropdownMenu>
-        <DropdownMenuTrigger asChild>
+        <DropdownMenu.Trigger asChild>
           <Button variant="solid">Info</Button>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent tone="info">
-          <DropdownMenuLabel>Review queue</DropdownMenuLabel>
-          <DropdownMenuItem>Assign reviewer</DropdownMenuItem>
-          <DropdownMenuItem>Mark as ready</DropdownMenuItem>
-        </DropdownMenuContent>
+        </DropdownMenu.Trigger>
+        <DropdownMenu.Content tone="info">
+          <DropdownMenu.Label>Review queue</DropdownMenu.Label>
+          <DropdownMenu.Item>Assign reviewer</DropdownMenu.Item>
+          <DropdownMenu.Item>Mark as ready</DropdownMenu.Item>
+        </DropdownMenu.Content>
       </DropdownMenu>
 
       <DropdownMenu>
-        <DropdownMenuTrigger asChild>
+        <DropdownMenu.Trigger asChild>
           <Button size="lg" variant="outlined">
             Large
           </Button>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent size="lg" tone="warning">
-          <DropdownMenuLabel>Batch update</DropdownMenuLabel>
-          <DropdownMenuItem>Move selected</DropdownMenuItem>
-          <DropdownMenuItem>Schedule reminder</DropdownMenuItem>
-          <DropdownMenuItem tone="danger">Remove selected</DropdownMenuItem>
-        </DropdownMenuContent>
+        </DropdownMenu.Trigger>
+        <DropdownMenu.Content size="lg" tone="warning">
+          <DropdownMenu.Label>Batch update</DropdownMenu.Label>
+          <DropdownMenu.Item>Move selected</DropdownMenu.Item>
+          <DropdownMenu.Item>Schedule reminder</DropdownMenu.Item>
+          <DropdownMenu.Item tone="danger">Remove selected</DropdownMenu.Item>
+        </DropdownMenu.Content>
       </DropdownMenu>
     </div>
   )

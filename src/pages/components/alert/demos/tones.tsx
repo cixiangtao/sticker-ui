@@ -1,4 +1,4 @@
-import { Alert, AlertDescription, AlertTitle } from "sticker-ui"
+import { Alert } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
@@ -14,28 +14,28 @@ function Demo() {
   return (
     <div className="grid gap-3 md:grid-cols-2">
       <Alert tone="success">
-        <AlertTitle>Ready To Ship</AlertTitle>
-        <AlertDescription>
+        <Alert.Title>Ready To Ship</Alert.Title>
+        <Alert.Description>
           All checks passed for this component.
-        </AlertDescription>
+        </Alert.Description>
       </Alert>
       <Alert tone="warning">
-        <AlertTitle>Needs Review</AlertTitle>
-        <AlertDescription>
+        <Alert.Title>Needs Review</Alert.Title>
+        <Alert.Description>
           Translation copy changed in this demo.
-        </AlertDescription>
+        </Alert.Description>
       </Alert>
       <Alert tone="danger">
-        <AlertTitle>Build Failed</AlertTitle>
-        <AlertDescription>
+        <Alert.Title>Build Failed</Alert.Title>
+        <Alert.Description>
           Run lint before handing off the registry.
-        </AlertDescription>
+        </Alert.Description>
       </Alert>
       <Alert tone="secondary">
-        <AlertTitle>Design Note</AlertTitle>
-        <AlertDescription>
+        <Alert.Title>Design Note</Alert.Title>
+        <Alert.Description>
           Keep nested surfaces quieter than this alert.
-        </AlertDescription>
+        </Alert.Description>
       </Alert>
     </div>
   )

@@ -1,14 +1,5 @@
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogTrigger,
-} from "@/components/ui/alert-dialog"
+import { AlertDialog } from "sticker-ui"
+
 import { Button } from "@/components/ui/button"
 import { defineMeta } from "@/layouts/preview"
 
@@ -22,24 +13,24 @@ const meta = defineMeta({
 function Demo() {
   return (
     <AlertDialog>
-      <AlertDialogTrigger asChild>
+      <AlertDialog.Trigger asChild>
         <Button color="danger" variant="outlined">
           Delete workspace
         </Button>
-      </AlertDialogTrigger>
-      <AlertDialogContent tone="danger">
-        <AlertDialogHeader>
-          <AlertDialogTitle>Delete this workspace?</AlertDialogTitle>
-          <AlertDialogDescription>
+      </AlertDialog.Trigger>
+      <AlertDialog.Content tone="danger">
+        <AlertDialog.Header>
+          <AlertDialog.Title>Delete this workspace?</AlertDialog.Title>
+          <AlertDialog.Description>
             This will remove all pinned boards, saved filters, and shared
             shortcuts for the workspace.
-          </AlertDialogDescription>
-        </AlertDialogHeader>
-        <AlertDialogFooter>
-          <AlertDialogCancel>Keep workspace</AlertDialogCancel>
-          <AlertDialogAction>Delete workspace</AlertDialogAction>
-        </AlertDialogFooter>
-      </AlertDialogContent>
+          </AlertDialog.Description>
+        </AlertDialog.Header>
+        <AlertDialog.Footer>
+          <AlertDialog.Cancel>Keep workspace</AlertDialog.Cancel>
+          <AlertDialog.Action>Delete workspace</AlertDialog.Action>
+        </AlertDialog.Footer>
+      </AlertDialog.Content>
     </AlertDialog>
   )
 }

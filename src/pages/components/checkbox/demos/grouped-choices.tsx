@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Checkbox, CheckboxGroup, Tag } from "sticker-ui"
+import { Checkbox, Tag } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
@@ -22,7 +22,7 @@ function Demo() {
 
   return (
     <div className="grid max-w-xl gap-4 rounded-su-xl border border-su-ink bg-white/80 p-4">
-      <CheckboxGroup
+      <Checkbox.Group
         description="Choose every update stream this workspace should receive."
         label="Notification Streams"
         name="notifications"
@@ -38,7 +38,7 @@ function Demo() {
             value={option.value}
           />
         ))}
-      </CheckboxGroup>
+      </Checkbox.Group>
       <div className="flex flex-wrap items-center gap-2">
         <Tag color="secondary" size="sm">
           {value.length} selected
