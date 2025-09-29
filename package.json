@@ -27,9 +27,10 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "pnpm run build:lib && pnpm run build:registry && pnpm run build:preview",
+    "build": "pnpm run build:packages && pnpm run build:lib && pnpm run build:registry && pnpm run build:preview",
     "build:api": "node scripts/build-api-docs.mjs",
     "build:lib": "tsdown && node scripts/copy-package-assets.mjs",
+    "build:packages": "pnpm --filter @anys/tanstack-route-kit build",
     "build:registry": "shadcn build",
     "build:preview": "pnpm run build:api && pnpm run check && vite build",
     "prepack": "pnpm run build:lib",
@@ -47,6 +48,7 @@
     "tailwindcss": "^4.0.0"
   },
   "devDependencies": {
+    "@anys/tanstack-route-kit": "workspace:*",
     "@babel/core": "^7.29.7",
     "@commitlint/cli": "^21.1.0",
     "@commitlint/config-conventional": "^21.1.0",

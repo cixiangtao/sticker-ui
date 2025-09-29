@@ -1,3 +1,4 @@
+import { buildRouteTree } from "@anys/tanstack-route-kit"
 import {
   createHashHistory,
   createRootRoute,
@@ -5,7 +6,6 @@ import {
 } from "@tanstack/react-router"
 
 import { App } from "@/preview-app"
-import { buildRouteTree } from "@/router/helper"
 import { routes } from "@/router/routes"
 
 const rootRoute = createRootRoute({

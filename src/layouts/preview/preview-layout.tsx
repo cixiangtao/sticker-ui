@@ -4,9 +4,14 @@ import { Card, Divider, Tag } from "sticker-ui"
 
 import { usePreviewI18n } from "../../i18n/preview"
 import { NAV_GROUPS, resolvePreviewLabel } from "../../preview-data"
-import { useCurrentRoute } from "../../router/hooks"
+import { useCurrentRoute } from "../../router/routes"
 
 const PREVIEW_CONTENT_SCROLL_SELECTOR = "[data-preview-content-scroll]"
+
+interface RouteLabelMeta {
+  title?: string
+  titleKey?: string
+}
 
 function PreviewLayout() {
   const location = useLocation()
@@ -15,8 +20,7 @@ function PreviewLayout() {
   const currentRouteMeta = currentRoute?.meta
   const activeRoute = {
     descriptionKey: currentRouteMeta?.descriptionKey,
-    label: currentRouteMeta?.title,
-    labelKey: currentRouteMeta?.titleKey,
+    ...getRouteLabel(currentRouteMeta),
     path: currentRoute?.pathname ?? location.pathname,
   }
 
@@ -64,6 +68,26 @@ function PreviewLayout() {
       </div>
     </main>
   )
+}
+
+function getRouteLabel(meta: RouteLabelMeta | undefined) {
+  if (!meta) {
+    return {}
+  }
+
+  if (meta.title) {
+    return {
+      label: meta.title,
+    }
+  }
+
+  if (meta.titleKey) {
+    return {
+      labelKey: meta.titleKey,
+    }
+  }
+
+  return {}
 }
 
 function Sidebar({ activePath }: { activePath: string }) {

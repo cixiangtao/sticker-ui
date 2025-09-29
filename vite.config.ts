@@ -54,6 +54,9 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
+      "@anys/tanstack-route-kit": fileURLToPath(
+        new URL("./packages/tanstack-route-kit/src/index.ts", import.meta.url),
+      ),
       "@": fileURLToPath(new URL("./src", import.meta.url)),
       "sticker-ui": fileURLToPath(new URL("./src/index.ts", import.meta.url)),
       "~": fileURLToPath(new URL(".", import.meta.url)),

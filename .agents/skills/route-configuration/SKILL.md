@@ -22,10 +22,8 @@ For new registry UI components, also use `registry-preview-workflow`.
 
 Core files:
 
-- `src/router/routes.ts`: declares the preview route config with `defineRoutes`.
+- `src/router/routes.ts`: declares the preview route config with `defineRoutes` and exports route-bound hooks.
 - `src/router/index.tsx`: creates the root route, hash history router, and route tree.
-- `src/router/helper.ts`: defines `RouteConfig`, `RouteMeta`, `buildRouteTree`, `defineRoutes`, and `generateMenuItems`.
-- `src/router/hooks.ts`: exposes `useCurrentRoute`, `useMatchedRoutes`, and `useRouteParams`.
 - `src/preview-data.ts`: derives preview navigation groups, component file data, and overview data from the route config and filesystem data.
 
 The project keeps route declarations config-driven and named-export based:
@@ -46,7 +44,7 @@ The project keeps route declarations config-driven and named-export based:
 }
 ```
 
-`buildRouteTree(rootRoute, routes)` converts `RouteConfig[]` into TanStack routes. The helper wraps each lazy named page export into the `default` shape TanStack expects internally, so page modules themselves should still use named exports.
+`buildRouteTree(rootRoute, routes)` from `@anys/tanstack-route-kit` converts `RouteConfig[]` into TanStack routes. The kit wraps each lazy named page export into the `default` shape TanStack expects internally, so page modules themselves should still use named exports.
 
 ## RouteConfig Contract
 
@@ -112,13 +110,12 @@ Keep demo module loading and raw source loading pointed at the same central lazy
 
 Use existing route helpers and preview data instead of duplicating route state:
 
-- `generateMenuItems(routes)` for pure route-to-menu conversion.
 - `useCurrentRoute()` for current page metadata in preview layout components.
 - `useMatchedRoutes()` for breadcrumb-like route state.
 - `useRouteParams<T>()` for params when strict TanStack path literal inference is not available.
 - `src/preview-data.ts` for derived navigation groups and component overview data.
 
-When changing menu behavior, prefer updating route metadata, `helper.ts`, or `preview-data.ts` rather than rebuilding route lists inside visual components.
+When changing menu behavior, prefer updating route metadata or `preview-data.ts` rather than rebuilding route lists inside visual components.
 
 ## Redirects And Guards
 
@@ -135,7 +132,7 @@ Keep routing behavior simple:
 
 - Use project aliases such as `@/pages/...`.
 - Do not introduce another router library or a second route declaration system.
-- Keep preview pages, demos, route helpers, and registry entry points on named exports.
+- Keep preview pages, demos, and registry entry points on named exports.
 - Do not add new `export default` declarations for pages or demos.
 - Keep route components lazy-loaded through `component: () => import(...).then(...)`.
 - Respect the preview router base path: `createRouter` uses `import.meta.env.BASE_URL`.
