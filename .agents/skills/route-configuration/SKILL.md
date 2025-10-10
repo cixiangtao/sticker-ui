@@ -53,8 +53,8 @@ Use `RouteConfig` for normal preview pages:
 - `path`: preview URL path. Root-level routes use absolute paths such as `"/components/button"`.
 - `component`: lazy import that resolves to the named page component, for example `module.ButtonPage`.
 - `meta`: static page data used by the sidebar, overview page, preview layout, and route hooks.
-- `beforeLoad`: optional simple page guard.
 - `children`: nested route configs when a future page family genuinely needs nesting.
+- TanStack route-level options such as `beforeLoad`, `loader`, `validateSearch`, `loaderDeps`, `search`, `pendingComponent`, `errorComponent`, lifecycle callbacks, and cache timings are forwarded to `createRoute`.
 
 Use hand-written TanStack routes only when the config model cannot express the behavior.
 

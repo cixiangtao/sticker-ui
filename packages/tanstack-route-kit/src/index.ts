@@ -4,6 +4,7 @@ import {
   lazyRouteComponent,
   type RegisteredRouter,
   type RouteComponent,
+  type RouteOptions,
   useMatches,
   useParams,
 } from "@tanstack/react-router"
@@ -20,9 +21,37 @@ interface RouteMenuMeta {
   titleKey?: string
 }
 
-interface RouteConfig<TMeta = unknown> {
-  beforeLoad?: () => Promise<void> | void
-  children?: RouteConfig<TMeta>[]
+type RouteConfigOptions = Omit<
+  RouteCreateOptions,
+  "component" | "getParentRoute" | "id" | "path"
+>
+
+type RouteCreateOptions = RouteOptions<
+  unknown,
+  AnyRoute,
+  string,
+  string,
+  string,
+  string,
+  unknown,
+  Record<string, unknown>,
+  Record<string, unknown>,
+  unknown,
+  Record<string, unknown>,
+  unknown,
+  unknown,
+  unknown,
+  unknown
+>
+
+type RouteKitStaticData<TMeta> = NonNullable<
+  RouteCreateOptions["staticData"]
+> & {
+  meta: TMeta
+}
+
+interface RouteConfig<TMeta = unknown> extends RouteConfigOptions {
+  children?: readonly RouteConfig<TMeta>[]
   component: () => Promise<RouteComponent>
   meta: TMeta
   path: string
@@ -82,24 +111,6 @@ type RouteMetaFromRoute<TRoute> = TRoute extends {
           : never)
   : never
 
-type CheckedRoutes<TRoutes extends readonly RouteConfig<unknown>[], TMeta> = {
-  readonly [TIndex in keyof TRoutes]: TRoutes[TIndex] extends RouteConfig<
-    infer TRouteMeta
-  >
-    ? TRouteMeta extends TMeta
-      ? TRoutes[TIndex] extends {
-          children: infer TChildren
-        }
-        ? Omit<TRoutes[TIndex], "children"> & {
-            readonly children: TChildren extends readonly RouteConfig<unknown>[]
-              ? CheckedRoutes<TChildren, TMeta>
-              : never
-          }
-        : TRoutes[TIndex]
-      : never
-    : never
-}
-
 interface RouteStaticData<TMeta = unknown> {
   meta?: TMeta
 }
@@ -115,11 +126,9 @@ function buildRouteTree<const TRoutes extends readonly RouteConfig<unknown>[]>(
   )
 }
 
-function defineRoutes<TMeta>(): <
-  const TRoutes extends readonly RouteConfig<unknown>[],
->(
-  routes: TRoutes & CheckedRoutes<TRoutes, TMeta>,
-) => DefinedRouteModule<TRoutes, TMeta>
+function defineRoutes<TMeta>(): (
+  routes: readonly RouteConfig<TMeta>[],
+) => DefinedRouteModule<readonly RouteConfig<TMeta>[], TMeta>
 function defineRoutes<const TRoutes extends readonly RouteConfig<unknown>[]>(
   routes: TRoutes,
 ): DefinedRouteModule<TRoutes, RouteMetaFromRoutes<TRoutes>>
@@ -207,24 +216,44 @@ function createRouteFromConfig<TMeta>(
   parentRoute: AnyRoute,
   config: RouteConfig<TMeta>,
 ): AnyRoute {
-  const route = createRoute({
-    beforeLoad: config.beforeLoad,
+  const { children, component, meta, path, ...routeOptions } = config
+  const staticData = {
+    ...routeOptions.staticData,
+    meta,
+  } as RouteKitStaticData<TMeta>
+
+  const route = createRoute<
+    unknown,
+    AnyRoute,
+    string,
+    string,
+    string,
+    string,
+    unknown,
+    Record<string, unknown>,
+    unknown,
+    unknown,
+    Record<string, unknown>,
+    unknown,
+    unknown,
+    unknown,
+    unknown
+  >({
+    ...routeOptions,
     component: lazyRouteComponent(async () => ({
-      default: await config.component(),
+      default: await component(),
     })),
     getParentRoute: () => parentRoute,
-    path: normalizePathForRoute(config.path),
-    staticData: {
-      meta: config.meta,
-    },
-  })
+    path: normalizePathForRoute(path),
+    staticData,
+  } as RouteCreateOptions)
 
-  if (!config.children?.length) {
+  if (!children?.length) {
     return route
   }
 
   return route.addChildren(
-    config.children.map((child) => createRouteFromConfig(route, child)),
+    children.map((child) => createRouteFromConfig(route, child)),
   )
 }
 

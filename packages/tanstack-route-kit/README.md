@@ -28,6 +28,7 @@ export const { routes, useCurrentRoute, useMatchedRoutes, useRouteParams } =
   defineRoutes<AppRouteMeta>()([
     {
       component: () => import("./pages/home").then((module) => module.HomePage),
+      loader: async () => ({ ready: true }),
       meta: {
         descriptionKey: "routes.home.description",
         order: 0,
@@ -55,7 +56,9 @@ declare module "@tanstack/react-router" {
 
 ## Exports
 
-- `defineRoutes<TMeta>()(routes)`: returns a route module with the literal `routes` tuple and route-bound hooks, while checking each route against a project metadata shape.
+- `defineRoutes<TMeta>()(routes)`: returns a route module with route-bound hooks, while checking each route against a project metadata shape and keeping route object autocompletion stable.
 - `defineRoutes(routes)`: returns a route module with the literal `routes` tuple and route-bound hooks inferred from the route data.
 - `buildRouteTree(rootRoute, routes)`: converts config routes into a TanStack route tree.
 - `generateMenuItems(routes)`: derives flat ordered menu items from common metadata fields.
+
+Route configs support TanStack route-level options such as `beforeLoad`, `loader`, `validateSearch`, `loaderDeps`, lifecycle callbacks, pending/error components, search middlewares, cache timings, and `staticData`. The kit reserves `path`, `component`, `children`, and `meta` for its config-first shape, then forwards the remaining options to `createRoute`.
