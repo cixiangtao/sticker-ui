@@ -951,8 +951,31 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   "preview.components.more": {
     zh: "更多",
   },
+  "preview.components.motionPlugin": {
+    zh: "动效插件",
+  },
   "preview.components.buildFlow": {
     zh: "构建流程",
+  },
+  "preview.components.compoundComponentsUseTheMainNamespaceSyntaxFromTheSamePackageImport":
+    {
+      zh: "复合组件也使用同一个包入口的命名空间写法，例如 Card.Header、Dialog.Content 和 Select.Item。",
+    },
+  "preview.components.confirmTheHostAppMeetsTheseRequirementsBeforeAddingStickerUi":
+    {
+      zh: "添加 sticker-ui 前，先确认宿主应用满足这些基础要求。",
+    },
+  "preview.components.copy": {
+    zh: "复制",
+  },
+  "preview.components.copied": {
+    zh: "已复制",
+  },
+  "preview.components.copyThemeCss": {
+    zh: "复制主题 CSS",
+  },
+  "preview.components.customizeBuiltInTokens": {
+    zh: "修改内置 token",
   },
   "preview.components.dependencyContract": {
     zh: "依赖约定",
@@ -961,18 +984,123 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
     {
       zh: "编辑 registry 源文件，构建 JSON，然后将 public/r 作为静态文件发布。",
     },
+  "preview.components.environmentRequirements": {
+    zh: "环境要求",
+  },
+  "preview.components.floatingComponentsUseTailwindcssAnimateForEnterExitMotion":
+    {
+      zh: "Dialog、Popover、Select、Tooltip 等浮层组件使用 tailwindcss-animate 提供进入和退出动效。",
+    },
+  "preview.components.adjustCorePaperAccentFillAndTextTokensWithoutLeavingThePreview":
+    {
+      zh: "在预览里直接调整核心纸张、强调色、填充和文字 token。",
+    },
   "preview.components.installCommands": {
     zh: "安装命令",
   },
+  "preview.components.installRequiresABundlerThatCanImportPackageCssFromNodeModules":
+    {
+      zh: "需要能从 node_modules 导入包内 CSS 的构建工具，例如 Vite、Next.js 或等价的现代前端构建链。",
+    },
+  "preview.components.installRequiresReactBecauseEveryComponentShipsAsReactSource":
+    {
+      zh: "组件以 React 组件形式交付，宿主应用需要自己提供 React。",
+    },
+  "preview.components.installRequiresReactDomBecauseOverlayAndPortalComponentsMountIntoTheDocument":
+    {
+      zh: "浮层、Portal 和 toast 等组件需要宿主应用提供 React DOM。",
+    },
+  "preview.components.installRequiresTailwindV4BecauseTokensAreExposedAsCssFirstThemeValues":
+    {
+      zh: "tokens.css 基于 Tailwind CSS v4 的 CSS-first 主题入口暴露设计令牌。",
+    },
+  "preview.components.installStickerUiOnceThenImportComponentsFromThePackageRoot":
+    {
+      zh: "先统一安装 sticker-ui，然后从包根入口导入需要的组件。",
+    },
+  "preview.components.importTokensAndPointTailwindAtTheInstalledPackageSoUtilityClassesAreGenerated":
+    {
+      zh: "导入 Sticker UI tokens，并让 Tailwind 扫描已安装的包来生成组件用到的工具类。",
+    },
   "preview.components.npxShadcnLatestAdd": {
     zh: "npx shadcn@latest add",
   },
+  "preview.components.packageInstall": {
+    zh: "包安装",
+  },
+  "preview.components.packageInstallKeepsComponentsManagedByNpmAndImportsFromStickerUi":
+    {
+      zh: "默认选择：组件由 npm 包统一管理，业务代码从 sticker-ui 根入口导入。",
+    },
+  "preview.components.packageUsersUsuallyNeedOnlyTheInstallStepsWhileMaintainersRunTheRegistryAndPreviewBuilds":
+    {
+      zh: "普通使用者通常只需要前面的安装步骤；维护者在修改 registry 或预览站点后再运行 registry 与 preview 构建。",
+    },
+  "preview.components.pasteThisBlockAfterStickerUiTokensInYourAppCss": {
+    zh: "把这段粘贴到应用 CSS 中的 sticker-ui/tokens.css 之后。",
+  },
+  "preview.components.placeCustomThemeValuesAfterStickerUiTokensSoTheyOverrideTheDefaults":
+    {
+      zh: "自定义 token 要写在 sticker-ui/tokens.css 之后，后声明的同名 theme 变量会覆盖默认值。",
+    },
   "preview.components.previewArchitecture": {
     zh: "预览架构",
+  },
+  "preview.components.previewHowTheSameUtilitiesRespondToTheEditedThemeVariables":
+    {
+      zh: "查看同一组工具类如何响应编辑后的 theme 变量。",
+    },
+  "preview.components.radiusScale": {
+    zh: "圆角阶梯",
+  },
+  "preview.components.registryInstallCopiesComponentSourceWhenAProjectNeedsLocalOwnership":
+    {
+      zh: "需要深度改内部结构时使用：shadcn 会把组件源码复制进项目，后续由项目自己维护。",
+    },
+  "preview.components.addNewSuTokensOnlyWhenYourOwnAppNeedsAdditionalUtilities":
+    {
+      zh: "只有当业务侧需要额外工具类时才新增 su token；调整现有组件风格时优先覆盖已有名称。",
+    },
+  "preview.components.keepTheSuTokenNamesWhenYouWantExistingStickerUiUtilitiesToChange":
+    {
+      zh: "想让 bg-su-*、text-su-*、rounded-su-*、shadow-su-* 等现有工具类一起变化，就保留同名 su token。",
+    },
+  "preview.components.overrideStickerUiTokensWithTheSameThemeVariableNamesInYourAppCss":
+    {
+      zh: "不要修改 node_modules；在应用 CSS 中用同名 @theme inline 变量覆盖颜色、圆角和阴影 token。",
+    },
+  "preview.components.livePreview": {
+    zh: "实时预览",
+  },
+  "preview.components.resetTheme": {
+    zh: "重置主题",
   },
   "preview.components.runTheFinalAddCommandWithoutOverwriteSoShadcnAsksBeforeReplacingLocalFiles":
     {
       zh: "最后执行不带 --overwrite 的 add 命令，这样 shadcn 会在替换本地同名文件前询问你。",
+    },
+  "preview.components.setTheRadiusScaleAndHardOffsetShadowStepsUsedByStickerSurfaces":
+    {
+      zh: "设置贴纸表面使用的圆角阶梯和硬质偏移阴影。",
+    },
+  "preview.components.shadowSteps": {
+    zh: "阴影阶梯",
+  },
+  "preview.components.shapeAndElevation": {
+    zh: "形状与层级",
+  },
+  "preview.components.sourceCustomization": {
+    zh: "源码定制",
+  },
+  "preview.components.tailwindSetup": {
+    zh: "Tailwind 接入",
+  },
+  "preview.components.themeBuilder": {
+    zh: "主题配置器",
+  },
+  "preview.components.thePackageDoesNotShipPrecompiledComponentCssSoTailwindMustScanStickerUi":
+    {
+      zh: "包不会附带预编译组件 CSS；Tailwind 必须扫描 sticker-ui 才能生成组件用到的工具类。",
     },
   "preview.components.thePreviewIsGroupedByDocumentationJobsStartFoundationsComponentsAndRegistryDelivery":
     {
@@ -982,6 +1110,27 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
     {
       zh: "这些路径来自运行 shadcn registry 构建后 public/r 中生成的文件。",
     },
+  "preview.components.useTheRegistryWhenAProjectNeedsToCopyAndModifyComponentSource":
+    {
+      zh: "只有当项目需要复制并修改组件内部源码时，再使用 registry 单组件下载。",
+    },
+  "preview.components.useDiffForACloserLookAtConflictsAndOverwriteOnlyWhenReplacingIsIntentional":
+    {
+      zh: "遇到冲突时可先用 --diff 查看差异；只有确认要替换本地实现时才使用 --overwrite。",
+    },
+  "preview.components.tuneStickerUiTokensPreviewTheResultAndCopyTheThemeBlock":
+    {
+      zh: "在线调整 Sticker UI token，实时预览结果，并一键复制主题代码。",
+    },
+  "preview.components.version18Or19": {
+    zh: "18 或 19",
+  },
+  "preview.components.version4": {
+    zh: "v4",
+  },
+  "preview.components.viteNextOrEquivalent": {
+    zh: "Vite / Next / 等价工具",
+  },
   "preview.components.viteAndReactDomArePreviewOnlyInstalledRegistryComponentsStaySourceFirstAndLight":
     {
       zh: "Vite 和 React DOM 仅用于预览。安装后的 registry 组件保持源码优先且轻量。",

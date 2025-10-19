@@ -95,6 +95,10 @@ const NAV_GROUP_CONFIGS: NavGroupConfig[] = [
     labelKey: "preview.components.start",
   },
   {
+    id: "registry",
+    labelKey: "preview.components.registry",
+  },
+  {
     id: "foundation",
     labelKey: "preview.components.foundation",
   },
@@ -102,10 +106,6 @@ const NAV_GROUP_CONFIGS: NavGroupConfig[] = [
     id: "components",
     sections: COMPONENT_NAV_SECTIONS,
     labelKey: "preview.components.components",
-  },
-  {
-    id: "registry",
-    labelKey: "preview.components.registry",
   },
 ]
 

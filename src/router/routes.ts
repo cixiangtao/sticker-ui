@@ -38,6 +38,18 @@ const { routes, useCurrentRoute, useMatchedRoutes, useRouteParams } =
     },
     {
       component: () =>
+        import("@/pages/registry/usage").then((module) => module.RegistryPage),
+      meta: {
+        emoji: "R",
+        order: 5,
+        titleKey: "preview.components.packageInstall",
+        descriptionKey:
+          "preview.components.installStickerUiOnceThenImportComponentsFromThePackageRoot",
+      },
+      path: "/registry/usage",
+    },
+    {
+      component: () =>
         import("@/pages/foundation/colors").then((module) => module.ColorsPage),
       meta: {
         emoji: "C",
@@ -47,6 +59,18 @@ const { routes, useCurrentRoute, useMatchedRoutes, useRouteParams } =
           "preview.components.paperInkAccentAndSemanticColorUsage",
       },
       path: "/foundation/colors",
+    },
+    {
+      component: () =>
+        import("@/pages/foundation/theme").then((module) => module.ThemePage),
+      meta: {
+        emoji: "T",
+        order: 15,
+        titleKey: "preview.components.themeBuilder",
+        descriptionKey:
+          "preview.components.tuneStickerUiTokensPreviewTheResultAndCopyTheThemeBlock",
+      },
+      path: "/foundation/theme",
     },
     {
       component: () =>
@@ -517,18 +541,6 @@ const { routes, useCurrentRoute, useMatchedRoutes, useRouteParams } =
           "preview.components.autoBoundFieldCaptionsWithSmallStickerMarkers",
       },
       path: "/components/field",
-    },
-    {
-      component: () =>
-        import("@/pages/registry/usage").then((module) => module.RegistryPage),
-      meta: {
-        emoji: "R",
-        order: 110,
-        titleKey: "preview.components.shadcnInstall",
-        descriptionKey:
-          "preview.components.generatedRegistryJsonAndInstallCommands",
-      },
-      path: "/registry/usage",
     },
   ])
 
