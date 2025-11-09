@@ -25,6 +25,7 @@
 - Document public registry component APIs with TSDoc-style `/** ... */` comments.
 - Keep demo example content in English literals; reserve preview i18n for metadata, page chrome, API docs, and prop descriptions.
 - Keep registry component display names as exported component-name literals in route metadata, not translated preview i18n keys.
+- Use port `7777` consistently for preview/debug pages. Do not switch to another port for local debugging unless the user explicitly asks.
 - Keep changes focused and aligned with the existing file structure.
 
 ## Skills
