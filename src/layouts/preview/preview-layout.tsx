@@ -1,12 +1,33 @@
 import { Link, Outlet, useLocation } from "@tanstack/react-router"
 import { useLayoutEffect } from "react"
-import { Card, Divider, Tag } from "sticker-ui"
+import { Button, Card, Divider, Tag } from "sticker-ui"
 
-import { usePreviewI18n } from "../../i18n/preview"
+import { type PreviewMessageKey, usePreviewI18n } from "../../i18n/preview"
 import { NAV_GROUPS, resolvePreviewLabel } from "../../preview-data"
 import { useCurrentRoute } from "../../router/routes"
 
 const PREVIEW_CONTENT_SCROLL_SELECTOR = "[data-preview-content-scroll]"
+const COMPONENTS_PATH = "/components/button"
+const THEME_PATH = "/theme"
+const TOP_BAR_NAV_ITEMS = [
+  {
+    isActive: (path: string) => path.startsWith("/components"),
+    labelKey: "preview.components.components",
+    mark: "C",
+    to: COMPONENTS_PATH,
+  },
+  {
+    isActive: (path: string) => path === THEME_PATH,
+    labelKey: "preview.components.themeBuilder",
+    mark: "T",
+    to: THEME_PATH,
+  },
+] satisfies Array<{
+  isActive: (path: string) => boolean
+  labelKey: PreviewMessageKey
+  mark: string
+  to: string
+}>
 
 interface RouteLabelMeta {
   title?: string
@@ -23,6 +44,7 @@ function PreviewLayout() {
     ...getRouteLabel(currentRouteMeta),
     path: currentRoute?.pathname ?? location.pathname,
   }
+  const isStandaloneRoute = activeRoute.path === THEME_PATH
 
   useLayoutEffect(() => {
     const scrollContainer = document.querySelector<HTMLElement>(
@@ -36,11 +58,23 @@ function PreviewLayout() {
     <main className="min-h-screen bg-su-canvas bg-[linear-gradient(90deg,rgb(46_48_56_/_0.04)_1px,transparent_1px),linear-gradient(0deg,rgb(46_48_56_/_0.04)_1px,transparent_1px)] bg-[length:28px_28px] px-4 py-4 text-su-ink sm:px-6 lg:h-screen lg:overflow-hidden lg:px-8">
       <div className="mx-auto flex max-w-7xl flex-col gap-4 lg:h-full lg:min-h-0">
         <TopBar activeRoute={activeRoute} />
-        <div className="grid gap-4 lg:min-h-0 lg:flex-1 lg:grid-cols-[280px_minmax(0,1fr)]">
-          <Sidebar activePath={activeRoute.path} />
+        <div
+          className={[
+            "grid gap-4 lg:min-h-0 lg:flex-1",
+            isStandaloneRoute
+              ? "lg:grid-cols-1 lg:grid-rows-[minmax(0,1fr)] lg:overflow-hidden"
+              : "lg:grid-cols-[280px_minmax(0,1fr)]",
+          ].join(" ")}
+        >
+          {isStandaloneRoute ? null : <Sidebar activePath={activeRoute.path} />}
           <Card
             as="section"
-            className="min-h-0 overflow-auto"
+            className={[
+              "min-h-0",
+              isStandaloneRoute
+                ? "overflow-auto lg:h-full lg:overflow-hidden"
+                : "overflow-auto",
+            ].join(" ")}
             data-preview-content-scroll
             variant="panel"
           >
@@ -60,7 +94,13 @@ function PreviewLayout() {
                 #{activeRoute.path}
               </Tag>
             </Card.Header>
-            <Card.Content>
+            <Card.Content
+              className={
+                isStandaloneRoute
+                  ? "lg:mt-0 lg:flex lg:min-h-0 lg:flex-1 lg:flex-col lg:overflow-hidden"
+                  : undefined
+              }
+            >
               <Outlet />
             </Card.Content>
           </Card>
@@ -170,7 +210,7 @@ function Sidebar({ activePath }: { activePath: string }) {
 function TopBar({
   activeRoute,
 }: {
-  activeRoute: { label?: string; labelKey?: string }
+  activeRoute: { label?: string; labelKey?: string; path: string }
 }) {
   const { td, tm } = usePreviewI18n()
 
@@ -192,6 +232,34 @@ function TopBar({
           </div>
         </div>
       </Link>
+      <nav
+        aria-label={tm("preview.route.navigationLabel")}
+        className="flex flex-wrap gap-2"
+      >
+        {TOP_BAR_NAV_ITEMS.map((item) => {
+          const active = item.isActive(activeRoute.path)
+
+          return (
+            <Button
+              asChild
+              className="h-auto w-fit gap-2 rounded-su-lg px-4 py-2 text-sm"
+              key={item.to}
+              size="sm"
+              variant={active ? "solid" : "outlined"}
+            >
+              <Link aria-current={active ? "page" : undefined} to={item.to}>
+                <span
+                  aria-hidden="true"
+                  className="inline-flex size-7 items-center justify-center rounded-su-sm border-2 border-su-ink bg-su-fill-default text-xs text-su-ink shadow-su-xs"
+                >
+                  {item.mark}
+                </span>
+                {td(item.labelKey)}
+              </Link>
+            </Button>
+          )
+        })}
+      </nav>
     </Card>
   )
 }

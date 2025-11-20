@@ -349,6 +349,36 @@
       ]
     },
     {
+      "name": "color-picker",
+      "type": "registry:ui",
+      "title": "Sticker Color Picker",
+      "description": "A native color input wrapped in a tactile sticker swatch frame.",
+      "dependencies": ["@colordx/core", "class-variance-authority"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "src/components/ui/color-picker.tsx",
+          "target": "@ui/color-picker.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "range",
+      "type": "registry:ui",
+      "title": "Sticker Range",
+      "description": "A native range input with a tactile sticker track and numeric change handler.",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "src/components/ui/range.tsx",
+          "target": "@ui/range.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "input-password",
       "type": "registry:ui",
       "title": "Sticker Password Input",

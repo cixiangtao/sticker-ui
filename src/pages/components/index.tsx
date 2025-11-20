@@ -43,6 +43,7 @@ const BreadcrumbPage = createRegistryComponentPage("breadcrumb")
 const ButtonPage = createRegistryComponentPage("button")
 const CardPage = createRegistryComponentPage("card")
 const CheckboxPage = createRegistryComponentPage("checkbox")
+const ColorPickerPage = createRegistryComponentPage("color-picker")
 const ContextMenuPage = createRegistryComponentPage("context-menu")
 const DataTablePage = createRegistryComponentPage("data-table")
 const DialogPage = createRegistryComponentPage("dialog")
@@ -60,6 +61,7 @@ const PaginationPage = createRegistryComponentPage("pagination")
 const PopoverPage = createRegistryComponentPage("popover")
 const ProgressPage = createRegistryComponentPage("progress")
 const RadioPage = createRegistryComponentPage("radio")
+const RangePage = createRegistryComponentPage("range")
 const SelectPage = createRegistryComponentPage("select")
 const SidebarPage = createRegistryComponentPage("sidebar")
 const SkeletonPage = createRegistryComponentPage("skeleton")
@@ -80,6 +82,7 @@ export {
   ButtonPage,
   CardPage,
   CheckboxPage,
+  ColorPickerPage,
   ContextMenuPage,
   DataTablePage,
   DialogPage,
@@ -97,6 +100,7 @@ export {
   PopoverPage,
   ProgressPage,
   RadioPage,
+  RangePage,
   SelectPage,
   SidebarPage,
   SkeletonPage,

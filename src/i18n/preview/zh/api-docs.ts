@@ -742,6 +742,98 @@ const ZH_PREVIEW_API_DOC_MESSAGES = defineMessages({
   "api.input.variants.inputVariants.description": {
     zh: "根据结构、色调和尺寸变体生成贴纸输入框的 className。",
   },
+  "api.color-picker.description": {
+    zh: "用触感贴纸色块外框包装原生颜色输入。",
+  },
+  "api.color-picker.components.ColorPicker.props.description": {
+    zh: "贴纸颜色选择器元素的 props。",
+  },
+  "api.color-picker.components.ColorPicker.props.members.className.description":
+    {
+      zh: "颜色选择器外框的自定义 className。",
+    },
+  "api.color-picker.components.ColorPicker.props.members.defaultValue.description":
+    {
+      zh: "非受控初始 CSS 色值。",
+    },
+  "api.color-picker.components.ColorPicker.props.members.onChange.description":
+    {
+      zh: "所选颜色变化时调用。",
+    },
+  "api.color-picker.components.ColorPicker.props.members.onChange.remarks": {
+    zh: "第一个参数是转换后的 CSS 色值，第二个参数是原生 change 事件。",
+  },
+  "api.color-picker.components.ColorPicker.props.members.outputFormat.description":
+    {
+      zh: "控制颜色选择后序列化成哪种格式。",
+    },
+  "api.color-picker.components.ColorPicker.props.members.showValue.description":
+    {
+      zh: "在色块旁显示当前 CSS 色值。",
+    },
+  "api.color-picker.components.ColorPicker.props.members.size.description": {
+    zh: "控制选择器外框、色块和文字尺寸。",
+  },
+  "api.color-picker.components.ColorPicker.props.members.value.description": {
+    zh: "受控 CSS 色值。",
+  },
+  "api.color-picker.components.ColorPicker.props.remarks": {
+    zh: '包装原生 `input[type="color"]`，接收 CSS 色值字符串，并把颜色选择结果转换回指定输出格式。',
+  },
+  "api.color-picker.exports.ColorPickerProps.description": {
+    zh: "贴纸颜色选择器元素的 props。",
+  },
+  "api.color-picker.exports.ColorPickerProps.remarks": {
+    zh: '包装原生 `input[type="color"]`，接收 CSS 色值字符串，并把颜色选择结果转换回指定输出格式。',
+  },
+  "api.color-picker.exports.ColorPickerOutputFormat.description": {
+    zh: "原生颜色面板输出新颜色时使用的序列化格式。",
+  },
+  "api.color-picker.exports.ColorPickerOutputFormat.remarks": {
+    zh: "`auto` 会尽量保持当前值的格式；命名颜色在选择后会输出为 hex。",
+  },
+  "api.color-picker.exports.colorPickerVariants.description": {
+    zh: "根据结构和尺寸变体生成贴纸颜色选择器的 className。",
+  },
+  "api.color-picker.types.ColorPickerOutputFormat.description": {
+    zh: "原生颜色面板输出新颜色时使用的序列化格式。",
+  },
+  "api.color-picker.types.ColorPickerOutputFormat.remarks": {
+    zh: "`auto` 会尽量保持当前值的格式；命名颜色在选择后会输出为 hex。",
+  },
+  "api.color-picker.types.ColorPickerProps.description": {
+    zh: "贴纸颜色选择器元素的 props。",
+  },
+  "api.color-picker.types.ColorPickerProps.members.className.description": {
+    zh: "颜色选择器外框的自定义 className。",
+  },
+  "api.color-picker.types.ColorPickerProps.members.defaultValue.description": {
+    zh: "非受控初始 CSS 色值。",
+  },
+  "api.color-picker.types.ColorPickerProps.members.onChange.description": {
+    zh: "所选颜色变化时调用。",
+  },
+  "api.color-picker.types.ColorPickerProps.members.onChange.remarks": {
+    zh: "第一个参数是转换后的 CSS 色值，第二个参数是原生 change 事件。",
+  },
+  "api.color-picker.types.ColorPickerProps.members.outputFormat.description": {
+    zh: "控制颜色选择后序列化成哪种格式。",
+  },
+  "api.color-picker.types.ColorPickerProps.members.showValue.description": {
+    zh: "在色块旁显示当前 CSS 色值。",
+  },
+  "api.color-picker.types.ColorPickerProps.members.size.description": {
+    zh: "控制选择器外框、色块和文字尺寸。",
+  },
+  "api.color-picker.types.ColorPickerProps.members.value.description": {
+    zh: "受控 CSS 色值。",
+  },
+  "api.color-picker.types.ColorPickerProps.remarks": {
+    zh: '包装原生 `input[type="color"]`，接收 CSS 色值字符串，并把颜色选择结果转换回指定输出格式。',
+  },
+  "api.color-picker.variants.colorPickerVariants.description": {
+    zh: "根据结构和尺寸变体生成贴纸颜色选择器的 className。",
+  },
   "api.input-password.description": {
     zh: "带贴纸外框和显示隐藏切换的密码字段。",
   },
@@ -3854,6 +3946,111 @@ const ZH_PREVIEW_API_DOC_MESSAGES = defineMessages({
   },
   "api.sidebar.variants.sidebarMenuButtonVariants.description": {
     zh: "生成贴纸侧栏菜单按钮 className。",
+  },
+  "api.range.description": {
+    zh: "带触感贴纸轨道和数字变化回调的原生范围输入。",
+  },
+  "api.range.components.Range.props.description": {
+    zh: "贴纸 Range 控件的 props。",
+  },
+  "api.range.components.Range.props.members.className.description": {
+    zh: "Range 外层包装的自定义 className。",
+  },
+  "api.range.components.Range.props.members.defaultValue.description": {
+    zh: "非受控模式的初始数字值。",
+  },
+  "api.range.components.Range.props.members.formatValue.description": {
+    zh: "格式化可选的可见数值标签。",
+  },
+  "api.range.components.Range.props.members.max.description": {
+    zh: "可选择的最大值。",
+  },
+  "api.range.components.Range.props.members.min.description": {
+    zh: "可选择的最小值。",
+  },
+  "api.range.components.Range.props.members.onChange.description": {
+    zh: "范围值变化时触发。",
+  },
+  "api.range.components.Range.props.members.onChange.remarks": {
+    zh: "第一个参数是下一个数字值，第二个参数是原生 change 事件。",
+  },
+  "api.range.components.Range.props.members.showValue.description": {
+    zh: "在轨道旁显示当前值。",
+  },
+  "api.range.components.Range.props.members.size.description": {
+    zh: "控制 Range 轨道和滑块尺寸。",
+  },
+  "api.range.components.Range.props.members.step.description": {
+    zh: "值之间的步进间隔。",
+  },
+  "api.range.components.Range.props.members.style.description": {
+    zh: "Range 外层包装的自定义 style。",
+  },
+  "api.range.components.Range.props.members.tone.description": {
+    zh: "控制语义填充色调。",
+  },
+  "api.range.components.Range.props.members.value.description": {
+    zh: "受控数字值。",
+  },
+  "api.range.components.Range.props.remarks": {
+    zh: '包装原生 `input[type="range"]`，并通过 `onChange(value, event)` 返回数字值。',
+  },
+  "api.range.exports.RangeProps.description": {
+    zh: "贴纸 Range 控件的 props。",
+  },
+  "api.range.exports.RangeProps.remarks": {
+    zh: '包装原生 `input[type="range"]`，并通过 `onChange(value, event)` 返回数字值。',
+  },
+  "api.range.exports.rangeVariants.description": {
+    zh: "根据尺寸和语义色生成贴纸 Range className。",
+  },
+  "api.range.types.RangeProps.description": {
+    zh: "贴纸 Range 控件的 props。",
+  },
+  "api.range.types.RangeProps.members.className.description": {
+    zh: "Range 外层包装的自定义 className。",
+  },
+  "api.range.types.RangeProps.members.defaultValue.description": {
+    zh: "非受控模式的初始数字值。",
+  },
+  "api.range.types.RangeProps.members.formatValue.description": {
+    zh: "格式化可选的可见数值标签。",
+  },
+  "api.range.types.RangeProps.members.max.description": {
+    zh: "可选择的最大值。",
+  },
+  "api.range.types.RangeProps.members.min.description": {
+    zh: "可选择的最小值。",
+  },
+  "api.range.types.RangeProps.members.onChange.description": {
+    zh: "范围值变化时触发。",
+  },
+  "api.range.types.RangeProps.members.onChange.remarks": {
+    zh: "第一个参数是下一个数字值，第二个参数是原生 change 事件。",
+  },
+  "api.range.types.RangeProps.members.showValue.description": {
+    zh: "在轨道旁显示当前值。",
+  },
+  "api.range.types.RangeProps.members.size.description": {
+    zh: "控制 Range 轨道和滑块尺寸。",
+  },
+  "api.range.types.RangeProps.members.step.description": {
+    zh: "值之间的步进间隔。",
+  },
+  "api.range.types.RangeProps.members.style.description": {
+    zh: "Range 外层包装的自定义 style。",
+  },
+  "api.range.types.RangeProps.members.tone.description": {
+    zh: "控制语义填充色调。",
+  },
+  "api.range.types.RangeProps.members.value.description": {
+    zh: "受控数字值。",
+  },
+  "api.range.types.RangeProps.remarks": {
+    zh: '包装原生 `input[type="range"]`，并通过 `onChange(value, event)` 返回数字值。',
+  },
+  "api.range.variants.rangeVariants.description": {
+    zh: "根据尺寸和语义色生成贴纸 Range className。",
   },
 })
 

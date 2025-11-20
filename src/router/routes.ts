@@ -62,15 +62,16 @@ const { routes, useCurrentRoute, useMatchedRoutes, useRouteParams } =
     },
     {
       component: () =>
-        import("@/pages/foundation/theme").then((module) => module.ThemePage),
+        import("@/pages/theme").then((module) => module.ThemePage),
       meta: {
         emoji: "T",
+        hideInMenu: true,
         order: 15,
         titleKey: "preview.components.themeBuilder",
         descriptionKey:
           "preview.components.tuneStickerUiTokensPreviewTheResultAndCopyTheThemeBlock",
       },
-      path: "/foundation/theme",
+      path: "/theme",
     },
     {
       component: () =>
@@ -359,6 +360,32 @@ const { routes, useCurrentRoute, useMatchedRoutes, useRouteParams } =
           "preview.components.nativeInputControlsWithChunkyStickerFrames",
       },
       path: "/components/input",
+    },
+    {
+      component: () =>
+        import("@/pages/components").then((module) => module.ColorPickerPage),
+      meta: {
+        emoji: "C",
+        navSection: "form-controls",
+        order: 72,
+        title: "ColorPicker",
+        descriptionKey:
+          "preview.components.nativeColorInputsWithTactileStickerSwatches",
+      },
+      path: "/components/color-picker",
+    },
+    {
+      component: () =>
+        import("@/pages/components").then((module) => module.RangePage),
+      meta: {
+        emoji: "R",
+        navSection: "form-controls",
+        order: 73,
+        title: "Range",
+        descriptionKey:
+          "preview.components.nativeRangeControlsWithChunkyStickerTracks",
+      },
+      path: "/components/range",
     },
     {
       component: () =>

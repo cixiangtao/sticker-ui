@@ -1,6 +1,25 @@
 import { Copy, RotateCcw } from "lucide-react"
 import * as React from "react"
-import { Button, Input, Tag } from "sticker-ui"
+import {
+  Alert,
+  Badge,
+  Button,
+  Card as StickerCard,
+  Checkbox,
+  ColorPicker,
+  Divider,
+  Empty,
+  Input,
+  Progress,
+  Range,
+  Skeleton,
+  Spinner,
+  Switch,
+  Table,
+  Tabs,
+  Tag,
+  Textarea,
+} from "sticker-ui"
 
 import { usePreviewI18n } from "@/i18n/preview"
 import {
@@ -31,15 +50,21 @@ interface ScaleTokenFieldProps {
   value: string
 }
 
-const COLOR_TOKEN_ENTRIES = COLOR_TOKEN_GROUPS.flatMap((group) =>
-  group.tokens.map((token) => ({
-    ...token,
-    groupLabelKey: group.labelKey,
-  })),
-)
+const CONFIGURABLE_COLOR_TOKEN_GROUPS = COLOR_TOKEN_GROUPS.map((group) => ({
+  ...group,
+  tokens: group.tokens.filter((token) => !hasTokenDependency(token.value)),
+})).filter((group) => group.tokens.length > 0)
+
+const CONFIGURABLE_COLOR_TOKEN_ENTRIES =
+  CONFIGURABLE_COLOR_TOKEN_GROUPS.flatMap((group) =>
+    group.tokens.map((token) => ({
+      ...token,
+      groupLabelKey: group.labelKey,
+    })),
+  )
 
 const DEFAULT_COLOR_VALUES = Object.fromEntries(
-  COLOR_TOKEN_ENTRIES.map((token) => [token.name, token.value]),
+  CONFIGURABLE_COLOR_TOKEN_ENTRIES.map((token) => [token.name, token.value]),
 )
 
 const RADIUS_TOKENS = [
@@ -63,7 +88,9 @@ const SHADOW_TOKENS = [
 ] as const
 
 const THEME_TOKEN_COUNT =
-  COLOR_TOKEN_ENTRIES.length + RADIUS_TOKENS.length + SHADOW_TOKENS.length
+  CONFIGURABLE_COLOR_TOKEN_ENTRIES.length +
+  RADIUS_TOKENS.length +
+  SHADOW_TOKENS.length
 
 const PREVIEW_STATS = [
   ["preview.components.tokens", `${THEME_TOKEN_COUNT}`],
@@ -119,9 +146,11 @@ function ThemePage() {
   }
 
   function updateShadow(name: string, value: string) {
+    const nextOffset = parseScaleValue(value, 0)
+
     setShadowOffsets((current) => ({
       ...current,
-      [name]: Number(value),
+      [name]: nextOffset,
     }))
   }
 
@@ -147,8 +176,8 @@ function ThemePage() {
   }
 
   return (
-    <div className="grid min-w-0 gap-5 xl:grid-cols-[minmax(0,1.15fr)_minmax(360px,0.85fr)]">
-      <div className="grid min-w-0 gap-5">
+    <div className="flex min-w-0 flex-col gap-5 lg:h-full lg:min-h-0 lg:flex-row lg:overflow-hidden">
+      <div className="flex min-w-0 flex-col gap-5 lg:h-full lg:w-[360px] lg:flex-none lg:overflow-y-auto lg:overscroll-contain lg:pr-2 lg:pb-2 [&>*]:shrink-0">
         <Card className="bg-su-fill-default-soft">
           <CardHeader divider="none">
             <div className="flex flex-wrap items-start justify-between gap-4">
@@ -186,7 +215,7 @@ function ThemePage() {
           </CardHeader>
           <CardContent>
             <div className="grid gap-4">
-              {COLOR_TOKEN_GROUPS.map((group) => (
+              {CONFIGURABLE_COLOR_TOKEN_GROUPS.map((group) => (
                 <section
                   className="rounded-su-xl border border-su-ink bg-su-paper p-4"
                   key={group.labelKey}
@@ -199,7 +228,7 @@ function ThemePage() {
                       {group.tokens.length} {tm("preview.components.tokens")}
                     </Tag>
                   </div>
-                  <div className="grid min-w-0 gap-3 md:grid-cols-2">
+                  <div className="grid min-w-0 gap-3">
                     {group.tokens.map((token) => (
                       <ColorTokenField
                         key={token.name}
@@ -226,7 +255,7 @@ function ThemePage() {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="grid gap-4 lg:grid-cols-2">
+            <div className="grid gap-4">
               <section className="min-w-0 rounded-su-xl border border-su-ink bg-su-surface p-4">
                 <h3 className="mb-3 text-sm font-black text-su-ink">
                   {tm("preview.components.radiusScale")}
@@ -269,7 +298,7 @@ function ThemePage() {
         </Card>
       </div>
 
-      <aside className="grid min-w-0 content-start gap-5 xl:sticky xl:top-5">
+      <aside className="flex min-w-0 flex-col gap-5 lg:h-full lg:min-w-0 lg:flex-1 lg:overflow-y-auto lg:overscroll-contain lg:pr-2 lg:pb-2 [&>*]:shrink-0">
         <Card className="overflow-hidden bg-su-surface">
           <CardHeader>
             <CardTitle>{tm("preview.components.livePreview")}</CardTitle>
@@ -331,7 +360,6 @@ function ColorTokenField({
   value,
 }: ColorTokenFieldProps) {
   const inputId = React.useId()
-  const canUseColorPicker = /^#[0-9a-fA-F]{6}$/.test(value)
 
   return (
     <label
@@ -351,16 +379,15 @@ function ColorTokenField({
       <code className="block min-w-0 truncate text-[11px] font-extrabold text-su-fg-muted">
         {name}
       </code>
-      <span className="flex min-w-0 gap-2">
-        {canUseColorPicker ? (
-          <input
-            aria-label={name}
-            className="h-10 w-12 shrink-0 cursor-pointer rounded-su-sm border-2 border-su-ink bg-su-paper p-1"
-            onChange={(event) => onChange(event.currentTarget.value)}
-            type="color"
-            value={value}
-          />
-        ) : null}
+      <span className="flex min-w-0 items-center gap-2">
+        <ColorPicker
+          aria-label={name}
+          className="h-10 shrink-0"
+          onChange={onChange}
+          showValue={false}
+          size="sm"
+          value={value}
+        />
         <Input
           className="min-w-0 flex-1 bg-su-paper"
           id={inputId}
@@ -383,7 +410,7 @@ function ScaleTokenField({
   value,
 }: ScaleTokenFieldProps) {
   const inputId = React.useId()
-  const numericValue = Number.parseFloat(value) || 0
+  const numericValue = parseScaleValue(value, 0)
 
   return (
     <label className="grid min-w-0 gap-2" htmlFor={inputId}>
@@ -394,14 +421,13 @@ function ScaleTokenField({
         <span className="shrink-0 text-xs font-black text-su-ink">{value}</span>
       </span>
       <span className="grid min-w-0 grid-cols-[minmax(0,1fr)_44px] items-center gap-3">
-        <input
-          className="h-2 min-w-0 accent-[var(--color-su-ink)]"
+        <Range
+          className="min-w-0"
           id={inputId}
           max={max}
           min={min}
-          onChange={(event) => onChange(`${event.currentTarget.value}px`)}
+          onChange={(nextValue) => onChange(`${nextValue}px`)}
           step={step}
-          type="range"
           value={numericValue}
         />
         <span
@@ -421,51 +447,240 @@ function ScaleTokenField({
 function ThemePreview({ style }: { style: ThemeStyle }) {
   return (
     <div
-      className="grid gap-4 rounded-su-panel border-[3px] border-su-ink bg-su-canvas p-5 shadow-su-2xl"
+      className="grid gap-5 rounded-su-panel border-[3px] border-su-ink bg-su-canvas p-5 shadow-su-2xl"
       style={style}
     >
-      <div className="rounded-su-2xl border-[3px] border-su-ink bg-su-paper p-5 shadow-su-xl">
-        <div className="mb-4 flex items-start justify-between gap-3">
-          <div>
-            <div className="text-xl font-black text-su-ink">Theme Lab</div>
-            <p className="mt-1 text-sm leading-6 font-bold text-su-fg-muted">
-              Tune once, paste once, and every utility follows the same tokens.
-            </p>
+      <StickerCard className="bg-su-paper" variant="panel">
+        <StickerCard.Header decoration divider="dashed" dividerInset="card">
+          <div className="min-w-0">
+            <StickerCard.Title>Theme Lab</StickerCard.Title>
+            <StickerCard.Description>
+              The preview uses real sticker-ui components and the edited tokens.
+            </StickerCard.Description>
           </div>
-          <div className="rounded-su-xl border-2 border-su-ink bg-su-fill-default px-3 py-2 text-sm font-black shadow-su-sm">
-            Live
+        </StickerCard.Header>
+        <StickerCard.Content>
+          <div className="grid gap-3 md:grid-cols-[minmax(0,1fr)_220px]">
+            <div className="grid gap-3">
+              <Alert tone="info">
+                <Alert.Title>Preview Updated</Alert.Title>
+                <Alert.Description>
+                  Paper, ink, semantic fills, radius, and hard shadows inherit
+                  from the same theme block.
+                </Alert.Description>
+              </Alert>
+              <div className="flex flex-wrap gap-2">
+                <Button size="sm">Primary</Button>
+                <Button color="secondary" size="sm" variant="outlined">
+                  Secondary
+                </Button>
+                <Button color="success" size="sm" variant="dashed">
+                  Publish
+                </Button>
+                <Button color="danger" size="sm" variant="text">
+                  Danger
+                </Button>
+              </div>
+            </div>
+            <Empty
+              description="Empty states keep the same paper and accent rhythm."
+              heading="No drift"
+              size="sm"
+              tone="warning"
+            />
           </div>
-        </div>
+        </StickerCard.Content>
+      </StickerCard>
 
-        <div className="grid gap-3 sm:grid-cols-2">
-          <div className="rounded-su-xl border-2 border-su-ink bg-su-fill-info p-4 shadow-su-md">
-            <div className="font-black text-su-ink">Surface</div>
-            <p className="mt-1 text-sm font-bold text-su-fg-info">
-              Background, text, radius, and shadow are all inherited.
-            </p>
-          </div>
-          <div className="rounded-su-xl border-2 border-su-ink bg-su-fill-success p-4 shadow-su-md">
-            <div className="font-black text-su-ink">Success</div>
-            <p className="mt-1 text-sm font-bold text-su-fg-success">
-              Semantic colors keep status copy readable.
-            </p>
-          </div>
-        </div>
-      </div>
+      <section className="grid gap-4 xl:grid-cols-2">
+        <StickerCard className="bg-su-surface">
+          <StickerCard.Header>
+            <StickerCard.Title>Form Controls</StickerCard.Title>
+            <StickerCard.Description>
+              Inputs, choices, switches, and native color surfaces.
+            </StickerCard.Description>
+          </StickerCard.Header>
+          <StickerCard.Content>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <Input defaultValue="sticker-ui/theme" />
+              <ColorPicker defaultValue="#ffe08a" showValue={false} />
+            </div>
+            <Textarea
+              defaultValue="Theme tokens should make every control feel like the same product."
+              rows={3}
+            />
+            <div className="grid gap-3 rounded-su-xl border border-su-ink bg-su-paper p-3">
+              <Checkbox defaultChecked label="Use paper fills" />
+              <Checkbox label="Preview disabled state" tone="secondary" />
+              <div className="flex items-center justify-between gap-3">
+                <span className="text-sm font-extrabold text-su-ink">
+                  Compact mode
+                </span>
+                <Switch defaultChecked tone="success" variant="filled" />
+              </div>
+            </div>
+          </StickerCard.Content>
+        </StickerCard>
 
-      <div className="flex flex-wrap gap-2">
-        {["default", "secondary", "info", "warning", "danger"].map((tone) => (
-          <span
-            className="rounded-su-sm border-2 border-su-ink px-3 py-2 text-xs font-black shadow-su-sm"
-            key={tone}
-            style={{
-              background: `var(--color-su-fill-${tone})`,
-              color: "var(--color-su-ink)",
-            }}
-          >
-            {tone}
-          </span>
-        ))}
+        <StickerCard className="bg-su-fill-info">
+          <StickerCard.Header>
+            <StickerCard.Title>Status Stack</StickerCard.Title>
+            <StickerCard.Description>
+              Badges, tags, progress, loading, and placeholders.
+            </StickerCard.Description>
+          </StickerCard.Header>
+          <StickerCard.Content>
+            <div className="flex flex-wrap gap-2">
+              <Badge content={12} tone="danger">
+                <Button size="sm" variant="outlined">
+                  Inbox
+                </Button>
+              </Badge>
+              <Badge dot tone="success">
+                <Button size="sm" variant="outlined">
+                  Online
+                </Button>
+              </Badge>
+              <Tag color="info">Info</Tag>
+              <Tag color="warning" variant="outlined">
+                Review
+              </Tag>
+              <Tag color="success" variant="filled">
+                Ready
+              </Tag>
+            </div>
+            <div className="grid gap-3">
+              <Progress showValue tone="success" value={72} />
+              <Progress
+                aria-label="Syncing theme tokens"
+                tone="secondary"
+                value={null}
+              />
+            </div>
+            <div className="flex items-center gap-3 rounded-su-xl border border-su-ink bg-su-surface p-3">
+              <Spinner label="Syncing preview" size="sm" tone="info" />
+              <div className="grid flex-1 gap-2">
+                <Skeleton className="max-w-[82%]" shape="line" />
+                <Skeleton className="max-w-[58%]" shape="line" tone="warning" />
+              </div>
+            </div>
+          </StickerCard.Content>
+        </StickerCard>
+      </section>
+
+      <StickerCard className="bg-su-fill-default-soft">
+        <StickerCard.Header>
+          <StickerCard.Title>Navigation And Data</StickerCard.Title>
+          <StickerCard.Description>
+            Tabs, dividers, tables, and cards all respond to the same tokens.
+          </StickerCard.Description>
+        </StickerCard.Header>
+        <StickerCard.Content>
+          <Tabs defaultValue="components" tone="secondary">
+            <Tabs.List aria-label="Theme preview sections">
+              <Tabs.Trigger value="components">Components</Tabs.Trigger>
+              <Tabs.Trigger value="tokens">Tokens</Tabs.Trigger>
+              <Tabs.Trigger value="states">States</Tabs.Trigger>
+            </Tabs.List>
+            <Tabs.Content value="components">
+              <div className="grid gap-3 md:grid-cols-3">
+                {["Button", "Input", "Card"].map((name) => (
+                  <div
+                    className="rounded-su-xl border-2 border-su-ink bg-su-surface p-3 shadow-su-sm"
+                    key={name}
+                  >
+                    <div className="text-sm font-black text-su-ink">{name}</div>
+                    <div className="mt-1 text-xs font-bold text-su-fg-muted">
+                      Radius and shadow update live.
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </Tabs.Content>
+            <Tabs.Content value="tokens">
+              <div className="flex flex-wrap gap-2">
+                {["default", "secondary", "info", "warning", "danger"].map(
+                  (tone) => (
+                    <span
+                      className="rounded-su-sm border-2 border-su-ink px-3 py-2 text-xs font-black shadow-su-sm"
+                      key={tone}
+                      style={{
+                        background: `var(--color-su-fill-${tone})`,
+                        color: "var(--color-su-ink)",
+                      }}
+                    >
+                      {tone}
+                    </span>
+                  ),
+                )}
+              </div>
+            </Tabs.Content>
+            <Tabs.Content value="states">
+              <Alert size="sm" tone="success" variant="outlined">
+                <Alert.Title>All states inherit the edited theme.</Alert.Title>
+                <Alert.Description>
+                  This includes helper text, semantic fills, and pressed paper
+                  shadows.
+                </Alert.Description>
+              </Alert>
+            </Tabs.Content>
+          </Tabs>
+
+          <Divider align="start" tone="warning" variant="dashed">
+            Component readiness
+          </Divider>
+
+          <Table>
+            <Table.Header>
+              <Table.Row>
+                <Table.Head>Component</Table.Head>
+                <Table.Head>Status</Table.Head>
+                <Table.Head className="text-right">Coverage</Table.Head>
+              </Table.Row>
+            </Table.Header>
+            <Table.Body>
+              {[
+                ["Buttons", "Interactive", "High"],
+                ["Forms", "Editable", "High"],
+                ["Feedback", "Semantic", "High"],
+                ["Data", "Structured", "Medium"],
+              ].map(([name, status, coverage]) => (
+                <Table.Row key={name}>
+                  <Table.Cell className="font-black">{name}</Table.Cell>
+                  <Table.Cell>
+                    <Tag color="success" size="sm" variant="filled">
+                      {status}
+                    </Tag>
+                  </Table.Cell>
+                  <Table.Cell className="text-right font-extrabold">
+                    {coverage}
+                  </Table.Cell>
+                </Table.Row>
+              ))}
+            </Table.Body>
+          </Table>
+        </StickerCard.Content>
+      </StickerCard>
+
+      <div className="grid gap-3 md:grid-cols-3">
+        <div className="rounded-su-xl border-2 border-su-ink bg-su-fill-secondary p-4 shadow-su-md">
+          <div className="font-black text-su-ink">Surface</div>
+          <p className="mt-1 text-sm font-bold text-su-fg-secondary">
+            Cards inherit the edited surface colors.
+          </p>
+        </div>
+        <div className="rounded-su-xl border-2 border-su-ink bg-su-fill-success p-4 shadow-su-md">
+          <div className="font-black text-su-ink">Success</div>
+          <p className="mt-1 text-sm font-bold text-su-fg-success">
+            Semantic text stays readable.
+          </p>
+        </div>
+        <div className="rounded-su-xl border-2 border-su-ink bg-su-fill-danger p-4 shadow-su-md">
+          <div className="font-black text-su-ink">Danger</div>
+          <p className="mt-1 text-sm font-bold text-su-fg-danger">
+            Radius and shadow scales update together.
+          </p>
+        </div>
       </div>
     </div>
   )
@@ -500,8 +715,21 @@ ${Object.entries(values)
   .join("\n")}`
 }
 
+function hasTokenDependency(value: string) {
+  return /\bvar\(/.test(value)
+}
+
+function parseScaleValue(value: number | string, fallback: number) {
+  const numericValue =
+    typeof value === "number" ? value : Number.parseFloat(value)
+
+  return Number.isFinite(numericValue) ? numericValue : fallback
+}
+
 function createShadowValue(offset: number) {
-  return `${offset}px ${offset}px 0 var(--color-su-ink)`
+  const safeOffset = parseScaleValue(offset, 0)
+
+  return `${safeOffset}px ${safeOffset}px 0 var(--color-su-ink)`
 }
 
 function copyTextWithFallback(text: string) {

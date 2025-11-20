@@ -31,6 +31,11 @@ export type {
   CheckboxGroupProps,
   CheckboxProps,
 } from "./components/ui/checkbox"
+export { ColorPicker, colorPickerVariants } from "./components/ui/color-picker"
+export type {
+  ColorPickerOutputFormat,
+  ColorPickerProps,
+} from "./components/ui/color-picker"
 export {
   ContextMenu,
   contextMenuContentVariants,
@@ -135,6 +140,8 @@ export type {
 } from "./components/ui/radio"
 export { Progress, progressVariants } from "./components/ui/progress"
 export type { ProgressProps } from "./components/ui/progress"
+export { Range, rangeVariants } from "./components/ui/range"
+export type { RangeProps } from "./components/ui/range"
 export { Skeleton, skeletonVariants } from "./components/ui/skeleton"
 export type { SkeletonProps } from "./components/ui/skeleton"
 export {

@@ -10510,6 +10510,839 @@
       }
     ]
   },
+  "color-picker": {
+    "components": [
+      {
+        "name": "ColorPicker",
+        "props": {
+          "descriptionKey": "api.color-picker.components.ColorPicker.props.description",
+          "remarksKey": "api.color-picker.components.ColorPicker.props.remarks",
+          "inherits": [
+            "Omit< React.InputHTMLAttributes<HTMLInputElement>, | \"children\" | \"className\" | \"defaultValue\" | \"onChange\" | \"size\" | \"type\" | \"value\" >"
+          ],
+          "inheritedMembers": [
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-describedby.description",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-invalid.description",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"false\" | \"true\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-label.description",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-labelledby.description",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.autoComplete.description",
+              "name": "autoComplete",
+              "optional": true,
+              "required": false,
+              "type": "React.HTMLInputAutoCompleteAttribute"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.autoFocus.description",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.checked.description",
+              "name": "checked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultChecked.description",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.disabled.description",
+              "name": "disabled",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.form.description",
+              "name": "form",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.id.description",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.max.description",
+              "name": "max",
+              "optional": true,
+              "required": false,
+              "type": "string | number"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.maxLength.description",
+              "name": "maxLength",
+              "optional": true,
+              "required": false,
+              "type": "number"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.min.description",
+              "name": "min",
+              "optional": true,
+              "required": false,
+              "type": "string | number"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.minLength.description",
+              "name": "minLength",
+              "optional": true,
+              "required": false,
+              "type": "number"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.name.description",
+              "name": "name",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onBlur.description",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLInputElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onClick.description",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLInputElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onFocus.description",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLInputElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyDown.description",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLInputElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyUp.description",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLInputElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseEnter.description",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLInputElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseLeave.description",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLInputElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.pattern.description",
+              "name": "pattern",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.placeholder.description",
+              "name": "placeholder",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.readOnly.description",
+              "name": "readOnly",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.required.description",
+              "name": "required",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.role.description",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.style.description",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.title.description",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "members": [
+            {
+              "descriptionKey": "api.color-picker.components.ColorPicker.props.members.className.description",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "defaultValue": "\"#000000\"",
+              "descriptionKey": "api.color-picker.components.ColorPicker.props.members.defaultValue.description",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.color-picker.components.ColorPicker.props.members.onChange.description",
+              "remarksKey": "api.color-picker.components.ColorPicker.props.members.onChange.remarks",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "ColorPickerChangeHandler"
+            },
+            {
+              "defaultValue": "\"auto\"",
+              "descriptionKey": "api.color-picker.components.ColorPicker.props.members.outputFormat.description",
+              "name": "outputFormat",
+              "optional": true,
+              "required": false,
+              "type": "ColorPickerOutputFormat"
+            },
+            {
+              "defaultValue": "true",
+              "descriptionKey": "api.color-picker.components.ColorPicker.props.members.showValue.description",
+              "name": "showValue",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "defaultValue": "\"md\"",
+              "descriptionKey": "api.color-picker.components.ColorPicker.props.members.size.description",
+              "name": "size",
+              "optional": true,
+              "required": false,
+              "type": "ColorPickerSize"
+            },
+            {
+              "descriptionKey": "api.color-picker.components.ColorPicker.props.members.value.description",
+              "name": "value",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "type": "ColorPickerProps"
+        }
+      }
+    ],
+    "descriptionKey": "api.color-picker.description",
+    "exports": [
+      { "kind": "component", "name": "ColorPicker" },
+      {
+        "descriptionKey": "api.color-picker.exports.ColorPickerOutputFormat.description",
+        "remarksKey": "api.color-picker.exports.ColorPickerOutputFormat.remarks",
+        "kind": "type",
+        "name": "ColorPickerOutputFormat"
+      },
+      {
+        "descriptionKey": "api.color-picker.exports.ColorPickerProps.description",
+        "remarksKey": "api.color-picker.exports.ColorPickerProps.remarks",
+        "kind": "interface",
+        "name": "ColorPickerProps"
+      },
+      {
+        "descriptionKey": "api.color-picker.exports.colorPickerVariants.description",
+        "kind": "variant",
+        "name": "colorPickerVariants"
+      }
+    ],
+    "name": "color-picker",
+    "sourcePath": "src/components/ui/color-picker.tsx",
+    "title": "Sticker Color Picker",
+    "types": [
+      {
+        "descriptionKey": "api.color-picker.types.ColorPickerOutputFormat.description",
+        "remarksKey": "api.color-picker.types.ColorPickerOutputFormat.remarks",
+        "inherits": [],
+        "kind": "type",
+        "members": [],
+        "name": "ColorPickerOutputFormat",
+        "type": "| \"auto\" | \"a98\" | \"hex\" | \"hsl\" | \"hwb\" | \"lab\" | \"lch\" | \"oklab\" | \"oklch\" | \"p3\" | \"prophoto\" | \"rec2020\" | \"rgb\""
+      },
+      {
+        "descriptionKey": "api.color-picker.types.ColorPickerProps.description",
+        "remarksKey": "api.color-picker.types.ColorPickerProps.remarks",
+        "inherits": [
+          "Omit< React.InputHTMLAttributes<HTMLInputElement>, | \"children\" | \"className\" | \"defaultValue\" | \"onChange\" | \"size\" | \"type\" | \"value\" >"
+        ],
+        "kind": "interface",
+        "members": [
+          {
+            "descriptionKey": "api.color-picker.types.ColorPickerProps.members.className.description",
+            "name": "className",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "defaultValue": "\"#000000\"",
+            "descriptionKey": "api.color-picker.types.ColorPickerProps.members.defaultValue.description",
+            "name": "defaultValue",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "descriptionKey": "api.color-picker.types.ColorPickerProps.members.onChange.description",
+            "remarksKey": "api.color-picker.types.ColorPickerProps.members.onChange.remarks",
+            "name": "onChange",
+            "optional": true,
+            "required": false,
+            "type": "ColorPickerChangeHandler"
+          },
+          {
+            "defaultValue": "\"auto\"",
+            "descriptionKey": "api.color-picker.types.ColorPickerProps.members.outputFormat.description",
+            "name": "outputFormat",
+            "optional": true,
+            "required": false,
+            "type": "ColorPickerOutputFormat"
+          },
+          {
+            "defaultValue": "true",
+            "descriptionKey": "api.color-picker.types.ColorPickerProps.members.showValue.description",
+            "name": "showValue",
+            "optional": true,
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "defaultValue": "\"md\"",
+            "descriptionKey": "api.color-picker.types.ColorPickerProps.members.size.description",
+            "name": "size",
+            "optional": true,
+            "required": false,
+            "type": "ColorPickerSize"
+          },
+          {
+            "descriptionKey": "api.color-picker.types.ColorPickerProps.members.value.description",
+            "name": "value",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "name": "ColorPickerProps"
+      }
+    ],
+    "variants": [
+      {
+        "descriptionKey": "api.color-picker.variants.colorPickerVariants.description",
+        "groups": [
+          { "defaultValue": "false", "name": "disabled", "values": ["false", "true"] },
+          { "defaultValue": "md", "name": "size", "values": ["lg", "md", "sm"] }
+        ],
+        "name": "colorPickerVariants"
+      }
+    ]
+  },
+  "range": {
+    "components": [
+      {
+        "name": "Range",
+        "props": {
+          "descriptionKey": "api.range.components.Range.props.description",
+          "remarksKey": "api.range.components.Range.props.remarks",
+          "inherits": [
+            "Omit< React.InputHTMLAttributes<HTMLInputElement>, | \"children\" | \"className\" | \"defaultValue\" | \"max\" | \"min\" | \"onChange\" | \"size\" | \"step\" | \"style\" | \"type\" | \"value\" >",
+            "Omit<VariantProps<typeof rangeVariants>, \"disabled\" | \"size\" | \"tone\">"
+          ],
+          "inheritedMembers": [
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-describedby.description",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-invalid.description",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-label.description",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-labelledby.description",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.autoComplete.description",
+              "name": "autoComplete",
+              "optional": true,
+              "required": false,
+              "type": "React.HTMLInputAutoCompleteAttribute"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.autoFocus.description",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.checked.description",
+              "name": "checked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultChecked.description",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.disabled.description",
+              "name": "disabled",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.form.description",
+              "name": "form",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.id.description",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.maxLength.description",
+              "name": "maxLength",
+              "optional": true,
+              "required": false,
+              "type": "number"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.minLength.description",
+              "name": "minLength",
+              "optional": true,
+              "required": false,
+              "type": "number"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.name.description",
+              "name": "name",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onBlur.description",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLInputElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onClick.description",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLInputElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onFocus.description",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLInputElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyDown.description",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLInputElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyUp.description",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLInputElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseEnter.description",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLInputElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseLeave.description",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLInputElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.pattern.description",
+              "name": "pattern",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.placeholder.description",
+              "name": "placeholder",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.readOnly.description",
+              "name": "readOnly",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.required.description",
+              "name": "required",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.role.description",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.title.description",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "members": [
+            {
+              "descriptionKey": "api.range.components.Range.props.members.className.description",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "defaultValue": "0",
+              "descriptionKey": "api.range.components.Range.props.members.defaultValue.description",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "number"
+            },
+            {
+              "descriptionKey": "api.range.components.Range.props.members.formatValue.description",
+              "name": "formatValue",
+              "optional": true,
+              "required": false,
+              "type": "(value: number) => React.ReactNode"
+            },
+            {
+              "defaultValue": "100",
+              "descriptionKey": "api.range.components.Range.props.members.max.description",
+              "name": "max",
+              "optional": true,
+              "required": false,
+              "type": "number"
+            },
+            {
+              "defaultValue": "0",
+              "descriptionKey": "api.range.components.Range.props.members.min.description",
+              "name": "min",
+              "optional": true,
+              "required": false,
+              "type": "number"
+            },
+            {
+              "descriptionKey": "api.range.components.Range.props.members.onChange.description",
+              "remarksKey": "api.range.components.Range.props.members.onChange.remarks",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "RangeChangeHandler"
+            },
+            {
+              "defaultValue": "false",
+              "descriptionKey": "api.range.components.Range.props.members.showValue.description",
+              "name": "showValue",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "defaultValue": "\"md\"",
+              "descriptionKey": "api.range.components.Range.props.members.size.description",
+              "name": "size",
+              "optional": true,
+              "required": false,
+              "type": "\"lg\" | \"md\" | \"sm\""
+            },
+            {
+              "defaultValue": "1",
+              "descriptionKey": "api.range.components.Range.props.members.step.description",
+              "name": "step",
+              "optional": true,
+              "required": false,
+              "type": "number"
+            },
+            {
+              "descriptionKey": "api.range.components.Range.props.members.style.description",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "defaultValue": "\"default\"",
+              "descriptionKey": "api.range.components.Range.props.members.tone.description",
+              "name": "tone",
+              "optional": true,
+              "required": false,
+              "type": "\"danger\" | \"default\" | \"info\" | \"secondary\" | \"success\" | \"warning\""
+            },
+            {
+              "descriptionKey": "api.range.components.Range.props.members.value.description",
+              "name": "value",
+              "optional": true,
+              "required": false,
+              "type": "number"
+            }
+          ],
+          "type": "RangeProps"
+        }
+      }
+    ],
+    "descriptionKey": "api.range.description",
+    "exports": [
+      { "kind": "component", "name": "Range" },
+      {
+        "descriptionKey": "api.range.exports.RangeProps.description",
+        "remarksKey": "api.range.exports.RangeProps.remarks",
+        "kind": "interface",
+        "name": "RangeProps"
+      },
+      {
+        "descriptionKey": "api.range.exports.rangeVariants.description",
+        "kind": "variant",
+        "name": "rangeVariants"
+      }
+    ],
+    "name": "range",
+    "sourcePath": "src/components/ui/range.tsx",
+    "title": "Sticker Range",
+    "types": [
+      {
+        "descriptionKey": "api.range.types.RangeProps.description",
+        "remarksKey": "api.range.types.RangeProps.remarks",
+        "inherits": [
+          "Omit< React.InputHTMLAttributes<HTMLInputElement>, | \"children\" | \"className\" | \"defaultValue\" | \"max\" | \"min\" | \"onChange\" | \"size\" | \"step\" | \"style\" | \"type\" | \"value\" >",
+          "Omit<VariantProps<typeof rangeVariants>, \"disabled\" | \"size\" | \"tone\">"
+        ],
+        "kind": "interface",
+        "members": [
+          {
+            "descriptionKey": "api.range.types.RangeProps.members.className.description",
+            "name": "className",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "defaultValue": "0",
+            "descriptionKey": "api.range.types.RangeProps.members.defaultValue.description",
+            "name": "defaultValue",
+            "optional": true,
+            "required": false,
+            "type": "number"
+          },
+          {
+            "descriptionKey": "api.range.types.RangeProps.members.formatValue.description",
+            "name": "formatValue",
+            "optional": true,
+            "required": false,
+            "type": "(value: number) => React.ReactNode"
+          },
+          {
+            "defaultValue": "100",
+            "descriptionKey": "api.range.types.RangeProps.members.max.description",
+            "name": "max",
+            "optional": true,
+            "required": false,
+            "type": "number"
+          },
+          {
+            "defaultValue": "0",
+            "descriptionKey": "api.range.types.RangeProps.members.min.description",
+            "name": "min",
+            "optional": true,
+            "required": false,
+            "type": "number"
+          },
+          {
+            "descriptionKey": "api.range.types.RangeProps.members.onChange.description",
+            "remarksKey": "api.range.types.RangeProps.members.onChange.remarks",
+            "name": "onChange",
+            "optional": true,
+            "required": false,
+            "type": "RangeChangeHandler"
+          },
+          {
+            "defaultValue": "false",
+            "descriptionKey": "api.range.types.RangeProps.members.showValue.description",
+            "name": "showValue",
+            "optional": true,
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "defaultValue": "\"md\"",
+            "descriptionKey": "api.range.types.RangeProps.members.size.description",
+            "name": "size",
+            "optional": true,
+            "required": false,
+            "type": "\"lg\" | \"md\" | \"sm\""
+          },
+          {
+            "defaultValue": "1",
+            "descriptionKey": "api.range.types.RangeProps.members.step.description",
+            "name": "step",
+            "optional": true,
+            "required": false,
+            "type": "number"
+          },
+          {
+            "descriptionKey": "api.range.types.RangeProps.members.style.description",
+            "name": "style",
+            "optional": true,
+            "required": false,
+            "type": "React.CSSProperties"
+          },
+          {
+            "defaultValue": "\"default\"",
+            "descriptionKey": "api.range.types.RangeProps.members.tone.description",
+            "name": "tone",
+            "optional": true,
+            "required": false,
+            "type": "\"danger\" | \"default\" | \"info\" | \"secondary\" | \"success\" | \"warning\""
+          },
+          {
+            "descriptionKey": "api.range.types.RangeProps.members.value.description",
+            "name": "value",
+            "optional": true,
+            "required": false,
+            "type": "number"
+          }
+        ],
+        "name": "RangeProps"
+      }
+    ],
+    "variants": [
+      {
+        "descriptionKey": "api.range.variants.rangeVariants.description",
+        "groups": [
+          { "defaultValue": "false", "name": "disabled", "values": ["false", "true"] },
+          { "defaultValue": "md", "name": "size", "values": ["lg", "md", "sm"] },
+          {
+            "defaultValue": "default",
+            "name": "tone",
+            "values": ["danger", "default", "info", "secondary", "success", "warning"]
+          }
+        ],
+        "name": "rangeVariants"
+      }
+    ]
+  },
   "input-password": {
     "components": [
       {

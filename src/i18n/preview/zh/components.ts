@@ -157,6 +157,24 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   "preview.components.basicField": {
     zh: "基础字段",
   },
+  "preview.components.colorpickerKeepsNativeColorPanelBehaviorWhileAddingAStickerSwatchFrame":
+    {
+      zh: "ColorPicker 保留原生颜色面板行为，同时加入贴纸色块外框。",
+    },
+  "preview.components.controlledPalette": {
+    zh: "受控色板",
+  },
+  "preview.components.onchangeReceivesTheNextHexValueFirstSoPaletteStateCanStayControlled":
+    {
+      zh: "onChange 会收到转换后的 CSS 色值，因此色板状态可以保持受控。",
+    },
+  "preview.components.sizesAndValues": {
+    zh: "尺寸与色值",
+  },
+  "preview.components.sizesAlignColorPickersWithCompactToolbarsStandardFormsAndRoomySettingsPanels":
+    {
+      zh: "尺寸可让 ColorPicker 对齐紧凑工具栏、标准表单和宽松设置面板。",
+    },
   "preview.components.basicLogin": {
     zh: "基础登录",
   },
@@ -403,6 +421,12 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
     },
   "preview.components.nativeInputControlsWithChunkyStickerFrames": {
     zh: "带有厚实贴纸边框的原生输入控件。",
+  },
+  "preview.components.nativeColorInputsWithTactileStickerSwatches": {
+    zh: "带有触感贴纸色块的原生颜色输入控件。",
+  },
+  "preview.components.nativeRangeControlsWithChunkyStickerTracks": {
+    zh: "带有粗线贴纸轨道的原生范围输入控件。",
   },
   "preview.components.passwordFieldsWithShowHideStickerToggles": {
     zh: "带显示隐藏贴纸切换按钮的密码字段。",
@@ -660,6 +684,13 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   "preview.components.radixSwitchControlsWithTactileStickerTracks": {
     zh: "带触感贴纸轨道的 Radix 开关控件。",
   },
+  "preview.components.rangeKeepsDisabledInvalidAndFormControlledValuesNumeric":
+    {
+      zh: "Range 在禁用、无效和 Form 受控场景里都保持数字值契约。",
+    },
+  "preview.components.rangeReportsNumericValuesForControlledStickerSettings": {
+    zh: "Range 通过 onChange 返回数字值，方便受控贴纸设置直接使用。",
+  },
   "preview.components.readableStickerNotesForFeedbackAndStatusMessages": {
     zh: "用于反馈和状态消息的易读贴纸提示。",
   },
@@ -674,6 +705,10 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   "preview.components.sizesAlignSwitchesWithCompactToolbarsStandardSettingsAndRoomyPreferencePanelsWhileToneKeepsStateContextVisible":
     {
       zh: "尺寸让开关适配紧凑工具栏、标准设置和宽松偏好面板，同时 tone 保持状态上下文可见。",
+    },
+  "preview.components.sizesTuneRangeTracksForDenseRowsAndRoomyPanelsWhileToneKeepsMeaningVisible":
+    {
+      zh: "尺寸让 Range 轨道适配紧凑行和宽松面板，语义色保持含义可见。",
     },
   "preview.components.switchKeepsRadixPressedStateBehaviorWhileAddingATactileStickerTrackAndPaperThumb":
     {
