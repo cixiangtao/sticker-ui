@@ -5,8 +5,14 @@ import tailwindcss from "@tailwindcss/vite"
 import react, { reactCompilerPreset } from "@vitejs/plugin-react"
 import { defineConfig } from "vite"
 
+const isGitLabPagesBuild = process.env.GITLAB_PAGES === "true"
+
 export default defineConfig({
+  publicDir: isGitLabPagesBuild ? false : "public",
   build: {
+    copyPublicDir: !isGitLabPagesBuild,
+    emptyOutDir: isGitLabPagesBuild ? false : undefined,
+    outDir: isGitLabPagesBuild ? "public" : "dist",
     rolldownOptions: {
       output: {
         manualChunks(id) {

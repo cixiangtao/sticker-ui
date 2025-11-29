@@ -1,0 +1,29 @@
+default:
+  image: node:24-alpine
+  cache:
+    key:
+      files:
+        - pnpm-lock.yaml
+    paths:
+      - .pnpm-store/
+  before_script:
+    - corepack enable
+    - corepack prepare pnpm@10.17.1 --activate
+    - pnpm config set store-dir .pnpm-store
+    - pnpm install --frozen-lockfile
+
+pages:
+  stage: deploy
+  pages: true
+  script:
+    - pnpm run build:api
+    - pnpm run check
+    - |
+      BASE_PATH="$(node -e 'const url = process.env.CI_PAGES_URL ? new URL(process.env.CI_PAGES_URL) : null; const pathname = url?.pathname || \"/\"; console.log(pathname.endsWith(\"/\") ? pathname : `${pathname}/`);')"
+      GITLAB_PAGES=true pnpm exec vite build --base "$BASE_PATH"
+    - cp public/index.html public/404.html
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
