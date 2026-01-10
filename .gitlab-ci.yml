@@ -18,7 +18,7 @@ pages:
     - pnpm run build:api
     - pnpm run check
     - |
-      BASE_PATH="$(node -e 'const url = process.env.CI_PAGES_URL ? new URL(process.env.CI_PAGES_URL) : null; const pathname = url?.pathname || \"/\"; console.log(pathname.endsWith(\"/\") ? pathname : `${pathname}/`);')"
+      BASE_PATH="$(node -e 'const pagesUrl = process.env.CI_PAGES_URL; const fallback = process.env.CI_PROJECT_NAME ? "/" + process.env.CI_PROJECT_NAME + "/" : "/"; const pathname = pagesUrl ? new URL(pagesUrl).pathname : fallback; console.log(pathname.endsWith("/") ? pathname : pathname + "/");')"
       GITLAB_PAGES=true pnpm exec vite build --base "$BASE_PATH"
     - cp public/index.html public/404.html
   artifacts:
