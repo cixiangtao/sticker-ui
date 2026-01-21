@@ -315,7 +315,7 @@ function ThemePage() {
 
         <Card className="bg-su-fill-success">
           <CardHeader>
-            <div className="flex flex-wrap items-start justify-between gap-3">
+            <div className="flex flex-wrap items-center justify-between gap-3">
               <div className="min-w-0">
                 <CardTitle>{tm("preview.components.copyThemeCss")}</CardTitle>
                 <CardDescription>
