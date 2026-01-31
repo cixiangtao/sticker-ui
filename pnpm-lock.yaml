@@ -4,6 +4,14 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  oxfmt@0.55.0:
+    hash: 03f08aafb9d9cf68d05d5d31abe5edbda0744e5c566046927b3ff894aa3e556e
+    path: patches/oxfmt@0.55.0.patch
+  oxlint@1.70.0:
+    hash: 9f69d8017ec775479fc16ee40600b4c31c104767a3186ce1fff73cd20dab4595
+    path: patches/oxlint@1.70.0.patch
+
 importers:
 
   .:
@@ -116,10 +124,10 @@ importers:
         version: 26.3.1(typescript@6.0.3)
       oxfmt:
         specifier: ^0.55.0
-        version: 0.55.0
+        version: 0.55.0(patch_hash=03f08aafb9d9cf68d05d5d31abe5edbda0744e5c566046927b3ff894aa3e556e)
       oxlint:
         specifier: ^1.70.0
-        version: 1.70.0
+        version: 1.70.0(patch_hash=9f69d8017ec775479fc16ee40600b4c31c104767a3186ce1fff73cd20dab4595)
       react:
         specifier: latest
         version: 19.2.7
@@ -7120,7 +7128,7 @@ snapshots:
       string-width: 7.2.0
       strip-ansi: 7.2.0
 
-  oxfmt@0.55.0:
+  oxfmt@0.55.0(patch_hash=03f08aafb9d9cf68d05d5d31abe5edbda0744e5c566046927b3ff894aa3e556e):
     dependencies:
       tinypool: 2.1.0
     optionalDependencies:
@@ -7144,7 +7152,7 @@ snapshots:
       '@oxfmt/binding-win32-ia32-msvc': 0.55.0
       '@oxfmt/binding-win32-x64-msvc': 0.55.0
 
-  oxlint@1.70.0:
+  oxlint@1.70.0(patch_hash=9f69d8017ec775479fc16ee40600b4c31c104767a3186ce1fff73cd20dab4595):
     optionalDependencies:
       '@oxlint/binding-android-arm-eabi': 1.70.0
       '@oxlint/binding-android-arm64': 1.70.0

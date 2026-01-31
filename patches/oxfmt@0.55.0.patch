@@ -1,0 +1,13 @@
+diff --git a/dist/index.d.ts b/dist/index.d.ts
+index d4c528e6a8ba72eb87c96aec772a2b035e2a0d23..f64124826f8d867e78e3a44d7872dd30052d3100 100644
+--- a/dist/index.d.ts
++++ b/dist/index.d.ts
+@@ -876,7 +876,7 @@ type TailwindcssOptions = SortTailwindcssConfig;
+ /**
+  * Define an oxfmt configuration with type inference.
+  */
+-declare function defineConfig<T extends OxfmtConfig>(config: T): T;
++declare function defineConfig<T extends OxfmtConfig>(config: T & OxfmtConfig): T;
+ /**
+  * Format the given source text according to the specified options.
+  */

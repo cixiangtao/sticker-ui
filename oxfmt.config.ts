@@ -9,6 +9,7 @@ export default defineConfig({
     "package-lock.json",
     "pnpm-lock.yaml",
     "public/r",
+    "src/generated/preview-api-docs.json",
   ],
   printWidth: 80,
   semi: false,

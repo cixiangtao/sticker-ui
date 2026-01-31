@@ -1,3 +1,7 @@
 packages:
   - "."
   - "packages/*"
+
+patchedDependencies:
+  oxfmt@0.55.0: patches/oxfmt@0.55.0.patch
+  oxlint@1.70.0: patches/oxlint@1.70.0.patch

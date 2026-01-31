@@ -15,6 +15,7 @@ export default defineConfig({
     "dist",
     "node_modules",
     "public/r",
+    "src/generated/preview-api-docs.json",
   ],
   plugins: ["eslint", "import", "typescript", "react"],
   rules: {
