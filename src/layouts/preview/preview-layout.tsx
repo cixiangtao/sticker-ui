@@ -1,8 +1,12 @@
 import { Link, Outlet, useLocation } from "@tanstack/react-router"
 import { useLayoutEffect } from "react"
-import { Button, Card, Divider, Tag } from "sticker-ui"
+import { Button, Card, Divider, Select, Tag } from "sticker-ui"
 
-import { type PreviewMessageKey, usePreviewI18n } from "../../i18n/preview"
+import {
+  type PreviewLanguage,
+  type PreviewMessageKey,
+  usePreviewI18n,
+} from "../../i18n/preview"
 import { NAV_GROUPS, resolvePreviewLabel } from "../../preview-data"
 import { useCurrentRoute } from "../../router/routes"
 
@@ -27,6 +31,19 @@ const TOP_BAR_NAV_ITEMS = [
   labelKey: PreviewMessageKey
   mark: string
   to: string
+}>
+const PREVIEW_LANGUAGE_OPTIONS = [
+  {
+    label: "中文",
+    language: "zh",
+  },
+  {
+    label: "English",
+    language: "en",
+  },
+] satisfies Array<{
+  label: string
+  language: PreviewLanguage
 }>
 
 interface RouteLabelMeta {
@@ -212,7 +229,16 @@ function TopBar({
 }: {
   activeRoute: { label?: string; labelKey?: string; path: string }
 }) {
-  const { td, tm } = usePreviewI18n()
+  const { language, setLanguage, td, tm } = usePreviewI18n()
+  const handleLanguageChange = (nextLanguage: string) => {
+    const option = PREVIEW_LANGUAGE_OPTIONS.find(
+      (item) => item.language === nextLanguage,
+    )
+
+    if (option) {
+      setLanguage(option.language)
+    }
+  }
 
   return (
     <Card
@@ -232,34 +258,56 @@ function TopBar({
           </div>
         </div>
       </Link>
-      <nav
-        aria-label={tm("preview.route.navigationLabel")}
-        className="flex flex-wrap gap-2"
-      >
-        {TOP_BAR_NAV_ITEMS.map((item) => {
-          const active = item.isActive(activeRoute.path)
+      <div className="flex flex-wrap items-center justify-between gap-2">
+        <nav
+          aria-label={tm("preview.route.navigationLabel")}
+          className="flex flex-wrap gap-2"
+        >
+          {TOP_BAR_NAV_ITEMS.map((item) => {
+            const active = item.isActive(activeRoute.path)
 
-          return (
-            <Button
-              asChild
-              className="h-auto w-fit gap-2 rounded-su-lg px-4 py-2 text-sm"
-              key={item.to}
-              size="sm"
-              variant={active ? "solid" : "outlined"}
-            >
-              <Link aria-current={active ? "page" : undefined} to={item.to}>
-                <span
-                  aria-hidden="true"
-                  className="inline-flex size-7 items-center justify-center rounded-su-sm border-2 border-su-ink bg-su-fill-default text-xs text-su-ink shadow-su-xs"
-                >
-                  {item.mark}
-                </span>
-                {td(item.labelKey)}
-              </Link>
-            </Button>
-          )
-        })}
-      </nav>
+            return (
+              <Button
+                asChild
+                className="h-auto w-fit gap-2 rounded-su-lg px-4 py-2 text-sm"
+                key={item.to}
+                size="sm"
+                variant={active ? "solid" : "outlined"}
+              >
+                <Link aria-current={active ? "page" : undefined} to={item.to}>
+                  <span
+                    aria-hidden="true"
+                    className="inline-flex size-7 items-center justify-center rounded-su-sm border-2 border-su-ink bg-su-fill-default text-xs text-su-ink shadow-su-xs"
+                  >
+                    {item.mark}
+                  </span>
+                  {td(item.labelKey)}
+                </Link>
+              </Button>
+            )
+          })}
+        </nav>
+        <Select
+          onChange={handleLanguageChange}
+          size="sm"
+          value={language}
+          variant="filled"
+        >
+          <Select.Trigger
+            aria-label={tm("preview.route.languageLabel")}
+            className="h-10 w-28 bg-su-surface text-xs shadow-su-xs"
+          >
+            <Select.Value />
+          </Select.Trigger>
+          <Select.Content>
+            {PREVIEW_LANGUAGE_OPTIONS.map((option) => (
+              <Select.Item key={option.language} value={option.language}>
+                {option.label}
+              </Select.Item>
+            ))}
+          </Select.Content>
+        </Select>
+      </div>
     </Card>
   )
 }

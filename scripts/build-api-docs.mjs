@@ -135,8 +135,11 @@ function readJsDoc(node) {
 function withI18nTextFields(doc, keyBase) {
   return {
     defaultValue: doc.defaultValue,
+    deprecated: doc.deprecated || undefined,
     deprecatedKey: doc.deprecated ? `${keyBase}.deprecated` : undefined,
+    description: doc.description || undefined,
     descriptionKey: doc.description ? `${keyBase}.description` : undefined,
+    remarks: doc.remarks || undefined,
     remarksKey: doc.remarks ? `${keyBase}.remarks` : undefined,
   }
 }
@@ -693,6 +696,7 @@ async function main() {
 
     docs[item.name] = {
       components: getComponentApis(sourceFile, item.name),
+      description: item.description,
       descriptionKey: getApiI18nKey(item.name, "description"),
       exports: getExports(sourceFile, item.name),
       name: item.name,

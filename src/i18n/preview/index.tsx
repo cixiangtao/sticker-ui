@@ -6,6 +6,7 @@ import {
   useTranslation,
 } from "react-i18next"
 
+import { createEnglishPreviewMessages } from "./en"
 import {
   createPreviewResources,
   type MessageKeys,
@@ -20,7 +21,10 @@ interface PreviewI18nProviderProps {
   children: React.ReactNode
 }
 
-const PREVIEW_RESOURCES = createPreviewResources(PREVIEW_MESSAGES)
+const STORAGE_KEY = "sticker-ui-preview-language"
+const PREVIEW_RESOURCES = createPreviewResources(PREVIEW_MESSAGES, {
+  en: createEnglishPreviewMessages(Object.keys(PREVIEW_MESSAGES)),
+})
 const MISSING_PREVIEW_MESSAGE_KEY = "[missing preview message key]"
 
 i18n.use(initReactI18next).init({
@@ -29,7 +33,7 @@ i18n.use(initReactI18next).init({
   interpolation: {
     escapeValue: false,
   },
-  lng: "zh",
+  lng: getInitialLanguage(),
   ns: ["preview"],
   resources: Object.fromEntries(
     PREVIEW_LANGUAGES.map((language) => [
@@ -58,6 +62,9 @@ function usePreviewI18n() {
   return {
     td: (key: string | undefined) => translatePreviewMessage(t, key),
     language,
+    setLanguage: (nextLanguage: PreviewLanguage) => {
+      void i18nInstance.changeLanguage(nextLanguage)
+    },
     tm: (key: PreviewMessageKey | undefined) => translatePreviewMessage(t, key),
   }
 }
@@ -74,6 +81,7 @@ function PreviewLanguageSync() {
   const language = toPreviewLanguage(i18nInstance.resolvedLanguage)
 
   React.useEffect(() => {
+    window.localStorage.setItem(STORAGE_KEY, language)
     document.documentElement.lang = getDocumentLanguage(language)
   }, [language])
 
@@ -88,8 +96,16 @@ function toPreviewLanguage(
     : "zh"
 }
 
+function getInitialLanguage(): PreviewLanguage {
+  if (typeof window === "undefined") {
+    return "zh"
+  }
+
+  return toPreviewLanguage(window.localStorage.getItem(STORAGE_KEY))
+}
+
 function getDocumentLanguage(language: PreviewLanguage) {
-  return language === "zh" ? "zh-CN" : language
+  return language === "zh" ? "zh-CN" : "en"
 }
 
 export {

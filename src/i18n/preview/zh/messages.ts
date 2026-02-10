@@ -7,6 +7,9 @@ const ZH_PREVIEW_LAYOUT_MESSAGES = defineMessages({
   "preview.route.navigationLabel": {
     zh: "预览路由",
   },
+  "preview.route.languageLabel": {
+    zh: "预览语言",
+  },
   "preview.route.previewing": {
     zh: "正在预览",
   },

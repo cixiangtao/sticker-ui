@@ -1,14 +1,16 @@
-const PREVIEW_LANGUAGES = ["zh"] as const
+const PREVIEW_LANGUAGES = ["zh", "en"] as const
 
 type PreviewLanguage = (typeof PREVIEW_LANGUAGES)[number]
-type MessageLeaf = Record<PreviewLanguage, string>
+type MessageLeaf = Partial<Record<PreviewLanguage, string>>
 type MessageMap = Record<string, MessageLeaf>
+type PreviewLanguageMessages = Record<string, string>
+type PreviewLanguageResourceOverrides = Partial<
+  Record<PreviewLanguage, PreviewLanguageMessages>
+>
 type ValidMessageLeaf<TMessage> =
   TMessage extends Record<string, unknown>
-    ? PreviewLanguage extends keyof TMessage
-      ? Exclude<keyof TMessage, PreviewLanguage> extends never
-        ? MessageLeaf
-        : never
+    ? Exclude<keyof TMessage, PreviewLanguage> extends never
+      ? MessageLeaf
       : never
     : never
 
@@ -18,7 +20,7 @@ type ValidMessageMap<TMessages> = {
 
 type MessageKeys<TMessages> = keyof TMessages & string
 
-type PreviewResources = Record<PreviewLanguage, Record<string, string>>
+type PreviewResources = Record<PreviewLanguage, PreviewLanguageMessages>
 
 function defineMessages<const TMessages extends Record<string, unknown>>(
   messages: TMessages & ValidMessageMap<TMessages>,
@@ -26,14 +28,24 @@ function defineMessages<const TMessages extends Record<string, unknown>>(
   return messages
 }
 
-function createPreviewResources(messages: MessageMap) {
+function createPreviewResources(
+  messages: MessageMap,
+  overrides: PreviewLanguageResourceOverrides = {},
+) {
   const resources = Object.fromEntries(
-    PREVIEW_LANGUAGES.map((language) => [language, {}]),
+    PREVIEW_LANGUAGES.map((language) => [
+      language,
+      { ...(overrides[language] ?? {}) },
+    ]),
   ) as PreviewResources
 
   for (const [key, message] of Object.entries(messages)) {
     for (const language of PREVIEW_LANGUAGES) {
-      resources[language][key] = message[language]
+      const value = message[language]
+
+      if (value) {
+        resources[language][key] = value
+      }
     }
   }
 
@@ -41,4 +53,4 @@ function createPreviewResources(messages: MessageMap) {
 }
 
 export { PREVIEW_LANGUAGES, createPreviewResources, defineMessages }
-export type { MessageKeys, PreviewLanguage }
+export type { MessageKeys, PreviewLanguage, PreviewLanguageMessages }
