@@ -391,7 +391,7 @@ function Pagination({
               onClick={() => {
                 setPage(1)
               }}
-              size="icon"
+              shape="square"
               variant="outlined"
             >
               <ChevronsLeft aria-hidden="true" className="size-4" />
@@ -403,7 +403,7 @@ function Pagination({
             onClick={() => {
               setPage(resolvedPage - 1)
             }}
-            size="icon"
+            shape="square"
             variant="outlined"
           >
             <ChevronLeft aria-hidden="true" className="size-4" />
@@ -414,7 +414,7 @@ function Pagination({
             onClick={() => {
               setPage(resolvedPage + 1)
             }}
-            size="icon"
+            shape="square"
             variant="outlined"
           >
             <ChevronRight aria-hidden="true" className="size-4" />
@@ -426,7 +426,7 @@ function Pagination({
               onClick={() => {
                 setPage(resolvedPageCount)
               }}
-              size="icon"
+              shape="square"
               variant="outlined"
             >
               <ChevronsRight aria-hidden="true" className="size-4" />

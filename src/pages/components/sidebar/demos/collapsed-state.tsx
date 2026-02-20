@@ -60,7 +60,7 @@ function Demo() {
           <Button
             aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
             onClick={() => setCollapsed((value) => !value)}
-            size="icon"
+            shape="square"
             variant="outlined"
           >
             {collapsed ? (

@@ -196,7 +196,7 @@ interface AlertDialogActionProps extends React.ComponentPropsWithoutRef<
    * Controls the button size.
    * @default "md"
    */
-  size?: "icon" | "lg" | "md" | "sm"
+  size?: "lg" | "md" | "sm"
   /**
    * Controls the button visual structure and emphasis.
    * @default "solid"
@@ -244,7 +244,7 @@ interface AlertDialogCancelProps extends React.ComponentPropsWithoutRef<
    * Controls the button size.
    * @default "md"
    */
-  size?: "icon" | "lg" | "md" | "sm"
+  size?: "lg" | "md" | "sm"
   /**
    * Controls the button visual structure and emphasis.
    * @default "outlined"

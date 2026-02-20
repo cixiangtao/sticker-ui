@@ -5,12 +5,27 @@ import * as React from "react"
 import { cn } from "@/lib/utils"
 
 /**
- * Builds the sticker button className from structure, color, and size variants.
+ * Builds the sticker button className from structure, color, size, and shape variants.
  */
 const buttonVariants = cva(
   "inline-flex shrink-0 cursor-pointer items-center justify-center gap-2 rounded-su-md border-2 leading-none font-extrabold transition duration-150 outline-none focus-visible:ring-[2px] focus-visible:ring-su-ring/65",
   {
     compoundVariants: [
+      {
+        class: "size-12 p-0",
+        shape: "square",
+        size: "lg",
+      },
+      {
+        class: "size-11 p-0",
+        shape: "square",
+        size: "md",
+      },
+      {
+        class: "size-9 p-0",
+        shape: "square",
+        size: "sm",
+      },
       {
         class: "text-su-fg-danger hover:bg-su-fill-danger",
         color: "danger",
@@ -136,6 +151,7 @@ const buttonVariants = cva(
     ],
     defaultVariants: {
       color: "default",
+      shape: "default",
       size: "md",
       variant: "solid",
     },
@@ -156,8 +172,11 @@ const buttonVariants = cva(
         false: "",
         true: "cursor-wait opacity-75",
       },
+      shape: {
+        default: "",
+        square: "",
+      },
       size: {
-        icon: "size-11 p-0",
         lg: "h-12 rounded-su-lg px-6 text-base",
         md: "h-11 px-5 text-sm",
         sm: "h-9 rounded-su-sm px-3 text-xs",
@@ -180,7 +199,7 @@ const buttonVariants = cva(
 
 /**
  * Props for the sticker button root element.
- * @remarks Inherits native button attributes and adds sticker structure, color, size, and loading states.
+ * @remarks Inherits native button attributes and adds sticker structure, color, size, shape, and loading states.
  */
 interface ButtonProps
   extends
@@ -197,15 +216,20 @@ interface ButtonProps
    */
   color?: "danger" | "default" | "info" | "secondary" | "success" | "warning"
   /**
+   * Controls whether the button uses its normal content shape or a square command shape.
+   * @default "default"
+   */
+  shape?: "default" | "square"
+  /**
    * Shows a loading indicator and disables the button while pending.
    * @default false
    */
   loading?: boolean
   /**
-   * Controls the button size and padding.
+   * Controls the button height, text scale, and standard padding.
    * @default "md"
    */
-  size?: "icon" | "lg" | "md" | "sm"
+  size?: "lg" | "md" | "sm"
   /**
    * Controls the button visual structure and emphasis.
    * @default "solid"
@@ -221,6 +245,7 @@ function Button({
   loading = false,
   onClick,
   onClickCapture,
+  shape = "default",
   size = "md",
   type = "button",
   variant = "solid",
@@ -241,6 +266,7 @@ function Button({
           color,
           disabled: isDisabled,
           loading,
+          shape,
           size,
           variant,
         }),

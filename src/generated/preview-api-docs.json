@@ -6,7 +6,7 @@
         "props": {
           "description": "Props for the sticker button root element.",
           "descriptionKey": "api.button.components.Button.props.description",
-          "remarks": "Inherits native button attributes and adds sticker structure, color, size, and loading states.",
+          "remarks": "Inherits native button attributes and adds sticker structure, color, size, shape, and loading states.",
           "remarksKey": "api.button.components.Button.props.remarks",
           "inherits": [
             "React.ButtonHTMLAttributes<HTMLButtonElement>",
@@ -225,13 +225,22 @@
               "type": "boolean"
             },
             {
+              "defaultValue": "\"default\"",
+              "description": "Controls whether the button uses its normal content shape or a square command shape.",
+              "descriptionKey": "api.button.components.Button.props.members.shape.description",
+              "name": "shape",
+              "optional": true,
+              "required": false,
+              "type": "\"default\" | \"square\""
+            },
+            {
               "defaultValue": "\"md\"",
-              "description": "Controls the button size and padding.",
+              "description": "Controls the button height, text scale, and standard padding.",
               "descriptionKey": "api.button.components.Button.props.members.size.description",
               "name": "size",
               "optional": true,
               "required": false,
-              "type": "\"icon\" | \"lg\" | \"md\" | \"sm\""
+              "type": "\"lg\" | \"md\" | \"sm\""
             },
             {
               "defaultValue": "\"solid\"",
@@ -252,7 +261,7 @@
     "exports": [
       { "kind": "component", "name": "Button" },
       {
-        "description": "Builds the sticker button className from structure, color, and size variants.",
+        "description": "Builds the sticker button className from structure, color, size, and shape variants.",
         "descriptionKey": "api.button.exports.buttonVariants.description",
         "kind": "variant",
         "name": "buttonVariants"
@@ -265,7 +274,7 @@
       {
         "description": "Props for the sticker button root element.",
         "descriptionKey": "api.button.types.ButtonProps.description",
-        "remarks": "Inherits native button attributes and adds sticker structure, color, size, and loading states.",
+        "remarks": "Inherits native button attributes and adds sticker structure, color, size, shape, and loading states.",
         "remarksKey": "api.button.types.ButtonProps.remarks",
         "inherits": [
           "React.ButtonHTMLAttributes<HTMLButtonElement>",
@@ -301,13 +310,22 @@
             "type": "boolean"
           },
           {
+            "defaultValue": "\"default\"",
+            "description": "Controls whether the button uses its normal content shape or a square command shape.",
+            "descriptionKey": "api.button.types.ButtonProps.members.shape.description",
+            "name": "shape",
+            "optional": true,
+            "required": false,
+            "type": "\"default\" | \"square\""
+          },
+          {
             "defaultValue": "\"md\"",
-            "description": "Controls the button size and padding.",
+            "description": "Controls the button height, text scale, and standard padding.",
             "descriptionKey": "api.button.types.ButtonProps.members.size.description",
             "name": "size",
             "optional": true,
             "required": false,
-            "type": "\"icon\" | \"lg\" | \"md\" | \"sm\""
+            "type": "\"lg\" | \"md\" | \"sm\""
           },
           {
             "defaultValue": "\"solid\"",
@@ -324,7 +342,7 @@
     ],
     "variants": [
       {
-        "description": "Builds the sticker button className from structure, color, and size variants.",
+        "description": "Builds the sticker button className from structure, color, size, and shape variants.",
         "descriptionKey": "api.button.variants.buttonVariants.description",
         "groups": [
           {
@@ -334,7 +352,8 @@
           },
           { "name": "disabled", "values": ["false", "true"] },
           { "name": "loading", "values": ["false", "true"] },
-          { "defaultValue": "md", "name": "size", "values": ["icon", "lg", "md", "sm"] },
+          { "defaultValue": "default", "name": "shape", "values": ["default", "square"] },
+          { "defaultValue": "md", "name": "size", "values": ["lg", "md", "sm"] },
           {
             "defaultValue": "solid",
             "name": "variant",
@@ -6541,7 +6560,7 @@
               "name": "size",
               "optional": true,
               "required": false,
-              "type": "\"icon\" | \"lg\" | \"md\" | \"sm\""
+              "type": "\"lg\" | \"md\" | \"sm\""
             },
             {
               "defaultValue": "\"solid\"",
@@ -6765,7 +6784,7 @@
               "name": "size",
               "optional": true,
               "required": false,
-              "type": "\"icon\" | \"lg\" | \"md\" | \"sm\""
+              "type": "\"lg\" | \"md\" | \"sm\""
             },
             {
               "defaultValue": "\"outlined\"",
@@ -7307,7 +7326,7 @@
             "name": "size",
             "optional": true,
             "required": false,
-            "type": "\"icon\" | \"lg\" | \"md\" | \"sm\""
+            "type": "\"lg\" | \"md\" | \"sm\""
           },
           {
             "defaultValue": "\"solid\"",
@@ -7343,7 +7362,7 @@
             "name": "size",
             "optional": true,
             "required": false,
-            "type": "\"icon\" | \"lg\" | \"md\" | \"sm\""
+            "type": "\"lg\" | \"md\" | \"sm\""
           },
           {
             "defaultValue": "\"outlined\"",

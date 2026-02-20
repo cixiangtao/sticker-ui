@@ -17,7 +17,7 @@ function Demo() {
       <DropdownMenu.Trigger asChild>
         <Button
           aria-label="Open project actions"
-          size="icon"
+          shape="square"
           variant="outlined"
         >
           <MoreHorizontal aria-hidden="true" className="size-5 stroke-[3]" />

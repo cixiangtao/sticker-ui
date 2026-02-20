@@ -275,12 +275,7 @@ function TopBar({
                 variant={active ? "solid" : "outlined"}
               >
                 <Link aria-current={active ? "page" : undefined} to={item.to}>
-                  <span
-                    aria-hidden="true"
-                    className="inline-flex size-7 items-center justify-center rounded-su-sm border-2 border-su-ink bg-su-fill-default text-xs text-su-ink shadow-su-xs"
-                  >
-                    {item.mark}
-                  </span>
+                  <span aria-hidden="true">{item.mark}</span>
                   {td(item.labelKey)}
                 </Link>
               </Button>

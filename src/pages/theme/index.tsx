@@ -324,12 +324,13 @@ function ThemePage() {
                   )}
                 </CardDescription>
               </div>
-              <div className="flex gap-2">
+              <div className="flex flex-1 items-center justify-between gap-2">
                 <Button
                   aria-label={tm("preview.components.resetTheme")}
                   onClick={resetTheme}
-                  size="icon"
-                  variant="outlined"
+                  shape="square"
+                  size="sm"
+                  color="danger"
                 >
                   <RotateCcw aria-hidden="true" size={17} />
                 </Button>

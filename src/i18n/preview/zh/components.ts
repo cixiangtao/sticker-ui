@@ -516,10 +516,9 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   "preview.components.showCode": {
     zh: "展开代码",
   },
-  "preview.components.sizeChoicesAreConstrainedSoIconShortTextAndLongCommandsStillReadAsOneFamily":
-    {
-      zh: "尺寸选择受到约束，让图标、短文本和长命令仍像同一套组件。",
-    },
+  "preview.components.sizeControlsScaleWhileShapeKeepsSquareCommandsSeparate": {
+    zh: "尺寸只控制缩放，图标按钮用独立的方形命令形态表达。",
+  },
   "preview.components.sizesAndCustomMarkers": {
     zh: "尺寸与自定义标记",
   },

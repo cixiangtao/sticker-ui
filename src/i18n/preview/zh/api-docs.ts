@@ -190,17 +190,20 @@ const ZH_PREVIEW_API_DOC_MESSAGES = defineMessages({
   "api.button.components.Button.props.members.loading.description": {
     zh: "显示加载指示器，并在等待期间禁用按钮。",
   },
+  "api.button.components.Button.props.members.shape.description": {
+    zh: "控制按钮使用常规内容形态，还是方形命令形态。",
+  },
   "api.button.components.Button.props.members.size.description": {
-    zh: "控制按钮尺寸和内边距。",
+    zh: "控制按钮高度、文字缩放和常规内边距。",
   },
   "api.button.components.Button.props.members.variant.description": {
     zh: "控制按钮的视觉结构和强调程度。",
   },
   "api.button.components.Button.props.remarks": {
-    zh: "继承原生按钮属性，并加入贴纸结构、颜色、尺寸和加载状态。",
+    zh: "继承原生按钮属性，并加入贴纸结构、颜色、尺寸、形态和加载状态。",
   },
   "api.button.exports.buttonVariants.description": {
-    zh: "根据结构、颜色和尺寸变体生成贴纸按钮的 className。",
+    zh: "根据结构、颜色、尺寸和形态变体生成贴纸按钮的 className。",
   },
   "api.button.types.ButtonProps.description": {
     zh: "贴纸按钮根元素的 props。",
@@ -214,17 +217,20 @@ const ZH_PREVIEW_API_DOC_MESSAGES = defineMessages({
   "api.button.types.ButtonProps.members.loading.description": {
     zh: "显示加载指示器，并在等待期间禁用按钮。",
   },
+  "api.button.types.ButtonProps.members.shape.description": {
+    zh: "控制按钮使用常规内容形态，还是方形命令形态。",
+  },
   "api.button.types.ButtonProps.members.size.description": {
-    zh: "控制按钮尺寸和内边距。",
+    zh: "控制按钮高度、文字缩放和常规内边距。",
   },
   "api.button.types.ButtonProps.members.variant.description": {
     zh: "控制按钮的视觉结构和强调程度。",
   },
   "api.button.types.ButtonProps.remarks": {
-    zh: "继承原生按钮属性，并加入贴纸结构、颜色、尺寸和加载状态。",
+    zh: "继承原生按钮属性，并加入贴纸结构、颜色、尺寸、形态和加载状态。",
   },
   "api.button.variants.buttonVariants.description": {
-    zh: "根据结构、颜色和尺寸变体生成贴纸按钮的 className。",
+    zh: "根据结构、颜色、尺寸和形态变体生成贴纸按钮的 className。",
   },
   "api.card.description": {
     zh: "用于卡片、面板和内容分组的可组合 handbook 贴纸表面。",
