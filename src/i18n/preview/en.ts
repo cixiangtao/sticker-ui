@@ -1,14 +1,4 @@
-import apiDocs from "../../generated/preview-api-docs.json"
 import { type PreviewLanguageMessages } from "./messages"
-
-interface ApiDocMessageNode {
-  deprecated?: string
-  deprecatedKey?: string
-  description?: string
-  descriptionKey?: string
-  remarks?: string
-  remarksKey?: string
-}
 
 const EN_PREVIEW_MESSAGE_OVERRIDES = {
   "api.common.inheritedProps.aria-describedby.description":
@@ -138,55 +128,8 @@ function createEnglishPreviewMessages(messageKeys: Iterable<string>) {
     ...Object.fromEntries(
       Array.from(messageKeys, (key) => [key, createMessageFromKey(key)]),
     ),
-    ...collectApiDocMessages(apiDocs),
     ...EN_PREVIEW_MESSAGE_OVERRIDES,
   } satisfies PreviewLanguageMessages
-}
-
-function collectApiDocMessages(value: unknown) {
-  const messages: PreviewLanguageMessages = {}
-
-  collectApiDocMessagesFromNode(value, messages)
-
-  return messages
-}
-
-function collectApiDocMessagesFromNode(
-  value: unknown,
-  messages: PreviewLanguageMessages,
-) {
-  if (Array.isArray(value)) {
-    for (const item of value) {
-      collectApiDocMessagesFromNode(item, messages)
-    }
-
-    return
-  }
-
-  if (!isPlainObject(value)) {
-    return
-  }
-
-  collectApiDocMessage(value, messages, "description")
-  collectApiDocMessage(value, messages, "remarks")
-  collectApiDocMessage(value, messages, "deprecated")
-
-  for (const child of Object.values(value)) {
-    collectApiDocMessagesFromNode(child, messages)
-  }
-}
-
-function collectApiDocMessage(
-  node: ApiDocMessageNode,
-  messages: PreviewLanguageMessages,
-  field: "deprecated" | "description" | "remarks",
-) {
-  const key = node[`${field}Key`]
-  const message = node[field]
-
-  if (key && message) {
-    messages[key] = message
-  }
 }
 
 function createMessageFromKey(key: string) {
@@ -217,10 +160,6 @@ function capitalizeFirstWord(word: string) {
   }
 
   return `${word.charAt(0).toUpperCase()}${word.slice(1)}`
-}
-
-function isPlainObject(value: unknown): value is ApiDocMessageNode {
-  return Boolean(value) && Object.getPrototypeOf(value) === Object.prototype
 }
 
 export { createEnglishPreviewMessages }

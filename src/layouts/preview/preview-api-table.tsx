@@ -10,6 +10,7 @@ import {
 } from "./preview-card"
 
 interface PreviewApiDoc {
+  description?: string
   components?: PreviewApiComponent[]
   descriptionKey: string
   exports: PreviewApiExport[]
@@ -21,24 +22,30 @@ interface PreviewApiDoc {
 }
 
 interface PreviewApiComponent {
+  description?: string
   descriptionKey?: string
   name: string
   props?: PreviewApiComponentProps
+  remarks?: string
   remarksKey?: string
 }
 
 interface PreviewApiComponentProps {
   defaultValue?: string
+  deprecated?: string
   deprecatedKey?: string
+  description?: string
   descriptionKey?: string
   inherits?: string[]
   inheritedMembers?: PreviewApiMember[]
   members: PreviewApiMember[]
+  remarks?: string
   remarksKey?: string
   type: string
 }
 
 interface PreviewApiExport {
+  description?: string
   descriptionKey?: string
   kind: string
   name: string
@@ -46,10 +53,13 @@ interface PreviewApiExport {
 
 interface PreviewApiMember {
   defaultValue?: string
+  deprecated?: string
   deprecatedKey?: string
+  description?: string
   descriptionKey?: string
   name: string
   optional?: boolean
+  remarks?: string
   remarksKey?: string
   required?: boolean
   type: string
@@ -57,18 +67,22 @@ interface PreviewApiMember {
 
 interface PreviewApiType {
   defaultValue?: string
+  deprecated?: string
   deprecatedKey?: string
+  description?: string
   descriptionKey?: string
   inherits?: string[]
   inheritedMembers?: PreviewApiMember[]
   kind: string
   members: PreviewApiMember[]
   name: string
+  remarks?: string
   remarksKey?: string
   type?: string
 }
 
 interface PreviewApiVariant {
+  description?: string
   descriptionKey?: string
   groups: PreviewApiVariantGroup[]
   name: string
@@ -85,7 +99,8 @@ interface PreviewApiTableProps {
 }
 
 function PreviewApiTable({ api }: PreviewApiTableProps) {
-  const { td, tm } = usePreviewI18n()
+  const { language, td, tm } = usePreviewI18n()
+  const tx = createApiTextGetter(language, td)
   const supportingTypes = getSupportingTypes(api)
 
   return (
@@ -97,7 +112,9 @@ function PreviewApiTable({ api }: PreviewApiTableProps) {
               {tm("preview.common.apiReference")}
             </div>
             <CardTitle className="mt-1">{api.title}</CardTitle>
-            <CardDescription>{td(api.descriptionKey)}</CardDescription>
+            <CardDescription>
+              {tx(api.descriptionKey, api.description)}
+            </CardDescription>
           </div>
           <code className="w-fit rounded-su-md border border-su-ink bg-su-surface px-3 py-2 text-xs font-extrabold">
             {api.sourcePath}
@@ -123,7 +140,8 @@ function PreviewApiTable({ api }: PreviewApiTableProps) {
 }
 
 function ComponentList({ components }: { components: PreviewApiComponent[] }) {
-  const { td, tm } = usePreviewI18n()
+  const { language, td, tm } = usePreviewI18n()
+  const tx = createApiTextGetter(language, td)
 
   return (
     <section className="grid gap-3">
@@ -143,12 +161,12 @@ function ComponentList({ components }: { components: PreviewApiComponent[] }) {
               </div>
               {component.descriptionKey ? (
                 <p className="text-sm leading-6 font-medium text-su-fg-muted">
-                  {td(component.descriptionKey)}
+                  {tx(component.descriptionKey, component.description)}
                 </p>
               ) : null}
               {component.remarksKey ? (
                 <p className="text-xs leading-5 font-bold text-su-fg-subtle">
-                  {td(component.remarksKey)}
+                  {tx(component.remarksKey, component.remarks)}
                 </p>
               ) : null}
             </div>
@@ -167,7 +185,8 @@ function ComponentList({ components }: { components: PreviewApiComponent[] }) {
 }
 
 function ComponentPropsCard({ props }: { props: PreviewApiComponentProps }) {
-  const { td, tm } = usePreviewI18n()
+  const { language, td, tm } = usePreviewI18n()
+  const tx = createApiTextGetter(language, td)
   const inheritedMembers = props.inheritedMembers ?? []
 
   return (
@@ -181,12 +200,12 @@ function ComponentPropsCard({ props }: { props: PreviewApiComponentProps }) {
         </Tag>
         {props.descriptionKey ? (
           <p className="text-sm leading-6 font-medium text-su-fg-muted">
-            {td(props.descriptionKey)}
+            {tx(props.descriptionKey, props.description)}
           </p>
         ) : null}
         {props.remarksKey ? (
           <p className="text-xs leading-5 font-bold text-su-fg-subtle">
-            {td(props.remarksKey)}
+            {tx(props.remarksKey, props.remarks)}
           </p>
         ) : null}
         <InheritanceList inherits={props.inherits} />
@@ -277,7 +296,8 @@ function TypeList({
   title?: string
   types: PreviewApiType[]
 }) {
-  const { td, tm } = usePreviewI18n()
+  const { language, td, tm } = usePreviewI18n()
+  const tx = createApiTextGetter(language, td)
 
   return (
     <section className="grid gap-3">
@@ -297,12 +317,12 @@ function TypeList({
               </div>
               {type.descriptionKey ? (
                 <p className="text-sm leading-6 font-medium text-su-fg-muted">
-                  {td(type.descriptionKey)}
+                  {tx(type.descriptionKey, type.description)}
                 </p>
               ) : null}
               {type.remarksKey ? (
                 <p className="text-xs leading-5 font-bold text-su-fg-subtle">
-                  {td(type.remarksKey)}
+                  {tx(type.remarksKey, type.remarks)}
                 </p>
               ) : null}
             </div>
@@ -322,7 +342,8 @@ function TypeList({
 }
 
 function MemberTable({ members }: { members: PreviewApiMember[] }) {
-  const { td, tm } = usePreviewI18n()
+  const { language, td, tm } = usePreviewI18n()
+  const tx = createApiTextGetter(language, td)
 
   return (
     <Table className="min-w-[720px]" containerClassName="shadow-none">
@@ -377,7 +398,7 @@ function MemberTable({ members }: { members: PreviewApiMember[] }) {
               <div className="grid gap-1">
                 {member.descriptionKey ? (
                   <span className="leading-6 font-medium text-su-fg-muted">
-                    {td(member.descriptionKey)}
+                    {tx(member.descriptionKey, member.description)}
                   </span>
                 ) : (
                   <span className="text-xs font-bold text-su-fg-placeholder">
@@ -387,12 +408,12 @@ function MemberTable({ members }: { members: PreviewApiMember[] }) {
                 {member.deprecatedKey ? (
                   <span className="rounded-su-xs bg-su-fill-danger px-2 py-1 text-xs font-extrabold text-su-fg-danger">
                     {tm("preview.common.deprecated")}:{" "}
-                    {td(member.deprecatedKey)}
+                    {tx(member.deprecatedKey, member.deprecated)}
                   </span>
                 ) : null}
                 {member.remarksKey ? (
                   <span className="text-xs leading-5 font-bold text-su-fg-subtle">
-                    {td(member.remarksKey)}
+                    {tx(member.remarksKey, member.remarks)}
                   </span>
                 ) : null}
               </div>
@@ -405,7 +426,8 @@ function MemberTable({ members }: { members: PreviewApiMember[] }) {
 }
 
 function VariantList({ variants }: { variants: PreviewApiVariant[] }) {
-  const { td, tm } = usePreviewI18n()
+  const { language, td, tm } = usePreviewI18n()
+  const tx = createApiTextGetter(language, td)
 
   return (
     <section className="grid gap-3">
@@ -419,7 +441,7 @@ function VariantList({ variants }: { variants: PreviewApiVariant[] }) {
             <code className="text-sm font-black">{variant.name}</code>
             {variant.descriptionKey ? (
               <p className="mt-1 text-sm leading-6 font-medium text-su-fg-muted">
-                {td(variant.descriptionKey)}
+                {tx(variant.descriptionKey, variant.description)}
               </p>
             ) : null}
           </div>
@@ -482,6 +504,19 @@ function getSupportingTypes(api: PreviewApiDoc) {
   )
 
   return api.types.filter((type) => !componentPropTypes.has(type.name))
+}
+
+function createApiTextGetter(
+  language: string,
+  translateDynamic: (key: string | undefined) => string,
+) {
+  return (key: string | undefined, fallback: string | undefined) => {
+    if (language === "en" && fallback) {
+      return fallback
+    }
+
+    return translateDynamic(key)
+  }
 }
 
 export { PreviewApiTable }

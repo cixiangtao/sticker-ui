@@ -1,6 +1,6 @@
 import { lazy, Suspense, type ReactNode } from "react"
 
-import apiDocs from "@/generated/preview-api-docs.json"
+import type apiDocs from "@/generated/preview-api-docs.json"
 
 import { usePreviewI18n } from "../../i18n/preview"
 import { PreviewApiTable } from "./preview-api-table"
@@ -220,18 +220,22 @@ function createComponentPreviewPage({
   name,
 }: CreateComponentPreviewPageOptions) {
   const ComponentPreviewContent = lazy(async () => {
-    const demoExamples = await loadPreviewDemoExamples({
-      demoModuleLoaders,
-      demoSourceLoaders,
-      missingLabel: name,
-    })
+    const [demoExamples, apiDocsModule] = await Promise.all([
+      loadPreviewDemoExamples({
+        demoModuleLoaders,
+        demoSourceLoaders,
+        missingLabel: name,
+      }),
+      import("@/generated/preview-api-docs.json"),
+    ])
+    const componentApi = apiDocsModule.default[name]
 
     return {
       default: () => (
         <PreviewDemoPage
           examples={demoExamples}
           sourceRoot={`src/pages/components/${name}`}
-          trailing={<PreviewApiTable api={apiDocs[name]} />}
+          trailing={<PreviewApiTable api={componentApi} />}
         />
       ),
     }

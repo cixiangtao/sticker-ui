@@ -1,4 +1,4 @@
-import apiDocs from "@/generated/preview-api-docs.json"
+import type apiDocs from "@/generated/preview-api-docs.json"
 import {
   createComponentPreviewPage,
   type PreviewDemoModule,
