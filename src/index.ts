@@ -6,6 +6,18 @@ const Input = Object.assign(InputRoot, {
 })
 
 export { Button, buttonVariants } from "./components/ui/button"
+export {
+  Accordion,
+  accordionContentVariants,
+  accordionItemVariants,
+  accordionTriggerVariants,
+} from "./components/ui/accordion"
+export type {
+  AccordionContentProps,
+  AccordionItemProps,
+  AccordionProps,
+  AccordionTriggerProps,
+} from "./components/ui/accordion"
 export { Alert, alertVariants } from "./components/ui/alert"
 export type {
   AlertDescriptionProps,

@@ -486,6 +486,25 @@
       ]
     },
     {
+      "name": "accordion",
+      "type": "registry:ui",
+      "title": "Sticker Accordion",
+      "description": "A Radix-powered accordion for compact section navigation and disclosure panels.",
+      "dependencies": [
+        "@radix-ui/react-accordion",
+        "class-variance-authority",
+        "lucide-react"
+      ],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "src/components/ui/accordion.tsx",
+          "target": "@ui/accordion.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "tabs",
       "type": "registry:ui",
       "title": "Sticker Tabs",

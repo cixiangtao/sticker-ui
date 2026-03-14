@@ -38,6 +38,7 @@ function createRegistryComponentPage(name: ComponentPreviewName) {
 
 const AlertPage = createRegistryComponentPage("alert")
 const AlertDialogPage = createRegistryComponentPage("alert-dialog")
+const AccordionPage = createRegistryComponentPage("accordion")
 const BadgePage = createRegistryComponentPage("badge")
 const BreadcrumbPage = createRegistryComponentPage("breadcrumb")
 const ButtonPage = createRegistryComponentPage("button")
@@ -75,6 +76,7 @@ const TooltipPage = createRegistryComponentPage("tooltip")
 const ToastPage = createRegistryComponentPage("toast")
 
 export {
+  AccordionPage,
   AlertDialogPage,
   AlertPage,
   BadgePage,

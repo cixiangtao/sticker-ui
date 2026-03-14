@@ -206,6 +206,19 @@ const { routes, useCurrentRoute, useMatchedRoutes, useRouteParams } =
     },
     {
       component: () =>
+        import("@/pages/components").then((module) => module.AccordionPage),
+      meta: {
+        emoji: "A",
+        navSection: "navigation",
+        order: 57.5,
+        title: "Accordion",
+        descriptionKey:
+          "preview.components.radixDisclosureSectionsForFaqsSettingsAndCompactNavigation",
+      },
+      path: "/components/accordion",
+    },
+    {
+      component: () =>
         import("@/pages/components").then(
           (module) => module.NavigationMenuPage,
         ),

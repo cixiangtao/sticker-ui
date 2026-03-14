@@ -717,6 +717,14 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
     {
       zh: "Tabs 保留 Radix 键盘导航，同时加入厚实贴纸触发器和纸张面板。",
     },
+  "preview.components.accordionKeepsRadixDisclosureSemanticsInsideCompactStickerSections":
+    {
+      zh: "Accordion 在紧凑贴纸分区中保留 Radix disclosure 语义。",
+    },
+  "preview.components.accordionSupportsMultipleOpenPanelsAndControlledValueState":
+    {
+      zh: "Accordion 支持多个面板同时展开，也支持受控 value 状态。",
+    },
   "preview.components.flexToolbar": {
     zh: "Flex 工具栏",
   },
@@ -792,6 +800,15 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   "preview.components.basicModal": {
     zh: "基础弹窗",
   },
+  "preview.components.basicAccordion": {
+    zh: "基础 Accordion",
+  },
+  "preview.components.multipleAndControlled": {
+    zh: "多开与受控",
+  },
+  "preview.components.sizesAndStates": {
+    zh: "尺寸与状态",
+  },
   "preview.components.basicTabs": {
     zh: "基础 Tabs",
   },
@@ -827,6 +844,10 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   "preview.components.radixHelpBubblesWithCompactStickerPaperStyling": {
     zh: "带有紧凑贴纸纸张样式的 Radix 帮助气泡。",
   },
+  "preview.components.radixDisclosureSectionsForFaqsSettingsAndCompactNavigation":
+    {
+      zh: "用于 FAQ、设置和紧凑导航的 Radix 折叠分区。",
+    },
   "preview.components.commandDrivenSonnerToastsForShortStickerFeedback": {
     zh: "通过 toast() 命令触发的短反馈，底层由 Sonner 承载并保留贴纸纸面风格。",
   },
@@ -867,6 +888,10 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   "preview.components.sizeToneAndVariantTuneTabsForCompactToolbarsSoftFiltersAndPanelNavigation":
     {
       zh: "size、tone 和 variant 可调整 Tabs，用于紧凑工具栏、轻量筛选和面板导航。",
+    },
+  "preview.components.sizeToneVariantAndDisabledStateTuneAccordionsForDenseOrExpressiveSurfaces":
+    {
+      zh: "size、tone、variant 和 disabled 状态可让 Accordion 适配紧凑或更有表现力的表面。",
     },
   "preview.components.toneAndSideOptionsKeepHintBubblesUsefulInDenseToolbarsAndStatusRows":
     {

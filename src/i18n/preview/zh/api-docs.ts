@@ -3095,6 +3095,178 @@ const ZH_PREVIEW_API_DOC_MESSAGES = defineMessages({
   "api.pagination.types.PaginationSummaryState.members.total.description": {
     zh: "用于计算 pageCount 的可选记录总数。",
   },
+  "api.accordion.description": {
+    zh: "用于紧凑分区导航和 disclosure 面板的 Radix Accordion。",
+  },
+  "api.accordion.components.Accordion.description": {
+    zh: "由 Radix Accordion 驱动的贴纸 Accordion 根组件。",
+  },
+  "api.accordion.components.Accordion.props.description": {
+    zh: "贴纸 Accordion 根组件的 props。",
+  },
+  "api.accordion.components.Accordion.props.remarks": {
+    zh: '封装 Radix Accordion.Root，因此 `type` 仍然必填，并且可以是 `"single"` 或 `"multiple"`。',
+  },
+  "api.accordion.components.Accordion.props.members.className.description": {
+    zh: "应用到 Accordion 根容器的 className。",
+  },
+  "api.accordion.components.Accordion.props.members.size.description": {
+    zh: "控制 item 和 trigger 的密度。",
+  },
+  "api.accordion.components.Accordion.props.members.tone.description": {
+    zh: "控制 filled accordion item 的语义纸张色调。",
+  },
+  "api.accordion.components.Accordion.props.members.variant.description": {
+    zh: "控制 item 外框和填充强调程度。",
+  },
+  "api.accordion.components.AccordionContent.description": {
+    zh: "Accordion item 的可折叠内容面板。",
+  },
+  "api.accordion.components.AccordionContent.props.description": {
+    zh: "贴纸 Accordion 内容面板的 props。",
+  },
+  "api.accordion.components.AccordionContent.props.members.className.description":
+    {
+      zh: "应用到 Accordion 内容面板的 className。",
+    },
+  "api.accordion.components.AccordionContent.props.members.size.description": {
+    zh: "独立控制内容面板内边距。",
+  },
+  "api.accordion.components.AccordionHeader.description": {
+    zh: "包裹 Accordion trigger 的语义 heading。",
+  },
+  "api.accordion.components.AccordionItem.description": {
+    zh: "单个可折叠 Accordion 分区。",
+  },
+  "api.accordion.components.AccordionItem.props.description": {
+    zh: "贴纸 Accordion item 的 props。",
+  },
+  "api.accordion.components.AccordionItem.props.members.className.description":
+    {
+      zh: "应用到 Accordion item 的 className。",
+    },
+  "api.accordion.components.AccordionItem.props.members.tone.description": {
+    zh: "独立控制 item 纸张色调。",
+  },
+  "api.accordion.components.AccordionItem.props.members.variant.description": {
+    zh: "独立控制 item 外框和填充强调程度。",
+  },
+  "api.accordion.components.AccordionTrigger.description": {
+    zh: "展开或收起 Accordion item 的按钮。",
+  },
+  "api.accordion.components.AccordionTrigger.props.description": {
+    zh: "贴纸 Accordion trigger 的 props。",
+  },
+  "api.accordion.components.AccordionTrigger.props.members.className.description":
+    {
+      zh: "应用到 Accordion trigger 的 className。",
+    },
+  "api.accordion.components.AccordionTrigger.props.members.size.description": {
+    zh: "独立控制 trigger 密度。",
+  },
+  "api.accordion.components.AccordionTrigger.props.members.variant.description":
+    {
+      zh: "独立控制 trigger 强调程度。",
+    },
+  "api.accordion.exports.Accordion.description": {
+    zh: "由 Radix Accordion 驱动的贴纸 Accordion 根组件。",
+  },
+  "api.accordion.exports.AccordionContent.description": {
+    zh: "Accordion item 的可折叠内容面板。",
+  },
+  "api.accordion.exports.AccordionContentProps.description": {
+    zh: "贴纸 Accordion 内容面板的 props。",
+  },
+  "api.accordion.exports.accordionContentVariants.description": {
+    zh: "根据尺寸选项生成贴纸 Accordion 内容面板 className。",
+  },
+  "api.accordion.exports.AccordionHeader.description": {
+    zh: "包裹 Accordion trigger 的语义 heading。",
+  },
+  "api.accordion.exports.AccordionItem.description": {
+    zh: "单个可折叠 Accordion 分区。",
+  },
+  "api.accordion.exports.AccordionItemProps.description": {
+    zh: "贴纸 Accordion item 的 props。",
+  },
+  "api.accordion.exports.accordionItemVariants.description": {
+    zh: "根据色调和变体选项生成贴纸 Accordion item className。",
+  },
+  "api.accordion.exports.AccordionProps.description": {
+    zh: "贴纸 Accordion 根组件的 props。",
+  },
+  "api.accordion.exports.AccordionProps.remarks": {
+    zh: '封装 Radix Accordion.Root，因此 `type` 仍然必填，并且可以是 `"single"` 或 `"multiple"`。',
+  },
+  "api.accordion.exports.AccordionTrigger.description": {
+    zh: "展开或收起 Accordion item 的按钮。",
+  },
+  "api.accordion.exports.AccordionTriggerProps.description": {
+    zh: "贴纸 Accordion trigger 的 props。",
+  },
+  "api.accordion.exports.accordionTriggerVariants.description": {
+    zh: "根据尺寸和变体选项生成贴纸 Accordion trigger className。",
+  },
+  "api.accordion.types.AccordionContentProps.description": {
+    zh: "贴纸 Accordion 内容面板的 props。",
+  },
+  "api.accordion.types.AccordionContentProps.members.className.description": {
+    zh: "应用到 Accordion 内容面板的 className。",
+  },
+  "api.accordion.types.AccordionContentProps.members.size.description": {
+    zh: "独立控制内容面板内边距。",
+  },
+  "api.accordion.types.AccordionItemProps.description": {
+    zh: "贴纸 Accordion item 的 props。",
+  },
+  "api.accordion.types.AccordionItemProps.members.className.description": {
+    zh: "应用到 Accordion item 的 className。",
+  },
+  "api.accordion.types.AccordionItemProps.members.tone.description": {
+    zh: "独立控制 item 纸张色调。",
+  },
+  "api.accordion.types.AccordionItemProps.members.variant.description": {
+    zh: "独立控制 item 外框和填充强调程度。",
+  },
+  "api.accordion.types.AccordionProps.description": {
+    zh: "贴纸 Accordion 根组件的 props。",
+  },
+  "api.accordion.types.AccordionProps.remarks": {
+    zh: '封装 Radix Accordion.Root，因此 `type` 仍然必填，并且可以是 `"single"` 或 `"multiple"`。',
+  },
+  "api.accordion.types.AccordionProps.members.className.description": {
+    zh: "应用到 Accordion 根容器的 className。",
+  },
+  "api.accordion.types.AccordionProps.members.size.description": {
+    zh: "控制 item 和 trigger 的密度。",
+  },
+  "api.accordion.types.AccordionProps.members.tone.description": {
+    zh: "控制 filled accordion item 的语义纸张色调。",
+  },
+  "api.accordion.types.AccordionProps.members.variant.description": {
+    zh: "控制 item 外框和填充强调程度。",
+  },
+  "api.accordion.types.AccordionTriggerProps.description": {
+    zh: "贴纸 Accordion trigger 的 props。",
+  },
+  "api.accordion.types.AccordionTriggerProps.members.className.description": {
+    zh: "应用到 Accordion trigger 的 className。",
+  },
+  "api.accordion.types.AccordionTriggerProps.members.size.description": {
+    zh: "独立控制 trigger 密度。",
+  },
+  "api.accordion.types.AccordionTriggerProps.members.variant.description": {
+    zh: "独立控制 trigger 强调程度。",
+  },
+  "api.accordion.variants.accordionContentVariants.description": {
+    zh: "根据尺寸选项生成贴纸 Accordion 内容面板 className。",
+  },
+  "api.accordion.variants.accordionItemVariants.description": {
+    zh: "根据色调和变体选项生成贴纸 Accordion item className。",
+  },
+  "api.accordion.variants.accordionTriggerVariants.description": {
+    zh: "根据尺寸和变体选项生成贴纸 Accordion trigger className。",
+  },
   "api.tabs.description": {
     zh: "带贴纸触发器和纸张面板的 Radix Tabs 原语。",
   },

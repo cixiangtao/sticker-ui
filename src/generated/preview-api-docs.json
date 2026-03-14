@@ -16335,6 +16335,1087 @@
       }
     ]
   },
+  "accordion": {
+    "components": [
+      {
+        "description": "Sticker accordion root powered by Radix Accordion.",
+        "descriptionKey": "api.accordion.components.Accordion.description",
+        "name": "Accordion",
+        "props": {
+          "description": "Props for the sticker accordion root.",
+          "descriptionKey": "api.accordion.components.Accordion.props.description",
+          "remarks": "Wraps Radix Accordion.Root, so `type` remains required and can be `\"single\"` or `\"multiple\"`.",
+          "remarksKey": "api.accordion.components.Accordion.props.remarks",
+          "inherits": ["AccordionPrimitiveRootProps"],
+          "inheritedMembers": [
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-describedby.description",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-invalid.description",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-label.description",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-labelledby.description",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.autoFocus.description",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.children.description",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "string | number | bigint | boolean | React.ReactElement<unknown, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<string | number | bigint | boolean | React.ReactPortal | React.ReactElement<unknown, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | null> | null"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultChecked.description",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultValue.description",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string | string[]"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.disabled.description",
+              "name": "disabled",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.id.description",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onBlur.description",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onChange.description",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "React.ChangeEventHandler<HTMLDivElement, Element>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onClick.description",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onFocus.description",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyDown.description",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyUp.description",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseEnter.description",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseLeave.description",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.role.description",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.style.description",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.title.description",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.type.description",
+              "name": "type",
+              "optional": false,
+              "required": true,
+              "type": "\"single\" | \"multiple\""
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.value.description",
+              "name": "value",
+              "optional": true,
+              "required": false,
+              "type": "string | string[]"
+            }
+          ],
+          "members": [
+            {
+              "description": "Custom className for the accordion root.",
+              "descriptionKey": "api.accordion.components.Accordion.props.members.className.description",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "defaultValue": "\"md\"",
+              "description": "Controls item and trigger density.",
+              "descriptionKey": "api.accordion.components.Accordion.props.members.size.description",
+              "name": "size",
+              "optional": true,
+              "required": false,
+              "type": "\"lg\" | \"md\" | \"sm\""
+            },
+            {
+              "defaultValue": "\"default\"",
+              "description": "Controls the semantic paper tone for filled accordion items.",
+              "descriptionKey": "api.accordion.components.Accordion.props.members.tone.description",
+              "name": "tone",
+              "optional": true,
+              "required": false,
+              "type": "\"danger\" | \"default\" | \"info\" | \"secondary\" | \"success\" | \"warning\""
+            },
+            {
+              "defaultValue": "\"solid\"",
+              "description": "Controls item frame and fill emphasis.",
+              "descriptionKey": "api.accordion.components.Accordion.props.members.variant.description",
+              "name": "variant",
+              "optional": true,
+              "required": false,
+              "type": "\"filled\" | \"minimal\" | \"solid\""
+            }
+          ],
+          "type": "AccordionProps"
+        }
+      },
+      {
+        "description": "Collapsible panel content for an accordion item.",
+        "descriptionKey": "api.accordion.components.AccordionContent.description",
+        "name": "AccordionContent",
+        "props": {
+          "description": "Props for the sticker accordion content panel.",
+          "descriptionKey": "api.accordion.components.AccordionContent.props.description",
+          "inherits": [
+            "Omit< React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>, \"className\" >",
+            "VariantProps<typeof accordionContentVariants>"
+          ],
+          "inheritedMembers": [
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-describedby.description",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-invalid.description",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-label.description",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-labelledby.description",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.autoFocus.description",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.children.description",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultChecked.description",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultValue.description",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.id.description",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onBlur.description",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onChange.description",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "React.ChangeEventHandler<HTMLDivElement, Element>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onClick.description",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onFocus.description",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyDown.description",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyUp.description",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseEnter.description",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseLeave.description",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.role.description",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.style.description",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.title.description",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "members": [
+            {
+              "description": "Custom className for the accordion content panel.",
+              "descriptionKey": "api.accordion.components.AccordionContent.props.members.className.description",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Controls content padding independently from the root.",
+              "descriptionKey": "api.accordion.components.AccordionContent.props.members.size.description",
+              "name": "size",
+              "optional": true,
+              "required": false,
+              "type": "\"lg\" | \"md\" | \"sm\""
+            }
+          ],
+          "type": "AccordionContentProps"
+        }
+      },
+      {
+        "description": "Semantic heading wrapper for an accordion trigger.",
+        "descriptionKey": "api.accordion.components.AccordionHeader.description",
+        "name": "AccordionHeader",
+        "props": {
+          "inherits": [],
+          "members": [],
+          "type": "React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Header>"
+        }
+      },
+      {
+        "description": "Single collapsible accordion section.",
+        "descriptionKey": "api.accordion.components.AccordionItem.description",
+        "name": "AccordionItem",
+        "props": {
+          "description": "Props for a sticker accordion item.",
+          "descriptionKey": "api.accordion.components.AccordionItem.props.description",
+          "inherits": [
+            "Omit< React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>, \"className\" >",
+            "VariantProps<typeof accordionItemVariants>"
+          ],
+          "inheritedMembers": [
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-describedby.description",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-invalid.description",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-label.description",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-labelledby.description",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.autoFocus.description",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.children.description",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultChecked.description",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultValue.description",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.disabled.description",
+              "name": "disabled",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.id.description",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onBlur.description",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onChange.description",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "React.ChangeEventHandler<HTMLDivElement, Element>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onClick.description",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onFocus.description",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyDown.description",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyUp.description",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseEnter.description",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseLeave.description",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLDivElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.role.description",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.style.description",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.title.description",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.value.description",
+              "name": "value",
+              "optional": false,
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "members": [
+            {
+              "description": "Custom className for the accordion item.",
+              "descriptionKey": "api.accordion.components.AccordionItem.props.members.className.description",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Controls item paper tone independently from the root.",
+              "descriptionKey": "api.accordion.components.AccordionItem.props.members.tone.description",
+              "name": "tone",
+              "optional": true,
+              "required": false,
+              "type": "\"danger\" | \"default\" | \"info\" | \"secondary\" | \"success\" | \"warning\""
+            },
+            {
+              "description": "Controls item frame and fill emphasis independently from the root.",
+              "descriptionKey": "api.accordion.components.AccordionItem.props.members.variant.description",
+              "name": "variant",
+              "optional": true,
+              "required": false,
+              "type": "\"filled\" | \"minimal\" | \"solid\""
+            }
+          ],
+          "type": "AccordionItemProps"
+        }
+      },
+      {
+        "description": "Button that expands or collapses an accordion item.",
+        "descriptionKey": "api.accordion.components.AccordionTrigger.description",
+        "name": "AccordionTrigger",
+        "props": {
+          "description": "Props for the sticker accordion trigger.",
+          "descriptionKey": "api.accordion.components.AccordionTrigger.props.description",
+          "inherits": [
+            "Omit< React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>, \"className\" >",
+            "VariantProps<typeof accordionTriggerVariants>"
+          ],
+          "inheritedMembers": [
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-describedby.description",
+              "name": "aria-describedby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-invalid.description",
+              "name": "aria-invalid",
+              "optional": true,
+              "required": false,
+              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-label.description",
+              "name": "aria-label",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.aria-labelledby.description",
+              "name": "aria-labelledby",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.autoFocus.description",
+              "name": "autoFocus",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.children.description",
+              "name": "children",
+              "optional": true,
+              "required": false,
+              "type": "React.ReactNode"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultChecked.description",
+              "name": "defaultChecked",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.defaultValue.description",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.disabled.description",
+              "name": "disabled",
+              "optional": true,
+              "required": false,
+              "type": "boolean"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.form.description",
+              "name": "form",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.id.description",
+              "name": "id",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.name.description",
+              "name": "name",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onBlur.description",
+              "name": "onBlur",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLButtonElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onChange.description",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "React.ChangeEventHandler<HTMLButtonElement, Element>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onClick.description",
+              "name": "onClick",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLButtonElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onFocus.description",
+              "name": "onFocus",
+              "optional": true,
+              "required": false,
+              "type": "React.FocusEventHandler<HTMLButtonElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyDown.description",
+              "name": "onKeyDown",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLButtonElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onKeyUp.description",
+              "name": "onKeyUp",
+              "optional": true,
+              "required": false,
+              "type": "React.KeyboardEventHandler<HTMLButtonElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseEnter.description",
+              "name": "onMouseEnter",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLButtonElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.onMouseLeave.description",
+              "name": "onMouseLeave",
+              "optional": true,
+              "required": false,
+              "type": "React.MouseEventHandler<HTMLButtonElement>"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.role.description",
+              "name": "role",
+              "optional": true,
+              "required": false,
+              "type": "React.AriaRole"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.style.description",
+              "name": "style",
+              "optional": true,
+              "required": false,
+              "type": "React.CSSProperties"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.title.description",
+              "name": "title",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.type.description",
+              "name": "type",
+              "optional": true,
+              "required": false,
+              "type": "\"button\" | \"submit\" | \"reset\""
+            },
+            {
+              "descriptionKey": "api.common.inheritedProps.value.description",
+              "name": "value",
+              "optional": true,
+              "required": false,
+              "type": "string | number | readonly string[]"
+            }
+          ],
+          "members": [
+            {
+              "description": "Custom className for the accordion trigger.",
+              "descriptionKey": "api.accordion.components.AccordionTrigger.props.members.className.description",
+              "name": "className",
+              "optional": true,
+              "required": false,
+              "type": "string"
+            },
+            {
+              "description": "Controls trigger density independently from the root.",
+              "descriptionKey": "api.accordion.components.AccordionTrigger.props.members.size.description",
+              "name": "size",
+              "optional": true,
+              "required": false,
+              "type": "\"lg\" | \"md\" | \"sm\""
+            },
+            {
+              "description": "Controls trigger emphasis independently from the root.",
+              "descriptionKey": "api.accordion.components.AccordionTrigger.props.members.variant.description",
+              "name": "variant",
+              "optional": true,
+              "required": false,
+              "type": "\"filled\" | \"minimal\" | \"solid\""
+            }
+          ],
+          "type": "AccordionTriggerProps"
+        }
+      }
+    ],
+    "description": "A Radix-powered accordion for compact section navigation and disclosure panels.",
+    "descriptionKey": "api.accordion.description",
+    "exports": [
+      {
+        "description": "Sticker accordion root powered by Radix Accordion.",
+        "descriptionKey": "api.accordion.exports.Accordion.description",
+        "kind": "component",
+        "name": "Accordion"
+      },
+      {
+        "description": "Collapsible panel content for an accordion item.",
+        "descriptionKey": "api.accordion.exports.AccordionContent.description",
+        "kind": "component",
+        "name": "AccordionContent"
+      },
+      {
+        "description": "Props for the sticker accordion content panel.",
+        "descriptionKey": "api.accordion.exports.AccordionContentProps.description",
+        "kind": "interface",
+        "name": "AccordionContentProps"
+      },
+      {
+        "description": "Builds the sticker accordion content className from size options.",
+        "descriptionKey": "api.accordion.exports.accordionContentVariants.description",
+        "kind": "variant",
+        "name": "accordionContentVariants"
+      },
+      {
+        "description": "Semantic heading wrapper for an accordion trigger.",
+        "descriptionKey": "api.accordion.exports.AccordionHeader.description",
+        "kind": "component",
+        "name": "AccordionHeader"
+      },
+      {
+        "description": "Single collapsible accordion section.",
+        "descriptionKey": "api.accordion.exports.AccordionItem.description",
+        "kind": "component",
+        "name": "AccordionItem"
+      },
+      {
+        "description": "Props for a sticker accordion item.",
+        "descriptionKey": "api.accordion.exports.AccordionItemProps.description",
+        "kind": "interface",
+        "name": "AccordionItemProps"
+      },
+      {
+        "description": "Builds the sticker accordion item className from tone and variant options.",
+        "descriptionKey": "api.accordion.exports.accordionItemVariants.description",
+        "kind": "variant",
+        "name": "accordionItemVariants"
+      },
+      {
+        "description": "Props for the sticker accordion root.",
+        "descriptionKey": "api.accordion.exports.AccordionProps.description",
+        "remarks": "Wraps Radix Accordion.Root, so `type` remains required and can be `\"single\"` or `\"multiple\"`.",
+        "remarksKey": "api.accordion.exports.AccordionProps.remarks",
+        "kind": "type",
+        "name": "AccordionProps"
+      },
+      {
+        "description": "Button that expands or collapses an accordion item.",
+        "descriptionKey": "api.accordion.exports.AccordionTrigger.description",
+        "kind": "component",
+        "name": "AccordionTrigger"
+      },
+      {
+        "description": "Props for the sticker accordion trigger.",
+        "descriptionKey": "api.accordion.exports.AccordionTriggerProps.description",
+        "kind": "interface",
+        "name": "AccordionTriggerProps"
+      },
+      {
+        "description": "Builds the sticker accordion trigger className from size and variant options.",
+        "descriptionKey": "api.accordion.exports.accordionTriggerVariants.description",
+        "kind": "variant",
+        "name": "accordionTriggerVariants"
+      }
+    ],
+    "name": "accordion",
+    "sourcePath": "src/components/ui/accordion.tsx",
+    "title": "Sticker Accordion",
+    "types": [
+      {
+        "description": "Props for the sticker accordion content panel.",
+        "descriptionKey": "api.accordion.types.AccordionContentProps.description",
+        "inherits": [
+          "Omit< React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>, \"className\" >",
+          "VariantProps<typeof accordionContentVariants>"
+        ],
+        "kind": "interface",
+        "members": [
+          {
+            "description": "Custom className for the accordion content panel.",
+            "descriptionKey": "api.accordion.types.AccordionContentProps.members.className.description",
+            "name": "className",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "Controls content padding independently from the root.",
+            "descriptionKey": "api.accordion.types.AccordionContentProps.members.size.description",
+            "name": "size",
+            "optional": true,
+            "required": false,
+            "type": "\"lg\" | \"md\" | \"sm\""
+          }
+        ],
+        "name": "AccordionContentProps"
+      },
+      {
+        "description": "Props for a sticker accordion item.",
+        "descriptionKey": "api.accordion.types.AccordionItemProps.description",
+        "inherits": [
+          "Omit< React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>, \"className\" >",
+          "VariantProps<typeof accordionItemVariants>"
+        ],
+        "kind": "interface",
+        "members": [
+          {
+            "description": "Custom className for the accordion item.",
+            "descriptionKey": "api.accordion.types.AccordionItemProps.members.className.description",
+            "name": "className",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "Controls item paper tone independently from the root.",
+            "descriptionKey": "api.accordion.types.AccordionItemProps.members.tone.description",
+            "name": "tone",
+            "optional": true,
+            "required": false,
+            "type": "\"danger\" | \"default\" | \"info\" | \"secondary\" | \"success\" | \"warning\""
+          },
+          {
+            "description": "Controls item frame and fill emphasis independently from the root.",
+            "descriptionKey": "api.accordion.types.AccordionItemProps.members.variant.description",
+            "name": "variant",
+            "optional": true,
+            "required": false,
+            "type": "\"filled\" | \"minimal\" | \"solid\""
+          }
+        ],
+        "name": "AccordionItemProps"
+      },
+      {
+        "inherits": [],
+        "kind": "type",
+        "members": [],
+        "name": "AccordionPrimitiveRootProps",
+        "type": "React.ComponentPropsWithoutRef< typeof AccordionPrimitive.Root >"
+      },
+      {
+        "description": "Props for the sticker accordion root.",
+        "descriptionKey": "api.accordion.types.AccordionProps.description",
+        "remarks": "Wraps Radix Accordion.Root, so `type` remains required and can be `\"single\"` or `\"multiple\"`.",
+        "remarksKey": "api.accordion.types.AccordionProps.remarks",
+        "inherits": ["AccordionPrimitiveRootProps"],
+        "kind": "type",
+        "members": [
+          {
+            "description": "Custom className for the accordion root.",
+            "descriptionKey": "api.accordion.types.AccordionProps.members.className.description",
+            "name": "className",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "defaultValue": "\"md\"",
+            "description": "Controls item and trigger density.",
+            "descriptionKey": "api.accordion.types.AccordionProps.members.size.description",
+            "name": "size",
+            "optional": true,
+            "required": false,
+            "type": "\"lg\" | \"md\" | \"sm\""
+          },
+          {
+            "defaultValue": "\"default\"",
+            "description": "Controls the semantic paper tone for filled accordion items.",
+            "descriptionKey": "api.accordion.types.AccordionProps.members.tone.description",
+            "name": "tone",
+            "optional": true,
+            "required": false,
+            "type": "\"danger\" | \"default\" | \"info\" | \"secondary\" | \"success\" | \"warning\""
+          },
+          {
+            "defaultValue": "\"solid\"",
+            "description": "Controls item frame and fill emphasis.",
+            "descriptionKey": "api.accordion.types.AccordionProps.members.variant.description",
+            "name": "variant",
+            "optional": true,
+            "required": false,
+            "type": "\"filled\" | \"minimal\" | \"solid\""
+          }
+        ],
+        "name": "AccordionProps",
+        "type": "AccordionPrimitiveRootProps & { /** * Custom className for the accordion root. */ className?: string /** * Controls item and trigger density. * @default \"md\" */ size?: \"lg\" | \"md\" | \"sm\" /** * Controls the semantic paper tone for filled accordion items. * @default \"default\" */ tone?: \"danger\" | \"default\" | \"info\" | \"secondary\" | \"success\" | \"warning\" /** * Controls item frame and fill emphasis. * @default \"solid\" */ variant?: \"filled\" | \"minimal\" | \"solid\" }"
+      },
+      {
+        "description": "Props for the sticker accordion trigger.",
+        "descriptionKey": "api.accordion.types.AccordionTriggerProps.description",
+        "inherits": [
+          "Omit< React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>, \"className\" >",
+          "VariantProps<typeof accordionTriggerVariants>"
+        ],
+        "kind": "interface",
+        "members": [
+          {
+            "description": "Custom className for the accordion trigger.",
+            "descriptionKey": "api.accordion.types.AccordionTriggerProps.members.className.description",
+            "name": "className",
+            "optional": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "Controls trigger density independently from the root.",
+            "descriptionKey": "api.accordion.types.AccordionTriggerProps.members.size.description",
+            "name": "size",
+            "optional": true,
+            "required": false,
+            "type": "\"lg\" | \"md\" | \"sm\""
+          },
+          {
+            "description": "Controls trigger emphasis independently from the root.",
+            "descriptionKey": "api.accordion.types.AccordionTriggerProps.members.variant.description",
+            "name": "variant",
+            "optional": true,
+            "required": false,
+            "type": "\"filled\" | \"minimal\" | \"solid\""
+          }
+        ],
+        "name": "AccordionTriggerProps"
+      }
+    ],
+    "variants": [
+      {
+        "description": "Builds the sticker accordion content className from size options.",
+        "descriptionKey": "api.accordion.variants.accordionContentVariants.description",
+        "groups": [{ "defaultValue": "md", "name": "size", "values": ["lg", "md", "sm"] }],
+        "name": "accordionContentVariants"
+      },
+      {
+        "description": "Builds the sticker accordion item className from tone and variant options.",
+        "descriptionKey": "api.accordion.variants.accordionItemVariants.description",
+        "groups": [
+          {
+            "defaultValue": "default",
+            "name": "tone",
+            "values": ["danger", "default", "info", "secondary", "success", "warning"]
+          },
+          { "defaultValue": "solid", "name": "variant", "values": ["filled", "minimal", "solid"] }
+        ],
+        "name": "accordionItemVariants"
+      },
+      {
+        "description": "Builds the sticker accordion trigger className from size and variant options.",
+        "descriptionKey": "api.accordion.variants.accordionTriggerVariants.description",
+        "groups": [
+          { "defaultValue": "md", "name": "size", "values": ["lg", "md", "sm"] },
+          { "defaultValue": "solid", "name": "variant", "values": ["filled", "minimal", "solid"] }
+        ],
+        "name": "accordionTriggerVariants"
+      }
+    ]
+  },
   "tabs": {
     "components": [
       {
