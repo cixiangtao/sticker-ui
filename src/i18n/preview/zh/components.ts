@@ -1310,6 +1310,244 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
     {
       zh: "Sidebar 通过 header、content 和 footer 区域创建持久 PC 导航。",
     },
+  "preview.components.asChildNavigation": {
+    zh: "asChild 导航",
+  },
+  "preview.components.actionVariants": {
+    zh: "操作按钮变体",
+  },
+  "preview.components.alertDialogActionAndCancelButtonsCanUseButtonColorsSizesAndVariantsInsideTheModalFooter":
+    {
+      zh: "AlertDialog 的 Action 和 Cancel 可在弹窗 footer 中使用按钮的颜色、尺寸和变体。",
+    },
+  "preview.components.alertsCanCombineRolesTitlesDescriptionsActionsAndInlineMetadataWithoutAddingExtraSlots":
+    {
+      zh: "Alert 可以组合 role、标题、描述、操作和行内元信息，而不需要额外插槽。",
+    },
+  "preview.components.badgeCanRenderStandaloneContentOrCustomizeThePositionedIndicatorSlot":
+    {
+      zh: "Badge 可以独立渲染内容，也可以自定义定位后的 indicator 插槽。",
+    },
+  "preview.components.breadcrumbSlotsCanCustomizeLandmarkLabelsSeparatorsLinksCurrentPageAndCollapsedLevels":
+    {
+      zh: "Breadcrumb 插槽可自定义地标标签、分隔符、链接、当前页和折叠层级。",
+    },
+  "preview.components.checkboxGroupDefaultValueDirectionAndOnchangeMirrorOnvaluechangeForFormFriendlyArrays":
+    {
+      zh: "Checkbox.Group 的 defaultValue、direction 和 onChange 可覆盖表单友好的数组选择场景。",
+    },
+  "preview.components.colorpickerOutputFormatAndShowValueExamplesCoverCompactSwatchesAndCssColorSerialization":
+    {
+      zh: "ColorPicker 的 outputFormat 和 showValue 示例覆盖紧凑色块与 CSS 色值序列化。",
+    },
+  "preview.components.contextMenuContentSubmenusItemsAndSubtriggersCanMixSizesTonesInsetAndDangerStates":
+    {
+      zh: "ContextMenu 的内容、子菜单、菜单项和子菜单触发器可混合尺寸、色调、缩进和危险状态。",
+    },
+  "preview.components.contentComposition": {
+    zh: "内容组合",
+  },
+  "preview.components.controlledAnchor": {
+    zh: "受控锚点",
+  },
+  "preview.components.controlledSettings": {
+    zh: "受控设置",
+  },
+  "preview.components.customFrame": {
+    zh: "自定义外框",
+  },
+  "preview.components.customScale": {
+    zh: "自定义刻度",
+  },
+  "preview.components.customSeparators": {
+    zh: "自定义分隔符",
+  },
+  "preview.components.customTrackStyling": {
+    zh: "自定义轨道样式",
+  },
+  "preview.components.datatableClassnamesEmptyTextPaginationAndRowSelectionConfigCoverAggregateTableCustomization":
+    {
+      zh: "DataTable 的 classNames、emptyText、pagination 和 rowSelection 配置覆盖聚合表格自定义。",
+    },
+  "preview.components.dividerPropMatrixShowsAlignmentTextureWeightToneOrientationAndAccessibilityCombinations":
+    {
+      zh: "Divider prop matrix 展示对齐、线型、粗细、色调、方向与可访问性组合。",
+    },
+  "preview.components.emptyShortcutPropsCoverSemanticRootsIconOverridesActionsAndAccessibleIcons":
+    {
+      zh: "Empty 快捷 props 覆盖语义根元素、图标替换、操作区和可访问图标。",
+    },
+  "preview.components.fieldLayoutSlotClassnamesIdsAndForwardedLabelDescriptionPropsShowTheFullShellContract":
+    {
+      zh: "Field 的 layout、slot classNames、id 以及透传的 label/description props 展示完整外壳契约。",
+    },
+  "preview.components.formInlineLayoutKeepsShortFiltersActionsAndToggleFieldsInOneResponsiveControlRow":
+    {
+      zh: "Form inline 布局会把短筛选项、操作和切换字段保持在一个响应式控件行里。",
+    },
+  "preview.components.groupDefaults": {
+    zh: "分组默认值",
+  },
+  "preview.components.indicatorCustomization": {
+    zh: "角标自定义",
+  },
+  "preview.components.inlineLayout": {
+    zh: "行内布局",
+  },
+  "preview.components.layoutPropMatrixShowsEveryFlexAndGridVariantValueAsCopyableStaticExamples":
+    {
+      zh: "Layout prop matrix 将 Flex 和 Grid 的每个变体值展示为可复制的静态示例。",
+    },
+  "preview.components.layoutsAndSlots": {
+    zh: "布局与插槽",
+  },
+  "preview.components.navigationMenuRootTriggerAndContentPropsCanMixSizesAndTonesForDifferentProductAreas":
+    {
+      zh: "NavigationMenu 根、Trigger 和 Content props 可为不同产品区域混合尺寸和色调。",
+    },
+  "preview.components.outputFormats": {
+    zh: "输出格式",
+  },
+  "preview.components.popoverCanRunControlledWithCustomAnchorCloseActionsAndArrowlessContent":
+    {
+      zh: "Popover 可配合自定义锚点、关闭操作和无箭头内容以受控方式运行。",
+    },
+  "preview.components.paginationClassnamesDefaultPageSizeAndSizeCallbacksCanBeCombinedForCustomToolbars":
+    {
+      zh: "Pagination 的 classNames、defaultPageSize 和分页尺寸回调可以组合出自定义工具栏。",
+    },
+  "preview.components.progressMaxShowsNonPercentDomainValuesWhileTheVisibleLabelStillReportsCompletion":
+    {
+      zh: "Progress 的 max 可表达非百分比业务值，同时可见标签仍展示完成比例。",
+    },
+  "preview.components.propMatrix": {
+    zh: "Prop 矩阵",
+  },
+  "preview.components.rangeStyleClassnameAndFormattedValuesCanCustomizeTrackTokensWithoutReplacingNativeInputBehavior":
+    {
+      zh: "Range 的 style、className 和格式化值可自定义轨道令牌，同时保留原生 input 行为。",
+    },
+  "preview.components.scopedDefaults": {
+    zh: "作用域默认值",
+  },
+  "preview.components.shortcutProps": {
+    zh: "快捷 props",
+  },
+  "preview.components.sidebarMenuButtonAsChildKeepsAnchorNavigationSemanticsWithActiveDisabledAndToneStates":
+    {
+      zh: "Sidebar.MenuButton 的 asChild 可保留链接导航语义，并展示 active、disabled 和 tone 状态。",
+    },
+  "preview.components.slotCustomization": {
+    zh: "插槽自定义",
+  },
+  "preview.components.stylingAndEvents": {
+    zh: "样式与事件",
+  },
+  "preview.components.switchClassnameControlledCheckedAndOncheckedchangeSupportCustomSettingsRows":
+    {
+      zh: "Switch 的 className、受控 checked 和 onCheckedChange 支持自定义设置行。",
+    },
+  "preview.components.tableContainerClassnameAndSlotClassnamesLetDenseTablesFitCustomPanelsWithoutLosingSemanticMarkup":
+    {
+      zh: "Table 的 containerClassName 与插槽 className 可让密集表格适配自定义面板，同时保留语义标记。",
+    },
+  "preview.components.tabsExposeBothOnchangeAndOnvaluechangeForControlledStateAndRadixCompatibility":
+    {
+      zh: "Tabs 同时暴露 onChange 与 onValueChange，兼顾受控状态和 Radix 兼容性。",
+    },
+  "preview.components.toasterExpandGapToastOptionsAndToasterIdCanCreateScopedStacksWithSharedDefaults":
+    {
+      zh: "Toaster 的 expand、gap、toastOptions 和 toasterId 可创建带共享默认值的作用域堆栈。",
+    },
+  "preview.components.triggerOverrides": {
+    zh: "触发器覆盖",
+  },
+  "preview.components.valueCallbacks": {
+    zh: "值回调",
+  },
+  "preview.components.accordionSubcomponentPropMatrixCoversDangerToneSolidVariantAndMediumOverrides":
+    {
+      zh: "Accordion 子组件 prop matrix 覆盖 danger 色调、solid 变体和 medium 覆盖。",
+    },
+  "preview.components.alertDialogButtonPropMatrixCoversActionCancelSizeColorAndVariantOverrides":
+    {
+      zh: "AlertDialog 按钮 prop matrix 覆盖 Action、Cancel 的尺寸、颜色和变体覆盖。",
+    },
+  "preview.components.alertDefaultStatusShowsTheNeutralToneRoleAndStripeVariantExplicitly":
+    {
+      zh: "Alert 默认状态示例显式展示中性色调、role 和 stripe 变体。",
+    },
+  "preview.components.buttonPropMatrix": {
+    zh: "按钮 prop 矩阵",
+  },
+  "preview.components.contentPropMatrix": {
+    zh: "内容 prop 矩阵",
+  },
+  "preview.components.contextMenuPropMatrixCoversDefaultMediumContentSubcontentAndItemToneCombinations":
+    {
+      zh: "ContextMenu prop matrix 覆盖默认中等内容、子内容和菜单项色调组合。",
+    },
+  "preview.components.defaultContent": {
+    zh: "默认内容",
+  },
+  "preview.components.defaultOverrides": {
+    zh: "默认覆盖",
+  },
+  "preview.components.defaultStatus": {
+    zh: "默认状态",
+  },
+  "preview.components.dialogContentPropMatrixCoversDefaultMediumSecondaryToneAndCloseButtonCombinations":
+    {
+      zh: "Dialog 内容 prop matrix 覆盖默认、中等尺寸、secondary 色调和关闭按钮组合。",
+    },
+  "preview.components.dropdownMenuPropMatrixCoversDefaultMediumContentSubcontentAndItemToneCombinations":
+    {
+      zh: "DropdownMenu prop matrix 覆盖默认中等内容、子内容和菜单项色调组合。",
+    },
+  "preview.components.emptyToneMatrixCoversDefaultSuccessDangerAndLargePanelShortcutStates":
+    {
+      zh: "Empty 色调矩阵覆盖默认、成功、危险和大尺寸面板快捷状态。",
+    },
+  "preview.components.fieldLabelPropMatrixCoversLegacyControlPlacementEndDefaultLabelSizeAndBadgeRequiredMarks":
+    {
+      zh: "Field 标签 prop matrix 覆盖旧 controlPlacement=end、默认标签尺寸和 badge 必填标记。",
+    },
+  "preview.components.inputToneMatrixCoversDefaultInfoWarningDangerAndOutlinedStateCombinations":
+    {
+      zh: "Input 色调矩阵覆盖默认、信息、警告、危险和 outlined 状态组合。",
+    },
+  "preview.components.labelPropMatrix": {
+    zh: "标签 prop 矩阵",
+  },
+  "preview.components.navigationMenuDefaultOverridesShowExplicitMediumDefaultTriggerAndContentProps":
+    {
+      zh: "NavigationMenu 默认覆盖示例显式展示 medium/default 的 Trigger 和 Content props。",
+    },
+  "preview.components.popoverContentPropMatrixCoversDefaultMediumLargeInfoAndArrowCombinations":
+    {
+      zh: "Popover 内容 prop matrix 覆盖默认、中等、大尺寸、信息色调和箭头组合。",
+    },
+  "preview.components.sidebarSizeToneMatrixCoversLargePanelAndExplicitMenuButtonSizeToneOverrides":
+    {
+      zh: "Sidebar 尺寸色调矩阵覆盖大尺寸 panel 和显式菜单按钮尺寸/色调覆盖。",
+    },
+  "preview.components.sizeToneMatrix": {
+    zh: "尺寸色调矩阵",
+  },
+  "preview.components.subcomponentPropMatrix": {
+    zh: "子组件 prop 矩阵",
+  },
+  "preview.components.tabsSubcomponentPropMatrixCoversDangerDefaultMediumWarningAndSlotOverrides":
+    {
+      zh: "Tabs 子组件 prop matrix 覆盖 danger、default、medium、warning 和插槽覆盖。",
+    },
+  "preview.components.tooltipDefaultContentShowsMdDefaultToneAlongsideExplicitArrowAndOffsetProps":
+    {
+      zh: "Tooltip 默认内容示例显式展示 md/default 色调、箭头和偏移 props。",
+    },
+  "preview.components.toneMatrix": {
+    zh: "色调矩阵",
+  },
 })
 
 export { ZH_PREVIEW_COMPONENT_MESSAGES }

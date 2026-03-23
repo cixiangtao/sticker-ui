@@ -26,6 +26,7 @@ function Demo() {
         ))}
       </div>
       <div className="grid gap-2 sm:grid-cols-4">
+        <Skeleton shape="card" tone="warning" />
         {SKELETON_TONES.map((tone) => (
           <Skeleton key={tone} shape="block" tone={tone} />
         ))}

@@ -38,6 +38,13 @@ function Demo() {
           >
             Status
           </ContextMenu.CheckboxItem>
+          <ContextMenu.CheckboxItem
+            checked={showOwner}
+            hideIndicator
+            onCheckedChange={(checked) => setShowOwner(checked === true)}
+          >
+            Owner without indicator
+          </ContextMenu.CheckboxItem>
           <ContextMenu.Separator />
           <ContextMenu.Label>Layout</ContextMenu.Label>
           <ContextMenu.RadioGroup value={layout} onValueChange={setLayout}>

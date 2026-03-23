@@ -24,6 +24,9 @@ function Demo() {
         <Tag color="info" size="sm" variant="filled">
           Source First
         </Tag>
+        <Tag color="secondary" size="sm" variant="solid">
+          Secondary
+        </Tag>
       </div>
     </div>
   )

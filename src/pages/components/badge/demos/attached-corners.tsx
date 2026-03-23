@@ -30,6 +30,11 @@ function Demo() {
             Sync
           </Button>
         </Badge>
+        <Badge content="1" tone="default" variant="solid">
+          <Button aria-label="Default badge sample" variant="outlined">
+            Default
+          </Button>
+        </Badge>
       </Card.Content>
     </Card>
   )

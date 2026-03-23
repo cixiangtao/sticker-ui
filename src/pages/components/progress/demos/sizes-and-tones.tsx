@@ -46,6 +46,32 @@ const meta = defineMeta({
 function Demo() {
   return (
     <div className="grid gap-3">
+      <div className="grid gap-2 rounded-su-xl border border-su-ink bg-white/80 p-3">
+        <Progress
+          aria-label="Small default progress"
+          size="sm"
+          tone="default"
+          value={42}
+        />
+        <Progress
+          aria-label="Large info progress"
+          size="lg"
+          tone="info"
+          value={58}
+        />
+        <Progress
+          aria-label="Small warning progress"
+          size="sm"
+          tone="warning"
+          value={36}
+        />
+        <Progress
+          aria-label="Large danger progress"
+          size="lg"
+          tone="danger"
+          value={18}
+        />
+      </div>
       {PROGRESS_TONES.map((item, index) => (
         <div
           className="grid gap-2 rounded-su-xl border border-su-ink bg-white/80 p-3 sm:grid-cols-[7rem_1fr] sm:items-center"

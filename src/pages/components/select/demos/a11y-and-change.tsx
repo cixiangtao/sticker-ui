@@ -18,7 +18,9 @@ function Demo() {
     <div className="grid max-w-xl gap-3">
       <Field description={`Selected area: ${value}`} label="Delivery Area">
         <Select
+          aria-describedby="delivery-area-help"
           aria-invalid={value === "blocked"}
+          id="delivery-area-select"
           onChange={setValue}
           onValueChange={setValue}
           value={value}
@@ -33,6 +35,12 @@ function Demo() {
           </Select.Content>
         </Select>
       </Field>
+      <p
+        className="m-0 text-xs leading-5 font-bold text-su-fg-muted"
+        id="delivery-area-help"
+      >
+        The root id and aria-describedby props are forwarded to the trigger.
+      </p>
     </div>
   )
 }

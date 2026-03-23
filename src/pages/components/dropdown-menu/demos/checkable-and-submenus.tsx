@@ -17,6 +17,7 @@ function Demo() {
   const [density, setDensity] = React.useState("comfortable")
   const [showArchived, setShowArchived] = React.useState(false)
   const [showDrafts, setShowDrafts] = React.useState(true)
+  const [showOwner, setShowOwner] = React.useState(true)
 
   return (
     <div className="flex flex-col items-start gap-3">
@@ -37,6 +38,13 @@ function Demo() {
             onCheckedChange={(checked) => setShowArchived(checked === true)}
           >
             Archived
+          </DropdownMenu.CheckboxItem>
+          <DropdownMenu.CheckboxItem
+            checked={showOwner}
+            hideIndicator
+            onCheckedChange={(checked) => setShowOwner(checked === true)}
+          >
+            Owner without indicator
           </DropdownMenu.CheckboxItem>
           <DropdownMenu.Separator />
           <DropdownMenu.Label>Density</DropdownMenu.Label>
@@ -67,6 +75,7 @@ function Demo() {
         <Tag color="info">Density: {density}</Tag>
         <Tag color={showDrafts ? "success" : "default"}>Drafts</Tag>
         <Tag color={showArchived ? "warning" : "default"}>Archived</Tag>
+        <Tag color={showOwner ? "secondary" : "default"}>Owner</Tag>
       </div>
     </div>
   )

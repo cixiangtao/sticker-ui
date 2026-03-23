@@ -26,6 +26,7 @@ function Demo() {
           initialValues={{
             team: "Sticker Rangers",
           }}
+          layout="vertical"
         >
           <Form.Item
             extra="The badge reads clearly when the label sits above the field."
