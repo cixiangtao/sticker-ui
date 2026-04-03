@@ -24,6 +24,9 @@
     "./tokens.css": "./dist/tokens.css",
     "./package.json": "./package.json"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "dev": "vite",
     "build": "pnpm run build:packages && pnpm run build:lib && pnpm run build:registry && pnpm run build:preview",
@@ -35,6 +38,9 @@
     "prepack": "pnpm run build:lib",
     "prepare": "husky",
     "preview": "vite preview",
+    "release": "release-it",
+    "release:check": "pnpm run lint && pnpm run build:registry && git diff --exit-code -- registry.json public/r && pnpm publish --dry-run --access public --publish-branch main --no-git-checks",
+    "release:dry": "release-it --dry-run",
     "check": "tsc --noEmit",
     "format": "oxfmt . --write",
     "format:check": "oxfmt . --check",
@@ -85,6 +91,7 @@
     "react": "latest",
     "react-dom": "latest",
     "react-i18next": "^17.0.8",
+    "release-it": "^20.2.1",
     "shadcn": "latest",
     "shiki": "^4.2.0",
     "tailwindcss": "latest",

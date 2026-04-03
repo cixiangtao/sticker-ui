@@ -162,6 +162,28 @@ Preview API docs, route type-checking, and the production preview build run with
 pnpm run build:preview
 ```
 
+Check the package release surface without publishing:
+
+```bash
+pnpm run release:check
+```
+
+Preview the version bump, git tag, and npm publish flow:
+
+```bash
+pnpm run release:dry
+```
+
+Publish a new npm release:
+
+```bash
+pnpm run release
+```
+
+The release flow uses `release-it` to run the package checks, bump
+`package.json`, create a `v${version}` tag, push the release commit and tag, and
+publish the package to npm with public access.
+
 ## Structure
 
 ```txt
