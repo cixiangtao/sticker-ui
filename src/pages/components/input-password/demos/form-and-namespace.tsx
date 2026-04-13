@@ -36,6 +36,7 @@ function Demo() {
             hideLabel="Hide"
             placeholder="Enter Password"
             showLabel="Show"
+            size="md"
           />
         </Form.Item>
         <Form.Item

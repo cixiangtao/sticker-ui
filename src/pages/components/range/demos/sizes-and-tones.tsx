@@ -24,14 +24,27 @@ function Demo() {
         className="rounded-su-xl border border-su-ink bg-white/80 p-4"
         label="Balanced"
       >
-        <Range defaultValue={56} showValue tone="success" />
+        <Range defaultValue={56} showValue size="md" tone="default" />
+      </Field>
+      <Field
+        className="rounded-su-xl border border-su-ink bg-white/80 p-4"
+        label="Informational"
+      >
+        <Range defaultValue={64} showValue size="md" tone="info" />
       </Field>
       <Field
         className="rounded-su-xl border border-su-ink bg-white/80 p-4"
         label="Priority"
         size="lg"
       >
-        <Range defaultValue={82} size="lg" showValue tone="danger" />
+        <Range defaultValue={82} size="lg" showValue tone="success" />
+      </Field>
+      <Field
+        className="rounded-su-xl border border-su-ink bg-white/80 p-4"
+        label="Risk"
+        size="lg"
+      >
+        <Range defaultValue={28} size="lg" showValue tone="danger" />
       </Field>
     </div>
   )

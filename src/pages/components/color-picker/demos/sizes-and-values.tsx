@@ -20,7 +20,7 @@ function Demo() {
       </div>
       <div className="grid gap-2 rounded-su-xl border border-su-ink bg-white/80 p-4">
         <Field label="Standard Theme">
-          <ColorPicker defaultValue="#3b82f6" />
+          <ColorPicker className="max-w-52" defaultValue="#3b82f6" size="md" />
         </Field>
       </div>
       <div className="grid gap-2 rounded-su-xl border border-su-ink bg-white/80 p-4">

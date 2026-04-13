@@ -34,6 +34,15 @@ function Demo() {
           <AlertDialog.Cancel color="info" size="md" variant="link">
             Link cancel
           </AlertDialog.Cancel>
+          <AlertDialog.Cancel color="danger" size="lg" variant="solid">
+            Solid danger cancel
+          </AlertDialog.Cancel>
+          <AlertDialog.Cancel color="success" size="sm" variant="outlined">
+            Outlined success cancel
+          </AlertDialog.Cancel>
+          <AlertDialog.Cancel color="warning" size="md" variant="text">
+            Text warning cancel
+          </AlertDialog.Cancel>
           <AlertDialog.Action color="success" size="md" variant="dashed">
             Dashed action
           </AlertDialog.Action>
@@ -42,6 +51,12 @@ function Demo() {
           </AlertDialog.Action>
           <AlertDialog.Action color="danger" size="md" variant="link">
             Link action
+          </AlertDialog.Action>
+          <AlertDialog.Action color="secondary" size="lg" variant="outlined">
+            Outlined secondary action
+          </AlertDialog.Action>
+          <AlertDialog.Action color="info" size="sm" variant="text">
+            Text info action
           </AlertDialog.Action>
         </AlertDialog.Footer>
       </AlertDialog.Content>

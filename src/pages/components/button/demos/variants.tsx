@@ -13,7 +13,9 @@ const meta = defineMeta({
 function Demo() {
   return (
     <div className="flex flex-wrap gap-3">
-      <Button>Solid</Button>
+      <Button color="default" shape="default" variant="solid">
+        Solid
+      </Button>
       <Button color="info" variant="outlined">
         Outlined
       </Button>

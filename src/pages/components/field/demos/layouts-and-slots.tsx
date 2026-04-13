@@ -26,7 +26,10 @@ function Demo() {
         id="component-slug"
         label="Component slug"
         labelProps={{ "data-kind": "slot-label" }}
+        layout="stack"
         required
+        requiredMark="badge"
+        size="default"
         tone="success"
       >
         <Input placeholder="data-table" />

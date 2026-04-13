@@ -20,7 +20,7 @@ function Demo() {
       </div>
       <div className="grid gap-2 rounded-su-xl border border-su-ink bg-white/80 p-4">
         <Field label="Standard URL">
-          <Input placeholder="Https Sticker Dev" type="url" />
+          <Input placeholder="Https Sticker Dev" size="md" type="url" />
         </Field>
       </div>
       <div className="grid gap-2 rounded-su-xl border border-su-ink bg-white/80 p-4">

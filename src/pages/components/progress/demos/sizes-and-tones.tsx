@@ -60,6 +60,13 @@ function Demo() {
           value={58}
         />
         <Progress
+          aria-label="Medium secondary progress"
+          showValue
+          size="md"
+          tone="secondary"
+          value={66}
+        />
+        <Progress
           aria-label="Small warning progress"
           size="sm"
           tone="warning"

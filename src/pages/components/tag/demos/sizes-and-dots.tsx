@@ -19,7 +19,9 @@ function Demo() {
       <Tag dot size="sm">
         Small
       </Tag>
-      <Tag dot>Ready</Tag>
+      <Tag color="default" dot size="default">
+        Ready
+      </Tag>
       <Tag color="info" dot size="lg">
         Large Label
       </Tag>

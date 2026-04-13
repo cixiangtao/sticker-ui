@@ -30,6 +30,21 @@ function Demo() {
           </NavigationMenu.Content>
         </NavigationMenu.Item>
         <NavigationMenu.Item>
+          <NavigationMenu.Trigger size="md" tone="secondary">
+            Components
+          </NavigationMenu.Trigger>
+          <NavigationMenu.Content tone="secondary">
+            <div className="grid w-72 gap-2 p-3">
+              <NavigationMenu.Link href="#/components/button">
+                Button
+              </NavigationMenu.Link>
+              <NavigationMenu.Link href="#/components/card">
+                Card
+              </NavigationMenu.Link>
+            </div>
+          </NavigationMenu.Content>
+        </NavigationMenu.Item>
+        <NavigationMenu.Item>
           <NavigationMenu.Trigger size="lg" tone="warning">
             Releases
           </NavigationMenu.Trigger>

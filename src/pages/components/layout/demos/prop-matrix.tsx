@@ -25,9 +25,10 @@ function Demo() {
         <Tag size="sm" variant="outlined">
           Flex direction / align / justify / wrap / gap
         </Tag>
-        <Flex direction="row" gap="md" wrap="nowrap">
+        <Flex direction="row" gap="md" justify="start" wrap="nowrap">
           <Swatch>row</Swatch>
           <Swatch>gap md</Swatch>
+          <Swatch>justify start</Swatch>
           <Swatch>nowrap</Swatch>
         </Flex>
         <Flex direction="row-reverse" gap="none" justify="end">

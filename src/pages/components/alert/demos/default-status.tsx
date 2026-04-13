@@ -12,7 +12,7 @@ const meta = defineMeta({
 
 function Demo() {
   return (
-    <Alert role="status" tone="default" variant="stripe">
+    <Alert role="status" size="md" tone="default" variant="stripe">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div className="grid gap-2">
           <Alert.Title>Neutral status</Alert.Title>
