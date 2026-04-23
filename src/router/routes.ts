@@ -102,6 +102,19 @@ const { routes, useCurrentRoute, useMatchedRoutes, useRouteParams } =
     },
     {
       component: () =>
+        import("@/pages/components").then((module) => module.CopyButtonPage),
+      meta: {
+        emoji: "C",
+        navSection: "actions",
+        order: 32,
+        title: "CopyButton",
+        descriptionKey:
+          "preview.components.iconButtonForCopyingCodeTokensCommandsAndInstallSnippets",
+      },
+      path: "/components/copy-button",
+    },
+    {
+      component: () =>
         import("@/pages/components").then((module) => module.CardPage),
       meta: {
         emoji: "C",
@@ -115,6 +128,71 @@ const { routes, useCurrentRoute, useMatchedRoutes, useRouteParams } =
     },
     {
       component: () =>
+        import("@/pages/components").then((module) => module.AspectRatioPage),
+      meta: {
+        emoji: "A",
+        navSection: "surfaces-data",
+        order: 41,
+        title: "AspectRatio",
+        descriptionKey:
+          "preview.components.stableMediaFramesForThumbnailsEmbedsAndResponsivePreviews",
+      },
+      path: "/components/aspect-ratio",
+    },
+    {
+      component: () =>
+        import("@/pages/components").then((module) => module.StatCardPage),
+      meta: {
+        emoji: "S",
+        navSection: "surfaces-data",
+        order: 42,
+        title: "StatCard",
+        descriptionKey:
+          "preview.components.compactMetricSurfaceForDashboardsSummariesAndKpiRows",
+      },
+      path: "/components/stat-card",
+    },
+    {
+      component: () =>
+        import("@/pages/components").then((module) => module.CarouselPage),
+      meta: {
+        emoji: "C",
+        navSection: "surfaces-data",
+        order: 42.5,
+        title: "Carousel",
+        descriptionKey:
+          "preview.components.emblaCarouselForFeatureCardsGalleriesAndSteppedStories",
+      },
+      path: "/components/carousel",
+    },
+    {
+      component: () =>
+        import("@/pages/components").then((module) => module.CodeBlockPage),
+      meta: {
+        emoji: "C",
+        navSection: "surfaces-data",
+        order: 43,
+        title: "CodeBlock",
+        descriptionKey:
+          "preview.components.tactilePreCodeSurfaceForInstallSnippetsTokensAndExamples",
+      },
+      path: "/components/code-block",
+    },
+    {
+      component: () =>
+        import("@/pages/components").then((module) => module.ResizablePage),
+      meta: {
+        emoji: "R",
+        navSection: "surfaces-data",
+        order: 44,
+        title: "Resizable",
+        descriptionKey:
+          "preview.components.keyboardAccessibleSplitPanelsWithStickerResizeHandles",
+      },
+      path: "/components/resizable",
+    },
+    {
+      component: () =>
         import("@/pages/components").then((module) => module.LayoutPage),
       meta: {
         emoji: "L",
@@ -125,6 +203,19 @@ const { routes, useCurrentRoute, useMatchedRoutes, useRouteParams } =
           "preview.components.tailwindSafeFlexAndGridPrimitivesForComposition",
       },
       path: "/components/layout",
+    },
+    {
+      component: () =>
+        import("@/pages/components").then((module) => module.ScrollAreaPage),
+      meta: {
+        emoji: "S",
+        navSection: "surfaces-data",
+        order: 46,
+        title: "ScrollArea",
+        descriptionKey:
+          "preview.components.radixScrollContainersWithStickerFramesAndThumbs",
+      },
+      path: "/components/scroll-area",
     },
     {
       component: () =>
@@ -151,6 +242,32 @@ const { routes, useCurrentRoute, useMatchedRoutes, useRouteParams } =
           "preview.components.insertSeparatorsBetweenJsxChildrenWithoutNoisyMarkup",
       },
       path: "/components/jsx-join",
+    },
+    {
+      component: () =>
+        import("@/pages/components").then((module) => module.StepsPage),
+      meta: {
+        emoji: "S",
+        navSection: "surfaces-data",
+        order: 48.5,
+        title: "Steps",
+        descriptionKey:
+          "preview.components.orderedProgressIndicatorForOnboardingCheckoutAndSetupFlows",
+      },
+      path: "/components/steps",
+    },
+    {
+      component: () =>
+        import("@/pages/components").then((module) => module.TimelinePage),
+      meta: {
+        emoji: "T",
+        navSection: "surfaces-data",
+        order: 49,
+        title: "Timeline",
+        descriptionKey:
+          "preview.components.verticalEventListForActivityFeedsChangelogsAndStagedWorkflows",
+      },
+      path: "/components/timeline",
     },
     {
       component: () =>
@@ -219,6 +336,19 @@ const { routes, useCurrentRoute, useMatchedRoutes, useRouteParams } =
     },
     {
       component: () =>
+        import("@/pages/components").then((module) => module.CollapsiblePage),
+      meta: {
+        emoji: "C",
+        navSection: "navigation",
+        order: 57.75,
+        title: "Collapsible",
+        descriptionKey:
+          "preview.components.radixDisclosurePrimitiveWithStickerTriggerAndContent",
+      },
+      path: "/components/collapsible",
+    },
+    {
+      component: () =>
         import("@/pages/components").then(
           (module) => module.NavigationMenuPage,
         ),
@@ -234,6 +364,19 @@ const { routes, useCurrentRoute, useMatchedRoutes, useRouteParams } =
     },
     {
       component: () =>
+        import("@/pages/components").then((module) => module.MenubarPage),
+      meta: {
+        emoji: "M",
+        navSection: "navigation",
+        order: 58.5,
+        title: "Menubar",
+        descriptionKey:
+          "preview.components.desktopApplicationMenusWithNestedCommandRows",
+      },
+      path: "/components/menubar",
+    },
+    {
+      component: () =>
         import("@/pages/components").then((module) => module.SidebarPage),
       meta: {
         emoji: "S",
@@ -244,6 +387,19 @@ const { routes, useCurrentRoute, useMatchedRoutes, useRouteParams } =
           "preview.components.pcFirstApplicationSidebarsForPersistentNavigation",
       },
       path: "/components/sidebar",
+    },
+    {
+      component: () =>
+        import("@/pages/components").then((module) => module.AvatarPage),
+      meta: {
+        emoji: "A",
+        navSection: "feedback-status",
+        order: 59.5,
+        title: "Avatar",
+        descriptionKey:
+          "preview.components.stickerAvatarFrameForProfilePhotosInitialsAndTeamStacks",
+      },
+      path: "/components/avatar",
     },
     {
       component: () =>
@@ -270,6 +426,19 @@ const { routes, useCurrentRoute, useMatchedRoutes, useRouteParams } =
           "preview.components.readableStickerNotesForFeedbackAndStatusMessages",
       },
       path: "/components/alert",
+    },
+    {
+      component: () =>
+        import("@/pages/components").then((module) => module.CalloutPage),
+      meta: {
+        emoji: "C",
+        navSection: "feedback-status",
+        order: 65.5,
+        title: "Callout",
+        descriptionKey:
+          "preview.components.stickerCalloutSurfaceForDocsNotesWarningsTipsAndInlineStatus",
+      },
+      path: "/components/callout",
     },
     {
       component: () =>
@@ -376,6 +545,19 @@ const { routes, useCurrentRoute, useMatchedRoutes, useRouteParams } =
     },
     {
       component: () =>
+        import("@/pages/components").then((module) => module.LabelPage),
+      meta: {
+        emoji: "L",
+        navSection: "form-controls",
+        order: 71,
+        title: "Label",
+        descriptionKey:
+          "preview.components.accessibleRadixLabelsWithStickerTypography",
+      },
+      path: "/components/label",
+    },
+    {
+      component: () =>
         import("@/pages/components").then((module) => module.ColorPickerPage),
       meta: {
         emoji: "C",
@@ -402,6 +584,58 @@ const { routes, useCurrentRoute, useMatchedRoutes, useRouteParams } =
     },
     {
       component: () =>
+        import("@/pages/components").then((module) => module.SliderPage),
+      meta: {
+        emoji: "S",
+        navSection: "form-controls",
+        order: 73.25,
+        title: "Slider",
+        descriptionKey:
+          "preview.components.radixSliderForSingleValuesRangesAndKeyboardControl",
+      },
+      path: "/components/slider",
+    },
+    {
+      component: () =>
+        import("@/pages/components").then((module) => module.CalendarPage),
+      meta: {
+        emoji: "C",
+        navSection: "form-controls",
+        order: 73.5,
+        title: "Calendar",
+        descriptionKey:
+          "preview.components.singleMonthStickerCalendarForDateSelectionAndCompactScheduling",
+      },
+      path: "/components/calendar",
+    },
+    {
+      component: () =>
+        import("@/pages/components").then((module) => module.UploadPage),
+      meta: {
+        emoji: "U",
+        navSection: "form-controls",
+        order: 74,
+        title: "Upload",
+        descriptionKey:
+          "preview.components.uiOnlyFilePickerAndUploadQueueSurface",
+      },
+      path: "/components/upload",
+    },
+    {
+      component: () =>
+        import("@/pages/components").then((module) => module.DatePickerPage),
+      meta: {
+        emoji: "D",
+        navSection: "form-controls",
+        order: 74.5,
+        title: "DatePicker",
+        descriptionKey:
+          "preview.components.compactStickerDatePickerForFormsFiltersAndSchedulingPanels",
+      },
+      path: "/components/date-picker",
+    },
+    {
+      component: () =>
         import("@/pages/components").then((module) => module.InputPasswordPage),
       meta: {
         emoji: "P",
@@ -412,6 +646,19 @@ const { routes, useCurrentRoute, useMatchedRoutes, useRouteParams } =
         title: "InputPassword",
       },
       path: "/components/input-password",
+    },
+    {
+      component: () =>
+        import("@/pages/components").then((module) => module.InputOtpPage),
+      meta: {
+        emoji: "O",
+        navSection: "form-controls",
+        order: 76,
+        title: "InputOTP",
+        descriptionKey:
+          "preview.components.oneTimeCodeInputsWithReadableStickerSlots",
+      },
+      path: "/components/input-otp",
     },
     {
       component: () =>
@@ -467,6 +714,19 @@ const { routes, useCurrentRoute, useMatchedRoutes, useRouteParams } =
     },
     {
       component: () =>
+        import("@/pages/components").then((module) => module.CommandPage),
+      meta: {
+        emoji: "C",
+        navSection: "overlays",
+        order: 88.6,
+        title: "Command",
+        descriptionKey:
+          "preview.components.searchableStickerCommandListForPalettesQuickSwitchersAndMenuLikeWorkflows",
+      },
+      path: "/components/command",
+    },
+    {
+      component: () =>
         import("@/pages/components").then((module) => module.ContextMenuPage),
       meta: {
         emoji: "C",
@@ -506,6 +766,19 @@ const { routes, useCurrentRoute, useMatchedRoutes, useRouteParams } =
     },
     {
       component: () =>
+        import("@/pages/components").then((module) => module.HoverCardPage),
+      meta: {
+        emoji: "H",
+        navSection: "overlays",
+        order: 90.5,
+        title: "HoverCard",
+        descriptionKey:
+          "preview.components.radixHoverCardForNonInteractivePreviewsAndProfileSummaries",
+      },
+      path: "/components/hover-card",
+    },
+    {
+      component: () =>
         import("@/pages/components").then((module) => module.DialogPage),
       meta: {
         emoji: "D",
@@ -516,6 +789,19 @@ const { routes, useCurrentRoute, useMatchedRoutes, useRouteParams } =
           "preview.components.modalStickerPanelsForFocusedDecisionsAndForms",
       },
       path: "/components/dialog",
+    },
+    {
+      component: () =>
+        import("@/pages/components").then((module) => module.SheetPage),
+      meta: {
+        emoji: "S",
+        navSection: "overlays",
+        order: 91.5,
+        title: "Sheet",
+        descriptionKey:
+          "preview.components.radixDrawerPanelForSidePanelsFiltersAndMobileMenus",
+      },
+      path: "/components/sheet",
     },
     {
       component: () =>
@@ -555,6 +841,32 @@ const { routes, useCurrentRoute, useMatchedRoutes, useRouteParams } =
           "preview.components.radixRadioGroupsWithTactileStickerItems",
       },
       path: "/components/radio",
+    },
+    {
+      component: () =>
+        import("@/pages/components").then((module) => module.TogglePage),
+      meta: {
+        emoji: "T",
+        navSection: "form-controls",
+        order: 87.5,
+        title: "Toggle",
+        descriptionKey:
+          "preview.components.twoStateStickerCommandButtonsBackedByRadixToggle",
+      },
+      path: "/components/toggle",
+    },
+    {
+      component: () =>
+        import("@/pages/components").then((module) => module.ToggleGroupPage),
+      meta: {
+        emoji: "G",
+        navSection: "form-controls",
+        order: 87.75,
+        title: "ToggleGroup",
+        descriptionKey:
+          "preview.components.relatedStickerToggleControlsWithSharedVariants",
+      },
+      path: "/components/toggle-group",
     },
     {
       component: () =>

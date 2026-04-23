@@ -5,6 +5,7 @@ export default defineConfig({
     ".agents",
     ".playwright-mcp",
     "dist",
+    "dist-preview",
     "node_modules",
     "package-lock.json",
     "pnpm-lock.yaml",

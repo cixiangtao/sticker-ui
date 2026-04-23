@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "copy-button",
+  "title": "Sticker CopyButton",
+  "description": "An icon button for copying code, tokens, commands, and install snippets.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/copy-button.tsx",
+      "content": "import { Check, Copy } from \"lucide-react\"\nimport * as React from \"react\"\n\nimport { Button, type ButtonProps } from \"./button\"\n\n/**\n * Props for the sticker copy button.\n * @remarks Copies a provided string to the clipboard and exposes temporary copied state.\n */\ninterface CopyButtonProps extends Omit<\n  ButtonProps,\n  \"children\" | \"onClick\" | \"shape\"\n> {\n  /**\n   * Accessible label after the copy action succeeds.\n   * @default \"Copied\"\n   */\n  copiedLabel?: string\n  /**\n   * Duration in milliseconds before copied state resets.\n   * @default 1600\n   */\n  copiedTimeout?: number\n  /**\n   * Text copied to the clipboard.\n   */\n  copyText: string\n  /**\n   * Accessible label before the copy action succeeds.\n   * @default \"Copy\"\n   */\n  label?: string\n  /**\n   * Called after a successful copy action.\n   */\n  onCopied?: (text: string) => void\n  /**\n   * Controls whether visible text appears beside the icon.\n   * @default false\n   */\n  showLabel?: boolean\n}\n\n/**\n * Icon button for copying code, tokens, commands, and install snippets.\n */\nfunction CopyButton({\n  copiedLabel = \"Copied\",\n  copiedTimeout = 1600,\n  copyText,\n  label = \"Copy\",\n  onCopied,\n  showLabel = false,\n  size = \"sm\",\n  variant = \"outlined\",\n  ...props\n}: CopyButtonProps) {\n  const [copied, setCopied] = React.useState(false)\n  const timeoutRef = React.useRef<ReturnType<typeof setTimeout> | null>(null)\n\n  React.useEffect(\n    () => () => {\n      if (timeoutRef.current) {\n        clearTimeout(timeoutRef.current)\n      }\n    },\n    [],\n  )\n\n  async function handleCopy() {\n    await navigator.clipboard.writeText(copyText)\n    setCopied(true)\n    onCopied?.(copyText)\n\n    if (timeoutRef.current) {\n      clearTimeout(timeoutRef.current)\n    }\n\n    timeoutRef.current = setTimeout(() => {\n      setCopied(false)\n    }, copiedTimeout)\n  }\n\n  const visibleLabel = copied ? copiedLabel : label\n\n  return (\n    <Button\n      aria-label={visibleLabel}\n      color={copied ? \"success\" : \"default\"}\n      onClick={() => void handleCopy()}\n      shape={showLabel ? \"default\" : \"square\"}\n      size={size}\n      variant={variant}\n      {...props}\n    >\n      {copied ? (\n        <Check aria-hidden=\"true\" className=\"size-4 stroke-[3]\" />\n      ) : (\n        <Copy aria-hidden=\"true\" className=\"size-4 stroke-[3]\" />\n      )}\n      {showLabel ? <span>{visibleLabel}</span> : null}\n    </Button>\n  )\n}\n\nexport { CopyButton, type CopyButtonProps }\n",
+      "type": "registry:ui",
+      "target": "@ui/copy-button.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

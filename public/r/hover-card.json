@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hover-card",
+  "title": "Sticker HoverCard",
+  "description": "A Radix-powered hover card for non-interactive previews and profile summaries.",
+  "dependencies": [
+    "@radix-ui/react-hover-card",
+    "class-variance-authority",
+    "tailwindcss-animate"
+  ],
+  "registryDependencies": [
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/hover-card.tsx",
+      "content": "import * as HoverCardPrimitive from \"@radix-ui/react-hover-card\"\nimport { cva, type VariantProps } from \"class-variance-authority\"\nimport * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\n/**\n * Builds the sticker hover card content className from tone and size options.\n */\nconst hoverCardContentVariants = cva(\n  \"z-50 origin-(--radix-hover-card-content-transform-origin) rounded-su-2xl border-2 border-su-ink text-su-ink shadow-su-lg transition duration-150 outline-none data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95 motion-reduce:data-[state=closed]:animate-none motion-reduce:data-[state=open]:animate-none\",\n  {\n    defaultVariants: {\n      size: \"md\",\n      tone: \"default\",\n    },\n    variants: {\n      size: {\n        lg: \"w-96 p-5\",\n        md: \"w-80 p-4\",\n        sm: \"w-64 p-3\",\n      },\n      tone: {\n        default: \"bg-su-paper\",\n        info: \"bg-su-fill-info\",\n        secondary: \"bg-su-fill-secondary\",\n        success: \"bg-su-fill-success\",\n        warning: \"bg-su-fill-warning\",\n      },\n    },\n  },\n)\n\nconst HoverCardRoot = HoverCardPrimitive.Root\nconst HoverCardTrigger = HoverCardPrimitive.Trigger\nconst HoverCardPortal = HoverCardPrimitive.Portal\n\n/**\n * Props for sticker hover card content.\n * @remarks Wraps Radix HoverCard.Content and adds sticker tone, size, and optional arrow styling.\n */\ninterface HoverCardContentProps\n  extends\n    React.ComponentPropsWithoutRef<typeof HoverCardPrimitive.Content>,\n    VariantProps<typeof hoverCardContentVariants> {\n  /**\n   * Controls panel width and padding.\n   * @default \"md\"\n   */\n  size?: \"lg\" | \"md\" | \"sm\"\n  /**\n   * Renders the small ink arrow that points at the trigger.\n   * @default false\n   */\n  showArrow?: boolean\n  /**\n   * Controls the paper tone.\n   * @default \"default\"\n   */\n  tone?: \"default\" | \"info\" | \"secondary\" | \"success\" | \"warning\"\n}\n\n/**\n * Portaled sticker hover card panel for non-interactive previews.\n */\nconst HoverCardContent = React.forwardRef<\n  React.ElementRef<typeof HoverCardPrimitive.Content>,\n  HoverCardContentProps\n>(\n  (\n    {\n      align = \"center\",\n      children,\n      className,\n      sideOffset = 10,\n      showArrow = false,\n      size = \"md\",\n      tone = \"default\",\n      ...props\n    },\n    ref,\n  ) => (\n    <HoverCardPortal>\n      <HoverCardPrimitive.Content\n        align={align}\n        className={cn(hoverCardContentVariants({ size, tone }), className)}\n        data-slot=\"hover-card-content\"\n        ref={ref}\n        sideOffset={sideOffset}\n        {...props}\n      >\n        {children}\n        {showArrow ? (\n          <HoverCardPrimitive.Arrow\n            aria-hidden=\"true\"\n            className=\"fill-su-ink\"\n            data-slot=\"hover-card-arrow\"\n          />\n        ) : null}\n      </HoverCardPrimitive.Content>\n    </HoverCardPortal>\n  ),\n)\nHoverCardContent.displayName = HoverCardPrimitive.Content.displayName\n\n/**\n * Sticker hover card root powered by Radix HoverCard.\n */\nconst HoverCard = Object.assign(HoverCardRoot, {\n  Content: HoverCardContent,\n  Portal: HoverCardPortal,\n  Trigger: HoverCardTrigger,\n})\n\nexport {\n  HoverCard,\n  HoverCardContent,\n  HoverCardPortal,\n  HoverCardTrigger,\n  hoverCardContentVariants,\n  type HoverCardContentProps,\n}\n",
+      "type": "registry:ui",
+      "target": "@ui/hover-card.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

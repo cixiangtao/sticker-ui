@@ -1,9 +1,11 @@
 import { lazy, Suspense, type ReactNode } from "react"
 
 import type apiDocs from "@/generated/preview-api-docs.json"
+import apiDocsUrl from "@/generated/preview-api-docs.json?url"
 
 import { usePreviewI18n } from "../../i18n/preview"
 import { PreviewApiTable } from "./preview-api-table"
+import type { PreviewApiDoc } from "./preview-api-table"
 import { Card, CardContent } from "./preview-card"
 import type { PreviewDemoModule } from "./preview-example"
 import { PreviewExample } from "./preview-example"
@@ -220,15 +222,14 @@ function createComponentPreviewPage({
   name,
 }: CreateComponentPreviewPageOptions) {
   const ComponentPreviewContent = lazy(async () => {
-    const [demoExamples, apiDocsModule] = await Promise.all([
+    const [demoExamples, componentApi] = await Promise.all([
       loadPreviewDemoExamples({
         demoModuleLoaders,
         demoSourceLoaders,
         missingLabel: name,
       }),
-      import("@/generated/preview-api-docs.json"),
+      loadPreviewApiDoc(name),
     ])
-    const componentApi = apiDocsModule.default[name]
 
     return {
       default: () => (
@@ -250,6 +251,26 @@ function createComponentPreviewPage({
   }
 
   return ComponentPreviewPage
+}
+
+async function loadPreviewApiDoc(name: ComponentPreviewName) {
+  const response = await fetch(apiDocsUrl)
+
+  if (!response.ok) {
+    throw new Error(`Failed to load preview API docs: ${response.status}`)
+  }
+
+  const docs = (await response.json()) as Record<
+    ComponentPreviewName,
+    PreviewApiDoc
+  >
+  const componentApi = docs[name]
+
+  if (!componentApi) {
+    throw new Error(`Missing preview API docs for ${name}`)
+  }
+
+  return componentApi
 }
 
 function PreviewDemoLoading() {

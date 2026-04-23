@@ -199,8 +199,9 @@ function RegistryPage() {
         </CardHeader>
         <CardContent>
           <pre className="overflow-x-auto rounded-su-lg border border-su-ink bg-su-surface p-4 text-sm font-bold">
-            <code>{`npx shadcn@latest add https://your-domain.com/r/button.json --dry-run
-npx shadcn@latest add https://your-domain.com/r/button.json`}</code>
+            <code>{`pnpm run dev
+npx shadcn@latest add http://localhost:7777/r/button.json --dry-run
+npx shadcn@latest add http://localhost:7777/r/button.json`}</code>
           </pre>
           <p className="mt-4 text-sm font-bold text-su-ink">
             {tm(

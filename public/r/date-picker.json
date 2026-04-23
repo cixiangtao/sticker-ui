@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "date-picker",
+  "title": "Sticker DatePicker",
+  "description": "A compact sticker date picker for forms, filters, and scheduling panels.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button",
+    "calendar",
+    "popover",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/date-picker.tsx",
+      "content": "import { CalendarIcon } from \"lucide-react\"\nimport * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nimport { Button } from \"./button\"\nimport { Calendar, type CalendarProps } from \"./calendar\"\nimport { Popover } from \"./popover\"\n\n/**\n * Props for the sticker date picker.\n * @remarks Combines Button, Popover, and Calendar into a compact single-date picker.\n */\ninterface DatePickerProps extends Omit<\n  React.HTMLAttributes<HTMLDivElement>,\n  \"onChange\"\n> {\n  /**\n   * Calendar props passed to the inner calendar.\n   */\n  calendarProps?: Omit<CalendarProps, \"onSelect\" | \"value\">\n  /**\n   * Disables the trigger and inner calendar selection.\n   * @default false\n   */\n  disabled?: boolean\n  /**\n   * Formats the selected date for the trigger.\n   */\n  formatDate?: (date: Date) => string\n  /**\n   * Accessible label for the trigger.\n   * @default \"Choose date\"\n   */\n  label?: string\n  /**\n   * Called when a date is selected.\n   */\n  onChange?: (date: Date) => void\n  /**\n   * Placeholder shown when no date is selected.\n   * @default \"Choose date\"\n   */\n  placeholder?: React.ReactNode\n  /**\n   * Selected date.\n   */\n  value?: Date\n}\n\nfunction defaultFormatDate(date: Date) {\n  return new Intl.DateTimeFormat(undefined, {\n    day: \"2-digit\",\n    month: \"short\",\n    year: \"numeric\",\n  }).format(date)\n}\n\n/**\n * Compact sticker date picker for forms, filters, and scheduling panels.\n */\nfunction DatePicker({\n  calendarProps,\n  className,\n  disabled = false,\n  formatDate = defaultFormatDate,\n  label = \"Choose date\",\n  onChange,\n  placeholder = \"Choose date\",\n  value,\n  ...props\n}: DatePickerProps) {\n  const [open, setOpen] = React.useState(false)\n\n  function handleSelect(date: Date) {\n    onChange?.(date)\n    setOpen(false)\n  }\n\n  return (\n    <div\n      className={cn(\"inline-flex\", className)}\n      data-slot=\"date-picker\"\n      {...props}\n    >\n      <Popover onOpenChange={setOpen} open={open}>\n        <Popover.Trigger asChild>\n          <Button aria-label={label} disabled={disabled} variant=\"outlined\">\n            <CalendarIcon aria-hidden=\"true\" className=\"size-4 stroke-[3]\" />\n            <span>{value ? formatDate(value) : placeholder}</span>\n          </Button>\n        </Popover.Trigger>\n        <Popover.Content\n          align=\"start\"\n          className=\"w-80 p-0\"\n          showArrow\n          sideOffset={8}\n        >\n          <Calendar\n            {...calendarProps}\n            className=\"border-0 shadow-none\"\n            disabledDate={(date) =>\n              disabled || (calendarProps?.disabledDate?.(date) ?? false)\n            }\n            onSelect={handleSelect}\n            value={value}\n          />\n        </Popover.Content>\n      </Popover>\n    </div>\n  )\n}\n\nexport { DatePicker, type DatePickerProps }\n",
+      "type": "registry:ui",
+      "target": "@ui/date-picker.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

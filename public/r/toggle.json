@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle",
+  "title": "Sticker Toggle",
+  "description": "A Radix-powered two-state command button with sticker pressed states.",
+  "dependencies": [
+    "@radix-ui/react-toggle",
+    "class-variance-authority"
+  ],
+  "registryDependencies": [
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/toggle.tsx",
+      "content": "import * as TogglePrimitive from \"@radix-ui/react-toggle\"\nimport { cva, type VariantProps } from \"class-variance-authority\"\nimport * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\n/**\n * Builds the sticker toggle className from size, tone, and variant options.\n */\nconst toggleVariants = cva(\n  \"inline-flex shrink-0 cursor-pointer items-center justify-center gap-2 rounded-su-md border-2 border-su-ink font-black text-su-ink transition duration-150 outline-none hover:-translate-y-0.5 hover:shadow-su-md focus-visible:ring-[2px] focus-visible:ring-su-ring/65 active:translate-x-0.5 active:translate-y-0.5 active:shadow-su-xs disabled:cursor-not-allowed disabled:opacity-55 data-[state=on]:bg-su-fill-default data-[state=on]:shadow-su-xs\",\n  {\n    compoundVariants: [\n      {\n        class:\n          \"data-[state=on]:bg-su-fill-info data-[state=on]:text-su-fg-info\",\n        tone: \"info\",\n      },\n      {\n        class:\n          \"data-[state=on]:bg-su-fill-secondary data-[state=on]:text-su-fg-secondary\",\n        tone: \"secondary\",\n      },\n      {\n        class:\n          \"data-[state=on]:bg-su-fill-success data-[state=on]:text-su-fg-success\",\n        tone: \"success\",\n      },\n      {\n        class:\n          \"data-[state=on]:bg-su-fill-warning data-[state=on]:text-su-fg-warning\",\n        tone: \"warning\",\n      },\n      {\n        class: \"border-transparent shadow-none hover:shadow-none\",\n        variant: \"ghost\",\n      },\n      {\n        class: \"bg-su-surface shadow-su-sm\",\n        variant: \"outlined\",\n      },\n    ],\n    defaultVariants: {\n      size: \"md\",\n      tone: \"default\",\n      variant: \"outlined\",\n    },\n    variants: {\n      size: {\n        lg: \"h-11 min-w-11 px-4 text-base\",\n        md: \"h-10 min-w-10 px-3 text-sm\",\n        sm: \"h-8 min-w-8 px-2 text-xs\",\n      },\n      tone: {\n        default: \"\",\n        info: \"\",\n        secondary: \"\",\n        success: \"\",\n        warning: \"\",\n      },\n      variant: {\n        ghost: \"\",\n        outlined: \"\",\n      },\n    },\n  },\n)\n\n/**\n * Props for the sticker toggle button.\n * @remarks Wraps Radix Toggle.Root and adds sticker size, tone, and structure variants.\n */\ninterface ToggleProps\n  extends\n    React.ComponentPropsWithoutRef<typeof TogglePrimitive.Root>,\n    VariantProps<typeof toggleVariants> {\n  /**\n   * Controls toggle height and padding.\n   * @default \"md\"\n   */\n  size?: \"lg\" | \"md\" | \"sm\"\n  /**\n   * Controls the active semantic tone.\n   * @default \"default\"\n   */\n  tone?: \"default\" | \"info\" | \"secondary\" | \"success\" | \"warning\"\n  /**\n   * Controls toggle surface structure.\n   * @default \"outlined\"\n   */\n  variant?: \"ghost\" | \"outlined\"\n}\n\n/**\n * Pressable two-state sticker control powered by Radix Toggle.\n */\nconst Toggle = React.forwardRef<\n  React.ElementRef<typeof TogglePrimitive.Root>,\n  ToggleProps\n>(\n  (\n    {\n      className,\n      size = \"md\",\n      tone = \"default\",\n      variant = \"outlined\",\n      ...props\n    },\n    ref,\n  ) => (\n    <TogglePrimitive.Root\n      className={cn(toggleVariants({ size, tone, variant }), className)}\n      data-slot=\"toggle\"\n      ref={ref}\n      {...props}\n    />\n  ),\n)\nToggle.displayName = TogglePrimitive.Root.displayName\n\nexport { Toggle, toggleVariants, type ToggleProps }\n",
+      "type": "registry:ui",
+      "target": "@ui/toggle.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

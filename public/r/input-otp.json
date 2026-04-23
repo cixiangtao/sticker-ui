@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-otp",
+  "title": "Sticker InputOTP",
+  "description": "A one-time-code input with readable sticker slots and grouped separators.",
+  "dependencies": [
+    "input-otp"
+  ],
+  "registryDependencies": [
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/input-otp.tsx",
+      "content": "import { OTPInput, OTPInputContext } from \"input-otp\"\nimport * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\n/**\n * Props for the sticker OTP input root.\n */\ntype InputOtpProps = React.ComponentPropsWithoutRef<typeof OTPInput>\n\n/**\n * Props for grouping OTP slots.\n */\ntype InputOtpGroupProps = React.ComponentProps<\"div\">\n\n/**\n * Props for a single OTP slot.\n */\ninterface InputOtpSlotProps extends React.ComponentProps<\"div\"> {\n  /**\n   * Zero-based slot index.\n   */\n  index: number\n}\n\ntype InputOtpSeparatorProps = React.ComponentProps<\"div\">\n\n/**\n * Sticker OTP root for one-time codes and short verification inputs.\n */\nconst InputOtpRoot = React.forwardRef<\n  React.ElementRef<typeof OTPInput>,\n  InputOtpProps\n>(({ className, containerClassName, ...props }, ref) => (\n  <OTPInput\n    className={cn(\"disabled:cursor-not-allowed\", className)}\n    containerClassName={cn(\n      \"flex items-center gap-2 has-[:disabled]:opacity-55\",\n      containerClassName,\n    )}\n    data-slot=\"input-otp\"\n    ref={ref}\n    {...props}\n  />\n))\nInputOtpRoot.displayName = \"InputOtp\"\n\n/**\n * OTP slot group.\n */\nfunction InputOtpGroup({ className, ...props }: InputOtpGroupProps) {\n  return (\n    <div\n      className={cn(\"flex items-center gap-2\", className)}\n      data-slot=\"input-otp-group\"\n      {...props}\n    />\n  )\n}\n\n/**\n * Single OTP character slot.\n */\nfunction InputOtpSlot({ className, index, ...props }: InputOtpSlotProps) {\n  const inputOtpContext = React.useContext(OTPInputContext)\n  const slot = inputOtpContext.slots[index]\n\n  return (\n    <div\n      className={cn(\n        \"relative flex size-11 items-center justify-center rounded-su-lg border-2 border-su-ink bg-su-surface text-sm font-black text-su-ink shadow-su-sm transition duration-150\",\n        slot?.isActive && \"shadow-su-md ring-[2px] ring-su-ring/65\",\n        className,\n      )}\n      data-active={slot?.isActive}\n      data-slot=\"input-otp-slot\"\n      {...props}\n    >\n      {slot?.char}\n      {slot?.hasFakeCaret ? (\n        <div\n          className=\"pointer-events-none absolute inset-0 flex items-center justify-center\"\n          data-slot=\"input-otp-caret\"\n        >\n          <div className=\"h-5 w-px animate-pulse bg-su-ink\" />\n        </div>\n      ) : null}\n    </div>\n  )\n}\n\n/**\n * Visual separator between OTP slot groups.\n */\nfunction InputOtpSeparator({ className, ...props }: InputOtpSeparatorProps) {\n  return (\n    <div\n      className={cn(\"h-0.5 w-4 rounded-full bg-su-ink\", className)}\n      data-slot=\"input-otp-separator\"\n      role=\"separator\"\n      {...props}\n    />\n  )\n}\n\n/**\n * Sticker OTP root for one-time codes and short verification inputs.\n */\nconst InputOtp = Object.assign(InputOtpRoot, {\n  Group: InputOtpGroup,\n  Separator: InputOtpSeparator,\n  Slot: InputOtpSlot,\n})\n\nexport {\n  InputOtp,\n  InputOtpGroup,\n  InputOtpRoot,\n  InputOtpSeparator,\n  InputOtpSlot,\n  type InputOtpGroupProps,\n  type InputOtpProps,\n  type InputOtpSeparatorProps,\n  type InputOtpSlotProps,\n}\n",
+      "type": "registry:ui",
+      "target": "@ui/input-otp.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

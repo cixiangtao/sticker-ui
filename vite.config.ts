@@ -6,13 +6,15 @@ import react, { reactCompilerPreset } from "@vitejs/plugin-react"
 import { defineConfig } from "vite"
 
 const isGitLabPagesBuild = process.env.GITLAB_PAGES === "true"
+const previewOutDir = "dist-preview"
 
 export default defineConfig({
   publicDir: isGitLabPagesBuild ? false : "public",
   build: {
     copyPublicDir: !isGitLabPagesBuild,
-    emptyOutDir: isGitLabPagesBuild ? false : undefined,
-    outDir: isGitLabPagesBuild ? "public" : "dist",
+    chunkSizeWarningLimit: 650,
+    emptyOutDir: isGitLabPagesBuild ? false : true,
+    outDir: isGitLabPagesBuild ? "public" : previewOutDir,
     rolldownOptions: {
       output: {
         manualChunks(id) {

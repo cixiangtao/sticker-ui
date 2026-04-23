@@ -31,6 +31,9 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   "preview.components.basicLoading": {
     zh: "基础加载",
   },
+  "preview.components.basicMonth": {
+    zh: "基础月份",
+  },
   "preview.components.compactAccessibleSpinnersForPendingAsyncRegions": {
     zh: "用于待处理异步区域的紧凑可访问加载转圈。",
   },
@@ -153,6 +156,9 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   },
   "preview.components.basicDataTable": {
     zh: "基础数据表格",
+  },
+  "preview.components.basicDatePicker": {
+    zh: "基础日期选择",
   },
   "preview.components.basicField": {
     zh: "基础字段",
@@ -1547,6 +1553,551 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
     },
   "preview.components.toneMatrix": {
     zh: "色调矩阵",
+  },
+  "preview.components.avatarFallbacksKeepPeopleAndTeamListsReadableWithoutImages":
+    {
+      zh: "Avatar fallback 让人员和团队列表在没有图片时仍然清晰可读。",
+    },
+  "preview.components.avatarShapesAndSizesFitDenseTablesProfilesAndRoomierIdentityCards":
+    {
+      zh: "Avatar 的形状与尺寸可适配密集表格、个人资料和更宽松的身份卡片。",
+    },
+  "preview.components.basicCommand": {
+    zh: "基础命令面板",
+  },
+  "preview.components.calloutTonesSeparateInformationalTipsWarningsSuccessAndFailureStates":
+    {
+      zh: "Callout 色调可区分信息、提示、警告、成功和失败状态。",
+    },
+  "preview.components.calloutsCanCarrySmallRecoveryActionsWithoutBecomingFullCards":
+    {
+      zh: "Callout 可以承载小型恢复操作，而不必升级成完整卡片。",
+    },
+  "preview.components.calendarRendersASingleMonthGridWithKeyboardFocusableDayButtons":
+    {
+      zh: "Calendar 渲染单月网格，并提供可键盘聚焦的日期按钮。",
+    },
+  "preview.components.calendarSupportsDisabledDateRulesAndMondayFirstWeekLayouts":
+    {
+      zh: "Calendar 支持禁用日期规则和周一开始的周布局。",
+    },
+  "preview.components.codeBlockCanWrapLongConfigurationLinesInsideNarrowPanels":
+    {
+      zh: "CodeBlock 可以在窄面板内换行显示较长配置。",
+    },
+  "preview.components.codeBlockPairsReadablePreformattedTextWithACopyAction": {
+    zh: "CodeBlock 将易读的预格式文本和复制操作组合在一起。",
+  },
+  "preview.components.commandFiltersItemDataAndCallsOnSelectForEnabledRows": {
+    zh: "Command 可筛选 item 数据，并在启用行被选择时调用 onSelect。",
+  },
+  "preview.components.commandSubcomponentsAllowCustomGroupedCommandLayouts": {
+    zh: "Command 子组件允许自定义分组命令布局。",
+  },
+  "preview.components.compactEvents": {
+    zh: "紧凑事件",
+  },
+  "preview.components.compactMetricSurfaceForDashboardsSummariesAndKpiRows": {
+    zh: "用于仪表盘、摘要和 KPI 行的紧凑指标表面。",
+  },
+  "preview.components.compactStickerDatePickerForFormsFiltersAndSchedulingPanels":
+    {
+      zh: "用于表单、筛选和日程面板的紧凑贴纸日期选择器。",
+    },
+  "preview.components.copyButtonCanShowTextWhenTheActionNeedsMoreContext": {
+    zh: "当复制操作需要更多上下文时，CopyButton 可以显示文本。",
+  },
+  "preview.components.copyButtonProvidesACompactClipboardActionForCommandsAndTokens":
+    {
+      zh: "CopyButton 为命令和 token 提供紧凑的剪贴板操作。",
+    },
+  "preview.components.copySnippet": {
+    zh: "复制片段",
+  },
+  "preview.components.datePickerCombinesButtonPopoverAndCalendarForCompactFormUse":
+    {
+      zh: "DatePicker 组合 Button、Popover 和 Calendar，适合紧凑表单使用。",
+    },
+  "preview.components.datePickerSupportsCustomTriggerFormattingAndCalendarRules":
+    {
+      zh: "DatePicker 支持自定义触发器格式和日历规则。",
+    },
+  "preview.components.disabledWeekends": {
+    zh: "禁用周末",
+  },
+  "preview.components.emptyDropzone": {
+    zh: "空上传区",
+  },
+  "preview.components.filterPanel": {
+    zh: "筛选面板",
+  },
+  "preview.components.filterFormat": {
+    zh: "筛选格式",
+  },
+  "preview.components.hoverCardContentSupportsCompactAndRoomierStickerPreviewPanels":
+    {
+      zh: "HoverCard 内容支持紧凑和更宽松的贴纸预览面板。",
+    },
+  "preview.components.hoverCardProvidesLightweightProfileAndEntityPreviewsOnPointerHover":
+    {
+      zh: "HoverCard 可在指针悬停时提供轻量资料和实体预览。",
+    },
+  "preview.components.iconButtonForCopyingCodeTokensCommandsAndInstallSnippets":
+    {
+      zh: "用于复制代码、token、命令和安装片段的图标按钮。",
+    },
+  "preview.components.iconsAndTones": {
+    zh: "图标与色调",
+  },
+  "preview.components.initialsStack": {
+    zh: "首字母堆叠",
+  },
+  "preview.components.installCommand": {
+    zh: "安装命令",
+  },
+  "preview.components.labeledCopy": {
+    zh: "带文字复制",
+  },
+  "preview.components.manualComposition": {
+    zh: "手动组合",
+  },
+  "preview.components.metricGrid": {
+    zh: "指标网格",
+  },
+  "preview.components.orderedProgressIndicatorForOnboardingCheckoutAndSetupFlows":
+    {
+      zh: "用于引导、结账和设置流程的有序进度指示器。",
+    },
+  "preview.components.profilePreview": {
+    zh: "资料预览",
+  },
+  "preview.components.queueStates": {
+    zh: "队列状态",
+  },
+  "preview.components.radixDrawerPanelForSidePanelsFiltersAndMobileMenus": {
+    zh: "用于侧边面板、筛选器和移动菜单的 Radix 抽屉面板。",
+  },
+  "preview.components.radixHoverCardForNonInteractivePreviewsAndProfileSummaries":
+    {
+      zh: "用于非交互预览和资料摘要的 Radix HoverCard。",
+    },
+  "preview.components.releaseFeed": {
+    zh: "发布动态",
+  },
+  "preview.components.searchableStickerCommandListForPalettesQuickSwitchersAndMenuLikeWorkflows":
+    {
+      zh: "用于命令面板、快速切换器和菜单式工作流的可搜索贴纸命令列表。",
+    },
+  "preview.components.setupFlow": {
+    zh: "设置流程",
+  },
+  "preview.components.shapesAndSizes": {
+    zh: "形状与尺寸",
+  },
+  "preview.components.sheetCanEnterFromAnyViewportEdgeForDesktopAndMobileLayouts":
+    {
+      zh: "Sheet 可以从任意视口边缘进入，以适配桌面和移动布局。",
+    },
+  "preview.components.sheetCreatesAContainedDrawerForFiltersSettingsAndSecondaryWorkflows":
+    {
+      zh: "Sheet 可为筛选、设置和次级工作流创建受控抽屉。",
+    },
+  "preview.components.sideVariants": {
+    zh: "侧边变体",
+  },
+  "preview.components.singleMonthStickerCalendarForDateSelectionAndCompactScheduling":
+    {
+      zh: "用于日期选择和紧凑日程安排的单月贴纸日历。",
+    },
+  "preview.components.statCardIconsAndTonesKeepDenseSummaryRowsScannable": {
+    zh: "StatCard 的图标和色调能让密集摘要行更易扫读。",
+  },
+  "preview.components.statCardsShowKpisWithEnoughStructureForDashboardsAndReports":
+    {
+      zh: "StatCard 用足够清晰的结构展示仪表盘和报告中的 KPI。",
+    },
+  "preview.components.stepsCanRenderFromItemDataForSimpleOnboardingAndCheckoutFlows":
+    {
+      zh: "Steps 可以通过 item 数据渲染简单引导和结账流程。",
+    },
+  "preview.components.stepsCanSwitchToVerticalLayoutForNarrowPanelsAndSidebars":
+    {
+      zh: "Steps 可以切换为纵向布局，以适配窄面板和侧边栏。",
+    },
+  "preview.components.stickerAvatarFrameForProfilePhotosInitialsAndTeamStacks":
+    {
+      zh: "用于头像照片、首字母和团队堆叠的贴纸头像框。",
+    },
+  "preview.components.stickerCalloutSurfaceForDocsNotesWarningsTipsAndInlineStatus":
+    {
+      zh: "用于文档说明、警告、提示和行内状态的贴纸 Callout 表面。",
+    },
+  "preview.components.tactilePreCodeSurfaceForInstallSnippetsTokensAndExamples":
+    {
+      zh: "用于安装片段、token 和示例的触感 pre/code 表面。",
+    },
+  "preview.components.timelineCombinesStatusMarkersTimestampsAndPaperEventCards":
+    {
+      zh: "Timeline 组合状态标记、时间戳和纸张事件卡片。",
+    },
+  "preview.components.timelineDensityCanTightenActivityFeedsWithoutLosingConnectors":
+    {
+      zh: "Timeline 密度可压紧活动流，同时保留连接线。",
+    },
+  "preview.components.toneNotes": {
+    zh: "色调说明",
+  },
+  "preview.components.uiOnlyFilePickerAndUploadQueueSurface": {
+    zh: "UI-only 文件选择器和上传队列表面。",
+  },
+  "preview.components.uploadKeepsTransportApplicationOwnedWhileHandlingFilePickingUi":
+    {
+      zh: "Upload 处理文件选择 UI，同时让传输逻辑保持由应用拥有。",
+    },
+  "preview.components.uploadQueueShowsIdleUploadingDoneAndErrorStatesWithoutOwningNetworkLogic":
+    {
+      zh: "Upload 队列展示 idle、uploading、done 和 error 状态，但不拥有网络逻辑。",
+    },
+  "preview.components.verticalEventListForActivityFeedsChangelogsAndStagedWorkflows":
+    {
+      zh: "用于活动流、变更日志和分阶段工作流的纵向事件列表。",
+    },
+  "preview.components.verticalStatus": {
+    zh: "纵向状态",
+  },
+  "preview.components.wrappedConfig": {
+    zh: "换行配置",
+  },
+  "preview.components.accessibleRadixLabelsWithStickerTypography": {
+    zh: "带贴纸字体风格的可访问 Radix Label。",
+  },
+  "preview.components.activityList": {
+    zh: "活动列表",
+  },
+  "preview.components.alignmentGroup": {
+    zh: "对齐分组",
+  },
+  "preview.components.aspectRatioKeepsMediaCardsStableWhileImagesOrEmbedsLoad":
+    {
+      zh: "AspectRatio 会在图片或嵌入内容加载时保持媒体卡片尺寸稳定。",
+    },
+  "preview.components.carouselCombinesEmblaMotionWithStickerSlidesAndControls":
+    {
+      zh: "Carousel 将 Embla 动效与贴纸幻灯片和控制按钮组合起来。",
+    },
+  "preview.components.collapsiblePairsARadixDisclosureTriggerWithAStickerContentPanel":
+    {
+      zh: "Collapsible 将 Radix disclosure 触发器与贴纸内容面板配对。",
+    },
+  "preview.components.desktopApplicationMenusWithNestedCommandRows": {
+    zh: "带嵌套命令行的桌面应用菜单。",
+  },
+  "preview.components.editorMenu": {
+    zh: "编辑器菜单",
+  },
+  "preview.components.emblaCarouselForFeatureCardsGalleriesAndSteppedStories": {
+    zh: "用于功能卡片、图库和分步叙事的 Embla 轮播。",
+  },
+  "preview.components.featureCards": {
+    zh: "功能卡片",
+  },
+  "preview.components.fieldLabels": {
+    zh: "字段标签",
+  },
+  "preview.components.formattingToggle": {
+    zh: "格式切换",
+  },
+  "preview.components.inputOtpBuildsReadableOneTimeCodeSlotsOnTopOfInputOtp": {
+    zh: "InputOTP 基于 input-otp 构建易读的一次性验证码槽位。",
+  },
+  "preview.components.keyboardAccessibleSplitPanelsWithStickerResizeHandles": {
+    zh: "带贴纸拖拽手柄的键盘可访问分栏面板。",
+  },
+  "preview.components.labelAddsRadixControlBindingPlusStickerTypographyAndRequiredMarkers":
+    {
+      zh: "Label 加入 Radix 控件绑定、贴纸字体和必填标记。",
+    },
+  "preview.components.mediaFrame": {
+    zh: "媒体框架",
+  },
+  "preview.components.menubarSupportsDesktopAppMenusWithCheckboxRadioAndNestedItems":
+    {
+      zh: "Menubar 支持包含 Checkbox、Radio 和嵌套项目的桌面应用菜单。",
+    },
+  "preview.components.oneTimeCodeInputsWithReadableStickerSlots": {
+    zh: "带易读贴纸槽位的一次性验证码输入。",
+  },
+  "preview.components.planningRange": {
+    zh: "计划范围",
+  },
+  "preview.components.radixDisclosurePrimitiveWithStickerTriggerAndContent": {
+    zh: "带贴纸触发器和内容面板的 Radix disclosure primitive。",
+  },
+  "preview.components.radixScrollContainersWithStickerFramesAndThumbs": {
+    zh: "带贴纸框架和滑块的 Radix 滚动容器。",
+  },
+  "preview.components.radixSliderForSingleValuesRangesAndKeyboardControl": {
+    zh: "用于单值、范围和键盘控制的 Radix Slider。",
+  },
+  "preview.components.relatedStickerToggleControlsWithSharedVariants": {
+    zh: "共享变体的一组贴纸 Toggle 控件。",
+  },
+  "preview.components.releaseNotes": {
+    zh: "发布说明",
+  },
+  "preview.components.resizableCreatesKeyboardAccessibleSplitPanelsWithStickerHandles":
+    {
+      zh: "Resizable 会创建带贴纸手柄的键盘可访问分栏面板。",
+    },
+  "preview.components.scrollAreaFramesDenseContentWithRadixScrollbarsAndStickerThumbs":
+    {
+      zh: "ScrollArea 使用 Radix scrollbar 和贴纸滑块包裹密集内容。",
+    },
+  "preview.components.sliderSupportsSingleAndRangeValuesWithRadixKeyboardControl":
+    {
+      zh: "Slider 支持单值和范围值，并保留 Radix 键盘控制。",
+    },
+  "preview.components.stableMediaFramesForThumbnailsEmbedsAndResponsivePreviews":
+    {
+      zh: "用于缩略图、嵌入内容和响应式预览的稳定媒体框架。",
+    },
+  "preview.components.toggleGroupSharesStickerVariantsAcrossRelatedRadixToggleItems":
+    {
+      zh: "ToggleGroup 会在相关 Radix Toggle 项之间共享贴纸变体。",
+    },
+  "preview.components.toggleWrapsRadixPressedStateInAStickerCommandButton": {
+    zh: "Toggle 将 Radix pressed 状态包进贴纸命令按钮。",
+  },
+  "preview.components.twoStateStickerCommandButtonsBackedByRadixToggle": {
+    zh: "由 Radix Toggle 支撑的双状态贴纸命令按钮。",
+  },
+  "preview.components.verificationCode": {
+    zh: "验证码",
+  },
+  "preview.components.aspectRatioCanDropItsOuterFrameWhenTheParentSurfaceAlreadyOwnsTheStickerChrome":
+    {
+      zh: "当父级表面已经拥有贴纸外框时，AspectRatio 可以移除自己的外框。",
+    },
+  "preview.components.aspectRatioRatiosAndTonesKeepMediaLayoutsPredictableAcrossCards":
+    {
+      zh: "AspectRatio 的比例和色调可让不同卡片里的媒体布局保持稳定。",
+    },
+  "preview.components.avatarImageAndFallbackSlotsKeepProfilesReadableWhenPhotosAreMissing":
+    {
+      zh: "Avatar 的图片和 fallback 插槽可在缺少照片时保持资料可读。",
+    },
+  "preview.components.calendarWeekStartsAndTonesAdaptTheGridForRegionalAndPanelContext":
+    {
+      zh: "Calendar 的周起始日和色调可适配地区习惯与面板上下文。",
+    },
+  "preview.components.calloutSizeAndSemanticRootOptionsFitNotesWarningsAndInlineAsideContent":
+    {
+      zh: "Callout 的尺寸和语义根元素可适配备注、警告和行内 aside 内容。",
+    },
+  "preview.components.carouselOptionsCanShowPeekingSlidesForCardBrowsers": {
+    zh: "Carousel 选项可以露出相邻幻灯片，适合卡片浏览场景。",
+  },
+  "preview.components.carouselOrientationSwitchesTheEmblaAxisAndControlPlacement":
+    {
+      zh: "Carousel orientation 会切换 Embla 轴向和控制按钮位置。",
+    },
+  "preview.components.checkboxRadio": {
+    zh: "复选与单选",
+  },
+  "preview.components.codeBlockSizeToneCopyAndWrapOptionsCoverCommandsAndConfigSnippets":
+    {
+      zh: "CodeBlock 的尺寸、色调、复制和换行选项覆盖命令与配置片段。",
+    },
+  "preview.components.collapsibleCanBeControlledWhenTheDisclosureStateBelongsToAParentToolbar":
+    {
+      zh: "当展开状态属于父级工具栏时，Collapsible 可以保持受控。",
+    },
+  "preview.components.collapsibleContentPaddingAndToneCanMatchDenseNotesOrRoomyPanels":
+    {
+      zh: "Collapsible 内容的 padding 与 tone 可匹配密集备注或宽松面板。",
+    },
+  "preview.components.commandCanBeControlledToShowSearchResultStateAndEmptyCopy":
+    {
+      zh: "Command 可以受控，以展示搜索结果状态和空结果文案。",
+    },
+  "preview.components.controlledOtp": {
+    zh: "受控 OTP",
+  },
+  "preview.components.controlledPanel": {
+    zh: "受控面板",
+  },
+  "preview.components.controlledPressed": {
+    zh: "受控按下状态",
+  },
+  "preview.components.copyButtonCanShowVisibleLabelsAndReportCopiedTextToNearbyUi":
+    {
+      zh: "CopyButton 可以显示可见标签，并把已复制文本回传给附近 UI。",
+    },
+  "preview.components.datePickerPassesCalendarPropsThroughForDisabledDatesAndPanelTone":
+    {
+      zh: "DatePicker 会透传 Calendar props，用于禁用日期和面板色调。",
+    },
+  "preview.components.delayAndArrows": {
+    zh: "延迟与箭头",
+  },
+  "preview.components.disabledAndAccept": {
+    zh: "禁用与 accept",
+  },
+  "preview.components.disabledAndCalendarProps": {
+    zh: "禁用与日历参数",
+  },
+  "preview.components.framedTones": {
+    zh: "框架与色调",
+  },
+  "preview.components.groupedCode": {
+    zh: "分组验证码",
+  },
+  "preview.components.handleOptions": {
+    zh: "手柄选项",
+  },
+  "preview.components.horizontalContent": {
+    zh: "横向内容",
+  },
+  "preview.components.hoverCardDelayArrowSideAndAlignPropsTuneNonInteractivePreviews":
+    {
+      zh: "HoverCard 的延迟、箭头、side 和 align 可调节非交互预览。",
+    },
+  "preview.components.imageFallbacks": {
+    zh: "图片与 fallback",
+  },
+  "preview.components.inputOtpCanStayControlledForValidationAndSubmitState": {
+    zh: "InputOTP 可以保持受控，以支持校验和提交状态。",
+  },
+  "preview.components.inputOtpGroupsAndSeparatorsMakeLongCodesEasierToScan": {
+    zh: "InputOTP 的分组和分隔符让长验证码更容易扫读。",
+  },
+  "preview.components.labelRequiredMarkersAndHtmlForConnectCleanlyToNativeControls":
+    {
+      zh: "Label 的必填标记和 htmlFor 可以清晰连接原生控件。",
+    },
+  "preview.components.labelSizesAndTonesCoverDenseFormsStatusRowsAndSectionCaptions":
+    {
+      zh: "Label 的尺寸和色调覆盖密集表单、状态行和分区标题。",
+    },
+  "preview.components.menubarCheckboxAndRadioItemsSupportDesktopPreferenceMenus":
+    {
+      zh: "Menubar 的 Checkbox 和 Radio 项支持桌面偏好设置菜单。",
+    },
+  "preview.components.menubarTriggerSizeAndToneOptionsKeepTopLevelMenusReadable":
+    {
+      zh: "Menubar trigger 的尺寸和色调选项可保持顶层菜单清晰可读。",
+    },
+  "preview.components.paddingAndTones": {
+    zh: "内距与色调",
+  },
+  "preview.components.peekOptions": {
+    zh: "露出选项",
+  },
+  "preview.components.rangeAndVertical": {
+    zh: "范围与纵向",
+  },
+  "preview.components.ratiosAndTones": {
+    zh: "比例与色调",
+  },
+  "preview.components.requiredControls": {
+    zh: "必填控件",
+  },
+  "preview.components.resizableHandlesCanStayQuietOrExposeAGripAffordance": {
+    zh: "Resizable 手柄可以保持克制，也可以显示抓握提示。",
+  },
+  "preview.components.resizableSupportsVerticalPanelGroupsForStackedWorkspaces":
+    {
+      zh: "Resizable 支持用于堆叠工作区的纵向面板组。",
+    },
+  "preview.components.scrollAreaFrameAndToneOptionsFitCardsDrawersAndNestedPanels":
+    {
+      zh: "ScrollArea 的框架和色调选项适配卡片、抽屉和嵌套面板。",
+    },
+  "preview.components.scrollAreaIncludesAHorizontalScrollbarForWideRowsAndCodeLikeContent":
+    {
+      zh: "ScrollArea 内置横向滚动条，适合宽行和类代码内容。",
+    },
+  "preview.components.searchableEmpty": {
+    zh: "搜索空状态",
+  },
+  "preview.components.sheetSizeToneAndCloseOptionsSupportUtilityDrawersAndFocusedPanels":
+    {
+      zh: "Sheet 的尺寸、色调和关闭选项支持工具抽屉与聚焦面板。",
+    },
+  "preview.components.singleAndMultiple": {
+    zh: "单选与多选",
+  },
+  "preview.components.sizesAndClose": {
+    zh: "尺寸与关闭",
+  },
+  "preview.components.sizesAndCopy": {
+    zh: "尺寸与复制",
+  },
+  "preview.components.sizesAndFeedback": {
+    zh: "尺寸与反馈",
+  },
+  "preview.components.sizesAndSemantics": {
+    zh: "尺寸与语义",
+  },
+  "preview.components.sizesAndVariants": {
+    zh: "尺寸与变体",
+  },
+  "preview.components.sliderSizesAndTonesMatchCompactFiltersAndLouderStatusControls":
+    {
+      zh: "Slider 的尺寸和色调适配紧凑筛选器与更醒目的状态控件。",
+    },
+  "preview.components.sliderSupportsRangeThumbsAndVerticalOrientationFromRadix":
+    {
+      zh: "Slider 支持 Radix 提供的范围滑块和纵向方向。",
+    },
+  "preview.components.statCardSizeToneAndSemanticRootOptionsFitSummaryRowsAndSections":
+    {
+      zh: "StatCard 的尺寸、色调和语义根元素适配摘要行与分区。",
+    },
+  "preview.components.stepsManualCompositionKeepsCustomStepContentInsideTheSameOrderedList":
+    {
+      zh: "Steps 手动组合可让自定义步骤内容留在同一个有序列表中。",
+    },
+  "preview.components.timelineIndicatorTonesMakeMixedActivityStatesReadable": {
+    zh: "Timeline indicator 色调让混合活动状态更易读。",
+  },
+  "preview.components.toggleCanBeControlledWhenPressedStateDrivesNearbyStatus":
+    {
+      zh: "当 pressed 状态驱动附近状态展示时，Toggle 可以保持受控。",
+    },
+  "preview.components.toggleGroupSharesSizeToneAndVariantDefaultsWithEveryItem":
+    {
+      zh: "ToggleGroup 会把 size、tone 和 variant 默认值共享给每个项目。",
+    },
+  "preview.components.toggleGroupSupportsSingleChoiceAndMultipleSelectionPatterns":
+    {
+      zh: "ToggleGroup 支持单选和多选两类选择模式。",
+    },
+  "preview.components.toggleSizesTonesAndVariantsCoverToolbarAndPreferenceControls":
+    {
+      zh: "Toggle 的尺寸、色调和变体覆盖工具栏与偏好设置控件。",
+    },
+  "preview.components.toneIndicators": {
+    zh: "色调指示器",
+  },
+  "preview.components.triggerTones": {
+    zh: "触发器色调",
+  },
+  "preview.components.unframedEmbed": {
+    zh: "无框嵌入",
+  },
+  "preview.components.uploadAcceptMultipleAndDisabledPropsDescribePickerConstraintsWithoutOwningTransport":
+    {
+      zh: "Upload 的 accept、multiple 和 disabled props 可描述选择约束，而不接管传输。",
+    },
+  "preview.components.verticalCarousel": {
+    zh: "纵向轮播",
+  },
+  "preview.components.weekStartsAndTones": {
+    zh: "周起始与色调",
+  },
+  "preview.components.workspacePanes": {
+    zh: "工作区分栏",
   },
 })
 

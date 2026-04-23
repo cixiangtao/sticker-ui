@@ -134,9 +134,14 @@ Use the shadcn-compatible registry only when a project needs to copy and edit
 component source:
 
 ```bash
-npx shadcn@latest add https://your-domain.com/r/button.json --dry-run
-npx shadcn@latest add https://your-domain.com/r/button.json
+pnpm run dev
+npx shadcn@latest add http://localhost:7777/r/button.json --dry-run
+npx shadcn@latest add http://localhost:7777/r/button.json
 ```
+
+The public registry host is intentionally left blank until the preview site has
+a stable deployment address. Replace the local origin with that address once it
+exists.
 
 Run the final `add` command without `--overwrite` so shadcn asks before
 replacing any local files with the same names. Use `--diff` for a closer look
@@ -161,6 +166,10 @@ Preview API docs, route type-checking, and the production preview build run with
 ```bash
 pnpm run build:preview
 ```
+
+The package build writes library files to `dist/`; the preview build writes the
+static site to `dist-preview/` locally and to `public/` during GitLab Pages
+builds.
 
 Check the package release surface without publishing:
 
@@ -187,14 +196,20 @@ publish the package to npm with public access.
 ## Structure
 
 ```txt
-registry/
-  default/
-    button/
-      button.tsx
-    card/
-      card.tsx
-docs/
 src/
+  components/
+    ui/
+      button.tsx
+      card.tsx
+      dialog.tsx
+  pages/
+    components/
+      button/
+        demos/
+public/
+  r/
+    button.json
+    registry.json
 registry.json
 components.json
 vite.config.ts

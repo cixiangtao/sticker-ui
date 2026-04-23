@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "sticker-ui",
-  "homepage": "https://example.com",
+  "homepage": "http://localhost:7777",
   "items": [
     {
       "name": "utils",
@@ -33,6 +33,21 @@
       ]
     },
     {
+      "name": "copy-button",
+      "type": "registry:ui",
+      "title": "Sticker CopyButton",
+      "description": "An icon button for copying code, tokens, commands, and install snippets.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["button"],
+      "files": [
+        {
+          "path": "src/components/ui/copy-button.tsx",
+          "target": "@ui/copy-button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "card",
       "type": "registry:ui",
       "title": "Sticker Card",
@@ -43,6 +58,132 @@
         {
           "path": "src/components/ui/card.tsx",
           "target": "@ui/card.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "aspect-ratio",
+      "type": "registry:ui",
+      "title": "Sticker AspectRatio",
+      "description": "A Radix-powered media frame that keeps thumbnails, embeds, and previews stable.",
+      "dependencies": [
+        "@radix-ui/react-aspect-ratio",
+        "class-variance-authority"
+      ],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "src/components/ui/aspect-ratio.tsx",
+          "target": "@ui/aspect-ratio.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "carousel",
+      "type": "registry:ui",
+      "title": "Sticker Carousel",
+      "description": "An Embla-powered carousel with sticker slides and accessible controls.",
+      "dependencies": ["embla-carousel-react", "lucide-react"],
+      "registryDependencies": ["button", "utils"],
+      "files": [
+        {
+          "path": "src/components/ui/carousel.tsx",
+          "target": "@ui/carousel.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "resizable",
+      "type": "registry:ui",
+      "title": "Sticker Resizable",
+      "description": "Keyboard-accessible split panels with tactile sticker resize handles.",
+      "dependencies": ["lucide-react", "react-resizable-panels"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "src/components/ui/resizable.tsx",
+          "target": "@ui/resizable.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "scroll-area",
+      "type": "registry:ui",
+      "title": "Sticker ScrollArea",
+      "description": "A Radix-powered scroll container with sticker framing and custom scrollbars.",
+      "dependencies": [
+        "@radix-ui/react-scroll-area",
+        "class-variance-authority"
+      ],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "src/components/ui/scroll-area.tsx",
+          "target": "@ui/scroll-area.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "stat-card",
+      "type": "registry:ui",
+      "title": "Sticker StatCard",
+      "description": "A compact metric surface for dashboards, summaries, and KPI rows.",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "src/components/ui/stat-card.tsx",
+          "target": "@ui/stat-card.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "calendar",
+      "type": "registry:ui",
+      "title": "Sticker Calendar",
+      "description": "A single-month sticker calendar for date selection and compact scheduling.",
+      "dependencies": ["class-variance-authority", "lucide-react"],
+      "registryDependencies": ["button", "utils"],
+      "files": [
+        {
+          "path": "src/components/ui/calendar.tsx",
+          "target": "@ui/calendar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "date-picker",
+      "type": "registry:ui",
+      "title": "Sticker DatePicker",
+      "description": "A compact sticker date picker for forms, filters, and scheduling panels.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["button", "calendar", "popover", "utils"],
+      "files": [
+        {
+          "path": "src/components/ui/date-picker.tsx",
+          "target": "@ui/date-picker.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "code-block",
+      "type": "registry:ui",
+      "title": "Sticker CodeBlock",
+      "description": "A tactile pre/code surface for install snippets, tokens, and examples.",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": ["copy-button", "utils"],
+      "files": [
+        {
+          "path": "src/components/ui/code-block.tsx",
+          "target": "@ui/code-block.tsx",
           "type": "registry:ui"
         }
       ]
@@ -87,6 +228,36 @@
         {
           "path": "src/components/ui/jsx-join.tsx",
           "target": "@ui/jsx-join.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "steps",
+      "type": "registry:ui",
+      "title": "Sticker Steps",
+      "description": "An ordered progress indicator for onboarding, checkout, and setup flows.",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "src/components/ui/steps.tsx",
+          "target": "@ui/steps.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "timeline",
+      "type": "registry:ui",
+      "title": "Sticker Timeline",
+      "description": "A vertical event list for activity feeds, changelogs, and staged workflows.",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "src/components/ui/timeline.tsx",
+          "target": "@ui/timeline.tsx",
           "type": "registry:ui"
         }
       ]
@@ -180,6 +351,46 @@
       ]
     },
     {
+      "name": "collapsible",
+      "type": "registry:ui",
+      "title": "Sticker Collapsible",
+      "description": "A Radix-powered disclosure primitive with sticker trigger and content styling.",
+      "dependencies": [
+        "@radix-ui/react-collapsible",
+        "class-variance-authority",
+        "lucide-react",
+        "tailwindcss-animate"
+      ],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "src/components/ui/collapsible.tsx",
+          "target": "@ui/collapsible.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "menubar",
+      "type": "registry:ui",
+      "title": "Sticker Menubar",
+      "description": "A Radix-powered desktop menubar for application menus and nested commands.",
+      "dependencies": [
+        "@radix-ui/react-menubar",
+        "class-variance-authority",
+        "lucide-react",
+        "tailwindcss-animate"
+      ],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "src/components/ui/menubar.tsx",
+          "target": "@ui/menubar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "sidebar",
       "type": "registry:ui",
       "title": "Sticker Sidebar",
@@ -244,6 +455,21 @@
       ]
     },
     {
+      "name": "avatar",
+      "type": "registry:ui",
+      "title": "Sticker Avatar",
+      "description": "A sticker avatar frame for profile photos, initials, and team stacks.",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "src/components/ui/avatar.tsx",
+          "target": "@ui/avatar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "badge",
       "type": "registry:ui",
       "title": "Sticker Badge",
@@ -259,6 +485,21 @@
       ]
     },
     {
+      "name": "callout",
+      "type": "registry:ui",
+      "title": "Sticker Callout",
+      "description": "A sticker callout surface for docs notes, warnings, tips, and inline status.",
+      "dependencies": ["class-variance-authority", "lucide-react"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "src/components/ui/callout.tsx",
+          "target": "@ui/callout.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "empty",
       "type": "registry:ui",
       "title": "Sticker Empty",
@@ -269,6 +510,21 @@
         {
           "path": "src/components/ui/empty.tsx",
           "target": "@ui/empty.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "upload",
+      "type": "registry:ui",
+      "title": "Sticker Upload",
+      "description": "A UI-only file picker and upload queue surface.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["button", "empty", "progress", "utils"],
+      "files": [
+        {
+          "path": "src/components/ui/upload.tsx",
+          "target": "@ui/upload.tsx",
           "type": "registry:ui"
         }
       ]
@@ -344,6 +600,81 @@
         {
           "path": "src/components/ui/input.tsx",
           "target": "@ui/input.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "label",
+      "type": "registry:ui",
+      "title": "Sticker Label",
+      "description": "A Radix-powered accessible label with sticker typography and required markers.",
+      "dependencies": ["@radix-ui/react-label", "class-variance-authority"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "src/components/ui/label.tsx",
+          "target": "@ui/label.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-otp",
+      "type": "registry:ui",
+      "title": "Sticker InputOTP",
+      "description": "A one-time-code input with readable sticker slots and grouped separators.",
+      "dependencies": ["input-otp"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "src/components/ui/input-otp.tsx",
+          "target": "@ui/input-otp.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "slider",
+      "type": "registry:ui",
+      "title": "Sticker Slider",
+      "description": "A Radix-powered slider for single values, ranges, and keyboard control.",
+      "dependencies": ["@radix-ui/react-slider", "class-variance-authority"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "src/components/ui/slider.tsx",
+          "target": "@ui/slider.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "toggle",
+      "type": "registry:ui",
+      "title": "Sticker Toggle",
+      "description": "A Radix-powered two-state command button with sticker pressed states.",
+      "dependencies": ["@radix-ui/react-toggle", "class-variance-authority"],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "src/components/ui/toggle.tsx",
+          "target": "@ui/toggle.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "toggle-group",
+      "type": "registry:ui",
+      "title": "Sticker ToggleGroup",
+      "description": "A Radix-powered group of related sticker toggle controls.",
+      "dependencies": ["@radix-ui/react-toggle-group"],
+      "registryDependencies": ["toggle", "utils"],
+      "files": [
+        {
+          "path": "src/components/ui/toggle-group.tsx",
+          "target": "@ui/toggle-group.tsx",
           "type": "registry:ui"
         }
       ]
@@ -447,6 +778,21 @@
       ]
     },
     {
+      "name": "command",
+      "type": "registry:ui",
+      "title": "Sticker Command",
+      "description": "A searchable sticker command list for palettes, quick switchers, and menu-like workflows.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["empty", "utils"],
+      "files": [
+        {
+          "path": "src/components/ui/command.tsx",
+          "target": "@ui/command.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "context-menu",
       "type": "registry:ui",
       "title": "Sticker ContextMenu",
@@ -539,6 +885,25 @@
       ]
     },
     {
+      "name": "hover-card",
+      "type": "registry:ui",
+      "title": "Sticker HoverCard",
+      "description": "A Radix-powered hover card for non-interactive previews and profile summaries.",
+      "dependencies": [
+        "@radix-ui/react-hover-card",
+        "class-variance-authority",
+        "tailwindcss-animate"
+      ],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "src/components/ui/hover-card.tsx",
+          "target": "@ui/hover-card.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "dialog",
       "type": "registry:ui",
       "title": "Sticker Dialog",
@@ -554,6 +919,26 @@
         {
           "path": "src/components/ui/dialog.tsx",
           "target": "@ui/dialog.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sheet",
+      "type": "registry:ui",
+      "title": "Sticker Sheet",
+      "description": "A Radix-powered drawer panel for side panels, filters, and mobile menus.",
+      "dependencies": [
+        "@radix-ui/react-dialog",
+        "class-variance-authority",
+        "lucide-react",
+        "tailwindcss-animate"
+      ],
+      "registryDependencies": ["utils"],
+      "files": [
+        {
+          "path": "src/components/ui/sheet.tsx",
+          "target": "@ui/sheet.tsx",
           "type": "registry:ui"
         }
       ]

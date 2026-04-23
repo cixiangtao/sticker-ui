@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "collapsible",
+  "title": "Sticker Collapsible",
+  "description": "A Radix-powered disclosure primitive with sticker trigger and content styling.",
+  "dependencies": [
+    "@radix-ui/react-collapsible",
+    "class-variance-authority",
+    "lucide-react",
+    "tailwindcss-animate"
+  ],
+  "registryDependencies": [
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/collapsible.tsx",
+      "content": "import * as CollapsiblePrimitive from \"@radix-ui/react-collapsible\"\nimport { cva, type VariantProps } from \"class-variance-authority\"\nimport { ChevronDown } from \"lucide-react\"\nimport * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\n/**\n * Builds the sticker collapsible content className from tone and spacing options.\n */\nconst collapsibleContentVariants = cva(\n  \"overflow-hidden rounded-su-xl border-2 border-su-ink text-su-ink shadow-su-sm data-[state=closed]:animate-out data-[state=closed]:slide-out-to-top-1 data-[state=open]:animate-in data-[state=open]:slide-in-from-top-1 motion-reduce:data-[state=closed]:animate-none motion-reduce:data-[state=open]:animate-none\",\n  {\n    defaultVariants: {\n      padding: \"md\",\n      tone: \"default\",\n    },\n    variants: {\n      padding: {\n        lg: \"p-5\",\n        md: \"p-4\",\n        sm: \"p-3\",\n      },\n      tone: {\n        default: \"bg-su-paper\",\n        info: \"bg-su-fill-info\",\n        secondary: \"bg-su-fill-secondary\",\n        warning: \"bg-su-fill-warning\",\n      },\n    },\n  },\n)\n\nconst CollapsibleRoot = CollapsiblePrimitive.Root\n\n/**\n * Opens or closes the collapsible content.\n */\nconst CollapsibleTrigger = React.forwardRef<\n  React.ElementRef<typeof CollapsiblePrimitive.Trigger>,\n  React.ComponentPropsWithoutRef<typeof CollapsiblePrimitive.Trigger>\n>(({ children, className, ...props }, ref) => (\n  <CollapsiblePrimitive.Trigger\n    className={cn(\n      \"group inline-flex cursor-pointer items-center gap-2 rounded-su-lg border-2 border-su-ink bg-su-surface px-3 py-2 text-sm font-black text-su-ink shadow-su-sm transition duration-150 outline-none hover:-translate-y-0.5 hover:shadow-su-md focus-visible:ring-[2px] focus-visible:ring-su-ring/65 active:translate-x-0.5 active:translate-y-0.5 active:shadow-su-xs disabled:cursor-not-allowed disabled:opacity-55\",\n      className,\n    )}\n    data-slot=\"collapsible-trigger\"\n    ref={ref}\n    {...props}\n  >\n    {children}\n    <ChevronDown\n      aria-hidden=\"true\"\n      className=\"size-4 stroke-[3] transition-transform group-data-[state=open]:rotate-180\"\n    />\n  </CollapsiblePrimitive.Trigger>\n))\nCollapsibleTrigger.displayName = CollapsiblePrimitive.Trigger.displayName\n\n/**\n * Props for sticker collapsible content.\n */\ninterface CollapsibleContentProps\n  extends\n    React.ComponentPropsWithoutRef<typeof CollapsiblePrimitive.Content>,\n    VariantProps<typeof collapsibleContentVariants> {\n  /**\n   * Controls content padding.\n   * @default \"md\"\n   */\n  padding?: \"lg\" | \"md\" | \"sm\"\n  /**\n   * Controls content paper tone.\n   * @default \"default\"\n   */\n  tone?: \"default\" | \"info\" | \"secondary\" | \"warning\"\n}\n\n/**\n * Sticker collapsible content panel.\n */\nconst CollapsibleContent = React.forwardRef<\n  React.ElementRef<typeof CollapsiblePrimitive.Content>,\n  CollapsibleContentProps\n>(({ className, padding = \"md\", tone = \"default\", ...props }, ref) => (\n  <CollapsiblePrimitive.Content\n    className={cn(collapsibleContentVariants({ padding, tone }), className)}\n    data-slot=\"collapsible-content\"\n    ref={ref}\n    {...props}\n  />\n))\nCollapsibleContent.displayName = CollapsiblePrimitive.Content.displayName\n\n/**\n * Sticker disclosure primitive powered by Radix Collapsible.\n */\nconst Collapsible = Object.assign(CollapsibleRoot, {\n  Content: CollapsibleContent,\n  Trigger: CollapsibleTrigger,\n})\n\nexport {\n  Collapsible,\n  CollapsibleContent,\n  CollapsibleTrigger,\n  collapsibleContentVariants,\n  type CollapsibleContentProps,\n}\n",
+      "type": "registry:ui",
+      "target": "@ui/collapsible.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

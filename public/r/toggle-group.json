@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-group",
+  "title": "Sticker ToggleGroup",
+  "description": "A Radix-powered group of related sticker toggle controls.",
+  "dependencies": [
+    "@radix-ui/react-toggle-group"
+  ],
+  "registryDependencies": [
+    "toggle",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/toggle-group.tsx",
+      "content": "import * as ToggleGroupPrimitive from \"@radix-ui/react-toggle-group\"\nimport * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nimport { toggleVariants, type ToggleProps } from \"./toggle\"\n\ntype ToggleGroupContextValue = Pick<ToggleProps, \"size\" | \"tone\" | \"variant\">\n\nconst ToggleGroupContext = React.createContext<ToggleGroupContextValue>({\n  size: \"md\",\n  tone: \"default\",\n  variant: \"outlined\",\n})\n\n/**\n * Props for the sticker toggle group.\n * @remarks Wraps Radix ToggleGroup.Root and shares size, tone, and variant with items.\n */\ntype ToggleGroupRootPrimitiveProps =\n  | ToggleGroupPrimitive.ToggleGroupMultipleProps\n  | ToggleGroupPrimitive.ToggleGroupSingleProps\n\ntype ToggleGroupProps = ToggleGroupRootPrimitiveProps &\n  ToggleGroupContextValue & {\n    /**\n     * Controls item height and padding.\n     * @default \"md\"\n     */\n    size?: ToggleProps[\"size\"]\n    /**\n     * Controls the active semantic tone.\n     * @default \"default\"\n     */\n    tone?: ToggleProps[\"tone\"]\n    /**\n     * Controls item surface structure.\n     * @default \"outlined\"\n     */\n    variant?: ToggleProps[\"variant\"]\n  }\n\n/**\n * Props for the sticker toggle group item.\n */\ninterface ToggleGroupItemProps\n  extends\n    React.ComponentPropsWithoutRef<typeof ToggleGroupPrimitive.Item>,\n    ToggleGroupContextValue {}\n\n/**\n * Group of related sticker toggle controls powered by Radix ToggleGroup.\n */\nconst ToggleGroupRoot = React.forwardRef<\n  React.ElementRef<typeof ToggleGroupPrimitive.Root>,\n  ToggleGroupProps\n>(\n  (\n    {\n      children,\n      className,\n      size = \"md\",\n      tone = \"default\",\n      variant = \"outlined\",\n      ...props\n    },\n    ref,\n  ) => {\n    const contextValue = React.useMemo(\n      () => ({ size, tone, variant }),\n      [size, tone, variant],\n    )\n\n    return (\n      <ToggleGroupContext.Provider value={contextValue}>\n        <ToggleGroupPrimitive.Root\n          className={cn(\"inline-flex flex-wrap gap-2\", className)}\n          data-slot=\"toggle-group\"\n          ref={ref}\n          {...props}\n        >\n          {children}\n        </ToggleGroupPrimitive.Root>\n      </ToggleGroupContext.Provider>\n    )\n  },\n)\nToggleGroupRoot.displayName = ToggleGroupPrimitive.Root.displayName\n\n/**\n * Toggle group item.\n */\nconst ToggleGroupItem = React.forwardRef<\n  React.ElementRef<typeof ToggleGroupPrimitive.Item>,\n  ToggleGroupItemProps\n>(({ className, size, tone, variant, ...props }, ref) => {\n  const context = React.useContext(ToggleGroupContext)\n\n  return (\n    <ToggleGroupPrimitive.Item\n      className={cn(\n        toggleVariants({\n          size: size ?? context.size,\n          tone: tone ?? context.tone,\n          variant: variant ?? context.variant,\n        }),\n        className,\n      )}\n      data-slot=\"toggle-group-item\"\n      ref={ref}\n      {...props}\n    />\n  )\n})\nToggleGroupItem.displayName = ToggleGroupPrimitive.Item.displayName\n\n/**\n * Group of related sticker toggle controls powered by Radix ToggleGroup.\n */\nconst ToggleGroup = Object.assign(ToggleGroupRoot, {\n  Item: ToggleGroupItem,\n})\n\nexport {\n  ToggleGroup,\n  ToggleGroupItem,\n  ToggleGroupRoot,\n  type ToggleGroupItemProps,\n  type ToggleGroupProps,\n}\n",
+      "type": "registry:ui",
+      "target": "@ui/toggle-group.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

@@ -515,7 +515,9 @@ function createApiTextGetter(
       return fallback
     }
 
-    return translateDynamic(key)
+    const translatedText = translateDynamic(key)
+
+    return fallback && translatedText === key ? fallback : translatedText
   }
 }
 

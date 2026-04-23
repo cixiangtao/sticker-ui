@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "scroll-area",
+  "title": "Sticker ScrollArea",
+  "description": "A Radix-powered scroll container with sticker framing and custom scrollbars.",
+  "dependencies": [
+    "@radix-ui/react-scroll-area",
+    "class-variance-authority"
+  ],
+  "registryDependencies": [
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/scroll-area.tsx",
+      "content": "import * as ScrollAreaPrimitive from \"@radix-ui/react-scroll-area\"\nimport { cva, type VariantProps } from \"class-variance-authority\"\nimport * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\n/**\n * Builds the sticker scroll-area root className from frame options.\n */\nconst scrollAreaVariants = cva(\"relative overflow-hidden text-su-ink\", {\n  defaultVariants: {\n    framed: true,\n    tone: \"default\",\n  },\n  variants: {\n    framed: {\n      false: \"\",\n      true: \"rounded-su-2xl border-2 border-su-ink shadow-su-md\",\n    },\n    tone: {\n      default: \"bg-su-paper\",\n      info: \"bg-su-fill-info\",\n      secondary: \"bg-su-fill-secondary\",\n    },\n  },\n})\n\n/**\n * Props for the sticker scroll area.\n * @remarks Wraps Radix ScrollArea.Root and adds optional sticker framing.\n */\ninterface ScrollAreaProps\n  extends\n    React.ComponentPropsWithoutRef<typeof ScrollAreaPrimitive.Root>,\n    VariantProps<typeof scrollAreaVariants> {\n  /**\n   * Adds the sticker border, radius, and hard shadow frame.\n   * @default true\n   */\n  framed?: boolean\n  /**\n   * Controls root paper tone.\n   * @default \"default\"\n   */\n  tone?: \"default\" | \"info\" | \"secondary\"\n}\n\nconst ScrollAreaScrollbar = React.forwardRef<\n  React.ElementRef<typeof ScrollAreaPrimitive.ScrollAreaScrollbar>,\n  React.ComponentPropsWithoutRef<typeof ScrollAreaPrimitive.ScrollAreaScrollbar>\n>(({ className, orientation = \"vertical\", ...props }, ref) => (\n  <ScrollAreaPrimitive.ScrollAreaScrollbar\n    className={cn(\n      \"flex touch-none bg-su-surface-muted p-1 transition-colors select-none\",\n      orientation === \"vertical\" && \"h-full w-3 border-l border-su-ink/25\",\n      orientation === \"horizontal\" && \"h-3 flex-col border-t border-su-ink/25\",\n      className,\n    )}\n    data-slot=\"scroll-area-scrollbar\"\n    orientation={orientation}\n    ref={ref}\n    {...props}\n  >\n    <ScrollAreaPrimitive.ScrollAreaThumb\n      className=\"relative flex-1 rounded-full border border-su-ink bg-su-fill-default shadow-su-xs\"\n      data-slot=\"scroll-area-thumb\"\n    />\n  </ScrollAreaPrimitive.ScrollAreaScrollbar>\n))\nScrollAreaScrollbar.displayName =\n  ScrollAreaPrimitive.ScrollAreaScrollbar.displayName\n\n/**\n * Sticker scroll area for bounded panels, code regions, and dense lists.\n */\nconst ScrollArea = React.forwardRef<\n  React.ElementRef<typeof ScrollAreaPrimitive.Root>,\n  ScrollAreaProps\n>(({ children, className, framed = true, tone = \"default\", ...props }, ref) => (\n  <ScrollAreaPrimitive.Root\n    className={cn(scrollAreaVariants({ framed, tone }), className)}\n    data-slot=\"scroll-area\"\n    ref={ref}\n    {...props}\n  >\n    <ScrollAreaPrimitive.Viewport\n      className=\"size-full rounded-[inherit]\"\n      data-slot=\"scroll-area-viewport\"\n    >\n      {children}\n    </ScrollAreaPrimitive.Viewport>\n    <ScrollAreaScrollbar />\n    <ScrollAreaScrollbar orientation=\"horizontal\" />\n    <ScrollAreaPrimitive.Corner className=\"bg-su-surface-muted\" />\n  </ScrollAreaPrimitive.Root>\n))\nScrollArea.displayName = ScrollAreaPrimitive.Root.displayName\n\nexport {\n  ScrollArea,\n  ScrollAreaScrollbar,\n  scrollAreaVariants,\n  type ScrollAreaProps,\n}\n",
+      "type": "registry:ui",
+      "target": "@ui/scroll-area.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

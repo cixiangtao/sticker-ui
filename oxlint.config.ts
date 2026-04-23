@@ -13,6 +13,7 @@ export default defineConfig({
     ".agents",
     ".playwright-mcp",
     "dist",
+    "dist-preview",
     "node_modules",
     "public/r",
     "src/generated/preview-api-docs.json",

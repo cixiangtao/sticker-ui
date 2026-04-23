@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "aspect-ratio",
+  "title": "Sticker AspectRatio",
+  "description": "A Radix-powered media frame that keeps thumbnails, embeds, and previews stable.",
+  "dependencies": [
+    "@radix-ui/react-aspect-ratio",
+    "class-variance-authority"
+  ],
+  "registryDependencies": [
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/aspect-ratio.tsx",
+      "content": "import * as AspectRatioPrimitive from \"@radix-ui/react-aspect-ratio\"\nimport { cva, type VariantProps } from \"class-variance-authority\"\nimport * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\n/**\n * Builds the sticker aspect-ratio frame className from structure variants.\n */\nconst aspectRatioVariants = cva(\"relative overflow-hidden text-su-ink\", {\n  defaultVariants: {\n    framed: true,\n    tone: \"default\",\n  },\n  variants: {\n    framed: {\n      false: \"\",\n      true: \"rounded-su-2xl border-2 border-su-ink shadow-su-lg\",\n    },\n    tone: {\n      default: \"bg-su-paper\",\n      info: \"bg-su-fill-info\",\n      secondary: \"bg-su-fill-secondary\",\n      warning: \"bg-su-fill-warning\",\n    },\n  },\n})\n\n/**\n * Props for the sticker aspect-ratio frame.\n * @remarks Wraps Radix AspectRatio.Root and keeps media surfaces stable while content loads.\n */\ninterface AspectRatioProps\n  extends\n    React.ComponentPropsWithoutRef<typeof AspectRatioPrimitive.Root>,\n    VariantProps<typeof aspectRatioVariants> {\n  /**\n   * Adds the sticker border, radius, and hard shadow frame.\n   * @default true\n   */\n  framed?: boolean\n  /**\n   * Controls the fallback paper tone behind the media.\n   * @default \"default\"\n   */\n  tone?: \"default\" | \"info\" | \"secondary\" | \"warning\"\n}\n\n/**\n * Stable sticker media frame for thumbnails, embeds, and responsive previews.\n */\nfunction AspectRatio({\n  className,\n  framed = true,\n  tone = \"default\",\n  ...props\n}: AspectRatioProps) {\n  return (\n    <AspectRatioPrimitive.Root\n      className={cn(aspectRatioVariants({ framed, tone }), className)}\n      data-slot=\"aspect-ratio\"\n      {...props}\n    />\n  )\n}\n\nexport { AspectRatio, aspectRatioVariants, type AspectRatioProps }\n",
+      "type": "registry:ui",
+      "target": "@ui/aspect-ratio.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

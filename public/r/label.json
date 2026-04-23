@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "label",
+  "title": "Sticker Label",
+  "description": "A Radix-powered accessible label with sticker typography and required markers.",
+  "dependencies": [
+    "@radix-ui/react-label",
+    "class-variance-authority"
+  ],
+  "registryDependencies": [
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/label.tsx",
+      "content": "import * as LabelPrimitive from \"@radix-ui/react-label\"\nimport { cva, type VariantProps } from \"class-variance-authority\"\nimport * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\n/**\n * Builds the sticker label className from size and tone options.\n */\nconst labelVariants = cva(\n  \"inline-flex w-fit items-center gap-1.5 font-black text-su-ink peer-disabled:cursor-not-allowed peer-disabled:opacity-55\",\n  {\n    compoundVariants: [\n      {\n        class: \"text-su-fg-danger\",\n        tone: \"danger\",\n      },\n      {\n        class: \"text-su-ink\",\n        tone: \"default\",\n      },\n      {\n        class: \"text-su-fg-info\",\n        tone: \"info\",\n      },\n      {\n        class: \"text-su-fg-success\",\n        tone: \"success\",\n      },\n      {\n        class: \"text-su-fg-warning\",\n        tone: \"warning\",\n      },\n    ],\n    defaultVariants: {\n      required: false,\n      size: \"md\",\n      tone: \"default\",\n    },\n    variants: {\n      required: {\n        false: \"\",\n        true: \"after:text-su-fg-danger after:content-['*']\",\n      },\n      size: {\n        lg: \"text-base leading-6\",\n        md: \"text-sm leading-5\",\n        sm: \"text-xs leading-5\",\n      },\n      tone: {\n        danger: \"\",\n        default: \"\",\n        info: \"\",\n        success: \"\",\n        warning: \"\",\n      },\n    },\n  },\n)\n\n/**\n * Props for the sticker label.\n * @remarks Wraps Radix Label.Root and adds size, tone, and required marker variants.\n */\ninterface LabelProps\n  extends\n    React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root>,\n    VariantProps<typeof labelVariants> {\n  /**\n   * Renders a semantic required marker after the text.\n   * @default false\n   */\n  required?: boolean\n  /**\n   * Controls label text size.\n   * @default \"md\"\n   */\n  size?: \"lg\" | \"md\" | \"sm\"\n  /**\n   * Controls label semantic tone.\n   * @default \"default\"\n   */\n  tone?: \"danger\" | \"default\" | \"info\" | \"success\" | \"warning\"\n}\n\n/**\n * Accessible sticker label for form controls and compact field captions.\n */\nconst Label = React.forwardRef<\n  React.ElementRef<typeof LabelPrimitive.Root>,\n  LabelProps\n>(\n  (\n    { className, required = false, size = \"md\", tone = \"default\", ...props },\n    ref,\n  ) => (\n    <LabelPrimitive.Root\n      className={cn(labelVariants({ required, size, tone }), className)}\n      data-slot=\"label\"\n      ref={ref}\n      {...props}\n    />\n  ),\n)\nLabel.displayName = LabelPrimitive.Root.displayName\n\nexport { Label, labelVariants, type LabelProps }\n",
+      "type": "registry:ui",
+      "target": "@ui/label.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

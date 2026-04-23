@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "resizable",
+  "title": "Sticker Resizable",
+  "description": "Keyboard-accessible split panels with tactile sticker resize handles.",
+  "dependencies": [
+    "lucide-react",
+    "react-resizable-panels"
+  ],
+  "registryDependencies": [
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/resizable.tsx",
+      "content": "import { GripVertical } from \"lucide-react\"\nimport * as React from \"react\"\nimport {\n  Group as ResizablePrimitiveGroup,\n  Panel as ResizablePrimitivePanel,\n  Separator as ResizablePrimitiveSeparator,\n  type GroupProps as ResizablePrimitiveGroupProps,\n  type SeparatorProps as ResizablePrimitiveSeparatorProps,\n} from \"react-resizable-panels\"\n\nimport { cn } from \"@/lib/utils\"\n\nconst ResizablePanelGroup = React.forwardRef<\n  HTMLDivElement,\n  ResizablePrimitiveGroupProps\n>(({ className, ...props }, ref) => (\n  <ResizablePrimitiveGroup\n    className={cn(\n      \"flex h-full w-full data-[panel-group-direction=vertical]:flex-col\",\n      className,\n    )}\n    data-slot=\"resizable-panel-group\"\n    elementRef={ref}\n    {...props}\n  />\n))\nResizablePanelGroup.displayName = \"ResizablePanelGroup\"\n\n/**\n * Resizable panel region.\n */\nconst ResizablePanel = ResizablePrimitivePanel\n\n/**\n * Props for the sticker resize handle.\n */\ninterface ResizableHandleProps extends ResizablePrimitiveSeparatorProps {\n  /**\n   * Renders the centered grip affordance.\n   * @default false\n   */\n  withHandle?: boolean\n}\n\n/**\n * Tactile resize handle for resizable sticker panels.\n */\nconst ResizableHandle = React.forwardRef<HTMLDivElement, ResizableHandleProps>(\n  ({ className, withHandle = false, ...props }, ref) => (\n    <ResizablePrimitiveSeparator\n      className={cn(\n        \"group/resize-handle relative flex w-3 items-center justify-center bg-su-ink/10 transition-colors outline-none after:absolute after:inset-y-0 after:left-1/2 after:w-0.5 after:-translate-x-1/2 after:bg-su-ink/35 hover:bg-su-fill-default focus-visible:ring-[2px] focus-visible:ring-su-ring/65 aria-[orientation=horizontal]:h-3 aria-[orientation=horizontal]:w-full aria-[orientation=horizontal]:after:inset-x-0 aria-[orientation=horizontal]:after:top-1/2 aria-[orientation=horizontal]:after:h-0.5 aria-[orientation=horizontal]:after:w-full aria-[orientation=horizontal]:after:translate-x-0 aria-[orientation=horizontal]:after:-translate-y-1/2\",\n        className,\n      )}\n      data-slot=\"resizable-handle\"\n      elementRef={ref}\n      {...props}\n    >\n      {withHandle ? (\n        <span className=\"z-1 flex size-7 items-center justify-center rounded-su-md border-2 border-su-ink bg-su-surface shadow-su-xs group-aria-[orientation=horizontal]/resize-handle:rotate-90\">\n          <GripVertical aria-hidden=\"true\" className=\"size-4 stroke-[3]\" />\n        </span>\n      ) : null}\n    </ResizablePrimitiveSeparator>\n  ),\n)\nResizableHandle.displayName = \"ResizableHandle\"\n\n/**\n * Resizable panel primitives powered by react-resizable-panels.\n */\nconst Resizable = {\n  Handle: ResizableHandle,\n  Panel: ResizablePanel,\n  PanelGroup: ResizablePanelGroup,\n}\n\nexport {\n  Resizable,\n  ResizableHandle,\n  ResizablePanel,\n  ResizablePanelGroup,\n  type ResizableHandleProps,\n}\n",
+      "type": "registry:ui",
+      "target": "@ui/resizable.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

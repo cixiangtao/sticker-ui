@@ -6,6 +6,7 @@ const Input = Object.assign(InputRoot, {
 })
 
 export { Button, buttonVariants } from "./components/ui/button"
+export type { ButtonProps } from "./components/ui/button"
 export {
   Accordion,
   accordionContentVariants,
@@ -34,20 +35,61 @@ export type {
   AlertDialogContentProps,
   AlertDialogOverlayProps,
 } from "./components/ui/alert-dialog"
+export { AspectRatio, aspectRatioVariants } from "./components/ui/aspect-ratio"
+export type { AspectRatioProps } from "./components/ui/aspect-ratio"
+export { Avatar, avatarVariants } from "./components/ui/avatar"
+export type {
+  AvatarFallbackProps,
+  AvatarImageProps,
+  AvatarProps,
+} from "./components/ui/avatar"
 export { Badge, badgeVariants } from "./components/ui/badge"
 export type { BadgeProps } from "./components/ui/badge"
 export { Breadcrumb } from "./components/ui/breadcrumb"
+export { Callout, calloutVariants } from "./components/ui/callout"
+export type {
+  CalloutActionsProps,
+  CalloutDescriptionProps,
+  CalloutIconProps,
+  CalloutProps,
+  CalloutTitleProps,
+} from "./components/ui/callout"
+export { Calendar, calendarVariants } from "./components/ui/calendar"
+export type { CalendarProps } from "./components/ui/calendar"
 export { Card, cardVariants } from "./components/ui/card"
+export { Carousel } from "./components/ui/carousel"
+export type {
+  CarouselApi,
+  CarouselOptions,
+  CarouselPlugin,
+  CarouselProps,
+} from "./components/ui/carousel"
 export { Checkbox, checkboxVariants } from "./components/ui/checkbox"
 export type {
   CheckboxGroupProps,
   CheckboxProps,
 } from "./components/ui/checkbox"
+export { CodeBlock, codeBlockVariants } from "./components/ui/code-block"
+export type { CodeBlockProps } from "./components/ui/code-block"
+export {
+  Collapsible,
+  collapsibleContentVariants,
+} from "./components/ui/collapsible"
+export type { CollapsibleContentProps } from "./components/ui/collapsible"
 export { ColorPicker, colorPickerVariants } from "./components/ui/color-picker"
 export type {
   ColorPickerOutputFormat,
   ColorPickerProps,
 } from "./components/ui/color-picker"
+export { Command } from "./components/ui/command"
+export type {
+  CommandGroupHeadingProps,
+  CommandGroupProps,
+  CommandItemData,
+  CommandItemProps,
+  CommandListProps,
+  CommandProps,
+} from "./components/ui/command"
 export {
   ContextMenu,
   contextMenuContentVariants,
@@ -60,6 +102,8 @@ export type {
   ContextMenuSubContentProps,
   ContextMenuSubTriggerProps,
 } from "./components/ui/context-menu"
+export { CopyButton } from "./components/ui/copy-button"
+export type { CopyButtonProps } from "./components/ui/copy-button"
 export { DataTable } from "./components/ui/data-table"
 export type {
   DataTableChangeState,
@@ -70,6 +114,8 @@ export type {
   DataTableProps,
   DataTableRowSelection,
 } from "./components/ui/data-table"
+export { DatePicker } from "./components/ui/date-picker"
+export type { DatePickerProps } from "./components/ui/date-picker"
 export { Dialog, dialogContentVariants } from "./components/ui/dialog"
 export type {
   DialogContentProps,
@@ -109,6 +155,13 @@ export type {
   ValidateStatus,
   ValidateTrigger,
 } from "./components/ui/form"
+export { InputOtp } from "./components/ui/input-otp"
+export type {
+  InputOtpGroupProps,
+  InputOtpProps,
+  InputOtpSeparatorProps,
+  InputOtpSlotProps,
+} from "./components/ui/input-otp"
 export { Input, inputVariants }
 export { JsxJoin } from "./components/ui/jsx-join"
 export type {
@@ -116,8 +169,22 @@ export type {
   JsxJoinSeparator,
   JsxJoinSeparatorContext,
 } from "./components/ui/jsx-join"
+export { Label, labelVariants } from "./components/ui/label"
+export type { LabelProps } from "./components/ui/label"
 export { Flex, Grid, flexVariants, gridVariants } from "./components/ui/layout"
 export type { FlexProps, GridProps } from "./components/ui/layout"
+export {
+  Menubar,
+  menubarContentVariants,
+  menubarItemVariants,
+  menubarTriggerVariants,
+} from "./components/ui/menubar"
+export type {
+  MenubarContentProps,
+  MenubarItemProps,
+  MenubarSubContentProps,
+  MenubarTriggerProps,
+} from "./components/ui/menubar"
 export {
   NavigationMenu,
   navigationMenuContentVariants,
@@ -134,6 +201,8 @@ export type {
   FieldLabelProps,
   FieldProps,
 } from "./components/ui/field"
+export { HoverCard, hoverCardContentVariants } from "./components/ui/hover-card"
+export type { HoverCardContentProps } from "./components/ui/hover-card"
 export { Popover, popoverContentVariants } from "./components/ui/popover"
 export type { PopoverContentProps } from "./components/ui/popover"
 export { Pagination } from "./components/ui/pagination"
@@ -154,6 +223,17 @@ export { Progress, progressVariants } from "./components/ui/progress"
 export type { ProgressProps } from "./components/ui/progress"
 export { Range, rangeVariants } from "./components/ui/range"
 export type { RangeProps } from "./components/ui/range"
+export { Resizable } from "./components/ui/resizable"
+export type { ResizableHandleProps } from "./components/ui/resizable"
+export { ScrollArea, scrollAreaVariants } from "./components/ui/scroll-area"
+export type { ScrollAreaProps } from "./components/ui/scroll-area"
+export { Sheet, sheetContentVariants } from "./components/ui/sheet"
+export type {
+  SheetContentProps,
+  SheetOverlayProps,
+} from "./components/ui/sheet"
+export { Slider, sliderVariants } from "./components/ui/slider"
+export type { SliderProps } from "./components/ui/slider"
 export { Skeleton, skeletonVariants } from "./components/ui/skeleton"
 export type { SkeletonProps } from "./components/ui/skeleton"
 export {
@@ -167,6 +247,21 @@ export type {
 } from "./components/ui/sidebar"
 export { Spinner, spinnerVariants } from "./components/ui/spinner"
 export type { SpinnerProps } from "./components/ui/spinner"
+export { StatCard, statCardVariants } from "./components/ui/stat-card"
+export type {
+  StatCardDescriptionProps,
+  StatCardIconProps,
+  StatCardLabelProps,
+  StatCardProps,
+  StatCardTrendProps,
+  StatCardValueProps,
+} from "./components/ui/stat-card"
+export { Steps, stepsVariants } from "./components/ui/steps"
+export type {
+  StepItemProps,
+  StepsItemData,
+  StepsProps,
+} from "./components/ui/steps"
 export { Switch, switchVariants } from "./components/ui/switch"
 export type { SwitchProps } from "./components/ui/switch"
 export {
@@ -184,6 +279,27 @@ export type {
 export { Table } from "./components/ui/table"
 export { Tag, tagVariants } from "./components/ui/tag"
 export { Textarea, textareaVariants } from "./components/ui/textarea"
+export { Toggle, toggleVariants } from "./components/ui/toggle"
+export type { ToggleProps } from "./components/ui/toggle"
+export { ToggleGroup } from "./components/ui/toggle-group"
+export type {
+  ToggleGroupItemProps,
+  ToggleGroupProps,
+} from "./components/ui/toggle-group"
+export {
+  Timeline,
+  timelineIndicatorVariants,
+  timelineVariants,
+} from "./components/ui/timeline"
+export type {
+  TimelineContentProps,
+  TimelineDescriptionProps,
+  TimelineIndicatorProps,
+  TimelineItemProps,
+  TimelineProps,
+  TimelineTimeProps,
+  TimelineTitleProps,
+} from "./components/ui/timeline"
 export { Tooltip, tooltipContentVariants } from "./components/ui/tooltip"
 export type {
   TooltipContentProps,
@@ -208,3 +324,5 @@ export type {
   ToasterProps,
   ToasterToastOptions,
 } from "./components/ui/toast"
+export { Upload } from "./components/ui/upload"
+export type { UploadItem, UploadProps } from "./components/ui/upload"
