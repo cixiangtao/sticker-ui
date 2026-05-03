@@ -21771,10 +21771,10 @@
         "props": {
           "description": "Props for the sticker slider.",
           "descriptionKey": "api.slider.components.Slider.props.description",
-          "remarks": "Wraps Radix Slider.Root and supports single or multiple thumbs.",
+          "remarks": "Wraps Radix Slider.Root, accepts number or number array values, and supports single or multiple thumbs.",
           "remarksKey": "api.slider.components.Slider.props.remarks",
           "inherits": [
-            "React.ComponentPropsWithoutRef<typeof SliderPrimitive.Root>",
+            "Omit< React.ComponentPropsWithoutRef<typeof SliderPrimitive.Root>, \"defaultValue\" | \"onChange\" | \"onValueChange\" | \"value\" >",
             "VariantProps<typeof sliderVariants>"
           ],
           "inheritedMembers": [
@@ -21835,13 +21835,6 @@
               "type": "boolean"
             },
             {
-              "descriptionKey": "api.common.inheritedProps.defaultValue.description",
-              "name": "defaultValue",
-              "optional": true,
-              "required": false,
-              "type": "number[]"
-            },
-            {
               "descriptionKey": "api.common.inheritedProps.disabled.description",
               "name": "disabled",
               "optional": true,
@@ -21889,13 +21882,6 @@
               "optional": true,
               "required": false,
               "type": "React.FocusEventHandler<HTMLDivElement>"
-            },
-            {
-              "descriptionKey": "api.common.inheritedProps.onChange.description",
-              "name": "onChange",
-              "optional": true,
-              "required": false,
-              "type": "React.ChangeEventHandler<HTMLDivElement, Element>"
             },
             {
               "descriptionKey": "api.common.inheritedProps.onClick.description",
@@ -21959,16 +21945,40 @@
               "optional": true,
               "required": false,
               "type": "string"
-            },
-            {
-              "descriptionKey": "api.common.inheritedProps.value.description",
-              "name": "value",
-              "optional": true,
-              "required": false,
-              "type": "number[]"
             }
           ],
           "members": [
+            {
+              "defaultValue": "0",
+              "description": "Initial uncontrolled value.",
+              "descriptionKey": "api.slider.components.Slider.props.members.defaultValue.description",
+              "remarks": "Pass a number for a single-thumb slider or an array for range thumbs.",
+              "remarksKey": "api.slider.components.Slider.props.members.defaultValue.remarks",
+              "name": "defaultValue",
+              "optional": true,
+              "required": false,
+              "type": "SliderValue"
+            },
+            {
+              "description": "Runs when the slider value changes.",
+              "descriptionKey": "api.slider.components.Slider.props.members.onChange.description",
+              "remarks": "Receives the first thumb value as a Form.Item-friendly single number.",
+              "remarksKey": "api.slider.components.Slider.props.members.onChange.remarks",
+              "name": "onChange",
+              "optional": true,
+              "required": false,
+              "type": "SliderChangeHandler"
+            },
+            {
+              "description": "Runs when the Radix slider value changes.",
+              "descriptionKey": "api.slider.components.Slider.props.members.onValueChange.description",
+              "remarks": "Receives the normalized number array from Radix.",
+              "remarksKey": "api.slider.components.Slider.props.members.onValueChange.remarks",
+              "name": "onValueChange",
+              "optional": true,
+              "required": false,
+              "type": "SliderValueChangeHandler"
+            },
             {
               "defaultValue": "\"md\"",
               "description": "Controls track and thumb size.",
@@ -21986,6 +21996,16 @@
               "optional": true,
               "required": false,
               "type": "\"danger\" | \"default\" | \"info\" | \"secondary\" | \"success\" | \"warning\""
+            },
+            {
+              "description": "Controlled value.",
+              "descriptionKey": "api.slider.components.Slider.props.members.value.description",
+              "remarks": "Pass a number for a single-thumb slider or an array for range thumbs.",
+              "remarksKey": "api.slider.components.Slider.props.members.value.remarks",
+              "name": "value",
+              "optional": true,
+              "required": false,
+              "type": "SliderValue"
             }
           ],
           "type": "SliderProps"
@@ -22002,12 +22022,30 @@
         "name": "Slider"
       },
       {
+        "description": "Form-friendly single-thumb slider change handler.",
+        "descriptionKey": "api.slider.exports.SliderChangeHandler.description",
+        "kind": "type",
+        "name": "SliderChangeHandler"
+      },
+      {
         "description": "Props for the sticker slider.",
         "descriptionKey": "api.slider.exports.SliderProps.description",
-        "remarks": "Wraps Radix Slider.Root and supports single or multiple thumbs.",
+        "remarks": "Wraps Radix Slider.Root, accepts number or number array values, and supports single or multiple thumbs.",
         "remarksKey": "api.slider.exports.SliderProps.remarks",
         "kind": "interface",
         "name": "SliderProps"
+      },
+      {
+        "description": "Value accepted by the sticker slider.",
+        "descriptionKey": "api.slider.exports.SliderValue.description",
+        "kind": "type",
+        "name": "SliderValue"
+      },
+      {
+        "description": "Radix-compatible slider change handler.",
+        "descriptionKey": "api.slider.exports.SliderValueChangeHandler.description",
+        "kind": "type",
+        "name": "SliderValueChangeHandler"
       },
       {
         "description": "Builds the sticker slider root className from size and tone options.",
@@ -22021,16 +22059,56 @@
     "title": "Sticker Slider",
     "types": [
       {
+        "description": "Form-friendly single-thumb slider change handler.",
+        "descriptionKey": "api.slider.types.SliderChangeHandler.description",
+        "inherits": [],
+        "kind": "type",
+        "members": [],
+        "name": "SliderChangeHandler",
+        "type": "(value: number) => void"
+      },
+      {
         "description": "Props for the sticker slider.",
         "descriptionKey": "api.slider.types.SliderProps.description",
-        "remarks": "Wraps Radix Slider.Root and supports single or multiple thumbs.",
+        "remarks": "Wraps Radix Slider.Root, accepts number or number array values, and supports single or multiple thumbs.",
         "remarksKey": "api.slider.types.SliderProps.remarks",
         "inherits": [
-          "React.ComponentPropsWithoutRef<typeof SliderPrimitive.Root>",
+          "Omit< React.ComponentPropsWithoutRef<typeof SliderPrimitive.Root>, \"defaultValue\" | \"onChange\" | \"onValueChange\" | \"value\" >",
           "VariantProps<typeof sliderVariants>"
         ],
         "kind": "interface",
         "members": [
+          {
+            "defaultValue": "0",
+            "description": "Initial uncontrolled value.",
+            "descriptionKey": "api.slider.types.SliderProps.members.defaultValue.description",
+            "remarks": "Pass a number for a single-thumb slider or an array for range thumbs.",
+            "remarksKey": "api.slider.types.SliderProps.members.defaultValue.remarks",
+            "name": "defaultValue",
+            "optional": true,
+            "required": false,
+            "type": "SliderValue"
+          },
+          {
+            "description": "Runs when the slider value changes.",
+            "descriptionKey": "api.slider.types.SliderProps.members.onChange.description",
+            "remarks": "Receives the first thumb value as a Form.Item-friendly single number.",
+            "remarksKey": "api.slider.types.SliderProps.members.onChange.remarks",
+            "name": "onChange",
+            "optional": true,
+            "required": false,
+            "type": "SliderChangeHandler"
+          },
+          {
+            "description": "Runs when the Radix slider value changes.",
+            "descriptionKey": "api.slider.types.SliderProps.members.onValueChange.description",
+            "remarks": "Receives the normalized number array from Radix.",
+            "remarksKey": "api.slider.types.SliderProps.members.onValueChange.remarks",
+            "name": "onValueChange",
+            "optional": true,
+            "required": false,
+            "type": "SliderValueChangeHandler"
+          },
           {
             "defaultValue": "\"md\"",
             "description": "Controls track and thumb size.",
@@ -22048,9 +22126,37 @@
             "optional": true,
             "required": false,
             "type": "\"danger\" | \"default\" | \"info\" | \"secondary\" | \"success\" | \"warning\""
+          },
+          {
+            "description": "Controlled value.",
+            "descriptionKey": "api.slider.types.SliderProps.members.value.description",
+            "remarks": "Pass a number for a single-thumb slider or an array for range thumbs.",
+            "remarksKey": "api.slider.types.SliderProps.members.value.remarks",
+            "name": "value",
+            "optional": true,
+            "required": false,
+            "type": "SliderValue"
           }
         ],
         "name": "SliderProps"
+      },
+      {
+        "description": "Value accepted by the sticker slider.",
+        "descriptionKey": "api.slider.types.SliderValue.description",
+        "inherits": [],
+        "kind": "type",
+        "members": [],
+        "name": "SliderValue",
+        "type": "number | number[]"
+      },
+      {
+        "description": "Radix-compatible slider change handler.",
+        "descriptionKey": "api.slider.types.SliderValueChangeHandler.description",
+        "inherits": [],
+        "kind": "type",
+        "members": [],
+        "name": "SliderValueChangeHandler",
+        "type": "(value: number[]) => void"
       }
     ],
     "variants": [
@@ -23525,481 +23631,6 @@
           { "defaultValue": "md", "name": "size", "values": ["lg", "md", "sm"] }
         ],
         "name": "colorPickerVariants"
-      }
-    ]
-  },
-  "range": {
-    "components": [
-      {
-        "name": "Range",
-        "props": {
-          "description": "Props for the sticker range control.",
-          "descriptionKey": "api.range.components.Range.props.description",
-          "remarks": "Wraps the native `input[type=\"range\"]` and reports numeric values through `onChange(value, event)`.",
-          "remarksKey": "api.range.components.Range.props.remarks",
-          "inherits": [
-            "Omit< React.InputHTMLAttributes<HTMLInputElement>, | \"children\" | \"className\" | \"defaultValue\" | \"max\" | \"min\" | \"onChange\" | \"size\" | \"step\" | \"style\" | \"type\" | \"value\" >",
-            "Omit<VariantProps<typeof rangeVariants>, \"disabled\" | \"size\" | \"tone\">"
-          ],
-          "inheritedMembers": [
-            {
-              "descriptionKey": "api.common.inheritedProps.aria-describedby.description",
-              "name": "aria-describedby",
-              "optional": true,
-              "required": false,
-              "type": "string"
-            },
-            {
-              "descriptionKey": "api.common.inheritedProps.aria-invalid.description",
-              "name": "aria-invalid",
-              "optional": true,
-              "required": false,
-              "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\""
-            },
-            {
-              "descriptionKey": "api.common.inheritedProps.aria-label.description",
-              "name": "aria-label",
-              "optional": true,
-              "required": false,
-              "type": "string"
-            },
-            {
-              "descriptionKey": "api.common.inheritedProps.aria-labelledby.description",
-              "name": "aria-labelledby",
-              "optional": true,
-              "required": false,
-              "type": "string"
-            },
-            {
-              "descriptionKey": "api.common.inheritedProps.autoComplete.description",
-              "name": "autoComplete",
-              "optional": true,
-              "required": false,
-              "type": "React.HTMLInputAutoCompleteAttribute"
-            },
-            {
-              "descriptionKey": "api.common.inheritedProps.autoFocus.description",
-              "name": "autoFocus",
-              "optional": true,
-              "required": false,
-              "type": "boolean"
-            },
-            {
-              "descriptionKey": "api.common.inheritedProps.checked.description",
-              "name": "checked",
-              "optional": true,
-              "required": false,
-              "type": "boolean"
-            },
-            {
-              "descriptionKey": "api.common.inheritedProps.defaultChecked.description",
-              "name": "defaultChecked",
-              "optional": true,
-              "required": false,
-              "type": "boolean"
-            },
-            {
-              "descriptionKey": "api.common.inheritedProps.disabled.description",
-              "name": "disabled",
-              "optional": true,
-              "required": false,
-              "type": "boolean"
-            },
-            {
-              "descriptionKey": "api.common.inheritedProps.form.description",
-              "name": "form",
-              "optional": true,
-              "required": false,
-              "type": "string"
-            },
-            {
-              "descriptionKey": "api.common.inheritedProps.id.description",
-              "name": "id",
-              "optional": true,
-              "required": false,
-              "type": "string"
-            },
-            {
-              "descriptionKey": "api.common.inheritedProps.maxLength.description",
-              "name": "maxLength",
-              "optional": true,
-              "required": false,
-              "type": "number"
-            },
-            {
-              "descriptionKey": "api.common.inheritedProps.minLength.description",
-              "name": "minLength",
-              "optional": true,
-              "required": false,
-              "type": "number"
-            },
-            {
-              "descriptionKey": "api.common.inheritedProps.name.description",
-              "name": "name",
-              "optional": true,
-              "required": false,
-              "type": "string"
-            },
-            {
-              "descriptionKey": "api.common.inheritedProps.onBlur.description",
-              "name": "onBlur",
-              "optional": true,
-              "required": false,
-              "type": "React.FocusEventHandler<HTMLInputElement>"
-            },
-            {
-              "descriptionKey": "api.common.inheritedProps.onClick.description",
-              "name": "onClick",
-              "optional": true,
-              "required": false,
-              "type": "React.MouseEventHandler<HTMLInputElement>"
-            },
-            {
-              "descriptionKey": "api.common.inheritedProps.onFocus.description",
-              "name": "onFocus",
-              "optional": true,
-              "required": false,
-              "type": "React.FocusEventHandler<HTMLInputElement>"
-            },
-            {
-              "descriptionKey": "api.common.inheritedProps.onKeyDown.description",
-              "name": "onKeyDown",
-              "optional": true,
-              "required": false,
-              "type": "React.KeyboardEventHandler<HTMLInputElement>"
-            },
-            {
-              "descriptionKey": "api.common.inheritedProps.onKeyUp.description",
-              "name": "onKeyUp",
-              "optional": true,
-              "required": false,
-              "type": "React.KeyboardEventHandler<HTMLInputElement>"
-            },
-            {
-              "descriptionKey": "api.common.inheritedProps.onMouseEnter.description",
-              "name": "onMouseEnter",
-              "optional": true,
-              "required": false,
-              "type": "React.MouseEventHandler<HTMLInputElement>"
-            },
-            {
-              "descriptionKey": "api.common.inheritedProps.onMouseLeave.description",
-              "name": "onMouseLeave",
-              "optional": true,
-              "required": false,
-              "type": "React.MouseEventHandler<HTMLInputElement>"
-            },
-            {
-              "descriptionKey": "api.common.inheritedProps.pattern.description",
-              "name": "pattern",
-              "optional": true,
-              "required": false,
-              "type": "string"
-            },
-            {
-              "descriptionKey": "api.common.inheritedProps.placeholder.description",
-              "name": "placeholder",
-              "optional": true,
-              "required": false,
-              "type": "string"
-            },
-            {
-              "descriptionKey": "api.common.inheritedProps.readOnly.description",
-              "name": "readOnly",
-              "optional": true,
-              "required": false,
-              "type": "boolean"
-            },
-            {
-              "descriptionKey": "api.common.inheritedProps.required.description",
-              "name": "required",
-              "optional": true,
-              "required": false,
-              "type": "boolean"
-            },
-            {
-              "descriptionKey": "api.common.inheritedProps.role.description",
-              "name": "role",
-              "optional": true,
-              "required": false,
-              "type": "React.AriaRole"
-            },
-            {
-              "descriptionKey": "api.common.inheritedProps.title.description",
-              "name": "title",
-              "optional": true,
-              "required": false,
-              "type": "string"
-            }
-          ],
-          "members": [
-            {
-              "description": "Custom className for the range wrapper.",
-              "descriptionKey": "api.range.components.Range.props.members.className.description",
-              "name": "className",
-              "optional": true,
-              "required": false,
-              "type": "string"
-            },
-            {
-              "defaultValue": "0",
-              "description": "Initial uncontrolled numeric value.",
-              "descriptionKey": "api.range.components.Range.props.members.defaultValue.description",
-              "name": "defaultValue",
-              "optional": true,
-              "required": false,
-              "type": "number"
-            },
-            {
-              "description": "Formats the optional visible value label.",
-              "descriptionKey": "api.range.components.Range.props.members.formatValue.description",
-              "name": "formatValue",
-              "optional": true,
-              "required": false,
-              "type": "(value: number) => React.ReactNode"
-            },
-            {
-              "defaultValue": "100",
-              "description": "Maximum selectable value.",
-              "descriptionKey": "api.range.components.Range.props.members.max.description",
-              "name": "max",
-              "optional": true,
-              "required": false,
-              "type": "number"
-            },
-            {
-              "defaultValue": "0",
-              "description": "Minimum selectable value.",
-              "descriptionKey": "api.range.components.Range.props.members.min.description",
-              "name": "min",
-              "optional": true,
-              "required": false,
-              "type": "number"
-            },
-            {
-              "description": "Runs when the range value changes.",
-              "descriptionKey": "api.range.components.Range.props.members.onChange.description",
-              "remarks": "Receives the next number first and the native change event second.",
-              "remarksKey": "api.range.components.Range.props.members.onChange.remarks",
-              "name": "onChange",
-              "optional": true,
-              "required": false,
-              "type": "RangeChangeHandler"
-            },
-            {
-              "defaultValue": "false",
-              "description": "Shows the current value beside the track.",
-              "descriptionKey": "api.range.components.Range.props.members.showValue.description",
-              "name": "showValue",
-              "optional": true,
-              "required": false,
-              "type": "boolean"
-            },
-            {
-              "defaultValue": "\"md\"",
-              "description": "Controls the range track and thumb size.",
-              "descriptionKey": "api.range.components.Range.props.members.size.description",
-              "name": "size",
-              "optional": true,
-              "required": false,
-              "type": "\"lg\" | \"md\" | \"sm\""
-            },
-            {
-              "defaultValue": "1",
-              "description": "Step amount between values.",
-              "descriptionKey": "api.range.components.Range.props.members.step.description",
-              "name": "step",
-              "optional": true,
-              "required": false,
-              "type": "number"
-            },
-            {
-              "description": "Custom style for the range wrapper.",
-              "descriptionKey": "api.range.components.Range.props.members.style.description",
-              "name": "style",
-              "optional": true,
-              "required": false,
-              "type": "React.CSSProperties"
-            },
-            {
-              "defaultValue": "\"default\"",
-              "description": "Controls the semantic fill tone.",
-              "descriptionKey": "api.range.components.Range.props.members.tone.description",
-              "name": "tone",
-              "optional": true,
-              "required": false,
-              "type": "\"danger\" | \"default\" | \"info\" | \"secondary\" | \"success\" | \"warning\""
-            },
-            {
-              "description": "Controlled numeric value.",
-              "descriptionKey": "api.range.components.Range.props.members.value.description",
-              "name": "value",
-              "optional": true,
-              "required": false,
-              "type": "number"
-            }
-          ],
-          "type": "RangeProps"
-        }
-      }
-    ],
-    "description": "A native range input with a tactile sticker track and numeric change handler.",
-    "descriptionKey": "api.range.description",
-    "exports": [
-      { "kind": "component", "name": "Range" },
-      {
-        "description": "Props for the sticker range control.",
-        "descriptionKey": "api.range.exports.RangeProps.description",
-        "remarks": "Wraps the native `input[type=\"range\"]` and reports numeric values through `onChange(value, event)`.",
-        "remarksKey": "api.range.exports.RangeProps.remarks",
-        "kind": "interface",
-        "name": "RangeProps"
-      },
-      {
-        "description": "Builds the sticker range className from size and tone variants.",
-        "descriptionKey": "api.range.exports.rangeVariants.description",
-        "kind": "variant",
-        "name": "rangeVariants"
-      }
-    ],
-    "name": "range",
-    "sourcePath": "src/components/ui/range.tsx",
-    "title": "Sticker Range",
-    "types": [
-      {
-        "description": "Props for the sticker range control.",
-        "descriptionKey": "api.range.types.RangeProps.description",
-        "remarks": "Wraps the native `input[type=\"range\"]` and reports numeric values through `onChange(value, event)`.",
-        "remarksKey": "api.range.types.RangeProps.remarks",
-        "inherits": [
-          "Omit< React.InputHTMLAttributes<HTMLInputElement>, | \"children\" | \"className\" | \"defaultValue\" | \"max\" | \"min\" | \"onChange\" | \"size\" | \"step\" | \"style\" | \"type\" | \"value\" >",
-          "Omit<VariantProps<typeof rangeVariants>, \"disabled\" | \"size\" | \"tone\">"
-        ],
-        "kind": "interface",
-        "members": [
-          {
-            "description": "Custom className for the range wrapper.",
-            "descriptionKey": "api.range.types.RangeProps.members.className.description",
-            "name": "className",
-            "optional": true,
-            "required": false,
-            "type": "string"
-          },
-          {
-            "defaultValue": "0",
-            "description": "Initial uncontrolled numeric value.",
-            "descriptionKey": "api.range.types.RangeProps.members.defaultValue.description",
-            "name": "defaultValue",
-            "optional": true,
-            "required": false,
-            "type": "number"
-          },
-          {
-            "description": "Formats the optional visible value label.",
-            "descriptionKey": "api.range.types.RangeProps.members.formatValue.description",
-            "name": "formatValue",
-            "optional": true,
-            "required": false,
-            "type": "(value: number) => React.ReactNode"
-          },
-          {
-            "defaultValue": "100",
-            "description": "Maximum selectable value.",
-            "descriptionKey": "api.range.types.RangeProps.members.max.description",
-            "name": "max",
-            "optional": true,
-            "required": false,
-            "type": "number"
-          },
-          {
-            "defaultValue": "0",
-            "description": "Minimum selectable value.",
-            "descriptionKey": "api.range.types.RangeProps.members.min.description",
-            "name": "min",
-            "optional": true,
-            "required": false,
-            "type": "number"
-          },
-          {
-            "description": "Runs when the range value changes.",
-            "descriptionKey": "api.range.types.RangeProps.members.onChange.description",
-            "remarks": "Receives the next number first and the native change event second.",
-            "remarksKey": "api.range.types.RangeProps.members.onChange.remarks",
-            "name": "onChange",
-            "optional": true,
-            "required": false,
-            "type": "RangeChangeHandler"
-          },
-          {
-            "defaultValue": "false",
-            "description": "Shows the current value beside the track.",
-            "descriptionKey": "api.range.types.RangeProps.members.showValue.description",
-            "name": "showValue",
-            "optional": true,
-            "required": false,
-            "type": "boolean"
-          },
-          {
-            "defaultValue": "\"md\"",
-            "description": "Controls the range track and thumb size.",
-            "descriptionKey": "api.range.types.RangeProps.members.size.description",
-            "name": "size",
-            "optional": true,
-            "required": false,
-            "type": "\"lg\" | \"md\" | \"sm\""
-          },
-          {
-            "defaultValue": "1",
-            "description": "Step amount between values.",
-            "descriptionKey": "api.range.types.RangeProps.members.step.description",
-            "name": "step",
-            "optional": true,
-            "required": false,
-            "type": "number"
-          },
-          {
-            "description": "Custom style for the range wrapper.",
-            "descriptionKey": "api.range.types.RangeProps.members.style.description",
-            "name": "style",
-            "optional": true,
-            "required": false,
-            "type": "React.CSSProperties"
-          },
-          {
-            "defaultValue": "\"default\"",
-            "description": "Controls the semantic fill tone.",
-            "descriptionKey": "api.range.types.RangeProps.members.tone.description",
-            "name": "tone",
-            "optional": true,
-            "required": false,
-            "type": "\"danger\" | \"default\" | \"info\" | \"secondary\" | \"success\" | \"warning\""
-          },
-          {
-            "description": "Controlled numeric value.",
-            "descriptionKey": "api.range.types.RangeProps.members.value.description",
-            "name": "value",
-            "optional": true,
-            "required": false,
-            "type": "number"
-          }
-        ],
-        "name": "RangeProps"
-      }
-    ],
-    "variants": [
-      {
-        "description": "Builds the sticker range className from size and tone variants.",
-        "descriptionKey": "api.range.variants.rangeVariants.description",
-        "groups": [
-          { "defaultValue": "false", "name": "disabled", "values": ["false", "true"] },
-          { "defaultValue": "md", "name": "size", "values": ["lg", "md", "sm"] },
-          {
-            "defaultValue": "default",
-            "name": "tone",
-            "values": ["danger", "default", "info", "secondary", "success", "warning"]
-          }
-        ],
-        "name": "rangeVariants"
       }
     ]
   },

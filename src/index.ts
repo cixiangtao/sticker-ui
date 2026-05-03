@@ -221,8 +221,6 @@ export type {
 } from "./components/ui/radio"
 export { Progress, progressVariants } from "./components/ui/progress"
 export type { ProgressProps } from "./components/ui/progress"
-export { Range, rangeVariants } from "./components/ui/range"
-export type { RangeProps } from "./components/ui/range"
 export { Resizable } from "./components/ui/resizable"
 export type { ResizableHandleProps } from "./components/ui/resizable"
 export { ScrollArea, scrollAreaVariants } from "./components/ui/scroll-area"
@@ -233,7 +231,12 @@ export type {
   SheetOverlayProps,
 } from "./components/ui/sheet"
 export { Slider, sliderVariants } from "./components/ui/slider"
-export type { SliderProps } from "./components/ui/slider"
+export type {
+  SliderChangeHandler,
+  SliderProps,
+  SliderValue,
+  SliderValueChangeHandler,
+} from "./components/ui/slider"
 export { Skeleton, skeletonVariants } from "./components/ui/skeleton"
 export type { SkeletonProps } from "./components/ui/skeleton"
 export {

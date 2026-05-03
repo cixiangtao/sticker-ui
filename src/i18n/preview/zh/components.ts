@@ -431,9 +431,6 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   "preview.components.nativeColorInputsWithTactileStickerSwatches": {
     zh: "带有触感贴纸色块的原生颜色输入控件。",
   },
-  "preview.components.nativeRangeControlsWithChunkyStickerTracks": {
-    zh: "带有粗线贴纸轨道的原生范围输入控件。",
-  },
   "preview.components.passwordFieldsWithShowHideStickerToggles": {
     zh: "带显示隐藏贴纸切换按钮的密码字段。",
   },
@@ -689,13 +686,6 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   "preview.components.radixSwitchControlsWithTactileStickerTracks": {
     zh: "带触感贴纸轨道的 Radix 开关控件。",
   },
-  "preview.components.rangeKeepsDisabledInvalidAndFormControlledValuesNumeric":
-    {
-      zh: "Range 在禁用、无效和 Form 受控场景里都保持数字值契约。",
-    },
-  "preview.components.rangeReportsNumericValuesForControlledStickerSettings": {
-    zh: "Range 通过 onChange 返回数字值，方便受控贴纸设置直接使用。",
-  },
   "preview.components.readableStickerNotesForFeedbackAndStatusMessages": {
     zh: "用于反馈和状态消息的易读贴纸提示。",
   },
@@ -710,10 +700,6 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   "preview.components.sizesAlignSwitchesWithCompactToolbarsStandardSettingsAndRoomyPreferencePanelsWhileToneKeepsStateContextVisible":
     {
       zh: "尺寸让开关适配紧凑工具栏、标准设置和宽松偏好面板，同时 tone 保持状态上下文可见。",
-    },
-  "preview.components.sizesTuneRangeTracksForDenseRowsAndRoomyPanelsWhileToneKeepsMeaningVisible":
-    {
-      zh: "尺寸让 Range 轨道适配紧凑行和宽松面板，语义色保持含义可见。",
     },
   "preview.components.switchKeepsRadixPressedStateBehaviorWhileAddingATactileStickerTrackAndPaperThumb":
     {
@@ -1429,10 +1415,6 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   "preview.components.propMatrix": {
     zh: "Prop 矩阵",
   },
-  "preview.components.rangeStyleClassnameAndFormattedValuesCanCustomizeTrackTokensWithoutReplacingNativeInputBehavior":
-    {
-      zh: "Range 的 style、className 和格式化值可自定义轨道令牌，同时保留原生 input 行为。",
-    },
   "preview.components.scopedDefaults": {
     zh: "作用域默认值",
   },
@@ -1857,6 +1839,9 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
     {
       zh: "Slider 支持单值和范围值，并保留 Radix 键盘控制。",
     },
+  "preview.components.singleValue": {
+    zh: "单值",
+  },
   "preview.components.stableMediaFramesForThumbnailsEmbedsAndResponsivePreviews":
     {
       zh: "用于缩略图、嵌入内容和响应式预览的稳定媒体框架。",
@@ -2046,6 +2031,9 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
     {
       zh: "Slider 的尺寸和色调适配紧凑筛选器与更醒目的状态控件。",
     },
+  "preview.components.sliderReportsNumericValuesForSingleThumbSettings": {
+    zh: "Slider 通过 onChange 返回单 thumb 数字值，方便受控贴纸设置直接使用。",
+  },
   "preview.components.sliderSupportsRangeThumbsAndVerticalOrientationFromRadix":
     {
       zh: "Slider 支持 Radix 提供的范围滑块和纵向方向。",

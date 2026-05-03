@@ -76,7 +76,6 @@ const PaginationPage = createRegistryComponentPage("pagination")
 const PopoverPage = createRegistryComponentPage("popover")
 const ProgressPage = createRegistryComponentPage("progress")
 const RadioPage = createRegistryComponentPage("radio")
-const RangePage = createRegistryComponentPage("range")
 const ResizablePage = createRegistryComponentPage("resizable")
 const ScrollAreaPage = createRegistryComponentPage("scroll-area")
 const SelectPage = createRegistryComponentPage("select")
@@ -140,7 +139,6 @@ export {
   PopoverPage,
   ProgressPage,
   RadioPage,
-  RangePage,
   ResizablePage,
   ScrollAreaPage,
   SelectPage,

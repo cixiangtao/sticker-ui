@@ -7,7 +7,7 @@ const meta = defineMeta({
   className: "bg-su-fill-warning",
   descriptionKey:
     "preview.components.sliderSupportsSingleAndRangeValuesWithRadixKeyboardControl",
-  order: 10,
+  order: 20,
   titleKey: "preview.components.planningRange",
 })
 

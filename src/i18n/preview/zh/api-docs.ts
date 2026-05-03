@@ -4125,110 +4125,116 @@ const ZH_PREVIEW_API_DOC_MESSAGES = defineMessages({
   "api.sidebar.variants.sidebarMenuButtonVariants.description": {
     zh: "生成贴纸侧栏菜单按钮 className。",
   },
-  "api.range.description": {
-    zh: "带触感贴纸轨道和数字变化回调的原生范围输入。",
+  "api.slider.description": {
+    zh: "用于单值、范围和键盘控制的 Radix Slider。",
   },
-  "api.range.components.Range.props.description": {
-    zh: "贴纸 Range 控件的 props。",
+  "api.slider.components.Slider.description": {
+    zh: "用于单值、范围和键盘控制的 Radix 贴纸 Slider。",
   },
-  "api.range.components.Range.props.members.className.description": {
-    zh: "Range 外层包装的自定义 className。",
+  "api.slider.components.Slider.props.description": {
+    zh: "贴纸 Slider 的 props。",
   },
-  "api.range.components.Range.props.members.defaultValue.description": {
-    zh: "非受控模式的初始数字值。",
+  "api.slider.components.Slider.props.members.defaultValue.description": {
+    zh: "非受控模式的初始值。",
   },
-  "api.range.components.Range.props.members.formatValue.description": {
-    zh: "格式化可选的可见数值标签。",
+  "api.slider.components.Slider.props.members.defaultValue.remarks": {
+    zh: "传入 number 表示单 thumb Slider，传入数组表示范围 thumb。",
   },
-  "api.range.components.Range.props.members.max.description": {
-    zh: "可选择的最大值。",
+  "api.slider.components.Slider.props.members.onChange.description": {
+    zh: "Slider 值变化时触发。",
   },
-  "api.range.components.Range.props.members.min.description": {
-    zh: "可选择的最小值。",
+  "api.slider.components.Slider.props.members.onChange.remarks": {
+    zh: "接收第一个 thumb 的数字值，方便配合 Form.Item 单值触发约定。",
   },
-  "api.range.components.Range.props.members.onChange.description": {
-    zh: "范围值变化时触发。",
+  "api.slider.components.Slider.props.members.onValueChange.description": {
+    zh: "Radix Slider 值变化时触发。",
   },
-  "api.range.components.Range.props.members.onChange.remarks": {
-    zh: "第一个参数是下一个数字值，第二个参数是原生 change 事件。",
+  "api.slider.components.Slider.props.members.onValueChange.remarks": {
+    zh: "接收 Radix 归一化后的数字数组。",
   },
-  "api.range.components.Range.props.members.showValue.description": {
-    zh: "在轨道旁显示当前值。",
+  "api.slider.components.Slider.props.members.size.description": {
+    zh: "控制轨道和 thumb 尺寸。",
   },
-  "api.range.components.Range.props.members.size.description": {
-    zh: "控制 Range 轨道和滑块尺寸。",
-  },
-  "api.range.components.Range.props.members.step.description": {
-    zh: "值之间的步进间隔。",
-  },
-  "api.range.components.Range.props.members.style.description": {
-    zh: "Range 外层包装的自定义 style。",
-  },
-  "api.range.components.Range.props.members.tone.description": {
+  "api.slider.components.Slider.props.members.tone.description": {
     zh: "控制语义填充色调。",
   },
-  "api.range.components.Range.props.members.value.description": {
-    zh: "受控数字值。",
+  "api.slider.components.Slider.props.members.value.description": {
+    zh: "受控值。",
   },
-  "api.range.components.Range.props.remarks": {
-    zh: '包装原生 `input[type="range"]`，并通过 `onChange(value, event)` 返回数字值。',
+  "api.slider.components.Slider.props.members.value.remarks": {
+    zh: "传入 number 表示单 thumb Slider，传入数组表示范围 thumb。",
   },
-  "api.range.exports.RangeProps.description": {
-    zh: "贴纸 Range 控件的 props。",
+  "api.slider.components.Slider.props.remarks": {
+    zh: "包装 Radix Slider.Root，接受 number 或 number 数组值，并支持单个或多个 thumb。",
   },
-  "api.range.exports.RangeProps.remarks": {
-    zh: '包装原生 `input[type="range"]`，并通过 `onChange(value, event)` 返回数字值。',
+  "api.slider.exports.Slider.description": {
+    zh: "用于单值、范围和键盘控制的 Radix 贴纸 Slider。",
   },
-  "api.range.exports.rangeVariants.description": {
-    zh: "根据尺寸和语义色生成贴纸 Range className。",
+  "api.slider.exports.SliderChangeHandler.description": {
+    zh: "适合表单的单 thumb Slider 变化处理函数。",
   },
-  "api.range.types.RangeProps.description": {
-    zh: "贴纸 Range 控件的 props。",
+  "api.slider.exports.SliderProps.description": {
+    zh: "贴纸 Slider 的 props。",
   },
-  "api.range.types.RangeProps.members.className.description": {
-    zh: "Range 外层包装的自定义 className。",
+  "api.slider.exports.SliderProps.remarks": {
+    zh: "包装 Radix Slider.Root，接受 number 或 number 数组值，并支持单个或多个 thumb。",
   },
-  "api.range.types.RangeProps.members.defaultValue.description": {
-    zh: "非受控模式的初始数字值。",
+  "api.slider.exports.SliderValue.description": {
+    zh: "贴纸 Slider 接受的值类型。",
   },
-  "api.range.types.RangeProps.members.formatValue.description": {
-    zh: "格式化可选的可见数值标签。",
+  "api.slider.exports.SliderValueChangeHandler.description": {
+    zh: "兼容 Radix 数组值的 Slider 变化处理函数。",
   },
-  "api.range.types.RangeProps.members.max.description": {
-    zh: "可选择的最大值。",
+  "api.slider.exports.sliderVariants.description": {
+    zh: "根据尺寸和语义色生成贴纸 Slider 根元素 className。",
   },
-  "api.range.types.RangeProps.members.min.description": {
-    zh: "可选择的最小值。",
+  "api.slider.types.SliderChangeHandler.description": {
+    zh: "适合表单的单 thumb Slider 变化处理函数。",
   },
-  "api.range.types.RangeProps.members.onChange.description": {
-    zh: "范围值变化时触发。",
+  "api.slider.types.SliderProps.description": {
+    zh: "贴纸 Slider 的 props。",
   },
-  "api.range.types.RangeProps.members.onChange.remarks": {
-    zh: "第一个参数是下一个数字值，第二个参数是原生 change 事件。",
+  "api.slider.types.SliderProps.members.defaultValue.description": {
+    zh: "非受控模式的初始值。",
   },
-  "api.range.types.RangeProps.members.showValue.description": {
-    zh: "在轨道旁显示当前值。",
+  "api.slider.types.SliderProps.members.defaultValue.remarks": {
+    zh: "传入 number 表示单 thumb Slider，传入数组表示范围 thumb。",
   },
-  "api.range.types.RangeProps.members.size.description": {
-    zh: "控制 Range 轨道和滑块尺寸。",
+  "api.slider.types.SliderProps.members.onChange.description": {
+    zh: "Slider 值变化时触发。",
   },
-  "api.range.types.RangeProps.members.step.description": {
-    zh: "值之间的步进间隔。",
+  "api.slider.types.SliderProps.members.onChange.remarks": {
+    zh: "接收第一个 thumb 的数字值，方便配合 Form.Item 单值触发约定。",
   },
-  "api.range.types.RangeProps.members.style.description": {
-    zh: "Range 外层包装的自定义 style。",
+  "api.slider.types.SliderProps.members.onValueChange.description": {
+    zh: "Radix Slider 值变化时触发。",
   },
-  "api.range.types.RangeProps.members.tone.description": {
+  "api.slider.types.SliderProps.members.onValueChange.remarks": {
+    zh: "接收 Radix 归一化后的数字数组。",
+  },
+  "api.slider.types.SliderProps.members.size.description": {
+    zh: "控制轨道和 thumb 尺寸。",
+  },
+  "api.slider.types.SliderProps.members.tone.description": {
     zh: "控制语义填充色调。",
   },
-  "api.range.types.RangeProps.members.value.description": {
-    zh: "受控数字值。",
+  "api.slider.types.SliderProps.members.value.description": {
+    zh: "受控值。",
   },
-  "api.range.types.RangeProps.remarks": {
-    zh: '包装原生 `input[type="range"]`，并通过 `onChange(value, event)` 返回数字值。',
+  "api.slider.types.SliderProps.members.value.remarks": {
+    zh: "传入 number 表示单 thumb Slider，传入数组表示范围 thumb。",
   },
-  "api.range.variants.rangeVariants.description": {
-    zh: "根据尺寸和语义色生成贴纸 Range className。",
+  "api.slider.types.SliderProps.remarks": {
+    zh: "包装 Radix Slider.Root，接受 number 或 number 数组值，并支持单个或多个 thumb。",
+  },
+  "api.slider.types.SliderValue.description": {
+    zh: "贴纸 Slider 接受的值类型。",
+  },
+  "api.slider.types.SliderValueChangeHandler.description": {
+    zh: "兼容 Radix 数组值的 Slider 变化处理函数。",
+  },
+  "api.slider.variants.sliderVariants.description": {
+    zh: "根据尺寸和语义色生成贴纸 Slider 根元素 className。",
   },
 })
 

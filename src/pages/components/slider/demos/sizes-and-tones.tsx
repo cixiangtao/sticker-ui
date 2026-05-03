@@ -6,7 +6,7 @@ const meta = defineMeta({
   className: "bg-su-fill-info",
   descriptionKey:
     "preview.components.sliderSizesAndTonesMatchCompactFiltersAndLouderStatusControls",
-  order: 20,
+  order: 30,
   titleKey: "preview.components.sizesAndTones",
 })
 
@@ -14,11 +14,11 @@ const sliders: Array<{
   label: string
   size: "lg" | "md" | "sm"
   tone: "info" | "secondary" | "warning"
-  value: number[]
+  value: number
 }> = [
-  { label: "Small", size: "sm", tone: "secondary", value: [20] },
-  { label: "Medium", size: "md", tone: "info", value: [55] },
-  { label: "Large", size: "lg", tone: "warning", value: [80] },
+  { label: "Small", size: "sm", tone: "secondary", value: 20 },
+  { label: "Medium", size: "md", tone: "info", value: 55 },
+  { label: "Large", size: "lg", tone: "warning", value: 80 },
 ]
 
 function Demo() {

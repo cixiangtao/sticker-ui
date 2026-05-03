@@ -6,7 +6,7 @@ const meta = defineMeta({
   className: "bg-su-paper",
   descriptionKey:
     "preview.components.sliderSupportsRangeThumbsAndVerticalOrientationFromRadix",
-  order: 30,
+  order: 40,
   titleKey: "preview.components.rangeAndVertical",
 })
 
@@ -30,7 +30,7 @@ function Demo() {
           Vertical
         </Tag>
         <Slider
-          defaultValue={[60]}
+          defaultValue={60}
           max={100}
           orientation="vertical"
           tone="warning"

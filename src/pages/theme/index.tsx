@@ -11,8 +11,8 @@ import {
   Empty,
   Input,
   Progress,
-  Range,
   Skeleton,
+  Slider,
   Spinner,
   Switch,
   Table,
@@ -422,7 +422,7 @@ function ScaleTokenField({
         <span className="shrink-0 text-xs font-black text-su-ink">{value}</span>
       </span>
       <span className="grid min-w-0 grid-cols-[minmax(0,1fr)_44px] items-center gap-3">
-        <Range
+        <Slider
           className="min-w-0"
           id={inputId}
           max={max}

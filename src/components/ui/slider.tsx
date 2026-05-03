@@ -5,10 +5,25 @@ import * as React from "react"
 import { cn } from "@/lib/utils"
 
 /**
+ * Value accepted by the sticker slider.
+ */
+type SliderValue = number | number[]
+
+/**
+ * Form-friendly single-thumb slider change handler.
+ */
+type SliderChangeHandler = (value: number) => void
+
+/**
+ * Radix-compatible slider change handler.
+ */
+type SliderValueChangeHandler = (value: number[]) => void
+
+/**
  * Builds the sticker slider root className from size and tone options.
  */
 const sliderVariants = cva(
-  "relative flex w-full touch-none items-center select-none data-[orientation=vertical]:h-48 data-[orientation=vertical]:w-auto data-[orientation=vertical]:flex-col",
+  "relative flex w-full touch-none items-center select-none aria-invalid:[--slider-fill:var(--color-su-fill-danger-strong)] data-[disabled]:opacity-55 data-[orientation=vertical]:h-48 data-[orientation=vertical]:w-auto data-[orientation=vertical]:flex-col",
   {
     defaultVariants: {
       size: "md",
@@ -34,12 +49,31 @@ const sliderVariants = cva(
 
 /**
  * Props for the sticker slider.
- * @remarks Wraps Radix Slider.Root and supports single or multiple thumbs.
+ * @remarks Wraps Radix Slider.Root, accepts number or number array values, and supports single or multiple thumbs.
  */
 interface SliderProps
   extends
-    React.ComponentPropsWithoutRef<typeof SliderPrimitive.Root>,
+    Omit<
+      React.ComponentPropsWithoutRef<typeof SliderPrimitive.Root>,
+      "defaultValue" | "onChange" | "onValueChange" | "value"
+    >,
     VariantProps<typeof sliderVariants> {
+  /**
+   * Initial uncontrolled value.
+   * @remarks Pass a number for a single-thumb slider or an array for range thumbs.
+   * @default 0
+   */
+  defaultValue?: SliderValue
+  /**
+   * Runs when the slider value changes.
+   * @remarks Receives the first thumb value as a Form.Item-friendly single number.
+   */
+  onChange?: SliderChangeHandler
+  /**
+   * Runs when the Radix slider value changes.
+   * @remarks Receives the normalized number array from Radix.
+   */
+  onValueChange?: SliderValueChangeHandler
   /**
    * Controls track and thumb size.
    * @default "md"
@@ -50,6 +84,11 @@ interface SliderProps
    * @default "default"
    */
   tone?: "danger" | "default" | "info" | "secondary" | "success" | "warning"
+  /**
+   * Controlled value.
+   * @remarks Pass a number for a single-thumb slider or an array for range thumbs.
+   */
+  value?: SliderValue
 }
 
 /**
@@ -62,7 +101,9 @@ const Slider = React.forwardRef<
   (
     {
       className,
-      defaultValue = [0],
+      defaultValue = 0,
+      onChange,
+      onValueChange,
       size = "md",
       tone = "default",
       value,
@@ -70,15 +111,22 @@ const Slider = React.forwardRef<
     },
     ref,
   ) => {
-    const thumbValues = value ?? defaultValue ?? [0]
+    const normalizedDefaultValue = toSliderValueArray(defaultValue)
+    const normalizedValue =
+      value === undefined ? undefined : toSliderValueArray(value)
+    const thumbValues = normalizedValue ?? normalizedDefaultValue
 
     return (
       <SliderPrimitive.Root
         className={cn(sliderVariants({ size, tone }), className)}
         data-slot="slider"
-        defaultValue={defaultValue}
+        defaultValue={normalizedDefaultValue}
+        onValueChange={(nextValue) => {
+          onValueChange?.(nextValue)
+          onChange?.(nextValue[0] ?? 0)
+        }}
         ref={ref}
-        value={value}
+        value={normalizedValue}
         {...props}
       >
         <SliderPrimitive.Track
@@ -103,4 +151,15 @@ const Slider = React.forwardRef<
 )
 Slider.displayName = SliderPrimitive.Root.displayName
 
-export { Slider, sliderVariants, type SliderProps }
+function toSliderValueArray(value: SliderValue) {
+  return Array.isArray(value) ? value : [value]
+}
+
+export {
+  Slider,
+  sliderVariants,
+  type SliderChangeHandler,
+  type SliderProps,
+  type SliderValue,
+  type SliderValueChangeHandler,
+}

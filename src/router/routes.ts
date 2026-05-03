@@ -571,24 +571,11 @@ const { routes, useCurrentRoute, useMatchedRoutes, useRouteParams } =
     },
     {
       component: () =>
-        import("@/pages/components").then((module) => module.RangePage),
-      meta: {
-        emoji: "R",
-        navSection: "form-controls",
-        order: 73,
-        title: "Range",
-        descriptionKey:
-          "preview.components.nativeRangeControlsWithChunkyStickerTracks",
-      },
-      path: "/components/range",
-    },
-    {
-      component: () =>
         import("@/pages/components").then((module) => module.SliderPage),
       meta: {
         emoji: "S",
         navSection: "form-controls",
-        order: 73.25,
+        order: 73,
         title: "Slider",
         descriptionKey:
           "preview.components.radixSliderForSingleValuesRangesAndKeyboardControl",

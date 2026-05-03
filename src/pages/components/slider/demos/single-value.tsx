@@ -1,14 +1,14 @@
 import * as React from "react"
-import { Field, Progress, Range, Tag } from "sticker-ui"
+import { Field, Progress, Slider, Tag } from "sticker-ui"
 
 import { defineMeta } from "@/layouts/preview"
 
 const meta = defineMeta({
   className: "bg-su-fill-info",
-  order: 10,
-  titleKey: "preview.components.basicField",
   descriptionKey:
-    "preview.components.rangeReportsNumericValuesForControlledStickerSettings",
+    "preview.components.sliderReportsNumericValuesForSingleThumbSettings",
+  order: 10,
+  titleKey: "preview.components.singleValue",
 })
 
 function Demo() {
@@ -17,12 +17,7 @@ function Demo() {
   return (
     <div className="grid max-w-xl gap-4">
       <Field description={`Current volume: ${volume}%`} label="Desk Speaker">
-        <Range
-          formatValue={(value) => `${value}%`}
-          onChange={setVolume}
-          showValue
-          value={volume}
-        />
+        <Slider max={100} min={0} onChange={setVolume} value={volume} />
       </Field>
       <div className="grid gap-3 rounded-su-xl border-2 border-su-ink bg-su-paper p-4 shadow-su-md">
         <div className="flex flex-wrap items-center justify-between gap-3">
