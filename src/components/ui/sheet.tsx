@@ -75,7 +75,10 @@ const sheetContentVariants = cva(
   },
 )
 
-const SheetRoot = DialogPrimitive.Root
+function SheetRoot(props: React.ComponentProps<typeof DialogPrimitive.Root>) {
+  return <DialogPrimitive.Root {...props} />
+}
+SheetRoot.displayName = DialogPrimitive.Root.displayName
 const SheetTrigger = DialogPrimitive.Trigger
 const SheetClose = DialogPrimitive.Close
 const SheetPortal = DialogPrimitive.Portal

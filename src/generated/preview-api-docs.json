@@ -31875,7 +31875,7 @@
         "props": {
           "inherits": [],
           "members": [],
-          "type": "React.ComponentPropsWithoutRef<typeof DialogPrimitive.Root>"
+          "type": "React.ComponentProps<typeof DialogPrimitive.Root>"
         }
       },
       {
@@ -32478,7 +32478,7 @@
         "props": {
           "inherits": [],
           "members": [],
-          "type": "React.ComponentPropsWithoutRef<typeof DialogPrimitive.Root>"
+          "type": "React.ComponentProps<typeof DialogPrimitive.Root>"
         }
       },
       {

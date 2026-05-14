@@ -35,7 +35,10 @@ function getDialogActionClassName(disabled?: boolean) {
   return cn("cursor-pointer", disabled && "cursor-not-allowed opacity-55")
 }
 
-const DialogRoot = DialogPrimitive.Root
+function DialogRoot(props: React.ComponentProps<typeof DialogPrimitive.Root>) {
+  return <DialogPrimitive.Root {...props} />
+}
+DialogRoot.displayName = DialogPrimitive.Root.displayName
 
 /**
  * Opens the dialog.
