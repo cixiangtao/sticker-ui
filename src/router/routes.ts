@@ -141,45 +141,6 @@ const { routes, useCurrentRoute, useMatchedRoutes, useRouteParams } =
     },
     {
       component: () =>
-        import("@/pages/components").then((module) => module.StatCardPage),
-      meta: {
-        emoji: "S",
-        navSection: "surfaces-data",
-        order: 42,
-        title: "StatCard",
-        descriptionKey:
-          "preview.components.compactMetricSurfaceForDashboardsSummariesAndKpiRows",
-      },
-      path: "/components/stat-card",
-    },
-    {
-      component: () =>
-        import("@/pages/components").then((module) => module.CarouselPage),
-      meta: {
-        emoji: "C",
-        navSection: "surfaces-data",
-        order: 42.5,
-        title: "Carousel",
-        descriptionKey:
-          "preview.components.emblaCarouselForFeatureCardsGalleriesAndSteppedStories",
-      },
-      path: "/components/carousel",
-    },
-    {
-      component: () =>
-        import("@/pages/components").then((module) => module.CodeBlockPage),
-      meta: {
-        emoji: "C",
-        navSection: "surfaces-data",
-        order: 43,
-        title: "CodeBlock",
-        descriptionKey:
-          "preview.components.tactilePreCodeSurfaceForInstallSnippetsTokensAndExamples",
-      },
-      path: "/components/code-block",
-    },
-    {
-      component: () =>
         import("@/pages/components").then((module) => module.ResizablePage),
       meta: {
         emoji: "R",

@@ -81,21 +81,6 @@
       ]
     },
     {
-      "name": "carousel",
-      "type": "registry:ui",
-      "title": "Sticker Carousel",
-      "description": "An Embla-powered carousel with sticker slides and accessible controls.",
-      "dependencies": ["embla-carousel-react", "lucide-react"],
-      "registryDependencies": ["button", "utils"],
-      "files": [
-        {
-          "path": "src/components/ui/carousel.tsx",
-          "target": "@ui/carousel.tsx",
-          "type": "registry:ui"
-        }
-      ]
-    },
-    {
       "name": "resizable",
       "type": "registry:ui",
       "title": "Sticker Resizable",
@@ -129,21 +114,6 @@
       ]
     },
     {
-      "name": "stat-card",
-      "type": "registry:ui",
-      "title": "Sticker StatCard",
-      "description": "A compact metric surface for dashboards, summaries, and KPI rows.",
-      "dependencies": ["class-variance-authority"],
-      "registryDependencies": ["utils"],
-      "files": [
-        {
-          "path": "src/components/ui/stat-card.tsx",
-          "target": "@ui/stat-card.tsx",
-          "type": "registry:ui"
-        }
-      ]
-    },
-    {
       "name": "calendar",
       "type": "registry:ui",
       "title": "Sticker Calendar",
@@ -169,21 +139,6 @@
         {
           "path": "src/components/ui/date-picker.tsx",
           "target": "@ui/date-picker.tsx",
-          "type": "registry:ui"
-        }
-      ]
-    },
-    {
-      "name": "code-block",
-      "type": "registry:ui",
-      "title": "Sticker CodeBlock",
-      "description": "A tactile pre/code surface for install snippets, tokens, and examples.",
-      "dependencies": ["class-variance-authority"],
-      "registryDependencies": ["copy-button", "utils"],
-      "files": [
-        {
-          "path": "src/components/ui/code-block.tsx",
-          "target": "@ui/code-block.tsx",
           "type": "registry:ui"
         }
       ]

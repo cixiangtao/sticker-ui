@@ -46,10 +46,8 @@ const BreadcrumbPage = createRegistryComponentPage("breadcrumb")
 const ButtonPage = createRegistryComponentPage("button")
 const CalloutPage = createRegistryComponentPage("callout")
 const CalendarPage = createRegistryComponentPage("calendar")
-const CarouselPage = createRegistryComponentPage("carousel")
 const CardPage = createRegistryComponentPage("card")
 const CheckboxPage = createRegistryComponentPage("checkbox")
-const CodeBlockPage = createRegistryComponentPage("code-block")
 const CollapsiblePage = createRegistryComponentPage("collapsible")
 const ColorPickerPage = createRegistryComponentPage("color-picker")
 const CommandPage = createRegistryComponentPage("command")
@@ -84,7 +82,6 @@ const SidebarPage = createRegistryComponentPage("sidebar")
 const SliderPage = createRegistryComponentPage("slider")
 const SkeletonPage = createRegistryComponentPage("skeleton")
 const SpinnerPage = createRegistryComponentPage("spinner")
-const StatCardPage = createRegistryComponentPage("stat-card")
 const StepsPage = createRegistryComponentPage("steps")
 const SwitchPage = createRegistryComponentPage("switch")
 const TabsPage = createRegistryComponentPage("tabs")
@@ -109,10 +106,8 @@ export {
   ButtonPage,
   CalloutPage,
   CalendarPage,
-  CarouselPage,
   CardPage,
   CheckboxPage,
-  CodeBlockPage,
   CollapsiblePage,
   ColorPickerPage,
   CommandPage,
@@ -147,7 +142,6 @@ export {
   SliderPage,
   SkeletonPage,
   SpinnerPage,
-  StatCardPage,
   StepsPage,
   SwitchPage,
   TabsPage,

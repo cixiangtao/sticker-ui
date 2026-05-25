@@ -57,20 +57,11 @@ export type {
 export { Calendar, calendarVariants } from "./components/ui/calendar"
 export type { CalendarProps } from "./components/ui/calendar"
 export { Card, cardVariants } from "./components/ui/card"
-export { Carousel } from "./components/ui/carousel"
-export type {
-  CarouselApi,
-  CarouselOptions,
-  CarouselPlugin,
-  CarouselProps,
-} from "./components/ui/carousel"
 export { Checkbox, checkboxVariants } from "./components/ui/checkbox"
 export type {
   CheckboxGroupProps,
   CheckboxProps,
 } from "./components/ui/checkbox"
-export { CodeBlock, codeBlockVariants } from "./components/ui/code-block"
-export type { CodeBlockProps } from "./components/ui/code-block"
 export {
   Collapsible,
   collapsibleContentVariants,
@@ -250,15 +241,6 @@ export type {
 } from "./components/ui/sidebar"
 export { Spinner, spinnerVariants } from "./components/ui/spinner"
 export type { SpinnerProps } from "./components/ui/spinner"
-export { StatCard, statCardVariants } from "./components/ui/stat-card"
-export type {
-  StatCardDescriptionProps,
-  StatCardIconProps,
-  StatCardLabelProps,
-  StatCardProps,
-  StatCardTrendProps,
-  StatCardValueProps,
-} from "./components/ui/stat-card"
 export { Steps, stepsVariants } from "./components/ui/steps"
 export type {
   StepItemProps,

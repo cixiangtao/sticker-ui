@@ -1563,13 +1563,6 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
     {
       zh: "Calendar 支持禁用日期规则和周一开始的周布局。",
     },
-  "preview.components.codeBlockCanWrapLongConfigurationLinesInsideNarrowPanels":
-    {
-      zh: "CodeBlock 可以在窄面板内换行显示较长配置。",
-    },
-  "preview.components.codeBlockPairsReadablePreformattedTextWithACopyAction": {
-    zh: "CodeBlock 将易读的预格式文本和复制操作组合在一起。",
-  },
   "preview.components.commandFiltersItemDataAndCallsOnSelectForEnabledRows": {
     zh: "Command 可筛选 item 数据，并在启用行被选择时调用 onSelect。",
   },
@@ -1578,9 +1571,6 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   },
   "preview.components.compactEvents": {
     zh: "紧凑事件",
-  },
-  "preview.components.compactMetricSurfaceForDashboardsSummariesAndKpiRows": {
-    zh: "用于仪表盘、摘要和 KPI 行的紧凑指标表面。",
   },
   "preview.components.compactStickerDatePickerForFormsFiltersAndSchedulingPanels":
     {
@@ -1628,23 +1618,14 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
     {
       zh: "用于复制代码、token、命令和安装片段的图标按钮。",
     },
-  "preview.components.iconsAndTones": {
-    zh: "图标与色调",
-  },
   "preview.components.initialsStack": {
     zh: "首字母堆叠",
-  },
-  "preview.components.installCommand": {
-    zh: "安装命令",
   },
   "preview.components.labeledCopy": {
     zh: "带文字复制",
   },
   "preview.components.manualComposition": {
     zh: "手动组合",
-  },
-  "preview.components.metricGrid": {
-    zh: "指标网格",
   },
   "preview.components.orderedProgressIndicatorForOnboardingCheckoutAndSetupFlows":
     {
@@ -1691,13 +1672,6 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
     {
       zh: "用于日期选择和紧凑日程安排的单月贴纸日历。",
     },
-  "preview.components.statCardIconsAndTonesKeepDenseSummaryRowsScannable": {
-    zh: "StatCard 的图标和色调能让密集摘要行更易扫读。",
-  },
-  "preview.components.statCardsShowKpisWithEnoughStructureForDashboardsAndReports":
-    {
-      zh: "StatCard 用足够清晰的结构展示仪表盘和报告中的 KPI。",
-    },
   "preview.components.stepsCanRenderFromItemDataForSimpleOnboardingAndCheckoutFlows":
     {
       zh: "Steps 可以通过 item 数据渲染简单引导和结账流程。",
@@ -1713,10 +1687,6 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   "preview.components.stickerCalloutSurfaceForDocsNotesWarningsTipsAndInlineStatus":
     {
       zh: "用于文档说明、警告、提示和行内状态的贴纸 Callout 表面。",
-    },
-  "preview.components.tactilePreCodeSurfaceForInstallSnippetsTokensAndExamples":
-    {
-      zh: "用于安装片段、token 和示例的触感 pre/code 表面。",
     },
   "preview.components.timelineCombinesStatusMarkersTimestampsAndPaperEventCards":
     {
@@ -1747,9 +1717,6 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   "preview.components.verticalStatus": {
     zh: "纵向状态",
   },
-  "preview.components.wrappedConfig": {
-    zh: "换行配置",
-  },
   "preview.components.accessibleRadixLabelsWithStickerTypography": {
     zh: "带贴纸字体风格的可访问 Radix Label。",
   },
@@ -1763,10 +1730,6 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
     {
       zh: "AspectRatio 会在图片或嵌入内容加载时保持媒体卡片尺寸稳定。",
     },
-  "preview.components.carouselCombinesEmblaMotionWithStickerSlidesAndControls":
-    {
-      zh: "Carousel 将 Embla 动效与贴纸幻灯片和控制按钮组合起来。",
-    },
   "preview.components.collapsiblePairsARadixDisclosureTriggerWithAStickerContentPanel":
     {
       zh: "Collapsible 将 Radix disclosure 触发器与贴纸内容面板配对。",
@@ -1776,12 +1739,6 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
   },
   "preview.components.editorMenu": {
     zh: "编辑器菜单",
-  },
-  "preview.components.emblaCarouselForFeatureCardsGalleriesAndSteppedStories": {
-    zh: "用于功能卡片、图库和分步叙事的 Embla 轮播。",
-  },
-  "preview.components.featureCards": {
-    zh: "功能卡片",
   },
   "preview.components.fieldLabels": {
     zh: "字段标签",
@@ -1879,20 +1836,9 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
     {
       zh: "Callout 的尺寸和语义根元素可适配备注、警告和行内 aside 内容。",
     },
-  "preview.components.carouselOptionsCanShowPeekingSlidesForCardBrowsers": {
-    zh: "Carousel 选项可以露出相邻幻灯片，适合卡片浏览场景。",
-  },
-  "preview.components.carouselOrientationSwitchesTheEmblaAxisAndControlPlacement":
-    {
-      zh: "Carousel orientation 会切换 Embla 轴向和控制按钮位置。",
-    },
   "preview.components.checkboxRadio": {
     zh: "复选与单选",
   },
-  "preview.components.codeBlockSizeToneCopyAndWrapOptionsCoverCommandsAndConfigSnippets":
-    {
-      zh: "CodeBlock 的尺寸、色调、复制和换行选项覆盖命令与配置片段。",
-    },
   "preview.components.collapsibleCanBeControlledWhenTheDisclosureStateBelongsToAParentToolbar":
     {
       zh: "当展开状态属于父级工具栏时，Collapsible 可以保持受控。",
@@ -2038,10 +1984,6 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
     {
       zh: "Slider 支持 Radix 提供的范围滑块和纵向方向。",
     },
-  "preview.components.statCardSizeToneAndSemanticRootOptionsFitSummaryRowsAndSections":
-    {
-      zh: "StatCard 的尺寸、色调和语义根元素适配摘要行与分区。",
-    },
   "preview.components.stepsManualCompositionKeepsCustomStepContentInsideTheSameOrderedList":
     {
       zh: "Steps 手动组合可让自定义步骤内容留在同一个有序列表中。",
@@ -2078,9 +2020,6 @@ const ZH_PREVIEW_COMPONENT_MESSAGES = defineMessages({
     {
       zh: "Upload 的 accept、multiple 和 disabled props 可描述选择约束，而不接管传输。",
     },
-  "preview.components.verticalCarousel": {
-    zh: "纵向轮播",
-  },
   "preview.components.weekStartsAndTones": {
     zh: "周起始与色调",
   },
