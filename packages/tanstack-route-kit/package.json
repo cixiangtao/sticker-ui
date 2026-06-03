@@ -27,8 +27,8 @@
     "@tanstack/react-router": "^1.170.15",
     "@types/react": "latest",
     "react": "latest",
-    "tsdown": "^0.22.3",
-    "typescript": "latest"
+    "tsdown": "^0.22.4",
+    "typescript": "7.0.2"
   },
   "peerDependencies": {
     "@tanstack/react-router": "^1.170.15",

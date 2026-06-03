@@ -109,8 +109,8 @@
     "tailwindcss": "latest",
     "tailwindcss-animate": "^1.0.7",
     "ts-morph": "^28.0.0",
-    "tsdown": "^0.22.3",
-    "typescript": "latest",
+    "tsdown": "^0.22.4",
+    "typescript": "7.0.2",
     "vite": "^8.0.16",
     "vitest": "^4.1.10"
   },

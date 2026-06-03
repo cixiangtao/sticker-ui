@@ -11,13 +11,13 @@
     "noEmit": true,
     "allowImportingTsExtensions": true,
     "ignoreDeprecations": "6.0",
-    "baseUrl": ".",
     "paths": {
       "@anys/tanstack-route-kit": [
         "./packages/tanstack-route-kit/src/index.ts"
       ],
       "@/*": ["./src/*"],
       "sticker-ui": ["./src/index.ts"],
+      "*": ["./*"],
       "~/*": ["./*"]
     }
   },

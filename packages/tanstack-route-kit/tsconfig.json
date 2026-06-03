@@ -1,8 +1,10 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "baseUrl": ".",
-    "noEmit": true
+    "noEmit": true,
+    "paths": {
+      "*": ["./*"]
+    }
   },
   "include": ["src", "tsdown.config.ts"]
 }
