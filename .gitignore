@@ -10,6 +10,7 @@ build/
 .vite/
 .turbo/
 .cache/
+.wrangler/
 *.tsbuildinfo
 
 # Logs
