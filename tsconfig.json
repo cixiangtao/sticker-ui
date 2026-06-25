@@ -27,8 +27,6 @@
     "packages",
     "registry",
     "vite.config.ts",
-    "oxfmt.config.ts",
-    "oxlint.config.ts",
     "tsdown.config.ts",
     "components.json",
     "registry.json"

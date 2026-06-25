@@ -3,8 +3,8 @@ import { mkdir, readFile, writeFile } from "node:fs/promises"
 import path from "node:path"
 import { fileURLToPath } from "node:url"
 
-import { format } from "oxfmt"
 import { Node, Project, VariableDeclarationKind } from "ts-morph"
+import { format } from "vite-plus/fmt"
 
 const ROOT_DIR = path.resolve(fileURLToPath(new URL("..", import.meta.url)))
 const REGISTRY_PATH = path.join(ROOT_DIR, "registry.json")

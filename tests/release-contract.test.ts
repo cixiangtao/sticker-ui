@@ -1,7 +1,7 @@
 import { existsSync, readFileSync, readdirSync } from "node:fs"
 import { join } from "node:path"
 
-import { describe, expect, it } from "vitest"
+import { describe, expect, it } from "vite-plus/test"
 
 interface PackageJson {
   scripts?: Record<string, string>
@@ -125,10 +125,10 @@ describe("release contract", () => {
     const viteConfig = readProjectFile("vite.config.ts")
 
     expect(packageJson.scripts?.["build:lib"]).toContain("tsdown")
-    expect(packageJson.scripts?.["build:preview"]).toContain("vite build")
+    expect(packageJson.scripts?.["build:preview"]).toContain("vp build")
     expect(viteConfig).toContain('const previewOutDir = "dist-preview"')
-    expect(viteConfig).toContain(
-      'outDir: isGitLabPagesBuild ? "public" : previewOutDir',
+    expect(viteConfig).toMatch(
+      /outDir:\s*isGitLabPagesBuild\s*\?\s*"public"\s*:\s*isSitesBuild\s*\?\s*"dist"\s*:\s*previewOutDir/,
     )
   })
 })
