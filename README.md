@@ -1,77 +1,48 @@
-# sticker-ui
+# Sticker UI
 
-A source-first React + Tailwind component library with a handbook sticker visual language.
+A React + Tailwind CSS component library with warm paper surfaces, chunky ink
+outlines, hard offset shadows, and tactile interactions.
 
-## Direction
+**[Explore the live preview and component docs](https://sticker-ui-preview.cixiangtao.chatgpt.site)**
 
-- Components are installed as a package by default, with source available through
-  a shadcn-compatible registry when projects need to customize internals.
-- React, Tailwind, and Radix primitives form the baseline UI stack.
-- Component icons should prefer `lucide-react` before custom CSS/SVG shapes.
-- Visual style is intentionally independent from shadcn/ui.
-- Registry components keep extra runtime dependencies minimal and declare non-baseline dependencies only when they provide clear component-level value.
+Sticker UI is package-ready and source-first. Install it from npm for managed
+updates, or copy individual components through the shadcn-compatible registry
+when your project needs full control of the source.
 
-## Install Shape
+## Highlights
 
-### Environment requirements
+- A cohesive handbook sticker visual language built with shared Tailwind tokens.
+- Accessible React primitives powered by Radix where richer behavior is needed.
+- Compound APIs such as `Card.Header`, `Dialog.Content`, and `Select.Item`.
+- Source files that stay readable and practical after a registry install.
+- Tailwind CSS v4 tokens that can be overridden without editing component code.
+- Interactive previews, usage examples, source views, and generated API docs.
 
-Use `sticker-ui` in a React app that can run Tailwind CSS v4 and import CSS from
-installed npm packages:
+## Requirements
 
-- `react` `^18.0.0 || ^19.0.0`
-- `react-dom` `^18.0.0 || ^19.0.0`
-- `tailwindcss` `^4.0.0`
-- A modern bundler setup such as Vite, Next.js, or an equivalent toolchain that
-  supports package CSS imports from `node_modules`.
+- React 18 or 19
+- React DOM 18 or 19
+- Tailwind CSS 4
+- A bundler that supports CSS imports from npm packages, such as Vite or Next.js
 
-For local development in this repository, use the pinned package manager from
-`package.json`: `pnpm@10.17.1`.
+## Choose an installation mode
 
-### Package install
+|              | npm package           | Source registry             |
+| ------------ | --------------------- | --------------------------- |
+| Best for     | Managed upgrades      | Local customization         |
+| Install with | `pnpm add sticker-ui` | `npx shadcn@latest add ...` |
+| Import from  | `sticker-ui`          | Your local component path   |
+| Ownership    | Package-managed       | Application-owned source    |
 
-Install the package when you want components managed by npm and imported from
-the package root:
+## Package installation
+
+Install Sticker UI:
 
 ```bash
 pnpm add sticker-ui
 ```
 
-Import components from the package root:
-
-```tsx
-import { Button, Card, Dialog } from "sticker-ui"
-```
-
-Compound components use the main namespace from the same import:
-
-```tsx
-import { Card, Dialog, Select } from "sticker-ui"
-
-function Example() {
-  return (
-    <>
-      <Card>
-        <Card.Header>
-          <Card.Title>Release checklist</Card.Title>
-        </Card.Header>
-      </Card>
-
-      <Dialog>
-        <Dialog.Content />
-      </Dialog>
-
-      <Select>
-        <Select.Trigger />
-        <Select.Content>
-          <Select.Item value="preview">Preview</Select.Item>
-        </Select.Content>
-      </Select>
-    </>
-  )
-}
-```
-
-Add Sticker UI tokens to your Tailwind entry CSS:
+Add Tailwind and the Sticker UI tokens to your application stylesheet:
 
 ```css
 @import "tailwindcss";
@@ -79,13 +50,73 @@ Add Sticker UI tokens to your Tailwind entry CSS:
 @source "../node_modules/sticker-ui";
 ```
 
-The package does not ship precompiled component CSS. It only exposes React
-components and Tailwind tokens, so consuming projects stay in control of their
-own generated CSS.
+Sticker UI ships React components and Tailwind tokens rather than a precompiled
+component stylesheet. The `@source` directive lets Tailwind generate the
+utilities used by the installed components.
 
-To modify the built-in Sticker UI tokens, declare the same `su` theme variables
-after `sticker-ui/tokens.css` in your app CSS. Do not edit the package file in
-`node_modules`; let your app own the override layer:
+Import components from the package root:
+
+```tsx
+import { Button, Card } from "sticker-ui"
+
+function ReleaseCard() {
+  return (
+    <Card>
+      <Card.Header decoration>
+        <Card.Title>Ready to ship</Card.Title>
+        <Card.Description>
+          The preview and registry builds are passing.
+        </Card.Description>
+      </Card.Header>
+      <Card.Content>
+        <Button>Publish release</Button>
+      </Card.Content>
+    </Card>
+  )
+}
+```
+
+Compound components are exposed through their main namespace. Prefer
+`Dialog.Content`, `Select.Item`, or `Checkbox.Group` over importing internal
+subcomponents from the package.
+
+## Source registry installation
+
+Copy a component into your project when you want to own and modify its source:
+
+```bash
+npx shadcn@latest add https://sticker-ui-preview.cixiangtao.chatgpt.site/r/button.json --dry-run
+npx shadcn@latest add https://sticker-ui-preview.cixiangtao.chatgpt.site/r/button.json
+```
+
+Browse the [component preview](https://sticker-ui-preview.cixiangtao.chatgpt.site)
+to find component names, then replace `button` in the URL with the component you
+need. The complete registry index is available at
+[`/r/registry.json`](https://sticker-ui-preview.cixiangtao.chatgpt.site/r/registry.json).
+
+Run the final command without `--overwrite` so shadcn asks before replacing
+files. Use `--diff` when you want to inspect a conflict first.
+
+## Motion setup
+
+Floating components such as Dialog, Popover, Select, and Tooltip use
+`tailwindcss-animate` for enter and exit motion. Add it when your application
+uses one of those components:
+
+```bash
+pnpm add tailwindcss-animate
+```
+
+Register the plugin in the same Tailwind entry stylesheet:
+
+```css
+@plugin "tailwindcss-animate";
+```
+
+## Theme customization
+
+Sticker UI exposes its visual system through `su` theme variables. Override the
+existing tokens after importing `sticker-ui/tokens.css`:
 
 ```css
 @import "tailwindcss";
@@ -101,130 +132,54 @@ after `sticker-ui/tokens.css` in your app CSS. Do not edit the package file in
 }
 ```
 
-Keep the existing token names when you want Sticker UI utilities and components
-to inherit the change:
+Keep the existing token names to retune the shipped components and utilities:
 
-- `--color-su-*` drives utilities such as `bg-su-fill-default`,
-  `text-su-ink`, and `border-su-ink`.
-- `--radius-su-*` drives utilities such as `rounded-su-lg`.
-- `--shadow-su-*` drives utilities such as `shadow-su-md`.
+- `--color-su-*` controls paper, ink, accent, and semantic colors.
+- `--radius-su-*` controls the shared corner-radius scale.
+- `--shadow-su-*` controls the hard offset elevation scale.
 
-Add new `su` tokens only when your own app needs additional utilities. To
-retune the shipped components, prefer overriding the existing token names.
+Add new `su` tokens only when your application needs additional utilities.
 
-### Motion setup
+## Local development
 
-Floating components such as Dialog, Popover, Select, and Tooltip use
-`tailwindcss-animate` for enter and exit motion. Add it only when your project
-uses those components:
+This repository uses the pnpm version pinned in `package.json`.
 
 ```bash
-pnpm add tailwindcss-animate
+pnpm install
+pnpm dev
 ```
 
-Then add the plugin to the same Tailwind entry CSS:
+The local preview runs at [http://localhost:7777](http://localhost:7777).
 
-```css
-@plugin "tailwindcss-animate";
-```
+| Command               | Purpose                                         |
+| --------------------- | ----------------------------------------------- |
+| `pnpm dev`            | Start the local preview on port 7777            |
+| `pnpm lint:fix`       | Format, lint, and type-check the project        |
+| `pnpm build:registry` | Generate the shadcn-compatible registry output  |
+| `pnpm build:preview`  | Generate API docs and build the preview site    |
+| `pnpm release:check`  | Validate the package surface without publishing |
+| `pnpm release:dry`    | Preview the version, tag, and npm release flow  |
 
-### Source customization
+## Repository structure
 
-Use the shadcn-compatible registry only when a project needs to copy and edit
-component source:
-
-```bash
-pnpm run dev
-npx shadcn@latest add http://localhost:7777/r/button.json --dry-run
-npx shadcn@latest add http://localhost:7777/r/button.json
-```
-
-The public registry host is intentionally left blank until the preview site has
-a stable deployment address. Replace the local origin with that address once it
-exists.
-
-Run the final `add` command without `--overwrite` so shadcn asks before
-replacing any local files with the same names. Use `--diff` for a closer look
-at a conflict before choosing whether to overwrite it.
-
-### Maintainer workflow
-
-Run the local Vite preview with:
-
-```bash
-pnpm run dev
-```
-
-Local registry files are generated with:
-
-```bash
-pnpm run build:registry
-```
-
-Preview API docs, route type-checking, and the production preview build run with:
-
-```bash
-pnpm run build:preview
-```
-
-The package build writes library files to `dist/`; the preview build writes the
-static site to `dist-preview/` locally and to `public/` during GitLab Pages
-builds.
-
-Check the package release surface without publishing:
-
-```bash
-pnpm run release:check
-```
-
-Preview the version bump, git tag, and npm publish flow:
-
-```bash
-pnpm run release:dry
-```
-
-Publish a new npm release:
-
-```bash
-pnpm run release
-```
-
-The release flow uses `release-it` to run the package checks, bump
-`package.json`, create a `v${version}` tag, push the release commit and tag, and
-publish the package to npm with public access.
-
-## Structure
-
-```txt
+```text
 src/
-  components/
-    ui/
-      button.tsx
-      card.tsx
-      dialog.tsx
-  pages/
-    components/
-      button/
-        demos/
-public/
-  r/
-    button.json
-    registry.json
-registry.json
-components.json
-vite.config.ts
+  components/ui/        # Canonical component source
+  pages/components/     # Preview demos
+  generated/            # Generated preview API docs
+  tokens.css            # Public Tailwind theme tokens
+public/r/                # Generated registry JSON
+registry.json            # Registry definitions
 ```
 
-## Export Style
+Component source lives in `src/components/ui`. Files under `public/r` are
+generated delivery artifacts and should not be edited by hand.
 
-- Prefer named exports throughout source files. Components, preview pages,
-  demo metadata, helpers, and source component files should export their APIs
-  with `export { Name }` and `export type { NameProps }`.
-- Compound component source files should keep named exports for each
-  subcomponent so TSDoc, API docs, and shadcn-copied source stay clear. The
-  package entry should expose the main namespace component only, so package
-  usage reads as `Dialog.Content`, `Card.Header`, or `Select.Item`.
-- Do not add new `export default` declarations in project source. Default
-  exports are only allowed where an external tool or asset module requires
-  that shape, such as Vite/Tsup/Oxlint config files or generated declarations
-  for JSON modules.
+## Project conventions
+
+- Prefer named exports throughout project source.
+- Keep compound subcomponent exports in their canonical source file, while the
+  package entry exposes the main namespace component.
+- Document public component APIs with TSDoc comments.
+- Declare focused runtime dependencies on the registry item that needs them.
+- Preserve accessible semantics alongside the handbook sticker visual style.
