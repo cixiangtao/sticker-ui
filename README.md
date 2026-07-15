@@ -3,7 +3,7 @@
 A React + Tailwind CSS component library with warm paper surfaces, chunky ink
 outlines, hard offset shadows, and tactile interactions.
 
-**[Explore the live preview and component docs](https://sticker-ui-preview.cixiangtao.chatgpt.site)**
+**[Explore the live preview and component docs](https://sticker-ui-preview.cixiangtao-ky.chatgpt.site)**
 
 Sticker UI is package-ready and source-first. Install it from npm for managed
 updates, or copy individual components through the shadcn-compatible registry
@@ -85,14 +85,14 @@ subcomponents from the package.
 Copy a component into your project when you want to own and modify its source:
 
 ```bash
-npx shadcn@latest add https://sticker-ui-preview.cixiangtao.chatgpt.site/r/button.json --dry-run
-npx shadcn@latest add https://sticker-ui-preview.cixiangtao.chatgpt.site/r/button.json
+npx shadcn@latest add https://sticker-ui-preview.cixiangtao-ky.chatgpt.site/r/button.json --dry-run
+npx shadcn@latest add https://sticker-ui-preview.cixiangtao-ky.chatgpt.site/r/button.json
 ```
 
-Browse the [component preview](https://sticker-ui-preview.cixiangtao.chatgpt.site)
+Browse the [component preview](https://sticker-ui-preview.cixiangtao-ky.chatgpt.site)
 to find component names, then replace `button` in the URL with the component you
 need. The complete registry index is available at
-[`/r/registry.json`](https://sticker-ui-preview.cixiangtao.chatgpt.site/r/registry.json).
+[`/r/registry.json`](https://sticker-ui-preview.cixiangtao-ky.chatgpt.site/r/registry.json).
 
 Run the final command without `--overwrite` so shadcn asks before replacing
 files. Use `--diff` when you want to inspect a conflict first.
