@@ -18,6 +18,7 @@ const neverBundleDependencies = [
 export default defineConfig({
   clean: true,
   deps: {
+    alwaysBundle: [/^@colordx\/core(?:\/|$)/],
     neverBundle: neverBundleDependencies,
   },
   dts: true,

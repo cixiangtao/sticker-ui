@@ -40,14 +40,15 @@
     "prepare": "vp config",
     "preview": "vp preview",
     "release": "release-it",
-    "release:check": "pnpm run lint && pnpm run build:registry && pnpm run test && git diff --exit-code -- registry.json public/r && pnpm publish --dry-run --access public --publish-branch main",
+    "release:check": "pnpm run lint && pnpm run build:registry && pnpm run test && pnpm run verify:package && git diff --exit-code -- registry.json public/r && pnpm publish --dry-run --access public --publish-branch main",
     "release:dry": "release-it --dry-run",
     "check": "tsc --noEmit",
     "format": "vp fmt . --write",
     "format:check": "vp fmt . --check",
     "lint": "pnpm run check && pnpm run format:check && vp lint .",
     "lint:fix": "pnpm run format && vp lint . --fix && pnpm run check",
-    "test": "vp test run"
+    "test": "vp test run",
+    "verify:package": "pnpm run build:lib && node scripts/verify-package-exports.mjs"
   },
   "dependencies": {
     "@colordx/core": "^5.5.0",
