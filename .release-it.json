@@ -20,7 +20,13 @@
   },
   "npm": {
     "publish": true,
-    "publishArgs": ["--access", "public", "--publish-branch", "main"],
+    "publishArgs": [
+      "--access",
+      "public",
+      "--publish-branch",
+      "main",
+      "--no-git-checks"
+    ],
     "publishPackageManager": "pnpm"
   }
 }
