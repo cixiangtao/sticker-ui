@@ -5,70 +5,13 @@ import tailwindcss from "@tailwindcss/vite"
 import react, { reactCompilerPreset } from "@vitejs/plugin-react"
 import { defineConfig, lazyPlugins } from "vite-plus"
 import type { PluginOption } from "vite-plus"
-import type { OxfmtConfig } from "vite-plus/fmt"
-import type { OxlintConfig } from "vite-plus/lint"
+
+import { fmtConfig } from "./vite-plus/fmt"
+import { lintConfig } from "./vite-plus/lint"
 
 const isGitLabPagesBuild = process.env.GITLAB_PAGES === "true"
 const isSitesBuild = process.env.SITES_BUILD === "true"
 const previewOutDir = "dist-preview"
-
-const fmtConfig: OxfmtConfig = {
-  ignorePatterns: [
-    ".agents",
-    ".playwright-mcp",
-    "dist",
-    "dist-preview",
-    "node_modules",
-    "package-lock.json",
-    "pnpm-lock.yaml",
-    "public/r",
-    "src/generated/preview-api-docs.json",
-  ],
-  printWidth: 80,
-  semi: false,
-  sortImports: {
-    internalPattern: ["@/", "~/"],
-    order: "asc",
-  },
-  sortPackageJson: true,
-  sortTailwindcss: {
-    functions: ["cn", "clsx", "cva", "twMerge"],
-    preserveWhitespace: true,
-    stylesheet: "./src/globals.css",
-  },
-}
-
-const lintConfig: OxlintConfig = {
-  categories: {
-    correctness: "error",
-  },
-  env: {
-    browser: true,
-    es2022: true,
-    node: true,
-  },
-  ignorePatterns: [
-    ".agents",
-    ".playwright-mcp",
-    "dist",
-    "dist-preview",
-    "node_modules",
-    "public/r",
-    "src/generated/preview-api-docs.json",
-  ],
-  jsPlugins: [{ name: "vite-plus", specifier: "vite-plus/oxlint-plugin" }],
-  plugins: ["eslint", "import", "typescript", "react"],
-  rules: {
-    "import/no-unassigned-import": "off",
-    "react/react-in-jsx-scope": "off",
-    "vite-plus/prefer-vite-plus-imports": "error",
-  },
-  settings: {
-    react: {
-      version: "19.0",
-    },
-  },
-}
 
 export default defineConfig(async () => {
   const sitesPlugins: PluginOption[] = []
