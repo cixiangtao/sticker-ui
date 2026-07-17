@@ -27,19 +27,19 @@ when your project needs full control of the source.
 
 ## Choose an installation mode
 
-|              | npm package           | Source registry             |
-| ------------ | --------------------- | --------------------------- |
-| Best for     | Managed upgrades      | Local customization         |
-| Install with | `pnpm add sticker-ui` | `npx shadcn@latest add ...` |
-| Import from  | `sticker-ui`          | Your local component path   |
-| Ownership    | Package-managed       | Application-owned source    |
+|              | npm package                | Source registry             |
+| ------------ | -------------------------- | --------------------------- |
+| Best for     | Managed upgrades           | Local customization         |
+| Install with | `pnpm add sticker-ui@beta` | `npx shadcn@latest add ...` |
+| Import from  | `sticker-ui`               | Your local component path   |
+| Ownership    | Package-managed            | Application-owned source    |
 
 ## Package installation
 
-Install Sticker UI:
+Install the current Sticker UI beta:
 
 ```bash
-pnpm add sticker-ui
+pnpm add sticker-ui@beta
 ```
 
 Add Tailwind and the Sticker UI tokens to your application stylesheet:
