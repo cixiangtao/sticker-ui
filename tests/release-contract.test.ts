@@ -4,6 +4,14 @@ import { join } from "node:path"
 import { describe, expect, it } from "vite-plus/test"
 
 interface PackageJson {
+  bugs?: {
+    url?: string
+  }
+  homepage?: string
+  repository?: {
+    type?: string
+    url?: string
+  }
   scripts?: Record<string, string>
 }
 
@@ -119,6 +127,19 @@ describe("release contract", () => {
       expect(content).not.toContain("example.com")
       expect(content).not.toContain("your-domain.com")
     }
+  })
+
+  it("publishes canonical project links in the package metadata", () => {
+    expect(packageJson.homepage).toBe(
+      "https://cixiangtao.github.io/sticker-ui/",
+    )
+    expect(packageJson.repository).toEqual({
+      type: "git",
+      url: "git+https://github.com/cixiangtao/sticker-ui.git",
+    })
+    expect(packageJson.bugs?.url).toBe(
+      "https://github.com/cixiangtao/sticker-ui/issues",
+    )
   })
 
   it("keeps package and preview build outputs separated", () => {
