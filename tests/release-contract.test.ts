@@ -111,7 +111,7 @@ describe("release contract", () => {
       "src/pages/registry/usage/index.tsx",
     ]
 
-    expect(registry.homepage).toBe("http://localhost:7777")
+    expect(registry.homepage).toBe("https://cixiangtao.github.io/sticker-ui/")
 
     for (const path of searchableFiles) {
       const content = readProjectFile(path)
@@ -127,8 +127,8 @@ describe("release contract", () => {
     expect(packageJson.scripts?.["build:lib"]).toContain("tsdown")
     expect(packageJson.scripts?.["build:preview"]).toContain("vp build")
     expect(viteConfig).toContain('const previewOutDir = "dist-preview"')
-    expect(viteConfig).toMatch(
-      /outDir:\s*isGitLabPagesBuild\s*\?\s*"public"\s*:\s*isSitesBuild\s*\?\s*"dist"\s*:\s*previewOutDir/,
+    expect(viteConfig).toContain(
+      'outDir: isGitLabPagesBuild ? "public" : previewOutDir',
     )
   })
 })
