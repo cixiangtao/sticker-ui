@@ -2,7 +2,7 @@
   "name": "sticker-ui",
   "version": "1.0.0-beta.0",
   "description": "A source-first handbook sticker style React + Tailwind component registry.",
-  "homepage": "https://cixiangtao.github.io/sticker-ui/",
+  "homepage": "https://sticker-ui.cixiangtao.workers.dev/",
   "bugs": {
     "url": "https://github.com/cixiangtao/sticker-ui/issues"
   },

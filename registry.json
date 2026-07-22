@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "sticker-ui",
-  "homepage": "https://cixiangtao.github.io/sticker-ui/",
+  "homepage": "https://sticker-ui.cixiangtao.workers.dev/",
   "items": [
     {
       "name": "utils",

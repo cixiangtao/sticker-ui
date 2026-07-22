@@ -119,7 +119,7 @@ describe("release contract", () => {
       "src/pages/registry/usage/index.tsx",
     ]
 
-    expect(registry.homepage).toBe("https://cixiangtao.github.io/sticker-ui/")
+    expect(registry.homepage).toBe("https://sticker-ui.cixiangtao.workers.dev/")
 
     for (const path of searchableFiles) {
       const content = readProjectFile(path)
@@ -131,7 +131,7 @@ describe("release contract", () => {
 
   it("publishes canonical project links in the package metadata", () => {
     expect(packageJson.homepage).toBe(
-      "https://cixiangtao.github.io/sticker-ui/",
+      "https://sticker-ui.cixiangtao.workers.dev/",
     )
     expect(packageJson.repository).toEqual({
       type: "git",
