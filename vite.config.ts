@@ -5,10 +5,9 @@ import tailwindcss from "@tailwindcss/vite"
 import react, { reactCompilerPreset } from "@vitejs/plugin-react"
 import { defineConfig, lazyPlugins } from "vite-plus"
 
-import { fmtConfig } from "./vite-plus/fmt"
-import { lintConfig } from "./vite-plus/lint"
+import { fmtConfig } from "./vite+/fmt"
+import { lintConfig } from "./vite+/lint"
 
-const isGitLabPagesBuild = process.env.GITLAB_PAGES === "true"
 const previewOutDir = "dist-preview"
 
 export default defineConfig({
@@ -17,12 +16,9 @@ export default defineConfig({
   },
   fmt: fmtConfig,
   lint: lintConfig,
-  publicDir: isGitLabPagesBuild ? (false as const) : "public",
   build: {
-    copyPublicDir: !isGitLabPagesBuild,
     chunkSizeWarningLimit: 650,
-    emptyOutDir: isGitLabPagesBuild ? false : true,
-    outDir: isGitLabPagesBuild ? "public" : previewOutDir,
+    outDir: previewOutDir,
     rolldownOptions: {
       output: {
         manualChunks(id: string) {

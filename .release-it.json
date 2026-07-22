@@ -11,9 +11,6 @@
   "github": {
     "release": false
   },
-  "gitlab": {
-    "release": false
-  },
   "hooks": {
     "before:init": "pnpm run release:check",
     "after:release": "echo Successfully released ${name} v${version}"

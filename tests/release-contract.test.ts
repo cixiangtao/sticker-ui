@@ -148,9 +148,7 @@ describe("release contract", () => {
     expect(packageJson.scripts?.["build:lib"]).toContain("tsdown")
     expect(packageJson.scripts?.["build:preview"]).toContain("vp build")
     expect(viteConfig).toContain('const previewOutDir = "dist-preview"')
-    expect(viteConfig).toContain(
-      'outDir: isGitLabPagesBuild ? "public" : previewOutDir',
-    )
+    expect(viteConfig).toContain("outDir: previewOutDir")
   })
 
   it("deploys browser-history routes with a Cloudflare SPA fallback", () => {
