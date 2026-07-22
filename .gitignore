@@ -8,6 +8,7 @@ build/
 
 # Tool caches
 .vite/
+.wrangler/
 .turbo/
 .cache/
 *.tsbuildinfo

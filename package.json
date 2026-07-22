@@ -43,6 +43,7 @@
     "build:packages": "pnpm --filter @anys/tanstack-route-kit build",
     "build:registry": "shadcn build",
     "build:preview": "pnpm run build:api && pnpm run check && vp build",
+    "deploy:cloudflare": "pnpm run build:preview && wrangler deploy",
     "prepack": "pnpm run build:lib",
     "prepare": "vp config",
     "preview": "vp preview",
@@ -119,7 +120,8 @@
     "typescript": "7.0.2",
     "vite": "catalog:",
     "vite-plus": "catalog:",
-    "vitest": "catalog:"
+    "vitest": "catalog:",
+    "wrangler": "4.112.0"
   },
   "peerDependencies": {
     "react": "^18.0.0 || ^19.0.0",

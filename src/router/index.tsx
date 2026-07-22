@@ -1,6 +1,6 @@
 import { buildRouteTree } from "@anys/tanstack-route-kit"
 import {
-  createHashHistory,
+  createBrowserHistory,
   createRootRoute,
   createRouter,
 } from "@tanstack/react-router"
@@ -16,7 +16,7 @@ const routeTree = buildRouteTree(rootRoute, routes)
 
 const router = createRouter({
   basepath: import.meta.env.BASE_URL,
-  history: createHashHistory(),
+  history: createBrowserHistory(),
   routeTree,
 })
 

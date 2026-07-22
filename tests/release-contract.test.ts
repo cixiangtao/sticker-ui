@@ -152,4 +152,21 @@ describe("release contract", () => {
       'outDir: isGitLabPagesBuild ? "public" : previewOutDir',
     )
   })
+
+  it("deploys browser-history routes with a Cloudflare SPA fallback", () => {
+    const router = readProjectFile("src/router/index.tsx")
+    const workflow = readProjectFile(".github/workflows/deploy-cloudflare.yml")
+    const wrangler = readProjectFile("wrangler.jsonc")
+
+    expect(router).toContain("createBrowserHistory()")
+    expect(router).not.toContain("createHashHistory()")
+    expect(wrangler).toContain('"name": "sticker-ui"')
+    expect(wrangler).toContain('"directory": "./dist-preview"')
+    expect(wrangler).toContain(
+      '"not_found_handling": "single-page-application"',
+    )
+    expect(workflow).toContain("cloudflare/wrangler-action@v3")
+    expect(workflow).toContain("CLOUDFLARE_ACCOUNT_ID")
+    expect(workflow).toContain("CLOUDFLARE_API_TOKEN")
+  })
 })
