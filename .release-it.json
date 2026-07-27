@@ -22,6 +22,8 @@
       "public",
       "--publish-branch",
       "main",
+      "--tag",
+      "beta",
       "--no-git-checks"
     ],
     "publishPackageManager": "pnpm"

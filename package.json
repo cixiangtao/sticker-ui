@@ -48,7 +48,7 @@
     "prepare": "vp config",
     "preview": "vp preview",
     "release": "release-it",
-    "release:check": "pnpm run lint && pnpm run build:registry && pnpm run test && pnpm run verify:package && git diff --exit-code -- registry.json public/r && pnpm publish --dry-run --access public --publish-branch main",
+    "release:check": "pnpm run lint && pnpm run build:registry && pnpm run test && pnpm run verify:package && git diff --exit-code -- registry.json public/r && pnpm publish --dry-run --access public --publish-branch main --tag beta --no-git-checks",
     "release:dry": "release-it --dry-run",
     "check": "tsc --noEmit",
     "format": "vp fmt . --write",
