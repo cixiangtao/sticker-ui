@@ -111,9 +111,10 @@ describe("release contract", () => {
     }
   })
 
-  it("does not ship placeholder public registry addresses", () => {
+  it("does not document placeholder public registry addresses", () => {
     const searchableFiles = [
       "README.md",
+      ".github/README.md",
       "registry.json",
       "public/r/registry.json",
       "src/pages/registry/usage/index.tsx",
@@ -127,6 +128,15 @@ describe("release contract", () => {
       expect(content).not.toContain("example.com")
       expect(content).not.toContain("your-domain.com")
     }
+  })
+
+  it("keeps npm and GitHub README surfaces separate", () => {
+    const npmReadme = readProjectFile("README.md")
+    const githubReadme = readProjectFile(".github/README.md")
+
+    expect(npmReadme).toContain("https://github.com/cixiangtao/sticker-ui")
+    expect(npmReadme).not.toContain("sticker-ui.cixiangtao.workers.dev")
+    expect(githubReadme).toContain(packageJson.homepage)
   })
 
   it("publishes canonical project links in the package metadata", () => {
