@@ -17,13 +17,13 @@
   },
   "npm": {
     "publish": true,
+    "tag": "beta",
+    "timeout": 120,
     "publishArgs": [
       "--access",
       "public",
       "--publish-branch",
       "main",
-      "--tag",
-      "beta",
       "--no-git-checks"
     ],
     "publishPackageManager": "pnpm"
