@@ -1,0 +1,68 @@
+name: Bug report
+description: Report reproducible behavior in the package, Registry, or preview.
+title: "fix: "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. Do not include vulnerability details here; use the security policy instead.
+  - type: dropdown
+    id: installation
+    attributes:
+      label: Installation mode
+      options:
+        - npm package
+        - source Registry
+        - preview documentation
+        - repository development
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Sticker UI version
+      placeholder: 1.0.0-beta.1
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Include React, Tailwind CSS, browser, Node.js, and package manager versions where relevant.
+      placeholder: React 19, Tailwind CSS 4, Chrome 140, Node.js 22, pnpm 10
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Provide a minimal repository, sandbox, or exact sequence of steps.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Add screenshots, recordings, logs, or related links. Remove secrets and personal data.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I searched existing issues for the same problem.
+          required: true
+        - label: This report does not contain security-sensitive details.
+          required: true

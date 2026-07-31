@@ -1,0 +1,49 @@
+name: Feature request
+description: Propose a focused component, API, documentation, or tooling improvement.
+title: "feat: "
+labels: []
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Describe the user need or workflow that is difficult today.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed outcome
+      description: Describe the behavior and public API you would expect.
+    validations:
+      required: true
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Public surface
+      options:
+        - npm package
+        - source Registry
+        - preview documentation
+        - contributor tooling
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Include existing components, composition patterns, or workarounds.
+  - type: textarea
+    id: examples
+    attributes:
+      label: Examples or references
+      description: Add screenshots, API sketches, or links that clarify the request.
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope check
+      options:
+        - label: I searched existing issues and component documentation.
+          required: true
+        - label: The request is focused on one coherent outcome.
+          required: true

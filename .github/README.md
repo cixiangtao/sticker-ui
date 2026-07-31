@@ -9,6 +9,9 @@ Sticker UI is package-ready and source-first. Install it from npm for managed
 updates, or copy individual components through the shadcn-compatible registry
 when your project needs full control of the source.
 
+> Sticker UI is currently in beta. APIs may change before the first stable
+> release; use the explicit `beta` channel for predictable prerelease updates.
+
 ## Highlights
 
 - A cohesive handbook sticker visual language built with shared Tailwind tokens.
@@ -157,7 +160,9 @@ The local preview runs at [http://localhost:7777](http://localhost:7777).
 | `pnpm lint:fix`       | Format, lint, and type-check the project        |
 | `pnpm build:registry` | Generate the shadcn-compatible registry output  |
 | `pnpm build:preview`  | Generate API docs and build the preview site    |
+| `pnpm run ci`         | Run the complete pull-request and release gate  |
 | `pnpm release:check`  | Validate the package surface without publishing |
+| `pnpm release:beta`   | Publish the next npm and GitHub beta release    |
 | `pnpm release:dry`    | Preview the version, tag, and npm release flow  |
 
 ## Repository structure
@@ -183,3 +188,17 @@ generated delivery artifacts and should not be edited by hand.
 - Document public component APIs with TSDoc comments.
 - Declare focused runtime dependencies on the registry item that needs them.
 - Preserve accessible semantics alongside the handbook sticker visual style.
+
+## Project resources
+
+- [npm package](https://www.npmjs.com/package/sticker-ui)
+- [Changelog](https://github.com/cixiangtao/sticker-ui/blob/main/CHANGELOG.md)
+- [Contributing guide](https://github.com/cixiangtao/sticker-ui/blob/main/CONTRIBUTING.md)
+- [Support guide](https://github.com/cixiangtao/sticker-ui/blob/main/SUPPORT.md)
+- [Security policy](https://github.com/cixiangtao/sticker-ui/blob/main/SECURITY.md)
+- [Release history](https://github.com/cixiangtao/sticker-ui/releases)
+
+## License
+
+Sticker UI is available under the
+[MIT License](https://github.com/cixiangtao/sticker-ui/blob/main/LICENSE).

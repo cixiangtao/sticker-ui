@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Component documentation
+    url: https://sticker-ui.cixiangtao.workers.dev/
+    about: Review component examples, API documentation, and Registry usage.
+  - name: Security vulnerability
+    url: https://github.com/cixiangtao/sticker-ui/security/advisories/new
+    about: Report suspected vulnerabilities privately.
+  - name: Support guide
+    url: https://github.com/cixiangtao/sticker-ui/blob/main/SUPPORT.md
+    about: Review the information needed for usage questions and bug reports.
