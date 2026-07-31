@@ -8,6 +8,8 @@ interface PackageJson {
     url?: string
   }
   homepage?: string
+  license?: string
+  private?: boolean
   repository?: {
     type?: string
     url?: string
@@ -45,6 +47,18 @@ function readProjectJson<T>(path: string) {
 
 function sorted(values: string[]) {
   return [...values].sort((first, second) => first.localeCompare(second))
+}
+
+function expectActionsPinned(workflow: string) {
+  const actionReferences = [...workflow.matchAll(/uses:\s+([^\s#]+)/g)].map(
+    ([, actionReference]) => actionReference,
+  )
+
+  expect(actionReferences.length).toBeGreaterThan(0)
+
+  for (const actionReference of actionReferences) {
+    expect(actionReference).toMatch(/^[^@]+@[0-9a-f]{40}$/)
+  }
 }
 
 function getComponentSourceNames() {
@@ -152,6 +166,76 @@ describe("release contract", () => {
     )
   })
 
+  it("publishes an explicit license and keeps internal packages private", () => {
+    const routeKitPackage = readProjectJson<PackageJson>(
+      "packages/tanstack-route-kit/package.json",
+    )
+
+    expect(readProjectFile("LICENSE")).toContain("MIT License")
+    expect(packageJson.license).toBe("MIT")
+    expect(routeKitPackage.license).toBe("MIT")
+    expect(routeKitPackage.private).toBe(true)
+  })
+
+  it("keeps stable and beta release channels explicit", () => {
+    const releaseConfig = readProjectJson<{
+      github?: { release?: boolean }
+      npm?: {
+        publish?: boolean
+      }
+    }>(".release-it.json")
+    const npmReadme = readProjectFile("README.md")
+    const githubReadme = readProjectFile(".github/README.md")
+    const publishWorkflow = readProjectFile(".github/workflows/publish.yml")
+
+    expect(packageJson.scripts?.release).toBe("release-it")
+    expect(packageJson.scripts?.["release:beta"]).toBe(
+      "release-it --preRelease",
+    )
+    expect(releaseConfig.npm?.publish).toBe(false)
+    expect(releaseConfig.github?.release).toBe(false)
+    expect(publishWorkflow).toContain("id-token: write")
+    expect(publishWorkflow).toContain("npm publish --access public --tag")
+    expect(publishWorkflow).toContain("gh release create")
+    expect(npmReadme).toContain("sticker-ui@beta")
+    expect(githubReadme).toContain("sticker-ui@beta")
+  })
+
+  it("keeps repository policy and CI entrypoints present", () => {
+    const requiredFiles = [
+      "CHANGELOG.md",
+      "CONTRIBUTING.md",
+      "SECURITY.md",
+      "SUPPORT.md",
+      ".github/PULL_REQUEST_TEMPLATE.md",
+      ".github/workflows/ci.yml",
+      ".github/workflows/codeql.yml",
+      ".github/workflows/publish.yml",
+    ]
+
+    for (const path of requiredFiles) {
+      expect(existsSync(join(projectRoot, path))).toBe(true)
+    }
+
+    expect(packageJson.scripts?.ci).toContain("pnpm run build")
+    expect(packageJson.scripts?.ci).toContain("pnpm run test")
+    expect(readProjectFile(".github/workflows/ci.yml")).toContain(
+      "pull_request:",
+    )
+    expect(
+      readProjectFile(".github/workflows/deploy-cloudflare.yml"),
+    ).toContain("run: pnpm run ci")
+
+    for (const path of [
+      ".github/workflows/ci.yml",
+      ".github/workflows/codeql.yml",
+      ".github/workflows/deploy-cloudflare.yml",
+      ".github/workflows/publish.yml",
+    ]) {
+      expectActionsPinned(readProjectFile(path))
+    }
+  })
+
   it("keeps package and preview build outputs separated", () => {
     const viteConfig = readProjectFile("vite.config.ts")
 
@@ -173,7 +257,9 @@ describe("release contract", () => {
     expect(wrangler).toContain(
       '"not_found_handling": "single-page-application"',
     )
-    expect(workflow).toContain("cloudflare/wrangler-action@v3")
+    expect(workflow).toMatch(
+      /uses: cloudflare\/wrangler-action@[0-9a-f]{40} # v3/,
+    )
     expect(workflow).toContain("CLOUDFLARE_ACCOUNT_ID")
     expect(workflow).toContain("CLOUDFLARE_API_TOKEN")
   })
