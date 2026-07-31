@@ -1,7 +1,9 @@
 {
   "name": "@anys/tanstack-route-kit",
   "version": "0.1.0",
+  "private": true,
   "description": "Config-first helpers for TanStack React Router route trees, metadata, and route-derived navigation.",
+  "license": "MIT",
   "files": [
     "dist",
     "src"

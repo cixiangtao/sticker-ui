@@ -9,6 +9,9 @@ when your project needs full control of the source.
 
 **[View the full documentation on GitHub →](https://github.com/cixiangtao/sticker-ui)**
 
+Sticker UI is currently in beta. Install the explicit beta channel while the
+public API is still evolving.
+
 ## Requirements
 
 - React 18 or 19
@@ -19,7 +22,7 @@ when your project needs full control of the source.
 ## Package installation
 
 ```bash
-pnpm add sticker-ui
+pnpm add sticker-ui@beta
 ```
 
 Add Tailwind and the Sticker UI tokens to your application stylesheet:
@@ -59,3 +62,7 @@ function ReleaseCard() {
 Compound components are exposed through their main namespace. Prefer
 `Dialog.Content`, `Select.Item`, or `Checkbox.Group` over importing internal
 subcomponents from the package.
+
+## License
+
+[MIT](https://github.com/cixiangtao/sticker-ui/blob/main/LICENSE)

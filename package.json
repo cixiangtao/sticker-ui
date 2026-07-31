@@ -2,10 +2,20 @@
   "name": "sticker-ui",
   "version": "1.0.0-beta.1",
   "description": "A source-first handbook sticker style React + Tailwind component registry.",
+  "keywords": [
+    "component-library",
+    "react",
+    "registry",
+    "shadcn",
+    "tailwindcss",
+    "ui"
+  ],
   "homepage": "https://sticker-ui.cixiangtao.workers.dev/",
   "bugs": {
     "url": "https://github.com/cixiangtao/sticker-ui/issues"
   },
+  "license": "MIT",
+  "author": "cixiangtao",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cixiangtao/sticker-ui.git"
@@ -47,9 +57,14 @@
     "prepack": "pnpm run build:lib",
     "prepare": "vp config",
     "preview": "vp preview",
+    "ci": "pnpm run lint && pnpm run build && pnpm run test && pnpm run verify:package && pnpm run check:generated && pnpm run package:check",
+    "check:generated": "git diff --exit-code -- registry.json public/r src/generated/preview-api-docs.json",
+    "package:check": "node scripts/verify-package-tarball.mjs",
     "release": "release-it",
-    "release:check": "pnpm run lint && pnpm run build:registry && pnpm run test && pnpm run verify:package && git diff --exit-code -- registry.json public/r && pnpm publish --dry-run --access public --publish-branch main --tag beta --no-git-checks",
+    "release:beta": "release-it --preRelease",
+    "release:check": "pnpm run ci",
     "release:dry": "release-it --dry-run",
+    "release:dry:beta": "release-it --dry-run --preRelease",
     "check": "tsc --noEmit",
     "format": "vp fmt . --write",
     "format:check": "vp fmt . --check",
