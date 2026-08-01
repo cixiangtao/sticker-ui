@@ -1,0 +1,371 @@
+# Instincts generated from https://github.com/cixiangtao/sticker-ui
+# Generated: 2026-08-01T04:59:14.336Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: sticker-ui-commit-conventional
+trigger: "when writing a commit message"
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: https://github.com/cixiangtao/sticker-ui
+---
+
+# Sticker Ui Commit Conventional
+
+## Action
+
+Use conventional commit format with prefixes: build, fix
+
+## Evidence
+
+- 2 commits analyzed
+- Detected conventional commit pattern
+- Examples: build(deps): bump the production-dependencies group with 26 updates, fix(deps): sync lockfile and generated API docs
+
+---
+id: sticker-ui-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/cixiangtao/sticker-ui
+---
+
+# Sticker Ui Commit Length
+
+## Action
+
+Write moderate-length commit messages (~57 characters)
+
+## Evidence
+
+- Average commit message length: 57 chars
+- Based on 2 commits
+
+---
+id: sticker-ui-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/cixiangtao/sticker-ui
+---
+
+# Sticker Ui Naming Files
+
+## Action
+
+Use kebab-case naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: kebab-case
+
+---
+id: sticker-ui-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/cixiangtao/sticker-ui
+---
+
+# Sticker Ui Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: sticker-ui-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/cixiangtao/sticker-ui
+---
+
+# Sticker Ui Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: sticker-ui-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/cixiangtao/sticker-ui
+---
+
+# Sticker Ui Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: sticker-ui-workflow-dependency-update-lockfile
+trigger: "when doing dependency update lockfile"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/cixiangtao/sticker-ui
+---
+
+# Sticker Ui Workflow Dependency Update Lockfile
+
+## Action
+
+Follow the dependency-update-lockfile workflow:
+1. Update dependency versions in package manager files (often automated).
+2. Regenerate the lockfile to reflect new dependency versions.
+3. Update workspace manifest if necessary.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: pnpm-lock.yaml, pnpm-workspace.yaml
+
+---
+id: sticker-ui-workflow-sync-lockfile-and-generated-api-docs
+trigger: "when doing sync lockfile and generated api docs"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/cixiangtao/sticker-ui
+---
+
+# Sticker Ui Workflow Sync Lockfile And Generated Api Docs
+
+## Action
+
+Follow the sync-lockfile-and-generated-api-docs workflow:
+1. Update the lockfile to match installed dependencies.
+2. Regenerate API documentation from source or codegen.
+3. Commit both lockfile and generated docs together.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: pnpm-lock.yaml, src/generated/preview-api-docs.json
+
+---
+id: sticker-ui-instinct-file-naming
+trigger: "When creating or renaming a file"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: cixiangtao/sticker-ui
+---
+
+# Sticker Ui Instinct File Naming
+
+## Action
+
+Use kebab-case for file names
+
+## Evidence
+
+- Pattern in namingConventions.files
+- Observed in src/generated/preview-api-docs.json
+
+---
+id: sticker-ui-instinct-function-naming
+trigger: "When defining a function"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: cixiangtao/sticker-ui
+---
+
+# Sticker Ui Instinct Function Naming
+
+## Action
+
+Use camelCase for function names
+
+## Evidence
+
+- Pattern in namingConventions.functions
+
+---
+id: sticker-ui-instinct-class-naming
+trigger: "When defining a class"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: cixiangtao/sticker-ui
+---
+
+# Sticker Ui Instinct Class Naming
+
+## Action
+
+Use PascalCase for class names
+
+## Evidence
+
+- Pattern in namingConventions.classes
+
+---
+id: sticker-ui-instinct-constant-naming
+trigger: "When declaring a constant"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: cixiangtao/sticker-ui
+---
+
+# Sticker Ui Instinct Constant Naming
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constant names
+
+## Evidence
+
+- Pattern in namingConventions.constants
+
+---
+id: sticker-ui-instinct-import-style
+trigger: "When importing modules"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: cixiangtao/sticker-ui
+---
+
+# Sticker Ui Instinct Import Style
+
+## Action
+
+Use relative import paths
+
+## Evidence
+
+- Pattern in importStyle: relative
+
+---
+id: sticker-ui-instinct-export-style
+trigger: "When exporting modules or functions"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: cixiangtao/sticker-ui
+---
+
+# Sticker Ui Instinct Export Style
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in exportStyle: named
+
+---
+id: sticker-ui-instinct-test-location
+trigger: "When adding or updating tests"
+confidence: 0.7
+domain: testing
+source: repo-analysis
+source_repo: cixiangtao/sticker-ui
+---
+
+# Sticker Ui Instinct Test Location
+
+## Action
+
+Place tests in a separate location from source code
+
+## Evidence
+
+- Pattern in architecture.folderStructure.testLocation: separate
+
+---
+id: sticker-ui-instinct-git-commit-format
+trigger: "When writing a commit message"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: cixiangtao/sticker-ui
+---
+
+# Sticker Ui Instinct Git Commit Format
+
+## Action
+
+Use Conventional Commits format with prefixes like 'build' or 'fix', followed by a short description
+
+## Evidence
+
+- Seen in commit: build(deps): bump the production-dependencies group with 26 updates
+- Seen in commit: fix(deps): sync lockfile and generated API docs
+
+---
+id: sticker-ui-instinct-dependency-update-lockfile
+trigger: "When someone wants to update or upgrade one or more dependencies"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: cixiangtao/sticker-ui
+---
+
+# Sticker Ui Instinct Dependency Update Lockfile
+
+## Action
+
+Update dependency versions in package manager files, regenerate the lockfile, and update the workspace manifest if necessary
+
+## Evidence
+
+- Workflow: dependency-update-lockfile
+- Files: pnpm-lock.yaml, pnpm-workspace.yaml
+- Commit: build(deps): bump the production-dependencies group with 26 updates
+
+---
+id: sticker-ui-instinct-sync-lockfile-and-api-docs
+trigger: "When someone updates dependencies or regenerates API documentation"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: cixiangtao/sticker-ui
+---
+
+# Sticker Ui Instinct Sync Lockfile And Api Docs
+
+## Action
+
+Update the lockfile and regenerate API documentation, then commit both together
+
+## Evidence
+
+- Workflow: sync-lockfile-and-generated-api-docs
+- Files: pnpm-lock.yaml, src/generated/preview-api-docs.json
+- Commit: fix(deps): sync lockfile and generated API docs
+
