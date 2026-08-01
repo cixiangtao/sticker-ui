@@ -7,6 +7,7 @@ interface PackageJson {
   bugs?: {
     url?: string
   }
+  devDependencies?: Record<string, string>
   homepage?: string
   license?: string
   private?: boolean
@@ -258,6 +259,9 @@ describe("release contract", () => {
       '"not_found_handling": "single-page-application"',
     )
     expect(workflow).toMatch(/uses: cloudflare\/wrangler-action@[0-9a-f]{40}/)
+    expect(workflow).toContain(
+      `wranglerVersion: "${packageJson.devDependencies?.wrangler}"`,
+    )
     expect(workflow).toContain("CLOUDFLARE_ACCOUNT_ID")
     expect(workflow).toContain("CLOUDFLARE_API_TOKEN")
   })
