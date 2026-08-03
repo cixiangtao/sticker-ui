@@ -136,7 +136,7 @@
     "vite": "catalog:",
     "vite-plus": "catalog:",
     "vitest": "catalog:",
-    "wrangler": "4.115.0"
+    "wrangler": "4.116.0"
   },
   "peerDependencies": {
     "react": "^18.0.0 || ^19.0.0",
