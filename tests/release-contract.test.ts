@@ -209,7 +209,10 @@ describe("release contract", () => {
       "skip-github-release": true,
     })
     expect(publishWorkflow).toContain("id-token: write")
-    expect(publishWorkflow).toContain("npm publish artifacts/*.tgz")
+    expect(publishWorkflow).toContain("workflow_dispatch:")
+    expect(publishWorkflow).toContain("release_pr:")
+    expect(publishWorkflow).toContain("needs.gate.outputs.sha")
+    expect(publishWorkflow).toContain("npm publish ./artifacts/*.tgz")
     expect(publishWorkflow).toContain(
       'startswith("release-please--branches--main--")',
     )
