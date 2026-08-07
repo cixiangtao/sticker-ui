@@ -162,8 +162,9 @@ The local preview runs at [http://localhost:7777](http://localhost:7777).
 | `pnpm build:preview`  | Generate API docs and build the preview site    |
 | `pnpm run ci`         | Run the complete pull-request and release gate  |
 | `pnpm release:check`  | Validate the package surface without publishing |
-| `pnpm release:beta`   | Publish the next npm and GitHub beta release    |
-| `pnpm release:dry`    | Preview the version, tag, and npm release flow  |
+
+Release Please maintains the beta release PR automatically. After its required checks pass, a
+maintainer merges it and GitHub Actions creates the tag, npm publication, and GitHub Release.
 
 ## Repository structure
 

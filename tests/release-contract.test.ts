@@ -16,6 +16,7 @@ interface PackageJson {
     url?: string
   }
   scripts?: Record<string, string>
+  version?: string
 }
 
 interface RegistryFile {
@@ -180,33 +181,40 @@ describe("release contract", () => {
 
   it("keeps stable and beta release channels explicit", () => {
     const releaseConfig = readProjectJson<{
-      git?: {
-        push?: boolean
-        requireBranch?: string
-        tag?: boolean
-      }
-      github?: { release?: boolean }
-      npm?: {
-        publish?: boolean
-      }
-    }>(".release-it.json")
+      packages?: Record<
+        string,
+        {
+          prerelease?: boolean
+          "prerelease-type"?: string
+          "release-type"?: string
+          "skip-github-release"?: boolean
+        }
+      >
+    }>("release-please-config.json")
+    const releaseManifest = readProjectJson<Record<string, string>>(
+      ".release-please-manifest.json",
+    )
     const npmReadme = readProjectFile("README.md")
     const githubReadme = readProjectFile(".github/README.md")
     const publishWorkflow = readProjectFile(".github/workflows/publish.yml")
 
-    expect(packageJson.scripts?.["release:prepare"]).toBe("release-it")
-    expect(packageJson.scripts?.["release:prepare:beta"]).toBe(
-      "release-it --preRelease",
-    )
+    expect(packageJson.scripts?.["release:prepare"]).toBeUndefined()
+    expect(packageJson.scripts?.["release:prepare:beta"]).toBeUndefined()
     expect(packageJson.scripts?.release).toBeUndefined()
-    expect(releaseConfig.git?.requireBranch).toBe("release/v*")
-    expect(releaseConfig.git?.tag).toBe(false)
-    expect(releaseConfig.git?.push).toBe(false)
-    expect(releaseConfig.npm?.publish).toBe(false)
-    expect(releaseConfig.github?.release).toBe(false)
+    expect(releaseManifest["."]).toBe(packageJson.version)
+    expect(releaseConfig.packages?.["."]).toMatchObject({
+      prerelease: true,
+      "prerelease-type": "beta",
+      "release-type": "node",
+      "skip-github-release": true,
+    })
     expect(publishWorkflow).toContain("id-token: write")
     expect(publishWorkflow).toContain("npm publish artifacts/*.tgz")
-    expect(publishWorkflow).toContain('startswith("release/v")')
+    expect(publishWorkflow).toContain(
+      'startswith("release-please--branches--main--")',
+    )
+    expect(publishWorkflow).toContain("release-please-action@")
+    expect(publishWorkflow).toContain("create-github-app-token@")
     expect(publishWorkflow).toContain("gh release create")
     expect(npmReadme).toContain("sticker-ui@beta")
     expect(githubReadme).toContain("sticker-ui@beta")
