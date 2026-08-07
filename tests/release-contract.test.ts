@@ -180,6 +180,11 @@ describe("release contract", () => {
 
   it("keeps stable and beta release channels explicit", () => {
     const releaseConfig = readProjectJson<{
+      git?: {
+        push?: boolean
+        requireBranch?: string
+        tag?: boolean
+      }
       github?: { release?: boolean }
       npm?: {
         publish?: boolean
@@ -189,14 +194,19 @@ describe("release contract", () => {
     const githubReadme = readProjectFile(".github/README.md")
     const publishWorkflow = readProjectFile(".github/workflows/publish.yml")
 
-    expect(packageJson.scripts?.release).toBe("release-it")
-    expect(packageJson.scripts?.["release:beta"]).toBe(
+    expect(packageJson.scripts?.["release:prepare"]).toBe("release-it")
+    expect(packageJson.scripts?.["release:prepare:beta"]).toBe(
       "release-it --preRelease",
     )
+    expect(packageJson.scripts?.release).toBeUndefined()
+    expect(releaseConfig.git?.requireBranch).toBe("release/v*")
+    expect(releaseConfig.git?.tag).toBe(false)
+    expect(releaseConfig.git?.push).toBe(false)
     expect(releaseConfig.npm?.publish).toBe(false)
     expect(releaseConfig.github?.release).toBe(false)
     expect(publishWorkflow).toContain("id-token: write")
-    expect(publishWorkflow).toContain("npm publish --access public --tag")
+    expect(publishWorkflow).toContain("npm publish artifacts/*.tgz")
+    expect(publishWorkflow).toContain('startswith("release/v")')
     expect(publishWorkflow).toContain("gh release create")
     expect(npmReadme).toContain("sticker-ui@beta")
     expect(githubReadme).toContain("sticker-ui@beta")
