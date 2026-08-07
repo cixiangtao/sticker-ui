@@ -42,5 +42,7 @@ permissions. Its token lets required CI run unattended; PR checks created with t
 `GITHUB_TOKEN` currently wait for separate workflow approval.
 
 If delivery partially succeeds, inspect the merged release PR, workflow, tag, GitHub Release, npm
-version, and dist-tags before retrying the same workflow. Do not assume an interrupted release was
-rolled back, and never reuse an already published version.
+version, and dist-tags first. Then manually run `publish.yml` from `main` with that merged Release
+Please PR number. Recovery revalidates the exact PR, merge commit, restricted diff, version,
+ancestry, tag, and registry state before resuming missing steps. Do not assume an interrupted
+release was rolled back, and never reuse an already published version.
