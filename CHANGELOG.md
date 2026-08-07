@@ -4,6 +4,13 @@ Notable public changes to Sticker UI are recorded here. The project follows
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html) and is currently in
 beta.
 
+## [1.0.1-beta.1](https://github.com/cixiangtao/sticker-ui/compare/v1.0.0-beta.1...v1.0.1-beta.1) (2026-08-07)
+
+
+### Bug Fixes
+
+* **deploy:** align Wrangler workflow version ([#8](https://github.com/cixiangtao/sticker-ui/issues/8)) ([01a0d64](https://github.com/cixiangtao/sticker-ui/commit/01a0d64a306c9618929f37659e0ef129ac37726b))
+
 ## [Unreleased]
 
 ### Added
