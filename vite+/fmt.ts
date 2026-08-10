@@ -4,6 +4,7 @@ export const fmtConfig = {
   ignorePatterns: [
     ".agents",
     ".playwright-mcp",
+    "CHANGELOG.md",
     "dist",
     "dist-preview",
     "node_modules",
