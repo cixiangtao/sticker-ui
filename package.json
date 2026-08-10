@@ -1,6 +1,6 @@
 {
   "name": "sticker-ui",
-  "version": "1.0.1-beta.1",
+  "version": "1.0.2-beta.1",
   "description": "A source-first handbook sticker style React + Tailwind component registry.",
   "keywords": [
     "component-library",
