@@ -26,7 +26,7 @@
     "check": "tsc --noEmit"
   },
   "devDependencies": {
-    "@tanstack/react-router": "^1.170.18",
+    "@tanstack/react-router": "^1.170.25",
     "@types/react": "latest",
     "react": "latest",
     "tsdown": "^0.22.4",

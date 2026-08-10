@@ -1,5 +1,7 @@
 # Security Policy
 
+English | [简体中文](SECURITY.zh-CN.md)
+
 ## Supported versions
 
 Sticker UI is currently in beta. Security fixes are applied to the latest

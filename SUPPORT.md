@@ -1,5 +1,7 @@
 # Support
 
+English | [简体中文](SUPPORT.zh-CN.md)
+
 ## Usage help
 
 Start with the [live component documentation](https://sticker-ui.cixiangtao.workers.dev/)

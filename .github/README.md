@@ -1,5 +1,7 @@
 # Sticker UI
 
+English | [简体中文](README.zh-CN.md)
+
 A React + Tailwind CSS component library with warm paper surfaces, chunky ink
 outlines, hard offset shadows, and tactile interactions.
 

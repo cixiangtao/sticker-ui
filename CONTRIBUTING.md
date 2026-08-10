@@ -1,5 +1,7 @@
 # Contributing to Sticker UI
 
+English | [简体中文](CONTRIBUTING.zh-CN.md)
+
 Thanks for helping improve Sticker UI. Contributions should preserve the
 source-first registry model, accessible behavior, and handbook sticker visual
 language.
