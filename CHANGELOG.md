@@ -4,6 +4,13 @@ Notable public changes to Sticker UI are recorded here. The project follows
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html) and is currently in
 beta.
 
+## [1.0.3-beta.1](https://github.com/cixiangtao/sticker-ui/compare/v1.0.2-beta.1...v1.0.3-beta.1) (2026-10-26)
+
+
+### Bug Fixes
+
+* **deps:** bump proxy-addr from 2.0.7 to 2.0.8 ([#36](https://github.com/cixiangtao/sticker-ui/issues/36)) ([945e8e3](https://github.com/cixiangtao/sticker-ui/commit/945e8e384586ce701f930e79bd5c06917f319748))
+
 ## [1.0.2-beta.1](https://github.com/cixiangtao/sticker-ui/compare/v1.0.1-beta.1...v1.0.2-beta.1) (2026-08-10)
 
 
